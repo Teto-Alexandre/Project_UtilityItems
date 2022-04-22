@@ -13,7 +13,7 @@
             #$c.proj.damagetype 攻撃の属性
         #$c.proj.damage 攻撃力(0.5heart)
         #$c.proj.soul_damage 魂攻撃力(%)
-    #タグ：ui_proj_common付きプロジェクタイルを返す
+    #タグ: ui_proj_common付きプロジェクタイルを返す
 
 # act
 function ui:common/projectile/summon
