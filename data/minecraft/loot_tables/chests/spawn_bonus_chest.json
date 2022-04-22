@@ -1,0 +1,242 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:wooden_axe"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:wooden_pickaxe"
+        }
+      ]
+    },
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:apple"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:bread"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:salmon"
+        }
+      ]
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 12.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:stick"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 12.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:oak_planks"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:oak_log"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:spruce_log"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:birch_log"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:jungle_log"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:acacia_log"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:dark_oak_log"
+        }
+      ]
+    },
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stray_spawn_egg",
+          "weight": 1,
+          "quality": 0,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:131003,display:{Name:'{\"italic\":false,\"color\":\"aqua\",\"text\":\"隠れたレシピ\"}',Lore:['[{\"italic\":false,\"color\":\"gray\",\"text\":\"<内容物>\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・謎のレシピ\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・不思議なレシピ\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・未知のレシピ\"}]']},EntityTag:{id:\"minecraft:bat\",Silent:1b,NoAI:1b,Tags:[\"ui_egg_t\",\"ui_egg_t_1\"]}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stray_spawn_egg",
+          "weight": 1,
+          "quality": 0,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:131004,display:{Name:'{\"italic\":false,\"color\":\"light_purple\",\"text\":\"秘めたレシピ\"}',Lore:['[{\"italic\":false,\"color\":\"gray\",\"text\":\"<内容物>\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・不思議なレシピ\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・未知のレシピ\"}]','[{\"italic\":false,\"color\":\"gray\",\"text\":\" ・神秘のレシピ\"}]']},EntityTag:{id:\"minecraft:bat\",Silent:1b,NoAI:1b,Tags:[\"ui_egg_t\",\"ui_egg_t_2\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

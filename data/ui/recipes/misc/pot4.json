@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:potion"
+    },
+    {
+      "item": "minecraft:nether_wart_block"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:brick"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

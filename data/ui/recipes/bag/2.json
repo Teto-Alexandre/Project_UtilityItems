@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 14",
+    "323",
+    "353"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:string"
+    },
+    "2": {
+      "item": "minecraft:hay_block"
+    },
+    "3": {
+      "item": "minecraft:leather"
+    },
+    "4": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "5": {
+      "item": "minecraft:chest_minecart"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:potion"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

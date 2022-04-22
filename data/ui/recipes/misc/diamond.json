@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 1
+  }
+}

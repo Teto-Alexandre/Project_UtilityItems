@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:wooden_sword"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

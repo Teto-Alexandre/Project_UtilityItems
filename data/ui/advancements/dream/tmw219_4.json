@@ -1,0 +1,26 @@
+{
+  "parent": "ui:dream/tmw219_3",
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:110005}"
+    },
+    "title": "エンドシティ引っ越し代行",
+    "description": "エンクロージャーでシュルカーを始末する",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

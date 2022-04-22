@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "121",
+    "131",
+    "121"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:stone_bricks"
+    },
+    "2": {
+      "item": "minecraft:iron_block"
+    },
+    "3": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

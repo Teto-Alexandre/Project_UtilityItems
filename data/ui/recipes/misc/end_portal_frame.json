@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "111",
+    "323",
+    "333"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:emerald"
+    },
+    "2": {
+      "item": "minecraft:ender_eye"
+    },
+    "3": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "minecraft:end_portal_frame",
+    "count": 1
+  }
+}

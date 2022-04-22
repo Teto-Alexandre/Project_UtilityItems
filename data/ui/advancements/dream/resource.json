@@ -1,0 +1,62 @@
+{
+  "parent": "ui:dream/kill_2",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": "アイテム収集家：エーテリウム",
+    "description": "幽玄の園の資源を全て手に入れる",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1001}}"
+          }
+        ]
+      }
+    },
+    "task2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1002}}"
+          }
+        ]
+      }
+    },
+    "task3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1003}}"
+          }
+        ]
+      }
+    },
+    "task4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1004}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"],["task2"],["task3"],["task4"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

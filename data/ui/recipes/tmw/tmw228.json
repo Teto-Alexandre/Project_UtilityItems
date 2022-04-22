@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "432",
+    "323",
+    "134"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:nether_star"
+    },
+    "2": {
+      "item": "minecraft:netherite_block"
+    },
+    "3": {
+      "item": "minecraft:soul_lantern"
+    },
+    "4": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

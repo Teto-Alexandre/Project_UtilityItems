@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:arrow/arrow16"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/arrow/arrow16"
+  }
+}

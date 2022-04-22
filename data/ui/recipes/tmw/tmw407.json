@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

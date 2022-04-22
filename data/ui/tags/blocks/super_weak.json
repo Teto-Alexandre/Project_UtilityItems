@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "#ui:glasses",
+    "minecraft:tnt",
+    "minecraft:slime_block",
+    "minecraft:honey_block",
+    "minecraft:nether_portal",
+    "minecraft:end_rod",
+    "minecraft:flower_pot",
+    "minecraft:snow_block",
+    "minecraft:brown_mushroom_block",
+    "minecraft:red_mushroom_block",
+    "#minecraft:leaves",
+    "minecraft:daylight_detector",
+    "#minecraft:beds",
+    "minecraft:glowstone",
+    "minecraft:sea_lantern",
+    "minecraft:redstone_lamp"
+  ]
+}

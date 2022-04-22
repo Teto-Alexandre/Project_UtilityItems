@@ -1,0 +1,30 @@
+{
+  "parent": "ui:dream/tmw302",
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:110022}"
+    },
+    "title": "キラキラ輝く思い出",
+    "description": "エネルギーカートリッジを最大まで充填する",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:303,energy:{amount:100,type:1}}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

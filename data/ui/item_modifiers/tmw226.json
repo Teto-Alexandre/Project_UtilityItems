@@ -1,0 +1,59 @@
+[
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "temp3"
+      },
+      "score": "ui_temp",
+      "scale": 0.01
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "○ StoredItems: ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "temp",
+            "objective": "ui_temp"
+          }
+        },
+        {
+          "text": " / "
+        },
+        {
+          "score": {
+            "name": "temp2",
+            "objective": "ui_temp"
+          }
+        }
+      ],
+      [{"text": " 中身が空の時に右クリックすると","color": "gray","italic": false}],
+      [{"text": " オフハンドのアイテムを登録できる","color": "gray","italic": false}],
+      [{"text": " 登録後に右クリックするとインベントリにある","color": "gray","italic": false}],
+      [{"text": " 同じアイテムをまとめて収納する","color": "gray","italic": false}],
+      [{"text": " 中身が入った状態でFキーを押すと1個、","color": "gray","italic": false}],
+      [{"text": " Shift+Fを押すとで全てのアイテムを取り出せる","color": "gray","italic": false}],
+      [{"text": "---------- Inventory ----------","color": "yellow","bold":true,"italic": false}],
+      [{"text": "  □□□□□□□□□  指定のスロットに入れると","color": "yellow","bold":true,"italic": false}],
+      [{"text": "  □□□□□□□□□  横のスロットに収納した","color": "yellow","bold":true,"italic": false}],
+      [{"text": "  □□□□□□□□■  アイテムを常に一個排出","color": "yellow","bold":true,"italic": false}],
+      [{"text": "------------------------------","color": "yellow","bold":true,"italic": false}],
+      [{"text": "排出機能のためには手に持ちながらインベントリ内","color": "light_purple","italic": false}],
+      [{"text": "でスロットにカーソルを合わせ1~9かShiftクリック","color": "light_purple","italic": false}],
+      [{"text": "で直接移動させる必要があります(軽量化の為)","color": "light_purple","italic": false}],
+      [{"text": "これはほぼオートリローダーを使うための機能です","color": "light_purple","italic": false}]
+    ],
+    "replace": true
+  }
+]

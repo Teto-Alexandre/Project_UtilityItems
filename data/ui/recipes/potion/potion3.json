@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:potion"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:soul_sand"
+    },
+    {
+      "item": "minecraft:light_blue_dye"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

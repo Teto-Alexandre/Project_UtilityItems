@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/arrow/arrow5",
+  "display": {
+    "icon": {
+      "item": "minecraft:tipped_arrow",
+      "nbt": "{CustomPotionColor:65280}"
+    },
+    "title": "ストームブリンガー",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0206\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:6}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

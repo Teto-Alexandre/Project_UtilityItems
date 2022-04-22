@@ -1,0 +1,142 @@
+{
+  "parent": "ui:main/arrow/air_node",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": "アイテム収集家：特殊矢",
+    "description": "十二種類の矢を全て手に入れる",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:1}}"
+          }
+        ]
+      }
+    },
+    "task2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:2}}"
+          }
+        ]
+      }
+    },
+    "task3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:3}}"
+          }
+        ]
+      }
+    },
+    "task4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:4}}"
+          }
+        ]
+      }
+    },
+    "task5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:5}}"
+          }
+        ]
+      }
+    },
+    "task6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:6}}"
+          }
+        ]
+      }
+    },
+    "task7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:7}}"
+          }
+        ]
+      }
+    },
+    "task8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:8}}"
+          }
+        ]
+      }
+    },
+    "task9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:9}}"
+          }
+        ]
+      }
+    },
+    "task10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:10}}"
+          }
+        ]
+      }
+    },
+    "task11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:11}}"
+          }
+        ]
+      }
+    },
+    "task12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:12}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"],["task2"],["task3"],["task4"],["task5"],["task6"],["task7"],["task8"],["task9"],["task10"],["task11"],["task12"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "蓄電量: "
+      },
+      {
+        "italic": false,
+        "color": "yellow",
+        "score": {
+          "name": "$su",
+          "objective": "ui_calc1"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "/"
+      },
+      {
+        "italic": false,
+        "color": "yellow",
+        "score": {
+          "name": "$sum",
+          "objective": "ui_calc1"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "SU"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+    	[
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "給電速度: "
+      	},
+      	{
+        	"italic": false,
+        	"color": "yellow",
+        	"score": {
+          	"name": "$sui",
+          	"objective": "ui_calc1"
+        	}
+      	},
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "SU/tick"
+      	}
+  		],
+    	[
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "送電速度: "
+      	},
+      	{
+        	"italic": false,
+        	"color": "yellow",
+        	"score": {
+          	"name": "$suo",
+          	"objective": "ui_calc1"
+        	}
+      	},
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "SU/tick"
+      	}
+  		],
+    	[
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "消費電力: "
+      	},
+      	{
+        	"italic": false,
+        	"color": "yellow",
+        	"score": {
+          	"name": "$suu",
+          	"objective": "ui_calc1"
+        	}
+      	},
+      	{
+        	"italic": false,
+        	"color": "gray",
+        	"text": "SU/tick"
+      	}
+  		]
+    ],
+    "replace": true
+  }
+]

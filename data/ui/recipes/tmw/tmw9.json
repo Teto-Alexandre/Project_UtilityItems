@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:golden_sword"
+    },
+    {
+      "item": "minecraft:iron_sword"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

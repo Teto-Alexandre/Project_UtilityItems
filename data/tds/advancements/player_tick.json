@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "tds:attribute/player_tick"
+    }
+}

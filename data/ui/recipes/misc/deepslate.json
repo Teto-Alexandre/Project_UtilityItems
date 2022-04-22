@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "111",
+    "222",
+    "111"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:stone"
+    },
+    "2": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "minecraft:deepslate",
+    "count": 1
+  }
+}

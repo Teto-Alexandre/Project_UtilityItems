@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 23",
+    "1 4"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "2": {
+      "item": "minecraft:blaze_rod"
+    },
+    "3": {
+      "item": "minecraft:string"
+    },
+    "4": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 3.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{tmw:{id:1010},CustomModelData:212002,display:{Name:'{\"italic\":false,\"color\":\"aqua\",\"text\":\"天銀の小片\"}',Lore:['{\"text\":\"特殊なツルハシで衝撃を加えたことで\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"石が変質した金属らしき小片\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"素材としての利用価値がある\",\"color\":\"gray\",\"italic\":false}']}}"
+            }
+          ],
+          "name": "minecraft:iron_nugget"
+        }
+      ]
+    }
+  ]
+}

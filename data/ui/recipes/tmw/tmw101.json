@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "3 3",
+    "3 3",
+    "212"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:nether_star"
+    },
+    "2": {
+      "item": "minecraft:redstone_block"
+    },
+    "3": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

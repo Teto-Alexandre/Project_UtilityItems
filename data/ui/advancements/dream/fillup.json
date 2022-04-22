@@ -1,0 +1,33 @@
+{
+  "parent": "ui:dream/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:110254}"
+    },
+    "title": "これ以上は入らないよ！",
+    "description": "少し頭を使うか頑張って最大サイズのアイテムポーチを埋める",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:226,amount:1024}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

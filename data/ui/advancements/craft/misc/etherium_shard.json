@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:misc/etherium_shard"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/misc/etherium_shard"
+  }
+}

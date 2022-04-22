@@ -1,0 +1,1 @@
+scoreboard players add @s ui_hp_plus 4

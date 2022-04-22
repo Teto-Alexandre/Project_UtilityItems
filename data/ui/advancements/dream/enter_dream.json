@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:story/smelt_iron",
+  "display": {
+    "icon": {
+      "item": "minecraft:grass_block",
+      "nbt": "{CustomModelData:210002}"
+    },
+    "title": "旧き霊力と魂の園へ",
+    "description": [
+      {
+        "text": "果実を食み、渡る"
+      },
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u3024\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_dream": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "ui:dream"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_dream"
+    ]
+  ]
+}

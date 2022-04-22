@@ -1,0 +1,18 @@
+scoreboard players set @s ui_calc1 60
+teleport @s ~ ~ ~ ~ 15
+execute if score @s ui_calc1 matches 1.. run function ui:tmw/9/9_9/loop
+
+scoreboard players set @s ui_calc1 60
+teleport @s ~ ~ ~ ~ -15
+execute if score @s ui_calc1 matches 1.. run function ui:tmw/9/9_9/loop2
+
+effect give @e[distance=..2,type=!#ui:notmob,type=!#ui:undead] instant_damage 1 1 true
+effect give @e[distance=..2,type=#ui:undead] instant_health 1 1 true
+effect give @e[distance=..2,type=!#ui:notmob] slowness 1 1 true
+effect give @e[distance=..2,type=!#ui:notmob] weakness 1 1 true
+effect give @e[distance=..2,type=!#ui:notmob] wither 1 1 true
+scoreboard players add @e[distance=..2,type=!#ui:notmob] ui_hp 10
+execute at @e[distance=..2,type=!#ui:notmob] run playsound entity.zombie_villager.cure master @a ~ ~ ~ 0.5 1.801 0
+execute at @e[distance=..2,type=!#ui:notmob] run playsound entity.zombie_villager.cure master @a ~ ~ ~ 0.5 1.800 0
+execute at @e[distance=..2,type=!#ui:notmob] run particle dust 1 0 1 2 ~ ~1 ~ 0.8 0.8 0.8 0 5 force
+kill @s

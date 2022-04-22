@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "141",
+    "131",
+    "121"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
+      "item": "minecraft:redstone_block"
+    },
+    "3": {
+      "item": "minecraft:furnace"
+    },
+    "4": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

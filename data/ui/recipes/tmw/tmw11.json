@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "132",
+    " 12"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
+      "item": "minecraft:string"
+    },
+    "3": {
+      "item": "minecraft:bow"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

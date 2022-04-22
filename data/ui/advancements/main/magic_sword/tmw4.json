@@ -1,0 +1,35 @@
+{
+  "parent": "ui:main/magic_sword/tmw3",
+  "display": {
+    "icon": {
+      "item": "minecraft:white_dye"
+    },
+    "title": "ジャッジメント",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0004\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:4}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

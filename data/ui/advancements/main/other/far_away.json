@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:black_wool"
+    },
+    "title": "遠征あるいは家出",
+    "description": [
+      {
+        "text": "空間の穴に飛び込み世界のどこかへ行く"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ]
+}

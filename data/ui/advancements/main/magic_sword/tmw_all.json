@@ -1,0 +1,82 @@
+{
+  "parent": "ui:main/magic_sword/air_node",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": "アイテム収集家：魔剣",
+    "description": "六種類の魔剣を全て手に入れる",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1}}"
+          }
+        ]
+      }
+    },
+    "task2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:2}}"
+          }
+        ]
+      }
+    },
+    "task3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:3}}"
+          }
+        ]
+      }
+    },
+    "task4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:4}}"
+          }
+        ]
+      }
+    },
+    "task5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:5}}"
+          }
+        ]
+      }
+    },
+    "task6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:6}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"],["task2"],["task3"],["task4"],["task5"],["task6"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

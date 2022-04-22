@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/gun/craft2",
+  "display": {
+    "icon": {
+      "item": "minecraft:gold_ingot",
+      "nbt": "{CustomModelData:215003}"
+    },
+    "title": "超メカニック",
+    "description": [
+      {
+        "text": "銃にオートリローダーを取り付ける"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:305,gun:{auto:1}}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ]
+}

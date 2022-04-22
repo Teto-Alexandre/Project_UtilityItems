@@ -1,0 +1,30 @@
+{
+  "parent": "ui:dream/tmw219_2",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_ingot",
+      "nbt": "{CustomModelData:211005}"
+    },
+    "title": "完全になった天銀",
+    "description": "蒼天銀を初めて手にする",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1012}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

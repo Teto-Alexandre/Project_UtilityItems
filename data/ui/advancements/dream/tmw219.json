@@ -1,0 +1,30 @@
+{
+  "parent": "ui:dream/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_nugget",
+      "nbt": "{CustomModelData:212002}"
+    },
+    "title": "遥かな地より炭鉱革命",
+    "description": "注入機で天銀掘りのツルハシを作り、石を掘る",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:1010}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

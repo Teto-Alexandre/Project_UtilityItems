@@ -1,0 +1,31 @@
+{
+  "parent": "ui:main/gun/craft2",
+  "display": {
+    "icon": {
+      "item": "minecraft:bedrock"
+    },
+    "title": "不可壊破壊",
+    "description": [
+      {
+        "text": "銃弾で何かとても硬質なものを壊す"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

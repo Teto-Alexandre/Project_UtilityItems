@@ -1,0 +1,35 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "aqua",
+        "text": "松明砲"
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": " ["
+      },
+      {
+        "italic": false,
+        "color": "gold",
+        "score": {
+          "name": "@s",
+          "objective": "ui_temp"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "]"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{CustomModelData:110007}"
+  }
+]

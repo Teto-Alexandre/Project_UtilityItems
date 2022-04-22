@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

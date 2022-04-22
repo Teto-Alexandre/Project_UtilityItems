@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/charm/charm14",
+  "display": {
+    "icon": {
+      "item": "minecraft:gunpowder",
+      "nbt": "{Enchantments:[{id:\"protection\",lvl:1s}]}"
+    },
+    "title": "反射の加護",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0115\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:15}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

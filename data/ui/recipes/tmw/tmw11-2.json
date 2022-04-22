@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "411",
+    "132",
+    "12 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:diamond"
+    },
+    "2": {
+      "item": "minecraft:blaze_rod"
+    },
+    "3": {
+      "item": "minecraft:crossbow"
+    },
+    "4": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

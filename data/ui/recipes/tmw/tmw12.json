@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "313",
+    "323",
+    "3 3"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:dragon_breath"
+    },
+    "2": {
+      "item": "minecraft:hopper"
+    },
+    "3": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

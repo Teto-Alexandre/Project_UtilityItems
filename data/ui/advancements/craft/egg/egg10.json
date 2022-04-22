@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:egg/egg10"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/egg/egg10"
+  }
+}

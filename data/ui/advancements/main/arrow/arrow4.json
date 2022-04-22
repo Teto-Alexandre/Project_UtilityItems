@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/arrow/arrow3",
+  "display": {
+    "icon": {
+      "item": "minecraft:tipped_arrow",
+      "nbt": "{CustomPotionColor:16750848}"
+    },
+    "title": "暴食の矢",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0204\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:4}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

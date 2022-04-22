@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/charm/charm3",
+  "display": {
+    "icon": {
+      "item": "minecraft:prismarine_shard",
+      "nbt": "{Enchantments:[{id:\"protection\",lvl:1s}]}"
+    },
+    "title": "一閃の加護",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0104\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:4}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

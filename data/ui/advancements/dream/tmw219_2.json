@@ -1,0 +1,30 @@
+{
+  "parent": "ui:dream/tmw219",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_pickaxe",
+      "nbt": "{CustomModelData:214201}"
+    },
+    "title": "炭鉱革命Ⅱ",
+    "description": "天銀インゴットでツルハシを作る",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:219,type:2}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

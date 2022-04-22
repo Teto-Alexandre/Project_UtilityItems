@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 8.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 3.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.5
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{tmw:{id:1003},CustomModelData:212001,display:{Name:'{\"italic\":false,\"color\":\"aqua\",\"text\":\"エーテリウムの欠片\"}',Lore:['{\"text\":\"エーテリウムの大気によって\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"変質した金属の欠片\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"素材としての利用価値がある\",\"color\":\"gray\",\"italic\":false}']}}"
+            }
+          ],
+          "name": "minecraft:iron_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{tmw:{id:1004},CustomModelData:211001,display:{Name:'{\"italic\":false,\"color\":\"light_purple\",\"text\":\"エーテリウムの塊\"}',Lore:['{\"text\":\"エーテリウムの大気によって\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"変質した金属の塊\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"素材としての利用価値が高い\",\"color\":\"gray\",\"italic\":false}']}}"
+            }
+          ],
+          "name": "minecraft:iron_ingot"
+        }
+      ]
+    }
+  ]
+}

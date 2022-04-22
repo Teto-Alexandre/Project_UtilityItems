@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "212",
+    "131",
+    "212"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:hay_block"
+    },
+    "2": {
+      "item": "minecraft:cobblestone"
+    },
+    "3": {
+      "item": "minecraft:stone_hoe"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/industry/tmw301",
+  "display": {
+    "icon": {
+      "item": "minecraft:purple_stained_glass_pane"
+    },
+    "title": "",
+    "description": "",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

@@ -1,0 +1,25 @@
+#===========================================================================
+
+execute if score @s ui_m_bc matches 20.. run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 19 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 18 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 17 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 16 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 15 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 14 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 13 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 12 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 11 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 10 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 9 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 8 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 7 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 6 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 5 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 4 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102\u0004\u0102"}]
+execute if score @s ui_m_bc matches 3 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101\u0004\u0102"}]
+execute if score @s ui_m_bc matches 2 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0102"}]
+execute if score @s ui_m_bc matches 1 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0101"}]
+execute if score @s ui_m_bc matches 0 run title @s actionbar [{"font":"ui:icon","text":"\u0003\u0002\u0001"},{"text":"\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100\u0004\u0100"}]
+
+#===========================================================================

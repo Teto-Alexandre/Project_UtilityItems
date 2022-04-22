@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/industry/air_node",
+  "display": {
+    "icon": {
+      "item": "minecraft:stray_spawn_egg",
+      "nbt": "{CustomModelData:130001}"
+    },
+    "title": "恒星反応発電機",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0501\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomModelData:130001}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

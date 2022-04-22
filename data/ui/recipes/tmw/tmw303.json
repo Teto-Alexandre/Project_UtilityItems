@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "232",
+    "212",
+    "222"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:nether_star"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

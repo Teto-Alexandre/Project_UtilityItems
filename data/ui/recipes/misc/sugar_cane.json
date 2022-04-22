@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:sugar_cane"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar_cane",
+    "count": 2
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

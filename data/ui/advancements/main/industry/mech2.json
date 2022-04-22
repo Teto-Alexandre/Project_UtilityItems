@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/industry/mech1",
+  "display": {
+    "icon": {
+      "item": "minecraft:stray_spawn_egg",
+      "nbt": "{CustomModelData:130002}"
+    },
+    "title": "熱源生成器",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0502\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomModelData:130002}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

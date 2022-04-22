@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 23",
+    "212",
+    "32 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:writable_book"
+    },
+    "2": {
+      "item": "minecraft:white_glazed_terracotta"
+    },
+    "3": {
+      "item": "minecraft:glow_ink_sac"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    }
+  ],
+  "result": {
+    "item": "minecraft:slime_ball",
+    "count": 1
+  }
+}

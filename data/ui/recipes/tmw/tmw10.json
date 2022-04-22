@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    }
+  ],
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

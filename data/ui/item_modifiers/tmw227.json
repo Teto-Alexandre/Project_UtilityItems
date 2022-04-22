@@ -1,0 +1,46 @@
+[
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$temp3"
+      },
+      "score": "ui_temp",
+      "scale": 0.01
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "○ StoredEXPs: ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "$temp",
+            "objective": "ui_temp"
+          }
+        },
+        {
+          "text": " / "
+        },
+        {
+          "score": {
+            "name": "$temp2",
+            "objective": "ui_temp"
+          }
+        }
+      ],
+      [{"text": " 右クリックすると経験値を全て取り出す","color": "gray","italic": false}],
+      [{"text": " Shift+右クリックで経験値を全て注入する","color": "gray","italic": false}]
+    ],
+    "replace": true
+  }
+]

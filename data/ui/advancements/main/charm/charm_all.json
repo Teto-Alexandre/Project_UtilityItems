@@ -1,0 +1,182 @@
+{
+  "parent": "ui:main/charm/air_node",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": "アイテム収集家：加護",
+    "description": "十六種類の加護を全て手に入れる",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:1}}"
+          }
+        ]
+      }
+    },
+    "task2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:2}}"
+          }
+        ]
+      }
+    },
+    "task3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:3}}"
+          }
+        ]
+      }
+    },
+    "task4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:4}}"
+          }
+        ]
+      }
+    },
+    "task5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:5}}"
+          }
+        ]
+      }
+    },
+    "task6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:6}}"
+          }
+        ]
+      }
+    },
+    "task7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:7}}"
+          }
+        ]
+      }
+    },
+    "task8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:8}}"
+          }
+        ]
+      }
+    },
+    "task9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:9}}"
+          }
+        ]
+      }
+    },
+    "task10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:10}}"
+          }
+        ]
+      }
+    },
+    "task11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:11}}"
+          }
+        ]
+      }
+    },
+    "task12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:12}}"
+          }
+        ]
+      }
+    },
+    "task13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:13}}"
+          }
+        ]
+      }
+    },
+    "task14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:14}}"
+          }
+        ]
+      }
+    },
+    "task15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:15}}"
+          }
+        ]
+      }
+    },
+    "task16": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:16}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"],["task2"],["task3"],["task4"],["task5"],["task6"],["task7"],["task8"],["task9"],["task10"],["task11"],["task12"],["task13"],["task14"],["task15"],["task16"]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

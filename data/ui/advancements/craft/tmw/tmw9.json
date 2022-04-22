@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:tmw/tmw9"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/tmw/tmw9"
+  }
+}

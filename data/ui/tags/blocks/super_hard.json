@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:dragon_egg",
+    "minecraft:ancient_debris",
+    "minecraft:obsidian",
+    "minecraft:crying_obsidian",
+    "minecraft:anvil",
+    "minecraft:chipped_anvil",
+    "minecraft:damaged_anvil",
+    "minecraft:netherite_block",
+    "minecraft:ender_chest",
+    "minecraft:enchanting_table"
+  ]
+}

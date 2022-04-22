@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 14",
+    "323",
+    "353"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:string"
+    },
+    "2": {
+      "item": "minecraft:diamond_block"
+    },
+    "3": {
+      "item": "minecraft:leather"
+    },
+    "4": {
+      "item": "minecraft:lime_dye"
+    },
+    "5": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

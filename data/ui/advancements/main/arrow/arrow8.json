@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/arrow/arrow7",
+  "display": {
+    "icon": {
+      "item": "minecraft:tipped_arrow",
+      "nbt": "{CustomPotionColor:16711680}"
+    },
+    "title": "火矢",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0208\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{arrow:8}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

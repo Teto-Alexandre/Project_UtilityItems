@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "getitem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{ui:{ismenu:1}}"
+          }
+        ]
+      }
+    }
+  },
+    "rewards": {
+        "function": "ui:misc/del_menu"
+    }
+}

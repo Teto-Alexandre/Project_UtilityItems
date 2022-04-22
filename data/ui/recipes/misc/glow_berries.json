@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:sugar_cane"
+    }
+  ],
+  "result": {
+    "item": "minecraft:glow_berries",
+    "count": 1
+  }
+}

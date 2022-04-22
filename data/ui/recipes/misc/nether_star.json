@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "121",
+    "232",
+    "121"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:end_crystal"
+    },
+    "2": {
+      "item": "minecraft:netherite_block"
+    },
+    "3": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:nether_star",
+    "count": 1
+  }
+}

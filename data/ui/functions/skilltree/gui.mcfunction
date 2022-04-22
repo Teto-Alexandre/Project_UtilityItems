@@ -1,0 +1,30 @@
+# 
+tellraw @s ["",{"text":"===== スキルツリー ==========","color":"gray"}]
+
+# メインツリー
+tellraw @s[scores={ui_skilltree_v=1}] ["",{"text":"メインツリー","color":"yellow"},{"text":" [◀]","color":"red","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set -2"},"hoverEvent":{"action":"show_text","contents":{"text":"科学ツリーを開く","color":"green"}}},{"text":"[▶]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set -2"},"hoverEvent":{"action":"show_text","contents":{"text":"科学ツリーを開く","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1}] ["",{"text":" ┣ "},{"text":"木の剣","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 1"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 1","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.1] ["",{"text":" ┃  ┣ "},{"text":"石の剣","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 2"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 2","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.2] ["",{"text":" ┃  ┃  ┣ "},{"text":"鉄の剣","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 3"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 3","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.3] ["",{"text":" ┃  ┃  ┃  ┣ "},{"text":"ダイヤモンドの剣","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 4"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 4","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.1] ["",{"text":" ┃  ┣ "},{"text":"石の斧","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 102"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 2","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.102] ["",{"text":" ┃  ┃  ┣ "},{"text":"鉄の斧","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 103"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 3","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.103] ["",{"text":" ┃  ┃  ┃  ┣ "},{"text":"ダイヤモンドの斧","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 104"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 4","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.1] ["",{"text":" ┃  ┣ "},{"text":"石の鎌","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 202"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 2","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.202] ["",{"text":" ┃  ┃  ┣ "},{"text":"鉄の鎌","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 203"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 3","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1},tag=ui.skilltree.203] ["",{"text":" ┃  ┃  ┃  ┣ "},{"text":"ダイヤモンドの鎌","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 204"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 4","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1}] ["",{"text":" ┣ "},{"text":"革装備","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 1001"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 1","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1}] ["",{"text":" ┣ "},{"text":"スイカの薄切り*8","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 2001"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 1","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=1}] ["",{"text":" ┣ "},{"text":"水入り瓶*3","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 3001"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 1","color":"green"}}}]
+
+# 科学ツリー
+tellraw @s[scores={ui_skilltree_v=2}] ["",{"text":"科学ツリー","color":"yellow"},{"text":" [◀]","color":"red","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set -1"},"hoverEvent":{"action":"show_text","contents":{"text":"メインツリーを開く","color":"green"}}},{"text":"[▶]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set -1"},"hoverEvent":{"action":"show_text","contents":{"text":"メインツリーを開く","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=2}] ["",{"text":" ┣ "},{"text":"火薬","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 10001"},"hoverEvent":{"action":"show_text","contents":{"text":"取得に必要なポイント 1","color":"green"}}}]
+tellraw @s[scores={ui_skilltree_v=2},tag=ui.skilltree.10001] ["",{"text":" ┃  ┣ "},{"text":"IH-1P","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 10002"},"hoverEvent":{"action":"show_text","contents":[{"text":"火縄銃の親族","color":"gray"},{"text":"\n取得に必要なポイント 2","color":"green"}]}}]
+tellraw @s[scores={ui_skilltree_v=2},tag=ui.skilltree.10002] ["",{"text":" ┃  ┃  ┣ "},{"text":"IH-HG-Bullet","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 10003"},"hoverEvent":{"action":"show_text","contents":[{"text":"弾込め式ハンドガンの弾丸","color":"gray"},{"text":"\n取得に必要なポイント 1","color":"green"}]}}]
+tellraw @s[scores={ui_skilltree_v=2},tag=ui.skilltree.10002] ["",{"text":" ┃  ┃  ┣ "},{"text":"IH-2P-R","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 10102"},"hoverEvent":{"action":"show_text","contents":[{"text":"初期モデルのリボルバー","color":"gray"},{"text":"\n取得に必要なポイント 3","color":"green"}]}}]
+
+# 
+tellraw @s ["",{"text":"=========================","color":"gray"}]
+
+#tellraw @s ["",{"text":" ┣ "},{"text":"aの剣","color":"white","clickEvent":{"action":"run_command","value":"/trigger ui_skillget set 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"最も基本的な武器","color":"gray"},{"text":"\n取得に必要なポイント 1","color":"green"}]}}]

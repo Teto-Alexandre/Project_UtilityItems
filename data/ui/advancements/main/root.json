@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone",
+      "nbt": "{CustomModelData:210001}"
+    },
+    "title": "UtilityItems",
+    "description": "世界を開拓する",
+    "background": "ui:textures/item/gui/gui_advancement_main.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ]
+}

@@ -1,0 +1,74 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業ツールのレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0401\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0501\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0502\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0503\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0504\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0505\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0506\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0507\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0508\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:book","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:150006,display:{Name:'{\"italic\":false,\"color\":\"white\",\"text\":\"工業機械のレシピ\"}',Lore:['{\"font\":\"ui:recipe\",\"italic\":false,\"color\":\"white\",\"translate\":\"\\\\u0509\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}"}]}
+                
+            ]
+        }
+    ]
+}

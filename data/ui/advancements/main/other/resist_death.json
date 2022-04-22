@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:adventure/totem_of_undying",
+  "display": {
+    "icon": {
+      "item": "minecraft:redstone"
+    },
+    "title": "どうしようもない死も超えて",
+    "description": [
+      {
+        "text": "防ぎようのない"
+      },
+      {
+        "text": "即死",
+        "color": "red",
+        "bold": true
+      },
+      {
+        "text": "に耐える"
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ],
+  "rewards": {
+    "function": "ui:misc/advancements_bonus"
+  }
+}

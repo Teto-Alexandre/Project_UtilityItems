@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ice"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lapis_block",
+    "count": 1
+  }
+}

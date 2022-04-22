@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/charm/charm13",
+  "display": {
+    "icon": {
+      "item": "minecraft:firework_star",
+      "nbt": "{Enchantments:[{id:\"protection\",lvl:1s}]}"
+    },
+    "title": "奈落の加護",
+    "description": [
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0114\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{charm:14}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

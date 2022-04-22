@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:chest_minecart"
+    },
+    {
+      "item": "minecraft:rail"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    }
+  ],
+  "result": {
+    "item": "minecraft:melon_seeds",
+    "count": 1
+  }
+}

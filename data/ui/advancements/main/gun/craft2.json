@@ -1,0 +1,36 @@
+{
+  "parent": "ui:main/gun/craft",
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:110402}"
+    },
+    "title": "手のかかる文明",
+    "description": [
+      {
+        "text": "銃弾を作る"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{tmw:{id:306}}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ]
+}

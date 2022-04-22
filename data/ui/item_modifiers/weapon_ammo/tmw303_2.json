@@ -1,0 +1,39 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "aqua",
+        "text": "エネルギーカートリッジ"
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": " ["
+      },
+      {
+        "italic": false,
+        "color": "light_purple",
+        "score": {
+          "name": "@s",
+          "objective": "ui_temp"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "]"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{CustomModelData:110023}"
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{tmw:{energy:{type:2}}}"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "1 2",
+    " 12"
+  ],
+  "key": {
+    "1": {
+      "tag": "minecraft:logs"
+    },
+    "2": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "minecraft:structure_block",
+    "count": 1
+  }
+}

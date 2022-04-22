@@ -1,0 +1,67 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:temp"
+    },
+    "ops": [
+      {
+        "source": "blood",
+        "target": "tmw.blood.amount",
+        "op": "replace"
+      },
+      {
+        "source": "damage",
+        "target": "Damage",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": " オフハンドに持っていると",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "text": " 敵を攻撃した時に血液を集める",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "text": "Blood: ",
+          "color": "red",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "$blood",
+            "objective": "ui_temp"
+          },
+          "color": "red"
+        },
+        {
+          "text": " / ",
+          "color": "red"
+        },
+        {
+          "score": {
+            "name": "$blood_max",
+            "objective": "ui_temp"
+          },
+          "color": "red"
+        }
+      ]
+    ],
+    "replace": true
+  }
+]

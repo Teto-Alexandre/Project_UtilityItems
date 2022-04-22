@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:purple_stained_glass_pane"
+    },
+    "title": "工業機械",
+    "description": "星の力",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

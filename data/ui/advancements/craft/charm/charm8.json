@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:charm/charm8"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/charm/charm8"
+  }
+}

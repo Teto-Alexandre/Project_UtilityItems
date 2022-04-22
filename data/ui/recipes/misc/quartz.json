@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "result": {
+    "item": "minecraft:quartz",
+    "count": 1
+  }
+}
