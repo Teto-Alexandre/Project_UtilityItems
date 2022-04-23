@@ -1,8 +1,23 @@
-# カードのついでのダイスコモン
-    #必須入力値
-        #$mod ui_calc1 割る値
-    #返り値
-        #$rand ui_calc1 ランダム結果
+#> ui:common/rand
+# ーーーーーーーーーーーーーーーーーーー
+#
+# スコアからランダムな数字を生成するコモン
+#
+# ーーーーーーーーーーーーーーーーーーー
+#
+#    必須入力値
+#
+#       - $mod ui_calc1 割る値
+#
+# ーーーーーーーーーーーーーーーーーーー
+#
+#    返り値
+#
+#       - $rand ui_calc1 ランダム結果
+#
+# ーーーーーーーーーーーーーーーーーーー
+#
+# @public
 
 scoreboard players operation #type1 ui_rand *= #31743 ui_num
 execute store result score #type2 ui_rand run scoreboard players operation #type1 ui_rand += #type2 ui_rand
