@@ -1,12 +1,15 @@
-#=======================================================================================================
+#> ui:1sec
+#
+# 1秒ごとに実行
+#
+# @public
 
+#より上位の時間管理コマンド群
 scoreboard players add $5sec ui_tc 1
 execute if score $5sec ui_tc matches 6.. run scoreboard players set $5sec ui_tc 1
-
 scoreboard players add $world2 ui_tc 1
 execute if score $world2 ui_tc matches 11.. run function ui:10sec
-
-#=======================================================================================================
+scoreboard players set $world ui_tc 1
 
 #障壁
 execute as @a[nbt={Inventory:[{Slot:-106b,tag:{tmw:{id:-3}}}]}] store result score @s ui_dhpm run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.amount 1
@@ -27,9 +30,3 @@ execute if score $bullettime ui_world matches 1.. run scoreboard players remove 
 #クールタイム
 scoreboard players remove @a[scores={ui_ct=1..}] ui_ct 1
 scoreboard players reset @a[scores={ui_ct=..0}] ui_ct
-
-#=======================================================================================================
-
-scoreboard players set $world ui_tc 1
-
-#=======================================================================================================

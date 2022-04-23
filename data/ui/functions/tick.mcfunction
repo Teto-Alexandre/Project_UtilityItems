@@ -155,7 +155,7 @@
     #汎用浮遊リセット
         execute as @e[tag=ui_kb] run function ui:misc/levitation
     #モーションスライムキル
-        execute if score $motionslime ui_world matches 1.. run function ui:misc/kill_slime
+        execute if score $motionslime ui_world matches 1 run function ui:misc/kill_slime
 
 # スキル用操作検知システム
 

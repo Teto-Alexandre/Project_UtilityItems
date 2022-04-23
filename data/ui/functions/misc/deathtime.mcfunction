@@ -1,3 +1,9 @@
+#> ui:misc/deathtime
+#
+# 死亡後にリスポーンしたタイミングで実行
+#
+# @public
+
 #死んだときに実行する奴全般
 execute as @s run function tds:deathtime
 scoreboard players set @s ui_hp 0

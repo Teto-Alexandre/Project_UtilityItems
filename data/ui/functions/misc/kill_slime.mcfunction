@@ -1,9 +1,16 @@
-#透明なスライムを奈落に送る
-#（1tick生かす必要があるのでtickの最初に実行すること）
+#> ui:misc/kill_slime
+#
+# 一時的スライムを奈落に送る
+#
+# $motionslime ui_world　を　1　にすると呼び出される
+#
+# これは動作性向上のために1tick生かす必要があるから
+#
+# @public
 
 #転送+キル
 execute as @e[tag=ui_motionslime] at @s run teleport @s ~ -200 ~
 kill @e[tag=ui_motionslime]
 
 #条件リセット
-scoreboard players reset $motionslime ui_world
+scoreboard players set $motionslime ui_world 0

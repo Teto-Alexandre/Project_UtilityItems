@@ -1,3 +1,11 @@
+#> ui:food/cookie
+#
+# プレイヤーが「クッキー」を食べたら実行
+#
+# 「カスタム食料」の全てを司る
+#
+# @public
+
 #効果分け
 execute as @s[scores={ui_tmw_id=401}] at @s run function ui:food/401/main
 execute as @s[scores={ui_tmw_id=402}] at @s run function ui:food/402/main
