@@ -1,4 +1,8 @@
-#=======================================================================================================
+#> ui:potion/arrow_set
+#
+# 矢の「幸運の値」を参照して「特殊効果を付与」する
+#
+# @public
 
 execute store result score @s ui_calc1 run data get entity @s CustomPotionEffects.[{Id:26b}].Amplifier 1
 scoreboard players reset @s[scores={ui_calc1=0}] ui_calc1
@@ -43,5 +47,3 @@ tag @s add ui_powered
 
 #テスト用
 #say 矢を発射したよ！
-
-#=======================================================================================================

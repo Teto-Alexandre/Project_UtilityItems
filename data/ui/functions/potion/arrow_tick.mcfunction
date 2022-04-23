@@ -1,4 +1,8 @@
-#=======================================================================================================
+#> ui:potion/arrow_tick
+#
+# 矢の「幸運の値」を参照して「常時実行」する
+#
+# @public
 
 execute store result score @s ui_calc1 run data get entity @s CustomPotionEffects.[{Id:26b}].Amplifier 1
 scoreboard players reset @s[scores={ui_calc1=0}] ui_calc1
@@ -34,5 +38,3 @@ execute as @s[tag=ui_arrow_22,nbt={inGround:1b}] at @s run kill @s
 
 #テスト用
 #say 矢が飛んでるよ！
-
-#=======================================================================================================

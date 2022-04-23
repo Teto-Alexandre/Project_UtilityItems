@@ -1,4 +1,10 @@
-#execute if entity @a[scores={ui_tmw_id=1}] run function ui:tmw/1/lim
+#> ui:tmw/root
+#
+# 全てのマジックアイテムの「基本動作」を司るエンジン
+#
+# 「新規アイテム作成時」はここに「追記」すること
+#
+# @public
 
 # ユニークアイテムの装備時の諸々の能力
     #ティルフィング
