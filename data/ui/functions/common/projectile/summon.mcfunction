@@ -8,7 +8,7 @@
         #$c.proj.particle 軌跡パーティクル
         #$c.proj.break 破壊力
         #$c.proj.autohit 命中ダメージコモンを利用するか
-            #$c.proj.particle2 軌跡パーティクル
+            #$c.proj.particle2 終端パーティクル
             #$c.proj.kb ノックバックの強さ
             #$c.proj.damagetype 攻撃の属性
         #$c.proj.damage 攻撃力(0.5heart)
