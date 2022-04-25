@@ -12,5 +12,6 @@ function ui:common/projectile/move
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
-kill @s[scores={ui_br=..0}]
-kill @s[tag=ui_proj_common_nocol]
+execute as @s[scores={ui_br=..0}] run function ui:common/projectile/kill
+
+#=======================================================================================================
