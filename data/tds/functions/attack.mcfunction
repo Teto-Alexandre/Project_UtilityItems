@@ -25,7 +25,7 @@
 # 引数を設定
 #   data merge storage tds: {Damage:10.00f,EPF:0,BypassArmor:true/false,BypassResistance:true/false}
 # 対象を実行者にしてfunctionを実行
-#   execute as 対象 run function tds:api/attack
+#   execute as 対象 run function tds:attack
 #
 #============================================================================
 
