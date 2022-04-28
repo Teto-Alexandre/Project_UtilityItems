@@ -1,5 +1,3 @@
-#===========================================================================
-
 #血を増やす
     scoreboard players operation $blood ui_temp = #2 ui_num
     execute store result score $blood_now ui_temp run data get entity @s Inventory[{Slot:-106b}].tag.tmw.blood.amount
@@ -22,5 +20,3 @@
 #ダメージ本体
     data merge storage tds: {Damage:2.00,EPF:0,BypassArmor:true,BypassResistance:true}
     execute at @s run function tds:attack
-
-#===========================================================================

@@ -7,5 +7,5 @@
     playsound minecraft:entity.elder_guardian.death neutral @a ~ ~ ~ 1 2
 
 #ダメージ本体
-    data merge storage tds: {Damage:50.00,EPF:-1,BypassArmor:true,BypassResistance:false}
+    data merge storage tds: {Damage:50.00,EPF:0,BypassArmor:true,BypassResistance:false}
     execute at @s run function tds:attack
