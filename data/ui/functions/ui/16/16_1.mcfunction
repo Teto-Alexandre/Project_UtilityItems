@@ -33,14 +33,14 @@
     tag @s remove ui_16_1_4
 
 # 土台が壊れたら破壊タグを付ける
-    execute if block ~ ~ ~ air run tag @s add ui_i_break
-    execute if block ~ ~-1 ~ air run tag @s add ui_i_break
+    execute if block ~ ~ ~ air run tag @s add ui_break
+    execute if block ~ ~-1 ~ air run tag @s add ui_break
 
 #土台壊されたら破壊
-    execute if entity @s[tag=ui_i_break] run particle block glass ~ ~ ~ 0.3 0.3 0.3 0 20 normal
-    execute if entity @s[tag=ui_i_break] run fill ~ ~-1 ~ ~ ~ ~ air hollow
-    execute if entity @s[tag=ui_i_break] run kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:cauldron"}}]
-    execute if entity @s[tag=ui_i_break] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stray_spawn_egg",Count:1b,tag:{tmw:{egg:16},CustomModelData:132003,display:{Name:'{"text":"流体タンク","color":"white","italic":false}',Lore:['[{"text":" 容量: 1000mB","color":"gray","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_16"]}}}}
-    execute if entity @s[tag=ui_i_break] run kill @s
+    execute if entity @s[tag=ui_break] run particle block glass ~ ~ ~ 0.3 0.3 0.3 0 20 normal
+    execute if entity @s[tag=ui_break] run fill ~ ~-1 ~ ~ ~ ~ air hollow
+    execute if entity @s[tag=ui_break] run kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:cauldron"}}]
+    execute if entity @s[tag=ui_break] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stray_spawn_egg",Count:1b,tag:{tmw:{egg:16},CustomModelData:132003,display:{Name:'{"text":"流体タンク","color":"white","italic":false}',Lore:['[{"text":" 容量: 1000mB","color":"gray","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_16"]}}}}
+    execute if entity @s[tag=ui_break] run kill @s
 
 #=======================================================================================================

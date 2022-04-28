@@ -1,5 +1,3 @@
-#=======================================================================================================
-
 #時間経過カウント
     #scoreboard players add @s ui_tc 1
 
@@ -22,10 +20,4 @@
         execute store result block ~ ~ ~ CookTimeTotal short 1 run scoreboard players get @s ui_i_ctt
 
 #土台壊されたら破壊
-    execute if entity @s[tag=ui_i_break] run particle block iron_block ~ ~ ~ 0.3 0.3 0.3 0 20 normal
-    execute if entity @s[tag=ui_i_break] run kill @e[type=item,nbt={Age:0s,Item:{tag:{ui:{ismenu:1}}}}]
-    execute if entity @s[tag=ui_i_break] run kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:furnace"}}]
-    execute if entity @s[tag=ui_i_break] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stray_spawn_egg",Count:1b,tag:{CustomModelData:130004,display:{Name:'{"text":"電気かまど","italic":false,"color":"dark_green"}',Lore:['[{"text":"電気を使って二倍速で精錬する","color":"gray","italic":false}]','[{"text":"消費電力：2SU/t","color":"gray","italic":false}]','[{"text":"送電速度：5SU/t","color":"gray","italic":false}]','[{"text":"蓄電量：2000SU","color":"gray","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg_i","ui_egg_i_4"]}}}}
-    execute if entity @s[tag=ui_i_break] run kill @s
-
-#=======================================================================================================
+    execute as @s[tag=ui_i_break] run function ui:industry/4/break
