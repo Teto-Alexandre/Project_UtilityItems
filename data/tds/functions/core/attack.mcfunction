@@ -82,7 +82,7 @@
     #function tds:core/health_subtract
 
 # アメジスト耐性によるダメージ減算と耐性増加
-    execute as @s if score $DamageType tds_dmg matches 1 run function tds:core/amethyst
+    execute as @s if score $DamageType tds_dmg matches 7 run function tds:core/amethyst
 # 属性処理
     # 火属性ならダメージ値の２００００分の１の炎上をスタックする
     #execute as @s if score $DamageType tds_dmg matches 2 run function tds:core/fire
