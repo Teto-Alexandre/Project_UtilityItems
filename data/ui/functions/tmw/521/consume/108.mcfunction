@@ -4,8 +4,7 @@
 #scoreboard players set $c.dice.dis ui_temp 0
 #function ui:common/dice
 
-tag @s add tds_bloodless
-data merge storage tds: {Damage:6.00,EPF:0,BypassArmor:true,BypassResistance:true}
+data merge storage tds: {Damage:6.00,DamageType:-1,DeathMessage:10,EPF:0,BypassArmor:true,BypassResistance:true}
 execute at @s run function tds:attack
 experience add @s 25 points
 

@@ -1,11 +1,10 @@
-#攻撃の種類を判別
-    tag @s add tds_torch_bullet
+#松明砲、魂追加
 
 #ヒット音
     playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1 1
 
 #ダメージ本体
-    data merge storage tds: {Damage:0.60,EPF:-1,BypassArmor:false,BypassResistance:false}
+    data merge storage tds: {Damage:0.60,DamageType:2,DeathMessage:8,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
     scoreboard players add @s tds_fire 1
     execute at @s run function tds:attack
 

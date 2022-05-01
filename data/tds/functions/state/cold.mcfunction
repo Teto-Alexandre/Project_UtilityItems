@@ -1,5 +1,4 @@
-#攻撃の種類を判別
-    tag @s add tds_cold
+#凍結ダメージ
 
 #ヒット音
     playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1 1
@@ -7,7 +6,7 @@
     particle block ice ~ ~1 ~ 0.2 0.4 0.2 0 15
     
 #ダメージ本体
-    data merge storage tds: {Damage:1f,EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
+    data merge storage tds: {Damage:1f,DamageType:6,DeathMessage:2,EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
     execute at @s run function tds:attack
 
 #効果を設定（跳ぶな！）

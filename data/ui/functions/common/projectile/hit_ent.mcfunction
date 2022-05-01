@@ -1,13 +1,10 @@
-#攻撃の種類を判別
-    tag @s add tds_ui_proj
-    execute if score @s ui_bdt matches 1 run tag @s add tds_e_fire
-    execute if score @s ui_bdt matches 2 run tag @s add tds_e_cold
-    scoreboard players reset @s ui_bdt
+#汎用飛び道具コモン
 
 #ダメージ本体
-    data merge storage tds: {Damage:1.00,EPF:-1,BypassArmor:false,BypassResistance:false}
-    scoreboard players operation #temp tds_dmg = @e[tag=ui_proj_common,sort=nearest,limit=1] ui_dmg
+    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
     execute store result storage tds: Damage float 1 run scoreboard players get #temp tds_dmg
+    execute store result storage tds: DamageType int 1 run scoreboard players get $temp ui_bdt
+    data modify storage tds: WeaponName set from storage ui:temp Name
     execute at @s run function tds:attack
 
 #ノックバック

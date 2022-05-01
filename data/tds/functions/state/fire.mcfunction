@@ -1,5 +1,4 @@
-#攻撃の種類を判別
-    tag @s add tds_fire
+#炎上ダメージ
 
 #ヒット音
     playsound minecraft:entity.generic.burn player @a ~ ~ ~ 1 1
@@ -7,7 +6,7 @@
     particle flame ~ ~1 ~ 0.5 0.5 0.5 0.05 10
     
 #ダメージ本体
-    data merge storage tds: {Damage:1.0f,EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
+    data merge storage tds: {Damage:1.0f,DamageType:2,DeathMessage:1,EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
     scoreboard players operation #temp tds_dmg = @s tds_fire
     execute store result storage tds: Damage float 1 run scoreboard players get #temp tds_dmg
     execute at @s run function tds:attack

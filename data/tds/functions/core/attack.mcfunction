@@ -2,6 +2,8 @@
 
 # 引数データをコピー
     execute store result score $Damage tds_dmg run data get storage tds: Damage 100
+    execute unless data storage tds: DamageType run data modify storage tds: DamageType set value 0
+    execute unless data storage tds: DeathMessage run data modify storage tds: DeathMessage set value 0
     execute unless data storage tds: EPF run data modify storage tds: EPF set value -1
     execute unless data storage tds: DisableParticle run data modify storage tds: DisableParticle set value 0b
     execute unless data storage tds: BypassArmor run data modify storage tds: BypassArmor set value 0b
@@ -15,6 +17,8 @@
     execute if data storage tds: {BypassArmor:1b} run scoreboard players set $defensePoints tds_dmg 0
     execute if data storage tds: {BypassArmor:0b} store result score $toughness tds_dmg run attribute @s generic.armor_toughness get 100
     execute if data storage tds: {BypassArmor:1b} run scoreboard players set $toughness tds_dmg 0
+    execute store result score $DamageType tds_dmg run data get storage tds: DamageType
+    execute store result score $DeathMessage tds_dmg run data get storage tds: DeathMessage
     execute store result score $EPF tds_dmg run data get storage tds: EPF
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf_entity
     execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf_player
@@ -26,8 +30,7 @@
     #function tds:core/calc
         #防具による軽減
     scoreboard players operation $CalcA tds_dmg = $defensePoints tds_dmg
-    scoreboard players operation $CalcA tds_dmg *= $20 tds_dmg
-    scoreboard players operation $CalcA tds_dmg /= $100 tds_dmg
+    scoreboard players operation $CalcA tds_dmg /= $5 tds_dmg
     scoreboard players operation $CalcB.3 tds_dmg = $toughness tds_dmg
     scoreboard players operation $CalcB.3 tds_dmg *= $25 tds_dmg
     scoreboard players operation $CalcB.3 tds_dmg += $20000 tds_dmg
@@ -79,12 +82,12 @@
     #function tds:core/health_subtract
 
 # アメジスト耐性によるダメージ減算と耐性増加
-    execute as @s[tag=tds_amethyst] run function tds:core/amethyst
+    execute as @s if score $DamageType tds_dmg matches 1 run function tds:core/amethyst
 # 属性処理
     # 火属性ならダメージ値の２００００分の１の炎上をスタックする
-    execute as @s[tag=tds_e_fire] run function tds:core/fire
+    #execute as @s if score $DamageType tds_dmg matches 2 run function tds:core/fire
     # 冷気属性ならダメージ値の２００００分の１の冷気をスタックする
-    execute as @s[tag=tds_e_cold] run function tds:core/cold
+    #execute as @s if score $DamageType tds_dmg matches 3 run function tds:core/cold
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage tds_dmg < $Health tds_dmg
 # Health減算
@@ -112,39 +115,28 @@
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
-        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @a if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         ## キルログ
-        execute if entity @s[type=player,tag=tds_fire] if score $Health tds_dmg matches ..0 run function tds:message/d_fire
-        execute if entity @s[type=player,tag=tds_cold] if score $Health tds_dmg matches ..0 run function tds:message/d_cold
-        execute if entity @s[type=player,tag=tds_freeze] if score $Health tds_dmg matches ..0 run function tds:message/d_freeze
-        execute if entity @s[type=player,tag=tds_ether_bullet] if score $Health tds_dmg matches ..0 run function tds:message/d_ether_bullet
-        execute if entity @s[type=player,tag=tds_amethyst] if score $Health tds_dmg matches ..0 run function tds:message/d_amethyst
-        execute if entity @s[type=player,tag=tds_infinity_bullet] if score $Health tds_dmg matches ..0 run function tds:message/d_infinity_bullet
-        execute if entity @s[type=player,tag=tds_antimatter] if score $Health tds_dmg matches ..0 run function tds:message/d_antimatter
-        execute if entity @s[type=player,tag=tds_gun_bullet] if score $Health tds_dmg matches ..0 run function tds:message/d_gun_bullet
-        execute if entity @s[type=player,tag=tds_torch_bullet] if score $Health tds_dmg matches ..0 run function tds:message/d_torch_bullet
-        execute if entity @s[type=player,tag=tds_bloodless] if score $Health tds_dmg matches ..0 run function tds:message/d_bloodless
-        execute if entity @s[type=player,tag=tds_ui_proj] if score $Health tds_dmg matches ..0 run function tds:message/d_ui_proj
-        execute if entity @s[type=player,tag=tds_ui_highdamage] if score $Health tds_dmg matches ..0 run function tds:message/d_ui_highdamage
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/d_fire
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/d_freeze
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 3 if score $Health tds_dmg matches ..0 run function tds:message/d_cold
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/d_ether_bullet
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/d_amethyst
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 6 if score $Health tds_dmg matches ..0 run function tds:message/d_infinity_bullet
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/d_antimatter
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 8 if score $Health tds_dmg matches ..0 run function tds:message/d_gun_bullet
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/d_bloodless
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_proj
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_highdamage
 
 # 演出
     function tds:core/damage_indicator
 
 # リセット
     scoreboard players reset $Damage tds_dmg
+    scoreboard players reset $DamageType tds_dmg
+    scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
     tag @a[tag=tds_tempa] remove tds_tempa
-    tag @s remove tds_fire
-    tag @s remove tds_cold
-    tag @s remove tds_e_fire
-    tag @s remove tds_e_cold
-    tag @s remove tds_ether_bullet
-    tag @s remove tds_amethyst
-    tag @s remove tds_infinity_bullet
-    tag @s remove tds_antimatter
-    tag @s remove tds_gun_bullet
-    tag @s remove tds_torch_bullet
-    tag @s remove tds_bloodless
-    tag @s remove tds_ui_proj
-    tag @s remove tds_ui_highdamage

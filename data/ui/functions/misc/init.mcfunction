@@ -105,6 +105,7 @@
 #プレイヤー区別用id
     scoreboard objectives add ui_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
     scoreboard objectives add ui_idc dummy {"text":"UtilityItems_IDCalc","color":"dark_blue"}
+    scoreboard objectives add ui_team dummy {"text":"UtilityItems_Team","color":"dark_blue"}
 
 #工業用
     #パーティクル用ループカウント
