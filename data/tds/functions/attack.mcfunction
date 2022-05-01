@@ -51,19 +51,19 @@
 
 # DeathMessage一覧
 
-    ##  1:    「Victimは燃え尽きた」炎上ダメージで死ぬ
-    ##  2:    「Victimは凍り付いた」凍結ダメージで死ぬ
-    ##  3: @  「VictimはAttackerに真っ黒焦げにされた」炎熱ダメージで殺される
-    ##  4: @  「VictimはAttackerに氷像にされた」冷却ダメージで殺される
-    ##  5: @  「VictimはAttackerの操る不思議エネルギーによって死んだ」霊気ダメージで殺される
-    ##  6: @  「VictimはAttackerによってボロボロになった」時間ダメージで殺される
-    ##  7: @  「VictimはAttackerによって消滅させられた」消滅の矢とかで殺される
-    ##  8: @ ©「VictimはAttackerの[Weapon]で撃ち抜かれた」銃系で殺される
-    ##  9: @ ©「VictimはAttackerの[Weapon]で命を落とした」汎用武器で殺される
-    ## 10:    「Victimは貧血で倒れた」失血ダメージで死ぬ
-    ## 11:    「Victimは巨大な力によって為す術もなく死んだ」高ダメージコモンで死ぬ
-    ## 12: @  「VictimはAttackerに電流を流されて死に至った」エレキショッカー・オートで殺される
-    ## 13:    「Victimは息絶えた」普通に死ぬ
+    ##  1: 未    「Victimは燃え尽きた」炎上ダメージで死ぬ
+    ##  2: 未    「Victimは凍り付いた」凍結ダメージで死ぬ
+    ##  3: 未 @  「VictimはAttackerに真っ黒焦げにされた」炎熱ダメージで殺される
+    ##  4: 未 @  「VictimはAttackerに氷像にされた」冷却ダメージで殺される
+    ##  5: 未 @  「VictimはAttackerの操る不思議エネルギーによって死んだ」霊気ダメージで殺される
+    ##  6: 未 @  「VictimはAttackerによってボロボロになった」時間ダメージで殺される
+    ##  7: 未 @  「VictimはAttackerによって消滅させられた」消滅の矢とかで殺される
+    ##  8: 未 @ ©「VictimはAttackerの[Weapon]で撃ち抜かれた」銃系で殺される
+    ##  9: 完 @ ©「VictimはAttackerの[Weapon]で命を落とした、...6」汎用武器で殺される
+    ## 10: 未    「Victimは貧血で倒れた」失血ダメージで死ぬ
+    ## 11: 未    「Victimは巨大な力によって為す術もなく死んだ」高ダメージコモンで死ぬ
+    ## 12: 未 @  「VictimはAttackerに電流を流されて死に至った」エレキショッカー・オートで殺される
+    ## 13: 未    「Victimは息絶えた」普通に死ぬ
 
 # ダメージを与えるためのタグが足りていないならエラーを吐く
     execute unless data storage tds: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]
