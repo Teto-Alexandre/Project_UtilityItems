@@ -117,8 +117,8 @@
         ## 攻撃者特定
         execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         ## キルログ
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/d_fire
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/d_freeze
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 3 if score $Health tds_dmg matches ..0 run function tds:message/d_cold
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/d_ether_bullet
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/d_amethyst
@@ -126,9 +126,10 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/d_antimatter
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 8 if score $Health tds_dmg matches ..0 run function tds:message/d_gun_bullet
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/d_bloodless
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_proj
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_highdamage
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_proj
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
 
 # 演出
     function tds:core/damage_indicator
@@ -140,3 +141,4 @@
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
     tag @a[tag=tds_tempa] remove tds_tempa
+    data remove storage ui:temp Name
