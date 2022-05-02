@@ -3,6 +3,7 @@
     execute if score @s ui_hpart matches 1 run playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 0.8 1
     execute if score @s ui_hpart matches 2 run playsound minecraft:block.glass.break neutral @a ~ ~ ~ 1 0.5
     execute if score @s ui_hpart matches 3 run playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1 2
+    execute if score @s ui_hpart matches 5 run playsound minecraft:block.honey_block.break neutral @a ~ ~ ~ 1 1
 
 #ヒットパーティクル
     execute if score @s ui_hpart matches 1 run particle explosion ~ ~ ~ 0 0 0 0 1 force
@@ -14,6 +15,7 @@
 
 #その他
     execute if score @s ui_hpart matches 4 run summon creeper ~ ~ ~ {ExplosionRadius:3,ignited:1b,Fuse:0}
+    execute if score @s ui_hpart matches 5 positioned ^ ^ ^0.8 run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
 
 #
     kill @s
