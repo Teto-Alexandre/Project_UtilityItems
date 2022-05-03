@@ -115,7 +115,7 @@
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
-        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[type=!#ui:unhurtable,tag=!ui_unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         ## キルログ
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2
