@@ -17,6 +17,7 @@ execute if score $temp ui_temp matches 13 as @s[scores={ui_use1=1..}] unless sco
 execute if score $temp ui_temp matches 14 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/14
 execute if score $temp ui_temp matches 15 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/15
 execute if score $temp ui_temp matches 16 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/16
+execute if score $temp ui_temp matches 17 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/17
 execute if score $temp ui_temp matches 14 at @s run particle witch ^ ^ ^6 0 0 0 0.1 1 normal @s
 
 #=======================================================================================================

@@ -15,7 +15,8 @@
 
 #その他
     execute if score @s ui_hpart matches 4 run summon creeper ~ ~ ~ {ExplosionRadius:3,ignited:1b,Fuse:0}
-    execute if score @s ui_hpart matches 5 positioned ^ ^ ^0.8 run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
+    execute if score @s ui_hpart matches 5 positioned ^ ^ ^0.5 run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
+    execute if score @s ui_hpart matches 6 positioned ^ ^ ^0.5 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 light_blue_wool replace #ui:wools
 
 #
     kill @s
