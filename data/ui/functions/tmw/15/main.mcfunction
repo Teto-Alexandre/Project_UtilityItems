@@ -18,6 +18,14 @@ execute if score $temp ui_temp matches 14 as @s[scores={ui_use1=1..}] unless sco
 execute if score $temp ui_temp matches 15 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/15
 execute if score $temp ui_temp matches 16 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/16
 execute if score $temp ui_temp matches 17 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/17
+execute if score $temp ui_temp matches 18 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/18
+execute if score $temp ui_temp matches 19 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. if score @s ui_paint matches 500.. at @s run function ui:tmw/15/19
+execute if score $temp ui_temp matches 19 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. if score @s ui_paint matches ..499 at @s run playsound block.dispenser.fail player @a ~ ~ ~ 1 1.2 0
 execute if score $temp ui_temp matches 14 at @s run particle witch ^ ^ ^6 0 0 0 0.1 1 normal @s
+execute if score $temp ui_temp matches 26 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/26
+execute if score $temp ui_temp matches 27 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/27
+execute if score $temp ui_temp matches 28 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/28
+execute if score $temp ui_temp matches 29 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. if score @s ui_paint matches 500.. at @s run function ui:tmw/15/29
+execute if score $temp ui_temp matches 29 as @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. if score @s ui_paint matches ..499 at @s run playsound block.dispenser.fail player @a ~ ~ ~ 1 1.2 0
 
 #=======================================================================================================

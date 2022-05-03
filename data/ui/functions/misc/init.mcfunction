@@ -201,6 +201,9 @@
     scoreboard objectives add ui_lvl_craft_exp dummy {"text":"UtilityItems_Level_Craft_Experience","color":"dark_blue"}
     scoreboard objectives add ui_lvl_craft_lvl dummy {"text":"UtilityItems_Level_Craft_Level","color":"dark_blue"}
 
+#必殺技カウント
+    scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
+
 #使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
