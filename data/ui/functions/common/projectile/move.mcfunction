@@ -21,6 +21,14 @@
     execute if score @s ui_bpart matches 2 run particle block ice ~ ~ ~ 0 0 0 0 1 force
     execute if score @s ui_bpart matches 3 run particle dust 1 1 0.5 1 ~ ~ ~ 0 0 0 0.02 1 force
     execute if score @s ui_bpart matches 3 run particle block gold_block ~ ~ ~ 0 0 0 0 1 force
+    execute if score @s ui_bpart matches 4 run particle dust 0.5 1 1 1 ~ ~ ~ 0 0 0 0.02 1 force
+    execute if score @s ui_bpart matches 4 run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
+    execute if score @s ui_bpart matches 4 run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
+    execute if score @s ui_bpart matches 4 at @s run teleport @s ~ ~ ~ ~ ~2
+    execute if score @s ui_bpart matches 5 run particle dust 0.5 1 1 1 ~ ~ ~ 0 0 0 0.02 1 force
+    execute if score @s ui_bpart matches 5 run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
+    execute if score @s ui_bpart matches 5 run fill ~ ~ ~ ~ ~-5 ~ light_blue_wool replace #ui:wools
+    execute if score @s ui_bpart matches 5 at @s run teleport @s ~ ~ ~ ~ ~0.8
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:common/projectile/block_col
