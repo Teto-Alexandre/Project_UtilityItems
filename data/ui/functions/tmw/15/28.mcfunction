@@ -12,7 +12,7 @@ execute rotated ~ 0 run particle block pink_concrete ^ ^0.2 ^1.25 1 0.1 1 0 10 f
 # 前方に攻撃判定
     scoreboard players operation $Attacker tds_dmg = @s ui_id
     data modify storage ui:temp Name set from entity @s SelectedItem.tag.display.Name
-    execute positioned ^ ^ ^1.25 as @e[tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable,distance=..3,sort=nearest,limit=1] at @s run function ui:common/projectile/hit_ent
+    execute positioned ^ ^ ^1.25 as @e[tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable,distance=..3,sort=nearest,limit=1] at @s run function ui:tmw/15/18.2
 
 #一時タグ削除
     tag @e[tag=ui_temp_team] remove ui_temp_team
