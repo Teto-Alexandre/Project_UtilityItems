@@ -8,7 +8,7 @@ scoreboard players set $c.proj.particle ui_temp 3
 scoreboard players set $c.proj.autohit ui_temp 1
 scoreboard players set $c.proj.particle2 ui_temp 3
 scoreboard players set $c.proj.kb ui_temp 1
-scoreboard players set $c.proj.damagetype ui_temp 0
+scoreboard players set $c.proj.damagetype ui_temp 10
 scoreboard players set $c.proj.break ui_temp 10
 scoreboard players set $c.proj.damage ui_temp 8
 
