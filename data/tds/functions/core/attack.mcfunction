@@ -123,13 +123,16 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/d_ether_bullet
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/d_amethyst
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 6 if score $Health tds_dmg matches ..0 run function tds:message/d_infinity_bullet
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/d_antimatter
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/7
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 8 if score $Health tds_dmg matches ..0 run function tds:message/8
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
+
+# 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
+    scoreboard players operation $Return tds_dmg = $Damage tds_dmg
 
 # 演出
     function tds:core/damage_indicator

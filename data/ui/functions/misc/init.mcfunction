@@ -238,6 +238,7 @@
     scoreboard players set #1000 ui_num 1000
     scoreboard players set #2220 ui_num 2220
     scoreboard players set #10000 ui_num 10000
+    scoreboard players set #20000 ui_num 20000
     scoreboard players set #31743 ui_num 31743
     scoreboard players set #32767 ui_num 32767
     scoreboard players set #65536 ui_num 65536

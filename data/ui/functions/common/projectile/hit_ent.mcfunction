@@ -6,6 +6,9 @@
     execute store result storage tds: DamageType int 1 run scoreboard players get $temp ui_bdt
     data modify storage tds: WeaponName set from storage ui:temp Name
     execute at @s run function tds:attack
+    scoreboard players operation $Return tds_dmg /= #20000 ui_num
+    execute if score $temp ui_bdt matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
+    execute if score $temp ui_bdt matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg
 
 #ノックバック
     tp @s @s
