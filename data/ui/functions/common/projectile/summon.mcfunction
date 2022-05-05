@@ -30,7 +30,8 @@ scoreboard players operation @e[tag=ui_proj_common_unpower] ui_hpart = $c.proj.p
 scoreboard players operation @e[tag=ui_proj_common_unpower] ui_kb = $c.proj.kb ui_temp
 scoreboard players operation @e[tag=ui_proj_common_unpower] ui_bdt = $c.proj.damagetype ui_temp
 scoreboard players operation @e[tag=ui_proj_common_unpower] ui_dmg = $c.proj.damage ui_temp
-#scoreboard players operation $mod ui_calc1 = $c.proj.damage.s ui_temp
+#scoreboard players set $mod ui_calc1 1
+#scoreboard players operation $mod ui_calc1 += $c.proj.damage.s ui_temp
 #function ui:rand
 #scoreboard players operation @e[tag=ui_proj_common_unpower] ui_dmg += $rand ui_calc1
 scoreboard players operation @e[tag=ui_proj_common_unpower] ui_gpc = $c.proj.break ui_temp
