@@ -119,10 +119,10 @@
         ## キルログ
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 3 if score $Health tds_dmg matches ..0 run function tds:message/d_cold
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/d_ether_bullet
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/d_amethyst
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 6 if score $Health tds_dmg matches ..0 run function tds:message/d_infinity_bullet
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 3 if score $Health tds_dmg matches ..0 run function tds:message/3
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/4
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/5
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 6 if score $Health tds_dmg matches ..0 run function tds:message/6
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/7
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 8 if score $Health tds_dmg matches ..0 run function tds:message/8
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
