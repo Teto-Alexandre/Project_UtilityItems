@@ -31,12 +31,12 @@
     execute if score @s ui_hpart matches 4 run summon creeper ~ ~ ~ {ExplosionRadius:3,ignited:1b,Fuse:0}
     execute if score @s ui_hpart matches 5 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
     execute if score @s ui_hpart matches 6 store result score $temp ui_temp run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 light_blue_wool replace #ui:wools
-    execute if score @s ui_hpart matches 7 store result score $temp ui_temp run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 light_blue_wool replace #ui:wools
+    execute if score @s ui_hpart matches 7 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 light_blue_wool replace #ui:wools
     execute if score @s ui_hpart matches 15 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
     execute if score @s ui_hpart matches 16 store result score $temp ui_temp run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 pink_wool replace #ui:wools
-    execute if score @s ui_hpart matches 17 store result score $temp ui_temp run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 pink_wool replace #ui:wools
-    execute if score @s ui_hpart matches 5..7 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
-    execute if score @s ui_hpart matches 15..17 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
+    execute if score @s ui_hpart matches 17 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 pink_wool replace #ui:wools
+    execute if score @s ui_hpart matches 5..6 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
+    execute if score @s ui_hpart matches 15..16 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
 
 #
     kill @s

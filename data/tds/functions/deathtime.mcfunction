@@ -3,5 +3,7 @@ scoreboard players reset @s tds_cold
 scoreboard players reset @s tds_amethyst
 scoreboard players reset @s tds_amethyst_t
 
-#復活直後にHP回復（死にかけでリスポーンするバグ対策）
-effect give @s instant_health 1 10 true
+#インクの爆発を起こして死ぬ
+execute store result score $temp ui_temp run data get entity @s[nbt={SelectedItem:{tag:{tmw:{id:15}}}}] SelectedItem.tag.tmw.type
+execute if score $temp ui_temp matches 16..19 at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 pink_wool replace #ui:wools
+execute if score $temp ui_temp matches 26..29 at @s run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 light_blue_wool replace #ui:wools

@@ -173,6 +173,7 @@
     scoreboard objectives add ui_bt dummy {"text":"UtilityItems_BulletType","color":"dark_blue"}
     scoreboard objectives add ui_gt dummy {"text":"UtilityItems_GunType","color":"dark_blue"}
     scoreboard objectives add ui_gpc dummy {"text":"UtilityItems_GunPierceCount","color":"dark_blue"}
+    scoreboard objectives add ui_bcp dummy {"text":"UtilityItems_BulletCountPassed","color":"dark_blue"}
 
 #スキルツリー
     scoreboard objectives add ui_skilltree_v trigger {"text":"UtilityItems_SkillTree_View","color":"dark_blue"}
