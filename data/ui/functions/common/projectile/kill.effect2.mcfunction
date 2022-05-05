@@ -28,7 +28,7 @@
     execute if score @s ui_hpart matches 17 run particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
 
 #その他
-    execute if score @s ui_hpart matches 4 run summon creeper ~ ~ ~ {ExplosionRadius:3,ignited:1b,Fuse:0}
+    execute if score @s ui_hpart matches 4 run summon creeper ~ ~ ~ {ExplosionRadius:3,ignited:1b,Fuse:0,CustomName:'{"text":"魔法"}'}
     execute if score @s ui_hpart matches 5 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
     execute if score @s ui_hpart matches 6 store result score $temp ui_temp run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 light_blue_wool replace #ui:wools
     execute if score @s ui_hpart matches 7 run fill ~-3 ~-3 ~-3 ~3 ~3 ~3 light_blue_wool replace #ui:wools
