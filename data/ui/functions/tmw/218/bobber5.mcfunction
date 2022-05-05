@@ -14,6 +14,7 @@ execute at @s[scores={ui_is=2}] run particle angry_villager ~ ~ ~ 0.2 0.2 0.2 0 
 
 execute at @s[scores={ui_is=1..}] run playsound block.note_block.hat player @a ~ ~ ~ 1 2
 
+execute at @s[scores={ui_is=2}] run scoreboard players operation $id ui_temp = @s ui_id
 execute at @s[scores={ui_is=2}] as @e[type=!#ui:unhurtable,tag=!ui_unhurtable,sort=nearest,limit=1] at @s run function ui:tmw/218/hit
 
 #=======================================================================================

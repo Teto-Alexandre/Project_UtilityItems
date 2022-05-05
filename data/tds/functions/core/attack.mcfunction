@@ -128,7 +128,7 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/d_ui_proj
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
 
 # 演出
