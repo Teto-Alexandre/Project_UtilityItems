@@ -1,7 +1,7 @@
 #=======================================================================================================
 
 #コモンイベント利用
-scoreboard players set $c.proj.spread ui_temp 30
+scoreboard players set $c.proj.spread ui_temp 0
 scoreboard players set $c.proj.speed ui_temp 4
 scoreboard players set $c.proj.range ui_temp 160
 scoreboard players set $c.proj.particle ui_temp 5
