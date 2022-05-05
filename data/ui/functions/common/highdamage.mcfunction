@@ -16,6 +16,6 @@
 
 # act
 tag @s add tds_ui_highdamage_temp
-data merge storage tds: {Damage:1024.00,DamageType:1,DeathMessage:11,EPF:-1,BypassArmor:false,BypassResistance:false}
+data merge storage tds: {Damage:1024.00,DamageType:1,DeathMessage:11,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
 execute at @s run function tds:attack
 advancement grant @s[tag=tds_ui_highdamage_temp] only ui:main/other/resist_death

@@ -12,7 +12,7 @@
 #   DeathMessage: int
 #       死亡時のメッセージを入力
 #   WeaponName: string
-#       必要ならキルログの武器名を入力
+#       キルログの武器名を入力
 #   EPF: int
 #       軽減効果のある[エンチャントプロテクションファクター]の合計値
 #   DisableParticle: boolean
@@ -51,8 +51,8 @@
 
 # DeathMessage一覧
 
-    ##  1: 〇    「Victimは燃え尽きた」炎上ダメージで死ぬ
-    ##  2: 〇    「Victimは凍り付いた」凍結ダメージで死ぬ
+    ##  1:         Null
+    ##  2:         Null
     ##  3: 〇 @ ©「VictimはAttackerに真っ黒焦げにされた」炎熱ダメージで殺される
     ##  4: 〇 @ ©「VictimはAttackerに氷像にされた」冷却ダメージで殺される
     ##  5: 〇 @ ©「VictimはAttackerの操る不思議エネルギーによって死んだ」霊気ダメージで殺される

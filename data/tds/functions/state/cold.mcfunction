@@ -6,7 +6,7 @@
     particle block ice ~ ~1 ~ 0.2 0.4 0.2 0 15
     
 #ダメージ本体
-    data merge storage tds: {Damage:1f,DamageType:6,DeathMessage:2,EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
+    data merge storage tds: {Damage:1f,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:true,BypassResistance:false,DisableParticle:true}
     execute at @s run function tds:attack
 
 #効果を設定（跳ぶな！）
