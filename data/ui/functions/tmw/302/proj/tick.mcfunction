@@ -14,3 +14,6 @@ function ui:tmw/302/proj/move
 #キル条件
 kill @s[scores={ui_br=..0}]
 kill @s[tag=ui_302_nocol]
+
+#一時タグ削除
+tag @e[tag=ui_temp_team] remove ui_temp_team
