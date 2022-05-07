@@ -23,6 +23,6 @@
 
 #
     playsound minecraft:block.dispenser.dispense master @a ~ ~ ~ 1 1.5 0
-    #scoreboard players set @s ui_usec 0
+    #scoreboard players set @s ui_use1 0
 
 #=======================================================================================================

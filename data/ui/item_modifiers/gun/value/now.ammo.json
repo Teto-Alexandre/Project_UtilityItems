@@ -1,0 +1,29 @@
+[
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$ammo"
+      },
+      "score": "ui_temp",
+      "scale": 0.01
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:beacongametemp"
+    },
+    "ops": [
+      {
+        "source": "value",
+        "target": "tmw.gun.now.ammo",
+        "op": "replace"
+      }
+    ]
+  }
+]

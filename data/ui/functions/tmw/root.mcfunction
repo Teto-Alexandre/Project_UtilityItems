@@ -99,6 +99,9 @@
         execute if entity @a[scores={ui_tmw_id=233}] run function ui:tmw/233/lim
     #ラ・イリアス
         execute if entity @a[scores={ui_tmw_id=234}] run function ui:tmw/234/lim
+    #ネオンガン
+        execute if entity @a[scores={ui_tmw_id=235}] run function ui:tmw/235/lim
+        execute if entity @a[scores={ui_tmw_id2=235}] run function ui:tmw/235/oh/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

@@ -52,8 +52,8 @@ execute if score $temp ui_temp matches 0 if score $temp4 ui_temp matches 103 run
 execute if score $temp ui_temp matches 0 if score $temp4 ui_temp matches -106 run item replace entity @s weapon.offhand with air
 
 #say a
-#tellraw @a {"score":{"name":"temp","objective":"ui_temp"}}
-#tellraw @a {"score":{"name":"temp2","objective":"ui_temp"}}
+#tellraw @a {"score":{"name":"$temp","objective":"ui_temp"}}
+#tellraw @a {"score":{"name":"$temp2","objective":"ui_temp"}}
 
 # 走査式ループ
 execute if data storage ui:temp Inventory[0] unless score $temp2 ui_temp = $temp3 ui_temp run function ui:tmw/226/putin.lp

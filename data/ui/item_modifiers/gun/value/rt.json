@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:beacongametemp"
+    },
+    "ops": [
+      {
+        "source": "value",
+        "target": "tmw.gun.rt",
+        "op": "replace"
+      }
+    ]
+  }
+]

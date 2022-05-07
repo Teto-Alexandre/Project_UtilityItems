@@ -5,7 +5,7 @@
       "type": "minecraft:score",
       "target": {
         "type": "minecraft:fixed",
-        "name": "temp3"
+        "name": "$temp3"
       },
       "score": "ui_temp",
       "scale": 0.01
@@ -24,7 +24,7 @@
         },
         {
           "score": {
-            "name": "temp",
+            "name": "$temp",
             "objective": "ui_temp"
           }
         },
@@ -33,7 +33,7 @@
         },
         {
           "score": {
-            "name": "temp2",
+            "name": "$temp2",
             "objective": "ui_temp"
           }
         }

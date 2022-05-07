@@ -129,7 +129,7 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
+        execute if entity @s[type=player] unless score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run function tds:message/13
 
 # 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg
