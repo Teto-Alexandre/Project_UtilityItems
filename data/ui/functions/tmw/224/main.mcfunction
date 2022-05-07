@@ -25,7 +25,7 @@ execute as @s[scores={ui_st=0,ui_use1=1..,ui_temp=1..,ui_temp2=2}] at @s run fun
 execute as @s[scores={ui_use1=1..},tag=!ui_temp_success] at @s run function ui:tmw/224/fail
 
 # キャッシュクリア
-scoreboard players reset temp ui_temp
+scoreboard players reset $temp ui_temp
 tag @s remove ui_temp_success
 
 #===========================================================================

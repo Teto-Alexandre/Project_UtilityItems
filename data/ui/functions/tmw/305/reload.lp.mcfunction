@@ -13,5 +13,5 @@ kill @e[tag=tmw_r_potion,nbt={Item:{id:"minecraft:stone",Count:1b}}]
 tag @e[tag=tmw_r_potion] remove tmw_r_potion
 
 # 全部なくなるまで再帰
-scoreboard players remove temp ui_temp 1
-execute if score temp ui_temp matches 1.. run function ui:tmw/305/reload.lp
+scoreboard players remove $temp ui_temp 1
+execute if score $temp ui_temp matches 1.. run function ui:tmw/305/reload.lp

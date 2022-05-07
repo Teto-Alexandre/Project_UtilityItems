@@ -4,8 +4,8 @@ execute unless entity @e[tag=ui_12_2,distance=..0.9] run summon minecraft:skelet
 execute if entity @e[tag=ui_12_2,distance=..0.9] run teleport @e[tag=ui_12_2,distance=..0.9] ~ ~ ~ ~ ~
 
 #的のHPをリゲインしダメージを出力
-execute store result score temp ui_temp run data get entity @e[tag=ui_12_2,sort=nearest,limit=1] Health -10
-execute unless score temp ui_temp matches -10000 run function ui:ui/12/dt
+execute store result score $temp ui_temp run data get entity @e[tag=ui_12_2,sort=nearest,limit=1] Health -10
+execute unless score $temp ui_temp matches -10000 run function ui:ui/12/dt
 
 #コンボ中断
 execute if entity @s[nbt={PortalCooldown:1}] run function ui:ui/12/pc
