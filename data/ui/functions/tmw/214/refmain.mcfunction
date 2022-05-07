@@ -6,5 +6,5 @@
 #
 # @public
 
-tag @e[distance=..5,type=#ui:notmob,type=!armor_stand,tag=!ui_refr] add ui_refr
+tag @e[distance=..5,type=#ui:reflect,tag=!ui_refr] add ui_refr
 execute as @e[tag=ui_refr,distance=..5,tag=!ui_refd] run function ui:tmw/214/ref
