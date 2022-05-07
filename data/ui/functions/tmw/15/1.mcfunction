@@ -1,22 +1,16 @@
-#=======================================================================================================
+# データ読み取り
+    execute store result score $c.proj.multi ui_temp run data get entity @s SelectedItem.tag.tmw.projectile.MultiShot
+    execute store result score $c.proj.ct ui_temp run data get entity @s SelectedItem.tag.tmw.projectile.CoolTime
 
-#コモンイベント利用
-scoreboard players set $c.proj.spread ui_temp 100
-scoreboard players set $c.proj.speed ui_temp 3
-scoreboard players set $c.proj.range ui_temp 30
-scoreboard players set $c.proj.particle ui_temp 1
-scoreboard players set $c.proj.autohit ui_temp 1
-scoreboard players set $c.proj.particle2 ui_temp 1
-scoreboard players set $c.proj.kb ui_temp 1
-scoreboard players set $c.proj.damagetype ui_temp 2
-scoreboard players set $c.proj.break ui_temp 2
-scoreboard players set $c.proj.damage ui_temp 6
+# 飛び道具生成
+    function ui:tmw/15/1.2
 
-function ui:common/projectile
+# 発射サウンド
+    playsound entity.firework_rocket.launch player @a ~ ~ ~ 0.8 1.6 0
 
-playsound entity.firework_rocket.launch player @a ~ ~ ~ 0.8 1.6 0
+# クールタイム（MPの概念がないのでとりあえず仮追加）
+    scoreboard players operation @s ui_ct += $c.proj.ct ui_temp
 
-#クールタイム（MPの概念がないのでとりあえず仮追加）
-scoreboard players set @s ui_ct 3
-
-#=======================================================================================================
+# スコア消し
+    scoreboard players reset $c.proj.multi ui_temp
+    scoreboard players reset $c.proj.ct ui_temp
