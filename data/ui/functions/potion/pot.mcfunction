@@ -51,25 +51,26 @@ effect give @s[scores={ui_calc1=18}] regeneration 1 1 true
 execute at @s[scores={ui_calc1=18}] run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1 0
 
 #抹消シリーズ
-execute as @s[scores={ui_calc1=19}] at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-7,posY:-7,posZ:-7,sizeX:15,sizeY:15,sizeZ:15,name:"ui:sphere15"}
+execute as @s[scores={ui_calc1=19..21}] store result score $temp ui_temp run gamerule mobGriefing
+execute as @s[scores={ui_calc1=19}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-7,posY:-7,posZ:-7,sizeX:15,sizeY:15,sizeZ:15,name:"ui:sphere15"}
 execute as @s[scores={ui_calc1=19}] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
 execute as @s[scores={ui_calc1=19}] at @s run particle cloud ~ ~ ~ 0 0 0 0.6 50 force
 execute as @s[scores={ui_calc1=19}] at @s run playsound entity.generic.explode neutral @a ~ ~ ~ 2 0.5 0
 execute at @s[scores={ui_calc1=19}] as @e[type=!#ui:unhurtable,distance=..8] run function ui:potion/damage/antimatter
 execute at @s[scores={ui_calc1=19}] run kill @e[type=end_crystal,distance=..8]
-execute as @s[scores={ui_calc1=20}] at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-11,posY:-11,posZ:-11,sizeX:23,sizeY:23,sizeZ:23,name:"ui:sphere23"}
+execute as @s[scores={ui_calc1=20}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-11,posY:-11,posZ:-11,sizeX:23,sizeY:23,sizeZ:23,name:"ui:sphere23"}
 execute as @s[scores={ui_calc1=20}] at @s run particle explosion_emitter ~ ~ ~ 3.5 3.5 3.5 0 15 force
 execute as @s[scores={ui_calc1=20}] at @s run particle cloud ~ ~ ~ 3.5 3.5 3.5 1.2 150 force
 execute as @s[scores={ui_calc1=20}] at @s run playsound entity.generic.explode neutral @a ~ ~ ~ 5 0.5 0
 execute at @s[scores={ui_calc1=20}] as @e[type=!#ui:unhurtable,distance=..12] run function ui:potion/damage/antimatter
 execute at @s[scores={ui_calc1=20}] run kill @e[type=end_crystal,distance=..12]
-execute as @s[scores={ui_calc1=21}] at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-15,posY:-15,posZ:-15,sizeX:31,sizeY:31,sizeZ:31,name:"ui:sphere31"}
+execute as @s[scores={ui_calc1=21}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-15,posY:-15,posZ:-15,sizeX:31,sizeY:31,sizeZ:31,name:"ui:sphere31"}
 execute as @s[scores={ui_calc1=21}] at @s run particle explosion_emitter ~ ~ ~ 6 6 6 0 50 force
 execute as @s[scores={ui_calc1=21}] at @s run particle cloud ~ ~ ~ 6 6 6 1.8 500 force
 execute as @s[scores={ui_calc1=21}] at @s run playsound entity.generic.explode neutral @a ~ ~ ~ 9 0.5 0
 execute at @s[scores={ui_calc1=21}] as @e[type=!#ui:unhurtable,distance=..16] run function ui:potion/damage/antimatter
 execute at @s[scores={ui_calc1=21}] run kill @e[type=end_crystal,distance=..16]
-execute as @s[scores={ui_calc1=19..21}] at @s run execute at @s run setblock ~ ~1 ~ redstone_block
+execute as @s[scores={ui_calc1=19..21}] if score $temp ui_temp matches 1 at @s run execute at @s run setblock ~ ~1 ~ redstone_block
 
 #耐性シリーズ
 scoreboard players reset @s[scores={ui_calc1=26}] tds_fire

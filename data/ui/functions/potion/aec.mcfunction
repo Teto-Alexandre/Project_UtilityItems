@@ -15,9 +15,10 @@ execute at @e[scores={ui_calc1=2}] run summon minecraft:lightning_bolt ~ ~ ~
 execute at @e[scores={ui_calc1=12}] run summon minecraft:tnt ~ ~ ~
 execute at @e[scores={ui_calc1=12}] run summon minecraft:tnt ~ ~ ~
 
+execute at @e[scores={ui_calc1=13}] store result score $temp ui_temp run gamerule mobGriefing
 execute at @e[scores={ui_calc1=13}] run effect give @a[distance=..4] minecraft:slowness 10 5 true
 execute at @e[scores={ui_calc1=13}] run effect give @a[distance=..4] minecraft:jump_boost 10 129 true
-execute at @e[scores={ui_calc1=13}] run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:packed_ice hollow
+execute at @e[scores={ui_calc1=13}] if score $temp ui_temp matches 1 run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:packed_ice hollow
 execute at @e[scores={ui_calc1=13}] run playsound minecraft:block.glass.break master @a ~ ~ ~ 1 0.5 0
 execute at @e[scores={ui_calc1=13}] run particle minecraft:falling_dust snow ~ ~1 ~ 2 1 2 1 50 force
 execute at @e[scores={ui_calc1=13}] run particle minecraft:falling_dust ice ~ ~1 ~ 2 1 2 1 50 force

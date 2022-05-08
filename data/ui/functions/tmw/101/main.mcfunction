@@ -25,9 +25,10 @@ execute as @s[tag=tmw_101-2,tag=tmw_oh_n] at @s positioned ~ ~1 ~ run particle m
 execute as @s[scores={ui_ft=40,ui_fp=1}] run effect clear @s levitation
 execute as @s[scores={ui_ft=40,ui_fp=1}] run effect give @s levitation 1 0 true
 execute as @s[scores={ui_ft=40,ui_fp=1}] run effect give @s slow_falling 1 0 true
+execute as @s[scores={ui_ft=5..30,ui_fp=1}] store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_ft=5..30,ui_fp=1}] at @s run teleport @s ^ ^ ^1.5 ~ ~
-execute as @s[scores={ui_ft=5..30,ui_fp=1}] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 fire
-execute as @s[scores={ui_ft=5..30,ui_fp=1}] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire replace air
+execute as @s[scores={ui_ft=5..30,ui_fp=1}] if score $temp ui_temp matches 1 at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 fire
+execute as @s[scores={ui_ft=5..30,ui_fp=1}] if score $temp ui_temp matches 1 at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire replace air
 
 execute as @s[scores={ui_ft=60,ui_fp=2}] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tmw_101_2"]}
 

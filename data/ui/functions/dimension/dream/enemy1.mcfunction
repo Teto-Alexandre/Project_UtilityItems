@@ -1,8 +1,9 @@
 #幽鬼AI
 
 #目の前の壁を壊す
-    execute if entity @a[distance=..5] unless block ^ ^0.5 ^1 #ui:nocol run setblock ^ ^0.5 ^1 air destroy
-    execute if entity @a[distance=..5] unless block ^ ^1.5 ^1 #ui:nocol run setblock ^ ^1.5 ^1 air destroy
+    execute store result score $temp ui_temp run gamerule mobGriefing
+    execute if entity @a[distance=..5] if score $temp ui_temp matches 1 unless block ^ ^0.5 ^1 #ui:nocol run setblock ^ ^0.5 ^1 air destroy
+    execute if entity @a[distance=..5] if score $temp ui_temp matches 1 unless block ^ ^1.5 ^1 #ui:nocol run setblock ^ ^1.5 ^1 air destroy
 
 #上に敵がいると飛び跳ねる
     scoreboard players remove @s[scores={ui_tmw_id=1..}] ui_tmw_id 1

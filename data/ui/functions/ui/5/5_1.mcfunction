@@ -1,7 +1,9 @@
 #=======================================================================================================
 
+execute store result score $temp ui_temp run gamerule mobGriefing
+
 execute at @s run data merge block ~ ~ ~ {BurnTime:32767s,CookTime:199s}
-execute at @s unless block ~ ~1 ~ air run setblock ~ ~1 ~ fire
+execute at @s unless block ~ ~1 ~ air if score $temp ui_temp matches 1 run setblock ~ ~1 ~ fire
 execute at @s[scores={ui_calc1=0..9}] run data modify block ~ ~ ~ Items append value {Slot:1b,id:"minecraft:yellow_stained_glass_pane",Count:1b,tag:{ui:{ismenu:1},display:{Name:'{"text":"NovaPowerCore","color":"green","italic":false}',Lore:['[{"text":"状態：","color":"gray","italic":false},{"text":" 安定","color":"yellow","italic":false}]']}}}
 execute at @s[scores={ui_calc1=10..19}] run data modify block ~ ~ ~ Items append value {Slot:1b,id:"minecraft:orange_stained_glass_pane",Count:1b,tag:{ui:{ismenu:1},display:{Name:'{"text":"NovaPowerCore","color":"green","italic":false}',Lore:['[{"text":"状態：","color":"gray","italic":false},{"text":" 不安定","color":"gold","italic":false}]']}}}
 execute at @s[scores={ui_calc1=20..}] run data modify block ~ ~ ~ Items append value {Slot:1b,id:"minecraft:red_stained_glass_pane",Count:1b,tag:{ui:{ismenu:1},display:{Name:'{"text":"NovaPowerCore","color":"green","italic":false}',Lore:['[{"text":"状態：","color":"gray","italic":false},{"text":" 崩壊","color":"red","italic":false}]']}}}
@@ -33,8 +35,9 @@ execute at @s[scores={ui_tc=1}] if score $rand ui_calc1 matches 995..999 run tag
 execute at @s[scores={ui_tc=1,ui_calc1=10..}] if score $rand ui_calc1 matches 960..994 run tag @s add ui_5_1_2
 execute at @s[scores={ui_tc=1,ui_calc1=20..}] if score $rand ui_calc1 matches 800..959 run tag @s add ui_5_1_2
 
-execute at @s[tag=ui_5_1_2] run summon fireball ~ ~0.5 ~ {ExplosionPower:30,Motion:[0.0d,-1.0d,0.0d]}
-execute at @s[tag=ui_5_1_2] run setblock ~ ~ ~ stone
+execute at @s[tag=ui_5_1_2] run summon fireball ~ ~0.5 ~ {ExplosionPower:25,Motion:[0.0d,-1.0d,0.0d]}
+execute if score $temp ui_temp matches 1 at @s[tag=ui_5_1_2] run setblock ~ ~ ~ stone
+execute if score $temp ui_temp matches 0 at @s[tag=ui_5_1_2] run setblock ~ ~ ~ air
 
 execute at @s unless block ~ ~ ~ furnace run kill @e[type=item,nbt={Age:0s,Item:{tag:{ui:{ismenu:1}}}}]
 execute at @s unless block ~ ~ ~ furnace run kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:furnace"}}]
