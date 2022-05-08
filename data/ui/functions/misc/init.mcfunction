@@ -235,6 +235,7 @@
     scoreboard players set #95 ui_num 95
     scoreboard players set #100 ui_num 100
     scoreboard players set #200 ui_num 200
+    scoreboard players set #250 ui_num 250
     scoreboard players set #325 ui_num 325
     scoreboard players set #360 ui_num 360
     scoreboard players set #500 ui_num 500
