@@ -254,7 +254,6 @@
     scoreboard players set $max ui_i_resitem2 64
     scoreboard players set $tmw10 ui_calc1 1
     scoreboard players set $gun.react ui_world 1
-    scoreboard players set $gun.break ui_world 1
     scoreboard players set $base ui_id 1
     scoreboard players set $base ui_i_id 1
 
