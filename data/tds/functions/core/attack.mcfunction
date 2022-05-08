@@ -148,7 +148,7 @@
     tag @e[tag=ui_temp_indic] remove ui_temp_indic
     kill @e[tag=ui_temp_marker]
     schedule function ui:misc/act/dmg_indic 1t append
-    
+
 # 演出
     function tds:core/damage_indicator
 
