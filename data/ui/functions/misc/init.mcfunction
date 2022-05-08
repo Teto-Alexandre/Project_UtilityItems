@@ -40,6 +40,7 @@
     scoreboard objectives add ui_uset minecraft.used:minecraft.totem_of_undying {"text":"UtilityItems_UseTotem","color":"dark_blue"}
     scoreboard objectives add ui_usec minecraft.used:minecraft.crossbow {"text":"UtilityItems_UseCrossbow","color":"dark_blue"}
     scoreboard objectives add ui_usep minecraft.used:minecraft.potion {"text":"UtilityItems_UsePot","color":"dark_blue"}
+    scoreboard objectives add ui_uses minecraft.used:minecraft.snowball {"text":"UtilityItems_UseSnow","color":"dark_blue"}
     scoreboard objectives add ui_use1 minecraft.used:minecraft.carrot_on_a_stick {"text":"UtilityItems_Use1","color":"dark_blue"}
     scoreboard objectives add ui_use2 dummy {"text":"UtilityItems_Use2","color":"dark_blue"}
     scoreboard objectives add ui_use2_tc dummy {"text":"UtilityItems_Use2_TimeCount","color":"dark_blue"}
