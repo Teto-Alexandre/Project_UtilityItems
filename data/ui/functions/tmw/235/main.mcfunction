@@ -8,6 +8,7 @@ execute store result score $bursttype ui_temp run data get storage ui:gun temp.b
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.bc
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.ct
 execute store result score $recoil ui_temp run data get storage ui:gun temp.rc
+execute store result score $reload ui_temp run data get storage ui:gun temp.now.reload
 
 # 検知範囲拡大
 tag @s[tag=tmw_drop_s] add tmw_drop_n
@@ -25,6 +26,8 @@ execute at @s unless entity @e[tag=tmw_235.snipe,distance=..0.1] run scoreboard 
 scoreboard players operation $ammo ui_temp -= $ammo.use ui_temp
 execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/burst
 execute if score $bursttype ui_temp matches 2 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/burst
+execute if score $bursttype ui_temp matches 3 if score $reload ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use2=1..}] run function ui:tmw/235/burst3
+execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/burst3.stop
 execute if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches ..-1 as @s[scores={ui_use1=1..}] run function ui:tmw/235/reload
 
 # クールタイム解除

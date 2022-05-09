@@ -8,11 +8,14 @@ execute store result score $bursttype ui_temp run data get storage ui:gun temp.b
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.bc
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.ct
 execute store result score $recoil ui_temp run data get storage ui:gun temp.rc
+execute store result score $reload ui_temp run data get storage ui:gun temp.now.reload
 
 # バースト数
 scoreboard players operation $ammo ui_temp -= $ammo.use ui_temp
 execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst
 execute if score $bursttype ui_temp matches 2 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst
+execute if score $bursttype ui_temp matches 3 if score $reload ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use2=1..}] run function ui:tmw/235/oh/burst3
+execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst3.stop
 execute if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches ..-1 as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/reload
 
 # クールタイム解除
