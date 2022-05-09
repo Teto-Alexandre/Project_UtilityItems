@@ -1,5 +1,5 @@
 # 精密射撃レベル設定
-execute store result score $temp ui_temp run data get entity @s SelectedItem.tag.tmw.gun.snipe
+execute store result score $temp ui_temp run data get storage ui:gun temp.snipe
 execute if score $temp ui_temp matches 1.. run tp @s @s
 execute if score $temp ui_temp matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:6000,Age:4,Effects:[{Id:2b,Amplifier:0b,Duration:6,ShowParticles:0b}],Tags:["ui","tmw_235.snipe"]}
 execute if score $temp ui_temp matches 1.. run playsound entity.ender_dragon.flap player @a ~ ~ ~ 0.4 1.8 0

@@ -1,4 +1,7 @@
 # リロード中のサウンド
+    execute if score $cooltime ui_temp matches 40 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 1.1 0
+    execute if score $cooltime ui_temp matches 30 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 1.3 0
+    execute if score $cooltime ui_temp matches 20 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 1.5 0
     execute if score $cooltime ui_temp matches 15 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 1.6 0
     execute if score $cooltime ui_temp matches 10 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 1.8 0
     execute if score $cooltime ui_temp matches 5 at @s run playsound block.note_block.hat player @a ~ ~ ~ 1 2 0

@@ -1,9 +1,9 @@
 # 弾を全部撃ってリロードするとこ
-    #execute store result score $ammo.max ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.ammo
-    execute store result score $ammo ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.now.ammo
+    #execute store result score $ammo.max ui_temp run data get storage ui:gun temp.ammo
+    execute store result score $ammo ui_temp run data get storage ui:gun temp.now.ammo
 
 # リロード終了時刻.mod
-    execute store result score $temp ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.rt
+    execute store result score $temp ui_temp run data get storage ui:gun temp.rt
     execute store result score $ct.temp ui_temp run time query gametime
     scoreboard players operation $ct.temp ui_temp += $temp ui_temp
     execute store result storage ui:beacongametemp value int 1 run scoreboard players get $ct.temp ui_temp
@@ -17,7 +17,7 @@
     execute if score $ammo ui_temp < $ammo.max ui_temp run function ui:tmw/235/reload.lp
 
 # アイテム転置
-    data modify storage ui:gun name set from entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.name
+    data modify storage ui:gun name set from storage ui:gun temp.name
     item modify entity @s weapon.offhand ui:gun/name_ammo_r
     execute store result storage ui:beacongametemp value int 1 run scoreboard players get $ammo ui_temp
     scoreboard players operation $ammo ui_temp *= #100 ui_num

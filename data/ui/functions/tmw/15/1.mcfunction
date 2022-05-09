@@ -1,6 +1,9 @@
 # データ読み取り
-    execute store result score $c.proj.multi ui_temp run data get entity @s SelectedItem.tag.tmw.projectile.MultiShot
-    execute store result score $c.proj.ct ui_temp run data get entity @s SelectedItem.tag.tmw.projectile.CoolTime
+    data modify storage ui:common temp set from entity @s SelectedItem.tag.tmw.projectile
+    execute store result score $c.proj.multi ui_temp run data get storage ui:common temp.MultiShot
+    execute store result score $c.proj.ct ui_temp run data get storage ui:common temp.CoolTime
+    #次の項でどうせ消えるから実行はしないけどメモ
+    #data remove storage ui:common temp
 
 # 飛び道具生成
     function ui:tmw/15/1.2

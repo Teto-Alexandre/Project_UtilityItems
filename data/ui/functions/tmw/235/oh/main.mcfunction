@@ -1,15 +1,18 @@
 # 必要データ収集
-execute store result score $ammo ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.now.ammo
-execute store result score $ammo.use ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.bu
-execute store result score $ammo.max ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.ammo
-execute store result score $multishot ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.ms
-execute store result score $burst ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.now.bc
-execute store result score $cooltime ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.now.ct
-execute store result score $recoil ui_temp run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.gun.rc
+data modify storage ui:gun temp set from entity @s Inventory.[{Slot:-106b}].tag.tmw.gun
+execute store result score $ammo ui_temp run data get storage ui:gun temp.now.ammo
+execute store result score $ammo.use ui_temp run data get storage ui:gun temp.bu
+execute store result score $ammo.max ui_temp run data get storage ui:gun temp.ammo
+execute store result score $multishot ui_temp run data get storage ui:gun temp.ms
+execute store result score $bursttype ui_temp run data get storage ui:gun temp.bt
+execute store result score $burst ui_temp run data get storage ui:gun temp.now.bc
+execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.ct
+execute store result score $recoil ui_temp run data get storage ui:gun temp.rc
 
 # バースト数
 scoreboard players operation $ammo ui_temp -= $ammo.use ui_temp
-execute if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst
+execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst
+execute if score $bursttype ui_temp matches 2 if score $ammo ui_temp matches 0.. as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/burst
 execute if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $ammo ui_temp matches ..-1 as @s[scores={ui_use1=1..}] run function ui:tmw/235/oh/reload
 
 # クールタイム解除
