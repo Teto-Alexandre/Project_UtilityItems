@@ -37,6 +37,7 @@
 
     ## 条件増加スコアのリセット
         scoreboard players reset @a[scores={ui_usec=1..}] ui_usec
+        scoreboard players reset @a[scores={ui_uses=1..}] ui_uses
         scoreboard players reset @a[scores={ui_usep=1..}] ui_usep
         scoreboard players reset @a[scores={ui_cookie=1..}] ui_cookie
         scoreboard players reset @a[scores={ui_m_dd=1..}] ui_m_dd

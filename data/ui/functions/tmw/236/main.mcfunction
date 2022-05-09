@@ -1,5 +1,7 @@
 # 投げるよ!
-    execute as @s[scores={ui_uses=1..}] at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/236/tick
+    execute at @s run tag @e[type=snowball,sort=nearest,limit=1] add ui_temp_snowball
+    execute if entity @e[tag=ui_temp_snowball,nbt={Item:{tag:{tmw:{id:236}}}}] as @s[scores={ui_uses=1..}] at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/236/tick
+    tag @e[tag=ui_temp_snowball] remove ui_temp_snowball
 
 # 予測線表示
     scoreboard players set $visible ui_temp 1

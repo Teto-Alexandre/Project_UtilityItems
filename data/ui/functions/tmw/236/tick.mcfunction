@@ -1,5 +1,5 @@
 # アイテム転置
-    summon item ~ ~ ~ {Tags:["ui_temp_this","tmw_236"],Invulnerable:1b,Item:{id:"minecraft:snowball",Count:1b,tag:{tmw:{type:5},CustomModelData:301}},PickupDelay:32767s}
+    summon item ~ ~ ~ {Tags:["ui_temp_this","tmw_236"],Invulnerable:1b,Item:{id:"minecraft:snowball",Count:1b,tag:{tmw:{type:5},CustomModelData:217001}},PickupDelay:32767s}
     data modify entity @e[tag=ui_temp_this,limit=1] Motion set from entity @e[type=snowball,sort=nearest,limit=1] Motion
     data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.type set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.tmw.type
     data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.CustomModelData
