@@ -6,5 +6,5 @@
     kill @e[type=armor_stand,tag=ui_H]
 
 #周囲にあるものを回収する
-    teleport @e[type=item,distance=..100,nbt={Age:0s}] ~ ~ ~
+    teleport @e[type=item,distance=..200,nbt={Age:0s}] ~ ~ ~
     execute as @e[type=item,distance=..2,nbt={Age:0s}] run data merge entity @s {PickupDelay:0s}
