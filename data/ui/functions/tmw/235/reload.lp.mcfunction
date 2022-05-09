@@ -1,4 +1,4 @@
-# 弾(ダイヤモンド)をインベントリから消す: 成功したらスコア加算
+# 弾(ネオンカートリッジ)をインベントリから消す: 成功したらスコア加算
     execute store success score $temp ui_temp run clear @s iron_ingot{CustomModelData:211006} 1
     scoreboard players operation $ammo ui_temp += $temp ui_temp
 
