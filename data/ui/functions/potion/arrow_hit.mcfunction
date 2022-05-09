@@ -64,7 +64,7 @@ execute as @s[scores={ui_calc1=19..21}] if score $temp ui_temp matches 1 at @s r
 
 #対空近接信管の矢
 execute as @s[scores={ui_calc1=23}] store result score $temp ui_temp run gamerule mobGriefing
-execute as @s[scores={ui_calc1=23}] at @s run summon creeper ~ ~ ~ {ExplosionRadius:16,ignited:1b,Invulnerable:1b,Fuse:0}
+execute as @s[scores={ui_calc1=23}] at @s run summon creeper ~ ~ ~ {ExplosionRadius:16,ignited:1b,Invulnerable:1b,Fuse:0,CustomName:'[{"text":"[","color":"white"},{"text":"対空近接信管の矢","color":"yellow","bold":true},{"text":"]","color":"white"}]'}
 execute as @s[scores={ui_calc1=23}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-7,posY:-7,posZ:-7,sizeX:15,sizeY:15,sizeZ:15,name:"ui:sphere15"}
 execute as @s[scores={ui_calc1=23}] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
 execute as @s[scores={ui_calc1=23}] at @s run particle cloud ~ ~ ~ 0 0 0 0.6 50 force

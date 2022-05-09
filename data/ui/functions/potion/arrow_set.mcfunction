@@ -24,7 +24,7 @@ execute as @s[scores={ui_calc1=10}] at @s run tag @s add ui_refd
 #TNTの矢
 execute as @s[scores={ui_calc1=15}] run execute store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_calc1=15}] if score $temp ui_temp matches 1 at @s run summon tnt ~ ~ ~ {Tags:["ui_luck15"],Fuse:80}
-execute as @s[scores={ui_calc1=15}] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Tags:["ui_luck15"],Fuse:80,ignited:1b,ExplosionRadius:4}
+execute as @s[scores={ui_calc1=15}] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Tags:["ui_luck15"],Fuse:80,ignited:1b,ExplosionRadius:4,Invulnerable:1b,CustomName:'[{"text":"[","color":"white"},{"text":"TNTの矢","color":"red","bold":true},{"text":"]","color":"white"}]'}
 execute at @s[scores={ui_calc1=15}] as @e[tag=ui_luck15,distance=..1] run data modify entity @s Motion set from entity @e[scores={ui_calc1=15},limit=1,sort=nearest] Motion
 execute at @s[scores={ui_calc1=15}] run tag @e[tag=ui_luck15,distance=..1] remove ui_luck15
 execute as @s[scores={ui_calc1=15}] run kill @s

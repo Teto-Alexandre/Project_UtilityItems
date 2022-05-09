@@ -16,11 +16,11 @@ execute as @s[scores={ui_tc=..99}] at @s if block ^ ^ ^1 #ui:nocol run tag @s ad
 
 execute as @s[scores={ui_tc=100..}] at @s run execute store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_tc=100..}] if score $temp ui_temp matches 1 at @s run summon tnt ~ ~ ~
-execute as @s[scores={ui_tc=100..}] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4}
+execute as @s[scores={ui_tc=100..}] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4,Invulnerable:1b,CustomName:'{"text":"火砕砲撃","color":"red"}'}
 kill @s[scores={ui_tc=100..}]
 execute as @s[tag=!tmw_2_2_3] at @s run execute store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[tag=!tmw_2_2_3] if score $temp ui_temp matches 1 at @s run summon tnt ~ ~ ~
-execute as @s[tag=!tmw_2_2_3] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4}
+execute as @s[tag=!tmw_2_2_3] if score $temp ui_temp matches 0 at @s run summon creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4,Invulnerable:1b,CustomName:'{"text":"火砕砲撃","color":"red"}'}
 kill @s[tag=!tmw_2_2_3]
 
 #=======================================================================================================

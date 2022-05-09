@@ -12,8 +12,10 @@ execute store result score @s ui_calc1 run data get entity @s Effects.[{Id:26b}]
 
 execute at @e[scores={ui_calc1=2}] run summon minecraft:lightning_bolt ~ ~ ~
 
-execute at @e[scores={ui_calc1=12}] run summon minecraft:tnt ~ ~ ~
-execute at @e[scores={ui_calc1=12}] run summon minecraft:tnt ~ ~ ~
+execute as @s[scores={ui_calc1=12}] store result score $temp ui_temp run gamerule mobGriefing
+execute as @s[scores={ui_calc1=12}] if score $temp ui_temp matches 1 at @s run summon minecraft:tnt ~ ~ ~
+execute as @s[scores={ui_calc1=12}] if score $temp ui_temp matches 1 at @s run summon minecraft:tnt ~ ~ ~
+execute as @s[scores={ui_calc1=12}] if score $temp ui_temp matches 0 at @s run summon minecraft:creeper ~ ~ ~ {ignited:1b,Fuse:0,Invulnerable:1b,ExplosionRadius:5,CustomName:'[{"text":"[","color":"white"},{"text":"爆塵のポーション","color":"gold"},{"text":"]","color":"white"}]'}
 
 execute at @e[scores={ui_calc1=13}] store result score $temp ui_temp run gamerule mobGriefing
 execute at @e[scores={ui_calc1=13}] run effect give @a[distance=..4] minecraft:slowness 10 5 true
