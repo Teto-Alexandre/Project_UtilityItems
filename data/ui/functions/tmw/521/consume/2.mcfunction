@@ -10,4 +10,5 @@ scoreboard players set $c.proj.damagetype ui_temp 1
 scoreboard players set $c.proj.break ui_temp 7
 scoreboard players set $c.proj.damage ui_temp 16
 scoreboard players set $c.proj.damage.s ui_temp 7
+scoreboard players operation $c.proj.damage ui_temp *= #10 ui_num
 function ui:common/projectile

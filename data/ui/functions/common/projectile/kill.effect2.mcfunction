@@ -41,7 +41,7 @@
     execute if score @s ui_hpart matches 16 run function ui:template/sphere_particle/3.2
     execute if score @s ui_hpart matches 16 run scoreboard players set $temp ui_temp 0
     execute if score @s ui_hpart matches 16 run scoreboard players set @s ui_bdt 3
-    execute if score @s ui_hpart matches 16 run scoreboard players set @s ui_dmg 4
+    execute if score @s ui_hpart matches 16 run scoreboard players set @s ui_dmg 60
     execute if score @s ui_hpart matches 16 at @e[distance=..3,tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable] run function ui:common/projectile/hit.marker
     execute if score @s ui_hpart matches 16 at @e[tag=ui_temp_particle] run particle dust 1 0.5 1 1 ~ ~ ~ 0 0 0 0 1 force
     execute if score @s ui_hpart matches 16 at @e[tag=ui_temp_particle] run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
@@ -50,7 +50,7 @@
     execute if score @s ui_hpart matches 16 run kill @e[tag=ui_temp_particle]
     execute if score @s ui_hpart matches 17 run function ui:template/sphere_particle/4.2
     execute if score @s ui_hpart matches 17 run scoreboard players set @s ui_bdt 3
-    execute if score @s ui_hpart matches 17 run scoreboard players set @s ui_dmg 8
+    execute if score @s ui_hpart matches 17 run scoreboard players set @s ui_dmg 80
     execute if score @s ui_hpart matches 17 at @e[distance=..4,tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable] run function ui:common/projectile/hit.marker
     execute if score @s ui_hpart matches 17 at @e[tag=ui_temp_particle] run particle dust 1 0.5 1 1 ~ ~ ~ 0 0 0 0 1 force
     execute if score @s ui_hpart matches 17 at @e[tag=ui_temp_particle] run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
