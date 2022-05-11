@@ -105,6 +105,8 @@
     #ネオングレネード
         execute if entity @a[scores={ui_tmw_id=236}] run function ui:tmw/236/lim
         execute if entity @a[scores={ui_tmw_id2=236}] run function ui:tmw/236/oh/lim
+    #ペイントガン
+        execute if entity @a[scores={ui_tmw_id=237}] run function ui:tmw/237/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

@@ -6,7 +6,7 @@
       {
         "italic": false,
         "color": "white",
-        "nbt": "name",
+        "nbt": "temp.name",
         "storage": "ui:gun"
       },
       {
