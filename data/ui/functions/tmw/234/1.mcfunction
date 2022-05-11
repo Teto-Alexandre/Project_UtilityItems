@@ -2,7 +2,7 @@
 
 #コモンイベント利用
 scoreboard players set $c.proj.spread ui_temp 10
-scoreboard players set $c.proj.speed ui_temp 20
+scoreboard players set $c.proj.speed ui_temp 200
 scoreboard players set $c.proj.range ui_temp 200
 scoreboard players set $c.proj.particle ui_temp 3
 scoreboard players set $c.proj.autohit ui_temp 1
