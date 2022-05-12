@@ -6,7 +6,7 @@
     execute if score $ink ui_temp matches 0.. as @s[tag=tmw_use_c] run function ui:tmw/237/burst3.2
 
 # タメ
-    scoreboard players remove $burst.max ui_temp 1
+    scoreboard players remove $burst.max ui_temp 5
     execute if score @s ui_use2 = $burst.max ui_temp at @s run playsound block.iron_door.open player @s ~ ~ ~ 1 1.2 0
     execute if score @s ui_use2 < $burst.max ui_temp at @s run playsound block.lever.click player @a ~ ~ ~ 1 1.4 0
 
