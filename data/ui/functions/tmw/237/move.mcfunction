@@ -4,7 +4,7 @@
     effect clear @s slowness
     effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-127b}]}] jump_boost
     effect give @s speed 1 25 true
-    effect give @s jump_boost 1 4 true
+    effect give @s jump_boost 1 3 true
     effect give @s invisibility 1 0 true
     effect clear @s[tag=tmw_237_regen5] regeneration
     effect give @s[tag=tmw_237_regen3] regeneration 1 3 true

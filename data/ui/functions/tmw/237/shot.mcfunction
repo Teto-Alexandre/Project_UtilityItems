@@ -10,6 +10,8 @@
     execute store result score $multishot ui_temp run data get storage ui:gun temp2.MultiShot
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $speed.plus ui_temp run data get storage ui:gun temp2.SpeedPlus
+    execute store result score $spread ui_temp run data get storage ui:gun temp2.Spread
+    execute if entity @s[nbt={OnGround:0b}] run scoreboard players add $spread ui_temp 300
     scoreboard players set $speed.add ui_temp 0
 
 # チャージ補正
@@ -24,7 +26,7 @@
     #execute anchored eyes run summon minecraft:armor_stand ^ ^ ^ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","tmw_237","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
     execute anchored eyes run summon minecraft:armor_stand ^ ^ ^ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","ui_proj_common","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
     execute anchored eyes run summon minecraft:marker ^ ^ ^1 {Tags:["ui","ui_marker"]}
-    execute store result score $mod ui_temp run data get storage ui:gun temp2.Spread 1
+    scoreboard players operation $mod ui_temp = $spread ui_temp
     execute if score $mod ui_temp matches 1.. run function ui:tmw/237/square_shuffle
     execute as @e[tag=ui_temp_unpower] at @s facing entity @e[tag=ui_marker,limit=1] feet run teleport @s ^ ^ ^1 ~ ~
     execute store result score @e[tag=ui_temp_unpower] ui_bpart run data get storage ui:gun temp2.FlyParticle
