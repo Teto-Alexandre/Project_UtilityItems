@@ -2,6 +2,7 @@
 
 # 特殊効果
     effect clear @s slowness
+    effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-127b}]}] jump_boost
     effect give @s speed 1 25 true
     effect give @s jump_boost 1 4 true
     effect give @s invisibility 1 0 true

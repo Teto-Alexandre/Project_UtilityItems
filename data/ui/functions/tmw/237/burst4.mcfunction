@@ -3,7 +3,7 @@
 
 # 離すと書き込み
     scoreboard players operation @s ui_use2 < $burst.max ui_temp
-    execute if score $ink ui_temp matches 0.. as @s[tag=tmw_use_c] run function ui:tmw/237/burst3.2
+    execute if score $ink ui_temp matches 0.. as @s[tag=tmw_use_c] run function ui:tmw/237/burst4.2
 
 # タメ
     scoreboard players remove $burst.max ui_temp 1

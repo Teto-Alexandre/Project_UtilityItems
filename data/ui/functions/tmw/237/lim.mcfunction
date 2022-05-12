@@ -3,3 +3,4 @@
 
 #付属品
     schedule function ui:tmw/237/ss 1t append
+    schedule function ui:tmw/237/ss2 1t append
