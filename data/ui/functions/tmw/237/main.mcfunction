@@ -22,8 +22,10 @@ tag @s[tag=tmw_drop_s] add tmw_drop_n
 tag @s[tag=tmw_oh_s] add tmw_oh_n
 
 # 常駐効果
-execute if score $color ui_temp matches 1 at @s if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/floor
-execute if score $color ui_temp matches 2 at @s if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/floor
+execute if score $color ui_temp matches 1 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/floor
+execute if score $color ui_temp matches 2 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/floor
+execute if score $color ui_temp matches 1 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ pink_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ light_blue_wool replace #ui:wools
+execute if score $color ui_temp matches 2 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ light_blue_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ pink_wool replace #ui:wools
 execute if score $color ui_temp matches 1 at @s[scores={ui_st=1..}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/move
 execute if score $color ui_temp matches 2 at @s[scores={ui_st=1..}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/move
 execute at @s[scores={ui_st=0}] run function ui:tmw/237/shoot
@@ -52,19 +54,13 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 
 # サブウェポン発動
-execute as @s[tag=tmw_drop_n] if score $ink ui_temp >= $ink.sub ui_temp at @s[tag=!ui_temp_move,nbt=!{ActiveEffects:[{Id:14b}]}] anchored eyes positioned ~ ~ ~ run function ui:tmw/237/sub
+execute as @s[tag=tmw_drop_n] if score $ink ui_temp >= $ink.sub ui_temp at @s[tag=!ui_temp_move,nbt=!{ActiveEffects:[{Id:14b}]}] anchored eyes positioned ^ ^ ^ run function ui:tmw/237/sub
 
 # スペシャルウェポン発動
 scoreboard players operation @s ui_paint < $spneed ui_temp
-execute as @s[tag=tmw_oh_n] if score @s ui_paint = $spneed ui_temp at @s[tag=!ui_temp_move,nbt=!{ActiveEffects:[{Id:14b}]}] anchored eyes positioned ~ ~ ~ run function ui:tmw/237/sp
-execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp run item modify entity @s weapon.mainhand ui:gun/add_glow
-execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run playsound entity.player.levelup player @a ~ ~ ~ 1 1.5 0
-execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run particle firework ~ ~1 ~ 0.5 0.5 0.5 0.03 10 normal
-execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp run scoreboard players set $changed ui_temp 1
-execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp run scoreboard players set $sp ui_temp 1
-execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run item modify entity @s weapon.mainhand ui:gun/del_glow
-execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run scoreboard players set $changed ui_temp 1
-execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run scoreboard players set $sp ui_temp 0
+execute as @s[tag=tmw_oh_n] if score @s ui_paint = $spneed ui_temp at @s[tag=!ui_temp_move,nbt=!{ActiveEffects:[{Id:14b}]}] anchored eyes positioned ^ ^ ^ run function ui:tmw/237/sp
+execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp.ready
+execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp.not
 
 # 逆変換
 execute if score $changed ui_temp matches 1 store result storage ui:gun temp.now.Burst int 1 run scoreboard players get $burst ui_temp

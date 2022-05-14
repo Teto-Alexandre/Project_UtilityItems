@@ -14,4 +14,5 @@
     scoreboard players set $changed ui_temp 1
 
 # エフェクト
-    execute at @s run particle dust 0.5 1 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $color ui_temp matches 1 at @s run particle dust 0.5 1 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $color ui_temp matches 2 at @s run particle dust 1 0.5 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
