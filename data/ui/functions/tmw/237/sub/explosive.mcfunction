@@ -4,7 +4,7 @@
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
     scoreboard players operation $temp ui_temp = @s ui_team
-    execute as @e[type=!#ui:unhurtable,tag=!ui_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
+    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
 
 # それぞれの起爆
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:1}}}}] run function ui:tmw/237/sub/ex1

@@ -15,7 +15,7 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $temp ui_temp = @s ui_team
-execute as @e[type=!#ui:unhurtable,tag=!ui_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
+execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
 
 #重力補正
 execute if score @s ui_bpart matches 4..39 if score $temp ui_bcp matches 1.. at @s run function ui:common/projectile/gravity

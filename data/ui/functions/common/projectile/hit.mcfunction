@@ -5,7 +5,7 @@
     scoreboard players operation $Attacker tds_dmg = @s ui_id
     execute as @a if score @s ui_id = $Attacker tds_dmg at @s run playsound entity.arrow.hit_player player @s ~ ~ ~ 0.7 1.2 0
     data modify storage ui:temp Name set from entity @s ArmorItems.[0].tag.display.Name
-    execute as @e[tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable,sort=nearest,limit=1] at @s run function ui:common/projectile/hit_ent
+    execute as @e[tag=!ui_temp_team,predicate=ui:load_unhurtable,sort=nearest,limit=1] at @s run function ui:common/projectile/hit_ent
     kill @e[tag=ui_temp_target]
 
 # 消失

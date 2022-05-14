@@ -5,7 +5,7 @@
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:3}}}}] run function ui:tmw/236/ex3
     execute as @s[nbt={Item:{tag:{tmw:{type:4}}}}] run function ui:tmw/236/ex4
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:5}}}}] run function ui:tmw/236/ex5
-    execute as @s[scores={ui_uses=5..},nbt={Item:{tag:{tmw:{type:5}}}}] if entity @e[type=!#ui:unhurtable,tag=!ui_unhurtable,distance=..3] run function ui:tmw/236/ex5
+    execute as @s[scores={ui_uses=5..},nbt={Item:{tag:{tmw:{type:5}}}}] if entity @e[predicate=ui:load_unhurtable,distance=..3] run function ui:tmw/236/ex5
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:6}}}}] run function ui:tmw/236/ex6
     execute as @s[nbt={Item:{tag:{tmw:{type:7}}}}] run function ui:tmw/236/ex7
 

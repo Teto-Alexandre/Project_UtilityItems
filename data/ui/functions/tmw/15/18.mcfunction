@@ -7,12 +7,12 @@ execute rotated ~ 0 run particle block light_blue_concrete ^ ^0.2 ^1.25 1 0.1 1 
 
 #同じチームを認識して識別
     scoreboard players operation $temp ui_temp = @s ui_team
-    execute as @e[type=!#ui:unhurtable,tag=!ui_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
+    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
 
 # 前方に攻撃判定
     scoreboard players operation $Attacker tds_dmg = @s ui_id
     data modify storage ui:temp Name set from entity @s SelectedItem.tag.display.Name
-    execute positioned ^ ^ ^1.25 as @e[tag=!ui_temp_team,type=!#ui:unhurtable,tag=!ui_unhurtable,distance=..3,sort=nearest,limit=1] at @s run function ui:tmw/15/18.2
+    execute positioned ^ ^ ^1.25 as @e[tag=!ui_temp_team,predicate=ui:load_unhurtable,distance=..3,sort=nearest,limit=1] at @s run function ui:tmw/15/18.2
 
 #一時タグ削除
     tag @e[tag=ui_temp_team] remove ui_temp_team

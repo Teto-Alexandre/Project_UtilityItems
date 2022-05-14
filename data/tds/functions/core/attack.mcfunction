@@ -2,6 +2,7 @@
 
 # 引数データをコピー
     execute store result score $Damage tds_dmg run data get storage tds: Damage 100
+    execute if entity @s[gamemode=creative] run scoreboard players set $Damage tds_dmg 0
     execute unless data storage tds: DamageType run data modify storage tds: DamageType set value 0
     execute unless data storage tds: DeathMessage run data modify storage tds: DeathMessage set value 0
     execute unless data storage tds: EPF run data modify storage tds: EPF set value -1
@@ -115,7 +116,7 @@
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
-        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[type=!#ui:unhurtable,tag=!ui_unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[predicate=ui:load_unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         ## キルログ
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2

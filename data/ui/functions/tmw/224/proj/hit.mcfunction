@@ -9,8 +9,8 @@
 # 命中処理
     #summon marker ^ ^ ^-2 {Tags:["ui_temp_target"]}
     execute if score @s ui_id matches 1.. run scoreboard players operation $Attacker tds_dmg = @s ui_id
-    execute at @s[tag=!ui_224_2] as @e[type=!#ui:unhurtable,tag=!ui_unhurtable,tag=!ui_temp2,sort=nearest,limit=1] at @s run function ui:tmw/224/proj/hit1
-    execute at @s[tag=ui_224_2] as @e[type=!#ui:unhurtable,tag=!ui_unhurtable,tag=!ui_temp2,sort=nearest,limit=1] at @s run function ui:tmw/224/proj/hit2
+    execute at @s[tag=!ui_224_2] as @e[predicate=ui:load_unhurtable,tag=!ui_temp2,sort=nearest,limit=1] at @s run function ui:tmw/224/proj/hit1
+    execute at @s[tag=ui_224_2] as @e[predicate=ui:load_unhurtable,tag=!ui_temp2,sort=nearest,limit=1] at @s run function ui:tmw/224/proj/hit2
     tag @e[tag=ui_temp2] remove ui_temp2
     #kill @e[tag=ui_temp_target]
     
