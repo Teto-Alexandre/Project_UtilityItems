@@ -9,8 +9,8 @@ execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @s run tag @e[
 execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @s run particle minecraft:witch ~ ~0.5 ~ 0 0.5 0 0.1 10 force
 execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @s run playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 2 0
 execute at @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] as @e[tag=tmw_9_1] run function ui:tmw/9/9_1
-execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @e[tag=tmw_9_2,sort=random,limit=1,tag=!tmw_drop_s,type=!#ui:notmob] rotated ~ 0 positioned ^ ^ ^-5 run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tmw_9_3"]}
-execute at @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] as @e[tag=tmw_9_3,sort=random,limit=1] at @s facing entity @e[type=!#ui:notmob,sort=nearest,limit=1] feet run teleport @s ~ ~1 ~ ~ ~
+execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @e[tag=tmw_9_2,sort=random,limit=1,tag=!tmw_drop_s,predicate=ui:load_unhurtable] rotated ~ 0 positioned ^ ^ ^-5 run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tmw_9_3"]}
+execute at @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] as @e[tag=tmw_9_3,sort=random,limit=1] at @s facing entity @e[predicate=ui:load_unhurtable,sort=nearest,limit=1] feet run teleport @s ~ ~1 ~ ~ ~
 execute as @s[tag=tmw_drop_s,scores={ui_st2=..99},tag=tmw_9-1] at @s run tag @e remove tmw_9_2
 
 #S+Q:100tick:爆破弾

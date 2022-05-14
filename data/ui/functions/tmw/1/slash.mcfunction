@@ -1,5 +1,5 @@
 execute at @s run particle minecraft:witch ~ ~0.5 ~ 0 0.5 0 0.1 40 force
-execute at @e[tag=tmw_1_3,sort=random,limit=1,tag=!tmw_oh_s,type=!#ui:notmob] rotated ~ 0 positioned ^ ^ ^-5 run teleport @s ~ ~ ~ ~ ~
+execute at @e[tag=tmw_1_3,sort=random,limit=1,tag=!tmw_oh_s,predicate=ui:load_unhurtable] rotated ~ 0 positioned ^ ^ ^-5 run teleport @s ~ ~ ~ ~ ~
 execute at @s rotated ~ 0 run teleport @s ^ ^ ^0.5 ~ ~
 execute at @s run particle minecraft:witch ~ ~0.3 ~ 0 0 0 0 5
 execute at @s rotated ~ 0 run teleport @s ^ ^ ^0.5 ~ ~

@@ -5,4 +5,4 @@
     particle block dirt ~ ~0.1 ~ 8 0.1 8 0 100 force
     playsound entity.wither.hurt player @a ~ ~ ~ 1 0.8 0
 
-    execute as @e[type=!#ui:notmob] run data merge entity @s {FallDistance:50}
+    execute as @e[predicate=ui:load_unhurtable] run data merge entity @s {FallDistance:50}

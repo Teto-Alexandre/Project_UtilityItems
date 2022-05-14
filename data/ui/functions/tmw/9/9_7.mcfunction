@@ -6,7 +6,7 @@ tag @s remove tmw_9_7_3
 execute as @s[scores={ui_calc2=..99}] at @s if block ^ ^ ^0.5 #ui:nocol if block ^ ^ ^1 #ui:nocol run tag @s add tmw_9_7_3
 
 execute at @s[tag=tmw_9_7_3] run teleport @s ^ ^ ^0.5
-execute at @s[scores={ui_calc2=5..}] as @e[type=!#ui:notmob,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=9}] run effect give @s[distance=..1] instant_damage 1 0 true
+execute at @s[scores={ui_calc2=5..}] as @e[predicate=ui:load_unhurtable,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=9}] run effect give @s[distance=..1] instant_damage 1 0 true
 execute at @s[scores={ui_calc2=5..}] as @e[type=#ui:undead] unless entity @s[scores={ui_tmw_id=9}] run effect give @s[distance=..1] instant_health 1 0 true
 
 particle dust 1 1 0.5 1 ~ ~1 ~ 0 0 0 0 1 force

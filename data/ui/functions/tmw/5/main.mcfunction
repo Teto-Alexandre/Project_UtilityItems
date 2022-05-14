@@ -2,13 +2,13 @@
 
 tag @s[tag=tmw_oh_s] add tmw_oh_n
 
-execute at @s[tag=tmw_use] as @e[distance=1..5,type=!#ui:notmob] at @s run particle minecraft:block gold_block ~ ~4 ~ 0 3 0 1 20 force
-execute at @s[tag=tmw_use] as @e[distance=1..5,type=!#ui:notmob] at @s run particle minecraft:dust 1 1 0.5 1 ~ ~4 ~ 0 3 0 0 20 force
-execute at @s[tag=tmw_use] as @e[distance=1..5,type=!#ui:notmob] at @s run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 0.8 1.8 0
-execute at @s[tag=tmw_use] as @e[distance=1..5,type=!#ui:notmob,type=!#ui:undead] at @s run effect give @s minecraft:instant_damage 1 1 true
+execute at @s[tag=tmw_use] as @e[distance=1..5,predicate=ui:load_unhurtable] at @s run particle minecraft:block gold_block ~ ~4 ~ 0 3 0 1 20 force
+execute at @s[tag=tmw_use] as @e[distance=1..5,predicate=ui:load_unhurtable] at @s run particle minecraft:dust 1 1 0.5 1 ~ ~4 ~ 0 3 0 0 20 force
+execute at @s[tag=tmw_use] as @e[distance=1..5,predicate=ui:load_unhurtable] at @s run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 0.8 1.8 0
+execute at @s[tag=tmw_use] as @e[distance=1..5,predicate=ui:load_unhurtable,type=!#ui:undead] at @s run effect give @s minecraft:instant_damage 1 1 true
 execute at @s[tag=tmw_use] as @e[distance=1..5,type=#ui:undead] at @s run effect give @s minecraft:instant_health 1 1 true
-execute at @s[tag=tmw_use] if entity @e[distance=1..5,type=!#ui:notmob] run effect give @s minecraft:wither 1 1 true
-execute at @s[tag=tmw_use] if entity @e[distance=1..5,type=!#ui:notmob] run scoreboard players add @s ui_hp 1
+execute at @s[tag=tmw_use] if entity @e[distance=1..5,predicate=ui:load_unhurtable] run effect give @s minecraft:wither 1 1 true
+execute at @s[tag=tmw_use] if entity @e[distance=1..5,predicate=ui:load_unhurtable] run scoreboard players add @s ui_hp 1
 #tag @s[tag=tmw_use] add tmw_r_5
 
 #Q:2:エネルギー跳躍

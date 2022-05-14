@@ -4,11 +4,11 @@ scoreboard players add @s ui_tc 1
 
 execute at @s run teleport @s ^ ^ ^0.5
 function ui:tmw/214/ref_common
-execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ if entity @e[distance=..1,type=!#ui:notmob] run tag @s add tmw_2_2_4
-execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run effect give @e[distance=..1,type=!#ui:notmob,type=!#ui:undead] instant_damage 1 0 true
+execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ if entity @e[distance=..1,predicate=ui:load_unhurtable] run tag @s add tmw_2_2_4
+execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run effect give @e[distance=..1,predicate=ui:load_unhurtable,type=!#ui:undead] instant_damage 1 0 true
 execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run effect give @e[distance=..1,type=#ui:undead] instant_health 1 0 true
-execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run effect give @e[distance=..1,type=!#ui:notmob] wither 1 1 true
-execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run scoreboard players add @e[distance=..1,type=!#ui:notmob] ui_hp 1
+execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run effect give @e[distance=..1,predicate=ui:load_unhurtable] wither 1 1 true
+execute at @s[scores={ui_tc=5..}] positioned ~ ~-1 ~ run scoreboard players add @e[distance=..1,predicate=ui:load_unhurtable] ui_hp 1
 
 execute at @s run particle dust 0 1 1 1 ~ ~ ~ 0 0 0 0 1 force
 

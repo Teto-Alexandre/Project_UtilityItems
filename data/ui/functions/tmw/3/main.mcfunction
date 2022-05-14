@@ -2,8 +2,8 @@
 
 tag @s[tag=tmw_drop_s] add tmw_drop_n
 
-execute as @s[tag=tmw_use] at @s at @e[distance=1..5,type=!#ui:notmob] run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 1 0
-execute as @s[tag=tmw_use] at @s run effect give @e[distance=1..5,type=!#ui:notmob] weakness 3 0 true
+execute as @s[tag=tmw_use] at @s at @e[distance=1..5,predicate=ui:load_unhurtable] run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 1 0
+execute as @s[tag=tmw_use] at @s run effect give @e[distance=1..5,predicate=ui:load_unhurtable] weakness 3 0 true
 #tag @s[tag=tmw_use] add tmw_r_3
 
 execute as @s[tag=tmw_drop_n] run tag @e[tag=tmw_3_1] add tmw_3_2

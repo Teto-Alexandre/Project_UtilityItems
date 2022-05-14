@@ -9,7 +9,7 @@
 #範囲ダメージと破壊
     execute store result score $temp ui_temp run gamerule mobGriefing
     execute if score $temp ui_temp matches 1 run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 fire
-    effect give @e[type=!#ui:notmob,type=!#ui:undead,distance=..2] instant_damage 1 1 true
+    effect give @e[predicate=ui:load_unhurtable,type=!#ui:undead,distance=..2] instant_damage 1 1 true
     effect give @e[type=#ui:undead,distance=..2] instant_health 1 1 true
 
 #寿命

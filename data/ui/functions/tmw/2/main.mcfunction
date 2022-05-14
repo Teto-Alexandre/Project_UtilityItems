@@ -1,11 +1,11 @@
 #=======================================================================================================
 
-execute as @s[tag=tmw_use] at @s run effect give @e[distance=1..6,type=!#ui:notmob] minecraft:wither 1 1 true
-execute as @s[tag=tmw_use] at @s run scoreboard players add @e[distance=1..6,type=!#ui:notmob] ui_hp 1
+execute as @s[tag=tmw_use] at @s run effect give @e[distance=1..6,predicate=ui:load_unhurtable] minecraft:wither 1 1 true
+execute as @s[tag=tmw_use] at @s run scoreboard players add @e[distance=1..6,predicate=ui:load_unhurtable] ui_hp 1
 execute as @s[tag=tmw_use] at @s run effect give @s minecraft:regeneration 2 1 true
 execute as @s[tag=tmw_use] at @s run scoreboard players remove @s ui_hp 1
 execute as @s[tag=tmw_use] at @s run playsound minecraft:block.respawn_anchor.charge master @a ~ ~ ~ 0.8 1 0
-execute as @s[tag=tmw_use] at @s at @e[distance=1..6,type=!#ui:notmob] run particle minecraft:soul ~ ~1 ~ 0 0 0 0.1 15 force
+execute as @s[tag=tmw_use] at @s at @e[distance=1..6,predicate=ui:load_unhurtable] run particle minecraft:soul ~ ~1 ~ 0 0 0 0.1 15 force
 #tag @s[tag=tmw_use] add tmw_r_2
 
 #Q:4:instant_damage lv0とui_hp:1付き魂ビーム

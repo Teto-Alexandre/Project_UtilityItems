@@ -5,10 +5,10 @@ scoreboard players add @s ui_tc 1
 tag @s[scores={ui_tc=4}] add tmw_6_2
 execute at @s[scores={ui_tc=1}] run playsound minecraft:entity.minecart.inside master @a ~ ~ ~ 0.3 2 0
 
-execute positioned ~ ~0 ~ as @e[type=!#ui:notmob,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
-execute positioned ~ ~2 ~ as @e[type=!#ui:notmob,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
-execute positioned ~ ~4 ~ as @e[type=!#ui:notmob,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
-execute positioned ~ ~6 ~ as @e[type=!#ui:notmob,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
+execute positioned ~ ~0 ~ as @e[predicate=ui:load_unhurtable,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
+execute positioned ~ ~2 ~ as @e[predicate=ui:load_unhurtable,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
+execute positioned ~ ~4 ~ as @e[predicate=ui:load_unhurtable,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
+execute positioned ~ ~6 ~ as @e[predicate=ui:load_unhurtable,type=!#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_damage 1 1 true
 execute positioned ~ ~0 ~ as @e[type=#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_health 1 1 true
 execute positioned ~ ~2 ~ as @e[type=#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_health 1 1 true
 execute positioned ~ ~4 ~ as @e[type=#ui:undead] unless entity @s[scores={ui_tmw_id=6}] run effect give @s[distance=..2.5] minecraft:instant_health 1 1 true

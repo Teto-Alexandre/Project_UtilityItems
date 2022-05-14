@@ -1,9 +1,9 @@
 #=======================================================================================================
 
 execute as @s[tag=tmw_use] at @s run effect give @a[distance=1..6] minecraft:blindness 1 0 true
-execute at @s[tag=tmw_use] as @e[type=!#ui:notmob,distance=1..6] at @s run teleport @s ~ ~ ~ ~180 ~
+execute at @s[tag=tmw_use] as @e[predicate=ui:load_unhurtable,distance=1..6] at @s run teleport @s ~ ~ ~ ~180 ~
 execute as @s[tag=tmw_use] at @s run playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 1 1 0
-execute at @s[tag=tmw_use] as @e[type=!#ui:notmob,distance=1..6] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0 0 0 0.1 10 force
+execute at @s[tag=tmw_use] as @e[predicate=ui:load_unhurtable,distance=1..6] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0 0 0 0.1 10 force
 #tag @s[tag=tmw_use] add tmw_r_1
 
 execute as @s[tag=tmw_drop_n] at @s run particle minecraft:witch ~ ~0.5 ~ 0 0.5 0 0.1 40 force
@@ -25,7 +25,7 @@ execute as @s[scores={ui_st2=60}] at @s run particle dragon_breath ~ ~ ~ 0 0 0 0
 
 #S+Q:60tick:4:ターゲットの後ろにテレポート
 execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @s run particle minecraft:witch ~ ~0.5 ~ 0 0.5 0 0.1 40 force
-execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @e[tag=tmw_1_3,sort=random,limit=1,tag=!tmw_drop_s,type=!#ui:notmob] rotated ~ 0 positioned ^ ^ ^-2 run teleport @s ~ ~ ~ ~ ~
+execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @e[tag=tmw_1_3,sort=random,limit=1,tag=!tmw_drop_s,predicate=ui:load_unhurtable] rotated ~ 0 positioned ^ ^ ^-2 run teleport @s ~ ~ ~ ~ ~
 execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @s run function ui:tmw/1/1_1
 execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @s run scoreboard players add @s ui_hp 6
 execute as @s[tag=tmw_drop_s,scores={ui_st2=60..}] at @s run particle minecraft:witch ~ ~0.5 ~ 0 0.5 0 0.1 40 force @s

@@ -19,8 +19,8 @@ particle dust 0.5 1 1 1 ~ ~0.1 ~ 0.5 0.1 0.5 0 3 force
 
 tag @s remove tmw_102_1_2
 execute as @s[scores={ui_tc=..69}] at @s if block ~ ~ ~ #ui:nocol run tag @s add tmw_102_1_2
-execute as @s[scores={ui_tc=3..69}] at @s if entity @e[type=!#ui:notmob,distance=..1.5] run tag @s add tmw_102_1_3
-execute at @s[tag=tmw_102_1_3] as @e[type=!#ui:notmob,distance=..1.5,sort=nearest,limit=1] at @s run function ui:tmw/102/102_3
+execute as @s[scores={ui_tc=3..69}] at @s if entity @e[predicate=ui:load_unhurtable,distance=..1.5] run tag @s add tmw_102_1_3
+execute at @s[tag=tmw_102_1_3] as @e[predicate=ui:load_unhurtable,distance=..1.5,sort=nearest,limit=1] at @s run function ui:tmw/102/102_3
 tag @s[tag=tmw_102_1_3] remove tmw_102_1_2
 
 kill @s[scores={ui_tc=70..}]
