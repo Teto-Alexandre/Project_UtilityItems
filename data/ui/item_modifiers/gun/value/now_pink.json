@@ -25,5 +25,17 @@
       "scale": 0.01
     },
     "add": false
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "light_purple",
+        "nbt": "temp.Name",
+        "storage": "ui:gun"
+      }
+    ]
   }
 ]

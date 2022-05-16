@@ -24,8 +24,8 @@ tag @s[tag=tmw_oh_s] add tmw_oh_n
 # 常駐効果
 execute if score $color ui_temp matches 1 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/floor
 execute if score $color ui_temp matches 2 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/floor
-execute if score $color ui_temp matches 1 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ pink_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ light_blue_wool replace #ui:wools
-execute if score $color ui_temp matches 2 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ light_blue_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ pink_wool replace #ui:wools
+execute if score $color ui_temp matches 1 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] unless block ~ ~-0.3 ~ light_blue_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ light_blue_wool replace #ui:wools
+execute if score $color ui_temp matches 2 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] unless block ~ ~-0.3 ~ pink_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ pink_wool replace #ui:wools
 execute if score $color ui_temp matches 1 at @s[scores={ui_st=1..}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/move
 execute if score $color ui_temp matches 2 at @s[scores={ui_st=1..}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/move
 execute at @s[scores={ui_st=0}] run function ui:tmw/237/shoot
@@ -63,11 +63,7 @@ execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp.not
 
 # 逆変換
-execute if score $changed ui_temp matches 1 store result storage ui:gun temp.now.Burst int 1 run scoreboard players get $burst ui_temp
-execute if score $changed ui_temp matches 1 store result storage ui:gun temp.now.CT int 1 run scoreboard players get $cooltime ui_temp
-execute if score $changed ui_temp matches 1 store result storage ui:gun temp.now.Ink int 1 run scoreboard players get $ink ui_temp
-execute if score $changed ui_temp matches 1 store result storage ui:gun temp.now.SP int 1 run scoreboard players get $sp ui_temp
-execute if score $changed ui_temp matches 1 run item modify entity @s weapon.mainhand ui:gun/value/now
+execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed
 
 # タグ消し
 tag @s remove ui_temp_move
