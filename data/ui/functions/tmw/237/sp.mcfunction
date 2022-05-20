@@ -7,11 +7,6 @@ execute if score $sptype ui_temp matches 101..200 run function ui:tmw/237/sp.her
 
 # インクを最大値まで回復し耐久バーに反映
 scoreboard players operation $ink ui_temp = $ink.max ui_temp
-scoreboard players operation $ink.temp ui_temp = $ink ui_temp
-scoreboard players operation $ink.temp ui_temp *= #100 ui_num
-scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
-scoreboard players operation $ink.temp ui_temp > #5 ui_num
-scoreboard players operation $ink.temp ui_temp < #95 ui_num
 
 # 塗りPをリセット
 scoreboard players set @s ui_paint 0

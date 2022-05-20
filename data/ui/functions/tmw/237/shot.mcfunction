@@ -11,7 +11,8 @@
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $speed.plus ui_temp run data get storage ui:gun temp2.SpeedPlus
     execute store result score $spread ui_temp run data get storage ui:gun temp2.Spread
-    execute if entity @s[nbt={OnGround:0b}] run scoreboard players add $spread ui_temp 300
+    execute store result score $airspread ui_temp run data get storage ui:gun temp2.AirSpread
+    execute if entity @s[nbt={OnGround:0b}] run scoreboard players operation $spread ui_temp += $airspread ui_temp
     scoreboard players set $speed.add ui_temp 0
 
 # チャージ補正
@@ -50,12 +51,7 @@
 
 # アイテム転置
     #item modify entity @s weapon.mainhand ui:gun/name_ammo
-    execute store result storage ui:beacongametemp value int 1 run scoreboard players get $ink ui_temp
-    scoreboard players operation $ink.temp ui_temp = $ink ui_temp
-    scoreboard players operation $ink.temp ui_temp *= #100 ui_num
-    scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
-    scoreboard players operation $ink.temp ui_temp > #5 ui_num
-    scoreboard players operation $ink.temp ui_temp < #95 ui_num
+    #execute store result storage ui:beacongametemp value int 1 run scoreboard players get $ink ui_temp
     #tellraw @a [{"score":{"name":"$ink.temp","objective":"ui_temp"}},{"text":"/"},{"score":{"name":"$ink.max","objective":"ui_temp"}}]
 
 # 発射音
@@ -78,6 +74,16 @@
 # ショットガン.lp
     scoreboard players remove $multishot ui_temp 1
     execute if score $multishot ui_temp matches 1.. run function ui:tmw/237/shot.lp
+
+# スコア依存で足元に塗り判定発生
+    execute store result score $temp ui_temp run data get storage ui:gun temp2.ShotFootStep
+    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 light_blue_wool replace #ui:wools
+    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 pink_wool replace #ui:wools
+    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
+    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
+    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 light_blue_wool replace #ui:wools
+    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 pink_wool replace #ui:wools
+    execute if score $temp ui_temp matches 1.. run scoreboard players operation @s ui_paint += $temp ui_temp
 
 # 変更した
     scoreboard players set $changed ui_temp 1

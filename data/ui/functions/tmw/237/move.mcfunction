@@ -21,6 +21,10 @@
     scoreboard players set $burst ui_temp 0
     scoreboard players set @s ui_use2 0
 
+# ブロックをぶっ飛ばして登る
+    #execute if score $color ui_temp matches 1 at @s rotated ~ 0 if block ^ ^ ^0.5 light_blue_wool run teleport @s ^ ^1 ^0.2 ~ ~
+    #execute if score $color ui_temp matches 2 at @s rotated ~ 0 if block ^ ^ ^0.5 pink_wool run teleport @s ^ ^1 ^0.2 ~ ~
+
 # エフェクト
     execute if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~ ~ 0.1 0.1 0.1 0 1 normal
     execute if score $color ui_temp matches 2 run particle block pink_concrete ~ ~ ~ 0.1 0.1 0.1 0 1 normal
