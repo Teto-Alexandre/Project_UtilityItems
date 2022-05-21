@@ -1,6 +1,3 @@
-# 必要データ収集
-execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
-
 # スペシャルウェポン発動
 execute if score $sptype ui_temp matches 101..200 run function ui:tmw/237/sp.here
 #execute if score $sptype ui_temp matches 201..300 run function ui:tmw/237/sp.here

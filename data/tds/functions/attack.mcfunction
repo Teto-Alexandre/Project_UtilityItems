@@ -69,4 +69,4 @@
     execute unless data storage tds: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]
 
 # タグが足りていれば実行（Healthを持ってなかったら即死する）
-    execute if data storage tds: Damage run function tds:core/attack
+    execute if data storage tds: Damage unless entity @s[tag=ui_resistance] run function tds:core/attack

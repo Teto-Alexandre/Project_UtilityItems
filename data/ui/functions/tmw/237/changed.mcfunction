@@ -3,6 +3,7 @@ execute store result storage ui:gun temp.now.Burst int 1 run scoreboard players 
 execute store result storage ui:gun temp.now.CT int 1 run scoreboard players get $cooltime ui_temp
 execute store result storage ui:gun temp.now.Ink int 1 run scoreboard players get $ink ui_temp
 execute store result storage ui:gun temp.now.SP int 1 run scoreboard players get $sp ui_temp
+execute store result storage ui:gun temp.now.SPTime int 1 run scoreboard players get $sptime ui_temp
 scoreboard players operation $ink.temp ui_temp = $ink ui_temp
 scoreboard players operation $ink.temp ui_temp *= #100 ui_num
 scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp

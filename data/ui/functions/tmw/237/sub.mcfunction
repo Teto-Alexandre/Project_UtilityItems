@@ -7,4 +7,7 @@ execute if score $subtype ui_temp matches 101..200 run function ui:tmw/237/sub.t
 
 # インク減少
 scoreboard players operation $ink ui_temp -= $ink.sub ui_temp
+scoreboard players set $temp ui_temp 3
+execute store result score $cooltime ui_temp run time query gametime
+scoreboard players operation $cooltime ui_temp += $temp ui_temp
 scoreboard players set $changed ui_temp 1

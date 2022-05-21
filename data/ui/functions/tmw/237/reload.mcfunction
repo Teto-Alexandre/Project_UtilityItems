@@ -1,6 +1,8 @@
 # $ink = $ink.max になるまで.lp
-    execute unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.s ui_temp
-    execute if entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.m ui_temp
+    execute if score $cooltime ui_temp matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.s ui_temp
+    execute if score $cooltime ui_temp matches 0 if entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.m ui_temp
+    execute if score $sptype ui_temp matches 104 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink ui_temp += $ink.s ui_temp
+    execute if score $sptype ui_temp matches 104 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink ui_temp += $ink.s ui_temp
     scoreboard players operation $ink ui_temp < $ink.max ui_temp
     #tellraw @a {"score":{"name":"$ink","objective":"ui_temp"},"color":"gold"}
     #tellraw @a [{"score":{"name":"$ink.temp","objective":"ui_temp"}},{"text":"/"},{"score":{"name":"$ink.max","objective":"ui_temp"}}]

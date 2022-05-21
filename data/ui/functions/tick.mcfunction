@@ -233,7 +233,7 @@
     ## 恒常能力値操作(旧HP最大値操作)
 
         ### さっき死んだならHPを最大に戻す
-            execute as @a[scores={ui_dc=1..}] run function ui:misc/deathtime
+            execute as @e[type=player,scores={ui_dc=1..}] run function ui:misc/deathtime
         ### クリエならHPを最大に戻す
             scoreboard players set @a[gamemode=creative] ui_hp 0
 

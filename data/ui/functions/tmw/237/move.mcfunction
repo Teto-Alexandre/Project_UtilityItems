@@ -26,8 +26,8 @@
     #execute if score $color ui_temp matches 2 at @s rotated ~ 0 if block ^ ^ ^0.5 pink_wool run teleport @s ^ ^1 ^0.2 ~ ~
 
 # エフェクト
-    execute if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~ ~ 0.1 0.1 0.1 0 1 normal
-    execute if score $color ui_temp matches 2 run particle block pink_concrete ~ ~ ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $color ui_temp matches 2 run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
     execute if score $world ui_tc matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
 # タグを返す
