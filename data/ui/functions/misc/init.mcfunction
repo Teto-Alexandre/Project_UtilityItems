@@ -263,6 +263,12 @@
     bossbar set ui:dream2 color blue
     bossbar set ui:dream2 max 200
 
+##チーム
+#    team add red
+#    team modify red color light_purple
+#    team add blue
+#    team modify blue color aqua
+
 #その他
     forceload add 0 0
     setblock 0 0 0 air replace

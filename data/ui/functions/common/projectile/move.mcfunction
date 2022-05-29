@@ -20,32 +20,6 @@
     execute if score @s ui_bpart matches 2 run particle block ice ~ ~ ~ 0 0 0 0 1 force
     execute if score @s ui_bpart matches 3 run particle dust 1 1 0.5 1 ~ ~ ~ 0 0 0 0.02 1 force
     execute if score @s ui_bpart matches 3 run particle block gold_block ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 4 run particle dust 0.5 1 1 1 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 4 run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 4 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
-    execute if score @s ui_bpart matches 5 run particle dust 0.5 1 1 1.2 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 5 run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 5 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-5 ~ light_blue_wool replace #ui:wools
-    execute if score @s ui_bpart matches 6 run particle dust 0.5 1 1 0.8 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 6 run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 6 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-1 ~ light_blue_wool replace #ui:wools
-    execute if score @s ui_bpart matches 14 run particle dust 1 0.5 1 1 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 14 run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 14 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-3 ~ pink_wool replace #ui:wools
-    execute if score @s ui_bpart matches 15 run particle dust 1 0.5 1 1.2 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 15 run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 15 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-5 ~ pink_wool replace #ui:wools
-    execute if score @s ui_bpart matches 16 run particle dust 1 0.5 1 0.8 ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 16 run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bpart matches 16 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-1 ~ pink_wool replace #ui:wools
-    execute if score @s ui_bpart matches 4..16 run scoreboard players operation $id ui_temp = @s ui_id
-    execute if score @s ui_bpart matches 4..16 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
-    execute if score @s ui_bpart matches 21 run particle dust 0.5 1 1 1.5 ~ ~ ~ 0.2 0.2 0.2 0 1 force
-    execute if score @s ui_bpart matches 21 run particle block light_blue_concrete ~ ~ ~ 0.2 0.2 0.2 0 2 force
-    execute if score @s ui_bpart matches 21 run fill ~0.3 ~ ~0.3 ~-0.3 ~-7 ~-0.3 light_blue_wool replace #ui:wools
-    execute if score @s ui_bpart matches 31 run particle dust 1 0.5 1 1.5 ~ ~ ~ 0.2 0.2 0.2 0 1 force
-    execute if score @s ui_bpart matches 31 run particle block pink_concrete ~ ~ ~ 0.2 0.2 0.2 0 2 force
-    execute if score @s ui_bpart matches 31 run fill ~0.3 ~ ~0.3 ~-0.3 ~-7 ~-0.3 pink_wool replace #ui:wools
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:common/projectile/block_col

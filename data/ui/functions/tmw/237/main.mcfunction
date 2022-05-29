@@ -75,6 +75,9 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
 
+# 死
+execute at @s if block ~ ~ ~ #ui:liq if entity @e[type=player,dx=0] run function ui:common/highdamage
+
 # 一時的ストレージクリア
 data remove storage ui:gun temp
 data remove storage ui:gun temp2
