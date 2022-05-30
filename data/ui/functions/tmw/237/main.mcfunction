@@ -15,10 +15,11 @@ execute store result score $cooltime ui_temp run data get storage ui:gun temp.no
 execute store result score $sp ui_temp run data get storage ui:gun temp.now.SP
 execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
 execute store result score $sptime ui_temp run data get storage ui:gun temp.now.SPTime
+execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 scoreboard players set $changed ui_temp 0
 
-scoreboard players set $burst4 ui_temp 0
-scoreboard players set $burst4.id ui_temp 0
+scoreboard players set $burst_alt ui_temp 0
+scoreboard players set $burst_alt.id ui_temp 0
 
 # 検知範囲拡大
 tag @s[tag=tmw_drop_s] add tmw_drop_n
@@ -46,6 +47,7 @@ execute if score $bursttype ui_temp matches 2 as @s[scores={ui_use1=1..}] run fu
 execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst3
 execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.. as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst3.stop
 execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst4
+execute if score $bursttype ui_temp matches 5 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst5
 
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct

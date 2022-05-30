@@ -5,7 +5,10 @@
 
 # 必要データ収集
     data modify storage ui:gun temp2 set from entity @s SelectedItem.tag.tmw.main
+    execute unless score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp.ShotCT
+    execute if score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp.BurstCT
     execute store result score $range ui_temp run data get storage ui:gun temp2.Range
+    execute store result score $rangetype ui_temp run data get storage ui:gun temp2.RangeType
     execute store result score $damage ui_temp run data get storage ui:gun temp2.Damage
     execute store result score $multishot ui_temp run data get storage ui:gun temp2.MultiShot
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
@@ -16,7 +19,8 @@
     scoreboard players set $speed.add ui_temp 0
 
 # チャージ補正
-    execute if score $burst4.id ui_temp matches 1.. run function ui:tmw/237/shot.burst4
+    execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/shot.burst4
+    execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/shot.burst5
 
 # ランダム
     scoreboard players operation $mod ui_calc1 = $speed.plus ui_temp
@@ -34,6 +38,7 @@
     scoreboard players operation @e[tag=ui_temp_unpower] ui_bm = $speed ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_bm += $speed.add ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_br = $range ui_temp
+    scoreboard players operation @e[tag=ui_temp_unpower] ui_gpc = $rangetype ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = $damage ui_temp
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_bpart 10
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_hpart 10
@@ -61,10 +66,8 @@
     execute if score $temp ui_temp matches 2 run playsound entity.guardian.attack player @a ~ ~ ~ 1 1.4 0
 
 # クールタイム解除時刻.mod
-    execute unless score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.ShotCT
-    execute if score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.BurstCT
     execute store result score $cooltime ui_temp run time query gametime
-    scoreboard players operation $cooltime ui_temp += $temp ui_temp
+    scoreboard players operation $cooltime ui_temp += $ct ui_temp
     scoreboard players remove $burst ui_temp 1
 
 # 成功

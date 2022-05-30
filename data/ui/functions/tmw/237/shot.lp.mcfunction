@@ -14,6 +14,7 @@
     scoreboard players operation @e[tag=ui_temp_unpower] ui_bm = $speed ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_bm += $speed.add ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_br = $range ui_temp
+    scoreboard players operation @e[tag=ui_temp_unpower] ui_gpc = $rangetype ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = $damage ui_temp
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_bpart 10
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_hpart 10

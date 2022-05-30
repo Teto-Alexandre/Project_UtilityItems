@@ -24,6 +24,10 @@
 # チームカラーに合わせた防具を削除
     item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air
 
+# ストレージにモデルデータを隔離
+    execute store result score $model ui_temp run data get entity @s SelectedItem.tag.CustomModelData
+    item modify entity @s weapon.mainhand ui:gun/value/model_air
+
 # ブロックをぶっ飛ばして登る
     #execute if score $color ui_temp matches 1 at @s rotated ~ 0 if block ^ ^ ^0.5 light_blue_wool run teleport @s ^ ^1 ^0.2 ~ ~
     #execute if score $color ui_temp matches 2 at @s rotated ~ 0 if block ^ ^ ^0.5 pink_wool run teleport @s ^ ^1 ^0.2 ~ ~
