@@ -7,7 +7,7 @@
 # サブ情報開示
     execute store result score $temp ui_temp run data get storage ui:gun temp.gun.SubType
     tellraw @s [{"text":" サブウェポン","color":"white"}]
-    execute if score $temp ui_temp matches 101 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"スプラッシュボム : 2秒後に爆発する爆弾を投げる","color":"white"}]
+    execute if score $temp ui_temp matches 101 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"スプラッシュボム : 接地して2秒後に爆発する爆弾を投げる","color":"white"}]
     execute if score $temp ui_temp matches 102 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"リフレクター : 5秒間持続する反射結界を投げる","color":"white"}]
     execute if score $temp ui_temp matches 103 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"クイックボム : 何かに当たると爆発する爆弾を投げる","color":"white"}]
     execute if score $temp ui_temp matches 104 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ライトアップ : 3秒間持続し敵を照らす装置を投げる","color":"white"}]

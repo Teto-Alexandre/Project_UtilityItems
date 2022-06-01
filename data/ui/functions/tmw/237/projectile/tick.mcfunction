@@ -30,6 +30,7 @@ tag @s[tag=ui_temp_col] remove ui_temp_col
 execute if score $rangetype ui_temp matches 1..2 as @s[scores={ui_br=..0}] run function ui:tmw/237/projectile/kill
 execute if score $rangetype ui_temp matches 3..4 as @s[scores={ui_br=..0}] run scoreboard players set @s ui_bcp 5
 execute if score $rangetype ui_temp matches 3..4 as @s[scores={ui_br=..0}] at @s run teleport @s ~ ~ ~ ~ 90
+execute if score $rangetype ui_temp matches 5 as @s[scores={ui_br=..0}] run kill @s
 
 #一時タグ削除
 tag @e[tag=ui_temp_team] remove ui_temp_team

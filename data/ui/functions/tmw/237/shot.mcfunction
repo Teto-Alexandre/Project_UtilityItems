@@ -42,7 +42,6 @@
     scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = $damage ui_temp
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_bpart 10
     execute if score $color ui_temp matches 2 run scoreboard players add @e[tag=ui_temp_unpower] ui_hpart 10
-    scoreboard players set @e[tag=ui_temp_unpower] ui_autohit 1
     scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
     scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
     scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
