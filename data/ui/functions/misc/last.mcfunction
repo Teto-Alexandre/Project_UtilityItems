@@ -26,6 +26,10 @@
     ## 次tick用の食べ物の複合検知
         execute as @a unless entity @s[scores={ui_tmw_id=400..499}] run function ui:food/offhand
 
+    ## TMWのidを保存
+        execute as @a run scoreboard players operation @s ui_tmw_id_old = @s ui_tmw_id
+        execute as @a run scoreboard players operation @s ui_tmw_id_old2 = @s ui_tmw_id2
+
     ## スニークチャージ用カウントアップ
         scoreboard players add @a[scores={ui_st=1..}] ui_st2 1
         scoreboard players set @a[scores={ui_st=..0}] ui_st2 0
@@ -39,5 +43,8 @@
         scoreboard players reset @a[scores={ui_usec=1..}] ui_usec
         scoreboard players reset @a[scores={ui_uses=1..}] ui_uses
         scoreboard players reset @a[scores={ui_usep=1..}] ui_usep
+        scoreboard players reset @a[scores={ui_move_s=1..}] ui_move_s
+        scoreboard players reset @a[scores={ui_move_w=1..}] ui_move_w
+        scoreboard players reset @a[scores={ui_move_d=1..}] ui_move_d
         scoreboard players reset @a[scores={ui_cookie=1..}] ui_cookie
         scoreboard players reset @a[scores={ui_m_dd=1..}] ui_m_dd

@@ -3,6 +3,9 @@
     #scoreboard objectives add ui_br dummy
     #scoreboard objectives add ui_dmg dummy
 
+# 射撃体勢！
+    function ui:tmw/237/shoot
+
 # 必要データ収集
     data modify storage ui:gun temp2 set from entity @s SelectedItem.tag.tmw.main
     execute unless score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp.ShotCT

@@ -1,6 +1,6 @@
 #これは初回起動時に実行されるコマンドです
 
-#主な全ての計算に使用
+## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
     scoreboard objectives add ui_calc2 dummy {"text":"UtilityItems_Calculation2","color":"dark_blue"}
     scoreboard objectives add ui_calc3 dummy {"text":"UtilityItems_Calculation3","color":"dark_blue"}
@@ -11,9 +11,11 @@
     scoreboard objectives add ui_is dummy {"text":"UtilityItems_IndependentScore","color":"dark_blue"}
     scoreboard objectives add ui_is2 dummy {"text":"UtilityItems_IndependentScore2","color":"dark_blue"}
 
-#特殊武装のスキル発動関連
+## 特殊武装のスキル発動関連
     scoreboard objectives add ui_tmw_id dummy {"text":"UtilityItems_TetoMysticWeapon_ID","color":"dark_blue"}
     scoreboard objectives add ui_tmw_id2 dummy {"text":"UtilityItems_TetoMysticWeapon_ID_offhand","color":"dark_blue"}
+    scoreboard objectives add ui_tmw_id_old dummy {"text":"UtilityItems_TetoMysticWeapon_ID_old","color":"dark_blue"}
+    scoreboard objectives add ui_tmw_id_old2 dummy {"text":"UtilityItems_TetoMysticWeapon_ID_old2","color":"dark_blue"}
     scoreboard objectives add ui_slotable dummy {"text":"UtilityItems_Slotable","color":"dark_blue"}
     scoreboard objectives add ui_st minecraft.custom:minecraft.sneak_time {"text":"UtilityItems_SneakTime","color":"dark_blue"}
     scoreboard objectives add ui_st2 dummy {"text":"UtilityItems_SneakTime2","color":"dark_blue"}
@@ -23,20 +25,20 @@
     #未分類だけどとりあえず連射させたくない奴
     scoreboard objectives add ui_ct dummy {"text":"UtilityItems_CoolTime","color":"dark_blue"}
 
-#ランダム用
+## ランダム用
     scoreboard objectives add ui_rand dummy {"text":"UtilityItems_Rand","color":"dark_blue"}
 
-#数字ライブラリ
+## 数字ライブラリ
     scoreboard objectives add ui_num dummy {"text":"UtilityItems_Number","color":"dark_blue"}
 
-#HP最大値管理用
+## HP最大値管理用
     scoreboard objectives add ui_dc deathCount {"text":"UtilityItems_DeathCount","color":"dark_blue"}
     scoreboard objectives add ui_hp dummy {"text":"UtilityItems_HP","color":"dark_blue"}
     scoreboard objectives add ui_hp_calc dummy {"text":"UtilityItems_HP_Calc","color":"dark_blue"}
     scoreboard objectives add ui_hp_plus dummy {"text":"UtilityItems_HP_Plus","color":"dark_blue"}
     scoreboard objectives add ui_hp_plusc dummy {"text":"UtilityItems_HP_PlusCalc","color":"dark_blue"}
 
-#条件起動型
+## 条件起動型
     scoreboard objectives add ui_uset minecraft.used:minecraft.totem_of_undying {"text":"UtilityItems_UseTotem","color":"dark_blue"}
     scoreboard objectives add ui_usec minecraft.used:minecraft.crossbow {"text":"UtilityItems_UseCrossbow","color":"dark_blue"}
     scoreboard objectives add ui_usep minecraft.used:minecraft.potion {"text":"UtilityItems_UsePot","color":"dark_blue"}
@@ -59,21 +61,25 @@
     #scoreboard objectives add ui_dta minecraft.custom:minecraft.damage_absorbed {"text":"UtilityItems_Damage5","color":"dark_blue"}
     #scoreboard objectives add ui_dtr minecraft.custom:minecraft.damage_resisted {"text":"UtilityItems_Damage6","color":"dark_blue"}
     #scoreboard objectives add ui_dbs minecraft.custom:minecraft.damage_blocked_by_shield {"text":"UtilityItems_Damage7","color":"dark_blue"}
+    #移動検知
+    scoreboard objectives add ui_move_s minecraft.custom:minecraft.crouch_one_cm {"text":"UtilityItems_MoveSneak","color":"dark_blue"}
+    scoreboard objectives add ui_move_w minecraft.custom:minecraft.walk_one_cm {"text":"UtilityItems_MoveWalk","color":"dark_blue"}
+    scoreboard objectives add ui_move_d minecraft.custom:minecraft.sprint_one_cm {"text":"UtilityItems_MoveDash","color":"dark_blue"}
     
-#魔導障壁耐久値
+## 魔導障壁耐久値
     scoreboard objectives add ui_dr minecraft.custom:minecraft.damage_resisted {"text":"UtilityItems_DamageResisted","color":"dark_blue"}
     scoreboard objectives add ui_dhp dummy {"text":"UtilityItems_DummyHP","color":"dark_blue"}
     scoreboard objectives add ui_dhpm dummy {"text":"UtilityItems_DummyHPMax","color":"dark_blue"}
 
-#暁の翼専用
+## 暁の翼専用
     scoreboard objectives add ui_fp dummy {"text":"UtilityItems_FirePhase","color":"dark_blue"}
     scoreboard objectives add ui_ft dummy {"text":"UtilityItems_FireTime","color":"dark_blue"}
     scoreboard objectives add ui_fc dummy {"text":"UtilityItems_FireCalc","color":"dark_blue"}
 
-#凍て付いた博愛専用
+## 凍て付いた博愛専用
     scoreboard objectives add ui_tmw102_id dummy {"text":"UtilityItems_102ID","color":"dark_blue"}
 
-#一括破壊用
+## 一括破壊用
     scoreboard objectives add ui_mine dummy {"text":"UtilityItems_Mine","color":"dark_blue"}
     scoreboard objectives add ui_mine_wood minecraft.used:minecraft.wooden_pickaxe {"text":"UtilityItems_Mine1","color":"dark_blue"}
     scoreboard objectives add ui_mine_stone minecraft.used:minecraft.stone_pickaxe {"text":"UtilityItems_Mine2","color":"dark_blue"}
@@ -103,14 +109,14 @@
     scoreboard objectives add ui_harv_gold minecraft.used:minecraft.golden_hoe {"text":"UtilityItems_Harv5","color":"dark_blue"}
     scoreboard objectives add ui_harv_nether minecraft.used:minecraft.netherite_hoe {"text":"UtilityItems_Harv6","color":"dark_blue"}
 
-#プレイヤー区別用id
+## プレイヤー区別用id
     scoreboard objectives add ui_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
     scoreboard objectives add ui_idc dummy {"text":"UtilityItems_IDCalc","color":"dark_blue"}
     scoreboard objectives add ui_team dummy {"text":"UtilityItems_Team","color":"dark_blue"}
     #個別オブジェクト連携id
     scoreboard objectives add ui_obj_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
 
-#工業用
+## 工業用
     #パーティクル用ループカウント
         scoreboard objectives add ui_i_ltc dummy {"text":"UtilityItems_Industry_LoopTimeCount","color":"dark_blue"}
     #内部エネルギー
@@ -152,11 +158,10 @@
         scoreboard objectives add ui_i_item2 dummy {"text":"UtilityItems_Industry_Item2","color":"dark_blue"}
         scoreboard objectives add ui_i_item_calc dummy {"text":"UtilityItems_Industry_Item_Calc","color":"dark_blue"}
     
-#特殊効果付き食べ物用
-    scoreboard objectives add ui_food_id dummy {"text":"UtilityItems_Food_ID","color":"dark_blue"}
+## 特殊効果付き食べ物用
     scoreboard objectives add ui_cookie minecraft.used:minecraft.cookie
 
-#主に銃系統（リロードと弾薬がある射撃武器）に使用
+## 主に銃系統（リロードと弾薬がある射撃武器）に使用
     scoreboard objectives add ui_bm dummy {"text":"UtilityItems_BulletMove","color":"dark_blue"}
     scoreboard objectives add ui_bm_temp dummy {"text":"UtilityItems_BulletMove_Temp","color":"dark_blue"}
     scoreboard objectives add ui_br dummy {"text":"UtilityItems_BulletRange","color":"dark_blue"}
@@ -181,18 +186,18 @@
     #狙撃用
     scoreboard objectives add ui_snipe dummy {"text":"UtilityItems_Snipe","color":"dark_blue"}
 
-#スキルツリー
+## スキルツリー
     scoreboard objectives add ui_skilltree_v trigger {"text":"UtilityItems_SkillTree_View","color":"dark_blue"}
     scoreboard objectives add ui_skillget trigger {"text":"UtilityItems_Skillget","color":"dark_blue"}
     scoreboard objectives add ui_skillpoint trigger {"text":"UtilityItems_Skillpoint","color":"dark_blue"}
     scoreboard objectives add ui_skillpointC trigger {"text":"UtilityItems_SkillpointC","color":"dark_blue"}
 
-#魔術用
+## 魔術用
     #血の魔術
         scoreboard objectives add ui_m_bc dummy {"text":"UtilityItems_Magic_BloodCount","color":"dark_blue"}
         scoreboard objectives add ui_m_dd minecraft.custom:damage_dealt {"text":"UtilityItems_Magic_DamageDealt","color":"dark_blue"}
 
-#サイコロ用
+## サイコロ用
     scoreboard objectives add ui_d_num dummy {"text":"UtilityItems_Dice_Num","color":"dark_blue"}
     scoreboard objectives add ui_d_luck dummy {"text":"UtilityItems_Dice_Luck","color":"dark_blue"}
     scoreboard objectives add ui_d_addmax dummy {"text":"UtilityItems_Dice_AddMax","color":"dark_blue"}
@@ -200,18 +205,18 @@
     scoreboard objectives add ui_d_addnum dummy {"text":"UtilityItems_Dice_AddNum","color":"dark_blue"}
     scoreboard objectives add ui_d_mult dummy {"text":"UtilityItems_Dice_Mult","color":"dark_blue"}
 
-#釣り用
+## 釣り用
     scoreboard objectives add ui_use_frod minecraft.used:fishing_rod {"text":"UtilityItems_Use_Fishingrod","color":"dark_blue"}
     #scoreboard objectives add ui_fish_tc minecraft.used:fishing_rod {"text":"UtilityItems_Fish_TimeCount","color":"dark_blue"}
 
-#レベルシステム用
+## レベルシステム用
     scoreboard objectives add ui_lvl_craft_exp dummy {"text":"UtilityItems_Level_Craft_Experience","color":"dark_blue"}
     scoreboard objectives add ui_lvl_craft_lvl dummy {"text":"UtilityItems_Level_Craft_Level","color":"dark_blue"}
 
-#必殺技カウント
+## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
 
-#使用関数の設定
+## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
     scoreboard players set #-5 ui_num -5
@@ -261,18 +266,18 @@
     scoreboard players set $base ui_obj_id 1
     scoreboard players set $base ui_i_id 1
 
-#ボスバー
+## ボスバー
     bossbar add ui:dream2 {"text":"幽玄の王","color":"aqua","italic":false,"bold":true}
     bossbar set ui:dream2 color blue
     bossbar set ui:dream2 max 200
 
-##チーム
-#    team add red
-#    team modify red color light_purple
-#    team add blue
-#    team modify blue color aqua
+## チーム
+    team add chaos
+    team modify chaos color light_purple
+    team add abyss
+    team modify abyss color aqua
 
-#その他
+## その他
     forceload add 0 0
     setblock 0 0 0 air replace
     setblock 0 1 0 air replace
