@@ -9,18 +9,15 @@
 
 # それぞれの起爆
     execute if score $type ui_temp matches 101 run function ui:tmw/237/sub/explosive/101/tick
-    execute if score $type ui_temp matches 102 run function ui:tmw/237/sub/explosive/102.tick
-    execute as @s[nbt={Item:{tag:{tmw:{type:103}}}}] unless block ~ ~-0.1 ~ #ui:nocol run function ui:tmw/237/sub/explosive/103
-    execute as @s[scores={ui_uses=5..},nbt={Item:{tag:{tmw:{type:103}}}}] if entity @e[predicate=ui:load_unhurtable,dx=0,dy=0,dz=0] run function ui:tmw/237/sub/explosive/103
-    execute as @s[scores={ui_uses=100..},nbt={Item:{tag:{tmw:{type:103}}}}] run function ui:tmw/237/sub/explosive/103
-    execute as @s[nbt={Item:{tag:{tmw:{type:104}}}}] run function ui:tmw/237/sub/explosive/104.tick
-    execute as @s[scores={ui_uses=60..},nbt={Item:{tag:{tmw:{type:104}}}}] run function ui:tmw/237/sub/explosive/104
-    execute as @s[scores={ui_uses=20},nbt={Item:{tag:{tmw:{type:105}}}}] run function ui:tmw/237/sub/explosive/105
-    execute as @s[scores={ui_uses=40},nbt={Item:{tag:{tmw:{type:105}}}}] run function ui:tmw/237/sub/explosive/105
-    execute as @s[scores={ui_uses=80..},nbt={Item:{tag:{tmw:{type:105}}}}] run function ui:tmw/237/sub/explosive/105.final
-    execute as @s[nbt={Item:{tag:{tmw:{type:106}}}}] run function ui:tmw/237/sub/explosive/106.tick
-    execute as @s[scores={ui_uses=100..},nbt={Item:{tag:{tmw:{type:106}}}}] run function ui:tmw/237/sub/explosive/106
-    execute as @s[nbt={Item:{tag:{tmw:{type:107}}}}] run function ui:tmw/237/sub/explosive/107.tick
+    execute if score $type ui_temp matches 102 run function ui:tmw/237/sub/explosive/102/tick
+    execute if score $type ui_temp matches 103 run function ui:tmw/237/sub/explosive/103/tick
+    execute if score $type ui_temp matches 104 run function ui:tmw/237/sub/explosive/104/tick
+    execute if score $type ui_temp matches 105 run function ui:tmw/237/sub/explosive/105/tick
+    execute if score $type ui_temp matches 106 run function ui:tmw/237/sub/explosive/106/tick
+    execute if score $type ui_temp matches 107 run function ui:tmw/237/sub/explosive/107/tick
+    execute if score $type ui_temp matches 108 run function ui:tmw/237/sub/explosive/108/tick
+    
+    execute if score $type ui_temp matches 201 run function ui:tmw/237/sub/explosive/201/tick
 
 # 投擲物パーティクル
     execute if score $color ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force

@@ -120,7 +120,6 @@ execute as @s[tag=ui_17] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible
 execute at @s[tag=ui_17] as @e[tag=ui_17_2_temp] run scoreboard players operation @s ui_id = @e[tag=ui_17_1_temp] ui_id
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_1_temp] remove ui_17_1_temp
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_2_temp] remove ui_17_2_temp
-#execute as @s[tag=ui_17] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run setblock ~ ~-1 ~ white_concrete
 execute as @s[tag=ui_17] at @s run function ui:ui/17/ss
 
 teleport @s 0 -200 0

@@ -64,6 +64,7 @@
     ## 11: 〇 @ ©「Victimは巨大な力によって為す術もなく死んだ」高ダメージコモンで死ぬ
     ## 12: 〇 @ ©「VictimはAttackerに電流を流されて死に至った、..3」エレキショッカー・オートで殺される
     ## 13: 〇    「Victimは息絶えた」普通に死ぬ
+    ## 14: 〇 @ ©「VictimはAttackerの[Weapon]で伝説の礎にされた、...9」特別な武器で殺される
 
 # ダメージを与えるためのタグが足りていないならエラーを吐く
     execute unless data storage tds: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]

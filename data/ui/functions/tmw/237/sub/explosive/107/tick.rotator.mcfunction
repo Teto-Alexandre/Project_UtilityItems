@@ -12,4 +12,4 @@
     execute if score $temp2 ui_temp matches 5.. at @s run teleport @s ^ ^ ^0.5
     execute if score $temp2 ui_temp matches 5.. run scoreboard players remove $temp2 ui_temp 5
 
-    execute at @s run function ui:tmw/237/sub/explosive/107.tick.rotator.lp
+    execute at @s run function ui:tmw/237/sub/explosive/107/tick.rotator.lp

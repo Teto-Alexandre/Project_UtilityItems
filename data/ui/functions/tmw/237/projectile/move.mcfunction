@@ -1,35 +1,36 @@
-#射程うんぬん
+# 射程うんぬん
     scoreboard players remove @s ui_temp 10
     scoreboard players remove @s ui_br 1
 
-#移動と反射コモン
+# 移動と反射コモン
     teleport @s ^ ^ ^0.5
     execute as @s at @s run function ui:tmw/214/ref_common
 
-#ダメージ
+# ダメージ
     execute positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s run function ui:tmw/237/projectile/hit
     #execute positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=end_crystal] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=end_crystal] at @s at @e[type=end_crystal,sort=nearest,limit=1] run summon snowball ~ ~2.5 ~ {Motion:[0.0d,-0.5d,0.0d]}
     #モブグリfalseでも損壊するんだからtntで良くない？
     #execute positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=end_crystal] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=end_crystal] at @s at @e[type=end_crystal,sort=nearest,limit=1] run summon tnt ~ ~ ~
     #execute positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=shulker_bullet] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=shulker_bullet] at @s as @e[type=shulker_bullet,sort=nearest,limit=1] run kill @s
 
-#見た目
+# 塗り値を初期化
+    scoreboard players set $paint ui_temp 0
+
+# 見た目
     execute if score @s ui_bpart matches 1 run function ui:tmw/237/projectile/move/1
+    execute if score @s ui_bpart matches 2 run function ui:tmw/237/projectile/move/2
+    execute if score @s ui_bpart matches 3 run function ui:tmw/237/projectile/move/3
     execute if score @s ui_bpart matches 4 run function ui:tmw/237/projectile/move/4
     execute if score @s ui_bpart matches 5 run function ui:tmw/237/projectile/move/5
     execute if score @s ui_bpart matches 6 run function ui:tmw/237/projectile/move/6
-    execute if score @s ui_bpart matches 11 run function ui:tmw/237/projectile/move/11
-    execute if score @s ui_bpart matches 14 run function ui:tmw/237/projectile/move/14
-    execute if score @s ui_bpart matches 15 run function ui:tmw/237/projectile/move/15
-    execute if score @s ui_bpart matches 16 run function ui:tmw/237/projectile/move/16
+    execute if score @s ui_bpart matches 7 run function ui:tmw/237/projectile/move/7
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
-    execute if score @s ui_bpart matches 31 run function ui:tmw/237/projectile/move/31
     scoreboard players operation $id ui_temp = @s ui_id
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
+    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
 
-#壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
+# 壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     execute unless block ~ ~ ~ #ui:nocol run function ui:tmw/237/projectile/kill
     execute if block ~ ~ ~ #ui:liq run function ui:tmw/237/projectile/kill
 
-#移動値が無くなるまで繰り返す
+# 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..,ui_br=1..,},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] at @s run function ui:tmw/237/projectile/move

@@ -4,7 +4,7 @@ execute store result score $color ui_temp run scoreboard players get @s ui_team
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 execute store result score $ink.main ui_temp run data get storage ui:gun temp.MainInkUse
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse
-execute if score $sptype ui_temp matches 103 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #5 ui_num
+execute if score $sptype ui_temp matches 103 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #10 ui_num
 execute store result score $spneed ui_temp run data get storage ui:gun temp.SPNeed
 execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
 execute store result score $ink.m ui_temp run data get storage ui:gun temp.MoveInkRegen
@@ -15,29 +15,29 @@ execute store result score $cooltime ui_temp run data get storage ui:gun temp.no
 execute store result score $sp ui_temp run data get storage ui:gun temp.now.SP
 execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
 execute store result score $sptime ui_temp run data get storage ui:gun temp.now.SPTime
+execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 scoreboard players set $changed ui_temp 0
 
 scoreboard players set $burst_alt ui_temp 0
 scoreboard players set $burst_alt.id ui_temp 0
 
+# スペシャルウェポン
+execute if score $sptype ui_temp matches 301..400 if score $sptime ui_temp matches 1.. run execute store result score $bursttype ui_temp run data get storage ui:gun temp.SPBurstType
+
 # 検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
 #tag @s[tag=tmw_oh_s] add tmw_oh_n
 
 # 常駐効果
-scoreboard players remove @s[scores={ui_gct=1..}] ui_gct 1
+scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
+effect give @s saturation 1 0 true
+execute at @s[scores={ui_st=0}] run function ui:tmw/237/shoot
 execute if score $color ui_temp matches 1 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/floor
 execute if score $color ui_temp matches 2 at @s[nbt=!{ActiveEffects:[{Id:11b,Amplifier:126b}]}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/floor
 execute if score $color ui_temp matches 1 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] unless block ~ ~-0.3 ~ light_blue_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ light_blue_wool replace #ui:wools
 execute if score $color ui_temp matches 2 at @s[nbt={ActiveEffects:[{Id:11b,Amplifier:126b}]}] unless block ~ ~-0.3 ~ pink_wool run fill ~ ~-0.3 ~ ~ ~-0.3 ~ pink_wool replace #ui:wools
-execute if score $color ui_temp matches 1 at @s[scores={ui_st=1..,ui_gct=0}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/move
-execute if score $color ui_temp matches 2 at @s[scores={ui_st=1..,ui_gct=0}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/move
-execute if score $color ui_temp matches 1 at @s[scores={ui_st=1..,ui_gct=0}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/move
-execute if score $color ui_temp matches 2 at @s[scores={ui_st=1..,ui_gct=0}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/move
-execute at @s[scores={ui_st=0}] run function ui:tmw/237/shoot
-execute if score $color ui_temp matches 1 at @s[scores={ui_st=1..}] unless block ~ ~-0.3 ~ light_blue_wool unless entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/shoot
-execute if score $color ui_temp matches 2 at @s[scores={ui_st=1..}] unless block ~ ~-0.3 ~ pink_wool unless entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/shoot
+execute as @s[scores={ui_st=1..}] at @s run function ui:tmw/237/sneak
 
 # インク回復
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
@@ -57,7 +57,7 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     #たまなしバースト+クールタイム完遂
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp < $ink.main ui_temp at @s run function ui:tmw/237/fail
     #たまありバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s run function ui:tmw/237/shot
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s run function ui:tmw/237/shot.master
     #バースト+クールタイム完遂、発射できなかったなら(現状起こりえない)
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 

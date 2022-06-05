@@ -130,7 +130,8 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13.. if score $Health tds_dmg matches ..0 run function tds:message/13
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 14 if score $Health tds_dmg matches ..0 run function tds:message/14
 
 # 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg
@@ -147,5 +148,5 @@
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
-    tag @a[tag=tds_tempa] remove tds_tempa
+    tag @e[tag=tds_tempa] remove tds_tempa
     data remove storage ui:temp Name

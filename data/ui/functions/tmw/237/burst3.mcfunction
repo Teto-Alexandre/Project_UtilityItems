@@ -1,5 +1,6 @@
 # 秒数制限取得
     execute store result score $burst.max ui_temp run data get storage ui:gun temp.BurstMax
+    execute if score $sptype ui_temp matches 301..400 if score $sptime ui_temp matches 1.. run execute store result score $burst.max ui_temp run data get storage ui:gun temp.SPBurstMax
 
 # 離すと書き込み
     scoreboard players operation @s ui_use2 < $burst.max ui_temp

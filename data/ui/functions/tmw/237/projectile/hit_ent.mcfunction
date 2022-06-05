@@ -9,6 +9,3 @@
     scoreboard players operation $Return tds_dmg /= #20000 ui_num
     execute if score $temp ui_bdt matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
     execute if score $temp ui_bdt matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg
-
-# ノックバック（スコア数だけ二分探索で繰り返しスライム召喚.at）
-    execute if score $Knockback tds_dmg matches 1.. unless entity @s[nbt={SelectedItem:{tag:{tmw:{anti.kb:1}}}}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{tmw:{anti.kb:1}}}]}] run function ui:tmw/237/projectile/hit.knockback

@@ -30,8 +30,6 @@
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_obj_id = $obj_id ui_temp
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_team = $team ui_temp
     tag @e[tag=ui_temp_this] remove ui_temp_this
-    #弾
-    execute if score @s ui_uses matches 10..80 as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1_1] at @s run function ui:tmw/237/sub/explosive/107.tick.line
 
 # ビットを配列
     execute at @s as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_2] rotated as @s run teleport @s ~ ~ ~ ~ ~
@@ -43,7 +41,10 @@
     execute at @e[tag=ui_temp_obj,tag=tmw_237_sub_107_3] run teleport @e[tag=ui_temp_obj,tag=tmw_237_sub_107_3_1] ^ ^ ^-2 ~ ~
     execute at @e[tag=ui_temp_obj,tag=tmw_237_sub_107_3] run teleport @e[tag=ui_temp_obj,tag=tmw_237_sub_107_3_2] ^ ^ ^2 ~-180 ~
     scoreboard players operation $temp ui_temp = @s ui_uses
-    execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1_1] run function ui:tmw/237/sub/explosive/107.tick.rotator
+    execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1_1] run function ui:tmw/237/sub/explosive/107/tick.rotator
+
+#弾
+    execute if score @s ui_uses matches 10..80 as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1_1] at @s run function ui:tmw/237/sub/explosive/107/tick.line
 
 # メイン
     execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1] if score @s ui_team matches 1 at @s run fill ~ ~-2 ~ ~ ~2 ~ light_blue_wool replace #ui:wools

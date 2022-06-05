@@ -1,5 +1,6 @@
 # バースト回数記録
     execute store result score $burst_alt.id ui_temp run data get storage ui:gun temp.Burst
+    execute if score $sptype ui_temp matches 301..400 if score $sptime ui_temp matches 1.. run execute store result score $burst_alt.id ui_temp run data get storage ui:gun temp.SPBurst
     execute store result score $burst_alt ui_temp run scoreboard players get @s ui_use2
     #tellraw @a {"score":{"name":"$burst","objective":"ui_temp"},"color":"gold"}
     #execute at @s run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.5 1.8 0
