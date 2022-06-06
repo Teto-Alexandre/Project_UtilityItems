@@ -25,4 +25,4 @@
 
 # ショットガン.lp
     scoreboard players remove $multishot ui_temp 1
-    execute if score $multishot ui_temp matches 1.. run function ui:tmw/237/shot.lp
+    execute if score $multishot ui_temp matches 1.. run function ui:tmw/237/attack/shot/loop

@@ -1,7 +1,7 @@
 # スペシャルウェポン発動
-execute if score $sptype ui_temp matches 101..200 run function ui:tmw/237/sp.here
-execute if score $sptype ui_temp matches 201..300 run function ui:tmw/237/sp.throw
-execute if score $sptype ui_temp matches 301..400 run function ui:tmw/237/sp.weapon
+execute if score $sptype ui_temp matches 101..200 run function ui:tmw/237/sp/here
+execute if score $sptype ui_temp matches 201..300 run function ui:tmw/237/sp/throw
+execute if score $sptype ui_temp matches 301..400 run function ui:tmw/237/sp/weapon
 
 # 何発動したの？
 execute if score $sptype ui_temp matches 101 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ノヴァ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]

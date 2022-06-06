@@ -13,11 +13,11 @@
     scoreboard players set $speed.add ui_temp 0
 
 # チャージ補正
-    execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/shot.burst4
-    execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/shot.burst5
+    execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/attack/shot/burst4
+    execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/attack/shot/burst5
 
 # ショットガン.lp
-    function ui:tmw/237/shot.lp
+    function ui:tmw/237/attack/shot/loop
 
 # スコア依存で足元に塗り判定発生
     execute store result score $temp ui_temp run data get storage ui:gun temp2.ShotFootStep
