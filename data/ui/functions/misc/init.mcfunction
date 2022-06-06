@@ -262,9 +262,9 @@
     scoreboard players set $max ui_i_resitem2 64
     scoreboard players set $tmw10 ui_calc1 1
     scoreboard players set $gun.react ui_world 1
-    scoreboard players set $base ui_id 1
-    scoreboard players set $base ui_obj_id 1
-    scoreboard players set $base ui_i_id 1
+    execute unless score $base ui_id matches -2147483648..2147483647 run scoreboard players set $base ui_id 1
+    execute unless score $base ui_obj_id matches -2147483648..2147483647 run scoreboard players set $base ui_obj_id 1
+    execute unless score $base ui_i_id matches -2147483648..2147483647 run scoreboard players set $base ui_i_id 1
 
 ## ボスバー
     bossbar add ui:dream2 {"text":"幽玄の王","color":"aqua","italic":false,"bold":true}
