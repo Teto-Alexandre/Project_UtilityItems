@@ -83,9 +83,20 @@
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 60..69 at @e[distance=..7,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 70..79 at @e[distance=..8,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 80..89 at @e[distance=..9,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
-    execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 90..100 at @e[distance=..10,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
+    execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 90..99 at @e[distance=..10,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
     execute if score @s ui_uses matches 100 run scoreboard players set @s ui_dmg 30
     execute if score @s ui_uses matches 100 at @e[distance=..11,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/201/hit
+
+# ボム即爆
+    execute if score @s ui_uses matches 10..19 as @e[distance=0.1..1,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 20..29 as @e[distance=0.1..2,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 30..39 as @e[distance=0.1..3,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 40..49 as @e[distance=0.1..4,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 50..59 as @e[distance=0.1..5,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 60..69 as @e[distance=0.1..6,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 70..79 as @e[distance=0.1..7,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 80..89 as @e[distance=0.1..8,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
+    execute if score @s ui_uses matches 90..100 as @e[distance=0.1..9,tag=tmw_237_sub] run tag @s add ui_237_sub_explode
 
 # 音響
     execute if score @s ui_uses matches 1 run playsound block.redstone_torch.burnout player @a ~ ~ ~ 1.2 0.8 0
@@ -97,5 +108,6 @@
     tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 死ぬ(同じidの奴らまとめて)
-    execute if score @s ui_uses matches 100.. run kill @e[tag=ui_temp_obj]
+    execute if score @s ui_uses matches 100.. run tag @s add ui_237_sub_explode
+    execute if entity @s[tag=ui_237_sub_explode] run kill @e[tag=ui_temp_obj]
     tag @e[tag=ui_temp_obj] remove ui_temp_obj

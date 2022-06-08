@@ -97,5 +97,6 @@
     tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 死ぬ(同じidの奴らまとめて)
-    execute if score @s ui_uses matches 100.. run kill @e[tag=ui_temp_obj]
+    execute if score @s ui_uses matches 100.. run tag @s add ui_237_sub_explode
+    execute if entity @s[tag=ui_237_sub_explode] run kill @e[tag=ui_temp_obj]
     tag @e[tag=ui_temp_obj] remove ui_temp_obj

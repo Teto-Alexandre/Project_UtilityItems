@@ -274,8 +274,10 @@
 ## チーム
     team add chaos
     team modify chaos color light_purple
+    team modify chaos friendlyFire false
     team add abyss
     team modify abyss color aqua
+    team modify abyss friendlyFire false
 
 ## その他
     forceload add 0 0

@@ -5,6 +5,7 @@
     data modify storage ui:gun temp2 set from entity @s SelectedItem.tag.tmw.sp
     execute store result score $ink.main ui_temp run data get storage ui:gun temp2.TimeUse
     execute store result score $shottype ui_temp run data get storage ui:gun temp2.ShotType
+    data modify storage ui:gun temp.DisplayName set from storage ui:gun temp2.Name
 
 # メインプロセスに送信
     execute if score $shottype ui_temp matches 1 run function ui:tmw/237/attack/shot/core

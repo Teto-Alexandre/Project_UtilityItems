@@ -1,6 +1,9 @@
-#汎用飛び道具コモン
+# 近接攻撃命中判定
 
-#ダメージ本体
+# 重複してヒットしない
+    tag @s add ui_temp_attacked
+
+# ダメージ本体
     data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
     execute store result storage tds: Damage float 0.1 run scoreboard players get #temp tds_dmg
     execute store result storage tds: DamageType int 1 run scoreboard players get $temp ui_bdt

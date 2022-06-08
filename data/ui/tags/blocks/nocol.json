@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:tripwire_hook",
-	"minecraft:tripwire",
+	  "minecraft:tripwire",
     "minecraft:air",
     "minecraft:cave_air",
     "minecraft:fire",
@@ -54,7 +54,7 @@
     "#minecraft:small_flowers",
     "#minecraft:wooden_pressure_plates",
     "#minecraft:banners",
-	"#minecraft:signs",
+	  "#minecraft:signs",
     "minecraft:powder_snow",
     "minecraft:glow_lichen",
     "minecraft:moss_carpet",
@@ -74,6 +74,8 @@
     "minecraft:twisting_vines_plant",
     "minecraft:structure_void",
     "minecraft:light",
-    "minecraft:scaffolding"
+    "minecraft:scaffolding",
+    "minecraft:repeater",
+    "minecraft:comparator"
   ]
 }

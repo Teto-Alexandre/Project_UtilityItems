@@ -7,6 +7,7 @@ scoreboard players set $burst_alt.id ui_temp 0
 
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
+data modify storage ui:gun temp.DisplayName set from entity @s SelectedItem.tag.display.Name
 execute store result score $color ui_temp run scoreboard players get @s ui_team
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
@@ -21,12 +22,9 @@ execute store result score $sptime ui_temp run data get storage ui:gun temp.now.
 execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 
-# $basetype よりバーストタイプを取得
+# $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
 function ui:tmw/237/basetype/basetype
-
-# メインウェポン消費インク取得
-execute store result score $ink.main ui_temp run data get storage ui:gun temp.MainInkUse
 
 # サブウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse
@@ -65,11 +63,11 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 
 # サブウェポン発動
-execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.sub ui_temp at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/sub/core
+execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
 
 # スペシャルウェポン発動
 scoreboard players operation @s ui_paint < $spneed ui_temp
-execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/sp/core
+execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
 execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/ready
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/not
 execute if score $sptime ui_temp matches 1.. at @s run function ui:tmw/237/sp/time
@@ -80,6 +78,7 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed/core
 # タグ消し
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
+tag @e[tag=ui_temp_attacked] remove ui_temp_attacked
 
 # 死
 execute at @s[gamemode=!spectator] if block ~ ~ ~ #ui:liq if entity @e[type=player,dx=0] run function ui:common/highdamage

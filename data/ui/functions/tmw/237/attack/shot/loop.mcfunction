@@ -19,7 +19,7 @@
     scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
     scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
     scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
-    data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from entity @s SelectedItem.tag.display.Name
+    data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from storage ui:gun temp.DisplayName
     tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
     kill @e[tag=ui_marker]
 

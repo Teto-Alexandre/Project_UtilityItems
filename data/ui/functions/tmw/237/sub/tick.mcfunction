@@ -31,3 +31,6 @@
 
 # タグ消し
     tag @s add ui_temp_team
+
+# 水対策
+    execute if block ~ ~-0.5 ~ #ui:liq run tag @s add ui_237_sub_explode

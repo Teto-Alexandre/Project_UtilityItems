@@ -1,6 +1,6 @@
 # 当たり判定発生
     scoreboard players set $paint ui_temp 0
-    execute at @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/attack/roll/hit
+    execute at @e[distance=..1.2,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked] run function ui:tmw/237/attack/roll/hit
     execute if score $color ui_temp matches 1 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-2 ~ light_blue_wool replace #ui:wools
     execute if score $color ui_temp matches 2 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-2 ~ pink_wool replace #ui:wools
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp

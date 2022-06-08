@@ -51,5 +51,6 @@
     execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1] if score @s ui_team matches 2 at @s run fill ~ ~-2 ~ ~ ~2 ~ pink_wool replace #ui:wools
 
 # 死ぬ(同じidの奴らまとめて)
-    execute if score @s ui_uses matches 80.. run kill @e[tag=ui_temp_obj]
+    execute if score @s ui_uses matches 80.. run tag @s add ui_237_sub_explode
+    execute if entity @s[tag=ui_237_sub_explode] run kill @e[tag=ui_temp_obj]
     tag @e[tag=ui_temp_obj] remove ui_temp_obj
