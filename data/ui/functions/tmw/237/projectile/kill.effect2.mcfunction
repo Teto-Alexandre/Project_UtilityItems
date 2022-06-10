@@ -10,6 +10,7 @@
     scoreboard players set $paint ui_temp 0
 
 # ヒットパーティクル
+    execute if score @s ui_hpart matches 1 run function ui:tmw/237/projectile/killeffect/1
     execute if score @s ui_hpart matches 5 run function ui:tmw/237/projectile/killeffect/5
     execute if score @s ui_hpart matches 6 run function ui:tmw/237/projectile/killeffect/6
     execute if score @s ui_hpart matches 7 run function ui:tmw/237/projectile/killeffect/7

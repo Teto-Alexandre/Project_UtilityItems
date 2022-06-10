@@ -15,8 +15,8 @@
     scoreboard players set @s ui_use2 0
 
 # 横方向加速
-    execute rotated ~ 0 positioned ^ ^ ^-0.35 run summon slime ~ ~ ~ {NoAI:1b,Silent:1b,Invulnerable:1b,Tags:["ui_motionslime","ui_unhurtable"]}
-    schedule function ui:misc/kill_slime 1t append
+    #execute rotated ~ 0 positioned ^ ^ ^-0.35 run summon slime ~ ~ ~ {NoAI:1b,Silent:1b,Invulnerable:1b,Tags:["ui_motionslime","ui_unhurtable"]}
+    #schedule function ui:misc/kill_slime 1t append
 
 # チームカラーに合わせた防具を削除
     item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air

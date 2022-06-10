@@ -16,21 +16,22 @@
     execute if score $type ui_temp matches 106 run function ui:tmw/237/sub/explosive/106/tick
     execute if score $type ui_temp matches 107 run function ui:tmw/237/sub/explosive/107/tick
     execute if score $type ui_temp matches 108 run function ui:tmw/237/sub/explosive/108/tick
-    
+
     execute if score $type ui_temp matches 201 run function ui:tmw/237/sub/explosive/201/tick
+    execute if score $type ui_temp matches 202 run function ui:tmw/237/sub/explosive/202/tick
 
 # 投擲物パーティクル
     execute if score $color ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
     execute if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-0.5 ~ light_blue_wool replace #ui:wools
+    execute if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
     execute if score $color ui_temp matches 2 run particle dust 1 0.5 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
     execute if score $color ui_temp matches 2 run particle block pink_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-0.5 ~ pink_wool replace #ui:wools
+    execute if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~ ~ ~ ~ ~-3 ~ pink_wool replace #ui:wools
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $temp ui_temp
     scoreboard players add @s[nbt={OnGround:1b}] ui_uses 1
 
 # タグ消し
-    tag @s add ui_temp_team
+    tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 水対策
     execute if block ~ ~-0.5 ~ #ui:liq run tag @s add ui_237_sub_explode

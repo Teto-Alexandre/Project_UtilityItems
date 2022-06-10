@@ -1,4 +1,5 @@
-#見た目    
+#見た目
+    data modify storage ui:temp Name set value '{"text":"爆風","color":"gray"}'
     function ui:template/sphere_particle/4
     scoreboard players set @s ui_bdt 3
     scoreboard players set @s ui_dmg 80

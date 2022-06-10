@@ -1,7 +1,9 @@
 # 必要データ収集
     execute store result score $ct ui_temp run data get storage ui:gun temp2.CT
+    execute store result score $reach ui_temp run data get storage ui:gun temp2.Reach
     execute store result score $width ui_temp run data get storage ui:gun temp2.Width
     execute store result score $damage ui_temp run data get storage ui:gun temp2.Damage
+    execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
 
 # チームメンバー識別
     execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $color ui_temp run tag @s add ui_temp_team
@@ -10,7 +12,9 @@
     scoreboard players operation $id ui_temp = @s ui_id
 
 # 座標設定
-    function ui:tmw/237/attack/roll/forwardturn
+    scoreboard players set $temp ui_temp 1
+    scoreboard players set $temp2 ui_temp 1
+    execute rotated ~ 0 run function ui:tmw/237/attack/roll/set
 
 # スコア依存で足元に塗り判定発生
     execute store result score $temp ui_temp run data get storage ui:gun temp2.ShotFootStep
@@ -28,6 +32,9 @@
     #execute if score $temp ui_temp matches 1 run playsound entity.shulker.shoot player @a ~ ~ ~ 1.5 0.8 0
     #execute if score $temp ui_temp matches 1 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 0.8 2 0
     execute if score $temp ui_temp matches 2 run playsound entity.guardian.attack player @a ~ ~ ~ 1 1.4 0
+
+# 加速
+    execute if score $speed ui_temp matches 1 run effect give @s speed 1 0 true
 
 # クールタイム解除時刻.mod
     execute store result score $cooltime ui_temp run time query gametime

@@ -1,6 +1,7 @@
 # スプラッシュボム
 
 # 常時実行
+    execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_uses matches 6 run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 1 1.8 0
     execute if score @s ui_uses matches 8 run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 1 1.9 0
     execute if score @s ui_uses matches 10 run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 1 2.0 0

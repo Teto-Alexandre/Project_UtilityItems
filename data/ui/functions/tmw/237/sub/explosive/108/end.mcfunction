@@ -1,16 +1,16 @@
-# スプラッシュボム
+# キューバンボム
 
 # ダメージを与える
-    execute if score $color ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"スプラッシュボム","color":"aqua"}'
-    execute if score $color ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"スプラッシュボム","color":"light_purple"}'
+    execute if score $color ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"キューバンボム","color":"aqua"}'
+    execute if score $color ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"キューバンボム","color":"light_purple"}'
     scoreboard players set @s ui_bdt 3
     scoreboard players set @s ui_dmg 120
-    execute at @e[distance=3..4.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute at @e[distance=3.5..5.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     scoreboard players set @s ui_dmg 300
-    execute at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute at @e[distance=..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
-    function ui:template/sphere_particle/3.5
+    function ui:template/sphere_particle/5
     scoreboard players set $paint ui_temp 0
     execute if score $color ui_temp matches 1 at @e[tag=ui_temp_particle] run particle dust 0.5 1 1 1 ~ ~ ~ 0 0 0 0 1 force
     execute if score $color ui_temp matches 1 at @e[tag=ui_temp_particle] run particle block light_blue_concrete ~ ~ ~ 0 0 0 0 1 force
@@ -18,7 +18,7 @@
     execute if score $color ui_temp matches 2 at @e[tag=ui_temp_particle] run particle dust 1 0.5 1 1 ~ ~ ~ 0 0 0 0 1 force
     execute if score $color ui_temp matches 2 at @e[tag=ui_temp_particle] run particle block pink_concrete ~ ~ ~ 0 0 0 0 1 force
     execute if score $color ui_temp matches 2 at @e[tag=ui_temp_particle] if block ~ ~ ~ #ui:wools unless block ~ ~ ~ pink_wool run scoreboard players add $paint ui_temp 1
-    playsound entity.generic.explode player @a ~ ~ ~ 1 0.8 0
+    playsound entity.generic.explode player @a ~ ~ ~ 1 0.7 0
 
 # 塗り
     execute if score $color ui_temp matches 1 at @e[tag=ui_temp_particle] run fill ~ ~ ~ ~ ~ ~ light_blue_wool replace #ui:wools
