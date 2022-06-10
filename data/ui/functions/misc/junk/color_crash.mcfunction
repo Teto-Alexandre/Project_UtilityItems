@@ -37,9 +37,12 @@ give @p minecraft:command_block{BlockEntityTag:{Command:"scoreboard players set 
 
 # 武器データ
 
-    ## サブ: 101:スプラッシュ, 102:リフレク, 103:クイボ, 104:ライトアップ, 105:レンバク, 106:リジェネ
+    ## サブ: 101:スプラッシュ, 102:リフレク, 103:クイック, 104:ライト, 105:レンバク, 106:リジェネ
+    ##     : 107:ボルテク, 108:キューバン
 
-    ## スペ: 101:ノヴァ, 102:スーパースター, 103:サブラッシュ, 104:ヴァリアブル, 105:レーダー
+    ## スペ: 101:ノヴァ, 102:スーパースター, 103:サブ減, 104:インク, 105:レーダー
+    ##     : 201:トルネード, 202:アメフラシ
+    ##     : 301:スパショ
 
 # ペインター
 give @p minecraft:carrot_on_a_stick{tmw:{id:237,enableQ:1,enableF:1,gun:{Name:"エルドペインター",BaseType:1,BurstType:2,Burst:4,BurstMax:-1,SubType:103,SPType:105,SPTime:60,SPNeed:300,InkMax:1000,MainInkUse:30,SubInkUse:400,MoveInkRegen:30,ShootInkRegen:6,now:{Ink:1000,CT:0,Burst:0,SP:0,SPTime:0,Model:110801}},main:{ShotType:1,ShotCT:1,BurstCT:5,Spread:400,AirSpread:300,SpreadType:1,Speed:19,SpeedPlus:5,RangeType:3,Range:15,FlyParticle:4,EndParticle:5,Damage:70,MultiShot:1,ShotFootStep:2,Sound:1}},display:{Lore:['[{"text":"圧倒的な連射速度で陣地を広げる","color":"gray","italic":false}]']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:1,UUID:[I;2,2,1,1],Slot:"mainhand"}]}
