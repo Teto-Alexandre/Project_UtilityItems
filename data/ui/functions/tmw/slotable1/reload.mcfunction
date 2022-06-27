@@ -1,5 +1,5 @@
 # 装填されてる弾を取り出す
-    summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"minecraft:stone",Count:1b},PickupDelay:1s}
+    execute unless score $ammo ui_world matches 1 run summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"minecraft:stone",Count:1b},PickupDelay:1s}
     data modify entity @e[tag=tmw_r_potion,limit=1] Item set from entity @s SelectedItem.tag.tmw.slot
 
 # アイテム転置
@@ -7,7 +7,7 @@
     data modify entity @e[tag=ui_temp,limit=1] ArmorItems.[0] set from entity @s SelectedItem
     data modify entity @e[tag=ui_temp,limit=1] ArmorItems.[0].tag.tmw.slot set from entity @s Inventory.[{Slot:-106b}]
     item replace entity @s weapon.mainhand from entity @e[tag=ui_temp,limit=1] armor.feet
-    item replace entity @s weapon.offhand with air
+    execute unless score $ammo ui_world matches 1 run item replace entity @s weapon.offhand with air
     kill @e[tag=ui_temp]
 
 #

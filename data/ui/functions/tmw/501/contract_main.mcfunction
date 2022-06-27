@@ -3,6 +3,7 @@
 
 # 契約
     execute if entity @s[scores={ui_tmw_con_id=1}] run function ui:tmw/501/contract/1
+    execute if entity @s[scores={ui_tmw_con_id=2}] run function ui:tmw/501/contract/2
     execute if entity @s[scores={ui_tmw_con_id=3}] run function ui:tmw/501/contract/3
     execute if entity @s[scores={ui_tmw_con_id=5}] run function ui:tmw/501/contract/5
     execute if entity @s[scores={ui_tmw_con_id=6}] run function ui:tmw/501/contract/6

@@ -34,7 +34,12 @@
     execute if score $temp ui_temp matches 2 run playsound entity.guardian.attack player @a ~ ~ ~ 1 1.4 0
 
 # 加速
-    execute if score $speed ui_temp matches 1 run effect give @s speed 1 0 true
+    execute if score $speed ui_temp matches -3 run effect give @s slowness 1 2 true
+    execute if score $speed ui_temp matches -2 run effect give @s slowness 1 1 true
+    execute if score $speed ui_temp matches -1 run effect give @s slowness 1 0 true
+    execute if score $speed ui_temp matches 1.. if score @s ui_use2 matches 10.. run effect give @s speed 1 0 true
+    execute if score $speed ui_temp matches 2.. if score @s ui_use2 matches 20.. run effect give @s speed 1 1 true
+    execute if score $speed ui_temp matches 3.. if score @s ui_use2 matches 30.. run effect give @s speed 1 2 true
 
 # クールタイム解除時刻.mod
     execute store result score $cooltime ui_temp run time query gametime

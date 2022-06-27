@@ -1,7 +1,7 @@
 #装填されてる弾を取り出す
     execute store result score $now_ammo ui_temp run data get entity @s SelectedItem.tag.tmw.gun.now
     execute if score $now_ammo ui_temp matches 1.. run scoreboard players remove $now_ammo ui_temp 1
-    summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"minecraft:stone",Count:1b},PickupDelay:1s}
+    execute unless score $ammo ui_world matches 1 run summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"minecraft:stone",Count:1b},PickupDelay:1s}
     data modify entity @e[tag=tmw_r_potion,limit=1] Item set from entity @s SelectedItem.tag.tmw.slots.[0]
     kill @e[tag=tmw_r_potion,nbt={Item:{id:"minecraft:stone",Count:1b}}]
     tag @e[tag=tmw_r_potion] remove tmw_r_potion

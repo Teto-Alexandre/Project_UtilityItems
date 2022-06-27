@@ -5,6 +5,9 @@ execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.type int 1
 execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.color int 1 run scoreboard players get $color ui_temp
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
+scoreboard players set @e[tag=ui_temp_this,limit=1] ui_uses -1
+scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is -1
+scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is2 -1
 playsound entity.snowball.throw player @a ~ ~ ~ 1 0.8 0
 #data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.CustomModelData
 tag @e[tag=ui_temp_this] remove ui_temp_this

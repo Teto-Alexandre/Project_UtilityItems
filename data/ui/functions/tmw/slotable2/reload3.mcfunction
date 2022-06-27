@@ -4,7 +4,7 @@
     scoreboard players operation $max_ammo ui_temp -= $now_ammo ui_temp
 
 # 装填されてるカートリッジを取り出す
-    execute if score $max_ammo ui_temp matches ..0 run summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"stone",Count:1b},PickupDelay:0s}
+    execute if score $max_ammo ui_temp matches ..0 unless score $ammo ui_world matches 1 run summon item ~ ~ ~ {Tags:["tmw_r_potion"],Item:{id:"stone",Count:1b},PickupDelay:0s}
     execute if score $max_ammo ui_temp matches ..0 run data modify entity @e[tag=tmw_r_potion,limit=1] Item set from entity @s Inventory.[{Slot:-106b}].tag.tmw.slots.[0]
     execute if score $max_ammo ui_temp matches ..0 run scoreboard players remove $now_ammo ui_temp 1
     tag @e[tag=tmw_r_potion] remove tmw_r_potion
@@ -16,7 +16,7 @@
     data modify entity @e[tag=ui_temp,limit=1] ArmorItems.[0].tag.tmw.slots append from entity @s SelectedItem
     execute store result entity @e[tag=ui_temp,limit=1] ArmorItems.[0].tag.tmw.gun.now int 1 run scoreboard players add $now_ammo ui_temp 1
     item replace entity @s weapon.offhand from entity @e[tag=ui_temp,limit=1] armor.feet
-    item replace entity @s weapon.mainhand with air
+    execute unless score $ammo ui_world matches 1 run item replace entity @s weapon.mainhand with air
     kill @e[tag=ui_temp]
 
 #

@@ -2,6 +2,8 @@
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:1},CustomModelData:110201,display:{Name:'{"text":"スキルツリーの契約書","color":"gold","italic":false}',Lore:['[{"text":" スキルツリーシステムを切り替える","color":"gray","italic":false}]','[{"text":" ワールド全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:2},CustomModelData:110201,display:{Name:'{"text":"弾薬消費の契約書","color":"gold","italic":false}',Lore:['[{"text":" 装填系の消費を切り替える","color":"gray","italic":false}]','[{"text":" ワールド全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
+
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:3},CustomModelData:110201,display:{Name:'{"text":"上天の契約書","color":"gold","italic":false}',Lore:['[{"text":" 昼夜サイクルと天候サイクルを切り替える","color":"gray","italic":false}]','[{"text":" ディメンション全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:5},CustomModelData:110201,display:{Name:'{"text":"誘雷の契約書","color":"gold","italic":false}',Lore:['[{"text":" 死ぬまで定期的に周囲に雷が落ちるようになる","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}

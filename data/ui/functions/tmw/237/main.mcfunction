@@ -28,7 +28,7 @@ function ui:tmw/237/basetype/basetype
 
 # サブウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse
-execute if score $sptype ui_temp matches 103 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #10 ui_num
+execute if score $sptype ui_temp matches 103 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #8 ui_num
 
 # キー入力検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
@@ -78,7 +78,6 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed/core
 # タグ消し
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
-tag @e[tag=ui_temp_attacked] remove ui_temp_attacked
 
 # 死
 execute at @s[gamemode=!spectator] if block ~ ~ ~ #ui:liq if entity @e[type=player,dx=0] run function ui:common/highdamage
@@ -86,3 +85,6 @@ execute at @s[gamemode=!spectator] if block ~ ~ ~ #ui:liq if entity @e[type=play
 # 一時的ストレージクリア
 data remove storage ui:gun temp
 data remove storage ui:gun temp2
+
+# 最後に
+schedule function ui:tmw/237/last 1t append

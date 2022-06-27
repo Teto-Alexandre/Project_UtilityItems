@@ -1,7 +1,4 @@
-# 近接攻撃命中判定
-
-# 重複してヒットしない
-    tag @s add ui_temp_attacked
+# 遠隔攻撃命中判定
 
 # ダメージ本体
     data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
@@ -12,3 +9,6 @@
     scoreboard players operation $Return tds_dmg /= #20000 ui_num
     execute if score $temp ui_bdt matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
     execute if score $temp ui_bdt matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg
+
+# この攻撃で死んだら
+    execute if score $Lethal tds_dmg matches 1 run function ui:tmw/237/attack/ink_explode

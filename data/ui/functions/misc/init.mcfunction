@@ -65,6 +65,8 @@
     scoreboard objectives add ui_move_s minecraft.custom:minecraft.crouch_one_cm {"text":"UtilityItems_MoveSneak","color":"dark_blue"}
     scoreboard objectives add ui_move_w minecraft.custom:minecraft.walk_one_cm {"text":"UtilityItems_MoveWalk","color":"dark_blue"}
     scoreboard objectives add ui_move_d minecraft.custom:minecraft.sprint_one_cm {"text":"UtilityItems_MoveDash","color":"dark_blue"}
+    scoreboard objectives add ui_kills minecraft.custom:player_kills {"text":"UtilityItems_Kills","color":"dark_blue"}
+    scoreboard objectives add ui_deaths deathCount {"text":"UtilityItems_Deaths","color":"dark_blue"}
     
 ## 魔導障壁耐久値
     scoreboard objectives add ui_dr minecraft.custom:minecraft.damage_resisted {"text":"UtilityItems_DamageResisted","color":"dark_blue"}
@@ -241,11 +243,15 @@
     scoreboard players set #50 ui_num 50
     scoreboard players set #81 ui_num 81
     scoreboard players set #95 ui_num 95
+    scoreboard players set #98 ui_num 98
+    scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
     scoreboard players set #200 ui_num 200
     scoreboard players set #250 ui_num 250
     scoreboard players set #325 ui_num 325
     scoreboard players set #360 ui_num 360
+    scoreboard players set #392 ui_num 392
+    scoreboard players set #490 ui_num 490
     scoreboard players set #500 ui_num 500
     scoreboard players set #1000 ui_num 1000
     scoreboard players set #2220 ui_num 2220
@@ -272,12 +278,14 @@
     bossbar set ui:dream2 max 200
 
 ## チーム
-    team add chaos
-    team modify chaos color light_purple
-    team modify chaos friendlyFire false
     team add abyss
     team modify abyss color aqua
     team modify abyss friendlyFire false
+    team modify abyss collisionRule never
+    team add chaos
+    team modify chaos color light_purple
+    team modify chaos friendlyFire false
+    team modify chaos collisionRule never
 
 ## その他
     forceload add 0 0
@@ -310,5 +318,5 @@
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 41
+    scoreboard players set $version ui_world 42
     #say operationed

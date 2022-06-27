@@ -1,5 +1,7 @@
 # ユーティリティ
 
+give @p minecraft:command_block{BlockEntityTag:{Command:"scoreboard players set @p ui_team 2",CustomName:'{"text":"@"}',LastExecution:41485404L,SuccessCount:0,TrackOutput:1b,UpdateLastExecution:1b,auto:0b,conditionMet:1b,id:"minecraft:command_block",powered:0b},display:{Name:'{"text":"色チェンジャー"}'}}
+
 give @p minecraft:sheep_spawn_egg{tmw:{egg:17},display:{Name:'{"text":"ガチアシバ","italic":false,"color":"aqua"}',Lore:['[{"text":"レーンに沿って移動する足場を展開する","color":"yellow","italic":false}]','[{"text":"終端に到達すると自動的に勝利","color":"yellow","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_17"]}}
 
 #give @p minecraft:carrot_on_a_stick{tmw:{id:238,enableQ:1,enableF:1,gun:{}},display:{Name:'{"text":"カラクラ:エリア管理ツール","italic":false,"color":"aqua"}',Lore:['[{"text":"いろいろできるよ","color":"gray","italic":false}]']},HideFlags:4,Unbreakable:1b}

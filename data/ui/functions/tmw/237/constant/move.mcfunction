@@ -2,7 +2,6 @@
 
 # 特殊効果
     effect clear @s slowness
-    effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-128b}]}] levitation
     effect give @s speed 1 25 true
     effect give @s jump_boost 1 3 true
     effect give @s invisibility 1 0 true
@@ -29,7 +28,6 @@
 
 #
     execute as @s if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #minecraft:slabs unless block ^ ^ ^0.5 air if block ^ ^1 ^0.5 air if block ^0.4 ^1 ^0.5 air if block ^-0.4 ^1 ^0.5 air if block ^ ^1 ^0.9 air unless block ^ ^ ^0.5 #minecraft:slabs run teleport @s ^ ^1 ^0.4
-    execute as @s[scores={ui_st=1..}] rotated ~ 0 if block ^ ^-1 ^1 air if block ^ ^ ^1 air if block ^ ^-1 ^0.5 air if block ^ ^ ^0.5 air if block ^ ^-1 ^0.9 air if block ^0.4 ^-1 ^0.5 air if block ^-0.4 ^-1 ^0.5 air unless block ^ ^-2 ^0.5 air unless block ^ ^-2 ^0.5 water unless block ~ ~ ~ #minecraft:slabs run teleport @s ^ ^-1 ^0.6
 
 # タグを返す
     tag @s add ui_temp_move

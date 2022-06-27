@@ -7,9 +7,9 @@
 # スーパースター
     execute if score $sptype ui_temp matches 102 run playsound entity.player.levelup player @a ~ ~ ~ 3 0.5 0
     execute if score $sptype ui_temp matches 102 run particle totem_of_undying ~ ~ ~ 5 5 5 0.02 20 force
-    execute if score $sptype ui_temp matches 102 run effect give @s resistance 10 126 false
-    execute if score $sptype ui_temp matches 102 run effect give @s strength 10 4 false
-    execute if score $sptype ui_temp matches 102 run effect give @s glowing 10 0 false
+    execute if score $sptype ui_temp matches 102 run effect give @s resistance 6 126 false
+    execute if score $sptype ui_temp matches 102 run effect give @s strength 6 4 false
+    execute if score $sptype ui_temp matches 102 run effect give @s glowing 6 0 false
 
 # サブラッシュ
     execute if score $sptype ui_temp matches 103 run playsound block.beacon.power_select player @a ~ ~ ~ 3 1.8 0

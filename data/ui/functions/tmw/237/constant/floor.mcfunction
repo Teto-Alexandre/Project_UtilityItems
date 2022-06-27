@@ -5,7 +5,8 @@
     effect clear @s invisibility
     effect clear @s regeneration
     effect give @s slowness 1 1 true
-    effect give @s levitation 1 128 true
+    #一回消して様子見
+    #effect give @s levitation 1 128 true
     data merge storage tds: {Damage:2.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
     function tds:attack
     scoreboard players set @s ui_st2 0

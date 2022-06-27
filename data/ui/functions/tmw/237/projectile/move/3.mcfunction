@@ -24,3 +24,6 @@
     execute if score $team ui_temp matches 2 run particle block pink_concrete ^-0.9 ^ ^-0.5 0 0 0 0 1 force
     execute if score $team ui_temp matches 2 run particle block pink_concrete ^-1.2 ^ ^-1 0 0 0 0 1 force
     execute if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~-0.6 ~ ~-0.6 ~0.6 ~-2 ~0.6 pink_wool replace #ui:wools
+
+# 消す
+    execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill

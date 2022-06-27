@@ -93,6 +93,8 @@
     scoreboard players operation $Damage tds_dmg < $Health tds_dmg
 # Health減算
     scoreboard players operation $Health tds_dmg -= $Damage tds_dmg
+# 死亡確認用
+    scoreboard players set $Lethal tds_dmg 0
 # ここで不死のトーテム起動
         execute if score $Health tds_dmg matches ..0 if entity @s[type=player,nbt={SelectedItem:{id:"minecraft:totem_of_undying"}}] run function tds:core/totem
         execute if score $Health tds_dmg matches ..0 if entity @s[type=player,nbt={Inventory:[{Slot:-106b,id:"minecraft:totem_of_undying"}]}] run function tds:core/totem
@@ -101,22 +103,25 @@
         execute if entity @s[type=player] run scoreboard players operation $Health tds_dmg /= $100 tds_dmg
         execute if entity @s[type=player] run scoreboard players operation @s tds_hps = $Health tds_dmg
         execute if entity @s[type=player] run scoreboard players set @s ui_dr 1
-        
+
     # Mob
         execute if entity @s[type=!player] if score $Health tds_dmg matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health tds_dmg
         execute if entity @s[type=wither,nbt=!{Invul:0}] if score $Health tds_dmg matches ..0 run advancement grant @a[distance=..50] only ui:main/gun/attack
         execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches ..0 run kill @s
+        execute if entity @s[type=!player] if score $Health tds_dmg matches ..0 run scoreboard players set $Lethal tds_dmg 1
         execute if entity @s[type=ender_dragon] if score $Health tds_dmg matches ..0 run data merge entity @s {DragonPhase:9}
 
     # プレイヤーじゃないなら見た目だけダメージ （オバフロ形式は直後にダメージを喰らうと100%バグるのが分かったので利用中止）
     # プレイヤーはエフェクトクラウドで一瞬耐性を付ける
         execute at @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
         execute if entity @s[type=ender_dragon,nbt=!{DragonPhase:9}] unless data entity @s {Silent:1b} run playsound minecraft:entity.ender_dragon.hurt hostile @a ~ ~ ~ 5 1 0
-        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+        execute if entity @s[type=player,nbt=!{ActiveEffects:[{Id:25b}]}] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
         execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[predicate=ui:load_unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        ## キルカウント
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run scoreboard players add @a[tag=tds_tempa] ui_kills 1
         ## キルログ
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2

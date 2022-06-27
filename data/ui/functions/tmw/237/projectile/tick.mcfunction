@@ -9,7 +9,7 @@ scoreboard players operation @s ui_temp = @s ui_bm
 scoreboard players operation @s ui_temp += @s ui_bm_temp
 scoreboard players operation $rangetype ui_temp = @s ui_gpc
 
-#id1を共有
+#idを共有
 scoreboard players operation $id ui_temp = @s ui_id
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）

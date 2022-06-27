@@ -162,9 +162,9 @@
 # スキル用操作検知システム
 
     ## 各操作の検知
+        execute as @a run scoreboard players operation @s ui_ddn += @s ui_dda
+        execute as @a run scoreboard players operation @s ui_ddn += @s ui_ddr
         execute as @a[scores={ui_ddn=1..}] at @s run tag @s add tmw_use
-        execute as @a[scores={ui_dda=1..}] at @s run tag @s add tmw_use
-        execute as @a[scores={ui_ddr=1..}] at @s run tag @s add tmw_use
         execute as @a[scores={ui_use1=1..}] run function ui:misc/act/use
         execute as @a[scores={ui_di=1..},tag=!tmw_mh_calc,nbt=!{SelectedItem:{}}] at @s run function ui:misc/act/drop
         execute as @a[tag=tmw_oh_calc,nbt={Inventory:[{Slot:-106b}]},nbt=!{SelectedItem:{}}] run function ui:misc/act/offhand

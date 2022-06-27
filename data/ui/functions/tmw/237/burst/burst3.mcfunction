@@ -14,4 +14,6 @@
     execute if score @s ui_use2 < $burst.max ui_temp at @s run playsound block.lever.click player @a ~ ~ ~ 1 1.4 0
 
 # クリック回数リセット
-    scoreboard players reset @s ui_use1
+    tag @s[tag=tmw_use_n] remove tmw_use_n
+    tag @s[tag=tmw_use_s] remove tmw_use_s
+    scoreboard players set @s ui_use1 0

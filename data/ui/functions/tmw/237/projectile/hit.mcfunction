@@ -8,4 +8,4 @@
     execute as @e[tag=!ui_temp_team,predicate=ui:load_unhurtable,sort=nearest,limit=1] at @s run function ui:tmw/237/projectile/hit_ent
 
 # 消失
-    function ui:tmw/237/projectile/kill
+    tag @s add tmw_237_proj_del

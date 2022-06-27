@@ -1,0 +1,40 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text":"スキルツリーコア",
+        "color":"white",
+        "italic":false
+      },
+      {
+        "text":"[活性]",
+        "color":"red",
+        "italic":false
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text":"取得済みスキルを格納するデータコア",
+        "color":"gold",
+        "italic":false
+      },
+      {
+        "text":"対象スロットから取り出しても",
+        "color":"green",
+        "italic":false
+      },
+      {
+        "text":"再度右クリックで継承可能",
+        "color":"green",
+        "italic":false
+      }
+    ],
+    "replace": true
+  }
+]

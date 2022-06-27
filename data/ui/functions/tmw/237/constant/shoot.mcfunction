@@ -11,8 +11,6 @@
     effect clear @s[nbt={ActiveEffects:[{Id:25b,Amplifier:-5b}]}] levitation
     effect clear @s[nbt={ActiveEffects:[{Id:25b,Amplifier:-9b}]}] levitation
     effect clear @s[nbt={ActiveEffects:[{Id:25b,Amplifier:-128b,Duration:15}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25b,Amplifier:-128b,Duration:10}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25b,Amplifier:-128b,Duration:5}]}] levitation
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true
     effect clear @s invisibility
     effect clear @s regeneration

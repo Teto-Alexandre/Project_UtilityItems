@@ -11,5 +11,5 @@ execute unless score $temp ui_temp matches -10000 run function ui:ui/12/dt
 execute if entity @s[nbt={PortalCooldown:1}] run function ui:ui/12/pc
 
 #近くでしゃがむと消滅
-execute facing entity @a[distance=..2,scores={ui_st2=1}] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @a[distance=..2,scores={ui_st2=10..}] run function ui:ui/12/st
+execute facing entity @a[distance=..2,scores={ui_st2=1},gamemode=!adventure,gamemode=!spectator] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @a[distance=..2,scores={ui_st2=10..},gamemode=!adventure,gamemode=!spectator] run function ui:ui/12/st

@@ -7,9 +7,10 @@
 
 # メインプロセスに送信
     execute if score $shottype ui_temp matches 1 run function ui:tmw/237/attack/shot/core
-    execute if score $shottype ui_temp matches 2 run function ui:tmw/237/attack/roll/core
+    execute if score $shottype ui_temp matches 2 if entity @s[nbt={OnGround:1b}] run function ui:tmw/237/attack/roll/core
 
 # インク減少
+    execute if score $shottype ui_temp matches 2 if entity @s[nbt={OnGround:0b}] run scoreboard players set $ink.main ui_temp 0
     scoreboard players operation $ink ui_temp -= $ink.main ui_temp
 
 # 変更した
