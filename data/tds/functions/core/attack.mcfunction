@@ -15,17 +15,18 @@
     execute unless score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run data get entity @s Health 10000
     execute if score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run scoreboard players operation @s tds_hps *= $100 tds_dmg
     execute if data storage tds: {BypassArmor:0b} store result score $defensePoints tds_dmg run attribute @s generic.armor get 100
-    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $defensePoints tds_dmg 0
     execute if data storage tds: {BypassArmor:0b} store result score $toughness tds_dmg run attribute @s generic.armor_toughness get 100
-    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $toughness tds_dmg 0
     execute store result score $DamageType tds_dmg run data get storage tds: DamageType
     execute store result score $DeathMessage tds_dmg run data get storage tds: DeathMessage
     execute store result score $EPF tds_dmg run data get storage tds: EPF
-    execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf_entity
-    execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf_player
+    execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
+    execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/player
+    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $defensePoints tds_dmg 0
+    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $toughness tds_dmg 0
     execute if data storage tds: {BypassResistance:0b} store result score $Resistance tds_dmg run data get entity @s ActiveEffects[{Id:11b}].Amplifier
     execute if data storage tds: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance tds_dmg 1
     execute if data storage tds: {BypassResistance:1b} run scoreboard players set $Resistance tds_dmg 0
+    scoreboard players operation $Damage tds_dmg > $0 tds_dmg
 
 # 与えるダメージの計算
     #function tds:core/calc

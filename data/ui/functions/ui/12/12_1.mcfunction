@@ -12,4 +12,8 @@ execute if entity @s[nbt={PortalCooldown:1}] run function ui:ui/12/pc
 
 #近くでしゃがむと消滅
 execute facing entity @a[distance=..2,scores={ui_st2=1},gamemode=!adventure,gamemode=!spectator] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @a[distance=..2,scores={ui_st2=1},gamemode=creative] run data modify entity @e[tag=ui_12_2,sort=nearest,limit=1] ArmorItems.[0] set from entity @a[distance=..2,scores={ui_st2=1},gamemode=creative,limit=1] Inventory.[{Slot:100b}]
+execute if entity @a[distance=..2,scores={ui_st2=1},gamemode=creative] run data modify entity @e[tag=ui_12_2,sort=nearest,limit=1] ArmorItems.[1] set from entity @a[distance=..2,scores={ui_st2=1},gamemode=creative,limit=1] Inventory.[{Slot:101b}]
+execute if entity @a[distance=..2,scores={ui_st2=1},gamemode=creative] run data modify entity @e[tag=ui_12_2,sort=nearest,limit=1] ArmorItems.[2] set from entity @a[distance=..2,scores={ui_st2=1},gamemode=creative,limit=1] Inventory.[{Slot:102b}]
+execute if entity @a[distance=..2,scores={ui_st2=1},gamemode=creative] run data modify entity @e[tag=ui_12_2,sort=nearest,limit=1] ArmorItems.[3] set from entity @a[distance=..2,scores={ui_st2=1},gamemode=creative,limit=1] Inventory.[{Slot:103b}]
 execute if entity @a[distance=..2,scores={ui_st2=10..},gamemode=!adventure,gamemode=!spectator] run function ui:ui/12/st

@@ -11,6 +11,6 @@
     execute if score $success ui_temp matches 0 run clear @s arrow{tmw:{id:233,temp:-1}} 1
 
 # 失敗
-    execute if score $success ui_temp matches 1 run give @s arrow 1
+    execute unless score $ammo ui_world matches 1 if score $success ui_temp matches 1 run give @s arrow 1
     execute if score $success ui_temp matches 1 run playsound block.note_block.snare player @a ~ ~ ~ 0.5 1.6 0
     execute if score $success ui_temp matches 1 run clear @s arrow{tmw:{id:233,temp:-1}} 1

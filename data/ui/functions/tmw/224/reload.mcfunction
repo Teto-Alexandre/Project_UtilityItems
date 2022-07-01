@@ -1,7 +1,7 @@
-#===========================================================================
-
 #松明がある
-execute if entity @s[tag=!ui_224_reloaded] store success score $temp ui_temp run clear @s torch 1
+scoreboard players set $temp ui_temp 0
+execute unless score $ammo ui_world matches 1 if entity @s[tag=!ui_224_reloaded] store success score $temp ui_temp run clear @s torch 1
+execute if score $ammo ui_world matches 1 if entity @s[tag=!ui_224_reloaded] run scoreboard players set $temp ui_temp 1
 tag @s[tag=ui_224_reloaded] remove ui_224_reloaded
 
 #アイテム転置
@@ -19,5 +19,3 @@ execute if score $temp ui_temp matches 1 if score $ammo ui_calc1 matches 16 run 
 
 #成功
 execute if score $temp ui_temp matches 1 run tag @s add ui_224_reloaded
-
-#===========================================================================
