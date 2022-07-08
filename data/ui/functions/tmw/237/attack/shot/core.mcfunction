@@ -7,27 +7,25 @@
     execute store result score $multishot ui_temp run data get storage ui:gun temp2.MultiShot
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $speed.plus ui_temp run data get storage ui:gun temp2.SpeedPlus
-    execute store result score $spread ui_temp run data get storage ui:gun temp2.Spread
-    execute store result score $airspread ui_temp run data get storage ui:gun temp2.AirSpread
-    execute if entity @s[nbt={OnGround:0b}] run scoreboard players operation $spread ui_temp += $airspread ui_temp
+    execute if entity @s[nbt={OnGround:1b}] store result score $spread ui_temp run data get storage ui:gun temp2.Spread
+    execute if entity @s[nbt={OnGround:0b}] store result score $spread ui_temp run data get storage ui:gun temp2.AirSpread
+    execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
+    execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
     scoreboard players set $speed.add ui_temp 0
 
 # チャージ補正
     execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/attack/shot/burst4
     execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/attack/shot/burst5
 
-# ショットガン.lp
-    function ui:tmw/237/attack/shot/loop
+# タイプごとに拡散して発射
+    #function ui:tmw/237/attack/shot/loop
+    execute if score $spreadtype ui_temp matches 1 anchored eyes positioned ^ ^ ^ run function ui:tmw/237/attack/shot/spreadmanager/1
+    execute if score $spreadtype ui_temp matches 2 anchored eyes positioned ^ ^ ^ run function ui:tmw/237/attack/shot/spreadmanager/2
+    execute if score $spreadtype ui_temp matches 3 anchored eyes positioned ^ ^ ^ run function ui:tmw/237/attack/shot/spreadmanager/3
 
 # スコア依存で足元に塗り判定発生
     execute store result score $temp ui_temp run data get storage ui:gun temp2.ShotFootStep
-    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 1.. run scoreboard players operation @s ui_paint += $temp ui_temp
+    execute if score $temp ui_temp matches 1.. run function ui:tmw/237/attack/shot/shotfootstep/manager
 
 # 発射音
     execute store result score $temp ui_temp run data get storage ui:gun temp2.Sound

@@ -11,5 +11,9 @@
 # 3.ファイナル型なら最後は専用の射撃タイプを読み込む
     execute if score $basetype ui_temp matches 3 run function ui:tmw/237/basetype/3
 
+# 4.ウェイト&ホールド型なら入力でctと慣性リセット、最初の射撃検知、ホールド中は専用射撃を読み込み
+    #次が初回射撃かどうかの記録値をnow内部に持つ
+    execute if score $basetype ui_temp matches 4 run function ui:tmw/237/basetype/4
+
 # -1.装備型スペシャルを発動中なら最優先で適応する
     execute if score $sptype ui_temp matches 301..400 if score $sptime ui_temp matches 1.. run function ui:tmw/237/basetype/sp

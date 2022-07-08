@@ -16,7 +16,9 @@
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 3 ~ ~1 ~ 0.5 0.7 0.5 0 1 force
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 2 run particle dust 1 0.5 1 3 ~ ~1 ~ 0.5 0.7 0.5 0 1 force
-    execute if score @s ui_is matches ..0 run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 3 run particle dust 1 1 0.5 3 ~ ~1 ~ 0.5 0.7 0.5 0 1 force
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 4 run particle dust 0.5 1 0.5 3 ~ ~1 ~ 0.5 0.7 0.5 0 1 force
+    execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..0 run tag @s add ui_237_sub_explode
 
 # 処理終了
     execute if score @s ui_uses matches 20 run tag @s add ui_237_sub_stop
@@ -27,8 +29,6 @@
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_id = $id ui_temp
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_obj_id = $obj_id ui_temp
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_team = $team ui_temp
-    #execute as @e[tag=ui_temp_this] if score $team ui_temp matches 1 run team join abyss @s
-    #execute as @e[tag=ui_temp_this] if score $team ui_temp matches 2 run team join chaos @s
     tag @e[tag=ui_temp_this] remove ui_temp_this
     #ダメージ計算
     execute if score @s ui_is matches ..599 store result score $temp ui_temp run data get entity @e[tag=ui_temp_obj,tag=tmw_237_sub_110_1,limit=1] Health 10

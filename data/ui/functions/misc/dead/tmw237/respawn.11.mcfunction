@@ -1,0 +1,11 @@
+# メインタイトル
+    scoreboard players operation $time ui_temp = @s ui_rst
+    scoreboard players operation $time ui_temp /= #3 ui_num
+    scoreboard players operation $time ui_temp %= #7 ui_num
+    execute if score $time ui_temp matches 0 run title @s title [{"text":"S","color":"red","bold":true,"italic":false},{"text":"h","color":"light_purple"},{"text":"o","color":"blue"},{"text":"c","color":"aqua"},{"text":"k","color":"green"},{"text":"e","color":"yellow"},{"text":"d","color":"gold"}]
+    execute if score $time ui_temp matches 1 run title @s title [{"text":"S","color":"gold","bold":true,"italic":false},{"text":"h","color":"red"},{"text":"o","color":"light_purple"},{"text":"c","color":"blue"},{"text":"k","color":"aqua"},{"text":"e","color":"green"},{"text":"d","color":"yellow"}]
+    execute if score $time ui_temp matches 2 run title @s title [{"text":"S","color":"yellow","bold":true,"italic":false},{"text":"h","color":"gold"},{"text":"o","color":"red"},{"text":"c","color":"light_purple"},{"text":"k","color":"blue"},{"text":"e","color":"aqua"},{"text":"d","color":"green"}]
+    execute if score $time ui_temp matches 3 run title @s title [{"text":"S","color":"green","bold":true,"italic":false},{"text":"h","color":"yellow"},{"text":"o","color":"gold"},{"text":"c","color":"red"},{"text":"k","color":"light_purple"},{"text":"e","color":"blue"},{"text":"d","color":"aqua"}]
+    execute if score $time ui_temp matches 4 run title @s title [{"text":"S","color":"aqua","bold":true,"italic":false},{"text":"h","color":"green"},{"text":"o","color":"yellow"},{"text":"c","color":"gold"},{"text":"k","color":"red"},{"text":"e","color":"light_purple"},{"text":"d","color":"blue"}]
+    execute if score $time ui_temp matches 5 run title @s title [{"text":"S","color":"blue","bold":true,"italic":false},{"text":"h","color":"aqua"},{"text":"o","color":"green"},{"text":"c","color":"yellow"},{"text":"k","color":"gold"},{"text":"e","color":"red"},{"text":"d","color":"light_purple"}]
+    execute if score $time ui_temp matches 6 run title @s title [{"text":"S","color":"light_purple","bold":true,"italic":false},{"text":"h","color":"blue"},{"text":"o","color":"aqua"},{"text":"c","color":"green"},{"text":"k","color":"yellow"},{"text":"e","color":"gold"},{"text":"d","color":"red"}]

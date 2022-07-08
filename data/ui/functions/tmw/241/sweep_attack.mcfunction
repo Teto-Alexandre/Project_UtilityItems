@@ -9,7 +9,7 @@
     execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # ダメージを与える
-    execute if score $color ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"範囲攻撃","color":"gray"}'
+    data modify storage ui:temp Name set value '{"text":"範囲攻撃","color":"gray"}'
     scoreboard players set @s ui_bdt 1
     scoreboard players set @s ui_dmg 40
     execute rotated ~ 0 positioned ^ ^ ^2 at @e[distance=..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/241/hit

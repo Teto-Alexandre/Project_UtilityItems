@@ -26,8 +26,10 @@
     item modify entity @s weapon.mainhand ui:gun/value/model_air
 
 # エフェクト
-    execute if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~2 ~ 0.1 0.1 0.1 0 2 normal
-    execute if score $color ui_temp matches 2 run particle block pink_concrete ~ ~2 ~ 0.1 0.1 0.1 0 2 normal
+    execute if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
+    execute if score $team ui_temp matches 2 run particle block pink_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
+    execute if score $team ui_temp matches 3 run particle block yellow_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
+    execute if score $team ui_temp matches 4 run particle block lime_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
     execute if score $world ui_tc matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
 # タグを返す

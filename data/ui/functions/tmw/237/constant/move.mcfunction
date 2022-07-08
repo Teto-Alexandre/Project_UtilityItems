@@ -20,13 +20,15 @@
     item modify entity @s weapon.mainhand ui:gun/value/model_air
 
 # エフェクト
-    execute if score @s ui_move_s matches 1.. if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
-    execute if score @s ui_move_s matches 1.. if score $color ui_temp matches 2 run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
-    execute if score @s ui_move_d matches 1.. if score $color ui_temp matches 1 run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 2 normal
-    execute if score @s ui_move_d matches 1.. if score $color ui_temp matches 2 run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 2 normal
+    scoreboard players operation $temp ui_temp = @s ui_move_s
+    scoreboard players operation $temp ui_temp += @s ui_move_d
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 2 run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 3 run particle block yellow_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 4 run particle block lime_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
     execute if score $world ui_tc matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
-#
+# 素早く坂を上る挙動
     execute as @s if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #minecraft:slabs unless block ^ ^ ^0.5 air if block ^ ^1 ^0.5 air if block ^0.4 ^1 ^0.5 air if block ^-0.4 ^1 ^0.5 air if block ^ ^1 ^0.9 air unless block ^ ^ ^0.5 #minecraft:slabs run teleport @s ^ ^1 ^0.4
 
 # タグを返す

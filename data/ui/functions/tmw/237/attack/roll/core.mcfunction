@@ -6,7 +6,7 @@
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
 
 # チームメンバー識別
-    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $color ui_temp run tag @s add ui_temp_team
+    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # id共有
     scoreboard players operation $id ui_temp = @s ui_id
@@ -15,16 +15,6 @@
     scoreboard players set $temp ui_temp 1
     scoreboard players set $temp2 ui_temp 1
     execute rotated ~ 0 run function ui:tmw/237/attack/roll/set
-
-# スコア依存で足元に塗り判定発生
-    execute store result score $temp ui_temp run data get storage ui:gun temp2.ShotFootStep
-    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 1 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.2 ~-0.2 ~-0.2 ~0.2 ~0.2 ~0.2 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 2 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 1 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 light_blue_wool replace #ui:wools
-    execute if score $temp ui_temp matches 3 if score $color ui_temp matches 2 store result score $temp ui_temp run fill ~-1.0 ~-1.0 ~-1.0 ~1.0 ~1.0 ~1.0 pink_wool replace #ui:wools
-    execute if score $temp ui_temp matches 1.. run scoreboard players operation @s ui_paint += $temp ui_temp
 
 # 発射音
     execute store result score $temp ui_temp run data get storage ui:gun temp2.Sound

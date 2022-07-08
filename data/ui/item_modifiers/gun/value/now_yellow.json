@@ -1,0 +1,41 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:gun"
+    },
+    "ops": [
+      {
+        "source": "temp.now",
+        "target": "tmw.gun.now",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$ink.temp"
+      },
+      "score": "ui_temp",
+      "scale": 0.01
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "yellow",
+        "nbt": "temp.Name",
+        "storage": "ui:gun"
+      }
+    ]
+  }
+]

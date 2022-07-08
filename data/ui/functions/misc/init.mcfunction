@@ -32,13 +32,14 @@
     scoreboard objectives add ui_num dummy {"text":"UtilityItems_Number","color":"dark_blue"}
 
 ## HP最大値管理用
-    scoreboard objectives add ui_dc deathCount {"text":"UtilityItems_DeathCount","color":"dark_blue"}
     scoreboard objectives add ui_hp dummy {"text":"UtilityItems_HP","color":"dark_blue"}
     scoreboard objectives add ui_hp_calc dummy {"text":"UtilityItems_HP_Calc","color":"dark_blue"}
     scoreboard objectives add ui_hp_plus dummy {"text":"UtilityItems_HP_Plus","color":"dark_blue"}
     scoreboard objectives add ui_hp_plusc dummy {"text":"UtilityItems_HP_PlusCalc","color":"dark_blue"}
 
 ## 条件起動型
+    scoreboard objectives add ui_dc deathCount {"text":"UtilityItems_DeathCount","color":"dark_blue"}
+    scoreboard objectives add ui_dc_r dummy {"text":"UtilityItems_DeathCountRespawn","color":"dark_blue"}
     scoreboard objectives add ui_uset minecraft.used:minecraft.totem_of_undying {"text":"UtilityItems_UseTotem","color":"dark_blue"}
     scoreboard objectives add ui_usec minecraft.used:minecraft.crossbow {"text":"UtilityItems_UseCrossbow","color":"dark_blue"}
     scoreboard objectives add ui_usep minecraft.used:minecraft.potion {"text":"UtilityItems_UsePot","color":"dark_blue"}
@@ -218,6 +219,10 @@
 ## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
 
+## 復活、ゲームモード関連
+    #復活までの時間
+        scoreboard objectives add ui_rst dummy {"text":"UtilityItems_RespawnTime","color":"dark_blue"}
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
@@ -255,6 +260,7 @@
     scoreboard players set #500 ui_num 500
     scoreboard players set #1000 ui_num 1000
     scoreboard players set #2220 ui_num 2220
+    scoreboard players set #3600 ui_num 3600
     scoreboard players set #10000 ui_num 10000
     scoreboard players set #20000 ui_num 20000
     scoreboard players set #31743 ui_num 31743
@@ -278,14 +284,26 @@
     bossbar set ui:dream2 max 200
 
 ## チーム
-    team add abyss
-    team modify abyss color aqua
-    team modify abyss friendlyFire false
-    team modify abyss collisionRule never
-    team add chaos
-    team modify chaos color light_purple
-    team modify chaos friendlyFire false
-    team modify chaos collisionRule never
+    team add blue
+    team modify blue color aqua
+    team modify blue friendlyFire false
+    team modify blue collisionRule never
+    team modify blue nametagVisibility hideForOtherTeams
+    team add red
+    team modify red color light_purple
+    team modify red friendlyFire false
+    team modify red collisionRule never
+    team modify red nametagVisibility hideForOtherTeams
+    team add yellow
+    team modify yellow color yellow
+    team modify yellow friendlyFire false
+    team modify yellow collisionRule never
+    team modify yellow nametagVisibility hideForOtherTeams
+    team add green
+    team modify green color green
+    team modify green friendlyFire false
+    team modify green collisionRule never
+    team modify green nametagVisibility hideForOtherTeams
 
 ## その他
     forceload add 0 0

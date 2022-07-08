@@ -30,3 +30,6 @@ execute if score $bullettime ui_world matches 1.. run scoreboard players remove 
 #クールタイム
 scoreboard players remove @a[scores={ui_ct=1..}] ui_ct 1
 scoreboard players reset @a[scores={ui_ct=..0}] ui_ct
+
+#
+#say @a

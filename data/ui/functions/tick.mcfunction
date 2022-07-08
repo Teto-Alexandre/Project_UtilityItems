@@ -230,12 +230,16 @@
         execute as @e[tag=ui_proj_common] at @s run function ui:common/projectile/tick
         execute as @e[tag=ui_c_ref] at @s run function ui:tmw/214/refmain
 
+    ## 死んだことを検知
+        ### 死んだ直後に実行するコマンド群
+            execute as @a[scores={ui_dc=1..}] run function ui:misc/dead
+        ### リスポーン直後に実行するコマンド群
+            execute as @e[type=player,scores={ui_dc_r=1..}] run function ui:misc/respawned
+
 # 特殊処理
 
     ## 恒常能力値操作(旧HP最大値操作)
 
-        ### さっき死んだならHPを最大に戻す
-            execute as @e[type=player,scores={ui_dc=1..}] run function ui:misc/deathtime
         ### クリエならHPを最大に戻す
             scoreboard players set @a[gamemode=creative] ui_hp 0
 

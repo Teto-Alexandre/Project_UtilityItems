@@ -1,14 +1,10 @@
 # スニークしてる時
 
 # 壁上り
-    execute if score $color ui_temp matches 1 if block ~-0.6 ~ ~ light_blue_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 2 if block ~-0.6 ~ ~ pink_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 1 if block ~0.6 ~ ~ light_blue_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 2 if block ~0.6 ~ ~ pink_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 1 if block ~ ~ ~-0.6 light_blue_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 2 if block ~ ~ ~-0.6 pink_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 1 if block ~ ~ ~0.6 light_blue_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
-    execute if score $color ui_temp matches 2 if block ~ ~ ~0.6 pink_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_wall
+    execute if score $team ui_temp matches 1 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall1
+    execute if score $team ui_temp matches 2 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall2
+    execute if score $team ui_temp matches 3 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall3
+    execute if score $team ui_temp matches 4 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall4
     effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:7b}]}] levitation
     effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:3b}]}] levitation
     effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:-1b}]}] levitation
@@ -18,8 +14,10 @@
     execute as @s[tag=ui_temp_wall] run function ui:tmw/237/constant/wall
 
 # 天井走り
-    execute if score $color ui_temp matches 1 if block ~ ~2.3 ~ light_blue_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
-    execute if score $color ui_temp matches 2 if block ~ ~2.3 ~ pink_wool as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
+    execute if score $team ui_temp matches 1 if block ~ ~2.3 ~ #ui:light_blue as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
+    execute if score $team ui_temp matches 2 if block ~ ~2.3 ~ #ui:pink as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
+    execute if score $team ui_temp matches 3 if block ~ ~2.3 ~ #ui:yellow as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
+    execute if score $team ui_temp matches 4 if block ~ ~2.3 ~ #ui:lime as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
     effect clear @s[tag=!ui_temp_top,nbt={ActiveEffects:[{Id:25b,Amplifier:0b}]}] levitation
     execute as @s[tag=ui_temp_top] run function ui:tmw/237/constant/top
 
@@ -32,16 +30,22 @@
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true
 
 # 下記に該当しないなら射撃形態になる
-    execute if score $color ui_temp matches 1 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ light_blue_wool unless entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/constant/shoot
-    execute if score $color ui_temp matches 2 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ pink_wool unless entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 1 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ light_blue_wool unless entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 2 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ pink_wool unless entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 3 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ yellow_wool unless entity @e[type=shulker,nbt={Color:4b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 4 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ lime_wool unless entity @e[type=shulker,nbt={Color:5b}] run function ui:tmw/237/constant/shoot
 
 # 特定地形の上なら移動形態になる
-    execute if score $color ui_temp matches 1 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/constant/move
-    execute if score $color ui_temp matches 2 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/constant/move
-    execute if score $color ui_temp matches 1 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:3b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
-    execute if score $color ui_temp matches 2 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:6b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 1 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ #ui:light_blue run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 2 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ #ui:pink run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 3 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ #ui:yellow run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 4 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ #ui:lime run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 1 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:3b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 2 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:6b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 3 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:4b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
+    execute if score $team ui_temp matches 4 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:5b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
 
-#
+# 素早く坂を下りる挙動
     execute as @s[scores={ui_st=1..},nbt={OnGround:1b}] rotated ~ 0 if block ^ ^-1 ^1 air if block ^ ^ ^1 air if block ^ ^-1 ^0.5 air if block ^ ^ ^0.5 air if block ^ ^-1 ^0.9 air if block ^0.4 ^-1 ^0.5 air if block ^-0.4 ^-1 ^0.5 air unless block ^ ^-2 ^0.5 air unless block ^ ^-2 ^0.5 water unless block ~ ~ ~ #minecraft:slabs run teleport @s ^ ^-1 ^0.6
 
 # タグ消し

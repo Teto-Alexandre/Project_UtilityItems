@@ -1,6 +1,6 @@
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
-execute store result score $color ui_temp run scoreboard players get @s ui_team
+execute store result score $team ui_temp run scoreboard players get @s ui_team
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 scoreboard players set $changed ui_temp 0
 

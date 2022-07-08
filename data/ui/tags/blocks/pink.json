@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_wool",
+    "minecraft:pink_concrete",
+    "minecraft:pink_stained_glass"
+  ]
+}

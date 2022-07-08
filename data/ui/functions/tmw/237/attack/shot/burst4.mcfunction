@@ -19,5 +19,9 @@
     execute if score $burst_alt.id ui_temp matches 2 run scoreboard players operation $damage ui_temp += $burst_alt ui_temp
     execute if score $burst_alt.id ui_temp matches 2 run scoreboard players operation $burst_alt ui_temp /= #3 ui_num
     execute if score $burst_alt.id ui_temp matches 2 run scoreboard players operation $range ui_temp += $burst_alt ui_temp
+    
+    execute if score $burst_alt.id ui_temp matches 3 run scoreboard players operation $range ui_temp += $burst_alt ui_temp
+    execute if score $burst_alt.id ui_temp matches 3 run scoreboard players operation $burst_alt ui_temp *= #8 ui_num
+    execute if score $burst_alt.id ui_temp matches 3 run scoreboard players operation $damage ui_temp += $burst_alt ui_temp
 
 #

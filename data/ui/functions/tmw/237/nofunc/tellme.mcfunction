@@ -18,7 +18,8 @@
     execute if score $temp ui_temp matches 109 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ポイズンガス : 移動とインク回復を阻害する毒を散布する","color":"white"}]
     execute if score $temp ui_temp matches 110 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"インスタントシールド : 敵の弾を防ぐ盾を設置する","color":"white"}]
     execute if score $temp ui_temp matches 201 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"リコール : 瞬時にリスポーン地点に戻る","color":"white"}]
-    execute if score $temp ui_temp matches 301 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"メガホンレーザーv1 : 壁を貫通する攻撃を行う","color":"white"}]
+    execute if score $temp ui_temp matches 301 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"メガホンレーザー : 壁を貫通する攻撃を行う","color":"white"}]
+    execute if score $temp ui_temp matches 302 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"トラップ : その場に周囲の敵に反応する爆弾を設置","color":"white"}]
 
 # スペ情報開示
     execute store result score $temp ui_temp run data get storage ui:gun temp.gun.SPType
@@ -31,7 +32,7 @@
     execute if score $temp ui_temp matches 201 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"トルネード : インクの竜巻を発生させる装置を投げる","color":"white"}]
     execute if score $temp ui_temp matches 202 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"アメフラシ : インクの雨雲を発生させる装置を投げる","color":"white"}]
     execute if score $temp ui_temp matches 301 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"スーパーショット : 縦に長いショットを発射する","color":"white"}]
-    execute if score $temp ui_temp matches 401 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"メガホンレーザーv1 : 壁を貫通する攻撃を行う","color":"white"}]
+    execute if score $temp ui_temp matches 401 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"メガホンレーザー : 壁を貫通する攻撃を行う","color":"white"}]
 
 #
     tellraw @s [{"text":"==========================================","color":"gray"}]

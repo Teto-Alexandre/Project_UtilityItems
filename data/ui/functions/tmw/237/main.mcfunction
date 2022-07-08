@@ -1,3 +1,5 @@
+# ガチマッチ勝利検知用 : ui_17_aqua,ui_17_pink
+
 # 装備更新変数をリセット
 scoreboard players set $changed ui_temp 0
 
@@ -8,7 +10,10 @@ scoreboard players set $burst_alt.id ui_temp 0
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
 data modify storage ui:gun temp.DisplayName set from entity @s SelectedItem.tag.display.Name
-execute store result score $color ui_temp run scoreboard players get @s ui_team
+# 最後に持った時間と連続していなかった場合ペナルティ（changedで常時時間係数を監視しないといけないので没）
+execute unless data storage ui:gun temp.now.First run function ui:tmw/237/changed/first
+
+execute store result score $team ui_temp run scoreboard players get @s ui_team
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
@@ -21,6 +26,8 @@ execute store result score $sptype ui_temp run data get storage ui:gun temp.SPTy
 execute store result score $sptime ui_temp run data get storage ui:gun temp.now.SPTime
 execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
+execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
+#execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
@@ -29,6 +36,17 @@ function ui:tmw/237/basetype/basetype
 # サブウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse
 execute if score $sptype ui_temp matches 103 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #8 ui_num
+
+# tmw_237_readtagのタグが付いているならプレイヤーのタグを読み取る
+execute if entity @s[tag=tmw_237_readtag] run function ui:tmw/237/tag/reader
+
+# $amp より色々バフを掛ける
+execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
+
+# 最後に持った時間と連続していなかった場合ペナルティ（changedで常時時間係数を監視しないといけないので没）
+#execute store result score $time ui_temp run time query gametime
+#execute if score $lasttime ui_temp < $time ui_temp run function ui:tmw/237/changed/hand
+#scoreboard players add $lasttime ui_temp 1
 
 # キー入力検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
@@ -63,6 +81,8 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 
 # サブウェポン発動
+execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 true
+execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
 execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
 
 # スペシャルウェポン発動
