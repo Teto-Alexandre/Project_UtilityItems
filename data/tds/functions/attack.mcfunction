@@ -66,6 +66,10 @@
     ## 13: 〇    「Victimは息絶えた」普通に死ぬ
     ## 14: 〇 @ ©「VictimはAttackerの[Weapon]で伝説の礎にされた、...9」特別な武器で殺される
 
+# 返り値をリセット
+    scoreboard players set $Return tds_dmg 0
+    scoreboard players set $Lethal tds_dmg 0
+
 # ダメージを与えるためのタグが足りていないならエラーを吐く
     execute unless data storage tds: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]
 

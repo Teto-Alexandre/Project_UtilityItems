@@ -18,14 +18,14 @@
     execute if score $type ui_temp matches 108 run function ui:tmw/237/sub/explosive/108/tick
     execute if score $type ui_temp matches 109 run function ui:tmw/237/sub/explosive/109/tick
     execute if score $type ui_temp matches 110 run function ui:tmw/237/sub/explosive/110/tick
+    execute if score $type ui_temp matches 111 run function ui:tmw/237/sub/explosive/111/tick
+    execute if score $type ui_temp matches 112 run function ui:tmw/237/sub/explosive/112/tick
 
-    execute if score $type ui_temp matches 201 run function ui:tmw/237/sub/explosive/201/tick
-    execute if score $type ui_temp matches 202 run function ui:tmw/237/sub/explosive/202/tick
+    execute if score $type ui_temp matches 151 run function ui:tmw/237/sub/explosive/151/tick
+    execute if score $type ui_temp matches 152 run function ui:tmw/237/sub/explosive/152/tick
 
     execute if score $type ui_temp matches 301 run function ui:tmw/237/sub/explosive/301/tick
-    execute if score $type ui_temp matches 302 run function ui:tmw/237/sub/explosive/302/tick
-
-    execute if score $type ui_temp matches 401 run function ui:tmw/237/sub/explosive/301/tick
+    execute if score $type ui_temp matches 351 run function ui:tmw/237/sub/explosive/351/tick
 
 # 投擲物パーティクル
     execute if score $team ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force

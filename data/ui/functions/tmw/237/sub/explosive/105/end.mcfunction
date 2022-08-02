@@ -3,10 +3,12 @@
 # ダメージを与える
     execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"レンバクボム","color":"aqua"}'
     execute if score $team ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"レンバクボム","color":"light_purple"}'
-    scoreboard players set @s ui_bdt 3
-    scoreboard players set @s ui_dmg 120
+    execute if score $team ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"レンバクボム","color":"yellow"}'
+    execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"レンバクボム","color":"green"}'
+    scoreboard players set $damage_type ui_temp 3
+    scoreboard players set $damage ui_temp 120
     execute at @e[distance=4..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    scoreboard players set @s ui_dmg 300
+    scoreboard players set $damage ui_temp 300
     execute at @e[distance=..4,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出

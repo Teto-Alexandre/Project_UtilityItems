@@ -22,4 +22,4 @@
     execute as @s[tag=!ui_temp_col] positioned ^ ^ ^0.5 if block ~ ~ ~ #ui:liq run function ui:tmw/305/proj/liq_col
 
 #移動値が無くなるまで繰り返す
-    execute as @s[scores={ui_temp=1..,ui_br=1..,},tag=!ui_305_nocol,tag=!ui_temp_col] at @s run function ui:tmw/305/proj/move
+    execute as @s[scores={ui_temp=1..,ui_br=1..},tag=!ui_305_nocol,tag=!ui_temp_col] at @s run function ui:tmw/305/proj/move

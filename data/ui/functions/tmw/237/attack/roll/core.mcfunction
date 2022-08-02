@@ -5,11 +5,10 @@
     execute store result score $damage ui_temp run data get storage ui:gun temp2.Damage
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
 
+# id共有
+
 # チームメンバー識別
     execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
-
-# id共有
-    scoreboard players operation $id ui_temp = @s ui_id
 
 # 座標設定
     scoreboard players set $temp ui_temp 1

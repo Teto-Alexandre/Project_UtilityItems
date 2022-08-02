@@ -4,15 +4,16 @@
 # 必要データ収集
     data modify storage ui:gun temp2 set from entity @s SelectedItem.tag.tmw.hold
     execute store result score $shottype ui_temp run data get storage ui:gun temp2.ShotType
+    scoreboard players set $ink.add ui_temp 0
 
 # メインプロセスに送信
     execute if score $shottype ui_temp matches 1 run function ui:tmw/237/attack/shot/core
     execute if score $shottype ui_temp matches 2 if entity @s[nbt={OnGround:1b}] run function ui:tmw/237/attack/roll/core
-    execute if score $shottype ui_temp matches 101 run function ui:tmw/237/attack/missile/core
 
 # インク減少
     execute if score $shottype ui_temp matches 2 if entity @s[nbt={OnGround:0b}] run scoreboard players set $ink.main ui_temp 0
     scoreboard players operation $ink ui_temp -= $ink.main ui_temp
+    scoreboard players operation $ink ui_temp -= $ink.add ui_temp
 
 # 変更した
     scoreboard players set $changed ui_temp 1

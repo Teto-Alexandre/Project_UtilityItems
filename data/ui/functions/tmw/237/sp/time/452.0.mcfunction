@@ -1,0 +1,25 @@
+#Particles Generated with: Cloud Wolf's Particle Grapher
+particle electric_spark ^0.000 ^3.000 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^0.776 ^2.898 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^1.500 ^2.598 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.121 ^2.122 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.598 ^1.501 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.898 ^0.777 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^3.000 ^0.001 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.898 ^-0.775 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.599 ^-1.499 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^2.122 ^-2.120 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^1.501 ^-2.597 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^0.778 ^-2.897 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^0.002 ^-3.000 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-0.775 ^-2.898 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-1.498 ^-2.599 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.120 ^-2.123 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.597 ^-1.502 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.897 ^-0.779 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-3.000 ^-0.003 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.899 ^0.774 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.600 ^1.497 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-2.124 ^2.119 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-1.503 ^2.596 ^4.000 0 0 0 0 1 force @s
+particle electric_spark ^-0.780 ^2.897 ^4.000 0 0 0 0 1 force @s

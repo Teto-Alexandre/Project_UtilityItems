@@ -12,6 +12,9 @@
     execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
     execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
     scoreboard players set $speed.add ui_temp 0
+    # 弾
+    execute store result score $particle.fly ui_temp run data get storage ui:gun temp2.FlyParticle
+    execute store result score $particle.end ui_temp run data get storage ui:gun temp2.EndParticle
 
 # チャージ補正
     execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/attack/shot/burst4
@@ -30,9 +33,9 @@
 # 発射音
     execute store result score $temp ui_temp run data get storage ui:gun temp2.Sound
     execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 1.4 0
-    #execute if score $temp ui_temp matches 1 run playsound entity.shulker.shoot player @a ~ ~ ~ 1.5 0.8 0
-    #execute if score $temp ui_temp matches 1 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 0.8 2 0
     execute if score $temp ui_temp matches 2 run playsound entity.guardian.attack player @a ~ ~ ~ 1 1.4 0
+    execute if score $temp ui_temp matches 3 run playsound minecraft:entity.bat.loop player @a ~ ~ ~ 1 1.6 0
+    execute if score $temp ui_temp matches 3 run effect give @s slowness 1 4 true
 
 # クールタイム解除時刻.mod
     execute store result score $cooltime ui_temp run time query gametime

@@ -11,4 +11,4 @@
     execute if score @s ui_bpart matches 8 run function ui:tmw/237/particle_unit/move/8
 
 # 移動値が無くなるまで繰り返す
-    execute as @s[scores={ui_temp=10..,ui_br=1..,}] at @s run function ui:tmw/237/particle_unit/move
+    execute as @s[scores={ui_temp=10..,ui_br=1..}] at @s run function ui:tmw/237/particle_unit/move

@@ -3,6 +3,8 @@
     execute if score $basetype ui_temp matches 2 run function ui:tmw/237/basetype/burst_alt_id/2
     execute if score $basetype ui_temp matches 3 run function ui:tmw/237/basetype/burst_alt_id/3
     execute if score $basetype ui_temp matches -1 run function ui:tmw/237/basetype/burst_alt_id/sp
+    execute if score $basetype ui_temp matches -2 run function ui:tmw/237/basetype/burst_alt_id/sub
+    scoreboard players operation @s ui_use2 < $burst.max ui_temp
     execute store result score $burst_alt ui_temp run scoreboard players get @s ui_use2
     scoreboard players set $burst ui_temp 2
     #tellraw @a {"score":{"name":"$burst","objective":"ui_temp"},"color":"gold"}

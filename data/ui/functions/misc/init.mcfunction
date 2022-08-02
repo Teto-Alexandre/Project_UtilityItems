@@ -168,6 +168,7 @@
     scoreboard objectives add ui_bm dummy {"text":"UtilityItems_BulletMove","color":"dark_blue"}
     scoreboard objectives add ui_bm_temp dummy {"text":"UtilityItems_BulletMove_Temp","color":"dark_blue"}
     scoreboard objectives add ui_br dummy {"text":"UtilityItems_BulletRange","color":"dark_blue"}
+    scoreboard objectives add ui_br_temp dummy {"text":"UtilityItems_BulletRange_Temp","color":"dark_blue"}
     scoreboard objectives add ui_rt dummy {"text":"UtilityItems_ReloadTime","color":"dark_blue"}
     scoreboard objectives add ui_grs dummy {"text":"UtilityItems_GunReloadSlot","color":"dark_blue"}
     scoreboard objectives add ui_bc dummy {"text":"UtilityItems_BurstCount","color":"dark_blue"}
@@ -242,6 +243,7 @@
     scoreboard players set #11 ui_num 11
     scoreboard players set #12 ui_num 12
     scoreboard players set #15 ui_num 15
+    scoreboard players set #20 ui_num 20
     scoreboard players set #24 ui_num 24
     scoreboard players set #25 ui_num 25
     scoreboard players set #40 ui_num 40
@@ -336,5 +338,5 @@
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 42
+    scoreboard players set $version ui_world 44
     #say operationed

@@ -16,8 +16,9 @@
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run particle crit ~ ~1 ~ 0.2 0.2 0.2 1 10 normal
 
 # 初入力でクールタイム読み込み(+慣性打ち消し)、さらにホールド状態を0にする
-    execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[nbt={OnGround:0b}] run effect give @s slow_falling 1 0 true
-    execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[nbt={OnGround:0b}] run effect give @s levitation 1 24 true
+    execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[tag=!tmw_237_jumped,nbt={OnGround:0b}] run effect give @s slow_falling 1 0 true
+    execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[tag=!tmw_237_jumped,nbt={OnGround:0b}] run effect give @s levitation 1 24 true
+    execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[nbt={OnGround:0b}] run tag @s add tmw_237_jumped
     execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[nbt={OnGround:0b}] run tp @s @s
     execute if score $holdjump ui_temp matches 1 if score @s ui_use2 matches 5 run effect clear @s slow_falling
     execute if score $holdjump ui_temp matches 1 if score @s ui_use2 matches 2 run effect clear @s levitation

@@ -4,10 +4,19 @@
 #
 # @public
 
+# キルログを宣言
+scoreboard players set $deathmessage ui_temp 0
+execute if entity @s[tag=ui_refd] run scoreboard players set $deathmessage ui_temp 2
+execute if entity @s[tag=tmw_237_deathmessage_14] run scoreboard players set $deathmessage ui_temp 1
+
 #射程うんぬん
 scoreboard players operation @s ui_temp = @s ui_bm
 scoreboard players operation @s ui_temp += @s ui_bm_temp
 scoreboard players operation $rangetype ui_temp = @s ui_gpc
+
+#攻撃インストール
+scoreboard players operation $damage ui_temp = @s ui_dmg
+scoreboard players operation $damage_type ui_temp = @s ui_bdt
 
 #idを共有
 scoreboard players operation $id ui_temp = @s ui_id
@@ -25,10 +34,7 @@ scoreboard players operation @s ui_bm_temp = @s ui_temp
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
-execute if score $rangetype ui_temp matches 1..2 as @s[scores={ui_br=..0}] run function ui:tmw/237/projectile/kill
-execute if score $rangetype ui_temp matches 3..4 as @s[scores={ui_br=..0}] run scoreboard players set @s ui_bcp 5
-execute if score $rangetype ui_temp matches 3..4 as @s[scores={ui_br=..0}] at @s run teleport @s ~ ~ ~ ~ 90
-execute if score $rangetype ui_temp matches 5 as @s[scores={ui_br=..0}] run kill @s
+execute if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/projectile/end
 
 #一時タグ削除
 tag @e[tag=ui_temp_team] remove ui_temp_team

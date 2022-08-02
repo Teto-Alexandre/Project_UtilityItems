@@ -94,8 +94,6 @@
     scoreboard players operation $Damage tds_dmg < $Health tds_dmg
 # Health減算
     scoreboard players operation $Health tds_dmg -= $Damage tds_dmg
-# 死亡確認用
-    scoreboard players set $Lethal tds_dmg 0
 # ここで不死のトーテム起動
         execute if score $Health tds_dmg matches ..0 if entity @s[type=player,nbt={SelectedItem:{id:"minecraft:totem_of_undying"}}] run function tds:core/totem
         execute if score $Health tds_dmg matches ..0 if entity @s[type=player,nbt={Inventory:[{Slot:-106b,id:"minecraft:totem_of_undying"}]}] run function tds:core/totem
@@ -120,7 +118,8 @@
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
-        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[predicate=ui:load_unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[tag=!tds_nolog,type=!#ui:unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @a if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         ## キルカウント
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run scoreboard players add @a[tag=tds_tempa] ui_kills 1
         ## キルログ
@@ -138,6 +137,7 @@
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 14 if score $Health tds_dmg matches ..0 run function tds:message/14
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 15 if score $Health tds_dmg matches ..0 run function tds:message/15
 
 # 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg

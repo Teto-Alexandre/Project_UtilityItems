@@ -46,7 +46,7 @@
     execute if score $team ui_temp matches 4 as @s[scores={ui_gct=-1}] positioned ~ ~-0.3 ~ if entity @e[type=shulker,nbt={Color:5b},dx=0,dy=0,dz=0] positioned ~ ~0.3 ~ run function ui:tmw/237/constant/move
 
 # 素早く坂を下りる挙動
-    execute as @s[scores={ui_st=1..},nbt={OnGround:1b}] rotated ~ 0 if block ^ ^-1 ^1 air if block ^ ^ ^1 air if block ^ ^-1 ^0.5 air if block ^ ^ ^0.5 air if block ^ ^-1 ^0.9 air if block ^0.4 ^-1 ^0.5 air if block ^-0.4 ^-1 ^0.5 air unless block ^ ^-2 ^0.5 air unless block ^ ^-2 ^0.5 water unless block ~ ~ ~ #minecraft:slabs run teleport @s ^ ^-1 ^0.6
+    execute as @s[scores={ui_st=1..},nbt={OnGround:1b}] rotated ~ 0 if block ^ ^-1 ^1 #ui:nocol if block ^ ^ ^1 #ui:nocol if block ^ ^-1 ^0.5 #ui:nocol if block ^ ^ ^0.5 #ui:nocol if block ^ ^-1 ^0.9 #ui:nocol if block ^0.4 ^-1 ^0.5 #ui:nocol if block ^-0.4 ^-1 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 water if block ~ ~ ~ #ui:nocol run teleport @s ^ ^-1 ^0.6
 
 # タグ消し
     tag @s[tag=ui_temp_wall] remove ui_temp_wall

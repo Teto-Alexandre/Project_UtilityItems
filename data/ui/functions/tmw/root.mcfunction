@@ -113,6 +113,10 @@
         execute if entity @a[scores={ui_tmw_id=240}] run function ui:tmw/240/lim
     #大鎌
         execute if entity @a[scores={ui_tmw_id=241}] run function ui:tmw/241/lim
+    #ゆるふわミサイル
+        execute if entity @a[scores={ui_tmw_id=242}] run function ui:tmw/242/lim
+    #エンダーコア
+        execute if entity @a[scores={ui_tmw_id=243}] run function ui:tmw/243/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

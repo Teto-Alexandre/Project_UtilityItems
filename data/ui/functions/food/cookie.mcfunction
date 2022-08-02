@@ -18,3 +18,4 @@ execute as @s[scores={ui_tmw_id_old=408}] at @s run function ui:food/408/main
 execute as @s[scores={ui_tmw_id_old=409}] at @s run function ui:food/409/main
 execute as @s[scores={ui_tmw_id_old=410}] at @s run function ui:food/410/main
 execute as @s[scores={ui_tmw_id_old=411}] at @s run function ui:food/411/main
+execute as @s[scores={ui_tmw_id_old=412}] at @s run function ui:food/412/main

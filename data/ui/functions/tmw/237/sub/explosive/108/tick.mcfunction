@@ -16,7 +16,7 @@
     execute unless block ~ ~0.5 ~ #ui:nocol run tag @s add ui_237_sub_stop
     execute if score @s ui_uses matches 2.. run tag @s add ui_237_sub_stop
     execute as @s[tag=ui_237_sub_stop] run scoreboard players add @s ui_is 1
-    execute as @s[tag=ui_237_sub_stop,scores={ui_is=1}] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.01d,0.0d]}
+    execute as @s[tag=ui_237_sub_stop,scores={ui_is=1}] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
 
 # 処理終了
     execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/108/end

@@ -1,0 +1,10 @@
+execute if score $time ui_temp matches 0 run function ui:tmw/237/sub/explosive/112/2/0
+execute if score $time ui_temp matches 1 run function ui:tmw/237/sub/explosive/112/2/1
+execute if score $time ui_temp matches 2 run function ui:tmw/237/sub/explosive/112/2/2
+execute if score $time ui_temp matches 3 run function ui:tmw/237/sub/explosive/112/2/3
+execute if score $time ui_temp matches 4 run function ui:tmw/237/sub/explosive/112/2/4
+execute if score $time ui_temp matches 5 run function ui:tmw/237/sub/explosive/112/2/5
+execute if score $time ui_temp matches 6 run function ui:tmw/237/sub/explosive/112/2/6
+execute if score $time ui_temp matches 7 run function ui:tmw/237/sub/explosive/112/2/7
+execute if score $time ui_temp matches 8 run function ui:tmw/237/sub/explosive/112/2/8
+execute if score $time ui_temp matches 9 run function ui:tmw/237/sub/explosive/112/2/9

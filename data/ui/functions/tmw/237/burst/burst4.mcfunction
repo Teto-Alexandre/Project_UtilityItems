@@ -3,6 +3,7 @@
     execute if score $basetype ui_temp matches 2 run function ui:tmw/237/basetype/burstmax/2
     execute if score $basetype ui_temp matches 3 run function ui:tmw/237/basetype/burstmax/3
     execute if score $basetype ui_temp matches -1 run function ui:tmw/237/basetype/burstmax/sp
+    execute if score $basetype ui_temp matches -2 run function ui:tmw/237/basetype/burstmax/sub
 
 # 離すと書き込み
     scoreboard players operation @s ui_use2 < $burst.max ui_temp

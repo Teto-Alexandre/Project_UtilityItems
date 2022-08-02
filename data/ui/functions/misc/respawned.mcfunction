@@ -8,7 +8,6 @@
 effect give @s instant_health 1 10 true
 scoreboard players set @s ui_hp 0
 tag @s remove tmw_401_5
-say respawn
 
 # 始動スコアリセット
 scoreboard players set @s ui_dc_r 0

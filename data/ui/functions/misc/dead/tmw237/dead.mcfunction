@@ -1,5 +1,5 @@
 # データ検出
-execute store result score $amp ui_temp run data get entity @s SelectedItem.tag.tmw.gun.now.amp
+execute store result score $amp ui_temp run data get entity @s SelectedItem.tag.tmw.gun.now.Amp
 
 # 死亡したならリスポーンタイムが5秒になる
 scoreboard players set @s ui_rst 100

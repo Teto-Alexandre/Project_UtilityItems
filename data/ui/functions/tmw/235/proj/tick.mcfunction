@@ -8,7 +8,7 @@
     execute if score @s ui_team matches 1.. run scoreboard players operation $temp ui_temp = @s ui_team
     execute if score @s ui_team matches 1.. as @e if score @s ui_team = $temp ui_temp run tag @s add ui_temp_team
     function ui:tmw/235/proj/move
-    tag @e[tag=ui_temp] remove ui_temp_team
+    tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # キル条件
     kill @s[scores={ui_br=..0}]

@@ -13,7 +13,6 @@ scoreboard players reset @s tds_cold
 scoreboard players reset @s tds_amethyst
 scoreboard players reset @s tds_amethyst_t
 scoreboard players set @s tds_hps 9999999
-say dead
 
 # 始動スコアリセット
 scoreboard players set @s ui_dc 0

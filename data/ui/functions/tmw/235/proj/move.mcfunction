@@ -23,4 +23,4 @@
     execute if block ~ ~ ~ #ui:liq run function ui:tmw/235/proj/kill
 
 # 移動値が無くなるまで繰り返す
-    execute as @s[scores={ui_temp=1..,ui_br=1..,}] at @s run function ui:tmw/235/proj/move
+    execute as @s[scores={ui_temp=1..,ui_br=1..}] at @s run function ui:tmw/235/proj/move

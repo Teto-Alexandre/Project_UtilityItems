@@ -23,4 +23,4 @@
     execute unless block ^ ^ ^0.5 #ui:nocol run function ui:tmw/302/proj/kill
 
 #移動値が無くなるまで繰り返す
-    execute as @s[scores={ui_temp=1..,ui_br=1..,},tag=!ui_302_nocol] at @s run function ui:tmw/302/proj/move
+    execute as @s[scores={ui_temp=1..,ui_br=1..},tag=!ui_302_nocol] at @s run function ui:tmw/302/proj/move

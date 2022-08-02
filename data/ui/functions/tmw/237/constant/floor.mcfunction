@@ -7,7 +7,9 @@
     effect give @s slowness 1 1 true
     #一回消して様子見
     #effect give @s levitation 1 128 true
+    execute store result score $health ui_temp run data get entity @s Health -1.5
     data merge storage tds: {Damage:2.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
+    execute store result storage tds: EPF int 1 run scoreboard players add $health ui_temp 30
     function tds:attack
     scoreboard players set @s ui_st2 0
 

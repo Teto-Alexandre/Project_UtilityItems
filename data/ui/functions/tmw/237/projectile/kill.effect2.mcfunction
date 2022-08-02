@@ -1,4 +1,5 @@
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
+    tag @s add ui_temp_this
     scoreboard players operation $id ui_temp = @s ui_id
     scoreboard players operation $team ui_temp = @s ui_team
     execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
@@ -25,6 +26,10 @@
     # 個別
         # アメフラシ
         execute if score @s ui_hpart matches 101 run function ui:tmw/237/projectile/killeffect/101
+        # マルチミサイル
+        execute if score @s ui_hpart matches 102 run function ui:tmw/237/projectile/killeffect/102
+        # ヘルハウンド
+        execute if score @s ui_hpart matches 103 run function ui:tmw/237/projectile/killeffect/103
 
 # その他
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
@@ -33,4 +38,5 @@
     kill @s
 
 # 一時タグ削除
+    tag @s remove ui_temp_this
     tag @e[tag=ui_temp_team] remove ui_temp_team

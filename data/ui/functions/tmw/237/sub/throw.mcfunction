@@ -2,6 +2,9 @@ summon item ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub"],Invulnerable:1b,Item:{id:
 execute as @e[tag=ui_temp_this,limit=1] rotated as @p run teleport @s ~ ~ ~ ~ ~
 execute as @e[tag=ui_temp_this,limit=1] run function ui:template/accelerator.1
 execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.type int 1 run scoreboard players get $subtype ui_temp
+execute if score $subtype ui_temp matches 101 run function ui:tmw/237/sub/model/101
+execute if score $subtype ui_temp matches 103 run function ui:tmw/237/sub/model/103
+execute if score $subtype ui_temp matches 108 run data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set value 217121
 execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.color int 1 run scoreboard players get $team ui_temp
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
