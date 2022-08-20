@@ -12,6 +12,6 @@ execute rotated ~ 0 run particle block packed_ice ^ ^1 ^1 0.5 0.5 0.5 0 20 force
 
 execute at @s run tag @e[tag=tmw_102_2,sort=nearest,limit=1] remove tmw_102_2
 
-scoreboard players set @s ui_ct 2
+scoreboard players set @s ui_ct 40
 
 #=======================================================================================

@@ -23,6 +23,7 @@
     execute if score @s ui_hpart matches 8 run function ui:tmw/237/projectile/killeffect/8
     execute if score @s ui_hpart matches 9 run function ui:tmw/237/projectile/killeffect/9
     execute if score @s ui_hpart matches 10 run function ui:tmw/237/projectile/killeffect/10
+    execute if score @s ui_hpart matches 24 run function ui:tmw/237/projectile/killeffect/24
     # 個別
         # アメフラシ
         execute if score @s ui_hpart matches 101 run function ui:tmw/237/projectile/killeffect/101

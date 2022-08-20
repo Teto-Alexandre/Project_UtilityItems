@@ -18,18 +18,18 @@ execute if score $burst.max ui_temp matches 0 run scoreboard players set $burst.
 execute if score $subtype ui_temp matches 101 run scoreboard players set $ink.sub ui_temp 700
 execute if score $subtype ui_temp matches 102 run scoreboard players set $ink.sub ui_temp 600
 execute if score $subtype ui_temp matches 103 run scoreboard players set $ink.sub ui_temp 400
-execute if score $subtype ui_temp matches 104 run scoreboard players set $ink.sub ui_temp 700
+execute if score $subtype ui_temp matches 104 run scoreboard players set $ink.sub ui_temp 600
 execute if score $subtype ui_temp matches 105 run scoreboard players set $ink.sub ui_temp 700
-execute if score $subtype ui_temp matches 106 run scoreboard players set $ink.sub ui_temp 700
-execute if score $subtype ui_temp matches 107 run scoreboard players set $ink.sub ui_temp 900
+execute if score $subtype ui_temp matches 106 run scoreboard players set $ink.sub ui_temp 650
+execute if score $subtype ui_temp matches 107 run scoreboard players set $ink.sub ui_temp 800
 execute if score $subtype ui_temp matches 108 run scoreboard players set $ink.sub ui_temp 700
-execute if score $subtype ui_temp matches 109 run scoreboard players set $ink.sub ui_temp 600
-execute if score $subtype ui_temp matches 110 run scoreboard players set $ink.sub ui_temp 700
+execute if score $subtype ui_temp matches 109 run scoreboard players set $ink.sub ui_temp 550
+execute if score $subtype ui_temp matches 110 run scoreboard players set $ink.sub ui_temp 600
 execute if score $subtype ui_temp matches 111 run scoreboard players set $ink.sub ui_temp 800
-execute if score $subtype ui_temp matches 112 run scoreboard players set $ink.sub ui_temp 600
-execute if score $subtype ui_temp matches 201 run scoreboard players set $ink.sub ui_temp 800
-execute if score $subtype ui_temp matches 301 run scoreboard players set $ink.sub ui_temp 1000
-execute if score $subtype ui_temp matches 302 run scoreboard players set $ink.sub ui_temp 600
+execute if score $subtype ui_temp matches 112 run scoreboard players set $ink.sub ui_temp 500
+execute if score $subtype ui_temp matches 201 run scoreboard players set $ink.sub ui_temp 700
+execute if score $subtype ui_temp matches 301 run scoreboard players set $ink.sub ui_temp 600
+execute if score $subtype ui_temp matches 351 run scoreboard players set $ink.sub ui_temp 1000
 execute if score $subtype ui_temp matches 401 run scoreboard players set $ink.sub ui_temp 700
 execute if score $subtype ui_temp matches 402 run scoreboard players set $ink.sub ui_temp 700
 
@@ -49,8 +49,8 @@ execute if score $subtype ui_temp matches 110 run data modify storage ui:temp te
 execute if score $subtype ui_temp matches 111 run data modify storage ui:temp temp.Name set value " - SUB:スプリンクラー"
 execute if score $subtype ui_temp matches 112 run data modify storage ui:temp temp.Name set value " - SUB:アクセラレーター"
 execute if score $subtype ui_temp matches 201 run data modify storage ui:temp temp.Name set value " - SUB:リコール"
-execute if score $subtype ui_temp matches 301 run data modify storage ui:temp temp.Name set value " - SUB:メガホンレーザー"
-execute if score $subtype ui_temp matches 302 run data modify storage ui:temp temp.Name set value " - SUB:トラップ"
+execute if score $subtype ui_temp matches 301 run data modify storage ui:temp temp.Name set value " - SUB:トラップ"
+execute if score $subtype ui_temp matches 351 run data modify storage ui:temp temp.Name set value " - SUB:メガホンレーザー"
 execute if score $subtype ui_temp matches 401 run data modify storage ui:temp temp.Name set value " - SUB:ブロードソード"
 execute if score $subtype ui_temp matches 402 run data modify storage ui:temp temp.Name set value " - SUB:ヘルハウンド"
 execute if score $subtype ui_temp matches 1.. run item modify entity @s weapon.mainhand ui:gun/value/lore
@@ -61,7 +61,7 @@ execute if score $sptype ui_temp matches 251 run scoreboard players set $sptime 
 execute if score $sptype ui_temp matches 252 run scoreboard players set $sptime ui_temp 120
 execute if score $sptype ui_temp matches 253 run scoreboard players set $sptime ui_temp 120
 execute if score $sptype ui_temp matches 254 run scoreboard players set $sptime ui_temp 160
-execute if score $sptype ui_temp matches 255 run scoreboard players set $sptime ui_temp 60
+execute if score $sptype ui_temp matches 255 run scoreboard players set $sptime ui_temp 120
 execute if score $sptype ui_temp matches 256 run scoreboard players set $sptime ui_temp 200
 execute if score $sptype ui_temp matches 257 run scoreboard players set $sptime ui_temp 5
 execute if score $sptype ui_temp matches 351 run scoreboard players set $sptime ui_temp 20
@@ -70,6 +70,7 @@ execute if score $sptype ui_temp matches 452 run scoreboard players set $sptime 
 execute if score $sptype ui_temp matches 453 run scoreboard players set $sptime ui_temp 203
 execute if score $sptype ui_temp matches 454 run scoreboard players set $sptime ui_temp 160
 execute if score $sptype ui_temp matches 455 run scoreboard players set $sptime ui_temp 160
+execute if score $sptype ui_temp matches 456 run scoreboard players set $sptime ui_temp 210
 
 execute if score $sptype ui_temp matches 151 run scoreboard players set $spct ui_temp 10
 execute if score $sptype ui_temp matches 152 run scoreboard players set $spct ui_temp 10
@@ -77,7 +78,7 @@ execute if score $sptype ui_temp matches 251 run scoreboard players set $spct ui
 execute if score $sptype ui_temp matches 252 run scoreboard players set $spct ui_temp 6
 execute if score $sptype ui_temp matches 253 run scoreboard players set $spct ui_temp 3
 execute if score $sptype ui_temp matches 254 run scoreboard players set $spct ui_temp 0
-execute if score $sptype ui_temp matches 255 run scoreboard players set $spct ui_temp 3
+execute if score $sptype ui_temp matches 255 run scoreboard players set $spct ui_temp 0
 execute if score $sptype ui_temp matches 256 run scoreboard players set $spct ui_temp 10
 execute if score $sptype ui_temp matches 257 run scoreboard players set $spct ui_temp 0
 execute if score $sptype ui_temp matches 351 run scoreboard players set $spct ui_temp 10
@@ -86,6 +87,7 @@ execute if score $sptype ui_temp matches 452 run scoreboard players set $spct ui
 execute if score $sptype ui_temp matches 453 run scoreboard players set $spct ui_temp 3
 execute if score $sptype ui_temp matches 454 run scoreboard players set $spct ui_temp 10
 execute if score $sptype ui_temp matches 455 run scoreboard players set $spct ui_temp 20
+execute if score $sptype ui_temp matches 456 run scoreboard players set $spct ui_temp 10
 
 execute if score $sptype ui_temp matches 101.. run scoreboard players set $spneed ui_temp 300
 
@@ -104,6 +106,7 @@ execute if score $sptype ui_temp matches 452 run data modify storage ui:temp tem
 execute if score $sptype ui_temp matches 453 run data modify storage ui:temp temp.Name set value " - SP:トライアングル"
 execute if score $sptype ui_temp matches 454 run data modify storage ui:temp temp.Name set value " - SP:ハイドロポンプ"
 execute if score $sptype ui_temp matches 455 run data modify storage ui:temp temp.Name set value " - SP:ジェットパック"
+execute if score $sptype ui_temp matches 456 run data modify storage ui:temp temp.Name set value " - SP:バウンシーボム"
 execute if score $sptype ui_temp matches 1.. run item modify entity @s weapon.mainhand ui:gun/value/lore
 
 # 書き込み開始
@@ -130,6 +133,7 @@ execute if score $sptype ui_temp matches 452 run data modify storage ui:temp tem
 execute if score $sptype ui_temp matches 453 run data modify storage ui:temp temp.gun merge value {SPBurstType:2,SPBurst:4,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 454 run data modify storage ui:temp temp.gun merge value {SPBurstType:2,SPBurst:10,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 455 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
+execute if score $sptype ui_temp matches 456 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
 
 data modify storage ui:temp temp merge value {enableQ:1,enableF:1}
 
@@ -150,8 +154,9 @@ data modify storage ui:gun temp set value {}
 execute if score $sptype ui_temp matches 451 run data modify storage ui:gun temp set value {Name:'{"text":"スーパーショット","color":"gold"}',TimeUse:0,ShotType:1,ShotCT:9,BurstCT:18,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:35,SpeedPlus:0,RangeType:3,Range:50,FlyParticle:7,EndParticle:2,Damage:300,MultiShot:1,ShotFootStep:2,Sound:1}
 execute if score $sptype ui_temp matches 452 run data modify storage ui:gun temp set value {Name:'{"text":"マルチミサイル","color":"gold"}',TimeUse:14,ShotType:1,ShotCT:1,BurstCT:5,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:0,RangeType:1,Range:10,FlyParticle:102,EndParticle:102,Damage:0,MultiShot:1,ShotFootStep:1,Sound:1}
 execute if score $sptype ui_temp matches 453 run data modify storage ui:gun temp set value {Name:'{"text":"トライアングル","color":"gold"}',TimeUse:1,ShotType:1,ShotCT:1,BurstCT:4,Spread:1200,AirSpread:400,SpreadType:2,AirSpreadType:1,Speed:15,SpeedPlus:10,RangeType:3,Range:60,FlyParticle:6,EndParticle:2,Damage:55,MultiShot:3,ShotFootStep:3,Sound:1}
-execute if score $sptype ui_temp matches 454 run data modify storage ui:gun temp set value {Name:'{"text":"ハイドロポンプ","color":"gold"}',TimeUse:0,ShotType:1,ShotCT:0,BurstCT:15,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:900,SpeedPlus:0,RangeType:1,Range:150,FlyParticle:1,EndParticle:1,Damage:15,MultiShot:1,ShotFootStep:1,Sound:3}
+execute if score $sptype ui_temp matches 454 run data modify storage ui:gun temp set value {Name:'{"text":"ハイドロポンプ","color":"gold"}',TimeUse:0,ShotType:1,ShotCT:0,BurstCT:15,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:900,SpeedPlus:0,RangeType:1,Range:150,FlyParticle:101,EndParticle:1,Damage:15,MultiShot:1,ShotFootStep:1,Sound:3}
 execute if score $sptype ui_temp matches 455 run data modify storage ui:gun temp set value {Name:'{"text":"ジェットパック","color":"gold"}',TimeUse:0,ShotType:1,ShotCT:7,BurstCT:14,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:40,SpeedPlus:0,RangeType:1,Range:80,FlyParticle:4,EndParticle:4,Damage:200,MultiShot:1,ShotFootStep:1,Sound:1}
+execute if score $sptype ui_temp matches 456 run data modify storage ui:gun temp set value {Name:'{"text":"バウンシーボム","color":"gold"}',TimeUse:60,ShotType:1,ShotCT:8,BurstCT:16,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:0,RangeType:2,Range:80,FlyParticle:104,EndParticle:4,Damage:200,MultiShot:1,ShotFootStep:1,Sound:1}
 
 # sp詳細書き込み
 data modify storage ui:temp temp.sp set from storage ui:gun temp

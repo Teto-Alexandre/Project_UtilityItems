@@ -7,6 +7,6 @@ playsound minecraft:block.grindstone.use player @a ~ ~ ~ 3 0.6
 
 execute at @s run tag @e[tag=tmw_102_2,sort=nearest,limit=1] remove tmw_102_2
 
-scoreboard players set @s ui_ct 1
+scoreboard players set @s ui_ct 20
 
 #=======================================================================================

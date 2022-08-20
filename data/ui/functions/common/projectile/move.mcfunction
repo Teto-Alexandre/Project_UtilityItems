@@ -20,6 +20,7 @@
     execute if score @s ui_bpart matches 2 run particle block ice ~ ~ ~ 0 0 0 0 1 force
     execute if score @s ui_bpart matches 3 run particle dust 1 1 0.5 1 ~ ~ ~ 0 0 0 0.02 1 force
     execute if score @s ui_bpart matches 3 run particle block gold_block ~ ~ ~ 0 0 0 0 1 force
+    execute if score @s ui_bpart matches 4 run particle crit ~ ~ ~ 0 0 0 0.1 1 force
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:common/projectile/block_col

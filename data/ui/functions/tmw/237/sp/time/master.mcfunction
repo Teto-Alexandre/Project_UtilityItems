@@ -12,6 +12,9 @@
 # ミサイル
     execute if score $sptype ui_temp matches 452 run function ui:tmw/237/sp/time/452
 
+# ハイドロポンプ
+    execute if score $sptype ui_temp matches 454 run function ui:tmw/237/sp/time/454
+
 # ジェットパック
     execute if score $sptype ui_temp matches 455 run function ui:tmw/237/sp/time/455
 

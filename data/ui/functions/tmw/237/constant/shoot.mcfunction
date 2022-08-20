@@ -1,5 +1,8 @@
 # 射撃形態になる
 
+# タグチェック
+    execute if entity @s[tag=tmw_237_king] run function ui:tmw/237/amp/king
+
 # エフェクトクリア
     effect clear @s speed
     effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:3b}]}] jump_boost
@@ -33,4 +36,3 @@
 # ストレージのモデルデータを読み込み
     execute store result storage ui:gun temp.value int 1 run scoreboard players get $model ui_temp
     item modify entity @s weapon.mainhand ui:gun/value/model
-    item modify entity @s weapon.offhand ui:gun/value/model_zero

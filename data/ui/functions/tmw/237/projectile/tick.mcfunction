@@ -6,7 +6,7 @@
 
 # キルログを宣言
 scoreboard players set $deathmessage ui_temp 0
-execute if entity @s[tag=ui_refd] run scoreboard players set $deathmessage ui_temp 2
+execute if entity @s[tag=ui_refd,tag=!tmw_237_noref] run scoreboard players set $deathmessage ui_temp 2
 execute if entity @s[tag=tmw_237_deathmessage_14] run scoreboard players set $deathmessage ui_temp 1
 
 #射程うんぬん

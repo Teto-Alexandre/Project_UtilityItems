@@ -3,6 +3,7 @@
 # tickごと
     scoreboard players add @s ui_bcp 5
     execute if score @s ui_bpart matches 7 run scoreboard players remove @s ui_bcp 2
+    execute if score @s ui_bpart matches 104 run scoreboard players remove @s ui_bcp 3
     scoreboard players operation $temp ui_bcp = @s ui_bcp
 
 # 座標取得

@@ -117,6 +117,12 @@
         execute if entity @a[scores={ui_tmw_id=242}] run function ui:tmw/242/lim
     #エンダーコア
         execute if entity @a[scores={ui_tmw_id=243}] run function ui:tmw/243/lim
+    #センサーボウ
+        execute if entity @a[scores={ui_tmw_id=244}] run function ui:tmw/244/lim
+    #ドラゴンウォッチャー
+        execute if entity @a[scores={ui_tmw_id=245}] run function ui:tmw/245/lim
+    #ダンジョンメーカー
+        #246
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

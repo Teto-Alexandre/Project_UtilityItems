@@ -35,7 +35,7 @@
     execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 1.4 0
     execute if score $temp ui_temp matches 2 run playsound entity.guardian.attack player @a ~ ~ ~ 1 1.4 0
     execute if score $temp ui_temp matches 3 run playsound minecraft:entity.bat.loop player @a ~ ~ ~ 1 1.6 0
-    execute if score $temp ui_temp matches 3 run effect give @s slowness 1 4 true
+    execute if score $temp ui_temp matches 3 run effect give @s slowness 1 2 true
 
 # クールタイム解除時刻.mod
     execute store result score $cooltime ui_temp run time query gametime

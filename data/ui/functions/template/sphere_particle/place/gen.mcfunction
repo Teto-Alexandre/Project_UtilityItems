@@ -4,11 +4,11 @@
 #
 # @public
 
-summon marker ~ ~ ~ {Tags:["ui_temp_particle","ui_temp_particle1","ui_temp_particle2"]}
+summon marker ~ ~ ~ {Tags:["ui_temp_particle","ui_temp_particle1","ui_temp_particle2","ui_temp_particle3"]}
 
 scoreboard players operation $temp2 ui_temp = $temp ui_temp
-execute positioned ~1 ~ ~ run function ui:template/sphere_particle/place/x
-
-execute as @e[tag=ui_temp_particle1] at @s run function ui:template/sphere_particle/place/y.hub
-
-execute as @e[tag=ui_temp_particle2] at @s run function ui:template/sphere_particle/place/z.hub
+function ui:template/sphere_particle/place/x.hub
+scoreboard players operation $temp2 ui_temp = $temp ui_temp
+function ui:template/sphere_particle/place/y.hub
+scoreboard players operation $temp2 ui_temp = $temp ui_temp
+function ui:template/sphere_particle/place/z.hub

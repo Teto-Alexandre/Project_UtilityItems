@@ -1,0 +1,1 @@
+execute as @e[tag=ui_d] run scoreboard players operation @s ui_d_sh = @s ui_d_shm

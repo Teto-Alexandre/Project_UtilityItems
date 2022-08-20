@@ -25,7 +25,7 @@
     scoreboard players operation $y1 ui_temp += $y3 ui_temp
     scoreboard players operation $z1 ui_temp += $z3 ui_temp
     #tellraw @a [{"text":"[Snowball]","color":"aqua"},{"text":": x1","color":"gray"},{"score":{"name":"$x1","objective":"temp"}},{"text":", y1","color":"gray"},{"score":{"name":"$y1","objective":"temp"}},{"text":", z1","color":"gray"},{"score":{"name":"$z1","objective":"temp"}}]
-    scoreboard players set $temp ui_temp 200
+    scoreboard players set $temp ui_temp 150
     scoreboard players set $temp2 ui_temp 0
     execute as @e[tag=ui_temp_snow2,limit=1] at @s run function ui:template/projectile_line/line.a
     kill @e[tag=ui_temp_snow]

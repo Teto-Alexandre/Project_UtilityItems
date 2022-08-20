@@ -1,4 +1,6 @@
 # ガチマッチ勝利検知用 : ui_17_aqua,ui_17_pink
+# 我こそがキングである : tmw_237_king
+# 攻撃を無効化する能力 : tmw_237_sp_survive
 
 # 装備更新変数をリセット
 scoreboard players set $changed ui_temp 0
@@ -89,6 +91,12 @@ execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 t
 execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
 execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
 execute if score $sptime ui_temp matches 0 if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/sub/time/master
+
+# 緊急自爆スイッチ
+execute as @s[tag=tmw_drop_s] unless entity @s[x_rotation=90] run tellraw @p ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"緊急自爆スイッチの使用方法：","color":"gray"}]
+execute as @s[tag=tmw_drop_s] unless entity @s[x_rotation=90] run tellraw @p ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"インクMAX状態で真下を向いてSneak+Q","color":"gray"}]
+execute as @s[tag=tmw_drop_s] if entity @s[x_rotation=90] if score $ink ui_temp = $ink.max ui_temp run tellraw @a ["",{"text":"system","color":"white"},{"text":"> ","color":"red"},{"selector":"@s"},{"text":"が緊急自爆スイッチを実行しました","color":"gray"}]
+execute as @s[tag=tmw_drop_s] if entity @s[x_rotation=90] if score $ink ui_temp = $ink.max ui_temp run kill @s
 
 # スペシャルウェポン発動
 scoreboard players operation @s ui_paint < $spneed ui_temp

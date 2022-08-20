@@ -1,5 +1,8 @@
 #これは初回起動時に実行されるコマンドです
 
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 44 ","color":"aqua"},{"text":"です","color":"gray"}]
+
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
     scoreboard objectives add ui_calc2 dummy {"text":"UtilityItems_Calculation2","color":"dark_blue"}
@@ -68,6 +71,10 @@
     scoreboard objectives add ui_move_d minecraft.custom:minecraft.sprint_one_cm {"text":"UtilityItems_MoveDash","color":"dark_blue"}
     scoreboard objectives add ui_kills minecraft.custom:player_kills {"text":"UtilityItems_Kills","color":"dark_blue"}
     scoreboard objectives add ui_deaths deathCount {"text":"UtilityItems_Deaths","color":"dark_blue"}
+
+## トリガー
+    scoreboard objectives add ui_trg trigger {"text":"UtilityItems_Trigger","color":"gold"}
+    scoreboard objectives add ui_trg2 trigger {"text":"UtilityItems_Trigger2","color":"gold"}
     
 ## 魔導障壁耐久値
     scoreboard objectives add ui_dr minecraft.custom:minecraft.damage_resisted {"text":"UtilityItems_DamageResisted","color":"dark_blue"}
@@ -224,6 +231,36 @@
     #復活までの時間
         scoreboard objectives add ui_rst dummy {"text":"UtilityItems_RespawnTime","color":"dark_blue"}
 
+## ダンジョンメーカー
+    #チェストの表示
+    scoreboard objectives add ui_cm dummy {"text":"UtilityItems_ChestMonitor","color":"gold"}
+    #資源
+    scoreboard objectives add ui_mana dummy {"text":"UtilityItems_mana","color":"gold"}
+    scoreboard objectives add ui_mana_gen dummy {"text":"UtilityItems_mana_Generate","color":"gold"}
+    scoreboard objectives add ui_stone dummy {"text":"UtilityItems_stone","color":"gold"}
+    scoreboard objectives add ui_stone_gen dummy {"text":"UtilityItems_stone_Generate","color":"gold"}
+    scoreboard objectives add ui_wood dummy {"text":"UtilityItems_wood","color":"gold"}
+    scoreboard objectives add ui_wood_gen dummy {"text":"UtilityItems_wood_Generate","color":"gold"}
+    #建築コスト
+    scoreboard objectives add ui_cost_block dummy {"text":"UtilityItems_Cost_block","color":"gold"}
+    scoreboard objectives add ui_cost_data dummy {"text":"UtilityItems_Cost_data","color":"gold"}
+    scoreboard objectives add ui_cost_mana dummy {"text":"UtilityItems_Cost_mana","color":"gold"}
+    scoreboard objectives add ui_cost_stone dummy {"text":"UtilityItems_Cost_stone","color":"gold"}
+    scoreboard objectives add ui_cost_wood dummy {"text":"UtilityItems_Cost_wood","color":"gold"}
+    scoreboard objectives add ui_cost_core dummy {"text":"UtilityItems_Cost_Core","color":"gold"}
+    scoreboard objectives add ui_cost_stair dummy {"text":"UtilityItems_Cost_Stair","color":"gold"}
+    scoreboard objectives add ui_cost_shield1 dummy {"text":"UtilityItems_Cost_Shield1","color":"gold"}
+    #管理関数
+    scoreboard objectives add ui_path dummy {"text":"UtilityItems_Path","color":"gold"}
+    scoreboard objectives add ui_core dummy {"text":"UtilityItems_Core","color":"gold"}
+    scoreboard objectives add ui_death_dt dummy {"text":"UtilityItems_Death_DelayTime","color":"gold"}
+    #ダメージ系
+    scoreboard objectives add ui_d_hpm dummy {"text":"UtilityItems_Dungeon_HPMax","color":"gold"}
+    scoreboard objectives add ui_d_hp dummy {"text":"UtilityItems_Dungeon_HP","color":"gold"}
+    scoreboard objectives add ui_d_shm dummy {"text":"UtilityItems_Dungeon_ShieldMax","color":"gold"}
+    scoreboard objectives add ui_d_sh dummy {"text":"UtilityItems_Dungeon_Shield","color":"gold"}
+    scoreboard objectives add ui_d_d dummy {"text":"UtilityItems_Dungeon_Damage","color":"gold"}
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
@@ -242,7 +279,13 @@
     scoreboard players set #10 ui_num 10
     scoreboard players set #11 ui_num 11
     scoreboard players set #12 ui_num 12
+    scoreboard players set #13 ui_num 13
+    scoreboard players set #14 ui_num 14
     scoreboard players set #15 ui_num 15
+    scoreboard players set #16 ui_num 16
+    scoreboard players set #17 ui_num 17
+    scoreboard players set #18 ui_num 18
+    scoreboard players set #19 ui_num 19
     scoreboard players set #20 ui_num 20
     scoreboard players set #24 ui_num 24
     scoreboard players set #25 ui_num 25
@@ -255,13 +298,16 @@
     scoreboard players set #100 ui_num 100
     scoreboard players set #200 ui_num 200
     scoreboard players set #250 ui_num 250
+    scoreboard players set #300 ui_num 300
     scoreboard players set #325 ui_num 325
     scoreboard players set #360 ui_num 360
     scoreboard players set #392 ui_num 392
     scoreboard players set #490 ui_num 490
     scoreboard players set #500 ui_num 500
     scoreboard players set #1000 ui_num 1000
+    scoreboard players set #2000 ui_num 2000
     scoreboard players set #2220 ui_num 2220
+    scoreboard players set #3000 ui_num 3000
     scoreboard players set #3600 ui_num 3600
     scoreboard players set #10000 ui_num 10000
     scoreboard players set #20000 ui_num 20000
@@ -269,7 +315,9 @@
     scoreboard players set #32767 ui_num 32767
     scoreboard players set #65536 ui_num 65536
     scoreboard players set #100000 ui_num 100000
+    scoreboard players set #1000000 ui_num 1000000
     scoreboard players set #1800000 ui_num 1800000
+    scoreboard players set #10000000 ui_num 10000000
     
     scoreboard players set $mod ui_calc1 1000
     scoreboard players set $max ui_i_resitem 64

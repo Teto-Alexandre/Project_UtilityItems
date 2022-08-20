@@ -1,5 +1,8 @@
 #初回
 
+tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
+tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 2 ","color":"aqua"},{"text":"です","color":"gray"}]
+
 scoreboard objectives add tds_hps dummy {"text":"TetoDamageSystem_HealthPointSet","color":"gold","italic":true}
 scoreboard objectives add tds_tick dummy {"text":"TetoDamageSystem_Tick","color":"gold","italic":true}
 

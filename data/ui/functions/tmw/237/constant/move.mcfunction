@@ -18,7 +18,6 @@
 # ストレージにモデルデータを隔離
     execute store result score $model ui_temp run data get entity @s SelectedItem.tag.CustomModelData
     item modify entity @s weapon.mainhand ui:gun/value/model_air
-    item modify entity @s weapon.offhand ui:gun/value/model_air
 
 # エフェクト
     scoreboard players operation $temp ui_temp = @s ui_move_s

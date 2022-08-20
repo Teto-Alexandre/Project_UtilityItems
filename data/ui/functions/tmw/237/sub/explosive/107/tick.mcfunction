@@ -1,4 +1,4 @@
-# トルネードもどき
+# ボルテックス
 
 #>
 # ショートカット用
@@ -15,6 +15,11 @@
 
 # 同idにタグ付与
     execute as @e if score @s ui_obj_id = $obj_id ui_temp run tag @s add ui_temp_obj
+
+# 設置数上限デストロイ
+    scoreboard players set $count ui_temp 0
+    execute as @e[tag=tmw_237_sub] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
+    execute if score $count ui_temp matches 2.. run function ui:tmw/237/sub/explosive/mult.ex
 
 # 出現からの時間に応じて同じidのビットを追加
     #外側

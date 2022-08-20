@@ -27,9 +27,5 @@ execute if score $bullettime ui_world matches 1 as @e[tag=ui_timestop] run data 
 execute if score $bullettime ui_world matches 1 as @e[tag=ui_timestop] run tag @s remove ui_timestop
 execute if score $bullettime ui_world matches 1.. run scoreboard players remove $bullettime ui_world 1
 
-#クールタイム
-scoreboard players remove @a[scores={ui_ct=1..}] ui_ct 1
-scoreboard players reset @a[scores={ui_ct=..0}] ui_ct
-
 #
 #say @a

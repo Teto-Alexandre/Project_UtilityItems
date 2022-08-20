@@ -4,6 +4,12 @@ give @p minecraft:command_block{BlockEntityTag:{Command:"scoreboard players set 
 
 give @p minecraft:sheep_spawn_egg{tmw:{egg:17},display:{Name:'{"text":"ガチアシバ","italic":false,"color":"aqua"}',Lore:['[{"text":"レーンに沿って移動する足場を展開する","color":"yellow","italic":false}]','[{"text":"終端に到達すると自動的に勝利","color":"yellow","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_17"]}}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:243,core:{point:3,pointused:0,skills:[]}},display:{Name:'[{"text":"カラークラッシュ","color":"white","italic":false},{"text":"[エンダーコア]","color":"#00cc99","italic":false}]',Lore:['{"text":"エンダーチェストの上で右クリック","color":"gold","italic":false}','{"text":"作動時に内容物が解放されます","color":"red","italic":false}']},HideFlags:4}
+
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ラレユブレイバー",SubType:351,SPType:101,BaseType:1,BurstType:1,Burst:1,BurstMax:-1,MainInkUse:220,now:{Model:110801}},main:{ShotType:1,ShotCT:15,BurstCT:30,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:50,SpeedPlus:0,RangeType:3,Range:120,FlyParticle:21,EndParticle:24,Damage:250,MultiShot:1,ShotFootStep:0,Sound:1}},display:{Lore:['[{"text":"超高威力の爆発弾を発射する","color":"gray","italic":false}]']}}
+
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"量産型スーパーショット",SubType:151,SPType:102,BaseType:1,BurstType:2,Burst:4,BurstMax:-1,MainInkUse:150,now:{Model:110801}},main:{ShotType:1,ShotCT:2,BurstCT:20,Spread:500,AirSpread:500,SpreadType:1,AirSpreadType:1,Speed:35,SpeedPlus:0,RangeType:3,Range:50,FlyParticle:7,EndParticle:2,Damage:300,MultiShot:1,ShotFootStep:2,Sound:1}},display:{Lore:['[{"text":"超高威力の爆発弾を発射する","color":"gray","italic":false}]']}}
+
 #give @p minecraft:carrot_on_a_stick{tmw:{id:238,enableQ:1,enableF:1,gun:{}},display:{Name:'{"text":"カラクラ:エリア管理ツール","italic":false,"color":"aqua"}',Lore:['[{"text":"いろいろできるよ","color":"gray","italic":false}]']},HideFlags:4,Unbreakable:1b}
 
 # ベンチマーク

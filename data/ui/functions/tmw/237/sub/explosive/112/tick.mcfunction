@@ -3,7 +3,7 @@
 # 常時実行
     execute if score @s ui_is matches 10 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_is matches 15 run playsound entity.evoker.prepare_attack player @a ~ ~ ~ 1 1.4 0
-    execute if score @s ui_is matches 60.. run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 70.. run tag @s add ui_237_sub_explode
     #設置数上限デストロイ
     scoreboard players set $count ui_temp 0
     execute as @e[tag=tmw_237_sub] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1

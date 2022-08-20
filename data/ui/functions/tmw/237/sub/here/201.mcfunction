@@ -14,5 +14,7 @@
     execute positioned as @e[tag=ui_temp_marker,limit=1] run teleport @s ~ ~ ~
     kill @e[tag=ui_temp_marker]
 
+    effect give @s resistance 5 3
+
     execute at @s run playsound entity.chicken.egg player @a ~ ~ ~ 2 0.8 0
     execute at @s run particle totem_of_undying ~ ~1 ~ 0.3 0.6 0.3 0.2 15 normal

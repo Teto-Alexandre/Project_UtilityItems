@@ -252,6 +252,6 @@ execute positioned ^-0.345 ^-1.370 ^6.857 facing entity @s feet positioned as @s
 execute positioned ^-0.175 ^-0.699 ^6.963 facing entity @s feet positioned as @s run particle end_rod ~ ~ ~ ^ ^ ^10000 0.00007 0 force @a
     particle end_rod ~ ~ ~ 0 0 0 0.3 30 force @a
     playsound block.beacon.power_select player @a ~ ~ ~ 1.5 1.2 0
-    execute as @e[type=!#ui:notmob,distance=..7] unless score @s ui_team = $temp ui_temp run effect give @s glowing 3 0 false
-    execute as @e[type=!#ui:notmob,distance=..7] unless score @s ui_team = $temp ui_temp run effect give @s slowness 3 0 false
+    execute as @e[type=!#ui:notmob,distance=..8] unless score @s ui_team = $temp ui_temp run effect give @s glowing 3 0 false
+    execute as @e[type=!#ui:notmob,distance=..8] unless score @s ui_team = $temp ui_temp run effect give @s slowness 3 0 false
     kill @s

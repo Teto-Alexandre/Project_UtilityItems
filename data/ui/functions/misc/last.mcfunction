@@ -29,6 +29,10 @@
     ## TMWのidを保存
         execute as @a run scoreboard players operation @s ui_tmw_id_old = @s ui_tmw_id
         execute as @a run scoreboard players operation @s ui_tmw_id_old2 = @s ui_tmw_id2
+        
+    ## クールタイム
+        scoreboard players remove @a[scores={ui_ct=1..}] ui_ct 1
+        scoreboard players reset @a[scores={ui_ct=..0}] ui_ct
 
     ## スニークチャージ用カウントアップ
         scoreboard players add @a[scores={ui_st=1..}] ui_st2 1

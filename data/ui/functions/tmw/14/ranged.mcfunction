@@ -8,6 +8,6 @@ execute at @s run playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 1
 execute at @s run tag @e[tag=tmw_14_2,sort=nearest,limit=1] remove tmw_14_2
 
 #クールタイム（MPの概念がないのでとりあえず仮追加）
-scoreboard players set @s ui_ct 10
+scoreboard players set @s ui_ct 300
 
 #=======================================================================================================
