@@ -2,10 +2,10 @@
 
 #ベースの当たり判定を設定
 execute at @s unless entity @e[tag=ui_hitbox,distance=..3] run scoreboard players set @s ui_d_d 1000000
-execute at @s[tag=ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["db","ui_hitbox2","ui_h_c"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
+execute at @s[tag=ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["ui","ui_hitbox2","ui_h_c"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
 execute at @s[tag=ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] run scoreboard players operation @e[tag=ui_h_c,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s[tag=ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] run scoreboard players set @e[tag=ui_h_c,sort=nearest,limit=1] ui_idc 0
-execute at @s[tag=!ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["db","ui_hitbox2","ui_h_n"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
+execute at @s[tag=!ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["ui","ui_hitbox2","ui_h_n"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
 execute at @s[tag=!ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] run scoreboard players operation @e[tag=ui_h_n,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s[tag=!ui_d_core] unless entity @e[tag=ui_hitbox,distance=..3] run scoreboard players set @e[tag=ui_h_n,sort=nearest,limit=1] ui_idc 0
 tag @e[tag=ui_hitbox2] add ui_hitbox

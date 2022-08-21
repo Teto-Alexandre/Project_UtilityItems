@@ -12,10 +12,10 @@ execute at @s[tag=ui_d_zp] run tellraw @a[scores={ui_idc=0}] [{"text":"| 増設�
 execute at @s[tag=ui_d_zm] run tellraw @a[scores={ui_idc=0}] [{"text":"| 増設方位: North |","color":"gray"}]
 execute at @s run tellraw @a[scores={ui_idc=0}] [{"text":"--------------","color":"gray"}]
 
-execute if entity @s[tag=ui_d_pz] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~9 ~ ~ {Tags:["db","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
-execute if entity @s[tag=ui_d_mz] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~-9 ~ ~ {Tags:["db","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
-execute if entity @s[tag=ui_d_zp] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~9 {Tags:["db","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
-execute if entity @s[tag=ui_d_zm] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~-9 {Tags:["db","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute if entity @s[tag=ui_d_pz] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~9 ~ ~ {Tags:["ui","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute if entity @s[tag=ui_d_mz] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~-9 ~ ~ {Tags:["ui","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute if entity @s[tag=ui_d_zp] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~9 {Tags:["ui","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute if entity @s[tag=ui_d_zm] run execute at @e[tag=ui_sel,sort=nearest,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~-9 {Tags:["ui","ui_sel_obj2"],Marker:1b,Invisible:1b,NoGravity:1b}
 execute at @s run scoreboard players operation @e[tag=ui_sel_obj2,sort=nearest,limit=4] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_sel_obj2,sort=nearest,limit=4] ui_idc 0
 

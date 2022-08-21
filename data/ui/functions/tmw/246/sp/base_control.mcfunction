@@ -2,8 +2,8 @@
 
 execute as @e[tag=ui_d,scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
 scoreboard players operation @e[tag=ui_d,scores={ui_id=1..}] ui_idc -= @s ui_id
-execute as @e[tag=db,scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
-scoreboard players operation @e[tag=db,scores={ui_id=1..}] ui_idc -= @s ui_id
+execute as @e[tag=ui,scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
+scoreboard players operation @e[tag=ui,scores={ui_id=1..}] ui_idc -= @s ui_id
 execute as @a[scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
 scoreboard players operation @a[scores={ui_id=1..}] ui_idc -= @s ui_id
 

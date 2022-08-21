@@ -16,7 +16,7 @@ execute as @s at @s if entity @a[scores={ui_idc=0,ui_trg=9..10}] positioned ~ ~1
 execute as @s at @s if entity @a[scores={ui_idc=0,ui_trg=9..10}] positioned ~ ~18 ~-9 if entity @e[tag=ui_d,tag=!ui_d_nosel,distance=..1] at @s run fill ~-1 ~16 ~-5 ~1 ~18 ~-4 air destroy
 
 execute at @s run tag @s remove ui_sel_obj2
-execute at @s run tag @s remove db
+execute at @s run tag @s remove ui
 execute at @s run tag @s add ui_d
 
 execute at @s if entity @a[scores={ui_idc=0,ui_trg=1}] run tag @s add ui_d_block
@@ -63,7 +63,7 @@ execute as @e[tag=ui_base,scores={ui_idc=0}] if entity @a[scores={ui_idc=0,ui_tr
 execute as @e[tag=ui_base,scores={ui_idc=0}] if entity @a[scores={ui_idc=0,ui_trg=6}] run scoreboard players add @s ui_wood_gen 3
 
 #当たり判定を設定
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["db","ui_hitbox","ui_h_n"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:iron_golem ~ ~-1.5 ~ {Tags:["ui","ui_hitbox","ui_h_n"],Silent:1b,NoAI:1b,NoGravity:1b,ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000.0f,DeathLootTable:"ui:empty"}
 execute at @s run scoreboard players operation @e[tag=ui_h_n,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_h_n,sort=nearest,limit=1] ui_idc 0
 scoreboard players set @s ui_d_hpm 100

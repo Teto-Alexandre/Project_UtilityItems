@@ -3,8 +3,8 @@
 execute at @s run fill ~-4 ~-4 ~-4 ~4 ~4 ~4 air hollow
 execute at @s run particle flash ~ ~ ~ 0 0 0 0 1 force
 
-execute as @e[tag=db,scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
-scoreboard players operation @e[tag=db,scores={ui_id=1..}] ui_idc -= @s ui_id
+execute as @e[tag=ui,scores={ui_id=1..}] run scoreboard players operation @s ui_idc = @s ui_id
+scoreboard players operation @e[tag=ui,scores={ui_id=1..}] ui_idc -= @s ui_id
 
 execute at @s positioned ~9 ~ ~ as @e[tag=ui_d,distance=..1] run tag @s add ui_d_dcheck
 execute at @s positioned ~-9 ~ ~ as @e[tag=ui_d,distance=..1] run tag @s add ui_d_dcheck

@@ -4,16 +4,16 @@ execute as @e[tag=!ui_seld,scores={ui_idc=0}] run tag @s remove ui_sel
 execute as @e[tag=ui_sel_obj,scores={ui_idc=0}] run kill @s
 execute as @e[tag=ui_sel_obj2,scores={ui_idc=0}] run kill @s
 
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~9 ~ ~ unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~2 ~ ~ {Tags:["db","ui_d_pz","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~9 ~ ~ unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~2 ~ ~ {Tags:["ui","ui_d_pz","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
 execute at @s run scoreboard players operation @e[tag=ui_d_pz,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_d_pz,sort=nearest,limit=1] ui_idc 0
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~-9 ~ ~ unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~-2 ~ ~ {Tags:["db","ui_d_mz","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~-9 ~ ~ unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~-2 ~ ~ {Tags:["ui","ui_d_mz","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
 execute at @s run scoreboard players operation @e[tag=ui_d_mz,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_d_mz,sort=nearest,limit=1] ui_idc 0
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~ ~9 unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~2 {Tags:["db","ui_d_zp","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~ ~9 unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~2 {Tags:["ui","ui_d_zp","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
 execute at @s run scoreboard players operation @e[tag=ui_d_zp,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_d_zp,sort=nearest,limit=1] ui_idc 0
-execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~ ~-9 unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~-2 {Tags:["db","ui_d_zm","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
+execute at @s align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~ ~-9 unless entity @e[tag=ui_d,distance=..1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~-2 {Tags:["ui","ui_d_zm","ui_sel_obj"],Marker:1b,Invisible:1b,NoGravity:1b}
 execute at @s run scoreboard players operation @e[tag=ui_d_zm,sort=nearest,limit=1] ui_id = @s ui_id
 execute at @s run scoreboard players set @e[tag=ui_d_zm,sort=nearest,limit=1] ui_idc 0
 
