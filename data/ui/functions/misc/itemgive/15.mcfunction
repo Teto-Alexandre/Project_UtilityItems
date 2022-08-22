@@ -14,5 +14,3 @@ give @p minecraft:diamond_pickaxe{tmw:{id:241},display:{Name:'{"text":"ダイヤ
 give @p minecraft:white_dye{tmw:{id:239},display:{Name:'{"text":"God bridge","color":"light_purple","italic":false}',Lore:['[{"text":"歩いた場所が橋になる","color":"gray","italic":false}]']}}
 give @p minecraft:bow{tmw:{id:244},display:{Name:'{"text":"センサーボウ","color":"light_purple","italic":false}',Lore:['[{"text":"照準を補助する機能がある","color":"gray","italic":false}]']}}
 give @p minecraft:spyglass{tmw:{id:245},display:{Name:'{"text":"ドラゴンウォッチャー","color":"white","italic":false}',Lore:['[{"text":"これでエンドラを見るのだ","color":"gray","italic":false}]']}}
-give @p minecraft:carrot_on_a_stick{tmw:{id:242,type:1},display:{Name:'[{"text":"ゆるふわミサイル","color":"green","italic":false}]',Lore:['{"text":"追尾誘導するミサイルを発射する","color":"gold","italic":false}']},HideFlags:4}
-give @p minecraft:carrot_on_a_stick{tmw:{id:242,type:2},display:{Name:'[{"text":"殲滅ゆるふわミサイル","color":"green","italic":false}]',Lore:['{"text":"追尾誘導するミサイルを発射する","color":"gold","italic":false}']},HideFlags:4}
