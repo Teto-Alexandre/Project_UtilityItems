@@ -1,5 +1,5 @@
 # ミサイル召喚
-    summon vex ~ ~ ~ {Tags:["tag","tmw_242_f"],Motion:[0.0d,0.0d,0.0d],ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}]}
+    summon vex ~ ~ ~ {Tags:["tag","tmw_242"],Motion:[0.0d,0.0d,0.0d],ActiveEffects:[{Id:14b,Duration:20000,Amplifier:1b,ShowParticles:0b}],Silent:1b}
     #召喚した本体に固有ID設定
     execute as @e[tag=tag] at @s run function ui:misc/act/make_obj_id
 
@@ -25,4 +25,4 @@
 # キャッシュクリア
     tag @e[tag=tag] remove tag
     kill @e[tag=ui_temp_anchor]
-    schedule function ui:tmw/242/ss/fragment 1t append
+    schedule function ui:tmw/242/ss/load 1t append

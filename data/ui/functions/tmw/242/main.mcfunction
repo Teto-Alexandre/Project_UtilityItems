@@ -22,7 +22,7 @@
     tag @e[tag=ui_temp_target2] remove ui_temp_target
 
 # 発射ボタンを押せば青マーカーの相手に全てのミサイルが飛ぶ
-    execute at @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. run function ui:tmw/242/summon
+    execute at @s[scores={ui_use1=1..}] unless score @s ui_ct matches 1.. run function ui:tmw/242/mult
 
 # タグ消し
     tag @s remove ui_temp_this

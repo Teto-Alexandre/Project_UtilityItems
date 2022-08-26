@@ -123,6 +123,10 @@
         execute if entity @a[scores={ui_tmw_id=245}] run function ui:tmw/245/lim
     #ダンジョンメーカー
         #246
+    #ミサイルディテクター
+        execute if entity @a[scores={ui_tmw_id=247}] run function ui:tmw/247/lim
+    #IDチェッカー
+        execute if entity @a[scores={ui_tmw_id=248}] run function ui:tmw/248/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
