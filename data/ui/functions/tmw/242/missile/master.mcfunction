@@ -1,6 +1,6 @@
 # ターゲティング - ターゲットが消滅したならその場で爆発
 scoreboard players operation $obj_id ui_temp = @s ui_gpc
-execute as @e[distance=..100] if score @s ui_obj_id = $obj_id ui_temp store success score $temp ui_temp at @s run summon minecraft:area_effect_cloud ~ ~1 ~ {Tags:["tmw_242_mis3"],Age:1}
+execute as @e[distance=..100] if score @s ui_obj_id = $obj_id ui_temp unless entity @s[gamemode=spectator] store success score $temp ui_temp at @s run summon minecraft:area_effect_cloud ~ ~1 ~ {Tags:["tmw_242_mis3"],Age:1}
 
 # 爆発
 execute unless entity @e[tag=tmw_242_mis3] run tag @s add ex

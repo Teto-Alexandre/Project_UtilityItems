@@ -10,3 +10,4 @@ function ui:tmw/242/spawn/cluster_missile
 function ui:tmw/242/spawn/cluster_missile
 function ui:tmw/242/spawn/cluster_missile
 function ui:tmw/242/spawn/cluster_missile
+effect give @a[scores={ui_tmw_id2=249},distance=..5] glowing 1 0

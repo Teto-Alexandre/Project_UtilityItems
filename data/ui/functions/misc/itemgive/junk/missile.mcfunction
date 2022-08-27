@@ -11,3 +11,4 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:242,fly:1,end:8,width:20,speed:100,h
 give @p minecraft:carrot_on_a_stick{tmw:{id:242,fly:1,end:9,width:20,speed:100,homing:10,range:70,mult:1},display:{Name:'[{"text":"マルチ殲滅ミサイル","color":"green","italic":false}]',Lore:['{"text":"標的の近くで炸裂し無数の子弾になる","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}
 
 give @p minecraft:iron_helmet{tmw:{id:247},display:{Name:'[{"text":"ミサイルシーカー","color":"green","italic":false}]',Lore:['{"text":"あなたを守る手助けになる","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}
+give @p minecraft:clock{tmw:{id:249},display:{Name:'[{"text":"競技用アメジスト変換器","color":"green","italic":false}]',Lore:['{"text":"近くのミサイル爆発に反応する","color":"gold","italic":false}','{"text":"オフハンドに装備して使用","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}

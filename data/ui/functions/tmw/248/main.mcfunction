@@ -19,7 +19,7 @@
     execute store result score $obj_id ui_temp run scoreboard players get @e[tag=ui_temp_target2,limit=1] ui_obj_id
     execute as @e[tag=!ui_temp_target2] if score @s ui_obj_id = $obj_id ui_temp run tag @s add ui_temp_target3
     scoreboard players operation $id ui_temp = @e[tag=ui_temp_target3] ui_id
-    title @s times 0 10 0
+    title @s times 0 5 0
     title @s title [{"text":"ID:"},{"score":{"name":"$id","objective":"ui_temp"}},{"text":"               "}]
 
 # 発射ボタンを押せば青マーカーの相手に全てのミサイルが飛ぶ
