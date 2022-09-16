@@ -15,6 +15,9 @@
     execute if score $sptype ui_temp matches 253 run playsound block.beacon.power_select player @a ~ ~ ~ 3 1.8 0
 
 # ヴァリアブル
+    execute if score $sptype ui_temp matches 254 run effect give @s resistance 8 0 false
+    execute if score $sptype ui_temp matches 254 run effect give @s strength 8 0 false
+    execute if score $sptype ui_temp matches 254 run effect give @s speed 8 0 false
     execute if score $sptype ui_temp matches 254 run playsound block.beacon.activate player @a ~ ~ ~ 3 1.4 0
 
 # レーダー

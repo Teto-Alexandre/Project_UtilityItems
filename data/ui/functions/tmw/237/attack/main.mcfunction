@@ -15,5 +15,5 @@
     scoreboard players operation $ink ui_temp -= $ink.add ui_temp
 
 # 変更した
-    execute if score $burst ui_temp matches ..0 run scoreboard players set $ishold ui_temp 1
+    execute if score $burst ui_temp matches ..0 unless score $bursttype ui_temp matches 7..8 run scoreboard players set $ishold ui_temp 1
     scoreboard players set $changed ui_temp 1

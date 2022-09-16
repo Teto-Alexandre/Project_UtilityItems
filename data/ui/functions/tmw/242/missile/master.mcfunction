@@ -4,16 +4,17 @@ execute as @e[distance=..100] if score @s ui_obj_id = $obj_id ui_temp unless ent
 
 # 爆発
 execute unless entity @e[tag=tmw_242_mis3] run tag @s add ex
-execute at @s if entity @e[tag=tmw_242_mis3,distance=..3] run tag @s add ex
-execute at @s[scores={ui_bt=4}] if entity @e[tag=tmw_242_mis3,distance=..4] run tag @s add ex
-execute at @s[scores={ui_bt=5}] if entity @e[tag=tmw_242_mis3,distance=..5] run tag @s add ex
-execute at @s[scores={ui_bt=6}] if entity @e[tag=tmw_242_mis3,distance=..6] run tag @s add ex
-execute at @s[scores={ui_bt=7}] if entity @e[tag=tmw_242_mis3,distance=..7] run tag @s add ex
-execute at @s[scores={ui_bt=8}] if entity @e[tag=tmw_242_mis3,distance=..8] run tag @s add ex
-execute at @s[scores={ui_bt=9}] if entity @e[tag=tmw_242_mis3,distance=..9] run tag @s add ex
-execute at @s[scores={ui_bt=10}] if entity @e[tag=tmw_242_mis3,distance=..10] run tag @s add ex
-execute at @s[scores={ui_bt=15}] if entity @e[tag=tmw_242_mis3,distance=..15] run tag @s add ex
-execute at @s[scores={ui_bt=20}] if entity @e[tag=tmw_242_mis3,distance=..20] run tag @s add ex
+    #反応距離に応じて離れた距離でも爆発するようになる
+    execute at @s if entity @e[tag=tmw_242_mis3,distance=..3] run tag @s add ex
+    execute at @s[scores={ui_bt=4}] if entity @e[tag=tmw_242_mis3,distance=..4] run tag @s add ex
+    execute at @s[scores={ui_bt=5}] if entity @e[tag=tmw_242_mis3,distance=..5] run tag @s add ex
+    execute at @s[scores={ui_bt=6}] if entity @e[tag=tmw_242_mis3,distance=..6] run tag @s add ex
+    execute at @s[scores={ui_bt=7}] if entity @e[tag=tmw_242_mis3,distance=..7] run tag @s add ex
+    execute at @s[scores={ui_bt=8}] if entity @e[tag=tmw_242_mis3,distance=..8] run tag @s add ex
+    execute at @s[scores={ui_bt=9}] if entity @e[tag=tmw_242_mis3,distance=..9] run tag @s add ex
+    execute at @s[scores={ui_bt=10}] if entity @e[tag=tmw_242_mis3,distance=..10] run tag @s add ex
+    execute at @s[scores={ui_bt=15}] if entity @e[tag=tmw_242_mis3,distance=..15] run tag @s add ex
+    execute at @s[scores={ui_bt=20}] if entity @e[tag=tmw_242_mis3,distance=..20] run tag @s add ex
 scoreboard players remove @s ui_br 1
 tag @s[scores={ui_br=..0}] add ex
 

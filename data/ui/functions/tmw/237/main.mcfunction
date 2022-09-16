@@ -9,6 +9,9 @@ scoreboard players set $changed ui_temp 0
 scoreboard players set $burst_alt ui_temp 0
 scoreboard players set $burst_alt.id ui_temp 0
 
+# チャージ変数をリセット
+scoreboard players set $ishold ui_temp 0
+
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
 data modify storage ui:gun temp.DisplayName set from entity @s SelectedItem.tag.display.Name
@@ -32,15 +35,17 @@ execute store result score $sptime ui_temp run data get storage ui:gun temp.now.
 execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
+execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 #execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
 function ui:tmw/237/basetype/basetype
 
-# サブウェポン消費インク取得
+# 非メインウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse
 execute if score $sptype ui_temp matches 253 if score $sptime ui_temp matches 1.. run scoreboard players operation $ink.sub ui_temp /= #8 ui_num
+execute store result score $ink.sp ui_temp run data get storage ui:gun temp.SPInkUse
 
 # tmw_237_readtagのタグが付いているならプレイヤーのタグを読み取る
 execute if entity @s[tag=tmw_237_readtag] run function ui:tmw/237/tag/reader
@@ -65,7 +70,8 @@ execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
 # インク回復
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
 
-# バースト数 ( 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識 )
+# バースト数
+# 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
 #tellraw @a[scores={ui_use1=1..}] [{"score":{"objective":"ui_temp","name":"$bursttype"}}]
 execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/burst
 execute if score $bursttype ui_temp matches 2 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/burst
@@ -74,6 +80,8 @@ execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.
 execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst4
 execute if score $bursttype ui_temp matches 5 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst5
 execute if score $bursttype ui_temp matches 6 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst
+execute if score $bursttype ui_temp matches 7 run function ui:tmw/237/burst/burst7
+execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/burst8
 
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
@@ -86,24 +94,28 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     #バースト+クールタイム完遂、発射できなかったなら
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 
-# サブウェポン発動
+# デバッグスイッチ
+execute as @s[tag=tmw_drop_s] run function ui:tmw/237/emergency/core
+
+# その他状態ディスプレイ
 execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 true
 execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
-execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
-execute if score $sptime ui_temp matches 0 if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/sub/time/master
-
-# 緊急自爆スイッチ
-execute as @s[tag=tmw_drop_s] unless entity @s[x_rotation=90] run tellraw @p ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"緊急自爆スイッチの使用方法：","color":"gray"}]
-execute as @s[tag=tmw_drop_s] unless entity @s[x_rotation=90] run tellraw @p ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"インクMAX状態で真下を向いてSneak+Q","color":"gray"}]
-execute as @s[tag=tmw_drop_s] if entity @s[x_rotation=90] if score $ink ui_temp = $ink.max ui_temp run tellraw @a ["",{"text":"system","color":"white"},{"text":"> ","color":"red"},{"selector":"@s"},{"text":"が緊急自爆スイッチを実行しました","color":"gray"}]
-execute as @s[tag=tmw_drop_s] if entity @s[x_rotation=90] if score $ink ui_temp = $ink.max ui_temp run kill @s
-
-# スペシャルウェポン発動
 scoreboard players operation @s ui_paint < $spneed ui_temp
-execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
 execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/ready
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/not
-execute if score $sptime ui_temp matches 1.. at @s run function ui:tmw/237/sp/time/master
+
+# サブウェポン発動
+execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
+
+# スペシャルウェポン発動
+execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
+
+# サブスペ時限式
+execute if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/master
+execute if score $sptime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/master
+
+# ディスプレイ表示
+execute if entity @s[tag=!tmw_237_notitle] unless entity @s[gamemode=spectator] run function ui:tmw/237/title/core
 
 # 逆変換
 execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed/core
@@ -112,7 +124,7 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed/core
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
 
-# 死
+# 死（液体に入ったら死ぬ）
 execute at @s[gamemode=!spectator] if block ~ ~ ~ #ui:liq if entity @e[type=player,dx=0] run function ui:common/highdamage
 
 # 一時的ストレージクリア

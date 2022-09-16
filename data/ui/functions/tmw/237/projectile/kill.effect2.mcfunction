@@ -31,6 +31,10 @@
         execute if score @s ui_hpart matches 102 run function ui:tmw/237/projectile/killeffect/102
         # ヘルハウンド
         execute if score @s ui_hpart matches 103 run function ui:tmw/237/projectile/killeffect/103
+        # トリトル
+        execute if score @s ui_hpart matches 104 run function ui:tmw/237/projectile/killeffect/104
+        # ウルショ召喚
+        execute if score @s ui_hpart matches 105 run function ui:tmw/237/projectile/killeffect/105
 
 # その他
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp

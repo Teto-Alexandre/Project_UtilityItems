@@ -2,10 +2,11 @@
 execute store result score $ct ui_temp run data get storage ui:gun temp.SPCT
 
 # スペシャルウェポン発動
-execute if score $sptype ui_temp matches 101..200 run function ui:tmw/237/sp/throw
-execute if score $sptype ui_temp matches 201..300 run function ui:tmw/237/sp/here
-execute if score $sptype ui_temp matches 301..400 at @s run function ui:tmw/237/sp/static
-execute if score $sptype ui_temp matches 401..500 at @s run function ui:tmw/237/sp/weapon
+scoreboard players operation $activator ui_temp = $sptype ui_temp
+execute if score $activator ui_temp matches 101..200 run function ui:tmw/237/activator/throw
+execute if score $activator ui_temp matches 201..300 run function ui:tmw/237/activator/here
+execute if score $activator ui_temp matches 301..400 at @s run function ui:tmw/237/activator/static
+execute if score $activator ui_temp matches 401..500 at @s run function ui:tmw/237/activator/weapon
 
 # 何発動したの？
 execute if score $sptype ui_temp matches 151 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"トルネード","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
@@ -24,6 +25,8 @@ execute if score $sptype ui_temp matches 453 run tellraw @a [{"selector":"@s"},{
 execute if score $sptype ui_temp matches 454 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ハイドロポンプ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 455 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ジェットパック","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 456 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"バウンシーボム","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
+execute if score $sptype ui_temp matches 457 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"トリプルトルネード","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
+execute if score $sptype ui_temp matches 458 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ウルトラショット","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 
 # スペシャルタイムをセット
 scoreboard players operation $sptime ui_temp = $sptime.max ui_temp
@@ -35,4 +38,6 @@ scoreboard players operation $cooltime ui_temp += $ct ui_temp
 
 # 塗りPをリセット
 scoreboard players set @s ui_paint 0
+
+#
 scoreboard players set $changed ui_temp 1

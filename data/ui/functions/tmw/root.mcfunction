@@ -129,6 +129,10 @@
         execute if entity @a[scores={ui_tmw_id=248}] run function ui:tmw/248/lim
     #競技用ミサイルカウンター
         execute if entity @a[scores={ui_tmw_id2=249}] run function ui:tmw/249/lim
+    #マップエディター
+        execute if entity @a[scores={ui_tmw_id=251}] run function ui:tmw/251/lim
+    #ズーキーパー
+        execute if entity @a[scores={ui_tmw_id=252}] run function ui:tmw/252/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

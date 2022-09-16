@@ -6,10 +6,13 @@
     execute if score $team ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"クイックボム","color":"yellow"}'
     execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"クイックボム","color":"green"}'
     scoreboard players set $damage_type ui_temp 3
+    #遠距離爆発 2.5ハート
     scoreboard players set $damage ui_temp 50
     execute at @e[distance=2..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    #近距離爆発 3.5ハート
     scoreboard players set $damage ui_temp 70
     execute at @e[distance=..2,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    #直撃 2.5ハート（+近距離の3.5）
     scoreboard players set $damage ui_temp 50
     execute at @e[dx=0,dy=0,dz=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 

@@ -8,6 +8,7 @@
 # 見た目
     execute if score @s ui_bpart matches 1 run function ui:tmw/237/particle_unit/move/1
     execute if score @s ui_bpart matches 2 run function ui:tmw/237/particle_unit/move/2
+    execute if score @s ui_bpart matches 3 run function ui:tmw/237/particle_unit/move/3
     execute if score @s ui_bpart matches 8 run function ui:tmw/237/particle_unit/move/8
 
 # 移動値が無くなるまで繰り返す

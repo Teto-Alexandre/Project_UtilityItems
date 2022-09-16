@@ -12,6 +12,7 @@
     execute at @s[scores={ui_i_recipe=12}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:copper_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1007},CustomModelData:213001,display:{Name:'{"text":"伝導合金","color":"white","italic":false}'}}}
     execute at @s[scores={ui_i_recipe=13}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:iron_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1012},CustomModelData:211005,display:{Name:'{"italic":false,"color":"light_purple","text":"蒼天銀インゴット"}',Lore:['{"text":"幾度の加工で完全になった天銀","color":"gray","italic":false}','{"text":"エーテリウムとは似て非なる物質","color":"gray","italic":false}','{"text":"素材としての利用価値が高い","color":"gray","italic":false}']}}}
     execute at @s[scores={ui_i_recipe=14}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:gold_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1013},CustomModelData:215001,display:{Name:'{"text":"金の糸","color":"white","italic":false}'}}}
+    execute at @s[scores={ui_i_recipe=15}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:iron_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1004},CustomModelData:211001,display:{Name:'{"italic":false,"color":"light_purple","text":"工業用エーテリウム塊"}',Lore:['{"text":"天銀にエーテリウムを吸収させ","color":"gray","italic":false}','{"text":"変質を促した合金","color":"gray","italic":false}','{"text":"エーテリウムの塊と互換性がある","color":"gray","italic":false}']}}}
 
 #スロットセット
     item replace block ~ ~ ~ container.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

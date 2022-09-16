@@ -1,6 +1,5 @@
 # マーカー出現
 summon marker ^ ^ ^1 {Tags:["ui_temp_template"]}
-
 # 必要データ収集
 data modify storage ui:template temp.Pos1 set from entity @s Pos
 data modify storage ui:template temp.Pos2 set from entity @e[tag=ui_temp_template,limit=1] Pos

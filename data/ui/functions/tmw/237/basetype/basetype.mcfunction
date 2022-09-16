@@ -18,3 +18,7 @@
 # 4.ウェイト&ホールド型なら入力でctと慣性リセット、最初の射撃検知、ホールド中は専用射撃を読み込み
     #次が初回射撃かどうかの記録値をnow内部に持つ
     execute if score $basetype ui_temp matches 4 run function ui:tmw/237/basetype/4
+
+# 4.チャージ&パルス型なら0入力でct増加開始とホールドON、1以上でmain射撃を読み込み
+    #チャージ時間の記録値をnow内部に持つ
+    execute if score $basetype ui_temp matches 5 run function ui:tmw/237/basetype/5

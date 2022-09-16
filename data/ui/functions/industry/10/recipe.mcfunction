@@ -9,6 +9,7 @@
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,id:"minecraft:copper_ingot"},{Slot:11b,id:"minecraft:redstone"}]} run scoreboard players set @s ui_i_recipe 12
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:1011}}},{Slot:11b,id:"minecraft:diamond"}]} run scoreboard players set @s ui_i_recipe 13
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,id:"minecraft:gold_ingot"},{Slot:11b,id:"minecraft:string"}]} run scoreboard players set @s ui_i_recipe 14
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:1011}}},{Slot:11b,tag:{tmw:{id:1003}}}]} run scoreboard players set @s ui_i_recipe 15
 
     #レシピ情報をもとに作業時間を設定
         scoreboard players set @s[scores={ui_i_recipe=1..}] ui_i_ctt 1000
