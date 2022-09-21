@@ -9,7 +9,7 @@ execute if score $sptime ui_temp matches ..-1 run scoreboard players set $sptime
 execute store result storage ui:gun temp.now.SPTime int 1 run scoreboard players get $sptime ui_temp
 execute store result storage ui:gun temp.now.IsHold int 1 run scoreboard players get $ishold ui_temp
 #execute store result storage ui:gun temp.now.Charge int 1 run scoreboard players get $charge ui_temp
-#execute store result storage ui:gun temp.now.Time int 1 run scoreboard players get $lasttime ui_temp
+execute store result storage ui:gun temp.now.Time int 1 run scoreboard players get $lasttime ui_temp
 execute store result storage ui:gun temp.now.Amp int 1 run scoreboard players get $amp ui_temp
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
 execute if score $subtime ui_temp matches 0 if score $sptime ui_temp matches 0 run function ui:tmw/237/changed/bar_ink

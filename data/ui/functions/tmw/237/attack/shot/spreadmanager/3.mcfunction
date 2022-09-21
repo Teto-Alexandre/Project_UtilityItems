@@ -6,6 +6,7 @@
 # 発射数と拡散度から始動位置を逆算、一発ごとの間隔のデータはspreadを流用（*0.1°）
     summon minecraft:marker ^ ^ ^ {Tags:["ui","ui_marker"]}
     scoreboard players operation $temp ui_temp = $multishot ui_temp
+    scoreboard players operation $spread ui_temp > #0 ui_num
     scoreboard players operation $temp ui_temp *= $spread ui_temp
     scoreboard players operation $temp ui_temp /= #3 ui_num
     execute store result score $rotation ui_temp run data get entity @s Rotation.[1] 10

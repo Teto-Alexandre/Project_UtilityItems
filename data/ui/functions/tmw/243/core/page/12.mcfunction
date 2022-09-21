@@ -10,9 +10,10 @@
     scoreboard players set $changed ui_temp 0
     data merge storage ui:common {input:{Mode:"check"}}
     function ui:common/ender
-    execute if score $slot ui_temp matches 2 run scoreboard players set $sp ui_temp 456
-    execute if score $slot ui_temp matches 3 run scoreboard players set $sp ui_temp 457
-    execute if score $slot ui_temp matches 4 run scoreboard players set $sp ui_temp 458
+    execute if score $slot ui_temp matches 2 run scoreboard players set $sp ui_temp 455
+    execute if score $slot ui_temp matches 3 run scoreboard players set $sp ui_temp 456
+    execute if score $slot ui_temp matches 4 run scoreboard players set $sp ui_temp 457
+    execute if score $slot ui_temp matches 5 run scoreboard players set $sp ui_temp 458
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -24,10 +25,10 @@
 # メニュー表示
     #
     item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-    item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:121456,display:{Name:'{"text":"[バウンシーボム]","color":"gray","italic":false}',Lore:['{"text":"地面で跳ねる爆弾を発射する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:121457,display:{Name:'{"text":"[トリプルトルネード]","color":"gray","italic":false}',Lore:['{"text":"３つの竜巻を発生させる装置を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:121458,display:{Name:'{"text":"[ウルトラショット]","color":"gray","italic":false}',Lore:['{"text":"螺旋を描く３つの弾を発射する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+    item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:121455,display:{Name:'{"text":"[ジェットパック]","color":"gray","italic":false}',Lore:['{"text":"空を飛び爆発するショットを発射する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:121456,display:{Name:'{"text":"[バウンシーボム]","color":"gray","italic":false}',Lore:['{"text":"地面で跳ねる爆弾を発射する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:121457,display:{Name:'{"text":"[トリプルトルネード]","color":"gray","italic":false}',Lore:['{"text":"３つの竜巻を発生させる装置を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:121458,display:{Name:'{"text":"[ウルトラショット]","color":"gray","italic":false}',Lore:['{"text":"螺旋を描く３つの弾を発射する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     #

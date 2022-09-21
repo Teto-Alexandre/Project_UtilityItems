@@ -11,6 +11,7 @@
     execute as @s[scores={ui_gt=8}] run function ui:tmw/242/ex/8_
     execute as @s[scores={ui_gt=9}] run function ui:tmw/242/ex/9_
     execute as @s[scores={ui_gt=10}] run function ui:tmw/242/ex/10_
+    execute as @s[scores={ui_gt=11}] run function ui:tmw/242/ex/11_
 
 # キル
     kill @s

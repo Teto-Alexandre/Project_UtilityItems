@@ -5,7 +5,8 @@ execute as @e[distance=..100] if score @s ui_obj_id = $obj_id ui_temp unless ent
 # 爆発
 execute unless entity @e[tag=tmw_242_mis3] run tag @s add ex
     #反応距離に応じて離れた距離でも爆発するようになる
-    execute at @s if entity @e[tag=tmw_242_mis3,distance=..3] run tag @s add ex
+    execute at @s if entity @e[tag=tmw_242_mis3,distance=..2] run tag @s add ex
+    execute at @s[scores={ui_bt=3}] if entity @e[tag=tmw_242_mis3,distance=..3] run tag @s add ex
     execute at @s[scores={ui_bt=4}] if entity @e[tag=tmw_242_mis3,distance=..4] run tag @s add ex
     execute at @s[scores={ui_bt=5}] if entity @e[tag=tmw_242_mis3,distance=..5] run tag @s add ex
     execute at @s[scores={ui_bt=6}] if entity @e[tag=tmw_242_mis3,distance=..6] run tag @s add ex

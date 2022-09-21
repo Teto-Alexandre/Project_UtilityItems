@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 44 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 45 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -333,6 +333,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     bossbar add ui:dream2 {"text":"幽玄の王","color":"aqua","italic":false,"bold":true}
     bossbar set ui:dream2 color blue
     bossbar set ui:dream2 max 200
+    bossbar add ui:tmw237 {"text":"残り時間","color":"white","italic":false,"bold":true}
+    bossbar set ui:tmw237 color white
+    bossbar set ui:tmw237 max 3000
 
 ## チーム
     team add blue
@@ -387,5 +390,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 44
+    scoreboard players set $version ui_world 45
     #say operationed

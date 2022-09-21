@@ -36,7 +36,7 @@ execute store result score $sptime.max ui_temp run data get storage ui:gun temp.
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
-#execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
+execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
@@ -53,10 +53,8 @@ execute if entity @s[tag=tmw_237_readtag] run function ui:tmw/237/tag/reader
 # $amp より色々バフを掛ける
 execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
 
-# 最後に持った時間と連続していなかった場合ペナルティ（changedで常時時間係数を監視しないといけないので没）
-#execute store result score $time ui_temp run time query gametime
-#execute if score $lasttime ui_temp < $time ui_temp run function ui:tmw/237/changed/hand
-#scoreboard players add $lasttime ui_temp 1
+# 最後に持った時間と連続していなかった場合ペナルティ
+execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed/hand.sys
 
 # キー入力検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
@@ -66,6 +64,9 @@ execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
 effect give @s saturation 1 0 true
 execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
+
+# オフハンドに持つんじゃない
+execute if entity @s[scores={ui_tmw_id2=1..}] run function ui:tmw/237/anti.offhand/text
 
 # インク回復
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
@@ -101,6 +102,7 @@ execute as @s[tag=tmw_drop_s] run function ui:tmw/237/emergency/core
 execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 true
 execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
 scoreboard players operation @s ui_paint < $spneed ui_temp
+execute if score $qf ui_temp matches 2 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/qf2
 execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/ready
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/not
 
@@ -111,8 +113,9 @@ execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function 
 execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
 
 # サブスペ時限式
-execute if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/master
-execute if score $sptime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/master
+execute if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/sub
+execute if score $sptime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/sp
+#tellraw @s [{"score":{"objective":"ui_temp","name":"$sptime"}}]
 
 # ディスプレイ表示
 execute if entity @s[tag=!tmw_237_notitle] unless entity @s[gamemode=spectator] run function ui:tmw/237/title/core

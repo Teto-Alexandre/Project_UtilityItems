@@ -8,6 +8,6 @@
     function ui:tmw/237/activator/time/master
 
 # 時間減少
-    scoreboard players set @s ui_paint 0
+    execute if score $qf ui_temp matches 1 run scoreboard players set @s ui_paint 0
     scoreboard players remove $sptime ui_temp 1
     scoreboard players set $changed ui_temp 1

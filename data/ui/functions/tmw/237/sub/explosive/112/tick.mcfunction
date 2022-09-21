@@ -7,7 +7,7 @@
     #設置数上限デストロイ
     scoreboard players set $count ui_temp 0
     execute as @e[tag=tmw_237_sub] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
-    execute if score $count ui_temp matches 2.. run function ui:tmw/237/sub/explosive/mult.ex
+    execute if score $count ui_temp matches 4.. run function ui:tmw/237/sub/explosive/mult.ex
 
 # 見た目
     scoreboard players operation $time ui_temp = @s ui_is
