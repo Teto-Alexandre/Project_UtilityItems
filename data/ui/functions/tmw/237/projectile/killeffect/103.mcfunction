@@ -18,7 +18,7 @@ scoreboard players set $speed ui_temp 40
 scoreboard players set $speed.add ui_temp 0
 scoreboard players set $range ui_temp 80
 scoreboard players set $spread ui_temp 200
-scoreboard players set $damage ui_temp 40
+scoreboard players set $damage ui_temp 80
 data modify storage ui:temp temp.Name set value '{"text":"ヘルハウンド","color":"gray"}'
 scoreboard players set $deathmessage ui_temp 0
 execute as @e[tag=ui_temp_target] at @s positioned ~ ~ ~ run function ui:tmw/237/attack/missile/fire_here

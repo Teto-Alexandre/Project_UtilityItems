@@ -293,10 +293,12 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard players set #40 ui_num 40
     scoreboard players set #50 ui_num 50
     scoreboard players set #81 ui_num 81
+    scoreboard players set #90 ui_num 90
     scoreboard players set #95 ui_num 95
     scoreboard players set #98 ui_num 98
     scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
+    scoreboard players set #180 ui_num 180
     scoreboard players set #200 ui_num 200
     scoreboard players set #250 ui_num 250
     scoreboard players set #300 ui_num 300
@@ -343,21 +345,25 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     team modify blue friendlyFire false
     team modify blue collisionRule never
     team modify blue nametagVisibility hideForOtherTeams
+    team modify blue seeFriendlyInvisibles false
     team add red
     team modify red color light_purple
     team modify red friendlyFire false
     team modify red collisionRule never
     team modify red nametagVisibility hideForOtherTeams
+    team modify red seeFriendlyInvisibles false
     team add yellow
     team modify yellow color yellow
     team modify yellow friendlyFire false
     team modify yellow collisionRule never
     team modify yellow nametagVisibility hideForOtherTeams
+    team modify yellow seeFriendlyInvisibles false
     team add green
     team modify green color green
     team modify green friendlyFire false
     team modify green collisionRule never
     team modify green nametagVisibility hideForOtherTeams
+    team modify green seeFriendlyInvisibles false
 
 ## その他
     forceload add 0 0

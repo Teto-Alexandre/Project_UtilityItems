@@ -1,8 +1,5 @@
 # スニークしてる時
 
-# チャージキープ
-    execute if score $ishold ui_temp matches 2.. run function ui:tmw/237/constant/charge_cancel
-
 # 壁上り
     execute if score $team ui_temp matches 1 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall1
     execute if score $team ui_temp matches 2 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall2

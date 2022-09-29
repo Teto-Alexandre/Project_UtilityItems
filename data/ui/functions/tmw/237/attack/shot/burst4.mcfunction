@@ -30,4 +30,11 @@
     execute if score $burst_alt.id ui_temp matches 3 run scoreboard players operation $burst_alt ui_temp *= #7 ui_num
     execute if score $burst_alt.id ui_temp matches 3 run scoreboard players operation $damage ui_temp += $burst_alt ui_temp
 
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 21.. run scoreboard players add $particle.end ui_temp 1
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 41.. run scoreboard players add $particle.end ui_temp 1
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 60.. run scoreboard players add $particle.end ui_temp 1
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 21.. run data merge storage ui:gun {temp2:{Sound:3}}
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 41.. run data merge storage ui:gun {temp2:{Sound:4}}
+    execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 60.. run data merge storage ui:gun {temp2:{Sound:5}}
+
 #

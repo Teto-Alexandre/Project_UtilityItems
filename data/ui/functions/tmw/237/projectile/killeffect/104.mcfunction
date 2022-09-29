@@ -1,7 +1,7 @@
 # ミサイルの発射を媒介する
 
 #
-summon item ~ ~ ~ {Tags:["ui_temp_this2","tmw_237_sub"],Invulnerable:1b,Item:{id:"minecraft:snowball",Count:1b,tag:{tmw:{type:1,color:1},CustomModelData:217111}},PickupDelay:32767s}
+summon item ~ ~ ~ {Tags:["ui_temp_this2","tmw_237_sub","tmw237_sub_nopoint"],Invulnerable:1b,Item:{id:"minecraft:snowball",Count:1b,tag:{tmw:{type:1,color:1},CustomModelData:217111}},PickupDelay:32767s}
 execute as @e[tag=ui_temp_this2,limit=1] rotated as @p run teleport @s ~ ~ ~ ~ ~
 execute as @e[tag=ui_temp_this2,limit=1] run function ui:template/accelerator.1
 data modify entity @e[tag=ui_temp_this2,limit=1] Item.tag.tmw.type set value 153

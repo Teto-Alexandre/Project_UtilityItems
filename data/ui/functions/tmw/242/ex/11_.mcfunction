@@ -15,9 +15,6 @@
 # ヒットパーティクル
     function ui:tmw/237/projectile/killeffect/5
 
-# その他
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
-
 # キル
     kill @s
 

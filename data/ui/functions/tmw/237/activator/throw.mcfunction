@@ -11,6 +11,7 @@ scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_uses -1
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is -1
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is2 -1
+execute if score $sptype ui_temp matches 253 if score $sptime ui_temp matches 1.. run tag @e[tag=ui_temp_this,limit=1] add tmw237_sub_nopoint
 playsound entity.snowball.throw player @a ~ ~ ~ 1 0.8 0
 #data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.CustomModelData
 tag @e[tag=ui_temp_this] remove ui_temp_this

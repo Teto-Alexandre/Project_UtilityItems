@@ -23,9 +23,7 @@
     execute if score $slot ui_temp matches 20 run scoreboard players set $sp ui_temp 111
     execute if score $slot ui_temp matches 21 run scoreboard players set $sp ui_temp 112
     execute if score $slot ui_temp matches 22 run scoreboard players set $sp ui_temp 201
-    execute if score $slot ui_temp matches 23 run scoreboard players set $sp ui_temp 301
-    execute if score $slot ui_temp matches 24 run scoreboard players set $sp ui_temp 401
-    execute if score $slot ui_temp matches 25 run scoreboard players set $page ui_temp 2
+    execute if score $slot ui_temp matches 25 run scoreboard players set $page ui_temp 12
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 
@@ -59,9 +57,9 @@
     
     item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:121111,display:{Name:'{"text":"[スプリンクラー]","color":"gray","italic":false}',Lore:['{"text":"持続的に塗り広げる装置を設置する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:121112,display:{Name:'{"text":"[アクセラレーター]","color":"gray","italic":false}',Lore:['{"text":"弾を加速する装置を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:121201,display:{Name:'{"text":"[リコール]","color":"gray","italic":false}',Lore:['{"text":"瞬時にリスポーン地点に戻る","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:121301,display:{Name:'{"text":"[トラップ]","color":"gray","italic":false}',Lore:['{"text":"その場に周囲の敵に反応する爆弾を設置","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:121401,display:{Name:'{"text":"[ブロードソード]","color":"gray","italic":false}',Lore:['{"text":"至近距離の敵を即死させる攻撃","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:121113,display:{Name:'{"text":"[ロボットボム]","color":"gray","italic":false}',Lore:['{"text":"敵を追跡する爆弾を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:121114,display:{Name:'{"text":"[カーリングボム]","color":"gray","italic":false}',Lore:['{"text":"一直線に進み反射する爆弾を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:121201,display:{Name:'{"text":"[リコール]","color":"gray","italic":false}',Lore:['{"text":"瞬時にリスポーン地点に戻る","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
 
     item replace entity @s enderchest.25 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
     item replace entity @s enderchest.26 with black_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}

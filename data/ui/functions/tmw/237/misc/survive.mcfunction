@@ -1,7 +1,3 @@
-# サヴァイブで耐えた時の効果
-    playsound item.totem.use player @a ~ ~ ~ 1 1 0
-    particle totem_of_undying ~ ~1 ~ 0.4 0.6 0.4 0.3 15 force
-    # 一秒間80%カット
-    effect give @s resistance 1 3 true
-    # サヴァイブのタグが消える
-    tag @s remove tmw_237_sp_survive
+# サヴァイブ発動時に無敵じゃないか調べる
+    execute store result score $resistance ui_temp run data get entity @s ActiveEffects.[{Id:11}].Amplifier
+    execute unless score $resistance ui_temp matches ..4 run function ui:tmw/237/misc/survive.checked

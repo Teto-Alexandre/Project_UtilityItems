@@ -1,5 +1,8 @@
 # 移動形態になる
 
+# チャージキープ
+    execute if score $ishold ui_temp matches 2.. run function ui:tmw/237/constant/charge_cancel
+
 # 特殊効果
     effect clear @s slowness
     effect give @s speed 1 25 true

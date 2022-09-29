@@ -1,7 +1,7 @@
 # 弾にデータを込める
 teleport @s ^ ^ ^1 ~ ~
 scoreboard players set @s ui_bpart 105
-scoreboard players set @s ui_hpart 8
+scoreboard players set @s ui_hpart 208
 scoreboard players set @s ui_bm 30
 scoreboard players set @s ui_br 60
 scoreboard players set @s ui_gpc 3

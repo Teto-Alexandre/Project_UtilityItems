@@ -23,8 +23,5 @@
 # 無敵解除
     effect clear @s resistance
 
-# 塗りポイント加算
-    #execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
-
 # スペシャル解除
     scoreboard players set $sptime ui_temp 1

@@ -3,12 +3,18 @@
 # リコール
     execute if score $activator ui_temp matches 201 run function ui:tmw/237/activator/here/201
 
+# ハイジャンプ
+    execute if score $activator ui_temp matches 202 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
+    execute if score $activator ui_temp matches 202 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.2 0
+    execute if score $activator ui_temp matches 202 run tp @s @s
+    execute if score $activator ui_temp matches 202 run effect give @s levitation 1 29 false
+
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 251 run particle explosion_emitter ~ ~ ~ 5 5 5 0 20 force
 
 # スーパースター
-    execute if score $activator ui_temp matches 252 run playsound entity.player.levelup player @a ~ ~ ~ 3 0.5 0
+    execute if score $activator ui_temp matches 252 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 3 0.5 0
     execute if score $activator ui_temp matches 252 run particle totem_of_undying ~ ~ ~ 5 5 5 0.02 20 force
     execute if score $activator ui_temp matches 252 run effect give @s resistance 6 126 false
     execute if score $activator ui_temp matches 252 run effect give @s strength 6 2 false
@@ -32,6 +38,7 @@
     execute if score $activator ui_temp matches 256 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 256 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
     execute if score $activator ui_temp matches 256 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 0.8 0
+    execute if score $activator ui_temp matches 256 run tp @s @s
     execute if score $activator ui_temp matches 256 run effect give @s levitation 1 29 false
 
 # トーテム

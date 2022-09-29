@@ -5,3 +5,7 @@ execute if score $temp ui_temp matches 1 run tag @s[tag=tmw_237_notitle] add ui_
 execute if score $temp ui_temp matches 1 run tag @s[tag=!tmw_237_notitle] add tmw_237_notitle
 execute if score $temp ui_temp matches 1 run tag @s[tag=ui_temp_this] remove tmw_237_notitle
 execute if score $temp ui_temp matches 1 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if score $temp ui_temp matches 2 run tag @s[tag=tmw_237_nolaser] add ui_temp_this
+execute if score $temp ui_temp matches 2 run tag @s[tag=!tmw_237_nolaser] add tmw_237_nolaser
+execute if score $temp ui_temp matches 2 run tag @s[tag=ui_temp_this] remove tmw_237_nolaser
+execute if score $temp ui_temp matches 2 run tag @s[tag=ui_temp_this] remove ui_temp_this

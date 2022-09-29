@@ -9,11 +9,6 @@ execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=neares
 #execute at @e[tag=ui_temp_target,sort=random,limit=1] run particle dust 1 1 1 10 ~ ~ ~ 0 0 0 0 1 force
 #say @e[tag=ui_temp_target2]
 
-
-
-
-
-
 # ミサイル召喚
     execute at @s anchored eyes positioned ^ ^ ^ run summon armor_stand ^ ^ ^1 {Tags:["tag","tmw_242"],Motion:[0.0d,0.0d,0.0d],Invisible:1b,Invulnerable:1b,Small:1b}
     #召喚した本体に固有ID設定

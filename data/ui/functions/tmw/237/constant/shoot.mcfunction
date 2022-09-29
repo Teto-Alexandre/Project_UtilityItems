@@ -3,6 +3,9 @@
 # タグチェック
     execute if entity @s[tag=tmw_237_king] run function ui:tmw/237/amp/king
 
+# レーザーサイト
+    execute if score $model ui_temp matches 110811 run function ui:tmw/237/constant/laser
+
 # エフェクトクリア
     effect clear @s speed
     effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:3b}]}] jump_boost

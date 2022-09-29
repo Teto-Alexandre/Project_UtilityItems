@@ -10,7 +10,11 @@
     scoreboard players set $changed ui_temp 0
     data merge storage ui:common {input:{Mode:"check"}}
     function ui:common/ender
-    execute if score $slot ui_temp matches 2 run scoreboard players set $sub ui_temp 402
+    execute if score $slot ui_temp matches 2 run scoreboard players set $sub ui_temp 202
+    execute if score $slot ui_temp matches 3 run scoreboard players set $sub ui_temp 301
+    execute if score $slot ui_temp matches 4 run scoreboard players set $sub ui_temp 401
+    execute if score $slot ui_temp matches 5 run scoreboard players set $sub ui_temp 402
+    execute if score $slot ui_temp matches 6 run scoreboard players set $sub ui_temp 403
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 1
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -22,11 +26,11 @@
 # メニュー表示
     #
     item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-    item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:121402,display:{Name:'{"text":"[ヘルハウンド]","color":"gray","italic":false}',Lore:['{"text":"最寄りの敵にミサイルを撃つ","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-    item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-    item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-    item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+    item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:121202,display:{Name:'{"text":"[ハイジャンプ]","color":"gray","italic":false}',Lore:['{"text":"その場で高く飛び上がる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:121301,display:{Name:'{"text":"[トラップ]","color":"gray","italic":false}',Lore:['{"text":"その場に周囲の敵に反応する爆弾を設置","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:121401,display:{Name:'{"text":"[ブロードソード]","color":"gray","italic":false}',Lore:['{"text":"至近距離の敵を即死させる攻撃","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:121402,display:{Name:'{"text":"[ヘルハウンド]","color":"gray","italic":false}',Lore:['{"text":"最寄りの敵にミサイルを撃つ","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:121403,display:{Name:'{"text":"[ラインマーカー]","color":"gray","italic":false}',Lore:['{"text":"壁で反射し軌跡にいる敵をマーク","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     #
     item replace entity @s enderchest.9 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
