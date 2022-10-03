@@ -15,6 +15,7 @@
     execute if score $slot ui_temp matches 4 run scoreboard players set $sp ui_temp 401
     execute if score $slot ui_temp matches 5 run scoreboard players set $sp ui_temp 402
     execute if score $slot ui_temp matches 6 run scoreboard players set $sp ui_temp 403
+    execute if score $slot ui_temp matches 11 run scoreboard players set $sp ui_temp 404
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -36,7 +37,7 @@
     item replace entity @s enderchest.9 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-    item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+    item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:121404,display:{Name:'{"text":"[ブーメラン]","color":"gray","italic":false}',Lore:['{"text":"自分に返ってくるブーメランを発射する","color":"aqua","italic":false}','{"text":"回収すればある程度インクが回復する","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

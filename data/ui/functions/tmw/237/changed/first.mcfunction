@@ -50,6 +50,7 @@ data modify storage ui:temp temp.gun.now merge value {Ink:0,CT:0,Burst:0,SP:0,Su
 execute if score $subtype ui_temp matches 401 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
 execute if score $subtype ui_temp matches 402 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
 execute if score $subtype ui_temp matches 403 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
+execute if score $subtype ui_temp matches 404 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
 
 # spデータ照合.gun 
 execute if score $sptype ui_temp matches 451 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
@@ -66,6 +67,7 @@ execute if score $sptype ui_temp matches 460 run data modify storage ui:temp tem
 execute if score $sptype ui_temp matches 401 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 402 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 403 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
+execute if score $sptype ui_temp matches 404 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
 
 data modify storage ui:temp temp merge value {enableQ:1,enableF:1}
 
@@ -76,6 +78,7 @@ data modify storage ui:gun temp set value {}
 execute if score $subtype ui_temp matches 401 run data modify storage ui:gun temp set value {Name:'{"text":"ブロードソード","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:10,BurstCT:20,Spread:150,AirSpread:150,SpreadType:2,AirSpreadType:2,Speed:300,SpeedPlus:0,RangeType:1,Range:15,FlyParticle:4,EndParticle:2,Damage:200,MultiShot:9,ShotFootStep:2,Sound:3}
 execute if score $subtype ui_temp matches 402 run data modify storage ui:gun temp set value {Name:'{"text":"ヘルハウンド","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:10,BurstCT:20,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:0,RangeType:1,Range:10,FlyParticle:102,EndParticle:103,Damage:0,MultiShot:3,ShotFootStep:1,Sound:2}
 execute if score $subtype ui_temp matches 403 run data modify storage ui:gun temp set value {Name:'{"text":"ラインマーカー","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:0,BurstCT:0,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:2000,SpeedPlus:0,RangeType:1,Range:90,FlyParticle:106,EndParticle:-1,Damage:40,MultiShot:1,ShotFootStep:0,Sound:1}
+execute if score $subtype ui_temp matches 404 run data modify storage ui:gun temp set value {Name:'{"text":"ブーメラン","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:4,BurstCT:8,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:35,SpeedPlus:0,RangeType:1,Range:200,FlyParticle:107,EndParticle:4,Damage:140,MultiShot:1,ShotFootStep:0,Sound:3}
 
 # sub詳細書き込み
 data modify storage ui:temp temp.sub set from storage ui:gun temp
@@ -98,6 +101,7 @@ execute if score $sptype ui_temp matches 460 run data modify storage ui:gun temp
 execute if score $sptype ui_temp matches 401 run data modify storage ui:gun temp set value {Name:'{"text":"ブロードソード","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:10,BurstCT:20,Spread:150,AirSpread:150,SpreadType:2,AirSpreadType:2,Speed:300,SpeedPlus:0,RangeType:1,Range:15,FlyParticle:4,EndParticle:2,Damage:200,MultiShot:9,ShotFootStep:2,Sound:3}
 execute if score $sptype ui_temp matches 402 run data modify storage ui:gun temp set value {Name:'{"text":"ヘルハウンド","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:10,BurstCT:20,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:0,RangeType:1,Range:10,FlyParticle:102,EndParticle:103,Damage:0,MultiShot:3,ShotFootStep:1,Sound:2}
 execute if score $sptype ui_temp matches 403 run data modify storage ui:gun temp set value {Name:'{"text":"ラインマーカー","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:0,BurstCT:0,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:2000,SpeedPlus:0,RangeType:1,Range:90,FlyParticle:106,EndParticle:-1,Damage:40,MultiShot:1,ShotFootStep:0,Sound:1}
+execute if score $sptype ui_temp matches 404 run data modify storage ui:gun temp set value {Name:'{"text":"ブーメラン","color":"gray"}',TimeUse:200,ShotType:1,ShotCT:4,BurstCT:8,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:35,SpeedPlus:0,RangeType:1,Range:200,FlyParticle:107,EndParticle:4,Damage:140,MultiShot:1,ShotFootStep:0,Sound:3}
 
 # sp詳細書き込み
 data modify storage ui:temp temp.sp set from storage ui:gun temp

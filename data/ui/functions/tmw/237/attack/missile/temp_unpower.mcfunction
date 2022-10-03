@@ -3,7 +3,7 @@ scoreboard players operation @s ui_hpart = $particle.end ui_temp
 scoreboard players operation @s ui_bm = $speed ui_temp
 scoreboard players operation @s ui_bm += $speed.add ui_temp
 scoreboard players operation @s ui_br = $range ui_temp
-function ui:tmw/237/attack/missile/square_shuffle
+execute if score $spread ui_temp matches 1.. run function ui:tmw/237/attack/missile/square_shuffle
 scoreboard players operation @s ui_gpc = $obj_id ui_temp
 scoreboard players operation @s ui_dmg = $damage ui_temp
 scoreboard players operation @s ui_id = $id ui_temp

@@ -34,6 +34,7 @@
     execute if score @s ui_bpart matches 104 run function ui:tmw/237/projectile/move/104
     execute if score @s ui_bpart matches 105 run function ui:tmw/237/projectile/move/105
     execute if score @s ui_bpart matches 106 run function ui:tmw/237/projectile/move/106
+    execute if score @s ui_bpart matches 107 run function ui:tmw/237/projectile/move/107
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
 
 # 移動値が無くなるまで繰り返す

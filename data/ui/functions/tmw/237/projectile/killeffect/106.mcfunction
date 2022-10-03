@@ -16,7 +16,7 @@ execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=neares
 
     execute at @s anchored eyes positioned ^ ^ ^ run summon marker ^ ^ ^2 {Tags:["ui_temp_anchor"]}
     execute as @e[tag=ui_temp_anchor] run function ui:template/square_shuffle
-    execute as @e[tag=tag] at @s facing entity @e[tag=ui_temp_anchor] feet run function ui:template/accelerator.1
+    execute as @e[tag=tag] at @s facing entity @e[tag=ui_temp_anchor] feet run function ui:template/accelerator/1
     #タイプを選択
     scoreboard players set @e[tag=tag] ui_gms 6
     scoreboard players set @e[tag=tag] ui_gt 11

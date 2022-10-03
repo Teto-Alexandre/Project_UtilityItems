@@ -3,7 +3,7 @@
 #
 summon item ~ ~ ~ {Tags:["ui_temp_this2","tmw_237_sub","tmw237_sub_nopoint"],Invulnerable:1b,Item:{id:"minecraft:snowball",Count:1b,tag:{tmw:{type:1,color:1},CustomModelData:217111}},PickupDelay:32767s}
 execute as @e[tag=ui_temp_this2,limit=1] rotated as @p run teleport @s ~ ~ ~ ~ ~
-execute as @e[tag=ui_temp_this2,limit=1] run function ui:template/accelerator.1
+execute as @e[tag=ui_temp_this2,limit=1] run function ui:template/accelerator/1
 data modify entity @e[tag=ui_temp_this2,limit=1] Item.tag.tmw.type set value 153
 execute store result entity @e[tag=ui_temp_this2,limit=1] Item.tag.tmw.color int 1 run scoreboard players get $team ui_temp
 scoreboard players operation @e[tag=ui_temp_this2,limit=1] ui_id = @s ui_id
