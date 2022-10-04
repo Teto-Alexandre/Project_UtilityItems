@@ -155,3 +155,5 @@
         execute if entity @a[scores={ui_tmw_id=501}] run function ui:tmw/501/lim
     #カード
         execute if entity @a[scores={ui_tmw_id=521}] run function ui:tmw/521/lim
+    #装備コア
+        execute if entity @a[scores={ui_tmw_id=601}] run function ui:tmw/601/lim
