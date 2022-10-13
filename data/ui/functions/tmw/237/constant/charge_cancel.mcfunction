@@ -8,4 +8,4 @@
     #tellraw @a [{"score":{"objective":"ui_temp","name":"$temp"}}]
     execute store result score $chargekeep ui_temp run data get storage ui:gun temp.ChargeKeep
     execute if score $temp ui_temp matches 1.. if score @s ui_st2 > $chargekeep ui_temp run function ui:tmw/237/constant/charge_cancel2
-    execute if score $temp ui_temp matches ..0 run function ui:tmw/237/constant/charge_cancel2
+    execute if score $temp ui_temp matches ..0 run function ui:tmw/237/constant/charge_cancel3

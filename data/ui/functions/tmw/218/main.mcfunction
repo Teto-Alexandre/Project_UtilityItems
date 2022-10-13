@@ -14,6 +14,7 @@
     execute as @e[tag=tmw_218_1,scores={ui_is=0..}] at @s run function ui:tmw/218/bobber1
     execute as @e[tag=tmw_218_2,scores={ui_is=0..}] at @s run function ui:tmw/218/bobber2
     execute as @e[tag=tmw_218_5,scores={ui_is=0..}] at @s run function ui:tmw/218/bobber5
+    execute as @e[tag=tmw_218_6,scores={ui_is=0..}] at @s run function ui:tmw/218/bobber6
     execute as @e[tag=tmw_218_7,scores={ui_is=0..}] at @s run function ui:tmw/218/bobber7
 
 #=======================================================================================

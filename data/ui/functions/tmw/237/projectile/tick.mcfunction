@@ -34,7 +34,7 @@ scoreboard players operation @s ui_bm_temp = @s ui_temp
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
-execute if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/projectile/end
+execute at @s if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/projectile/end
 
 #一時タグ削除
 tag @e[tag=ui_temp_team] remove ui_temp_team

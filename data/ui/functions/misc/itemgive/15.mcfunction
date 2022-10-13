@@ -16,3 +16,5 @@ give @p minecraft:bow{tmw:{id:244},display:{Name:'{"text":"センサーボウ","
 give @p minecraft:spyglass{tmw:{id:245},display:{Name:'{"text":"ドラゴンウォッチャー","color":"white","italic":false}',Lore:['[{"text":"これでエンドラを見るのだ","color":"gray","italic":false}]']}}
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:252},display:{Name:'{"text":"召喚","color":"white","italic":false}',Lore:['[{"text":"あなたの所属チームが「四色」なら","color":"gray","italic":false}]','[{"text":"適当にモンスターが湧く","color":"gray","italic":false}]']},HideFlags:4}
+
+give @p minecraft:fishing_rod{tmw:{id:218,type:6},display:{Name:'{"text":"メジャー","color":"aqua","italic":false}',Lore:['[{"text":" 距離が分かるらしい","color":"gray","italic":false}]']}}

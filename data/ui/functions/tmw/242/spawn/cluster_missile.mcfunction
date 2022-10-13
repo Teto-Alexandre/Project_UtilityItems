@@ -5,7 +5,7 @@
 
     summon marker ~ ~ ~ {Tags:["ui_temp_anchor"]}
     execute as @e[tag=ui_temp_anchor] run function ui:template/square_shuffle
-    execute as @e[tag=tag] at @s facing entity @e[tag=ui_temp_anchor] feet run function ui:template/accelerator.2.5
+    execute as @e[tag=tag] at @s facing entity @e[tag=ui_temp_anchor] feet run function ui:template/accelerator/2.5
     #タイプを選択
     scoreboard players set @e[tag=tag] ui_gms 1
     scoreboard players set @e[tag=tag] ui_gt 10
