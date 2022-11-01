@@ -28,6 +28,8 @@
     execute if score @s ui_bpart matches 8 run function ui:tmw/237/projectile/move/8
     execute if score @s ui_bpart matches 9 run function ui:tmw/237/projectile/move/9
     execute if score @s ui_bpart matches 10 run function ui:tmw/237/projectile/move/10
+    execute if score @s ui_bpart matches 11 run function ui:tmw/237/projectile/move/11
+    execute if score @s ui_bpart matches 12 run function ui:tmw/237/projectile/move/12
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102
@@ -35,6 +37,7 @@
     execute if score @s ui_bpart matches 105 run function ui:tmw/237/projectile/move/105
     execute if score @s ui_bpart matches 106 run function ui:tmw/237/projectile/move/106
     execute if score @s ui_bpart matches 107 run function ui:tmw/237/projectile/move/107
+    execute if score @s ui_bpart matches 112 run function ui:tmw/237/projectile/move/112
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
 
 # 移動値が無くなるまで繰り返す

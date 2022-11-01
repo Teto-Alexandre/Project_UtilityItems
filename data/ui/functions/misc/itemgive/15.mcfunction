@@ -18,3 +18,8 @@ give @p minecraft:spyglass{tmw:{id:245},display:{Name:'{"text":"ドラゴンウ�
 give @p minecraft:carrot_on_a_stick{tmw:{id:252},display:{Name:'{"text":"召喚","color":"white","italic":false}',Lore:['[{"text":"あなたの所属チームが「四色」なら","color":"gray","italic":false}]','[{"text":"適当にモンスターが湧く","color":"gray","italic":false}]']},HideFlags:4}
 
 give @p minecraft:fishing_rod{tmw:{id:218,type:6},display:{Name:'{"text":"メジャー","color":"aqua","italic":false}',Lore:['[{"text":" 距離が分かるらしい","color":"gray","italic":false}]']}}
+
+give @p minecraft:carrot_on_a_stick{CustomModelData:111301,tmw:{id:253},display:{Name:'{"text":"きぐるみ","color":"white","italic":false}',Lore:['[{"text":"被れる 熱中症に気を付けて","color":"gray","italic":false}]']},HideFlags:4}
+give @p minecraft:carrot_on_a_stick{CustomModelData:111201,tmw:{id:15,type:3,ct:{Amount:0}},display:{Name:'{"text":"AutoBalder","color":"white","italic":false}',Lore:['[{"text":"頭装備を取る","color":"gray","italic":false}]','[{"text":"消耗品","color":"gray","italic":false}]']},HideFlags:4}
+
+give @p minecraft:carrot_on_a_stick{tmw:{id:254},display:{Name:'{"text":"村人コンバーター","color":"white","italic":false}',Lore:['[{"text":"チェストを村人に変える","color":"gray","italic":false}]','[{"text":"村人をチェストに変える","color":"gray","italic":false}]']},HideFlags:4}

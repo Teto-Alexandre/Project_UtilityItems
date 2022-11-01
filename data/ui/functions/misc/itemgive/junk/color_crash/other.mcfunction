@@ -16,6 +16,8 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ウルトラペイン
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"メガホンバスター",SubType:351,SPType:351,BaseType:1,BurstType:1,Burst:1,BurstMax:-1,MainInkUse:100,now:{Speed:0,Model:110801}},main:{ShotType:1,ShotCT:2,BurstCT:2,Spread:0,AirSpread:0,SpreadType:1,AirSpreadType:1,Speed:1000,SpeedPlus:0,RangeType:3,Range:100,FlyParticle:8,EndParticle:-1,Damage:30,MultiShot:1,ShotFootStep:0,Sound:1}},display:{Lore:['[{"text":"壁を貫通する音波を発生させる","color":"gray","italic":false}]']}}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ウクペインター",SubType:101,SPType:151,BaseType:1,BurstType:2,Burst:6,BurstMax:-1,MainInkUse:5,now:{Speed:0.2,Model:110801}},main:{ShotType:1,ShotCT:0,BurstCT:5,Spread:300,AirSpread:300,SpreadType:1,AirSpreadType:1,Speed:5,SpeedPlus:25,RangeType:2,Range:30,FlyParticle:112,EndParticle:112,Damage:5,MultiShot:1,ShotFootStep:-1,Sound:-1}},display:{Lore:['[{"text":"圧倒的な連射速度と焼却力","color":"gray","italic":false}]']}}
+
 #give @p minecraft:carrot_on_a_stick{tmw:{id:238,enableQ:1,enableF:1,gun:{}},display:{Name:'{"text":"カラクラ:エリア管理ツール","italic":false,"color":"aqua"}',Lore:['[{"text":"いろいろできるよ","color":"gray","italic":false}]']},HideFlags:4,Unbreakable:1b}
 
 # ベンチマーク

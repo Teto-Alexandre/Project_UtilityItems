@@ -60,16 +60,8 @@ execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
 #tag @s[tag=tmw_oh_s] add tmw_oh_n
 
-# 常駐効果
-scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
-effect give @s saturation 1 0 true
-execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
-
 # オフハンドに持つんじゃない
 execute if entity @s[scores={ui_tmw_id2=1..}] run function ui:tmw/237/anti.offhand/text
-
-# インク回復
-execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
 
 # バースト数
 # 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
@@ -83,15 +75,24 @@ execute if score $bursttype ui_temp matches 5 as @s[scores={ui_use2=1..}] run fu
 execute if score $bursttype ui_temp matches 6 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst
 execute if score $bursttype ui_temp matches 7 run function ui:tmw/237/burst/burst7
 execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/burst8
+execute if score $bursttype ui_temp matches 9 run function ui:tmw/237/burst/burst9
+
+# 常駐効果
+scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
+effect give @s saturation 1 0 true
+execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
+
+# インク回復
+execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
 
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
 
 # 弾丸の射出
     #たまなしバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp < $ink.main ui_temp at @s run function ui:tmw/237/fail
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp < $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/237/fail
     #たまありバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s run function ui:tmw/237/attack/master
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/237/attack/master
     #バースト+クールタイム完遂、発射できなかったなら
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 

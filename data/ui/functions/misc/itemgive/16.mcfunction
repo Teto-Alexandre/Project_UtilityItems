@@ -2,4 +2,4 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:240,core:{point:3,pointused:0,skills
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:248},display:{Name:'[{"text":"サーチ","color":"white","italic":false}]',Lore:['{"text":"助かる","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}
 
-give @p minecraft:carrot_on_a_stick{tmw:{id:250},display:{Name:'[{"text":"ショップキーパー","color":"white","italic":false},{"text":"[コンテナコア]","color":"#00cc99","italic":false}]',Lore:['{"text":"チェストの上で右クリック","color":"gold","italic":false}','{"text":"作動時に内容物が消滅します","color":"red","italic":false}']},HideFlags:4}
+give @p minecraft:carrot_on_a_stick{tmw:{id:250},display:{Name:'[{"text":"マインスイーパー","color":"white","italic":false}]',Lore:['{"text":"右クリックで操作","color":"gold","italic":false}']},HideFlags:4}

@@ -23,7 +23,7 @@ item modify entity @s[nbt={SelectedItem:{tag:{tmw:{gun:{png:31}}}}}] weapon.main
 item modify entity @s[nbt={SelectedItem:{tag:{tmw:{gun:{png:41}}}}}] weapon.mainhand ui:weapon_gun/sr_1
 
 # バースト数
-execute as @s[scores={ui_use1=1..,ui_bc=..0}] store result score @s ui_bc run data get entity @s SelectedItem.tag.tmw.gun.bc
+execute as @s[scores={ui_use1=1..}] unless score @s ui_bc matches 1.. store result score @s ui_bc run data get entity @s SelectedItem.tag.tmw.gun.bc
 
 # クールタイム減少
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1

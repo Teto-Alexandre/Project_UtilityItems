@@ -30,10 +30,10 @@
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true
 
 # 下記に該当しないなら射撃形態になる
-    execute if score $team ui_temp matches 1 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ light_blue_wool unless entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/constant/shoot
-    execute if score $team ui_temp matches 2 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ pink_wool unless entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/constant/shoot
-    execute if score $team ui_temp matches 3 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ yellow_wool unless entity @e[type=shulker,nbt={Color:4b}] run function ui:tmw/237/constant/shoot
-    execute if score $team ui_temp matches 4 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ lime_wool unless entity @e[type=shulker,nbt={Color:5b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 1 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ #ui:light_blue unless entity @e[type=shulker,nbt={Color:3b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 2 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ #ui:pink unless entity @e[type=shulker,nbt={Color:6b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 3 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ #ui:yellow unless entity @e[type=shulker,nbt={Color:4b}] run function ui:tmw/237/constant/shoot
+    execute if score $team ui_temp matches 4 unless entity @s[tag=ui_temp_wall] unless entity @s[tag=ui_temp_top] unless block ~ ~-0.3 ~ #ui:lime unless entity @e[type=shulker,nbt={Color:5b}] run function ui:tmw/237/constant/shoot
 
 # 特定地形の上なら移動形態になる
     execute if score $team ui_temp matches 1 as @s[scores={ui_gct=-1}] if block ~ ~-0.3 ~ #ui:light_blue run function ui:tmw/237/constant/move

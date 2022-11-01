@@ -20,6 +20,7 @@
     execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/attack/shot/burst4
     execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/attack/shot/burst5
     execute if score $burst_alt.id ui_temp matches 201..300 run function ui:tmw/237/attack/shot/burst8
+    execute if score $burst_alt.id ui_temp matches 301..400 run function ui:tmw/237/attack/shot/burst9
 
 # タイプごとに拡散して発射
     #function ui:tmw/237/attack/shot/loop
@@ -40,6 +41,7 @@
     execute if score $temp ui_temp matches 5 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 2.0 0.9 0
     execute if score $temp ui_temp matches 101 run playsound minecraft:entity.bat.loop player @a ~ ~ ~ 1 1.6 0
     execute if score $temp ui_temp matches 101 run effect give @s slowness 1 2 true
+    execute if score $temp ui_temp matches -1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8 0.8 0
 
 # クールタイム解除時刻.mod
     execute store result score $cooltime ui_temp run time query gametime

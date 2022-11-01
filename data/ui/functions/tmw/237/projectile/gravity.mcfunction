@@ -2,6 +2,7 @@
 
 # tickごと
     scoreboard players add @s ui_bcp 5
+    execute if score @s ui_bpart matches 112 run scoreboard players remove @s ui_bcp 6
     execute if score @s ui_bpart matches 7 run scoreboard players remove @s ui_bcp 2
     execute if score @s ui_bpart matches 104 run scoreboard players remove @s ui_bcp 3
     execute if score @s ui_bpart matches 105 if score @s ui_is matches ..20 run scoreboard players remove @s ui_bcp 5

@@ -12,8 +12,16 @@
     execute positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=shulker_bullet] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=shulker_bullet] at @s as @e[type=shulker_bullet,sort=nearest,limit=1] run kill @s
 
 #見た目
-    execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle ash ~ ~ ~ 0 0 0 0 1 force
-    execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle ash ^ ^ ^0.25 0 0 0 0 1 force
+    #execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle ash ~ ~ ~ 0 0 0 0 1 force
+    #execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle ash ^ ^ ^0.25 0 0 0 0 1 force
+    #execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle flame ^ ^ ^ 0 0 0 100000 1 force
+    #execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle flame ^ ^ ^0.25 0 0 0 100000 1 force
+    execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle end_rod ^ ^ ^ 0 0 0 100000 1 force
+    execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle end_rod ^ ^ ^0.25 0 0 0 100000 1 force
+    #execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle wax_on ^ ^ ^ 0 0 0 1000000 1 force
+    #execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle wax_on ^ ^ ^0.25 0 0 0 1000000 1 force
+    #execute if score @s ui_bc2 matches 0 if score @s ui_bt matches 1.. run particle electric_spark ^ ^ ^ 0 0 0 1000000 1 force
+    #execute if score @s ui_bc2 matches 1 if score @s ui_bt matches 1.. run particle electric_spark ^ ^ ^0.25 0 0 0 1000000 1 force
     execute if score @s ui_gt matches 1 if score @s ui_bt matches 1.. run particle dust 1 1 0.5 0.5 ^ ^-0.2 ^0.125 0.3 0.3 0.3 0 1 force
     execute if score @s ui_gt matches 2 if score @s ui_bt matches 1.. run particle enchanted_hit ^ ^ ^0.125 0 0 0 0.1 1 force
 
