@@ -1,23 +1,5 @@
 {
-  "type": {
-    "name": "minecraft:dream",
-    "ultrawarm": false,
-    "natural": false,
-    "piglin_safe": true,
-    "respawn_anchor_works": false,
-    "bed_works": false,
-    "has_raids": false,
-    "has_skylight": true,
-    "has_ceiling": false,
-    "coordinate_scale": 50,
-    "ambient_light": 0,
-    "fixed_time": 18000,
-    "logical_height": 256,
-    "effects": "minecraft:overworld",
-    "infiniburn": "#minecraft:infiniburn_overworld",
-    "min_y": 0,
-    "height": 256
-  },
+  "type": "ui:dream",
   "generator": {
     "type": "minecraft:noise",
     "seed": 2,
