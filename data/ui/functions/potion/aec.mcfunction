@@ -6,7 +6,7 @@
 #
 # @public
 
-execute store result score @s ui_calc1 run data get entity @s Effects.[{Id:26b}].Amplifier 1
+execute store result score @s ui_calc1 run data get entity @s Effects.[{Id:26}].Amplifier 1
 
 # ===== 以下 残留ポーションの追加効果 =====
 
