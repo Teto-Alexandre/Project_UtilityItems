@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s tipped_arrow{tmw:{arrow:3},display:{Name:'{"text":"超重力の矢","color":"blue","bold":true,"italic":false}',Lore:['{"text":"犠牲者は超重力に囚われる","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26b,Amplifier:4b,Duration:2,ShowParticles:0b}],CustomPotionColor:255}
+give @s tipped_arrow{tmw:{arrow:3},display:{Name:'{"text":"超重力の矢","color":"blue","bold":true,"italic":false}',Lore:['{"text":"犠牲者は超重力に囚われる","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26,Amplifier:4b,Duration:2,ShowParticles:0b}],CustomPotionColor:255}
 function ui:craft/common/exp/advancement
 
 #レシピおよび進捗消去

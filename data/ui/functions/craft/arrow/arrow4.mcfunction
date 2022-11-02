@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s tipped_arrow{tmw:{arrow:4},display:{Name:'{"text":"暴食の矢","color":"gold","bold":true,"italic":false}',Lore:['{"text":"犠牲者はとてもおなかをすかせる","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26b,Amplifier:5b,Duration:2,ShowParticles:0b}],CustomPotionColor:16750848}
+give @s tipped_arrow{tmw:{arrow:4},display:{Name:'{"text":"暴食の矢","color":"gold","bold":true,"italic":false}',Lore:['{"text":"犠牲者はとてもおなかをすかせる","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26,Amplifier:5b,Duration:2,ShowParticles:0b}],CustomPotionColor:16750848}
 function ui:craft/common/exp/advancement
 
 #レシピおよび進捗消去

@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s tipped_arrow{tmw:{arrow:6},display:{Name:'{"text":"ストームブリンガー","color":"green","bold":true,"italic":false}',Lore:['{"text":"射撃後に三本の矢が装填される","color":"gray","italic":false}','{"text":" ※クロスボウ専用弾","color":"gray","italic":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26b,Amplifier:7b,Duration:2,ShowParticles:0b}],CustomPotionColor:65280}
+give @s tipped_arrow{tmw:{arrow:6},display:{Name:'{"text":"ストームブリンガー","color":"green","bold":true,"italic":false}',Lore:['{"text":"射撃後に三本の矢が装填される","color":"gray","italic":false}','{"text":" ※クロスボウ専用弾","color":"gray","italic":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26,Amplifier:7b,Duration:2,ShowParticles:0b}],CustomPotionColor:65280}
 function ui:craft/common/exp/advancement
 
 #レシピおよび進捗消去

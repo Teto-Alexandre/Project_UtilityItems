@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s tipped_arrow{tmw:{arrow:9},display:{Name:'{"text":"ダークプリズム","color":"aqua","bold":true,"italic":false}',Lore:['{"text":"プレイヤーや盾を貫通し反射されない","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26b,Amplifier:10b,Duration:2,ShowParticles:0b}],CustomPotionColor:0}
+give @s tipped_arrow{tmw:{arrow:9},display:{Name:'{"text":"ダークプリズム","color":"aqua","bold":true,"italic":false}',Lore:['{"text":"プレイヤーや盾を貫通し反射されない","color":"gray","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26,Amplifier:10b,Duration:2,ShowParticles:0b}],CustomPotionColor:0}
 function ui:craft/common/exp/advancement
 
 #レシピおよび進捗消去

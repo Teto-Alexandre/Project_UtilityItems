@@ -1,10 +1,10 @@
 #=======================================================================================
 
-give @p tipped_arrow{tmw:{arrow:16},display:{Name:'{"text":"彗星の矢","color":"#ffff99","bold":true,"italic":false}',Lore:['{"text":"一定時間経過後に弾ける","color":"gray","bold":false,"italic":false}']},HideFlags:32,CustomPotionEffects:[{Id:26b,Amplifier:22b,Duration:2,ShowParticles:0b}],CustomPotionColor:16449462} 1
+give @p tipped_arrow{tmw:{arrow:16},display:{Name:'{"text":"彗星の矢","color":"#ffff99","bold":true,"italic":false}',Lore:['{"text":"一定時間経過後に弾ける","color":"gray","bold":false,"italic":false}']},HideFlags:32,CustomPotionEffects:[{Id:26,Amplifier:22b,Duration:2,ShowParticles:0b}],CustomPotionColor:16449462} 1
 
 give @p green_dye{tmw:{charm:17,id:216},HideFlags:1,Enchantments:[{id:"protection",lvl:1s}],display:{Name:'[{"text":"暗視の加護","color":"gold","italic":false}]',Lore:['[{"text":"暗いところがよく見える","color":"yellow","italic":false}]','[{"text":""}]','[{"text":"オフハンドに持ったとき:","color":"gray","italic":false}]','[{"text":"暗視","color":"green","italic":false}]']}}
 
-give @p tipped_arrow{tmw:{arrow:17},display:{Name:'{"text":"対空近接信管の矢","color":"yellow","bold":true,"italic":false}',Lore:['{"text":"（テスト中につき未実装）","color":"gray","bold":false,"italic":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26b,Amplifier:23b,Duration:2,ShowParticles:0b}],CustomPotionColor:16580431} 1
+give @p tipped_arrow{tmw:{arrow:17},display:{Name:'{"text":"対空近接信管の矢","color":"yellow","bold":true,"italic":false}',Lore:['{"text":"（テスト中につき未実装）","color":"gray","bold":false,"italic":false}']},HideFlags:33,Enchantments:[{id:"minecraft:sharpness",lvl:1s}],CustomPotionEffects:[{Id:26,Amplifier:23b,Duration:2,ShowParticles:0b}],CustomPotionColor:16580431} 1
 
 give @p minecraft:drowned_spawn_egg{tmw:{egg:10},display:{Name:'{"text":"インスタントエンドポータル","italic":false,"color":"aqua"}',Lore:['[{"text":"その場にポータルを生成する","color":"yellow","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_10"]}} 1
 

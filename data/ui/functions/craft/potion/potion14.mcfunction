@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s splash_potion{CustomPotionEffects:[{Id:24b,Amplifier:1b,Duration:3000}],CustomPotionColor:65535,display:{Name:'{"text":"§b発光液§r"}'},HideFlags:32}
+give @s splash_potion{CustomPotionEffects:[{Id:24,Amplifier:1b,Duration:3000}],CustomPotionColor:65535,display:{Name:'{"text":"§b発光液§r"}'},HideFlags:32}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

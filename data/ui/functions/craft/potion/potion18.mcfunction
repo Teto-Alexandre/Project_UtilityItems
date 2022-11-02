@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s potion{CustomPotionEffects:[{Id:25b,Amplifier:0b,Duration:3000}],HideFlags:32,CustomPotionColor:14649343,display:{Name:'{"text":"§bここからの素晴らしい眺め§r"}'}}
+give @s potion{CustomPotionEffects:[{Id:25,Amplifier:0b,Duration:3000}],HideFlags:32,CustomPotionColor:14649343,display:{Name:'{"text":"§bここからの素晴らしい眺め§r"}'}}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

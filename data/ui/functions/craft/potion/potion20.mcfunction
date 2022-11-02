@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s potion{CustomPotionEffects:[{Id:10b,Amplifier:1b,Duration:100},{Id:22b,Amplifier:1b,Duration:2400},{Id:11b,Amplifier:0b,Duration:2400}],HideFlags:32,CustomPotionColor:16777067,display:{Name:'{"text":"§b金のリンゴジュース§r"}'}}
+give @s potion{CustomPotionEffects:[{Id:10,Amplifier:1b,Duration:100},{Id:22,Amplifier:1b,Duration:2400},{Id:11,Amplifier:0b,Duration:2400}],HideFlags:32,CustomPotionColor:16777067,display:{Name:'{"text":"§b金のリンゴジュース§r"}'}}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

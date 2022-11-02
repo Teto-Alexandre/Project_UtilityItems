@@ -1,8 +1,8 @@
 # ミサイルが飛んできていたら当たったことがわかる装備
-    execute if entity @s[nbt={ActiveEffects:[{Id:24b}]}] run scoreboard players add @s tds_amethyst 10000
-    execute if entity @s[nbt={ActiveEffects:[{Id:24b}]}] run scoreboard players set @s tds_amethyst_t 10
-    execute if entity @s[nbt={ActiveEffects:[{Id:24b}]}] at @s run playsound block.note_block.chime player @s ~ ~ ~ 1 1 0
-    execute if entity @s[nbt={ActiveEffects:[{Id:24b}]}] run effect clear @s glowing
+    execute if entity @s[nbt={ActiveEffects:[{Id:24}]}] run scoreboard players add @s tds_amethyst 10000
+    execute if entity @s[nbt={ActiveEffects:[{Id:24}]}] run scoreboard players set @s tds_amethyst_t 10
+    execute if entity @s[nbt={ActiveEffects:[{Id:24}]}] at @s run playsound block.note_block.chime player @s ~ ~ ~ 1 1 0
+    execute if entity @s[nbt={ActiveEffects:[{Id:24}]}] run effect clear @s glowing
 
 # 死
     execute if score @s tds_amethyst matches 100000.. run gamemode spectator

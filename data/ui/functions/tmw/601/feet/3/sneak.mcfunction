@@ -5,17 +5,17 @@
     execute if block ~0.6 ~ ~ iron_block run tag @s add ui_temp_wall
     execute if block ~ ~ ~-0.6 iron_block run tag @s add ui_temp_wall
     execute if block ~ ~ ~0.6 iron_block run tag @s add ui_temp_wall
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:7b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:3b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:-1b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:-5b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25b,Amplifier:-9b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:8b,Amplifier:-128b,Duration:15}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:7b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:3b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-1b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-5b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-9b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:-128b,Duration:15}]}] levitation
     execute as @s[tag=ui_temp_wall] run function ui:tmw/601/feet/3/wall
 
 # 天井走り
     execute if block ~ ~2.3 ~ iron_block as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
-    effect clear @s[tag=!ui_temp_top,nbt={ActiveEffects:[{Id:25b,Amplifier:0b}]}] levitation
+    effect clear @s[tag=!ui_temp_top,nbt={ActiveEffects:[{Id:25,Amplifier:0b}]}] levitation
     execute as @s[tag=ui_temp_top] run function ui:tmw/601/feet/3/top
 
 # 下記に該当しないなら射撃形態になる
