@@ -35,12 +35,5 @@
   },
   "spawn_costs": {},
   "carvers": {},
-  "features": [
-    [
-      "minecraft:oak"
-    ],
-    [
-      "minecraft:lake_water"
-    ]
-  ]
+  "features": []
 }

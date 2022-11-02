@@ -14,13 +14,13 @@
     "fixed_time": 18000,
     "logical_height": 256,
     "effects": "minecraft:overworld",
-    "infiniburn": "minecraft:infiniburn_overworld",
+    "infiniburn": "#minecraft:infiniburn_overworld",
     "min_y": 0,
     "height": 256
   },
   "generator": {
     "type": "minecraft:noise",
-    "seed": 0,
+    "seed": 2,
     "settings": "minecraft:overworld",
     "biome_source": {
       "type": "minecraft:fixed",
