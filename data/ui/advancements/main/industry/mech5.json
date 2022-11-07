@@ -24,7 +24,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomModelData:130005}"
+            "nbt": "{EntityTag:{Tags:[\"ui_egg_i_5\"]}}"
           }
         ]
       }

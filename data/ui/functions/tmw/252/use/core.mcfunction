@@ -67,7 +67,7 @@ tag @e[tag=ui_temp_target] remove ui_temp_target
 tag @e[tag=ui_temp_pot] remove ui_temp_pot
 
 # 武器消滅
-#clear @s carrot_on_a_stick{tmw:{id:252}} 1
+clear @s carrot_on_a_stick{tmw:{id:252}} 1
 
 #
 scoreboard players set $success ui_temp 1

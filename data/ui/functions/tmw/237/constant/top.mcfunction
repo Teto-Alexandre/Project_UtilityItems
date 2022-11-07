@@ -19,9 +19,9 @@
     #schedule function ui:misc/kill_slime 1t append
 
 # チームカラーに合わせた防具を削除
-    item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air
-    item replace entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]}] armor.chest with air
-    item replace entity @s[nbt={Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]}] armor.legs with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.head with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.chest with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.legs with air
     item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.feet with air
 
 # ストレージにモデルデータを隔離

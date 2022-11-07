@@ -25,10 +25,10 @@
     scoreboard players set @s[scores={ui_st=1..,ui_gct=0..18}] ui_gct 19
 
 # チームカラーに合わせた防具を装備
-    execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:103b,tag:{display:{color:8247039}}}]}] run function ui:tmw/237/constant/armor/eq1
-    execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:103b,tag:{display:{color:16752832}}}]}] run function ui:tmw/237/constant/armor/eq2
-    execute if score $team ui_temp matches 3 if entity @s[nbt=!{Inventory:[{Slot:103b,tag:{display:{color:16646013}}}]}] run function ui:tmw/237/constant/armor/eq3
-    execute if score $team ui_temp matches 4 if entity @s[nbt=!{Inventory:[{Slot:103b,tag:{display:{color:10551208}}}]}] run function ui:tmw/237/constant/armor/eq4
+    execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:8247039}}}]}] run function ui:tmw/237/constant/armor/eq1
+    execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:16752832}}}]}] run function ui:tmw/237/constant/armor/eq2
+    execute if score $team ui_temp matches 3 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:16646013}}}]}] run function ui:tmw/237/constant/armor/eq3
+    execute if score $team ui_temp matches 4 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:10551208}}}]}] run function ui:tmw/237/constant/armor/eq4
 
 # チームカラーに合わせたチームにぶち込み
     execute if score $team ui_temp matches 1 run team join blue @s
