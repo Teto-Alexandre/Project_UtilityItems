@@ -8,9 +8,6 @@
 #   Var : int
 #       数値がいるときに使う
 #
-# sqrt - 平方根
-# dist - 実行地点と発動者の距離を算出する
-#
 # @output $Return ui_temp - ここに結果を出力
 #
 # @public

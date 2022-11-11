@@ -8,5 +8,7 @@
     scoreboard players operation $is ui_temp = @s ui_is
 
 # 個別
+    # 長く残る爆発
     execute if score $type ui_temp matches 1 run function ui:common/particle/ss/1
+    # 指向性のフラッシュ
     execute if score $type ui_temp matches 2 run function ui:common/particle/ss/2

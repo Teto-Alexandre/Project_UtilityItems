@@ -10,6 +10,8 @@
 #       作動モードを入力
 #   Num: int
 #       とりあえず数値
+#   Text: String
+#       アイテムidとか用
 #
 # give - その場にアイテムをドロップする
 # give - その場にアイテムをドロップする
@@ -20,6 +22,7 @@
     execute store result score $num ui_temp run data get storage ui:common input.Num
 
 # 分岐
+    execute if data storage ui:common input{Mode:"id"} run function ui:common/item/id/main
     execute if data storage ui:common input{Mode:"get"} run function ui:common/item/get/main
     execute if data storage ui:common input{Mode:"give"} run function ui:common/item/give/main
     execute if data storage ui:common input{Mode:"count"} run function ui:common/item/count/main

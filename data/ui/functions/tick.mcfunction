@@ -86,6 +86,8 @@
 ###       150001~: 本のアイテム
 ###       160001~: 釣り竿
 ###       170001~: クッキー
+###       180001~: クロスボウ
+###       190001~: コマンドブロック
 ###       210001~: 進捗の背景とアイコン
 ###       211001~: 鉄インゴット
 ###       212001~: 鉄ナゲット
@@ -169,6 +171,7 @@
         execute as @a[scores={ui_use1=1..}] run function ui:misc/act/use
         execute as @a[scores={ui_di=1..},tag=!tmw_mh_calc,nbt=!{SelectedItem:{}}] at @s run function ui:misc/act/drop
         execute as @a[tag=tmw_oh_calc,nbt={Inventory:[{Slot:-106b}]},nbt=!{SelectedItem:{}}] run function ui:misc/act/offhand
+        execute as @a[scores={ui_usec=1..}] at @s run function ui:misc/act/use_crossbow
 
     ## 所持アイテムid確認+装填確認
         execute as @a store result score @s ui_tmw_id run data get entity @s SelectedItem.tag.tmw.id

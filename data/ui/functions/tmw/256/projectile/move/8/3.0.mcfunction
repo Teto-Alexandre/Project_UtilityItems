@@ -1,0 +1,32 @@
+#見た目
+    #Particles Generated with: Cloud Wolf's Particle Grapher
+    particle dust 1 1 0.5 1.2 ^0.000 ^2.500 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^0.520 ^2.445 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.017 ^2.284 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.469 ^2.023 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.858 ^1.673 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.165 ^1.250 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.377 ^0.773 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.486 ^0.262 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.486 ^-0.261 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.378 ^-0.772 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^2.166 ^-1.249 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.859 ^-1.672 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.470 ^-2.022 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^1.018 ^-2.283 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^0.521 ^-2.445 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^0.001 ^-2.500 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-0.518 ^-2.446 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.015 ^-2.285 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.468 ^-2.024 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.857 ^-1.674 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.164 ^-1.252 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.377 ^-0.775 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.486 ^-0.263 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.487 ^0.259 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.378 ^0.770 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-2.166 ^1.248 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.860 ^1.671 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.472 ^2.021 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-1.019 ^2.283 ^0.000 0 0 0 0 1 force @a
+    particle dust 1 1 0.5 1.2 ^-0.523 ^2.445 ^0.000 0 0 0 0 1 force @a

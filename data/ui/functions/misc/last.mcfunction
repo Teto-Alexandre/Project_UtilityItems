@@ -14,6 +14,7 @@
         execute as @a[scores={ui_use2_tc=1..}] run function ui:misc/act/uc.c
         execute as @a[scores={ui_use1=1..}] run function ui:misc/act/uc
         execute as @a[tag=tmw_use] run function ui:misc/act/dd
+        execute as @a[scores={ui_usec=1..}] run function ui:misc/act/usec
         tag @a[tag=tmw_oh_n] remove tmw_oh_n
         tag @a[tag=tmw_oh_s] remove tmw_oh_s
 
@@ -44,7 +45,6 @@
         scoreboard players add @a[x_rotation=-90] ui_face_up 1
 
     ## 条件増加スコアのリセット
-        scoreboard players reset @a[scores={ui_usec=1..}] ui_usec
         scoreboard players reset @a[scores={ui_uses=1..}] ui_uses
         scoreboard players reset @a[scores={ui_usep=1..}] ui_usep
         scoreboard players reset @a[scores={ui_move_s=1..}] ui_move_s

@@ -10,6 +10,10 @@
     execute unless data storage tds: BypassArmor run data modify storage tds: BypassArmor set value 0b
     execute unless data storage tds: BypassResistance run data modify storage tds: BypassResistance set value 0b
 
+# 攻撃者情報を含むか確認
+    scoreboard players set $UUID tds_dmg 0
+    execute if data storage tds: Owner run scoreboard players set $UUID tds_dmg 1
+
 # 計算に必要な値を取得
     #function tds:core/get_status
     execute unless score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run data get entity @s Health 10000
@@ -112,9 +116,9 @@
 
     # プレイヤーじゃないなら見た目だけダメージ （オバフロ形式は直後にダメージを喰らうと100%バグるのが分かったので利用中止）
     # プレイヤーはエフェクトクラウドで一瞬耐性を付ける
-        execute at @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
+        execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
         execute if entity @s[type=ender_dragon,nbt=!{DragonPhase:9}] unless data entity @s {Silent:1b} run playsound minecraft:entity.ender_dragon.hurt hostile @a ~ ~ ~ 5 1 0
-        execute if entity @s[type=player,nbt=!{ActiveEffects:[{Id:25}]}] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
@@ -156,3 +160,4 @@
     scoreboard players reset $Attacker tds_dmg
     tag @e[tag=tds_tempa] remove tds_tempa
     data remove storage ui:temp Name
+    data remove storage tds: Owner

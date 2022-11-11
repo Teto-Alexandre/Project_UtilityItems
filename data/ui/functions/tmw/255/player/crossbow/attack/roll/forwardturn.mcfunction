@@ -1,0 +1,1 @@
+execute rotated ~-90 ~ if score $width ui_temp matches 2.. positioned ^ ^ ^0.4 run function ui:tmw/255/player/crossbow/attack/roll/moveleft

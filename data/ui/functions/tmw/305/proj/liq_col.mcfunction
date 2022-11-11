@@ -4,7 +4,7 @@
     scoreboard players remove @s ui_gpc 1
 
 # 消失
-    execute if score @s ui_gpc matches ..0 run function ui:tmw/305/proj/kill
+    execute if score @s ui_gpc matches ..0 run tag @s add tmw_255_proj_del
 
 # 耐えた時もこのtickの移動はおしまい
     tag @s add ui_temp_col

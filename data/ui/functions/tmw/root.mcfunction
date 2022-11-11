@@ -137,6 +137,10 @@
         execute if entity @a[scores={ui_tmw_id=253}] run function ui:tmw/253/lim
     #村人コンバーター
         execute if entity @a[scores={ui_tmw_id=254}] run function ui:tmw/254/lim
+    #質量銃器
+        execute if entity @a[scores={ui_tmw_id=255}] run function ui:tmw/255/lim
+    #バランスぶっ飛んだカラクラ
+        execute if entity @a[scores={ui_tmw_id=256}] run function ui:tmw/256/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
