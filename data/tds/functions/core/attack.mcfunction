@@ -123,24 +123,8 @@
         ## 攻撃者特定
         execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[tag=!tds_nolog,type=!#ui:unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @a if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
-        ## キルカウント
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run scoreboard players add @a[tag=tds_tempa] ui_kills 1
-        ## キルログ
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1 if score $Health tds_dmg matches ..0 run function tds:message/1
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 2 if score $Health tds_dmg matches ..0 run function tds:message/2
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 3 if score $Health tds_dmg matches ..0 run function tds:message/3
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 4 if score $Health tds_dmg matches ..0 run function tds:message/4
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 5 if score $Health tds_dmg matches ..0 run function tds:message/5
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 6 if score $Health tds_dmg matches ..0 run function tds:message/6
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 7 if score $Health tds_dmg matches ..0 run function tds:message/7
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 8 if score $Health tds_dmg matches ..0 run function tds:message/8
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 9 if score $Health tds_dmg matches ..0 run function tds:message/9
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 10 if score $Health tds_dmg matches ..0 run function tds:message/10
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 11 if score $Health tds_dmg matches ..0 run function tds:message/11
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 12 if score $Health tds_dmg matches ..0 run function tds:message/12
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 13 if score $Health tds_dmg matches ..0 run function tds:message/13
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 14 if score $Health tds_dmg matches ..0 run function tds:message/14
-        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 15 if score $Health tds_dmg matches ..0 run function tds:message/15
+        ## キルカウント + キルログ
+        execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run function tds:core/killlog
 
 # 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg

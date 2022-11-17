@@ -7,6 +7,9 @@
     
 #ダメージ本体
     data merge storage tds: {Damage:1f,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:-1,BypassResistance:false,DisableParticle:true}
+    scoreboard players operation #temp tds_dmg = @s tds_cold
+    scoreboard players operation #temp tds_dmg > $10 tds_dmg
+    execute store result storage tds: Damage float 0.1 run scoreboard players get #temp tds_dmg
     execute at @s run function tds:attack
 
 #効果を設定（跳ぶな！）
@@ -15,5 +18,6 @@
     effect give @s slowness 2 5 true
 
 #氷結カウント減少
-    scoreboard players remove @s tds_cold 1
+    scoreboard players operation @s tds_cold *= $9 tds_dmg
+    scoreboard players operation @s tds_cold /= $10 tds_dmg
     execute if score @s tds_cold > $max tds_cold run scoreboard players operation @s tds_cold = $max tds_cold
