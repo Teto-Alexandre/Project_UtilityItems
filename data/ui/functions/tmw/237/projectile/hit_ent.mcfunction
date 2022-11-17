@@ -7,7 +7,7 @@
 # ダメージ本体
     scoreboard players set $Return tds_dmg 0
     scoreboard players set $Lethal tds_dmg 0
-    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
+    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}
     execute if score $deathmessage ui_temp matches 1 run data modify storage tds: DeathMessage set value 14
     execute if score $deathmessage ui_temp matches 2 run data modify storage tds: DeathMessage set value 15
     #tellraw @a [{"text":"Attacker:"},{"score":{"name":"$id","objective":"ui_temp"}},{"text":" Team:"},{"score":{"name":"$team","objective":"ui_temp"}},{"text":" Obj:"},{"score":{"name":"$Attacker","objective":"tds_dmg"}}]

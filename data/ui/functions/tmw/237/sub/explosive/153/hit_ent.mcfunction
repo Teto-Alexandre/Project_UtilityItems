@@ -7,7 +7,7 @@
 # ダメージ本体
     scoreboard players set $Return tds_dmg 0
     scoreboard players set $Lethal tds_dmg 0
-    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:14,WeaponName:'{"text":"トルネード","color":"gold"}',EPF:-1,BypassArmor:false,BypassResistance:false}
+    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:14,WeaponName:'{"text":"トルネード","color":"gold"}',EPF:-1,BypassArmor:0,BypassResistance:false}
     execute store result storage tds: Damage float 0.1 run scoreboard players get #temp tds_dmg
     execute if score $survive ui_temp matches 1 at @s run function ui:tmw/237/misc/survive
     execute if score $survive ui_temp matches 0 at @s run function tds:attack

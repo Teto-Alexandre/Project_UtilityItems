@@ -7,7 +7,7 @@
     execute unless data storage tds: DeathMessage run data modify storage tds: DeathMessage set value 0
     execute unless data storage tds: EPF run data modify storage tds: EPF set value -1
     execute unless data storage tds: DisableParticle run data modify storage tds: DisableParticle set value 0b
-    execute unless data storage tds: BypassArmor run data modify storage tds: BypassArmor set value 0b
+    execute unless data storage tds: BypassArmor run data modify storage tds: BypassArmor set value 0
     execute unless data storage tds: BypassResistance run data modify storage tds: BypassResistance set value 0b
 
 # 攻撃者情報を含むか確認
@@ -18,15 +18,13 @@
     #function tds:core/get_status
     execute unless score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run data get entity @s Health 10000
     execute if score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run scoreboard players operation @s tds_hps *= $100 tds_dmg
-    execute if data storage tds: {BypassArmor:0b} store result score $defensePoints tds_dmg run attribute @s generic.armor get 100
-    execute if data storage tds: {BypassArmor:0b} store result score $toughness tds_dmg run attribute @s generic.armor_toughness get 100
+    execute unless data storage tds: {BypassArmor:-1} run function tds:core/armor/manager
     execute store result score $DamageType tds_dmg run data get storage tds: DamageType
     execute store result score $DeathMessage tds_dmg run data get storage tds: DeathMessage
     execute store result score $EPF tds_dmg run data get storage tds: EPF
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
     execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/player
-    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $defensePoints tds_dmg 0
-    execute if data storage tds: {BypassArmor:1b} run scoreboard players set $toughness tds_dmg 0
+    execute if data storage tds: {BypassArmor:-1} run function tds:core/armor/full_bypass
     execute if data storage tds: {BypassResistance:0b} store result score $Resistance tds_dmg run data get entity @s ActiveEffects[{Id:11}].Amplifier
     execute if data storage tds: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance tds_dmg 1
     execute if data storage tds: {BypassResistance:1b} run scoreboard players set $Resistance tds_dmg 0
@@ -81,6 +79,7 @@
     scoreboard players reset $toughness
     scoreboard players reset $EPF
     scoreboard players reset $Resistance
+    scoreboard players reset $Bypass
 
 #===========================================================================
 

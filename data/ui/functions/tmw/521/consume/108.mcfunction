@@ -4,7 +4,7 @@
 #scoreboard players set $c.dice.dis ui_temp 0
 #function ui:common/dice
 
-data merge storage tds: {Damage:6.00,DamageType:-1,DeathMessage:10,WeaponName:"",EPF:0,BypassArmor:true,BypassResistance:true}
+data merge storage tds: {Damage:6.00,DamageType:-1,DeathMessage:10,WeaponName:"",EPF:0,BypassArmor:-1,BypassResistance:true}
 execute at @s run function tds:attack
 experience add @s 25 points
 

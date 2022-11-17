@@ -1,2 +1,2 @@
 setblock ~ ~ ~ air destroy
-scoreboard players remove @s ui_gpc 10
+scoreboard players remove $break ui_temp 100

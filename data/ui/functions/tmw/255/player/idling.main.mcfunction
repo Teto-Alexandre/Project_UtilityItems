@@ -25,6 +25,9 @@ execute store result score $basetype ui_temp run data get storage ui:gun temp.Ba
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 
+# 検知範囲拡大
+tag @a[tag=tmw_use_s] add tmw_use_n
+
 # 常駐効果
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core

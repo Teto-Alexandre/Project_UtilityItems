@@ -181,9 +181,11 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_bc dummy {"text":"UtilityItems_BurstCount","color":"dark_blue"}
     #視野効果用
     scoreboard objectives add ui_bc2 dummy {"text":"UtilityItems_BurstCount2","color":"dark_blue"}
-    scoreboard objectives add ui_bpart dummy {"text":"UtilityItems_BulletParticle","color":"dark_blue"}
     scoreboard objectives add ui_autohit dummy {"text":"UtilityItems_AutoHit","color":"dark_blue"}
+    scoreboard objectives add ui_bpart dummy {"text":"UtilityItems_BulletParticle","color":"dark_blue"}
     scoreboard objectives add ui_hpart dummy {"text":"UtilityItems_HitParticle","color":"dark_blue"}
+    scoreboard objectives add ui_bmods dummy {"text":"UtilityItems_BulletModifiersCount","color":"dark_blue"}
+    scoreboard objectives add ui_hmods dummy {"text":"UtilityItems_HitModifiersCount","color":"dark_blue"}
     scoreboard objectives add ui_kb dummy {"text":"UtilityItems_Knockback","color":"dark_blue"}
     scoreboard objectives add ui_bdt dummy {"text":"UtilityItems_BulletDamageType","color":"dark_blue"}
     scoreboard objectives add ui_dmg dummy {"text":"UtilityItems_DamageMultiple","color":"dark_blue"}
@@ -292,6 +294,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard players set #30 ui_num 30
     scoreboard players set #40 ui_num 40
     scoreboard players set #50 ui_num 50
+    scoreboard players set #60 ui_num 60
     scoreboard players set #81 ui_num 81
     scoreboard players set #90 ui_num 90
     scoreboard players set #95 ui_num 95

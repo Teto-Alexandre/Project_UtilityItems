@@ -8,7 +8,7 @@ execute positioned ~1 ~1 ~-1 if block ~ ~ ~ #ui:birch unless entity @e[distance=
 execute positioned ~ ~1 ~1 if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
 execute positioned ~ ~1 ~ if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
 execute positioned ~ ~1 ~-1 if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
-execute positioned ~-1 ~1 ~ if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
+execute positioned ~-1 ~1 ~1 if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
 execute positioned ~-1 ~1 ~ if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
 execute positioned ~-1 ~1 ~-1 if block ~ ~ ~ #ui:birch unless entity @e[distance=..0.5,tag=ui_C_birch] run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_C_birch"],NoGravity:1b,Marker:1b,Invisible:1b}
 

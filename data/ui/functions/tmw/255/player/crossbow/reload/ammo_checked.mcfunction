@@ -1,6 +1,7 @@
 # 弾が足りない
 
 # 条件に当てはまる弾を線形探索で探し、スロットを特定する
+    execute store result score $max_size ui_temp run data get storage ui:gun temp.MaxSize
     data modify storage ui:temp temp set from entity @s Inventory
     scoreboard players set $slot ui_temp -1
     #execute if data storage ui:temp temp[{tag:{tmw:{id:255,type:2}}}] store result score $slot ui_temp run data get storage ui:temp temp[{tag:{tmw:{id:255,type:2}}}].Slot

@@ -24,7 +24,7 @@ scoreboard players operation $damage ui_temp /= #50 ui_num
 scoreboard players operation $damage_type ui_temp = @s ui_bdt
 # 破壊力を計算
 scoreboard players operation $break ui_temp = $damage ui_temp
-scoreboard players operation $break ui_temp /= #4 ui_num
+scoreboard players operation $break ui_temp *= #2 ui_num
 scoreboard players operation $break.max ui_temp = $break ui_temp
 
 # idを共有
@@ -32,7 +32,10 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+execute as @a[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+
+# 追加効果
+#execute if score @s ui_bmods matches 1.. run function ui:tmw/255/projectile/modifiers
 
 # 重力補正
 function ui:tmw/255/projectile/gravity
@@ -47,9 +50,10 @@ scoreboard players operation @s ui_bm *= $break ui_temp
 scoreboard players operation @s ui_bm /= $break.max ui_temp
 
 # キル条件
-#tellraw @a [{"score":{"name":"@s","objective":"ui_br"}},{"text":"/"},{"score":{"name":"@s","objective":"ui_bm"}}]
+#tellraw @a [{"score":{"name":"@s","objective":"ui_br"}},{"text":"<"},{"score":{"name":"@s","objective":"ui_bm"}},{"text":"[res:"},{"score":{"name":"@s","objective":"ui_autohit"}},{"text":"],"},{"text":"Break:","color":"red"},{"score":{"name":"$break","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$break.max","objective":"ui_temp"},"color":"red"},{"text":","},{"text":"Mass:","color":"aqua"},{"score":{"name":"@s","objective":"ui_dmg"},"color":"aqua"}]
+#tellraw @a [,{"text":" : "},{"score":{"name":"@s","objective":"ui_bm"}}]
 execute at @s if score @s ui_bm <= @s ui_br run function ui:tmw/255/projectile/end
 
 # 一時タグ削除
-tag @e[tag=ui_temp_team] remove ui_temp_team
+tag @a[tag=ui_temp_team] remove ui_temp_team
 tag @e[tag=ui_temp_this] remove ui_temp_this

@@ -150,17 +150,7 @@
 ###      進捗 : 100
 
 # tickの最初にやること
-
-    #鯖から抜けてた人対策
-        execute as @a[scores={ui_lg=1..}] run function ui:misc/leave_game
-    #メニューキル
-        kill @e[type=item,nbt={Item:{tag:{ui:{ismenu:1}}}}]
-    #タグが付いてる人の周囲の特定アイテムをキル
-        execute as @e[tag=ui_unlock] at @s run function ui:misc/craft
-    #汎用浮遊リセット
-        execute as @e[tag=ui_kb] run function ui:misc/levitation
-    #モーションスライムキル
-        execute if score $motionslime ui_world matches 1 run function ui:misc/kill_slime
+    function ui:misc/first
 
 # スキル用操作検知システム
 
@@ -172,6 +162,7 @@
         execute as @a[scores={ui_di=1..},tag=!tmw_mh_calc,nbt=!{SelectedItem:{}}] at @s run function ui:misc/act/drop
         execute as @a[tag=tmw_oh_calc,nbt={Inventory:[{Slot:-106b}]},nbt=!{SelectedItem:{}}] run function ui:misc/act/offhand
         execute as @a[scores={ui_usec=1..}] at @s run function ui:misc/act/use_crossbow
+        execute as @a[advancements={ui:system/shield=true}] at @s run function ui:misc/act/using_shield
 
     ## 所持アイテムid確認+装填確認
         execute as @a store result score @s ui_tmw_id run data get entity @s SelectedItem.tag.tmw.id

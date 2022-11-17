@@ -14,8 +14,6 @@
 
 # ヒットパーティクル
     # サイズ別通常爆発
-        execute if score @s ui_hpart matches 1 run function ui:tmw/255/projectile/killeffect/1
-        execute if score @s ui_hpart matches 2 run function ui:tmw/255/projectile/killeffect/2
         execute if score @s ui_hpart matches 3 run function ui:tmw/255/projectile/killeffect/3
         execute if score @s ui_hpart matches 4 run function ui:tmw/255/projectile/killeffect/4
         execute if score @s ui_hpart matches 5 run function ui:tmw/255/projectile/killeffect/5

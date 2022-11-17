@@ -21,4 +21,4 @@
     execute as @s[tag=!ui_temp_col] positioned ^ ^ ^0.5 if block ~ ~ ~ #ui:liq run function ui:tmw/255/projectile/col/liq_col
 
 # 移動値が無くなるまで繰り返す
-    execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] at @s run function ui:tmw/255/projectile/move
+    execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col,tag=!tmw_255_proj_del] at @s run function ui:tmw/255/projectile/move

@@ -10,7 +10,7 @@ execute store result storage ui:gun temp.BurstMax int 1 run scoreboard players g
 data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw
 data modify storage ui:temp temp.gun set from storage ui:gun temp
 execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp temp.gun.now merge value {QFType:1}
-data modify storage ui:temp temp.gun.now merge value {Ink:0,CT:0,Burst:0,SP:0,SubTime:0,SPTime:0,IsHold:0,Amp:0,First:1,EPage:0}
+data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,Burst:0,SP:0,SubTime:0,SPTime:0,IsHold:0,Amp:0,First:1,EPage:0}
 
 # 書き込み終了
 item modify entity @s weapon.mainhand ui:gun/value/all

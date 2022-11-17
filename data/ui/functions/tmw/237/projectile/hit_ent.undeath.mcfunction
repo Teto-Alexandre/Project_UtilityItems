@@ -3,7 +3,7 @@
 # ダメージ本体
     scoreboard players set $Return tds_dmg 0
     scoreboard players set $Lethal tds_dmg 0
-    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:false,BypassResistance:false}
+    data merge storage tds: {Damage:1.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}
     #tellraw @a [{"text":"Attacker:"},{"score":{"name":"$id","objective":"ui_temp"}},{"text":" Team:"},{"score":{"name":"$team","objective":"ui_temp"}},{"text":" Obj:"},{"score":{"name":"$Attacker","objective":"tds_dmg"}}]
     execute store result storage tds: Damage float 0.1 run scoreboard players get $damage ui_temp
     execute store result storage tds: DamageType int 1 run scoreboard players get $damage_type ui_temp

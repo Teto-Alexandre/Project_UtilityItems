@@ -16,6 +16,8 @@
 # give - その場にアイテムをドロップする
 # give - その場にアイテムをドロップする
 #
+#   enableDurability:1
+#
 # @public
 
 # スコア化

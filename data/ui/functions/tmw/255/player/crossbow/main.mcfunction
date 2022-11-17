@@ -24,9 +24,14 @@ execute unless data storage ui:gun temp.now.First run function ui:tmw/255/player
 
 scoreboard players operation $id ui_temp = @s ui_id
 scoreboard players operation $team ui_temp = @s ui_team
+scoreboard players operation $sneak_time ui_temp = @s ui_st2
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
+execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets
+
+# 検知範囲拡大
+tag @a[tag=tmw_crossbow_mh_s] add tmw_crossbow_mh_n
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst

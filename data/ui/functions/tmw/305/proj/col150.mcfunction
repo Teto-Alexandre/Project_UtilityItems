@@ -1,5 +1,5 @@
 setblock ~ ~ ~ air destroy
-scoreboard players remove $break ui_temp 150
+scoreboard players remove @s ui_gpc 150
 
 #不可壊破壊の実績解除判定
 tag @s add ui_temp

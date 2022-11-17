@@ -12,5 +12,5 @@
     kill @e[tag=ui_marker]
 
 # ショットガン.lp
-    scoreboard players remove $multishot ui_temp 1
-    execute if score $multishot ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
+    scoreboard players remove $pack ui_temp 1
+    execute if score $pack ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1

@@ -15,6 +15,7 @@
         execute as @a[scores={ui_use1=1..}] run function ui:misc/act/uc
         execute as @a[tag=tmw_use] run function ui:misc/act/dd
         execute as @a[scores={ui_usec=1..}] run function ui:misc/act/usec
+        #execute as @a[tag=tmw_shield] run function ui:misc/act/last/shield
         tag @a[tag=tmw_oh_n] remove tmw_oh_n
         tag @a[tag=tmw_oh_s] remove tmw_oh_s
 

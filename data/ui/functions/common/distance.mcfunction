@@ -21,6 +21,7 @@
 # 分岐
     execute if data storage ui:common input{Mode:"sqrt"} run function ui:common/distance/sqrt/main
     execute if data storage ui:common input{Mode:"dist"} run function ui:common/distance/dist/main
+    execute if data storage ui:common input{Mode:"dist_point"} run function ui:common/distance/dist_point/main
 
 # 入力
     scoreboard players operation $Return ui_temp = $result ui_temp
