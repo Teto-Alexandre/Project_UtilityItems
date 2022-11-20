@@ -18,6 +18,6 @@
     effect give @s slowness 2 5 true
 
 #氷結カウント減少
-    scoreboard players operation @s tds_cold *= $9 tds_dmg
-    scoreboard players operation @s tds_cold /= $10 tds_dmg
+    scoreboard players operation @s tds_cold *= $4 tds_dmg
+    scoreboard players operation @s tds_cold /= $5 tds_dmg
     execute if score @s tds_cold > $max tds_cold run scoreboard players operation @s tds_cold = $max tds_cold

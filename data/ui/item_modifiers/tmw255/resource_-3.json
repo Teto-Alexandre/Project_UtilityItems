@@ -1,0 +1,36 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {"text": "タイプ: マガジン","color": "gray","italic": false}
+      ],
+      [
+        {"text": "Mass: ","color": "gray","italic": false},
+        {"score":{"name":"$Mass","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "BaseType: ","color": "gray","italic": false},
+        {"score":{"name":"$BaseType","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Burst: ","color": "gray","italic": false},
+        {"score":{"name":"$Burst","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "BurstType: ","color": "gray","italic": false},
+        {"score":{"name":"$BurstType","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "CT: ","color": "gray","italic": false},
+        {"score":{"name":"$CT","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Spread: ","color": "gray","italic": false},
+        {"score":{"name":"$Spread","objective":"ui_temp"}}
+      ]
+    ],
+    "replace": false
+  }
+]

@@ -5,7 +5,7 @@
     scoreboard players operation $magazine ui_temp < $temp ui_temp
 
 # 銃側の書き込み情報を取得 - スタックして装填するかを検証
-    data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw.bullets
+    data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw.bullets
     #割り込み：同型ならスタック
         execute store success score $empty ui_temp run data modify storage ui:temp temp3 set from storage ui:temp temp[-1]
         execute store result score $count ui_temp run data get storage ui:temp temp3.Count
@@ -34,5 +34,6 @@
     function ui:common/item
 
 # 書き込み終了
-    item modify entity @s weapon.mainhand ui:gun/value/bullets
+    execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/bullets
+    execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/bullets
     scoreboard players set $success ui_temp 1

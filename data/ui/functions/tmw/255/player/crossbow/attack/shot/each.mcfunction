@@ -1,7 +1,9 @@
 # Multiごとに個別
 
 #
-    data modify storage ui:gun temp3 set from entity @s SelectedItem.tag.tmw.bullets[0]
+    execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
+    execute if score $hand ui_temp matches 1 run data modify storage ui:tmw temp.this set from entity @s Inventory[{Slot:-106b}]
+    data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
     execute store result score $mass ui_temp run data get storage ui:gun temp3.Mass
     execute store result score $power ui_temp run data get storage ui:gun temp3.Power
     scoreboard players set $speed.add ui_temp 0
@@ -90,18 +92,18 @@
     data remove storage ui:gun temp3
 
 # 書き込み開始
-    data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw.bullets
+    data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw.bullets
     execute store result score $count ui_temp run data get storage ui:temp temp[0].Count
     scoreboard players remove $count ui_temp 1
     execute if score $count ui_temp matches ..0 run data remove storage ui:temp temp[0]
     execute if score $count ui_temp matches 1.. store result storage ui:temp temp[0].Count int 1 run scoreboard players get $count ui_temp
 
 # 書き込み終了
-    item modify entity @s weapon.mainhand ui:gun/value/bullets
+    execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/bullets
+    execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/bullets
 
 # 弾切れチェック
     execute store result score $check ui_temp run data get storage ui:temp temp
-    execute if score $check ui_temp matches ..0 run scoreboard players set $hand ui_temp 0
     execute if score $check ui_temp matches ..0 run scoreboard players set $item ui_temp 0
     execute if score $check ui_temp matches ..0 run function ui:tmw/255/player/switch/replace
 

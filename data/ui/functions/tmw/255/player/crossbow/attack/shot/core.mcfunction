@@ -26,7 +26,8 @@
 # 変更した
     scoreboard players set $changed ui_temp 1
     ## 装弾数確認
-    data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw.bullets
+    execute if score $hand ui_temp matches 0 run data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw.bullets
+    execute if score $hand ui_temp matches 1 run data modify storage ui:temp temp set from entity @s Inventory[{Slot:-106b}].tag.tmw.bullets
     execute store result score $num ui_temp run data get storage ui:temp temp
     scoreboard players set $check ui_temp 0
     function ui:tmw/255/player/crossbow/reload/linear_count

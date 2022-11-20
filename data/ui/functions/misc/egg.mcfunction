@@ -122,6 +122,14 @@ execute as @s[tag=ui_17] run tag @e[tag=ui_17_1_temp] remove ui_17_1_temp
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_2_temp] remove ui_17_2_temp
 execute as @s[tag=ui_17] at @s run function ui:ui/17/ss
 
+# ガンクラフター
+execute as @s[tag=ui_18] at @s run setblock ~ ~ ~ barrel{CustomName:'{"text":"ガンクラフター"}'} destroy
+execute as @s[tag=ui_18] at @s align xyz run summon armor_stand ~0.5 ~1.0 ~0.5 {ArmorItems:[{},{},{},{id:"minecraft:stray_spawn_egg",Count:1b,tag:{CustomModelData:130001}}],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["ui_18_1","ui_18_1_temp"]}
+execute as @s[tag=ui_18] at @s positioned ~ ~1 ~ run scoreboard players set @e[tag=ui_18_1_temp,sort=nearest,limit=1] ui_i_gui 0
+execute as @s[tag=ui_18] run tag @e[tag=ui_18_1_temp] remove ui_18_1_temp
+execute as @s[tag=ui_18] at @s run playsound block.metal.place block @a ~ ~ ~ 1 1 0
+execute as @s[tag=ui_18] at @s run function ui:ui/18/ss
+
 teleport @s 0 -200 0
 kill @s
 

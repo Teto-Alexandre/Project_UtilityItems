@@ -1,0 +1,57 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {"text": "Mass: ","color": "gray","italic": false},
+        {"score":{"name":"$Mass","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "BaseType: ","color": "gray","italic": false},
+        {"score":{"name":"$BaseType","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Burst: ","color": "gray","italic": false},
+        {"score":{"name":"$Burst","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "BurstType: ","color": "gray","italic": false},
+        {"score":{"name":"$BurstType","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Magazine: ","color": "gray","italic": false},
+        {"score":{"name":"$Magazine","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "MaxSize: ","color": "gray","italic": false},
+        {"score":{"name":"$MaxSize","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "ShotCT: ","color": "gray","italic": false},
+        {"score":{"name":"$ShotCT","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "BurstCT: ","color": "gray","italic": false},
+        {"score":{"name":"$BurstCT","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Spread: ","color": "gray","italic": false},
+        {"score":{"name":"$Spread","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "AirSpread: ","color": "gray","italic": false},
+        {"score":{"name":"$AirSpread","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "Barrel: ","color": "gray","italic": false},
+        {"score":{"name":"$Barrel","objective":"ui_temp"}}
+      ],
+      [
+        {"text": "MultiShot: ","color": "gray","italic": false},
+        {"score":{"name":"$MultiShot","objective":"ui_temp"}}
+      ]
+    ],
+    "replace": false
+  }
+]

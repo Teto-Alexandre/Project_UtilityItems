@@ -2,7 +2,7 @@
     function ui:tmw/255/player/crossbow/constant/shoot
 
 # 必要データ収集
-    data modify storage ui:gun temp2 set from entity @s SelectedItem.tag.tmw.main
+    data modify storage ui:gun temp2 set from storage ui:tmw temp.this.tag.tmw.main
     execute store result score $shottype ui_temp run data get storage ui:gun temp2.ShotType
     scoreboard players set $ink.add ui_temp 0
 

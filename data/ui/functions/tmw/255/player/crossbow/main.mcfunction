@@ -2,6 +2,7 @@
 
 # 今の状態はいつでも射撃できる
 scoreboard players set $stats ui_temp 0
+scoreboard players set $hand ui_temp 0
 
 #
 item modify entity @s weapon.mainhand ui:crossbow_charge
@@ -17,9 +18,11 @@ scoreboard players set $burst_alt.id ui_temp 0
 scoreboard players set $ishold ui_temp 0
 
 # 必要データ収集
-data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
-data modify storage ui:gun temp.DisplayName set from entity @s SelectedItem.tag.display.Name
-# 最後に持った時間と連続していなかった場合ペナルティ（changedで常時時間係数を監視しないといけないので没）
+data modify storage ui:tmw temp.this set from entity @s SelectedItem
+data modify storage ui:gun temp set from storage ui:tmw temp.this.tag.tmw.gun
+data modify storage ui:gun temp.DisplayName set from storage ui:tmw temp.this.tag.display.Name
+
+# 初期設定
 execute unless data storage ui:gun temp.now.First run function ui:tmw/255/player/crossbow/changed/first
 
 scoreboard players operation $id ui_temp = @s ui_id
@@ -32,6 +35,7 @@ execute store result score $bullets ui_temp run data get storage ui:gun temp.now
 
 # 検知範囲拡大
 tag @a[tag=tmw_crossbow_mh_s] add tmw_crossbow_mh_n
+tag @a[tag=tmw_drop_s] add tmw_drop_n
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
@@ -61,15 +65,9 @@ execute as @s[tag=tmw_drop_n] run function ui:tmw/255/player/crossbow/reload/top
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/255/player/crossbow/ct
 
-# hc
-scoreboard players set $ink ui_temp 1
-scoreboard players set $ink.main ui_temp 1
-
 # 弾丸の射出
-    #たまなしバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp < $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/fail
     #たまありバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/attack/master
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/attack/master
     #バースト+クールタイム完遂、発射できなかったなら
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/255/player/crossbow/fail
 
@@ -83,6 +81,7 @@ tag @s remove ui_temp_success
 # 一時的ストレージクリア
 data remove storage ui:gun temp
 data remove storage ui:gun temp2
+data remove storage ui:tmw temp
 
 # 最後に
 schedule function ui:tmw/255/player/crossbow/last 1t append

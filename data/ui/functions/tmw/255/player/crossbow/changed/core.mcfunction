@@ -11,4 +11,6 @@ execute store result storage ui:gun temp.now.Bullets int 1 run scoreboard player
 execute if score $subtime ui_temp matches 0 if score $sptime ui_temp matches 0 run function ui:tmw/255/player/crossbow/changed/bar_ink
 execute if score $subtime ui_temp matches 1.. if score $sptime ui_temp matches 0 run function ui:tmw/255/player/crossbow/changed/bar_sub
 execute if score $sptime ui_temp matches 1.. run function ui:tmw/255/player/crossbow/changed/bar_sp
-item modify entity @s weapon.mainhand ui:tmw255/now
+execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/now
+execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/now
+#say a

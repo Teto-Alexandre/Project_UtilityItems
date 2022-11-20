@@ -121,8 +121,8 @@ execute as @s[tag=ui_egg_i_10] at @s positioned ~ ~1 ~ run scoreboard players se
 execute as @s[tag=ui_egg_i_10] at @s positioned ~ ~1 ~ run scoreboard players set @e[tag=ui_i_10,sort=nearest,limit=1] ui_i_gui 0
 execute as @s[tag=ui_egg_i_10] at @s run playsound block.metal.place block @a ~ ~ ~ 1 1 0
 
-execute as @e[tag=ui_i_new] run function ui:industry/make_id
-execute as @e[tag=ui_i_new] at @s run function ui:industry/link
+execute as @e[tag=ui_i_new] at @s unless entity @a[scores={ui_st=1..},distance=..5] run function ui:industry/make_id
+execute as @e[tag=ui_i_new] at @s unless entity @a[scores={ui_st=1..},distance=..5] run function ui:industry/link
 
 tag @e[tag=ui_i_new] remove ui_i_new
 

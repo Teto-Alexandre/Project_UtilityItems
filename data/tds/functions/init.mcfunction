@@ -1,7 +1,7 @@
 #初回
 
 tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 2 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 4 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 # hpの桁数をint型で表現する
 scoreboard objectives add tds_hpp dummy {"text":"TetoDamageSystem_HealthPointPlace","color":"gold","italic":true}
@@ -39,6 +39,6 @@ scoreboard players set $20000 tds_dmg 20000
 scoreboard players set $2^19 tds_dmg 524288
 
 # 可変設定項目
-scoreboard players set $max tds_fire 10
-scoreboard players set $max tds_cold 10
-scoreboard players set $version tds_dmg 3
+scoreboard players set $max tds_fire 20
+scoreboard players set $max tds_cold 20
+scoreboard players set $version tds_dmg 4

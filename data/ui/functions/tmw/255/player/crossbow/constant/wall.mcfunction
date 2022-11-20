@@ -28,8 +28,9 @@
     item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.feet with air
 
 # ストレージにモデルデータを隔離
-    execute store result score $model ui_temp run data get entity @s SelectedItem.tag.CustomModelData
-    item modify entity @s weapon.mainhand ui:gun/value/model_air
+    execute store result score $model ui_temp run data get storage ui:tmw temp.this.tag.CustomModelData
+    execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/model_air
+    execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/model_air
 
 # エフェクト
     execute if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~1.2 ~ 0.1 0.1 0.1 0 2 normal

@@ -10,6 +10,7 @@
     "minecraft:damaged_anvil",
     "minecraft:netherite_block",
     "minecraft:ender_chest",
-    "minecraft:enchanting_table"
+    "minecraft:enchanting_table",
+    "minecraft:respawn_anchor"
   ]
 }

@@ -40,8 +40,6 @@
     "minecraft:attached_pumpkin_stem",
     "minecraft:carrots",
     "minecraft:beetroots",
-    "minecraft:water",
-    "minecraft:lava",
     "minecraft:kelp",
     "minecraft:kelp_plant",
     "minecraft:seagrass",
@@ -76,6 +74,7 @@
     "minecraft:light",
     "minecraft:scaffolding",
     "minecraft:repeater",
-    "minecraft:comparator"
+    "minecraft:comparator",
+    "#ui:liq"
   ]
 }
