@@ -141,6 +141,10 @@
         execute if entity @a[scores={ui_tmw_id=255}] run function ui:tmw/255/lim
     #バランスぶっ飛んだカラクラ
         execute if entity @a[scores={ui_tmw_id=256}] run function ui:tmw/256/lim
+    #黒穹の剣
+        execute if entity @a[scores={ui_tmw_id=257}] run function ui:tmw/257/lim
+    #鎖
+        execute if entity @a[scores={ui_tmw_id=258}] run function ui:tmw/258/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

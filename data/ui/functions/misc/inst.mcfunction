@@ -29,7 +29,16 @@ scoreboard players set @s ui_bc -1
 scoreboard players set @s ui_skilltree_v 1
 scoreboard players set @s ui_d_mult 10
 scoreboard players set @s ui_lvl_craft_lvl 0
-scoreboard players set @s ui_lvl_craft_exp -100
+scoreboard players set @s ui_lvl_craft_exp -10000
+scoreboard players set @s ui_lvl_mine_lvl 0
+scoreboard players set @s ui_lvl_mine_exp -10000
+scoreboard players set @s ui_lvl_cut_lvl 0
+scoreboard players set @s ui_lvl_cut_exp -10000
+scoreboard players set @s ui_lvl_dig_lvl 0
+scoreboard players set @s ui_lvl_dig_exp -10000
+scoreboard players set @s ui_lvl_harv_lvl 0
+scoreboard players set @s ui_lvl_harv_exp -10000
+scoreboard players set @s ui_mine_f 0
 
 #プレイヤーidを振る
 execute as @s unless entity @s[scores={ui_id=1..}] run function ui:make_id

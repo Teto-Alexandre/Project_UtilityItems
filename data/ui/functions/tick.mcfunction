@@ -130,6 +130,7 @@
 ###               1013: 金の糸
 ###               1014: 金のメカニカルパーツ
 ###               1015: 精製アメジスト
+###               1016: 黒穹の残滓
 
     ##   attributeのUUID使用:
 
@@ -169,6 +170,12 @@
         execute as @a store result score @s ui_tmw_id2 run data get entity @s Inventory.[{Slot:-106b}].tag.tmw.id
         execute as @a store result score @s ui_slotable run data get entity @s SelectedItem.tag.tmw.slotable
 
+    ## 破壊ツール
+        execute as @a[nbt={SelectedItem:{tag:{ui_shortcuts:{Tags:["pickaxe"]}}}}] at @s run function ui:misc/act/break/pickaxe/main
+        execute as @a[nbt={SelectedItem:{tag:{ui_shortcuts:{Tags:["axe"]}}}}] at @s run function ui:misc/act/break/axe/main
+        execute as @a[nbt={SelectedItem:{tag:{ui_shortcuts:{Tags:["shovel"]}}}}] at @s run function ui:misc/act/break/shovel/main
+        execute as @a[nbt={SelectedItem:{tag:{ui_shortcuts:{Tags:["hoe"]}}}}] at @s run function ui:misc/act/break/hoe/main
+
     ## 操作要件確認用
         #execute as @a[tag=tmw_use] run say 攻撃時能力発動!
         #execute as @a[tag=tmw_drop_n] run say Qキー能力発動!
@@ -190,6 +197,9 @@
         execute if entity @a[scores={ui_tmw_id_old=1..}] run scoreboard players set $tmw.act ui_world 1
         execute if entity @a[scores={ui_tmw_id_old2=1..}] run scoreboard players set $tmw.act ui_world 1
         execute if score $tmw.act ui_world matches 1 run function ui:tmw/root
+    
+    ## ブロック破壊されたアイテムの本体
+        execute if score $tick.break ui_world matches 1 run function ui:misc/act/break/major
 
     ## ｲｴｰｲ内部スロット持ってる～？
         execute if entity @a[scores={ui_slotable=1..}] run function ui:tmw/slot_root
@@ -250,7 +260,7 @@
 
 # 一秒おきに実行するコマンドのカウント
     scoreboard players add $world ui_tc 1
-    execute if score $world ui_tc matches 21.. run function ui:1sec
+    execute if score $world ui_tc matches 21.. run function ui:periodic/1sec
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

@@ -3,12 +3,10 @@
 
 # 現在のレベルから次の必要経験値を計算する [ (lv*1.5 + 10)*lv + 100 ]
     execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp = $level ui_temp
-    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp *= #3 ui_num
-    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp /= #2 ui_num
-    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp += #10 ui_num
+    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp += #100 ui_num
     execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp1 ui_temp *= $level ui_temp
-    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players add $temp1 ui_temp 100
-    execute if score @s ui_lvl_craft_exp matches 0.. if score @s ui_lvl_craft_lvl matches 100 run scoreboard players set $temp1 ui_temp 2147483647
+    execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players add $temp1 ui_temp 10000
+    execute if score @s ui_lvl_craft_exp matches 0.. if score @s ui_lvl_craft_lvl matches 1000 run scoreboard players set $temp1 ui_temp 2147483647
 
 # 10の倍数のレベルになったことを検知してカウントアップ
     execute if score @s ui_lvl_craft_exp matches 0.. run scoreboard players operation $temp2 ui_temp = $level ui_temp

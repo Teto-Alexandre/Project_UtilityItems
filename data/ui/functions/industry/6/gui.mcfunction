@@ -29,6 +29,7 @@
     execute at @s[scores={ui_i_recipe=43}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:iron_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1011},CustomModelData:211004,display:{Name:'{"italic":false,"color":"aqua","text":"天銀インゴット"}',Lore:['{"text":"特殊なツルハシで衝撃を加えたことで","color":"gray","italic":false}','{"text":"石が変質した金属でできている","color":"gray","italic":false}','{"text":"素材としての利用価値がある","color":"gray","italic":false}']}}}
     execute at @s[scores={ui_i_recipe=51}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:diamond",Count:1b,Slot:15b}
     execute at @s[scores={ui_i_recipe=52}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:iron_ingot",Count:1b,Slot:15b,tag:{tmw:{id:1004},CustomModelData:211001,display:{Name:'{"italic":false,"color":"light_purple","text":"エーテリウムの塊"}',Lore:['{"text":"エーテリウムの大気によって","color":"gray","italic":false}','{"text":"変質した金属の塊","color":"gray","italic":false}','{"text":"素材としての利用価値が高い","color":"gray","italic":false}']}}}
+    execute at @s[scores={ui_i_recipe=53}] run data modify entity @s ArmorItems[3].tag.ui.Item set value {id:"minecraft:command_block",Count:1b,Slot:15b,tag:{tmw:{id:1017},CustomModelData:191002,display:{Name:'{"text":"黒穹の断片","color":"light_purple","italic":false}'}}}
 
 #スロットセット
     item replace block ~ ~ ~ container.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

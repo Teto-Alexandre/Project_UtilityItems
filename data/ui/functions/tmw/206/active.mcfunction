@@ -14,4 +14,6 @@
 
 #周囲にあるものを回収する
     teleport @e[type=item,distance=..20,nbt={Age:0s}] ~ ~ ~
+    tag @e[type=item,distance=..1,nbt={Age:0s}] add ui_drop_harvd
+    scoreboard players operation @e[type=item,distance=..1,nbt={Age:0s}] ui_id = $id ui_temp
     execute as @e[type=item,distance=..2,nbt={Age:0s}] run data merge entity @s {PickupDelay:0s}

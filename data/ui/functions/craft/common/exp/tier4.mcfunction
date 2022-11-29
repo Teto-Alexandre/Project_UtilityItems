@@ -1,1 +1,1 @@
-scoreboard players add @s ui_lvl_craft_exp 2500
+scoreboard players add @s ui_lvl_craft_exp 25000

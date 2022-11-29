@@ -1,4 +1,4 @@
-#> ui:1sec
+#> ui:periodic/1sec
 #
 # 1秒ごとに実行
 #
@@ -8,7 +8,8 @@
 scoreboard players add $5sec ui_tc 1
 execute if score $5sec ui_tc matches 6.. run scoreboard players set $5sec ui_tc 1
 scoreboard players add $world2 ui_tc 1
-execute if score $world2 ui_tc matches 11.. run function ui:10sec
+execute if score $world2 ui_tc matches 11.. run function ui:periodic/10sec
+execute if score $world2 ui_tc matches 3 run function ui:periodic/10sec_3
 scoreboard players set $world ui_tc 1
 
 #障壁

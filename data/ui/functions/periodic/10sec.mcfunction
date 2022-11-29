@@ -15,7 +15,11 @@
     scoreboard players reset @a[scores={ui_openc=1..}] ui_openc
 
 # レベル関数
-    execute as @a[scores={ui_lvl_craft_exp=1..}] run function ui:level/craft/exp
+    execute as @a[scores={ui_lvl_craft_exp=0..}] run function ui:level/craft/exp
+    execute as @a[scores={ui_lvl_mine_exp=0..}] run function ui:level/mine/exp
+    execute as @a[scores={ui_lvl_cut_exp=0..}] run function ui:level/cut/exp
+    execute as @a[scores={ui_lvl_dig_exp=0..}] run function ui:level/dig/exp
+    execute as @a[scores={ui_lvl_harv_exp=0..}] run function ui:level/harv/exp
 
 # 次周期用
     scoreboard players set $world2 ui_tc 1

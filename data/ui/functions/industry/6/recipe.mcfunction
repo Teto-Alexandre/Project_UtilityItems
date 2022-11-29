@@ -26,6 +26,7 @@
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:11b,tag:{tmw:{id:1010}}}]} run scoreboard players set @s ui_i_recipe 43
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:11b,id:"minecraft:coal_block"}]} run scoreboard players set @s ui_i_recipe 51
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:11b,tag:{tmw:{id:1003}}}]} run scoreboard players set @s ui_i_recipe 52
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:11b,tag:{tmw:{id:1016}}}]} run scoreboard players set @s ui_i_recipe 53
     #レシピ情報をもとに作業時間を設定
         execute if entity @s[scores={ui_i_recipe=1..10}] run scoreboard players set @s ui_i_ctt 2000
         execute if entity @s[scores={ui_i_recipe=11..20}] run scoreboard players set @s ui_i_ctt 1200
@@ -37,5 +38,6 @@
         scoreboard players set @s ui_i_conitem 9
         execute if entity @s[scores={ui_i_recipe=11..20}] run scoreboard players set @s ui_i_conitem 4
         execute if entity @s[scores={ui_i_recipe=31}] run scoreboard players set @s ui_i_conitem 1
+        execute if entity @s[scores={ui_i_recipe=53}] run scoreboard players set @s ui_i_conitem 64
     #レシピ情報をもとに生成数を設定
         execute if entity @s[scores={ui_i_recipe=1..}] run scoreboard players set @s ui_i_resitem 1

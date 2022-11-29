@@ -55,6 +55,7 @@
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:227,type:2}}},{Slot:11b,tag:{tmw:{id:1015}}}]} run scoreboard players set @s ui_i_recipe 221
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:227,type:3}}},{Slot:11b,tag:{tmw:{id:1012}}}]} run scoreboard players set @s ui_i_recipe 222
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,id:"minecraft:ender_eye"},{Slot:11b,id:"minecraft:diamond"}]} run scoreboard players set @s ui_i_recipe 223
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,id:"minecraft:nether_star"},{Slot:11b,tag:{tmw:{id:1018}}}]} run scoreboard players set @s ui_i_recipe 224
         
         # 1-4軽量化用定型レシピ
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,id:"minecraft:stone"},{Slot:11b,id:"minecraft:gunpowder"}]} run scoreboard players set @s ui_i_recipe 301
