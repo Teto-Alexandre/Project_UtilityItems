@@ -1,7 +1,5 @@
 #使用時
 
 # 選択肢
-    execute if entity @e[tag=tmw_250_1,distance=..50] run function ui:tmw/250/use/trigger
-
-# 周囲にコアがないならコアを召喚
-    execute unless entity @e[tag=tmw_250_1,distance=..50] run function ui:tmw/250/use/summon
+    execute unless entity @e[tag=ui_common_mine_square,distance=..15] run data merge storage ui:common {input:{Mode:"generate",Size:7,Bomb:62}}
+    execute unless entity @e[tag=ui_common_mine_square,distance=..15] run function ui:common/mine_square
