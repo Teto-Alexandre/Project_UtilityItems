@@ -1,8 +1,8 @@
 #
 
 #
-execute at @e[tag=ui_common_mine_square] run setblock ~ ~1 ~ air
-execute at @e[tag=ui_common_mine_square] run setblock ~ ~ ~ air
-kill @e[tag=ui_common_mine_square]
+execute at @e[tag=ui_temp_obj] run setblock ~ ~1 ~ air
+execute at @e[tag=ui_temp_obj] run setblock ~ ~ ~ air
+kill @e[tag=ui_temp_obj]
 playsound ui.toast.challenge_complete player @a ~ ~ ~ 1 1 1
-say マインスイーパー クリア！
+tellraw @a [{"selector":"@a[tag=ui_temp_player]"},{"text":"がマインスイーパーをクリア！"}]

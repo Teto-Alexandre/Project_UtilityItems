@@ -2,6 +2,4 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:240,core:{point:3,pointused:0,skills
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:248},display:{Name:'[{"text":"サーチ","color":"white","italic":false}]',Lore:['{"text":"助かる","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}
 
-give @p minecraft:carrot_on_a_stick{tmw:{id:250},display:{Name:'[{"text":"マインスイーパー","color":"white","italic":false}]',Lore:['{"text":"右クリックで操作","color":"gold","italic":false}']},HideFlags:4}
-
 give @p minecraft:sheep_spawn_egg{tmw:{egg:18},display:{Name:'{"text":"ガンクラフター","italic":false,"color":"white"}',Lore:['[{"text":"チャーハン作るよ","color":"gray","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_18"]}}
