@@ -12,6 +12,7 @@
     execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
     execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
     scoreboard players set $speed.add ui_temp 0
+    execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run function ui:tmw/237/attack/shot/core_data.burst11
     # 弾
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp2.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp2.EndParticle
@@ -21,6 +22,9 @@
     execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/attack/shot/burst5
     execute if score $burst_alt.id ui_temp matches 201..300 run function ui:tmw/237/attack/shot/burst8
     execute if score $burst_alt.id ui_temp matches 301..400 run function ui:tmw/237/attack/shot/burst9
+
+# burst11限定
+    execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/attack/shot/burst11
 
 # タイプごとに拡散して発射
     #function ui:tmw/237/attack/shot/loop

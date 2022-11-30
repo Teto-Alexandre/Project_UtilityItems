@@ -76,6 +76,10 @@ execute if score $bursttype ui_temp matches 6 as @s[scores={ui_use2=1..}] run fu
 execute if score $bursttype ui_temp matches 7 run function ui:tmw/237/burst/burst7
 execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/burst8
 execute if score $bursttype ui_temp matches 9 run function ui:tmw/237/burst/burst9
+execute if score $bursttype ui_temp matches 10 run function ui:tmw/237/burst/burst10
+execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/burst/burst11
+
+
 
 # 常駐効果
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
