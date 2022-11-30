@@ -7,7 +7,7 @@
 #
     execute if score $type ui_temp matches 1 as @e[tag=ui_temp_mine_square,sort=nearest,limit=1] at @s run function ui:tmw/250/skills/detect_mono
     execute if score $type ui_temp matches 2 as @e[tag=ui_temp_mine_square,sort=nearest,limit=1] at @s run function ui:tmw/250/skills/detect_color
-    execute if score $type ui_temp matches 3..5 run scoreboard players set $count ui_temp 0
+    execute if score $type ui_temp matches 3..6 run scoreboard players set $count ui_temp 0
     execute if score $type ui_temp matches 3 as @e[tag=ui_temp_mine_square,sort=nearest,limit=5] at @s run function ui:tmw/250/skills/detect_color
     execute if score $type ui_temp matches 4 as @e[tag=ui_temp_mine_square,tag=!ui_common_mine_square_clear,sort=nearest,limit=9] at @s run function ui:tmw/250/skills/detect_color
     execute if score $type ui_temp matches 5 as @e[tag=ui_temp_mine_square,tag=!ui_common_mine_square_clear,sort=nearest,limit=20] at @s run function ui:tmw/250/skills/detect_color
