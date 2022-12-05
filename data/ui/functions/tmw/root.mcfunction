@@ -147,6 +147,8 @@
         execute if entity @a[scores={ui_tmw_id=257}] run function ui:tmw/257/lim
     #鎖
         execute if entity @a[scores={ui_tmw_id=258}] run function ui:tmw/258/lim
+    #スキルツリーメーカー
+        execute if entity @a[scores={ui_tmw_id=259}] run function ui:tmw/259/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

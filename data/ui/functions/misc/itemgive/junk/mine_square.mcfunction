@@ -1,8 +1,5 @@
 # マインスイーパー
-give @p minecraft:carrot_on_a_stick{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:9,Bomb:10,Life:0}},display:{Name:'[{"text":"MineSquare","color":"white","italic":false}]',Lore:['{"text":"右クリックで開始","color":"gold","italic":false}']},HideFlags:4}
-give @p minecraft:carrot_on_a_stick{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:16,Bomb:40,Life:0}},display:{Name:'[{"text":"MineSquare II","color":"white","italic":false}]',Lore:['{"text":"右クリックで開始","color":"gold","italic":false}']},HideFlags:4}
-give @p minecraft:carrot_on_a_stick{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:20,Bomb:100,Life:0}},display:{Name:'[{"text":"MineSquare III","color":"white","italic":false}]',Lore:['{"text":"右クリックで開始","color":"gold","italic":false}']},HideFlags:4}
-give @p minecraft:carrot_on_a_stick{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:40,Bomb:500,Life:0}},display:{Name:'[{"text":"MineSquare V","color":"white","italic":false}]',Lore:['{"text":"右クリックで開始","color":"gold","italic":false}']},HideFlags:4}
+give @p minecraft:carrot_on_a_stick{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:6,Bomb:6,Life:2}},display:{Name:'[{"text":"MineSquare 0","color":"white","italic":false}]',Lore:['{"text":"右クリックで開始","color":"gold","italic":false}']},HideFlags:4}
 
 give @p minecraft:carrot_on_a_stick{CustomModelData:111303,tmw:{id:250,type:1},display:{Name:'[{"text":"Detect I","color":"white","italic":false}]',Lore:['{"text":"最寄りのマスがボムか判明する","color":"gray","italic":false}','{"text":"ボム以外ならマスを開く","color":"gray","italic":false}']},HideFlags:4}
 give @p minecraft:carrot_on_a_stick{CustomModelData:111303,tmw:{id:250,type:2},display:{Name:'[{"text":"Detect II","color":"aqua","italic":false}]',Lore:['{"text":"最寄りのマスがボムか判明する","color":"gray","italic":false}','{"text":"ボム以外ならマスを開き周囲のボムの数も判明する","color":"gray","italic":false}']},HideFlags:4}

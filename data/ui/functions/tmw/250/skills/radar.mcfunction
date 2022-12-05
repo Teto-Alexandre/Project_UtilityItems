@@ -5,7 +5,12 @@
     #setblock ~ ~ ~ bedrock
 
 #
-    execute unless entity @s[tag=ui_common_mine_square_clear] run function ui:common/mine_square/system/bomb_color_glass
+    scoreboard players set $block ui_temp 0
+    execute if block ~ ~ ~ air run scoreboard players set $block ui_temp 1
+    execute if block ~ ~-1 ~ redstone_block run scoreboard players set $block ui_temp 2
+    function ui:common/mine_square/system/bomb_color_glass
+    execute if score $block ui_temp matches 1..2 run setblock ~ ~ ~ air
+    execute if score $block ui_temp matches 2 run setblock ~ ~-1 ~ redstone_block
 
 #
-    execute if block ~ ~ ~ white_stained_glass as @e[tag=ui_temp_mine_square,tag=!ui_common_mine_square_bomb,distance=0.1..1.5] run tag @s add ui_common_mine_square_press
+    scoreboard players set @s ui_bc2 3

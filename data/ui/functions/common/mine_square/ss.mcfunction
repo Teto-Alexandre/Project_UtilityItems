@@ -5,4 +5,4 @@
     function ui:common/mine_square/system/tick
 
 # SSロジック維持
-    execute if entity @e[tag=ui_common_mine_square] run schedule function ui:common/mine_square/ss 1t append
+    execute if entity @e[tag=ui_common_mine_square] run schedule function ui:common/mine_square/ss 2t replace
