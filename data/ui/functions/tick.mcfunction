@@ -158,6 +158,8 @@
 # スキル用操作検知システム
 
     ## 各操作の検知
+        execute as @a[tag=ui_attacked_by_entity] at @s run function ui:misc/act/player_attacked_by_entity
+        execute as @a[tag=ui_attack_to_entity] at @s run function ui:misc/act/player_attack_to_entity
         execute as @a run scoreboard players operation @s ui_ddn += @s ui_dda
         execute as @a run scoreboard players operation @s ui_ddn += @s ui_ddr
         execute as @a[scores={ui_ddn=1..}] at @s run tag @s add tmw_use

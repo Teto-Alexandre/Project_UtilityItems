@@ -19,6 +19,8 @@
         #execute as @a[tag=tmw_shield] run function ui:misc/act/last/shield
         tag @a[tag=tmw_oh_n] remove tmw_oh_n
         tag @a[tag=tmw_oh_s] remove tmw_oh_s
+        tag @a[tag=ui_attacked_by_entity] remove ui_attacked_by_entity
+        tag @a[tag=ui_attack_to_entity] remove ui_attack_to_entity
 
     ## 次tick用の手に何も持ってない検知
         tag @a[tag=tmw_mh_calc] remove tmw_mh_calc
