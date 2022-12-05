@@ -12,5 +12,9 @@
         "op": "merge"
       }
     ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{tmw:{enableQ:1}}"
   }
 ]
