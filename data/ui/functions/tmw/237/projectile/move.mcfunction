@@ -27,11 +27,18 @@
     execute if score @s ui_bpart matches 7 run function ui:tmw/237/projectile/move/7
     execute if score @s ui_bpart matches 8 run function ui:tmw/237/projectile/move/8
     execute if score @s ui_bpart matches 9 run function ui:tmw/237/projectile/move/9
+    #エルドアンカー
     execute if score @s ui_bpart matches 10 run function ui:tmw/237/projectile/move/10
+    #ストライク横
     execute if score @s ui_bpart matches 11 run function ui:tmw/237/projectile/move/11
+    #ストライク縦
     execute if score @s ui_bpart matches 12 run function ui:tmw/237/projectile/move/12
+    #バウンド小弾
     execute if score @s ui_bpart matches 13 run function ui:tmw/237/projectile/move/13
+    #洗濯機
     execute if score @s ui_bpart matches 14 run function ui:tmw/237/projectile/move/14
+    #ゲテルスピンギア（確率塗り小弾）
+    execute if score @s ui_bpart matches 15 run function ui:tmw/237/projectile/move/15
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102

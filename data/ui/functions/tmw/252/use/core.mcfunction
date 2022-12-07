@@ -10,31 +10,31 @@ function ui:common/rand
 scoreboard players operation $rand ui_temp = $rand ui_calc1
 
 # 召喚
-execute if score $rand ui_temp matches 0..99 run summon zombie ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 100..199 run summon skeleton ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],HandItems:[{id:"bow",Count:1b}]}
-execute if score $rand ui_temp matches 200..299 run summon creeper ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 300..399 run summon spider ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 400..499 run summon blaze ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 500..599 run summon endermite ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 600..699 run summon husk ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-execute if score $rand ui_temp matches 700..799 run summon cow ~ ~ ~ {Tags:["ui_temp_summoned"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],Passengers:[{id:"zombie",Tags:["ui_temp_summoned","tmw_252_base"]}]}
-execute if score $rand ui_temp matches 800..899 run summon bat ~ ~ ~ {Tags:["ui_temp_summoned"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],Passengers:[{id:"shulker",Tags:["ui_temp_summoned","tmw_252_base"]}]}
-execute if score $rand ui_temp matches 900..999 run summon witch ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-#execute if score $rand ui_temp matches 0..999 run summon blaze ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
-#schedule function ui:tmw/252/mob/ss 1t append
+#execute if score $rand ui_temp matches 0..99 run summon zombie ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 100..199 run summon skeleton ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],HandItems:[{id:"bow",Count:1b}]}
+#execute if score $rand ui_temp matches 200..299 run summon creeper ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 300..399 run summon spider ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 400..499 run summon blaze ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 500..599 run summon endermite ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 600..699 run summon husk ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+#execute if score $rand ui_temp matches 700..799 run summon cow ~ ~ ~ {Tags:["ui_temp_summoned"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],Passengers:[{id:"zombie",Tags:["ui_temp_summoned","tmw_252_base"]}]}
+#execute if score $rand ui_temp matches 800..899 run summon bat ~ ~ ~ {Tags:["ui_temp_summoned"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}],Passengers:[{id:"shulker",Tags:["ui_temp_summoned","tmw_252_base"]}]}
+#execute if score $rand ui_temp matches 900..999 run summon witch ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+execute if score $rand ui_temp matches 0..999 run summon blaze ~ ~ ~ {Tags:["ui_temp_summoned","tmw_252_base"],ActiveEffects:[{Id:11,Amplifier:6,Duration:2,ShowParticles:false}]}
+schedule function ui:tmw/252/mob/ss 1t append
 
 # 召喚説明文
-execute if score $rand ui_temp matches 0..99 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Zombie","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 100..199 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Skeleton","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 200..299 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Creeper","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 300..399 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Spider","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 400..499 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Blaze","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 500..599 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Endermite","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 600..699 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Husk","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 700..799 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"CowRider","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 800..899 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"BatBit","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-execute if score $rand ui_temp matches 900..999 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Witch","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
-#execute if score $rand ui_temp matches 0..999 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"SuperBlaze","color":"white"},{"text":" : ","color":"gray"},{"text":"✦✦✦","color":"white"}]
+#execute if score $rand ui_temp matches 0..99 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Zombie","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 100..199 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Skeleton","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 200..299 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Creeper","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 300..399 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Spider","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 400..499 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Blaze","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 500..599 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Endermite","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 600..699 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Husk","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 700..799 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"CowRider","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 800..899 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"BatBit","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+#execute if score $rand ui_temp matches 900..999 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"Witch","color":"white"},{"text":" : ","color":"gray"},{"text":"✦","color":"white"}]
+execute if score $rand ui_temp matches 0..999 run tellraw @s ["",{"text":"SlashSummon","color":"gray"},{"text":">> ","color":"green"},{"text":"SuperBlaze","color":"white"},{"text":" : ","color":"gray"},{"text":"✦✦✦","color":"white"}]
 
 # チームセットアップ
 execute if score $team ui_temp matches 1 run team join blue @s

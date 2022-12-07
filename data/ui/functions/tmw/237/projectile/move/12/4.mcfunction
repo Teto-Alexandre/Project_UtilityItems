@@ -8,4 +8,4 @@ particle block lime_concrete ^ ^0.2 ^-0.1 0 0 0 0 1 force
 particle block lime_concrete ^ ^0.0 ^-0.2 0 0 0 0 1 force
 particle block lime_concrete ^ ^-0.2 ^-0.5 0 0 0 0 1 force
 particle block lime_concrete ^ ^-0.4 ^-1 0 0 0 0 1 force
-execute store result score $paint ui_temp run fill ~-0.3 ~ ~-0.3 ~0.3 ~-3.5 ~0.3 lime_wool replace #ui:wools
+execute if predicate ui:percentage/75 store result score $paint ui_temp run fill ~-0.3 ~ ~-0.3 ~0.3 ~-3.5 ~0.3 lime_wool replace #ui:wools

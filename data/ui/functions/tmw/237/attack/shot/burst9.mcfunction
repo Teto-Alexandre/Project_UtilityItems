@@ -21,9 +21,15 @@
 
     execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp < $burst.max ui_temp run scoreboard players set $burst ui_temp 2
     execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players set $particle.fly ui_temp 12
-    execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players set $speed.plus ui_temp 5
+    execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $speed ui_temp 5
     execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players operation $damage ui_temp *= #4 ui_num
-    execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $range ui_temp 3
+    execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $range ui_temp 5
     execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp >= $burst.max ui_temp store result score $ink.main ui_temp run data get storage ui:gun temp.MainChargeInkUse
+
+    execute if score $burst_alt.id ui_temp matches 304 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players set $particle.fly ui_temp 12
+    execute if score $burst_alt.id ui_temp matches 304 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players remove $speed ui_temp 15
+    execute if score $burst_alt.id ui_temp matches 304 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players operation $damage ui_temp *= #5 ui_num
+    execute if score $burst_alt.id ui_temp matches 304 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $range ui_temp 40
+    execute if score $burst_alt.id ui_temp matches 304 if score $burst_alt ui_temp >= $burst.max ui_temp store result score $ink.main ui_temp run data get storage ui:gun temp.MainChargeInkUse
 
 #

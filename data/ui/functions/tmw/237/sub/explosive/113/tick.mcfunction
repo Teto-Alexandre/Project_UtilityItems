@@ -52,5 +52,5 @@
     execute if score @s ui_is matches 22.. at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] if entity @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run scoreboard players set @s ui_is 21
 
 # 処理終了（消える）
-    execute if entity @s[tag=ui_237_sub_explode] at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run function ui:tmw/237/sub/explosive/113/end
+    execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/113/end
     tag @e[tag=ui_temp_obj] remove ui_temp_obj

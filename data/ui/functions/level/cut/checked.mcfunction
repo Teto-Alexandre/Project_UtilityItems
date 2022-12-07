@@ -19,9 +19,7 @@
     execute if score $temp ui_temp matches 1.. run function ui:level/cut/fortune
 
 #
-    scoreboard players set $mod ui_calc1 10
-    function ui:common/rand
-    execute if score $rand ui_calc1 matches 0 at @s run function ui:level/cut/level/rand
+    execute if predicate ui:percentage/10 at @s run function ui:level/cut/level/additional
 
 #
     scoreboard players operation @a[tag=ui_temp_this] ui_lvl_cut_exp += $xp ui_temp

@@ -17,9 +17,12 @@
     execute if score $temp ui_temp matches 1 run tellraw @s {"text":" "}
     execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"  BONUSES ","color":"aqua","bold":true},{"text":":","color":"gray"}]
     execute if score $temp ui_temp matches 1 unless score $temp3 ui_temp matches 0 run tellraw @s [{"text":"    文明のレシピ x","color":"yellow","bold":true},{"score":{"name":"$temp3","objective":"ui_temp"},"color":"yellow"}]
-    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"    経験値 +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"},{"text":"00"}]
+    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"    経験値 +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"},{"text":"0"}]
     execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"    Digging Fortune +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"}]
     execute if score $temp ui_temp matches 1 if score $level ui_temp matches 10.. if score $level.old ui_temp matches ..9 run tellraw @s [{"text":"    [解禁]小さな黒穹の断片","color":"yellow","bold":true}]
+    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 25.. if score $level.old ui_temp matches ..24 run tellraw @s [{"text":"    [解禁]グロウストーンダスト","color":"yellow","bold":true}]
+    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 50.. if score $level.old ui_temp matches ..49 run tellraw @s [{"text":"    [解禁]火薬","color":"yellow","bold":true}]
+    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 100.. if score $level.old ui_temp matches ..99 run tellraw @s [{"text":"    [解禁]ダイヤモンド","color":"yellow","bold":true}]
     execute if score $temp ui_temp matches 1 run tellraw @s {"text":"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","color":"gold","bold":true}
 
 # レベルアップ報酬を渡す
@@ -28,7 +31,7 @@
         scoreboard players operation $c.give.num ui_temp = $temp3 ui_temp
         execute at @s run function ui:common/give
     #経験値
-        scoreboard players set $c.exp.num ui_temp 100
+        scoreboard players set $c.exp.num ui_temp 10
         scoreboard players operation $c.exp.num ui_temp *= $temp1 ui_temp
         execute at @s run function ui:common/exp
     #採掘幸運
