@@ -1,5 +1,4 @@
 # 初期状態にする
-    scoreboard players set $temp ui_temp 0
     scoreboard players set $temp3 ui_temp 0
     scoreboard players operation $level.old ui_temp = @s ui_lvl_cut_lvl
 
@@ -12,18 +11,30 @@
         scoreboard players operation $temp1 ui_temp -= $level.old ui_temp
 
 # レベルアップメッセージを送る
-    execute if score $temp ui_temp matches 1 run tellraw @s {"text":"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","color":"gold","bold":true}
-    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"  LEVEL UP! ","color":"aqua","bold":true},{"text":":","color":"gray"},{"text":" CUTTING ","color":"yellow"},{"score":{"name":"$level.old","objective":"ui_temp"},"color":"gray"},{"text":" → ","color":"yellow","bold":true},{"score":{"name":"$level","objective":"ui_temp"},"color":"yellow"}]
-    execute if score $temp ui_temp matches 1 run tellraw @s {"text":" "}
-    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"  BONUSES ","color":"aqua","bold":true},{"text":":","color":"gray"}]
-    execute if score $temp ui_temp matches 1 unless score $temp3 ui_temp matches 0 run tellraw @s [{"text":"    文明のレシピ x","color":"yellow","bold":true},{"score":{"name":"$temp3","objective":"ui_temp"},"color":"yellow"}]
-    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"    経験値 +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"},{"text":"0"}]
-    execute if score $temp ui_temp matches 1 run tellraw @s [{"text":"    Cutting Fortune +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"}]
-    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 10.. if score $level.old ui_temp matches ..9 run tellraw @s [{"text":"    [解禁]小さな黒穹の断片","color":"yellow","bold":true}]
-    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 25.. if score $level.old ui_temp matches ..24 run tellraw @s [{"text":"    [解禁]リンゴ","color":"yellow","bold":true}]
-    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 50.. if score $level.old ui_temp matches ..49 run tellraw @s [{"text":"    [解禁]金のリンゴ","color":"yellow","bold":true}]
-    execute if score $temp ui_temp matches 1 if score $level ui_temp matches 100.. if score $level.old ui_temp matches ..99 run tellraw @s [{"text":"    [解禁]エンチャントされた金のリンゴ","color":"yellow","bold":true}]
-    execute if score $temp ui_temp matches 1 run tellraw @s {"text":"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","color":"gold","bold":true}
+    tellraw @s {"text":"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","color":"gold","bold":true}
+    tellraw @s [{"text":"  LEVEL UP! ","color":"aqua","bold":true},{"text":":","color":"gray"},{"text":" CUTTING ","color":"yellow"},{"score":{"name":"$level.old","objective":"ui_temp"},"color":"gray"},{"text":" → ","color":"yellow","bold":true},{"score":{"name":"$level","objective":"ui_temp"},"color":"yellow"}]
+    tellraw @s {"text":" "}
+    tellraw @s [{"text":"  BONUSES ","color":"aqua","bold":true},{"text":":","color":"gray"}]
+    execute unless score $temp3 ui_temp matches 0 run tellraw @s [{"text":"    文明のレシピ x","color":"yellow","bold":true},{"score":{"name":"$temp3","objective":"ui_temp"},"color":"yellow"}]
+    tellraw @s [{"text":"    経験値 +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"},{"text":"0"}]
+    tellraw @s [{"text":"    Cutting Fortune +","color":"yellow","bold":true},{"score":{"name":"$temp1","objective":"ui_temp"},"color":"yellow"}]
+    execute if score $level ui_temp matches 10.. if score $level.old ui_temp matches ..9 run tellraw @s [{"text":"    [解禁]小さな黒穹の断片","color":"yellow","bold":true}]
+    execute if score $level ui_temp matches 25.. if score $level.old ui_temp matches ..24 run tellraw @s [{"text":"    [解禁]リンゴ","color":"yellow","bold":true}]
+    execute if score $level ui_temp matches 50.. if score $level.old ui_temp matches ..49 run tellraw @s [{"text":"    [解禁]金のリンゴ","color":"yellow","bold":true}]
+    execute if score $level ui_temp matches 100.. if score $level.old ui_temp matches ..99 run tellraw @s [{"text":"    [解禁]エンチャントされた金のリンゴ","color":"yellow","bold":true}]
+    execute run tellraw @s {"text":"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━","color":"gold","bold":true}
+
+# ブロードキャスト
+    execute if score $level ui_temp matches 100.. if score $level.old ui_temp matches ..99 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 100 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 200.. if score $level.old ui_temp matches ..199 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 200 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 300.. if score $level.old ui_temp matches ..299 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 300 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 400.. if score $level.old ui_temp matches ..399 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 400 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 500.. if score $level.old ui_temp matches ..499 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 500 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 600.. if score $level.old ui_temp matches ..599 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 600 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 700.. if score $level.old ui_temp matches ..699 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 700 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 800.. if score $level.old ui_temp matches ..799 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 800 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 900.. if score $level.old ui_temp matches ..899 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 900 ","color":"green"},{"text":"になりました","color":"gray"}]
+    execute if score $level ui_temp matches 1000.. if score $level.old ui_temp matches ..999 run tellraw @a [{"text":"Achievement","color":"white"},{"text":"> ","color":"green"},{"selector":"@s"},{"text":" の CUTTING レベルが","color":"gray"},{"text":" 1000 ","color":"green"},{"text":"になりました","color":"gray"}]
 
 # レベルアップ報酬を渡す
     #文明のレシピ
@@ -38,4 +49,4 @@
         scoreboard players operation @s ui_cut_f += $temp1 ui_temp
 
 # レベルアップサウンド
-    execute if score $temp ui_temp matches 1 at @s run playsound entity.player.levelup player @s ~ ~ ~ 1 0.5 0
+    execute at @s run playsound entity.player.levelup player @s ~ ~ ~ 1 0.5 0
