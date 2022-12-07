@@ -5,6 +5,7 @@ execute if score $burst.max ui_temp matches 0 run scoreboard players set $burst.
 execute store result score $speed ui_temp run data get storage ui:gun temp.now.Speed 100
 execute store result score $attack ui_temp run data get storage ui:gun temp.now.Attack 100
 execute store result score $attack_speed ui_temp run data get storage ui:gun temp.now.AttackSpeed 100
+execute store result score $Info ui_temp run data get storage ui:gun temp.now.Info
 
 # 書き込み開始
 execute store result storage ui:gun temp.BurstMax int 1 run scoreboard players get $burst.max ui_temp
@@ -38,8 +39,8 @@ execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhan
     execute store result score $MultiShot ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.MultiShot
 
 # 書き込み終了
-    execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/gun
-    execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/gun
+    execute unless score $Info ui_temp matches -1 if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/gun
+    execute unless score $Info ui_temp matches -1 if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/gun
 
 # 初期状態に戻す
 execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
