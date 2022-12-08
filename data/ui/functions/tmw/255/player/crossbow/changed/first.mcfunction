@@ -12,7 +12,7 @@ execute store result storage ui:gun temp.BurstMax int 1 run scoreboard players g
 data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw
 data modify storage ui:temp temp.gun set from storage ui:gun temp
 execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp temp.gun.now merge value {QFType:1}
-data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,Burst:0,SP:0,SubTime:0,SPTime:0,IsHold:0,Amp:0,First:1,EPage:0}
+data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,ReloadTime:0,Burst:0,IsHold:0,First:1}
 scoreboard players set $bullets ui_temp 0
 
 # 書き込み終了
@@ -33,6 +33,7 @@ execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhan
     execute store result score $MaxSize ui_temp run data get storage ui:tmw temp.this.tag.tmw.gun.MaxSize
     execute store result score $ShotCT ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.ShotCT
     execute store result score $BurstCT ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.BurstCT
+    execute store result score $ReloadMax ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.ReloadMax
     execute store result score $Spread ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.Spread
     execute store result score $AirSpread ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.AirSpread
     execute store result score $Barrel ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.Barrel

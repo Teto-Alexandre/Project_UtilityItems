@@ -10,6 +10,7 @@ execute if entity @s[scores={ui_tmw_id_old=237}] run function ui:misc/dead/tmw23
 # もう一回死亡しないように状態異常リセット
 scoreboard players reset @s tds_fire
 scoreboard players reset @s tds_cold
+scoreboard players reset @s tds_acid
 scoreboard players reset @s tds_amethyst
 scoreboard players reset @s tds_amethyst_t
 scoreboard players set @s tds_hps 9999999

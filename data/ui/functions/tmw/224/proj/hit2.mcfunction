@@ -5,7 +5,7 @@
 
 #ダメージ本体
     data merge storage tds: {Damage:0.60,DamageType:2,DeathMessage:8,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}
-    scoreboard players add @s tds_fire 1
+    scoreboard players add @s tds_fire 10
     execute at @s run function tds:attack
 
 #ノックバック

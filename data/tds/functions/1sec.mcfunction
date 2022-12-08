@@ -6,6 +6,7 @@
 # 状態異常
     execute as @e[scores={tds_fire=1..}] unless score @s tds_firer matches 1.. at @s run function tds:state/fire
     execute as @e[scores={tds_cold=1..}] unless score @s tds_coldr matches 1.. at @s run function tds:state/cold
+    execute as @e[scores={tds_acid=1..}] at @s run function tds:state/acid
     execute as @e[scores={tds_amethyst=1..}] at @s run function tds:state/amethyst
 
 # レジスト減少

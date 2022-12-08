@@ -15,6 +15,7 @@ scoreboard objectives add tds_cold dummy {"text":"TetoDamageSystem_Cold","color"
 scoreboard objectives add tds_coldr dummy {"text":"TetoDamageSystem_ColdResist","color":"gold","italic":true}
 scoreboard objectives add tds_amethyst dummy {"text":"TetoDamageSystem_Amethyst","color":"gold","italic":true}
 scoreboard objectives add tds_amethyst_t dummy {"text":"TetoDamageSystem_Amethyst_Time","color":"gold","italic":true}
+scoreboard objectives add tds_acid dummy {"text":"TetoDamageSystem_Acid","color":"gold","italic":true}
 
 scoreboard objectives add tds_totem dummy {"text":"TetoDamageSystem_Totem","color":"gold","italic":true}
 
@@ -39,6 +40,7 @@ scoreboard players set $20000 tds_dmg 20000
 scoreboard players set $2^19 tds_dmg 524288
 
 # 可変設定項目
-scoreboard players set $max tds_fire 20
-scoreboard players set $max tds_cold 20
+scoreboard players set $max tds_fire 200
+scoreboard players set $max tds_cold 200
+scoreboard players set $max tds_acid 200
 scoreboard players set $version tds_dmg 4

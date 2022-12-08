@@ -30,6 +30,7 @@ scoreboard players operation $team ui_temp = @s ui_team
 scoreboard players operation $sneak_time ui_temp = @s ui_st2
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
+execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets
 
@@ -44,11 +45,11 @@ function ui:tmw/255/player/crossbow/basetype/basetype
 # バースト数
 # 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
 #tellraw @a[scores={ui_use1=1..}] [{"score":{"objective":"ui_temp","name":"$bursttype"}}]
-execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst
-execute if score $bursttype ui_temp matches 2 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst
-execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst3
+execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst
+execute if score $bursttype ui_temp matches 2 as @s[tag=tmw_crossbow_mh_n] if score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/burst/burst
+execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst3
 execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.. as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst3.stop
-execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst4
+execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst4
 execute if score $bursttype ui_temp matches 5 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst5
 execute if score $bursttype ui_temp matches 6 as @s[tag=tmw_crossbow_mh_n] run function ui:tmw/255/player/crossbow/burst/burst
 execute if score $bursttype ui_temp matches 7 run function ui:tmw/255/player/crossbow/burst/burst7
@@ -65,11 +66,14 @@ execute as @s[tag=tmw_drop_n] run function ui:tmw/255/player/crossbow/reload/top
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/255/player/crossbow/ct
 
+# リロード中
+execute unless score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/time
+
 # 弾丸の射出
     #たまありバースト+クールタイム完遂
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/attack/master
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 at @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/attack/master
     #バースト+クールタイム完遂、発射できなかったなら
-    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/255/player/crossbow/fail
+    execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/255/player/crossbow/fail
 
 # 逆変換
 execute if score $changed ui_temp matches 1 run function ui:tmw/255/player/crossbow/changed/core

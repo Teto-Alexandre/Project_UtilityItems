@@ -11,6 +11,12 @@
     function ui:tmw/255/player/crossbow/reload/linear_count
     scoreboard players operation $bullets ui_temp = $check ui_temp
 
+# クールタイム解除時刻.mod
+    execute store result score $rt ui_temp run data get storage ui:gun temp.ReloadMax
+    execute store result score $reloadtime ui_temp run time query gametime
+    scoreboard players operation $reloadtime ui_temp += $rt ui_temp
+    #tellraw @a {"score":{"name":"$reloadtime","objective":"ui_temp"}}
+
 # 待機状態なら射撃機能を復活させる
     execute if score $stats ui_temp matches 1 run scoreboard players set $item ui_temp 1
     execute if score $stats ui_temp matches 1 run function ui:tmw/255/player/switch/replace

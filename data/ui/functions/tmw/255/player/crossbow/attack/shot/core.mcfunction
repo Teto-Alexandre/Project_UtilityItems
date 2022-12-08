@@ -12,11 +12,6 @@
 #
     function ui:tmw/255/player/crossbow/attack/shot/each
 
-# クールタイム解除時刻.mod
-    execute store result score $cooltime ui_temp run time query gametime
-    scoreboard players operation $cooltime ui_temp += $ct ui_temp
-    execute if score $burst ui_temp matches 1.. run scoreboard players remove $burst ui_temp 1
-
 # 収束解除
     scoreboard players set @s ui_st2 0
 
@@ -32,3 +27,9 @@
     scoreboard players set $check ui_temp 0
     function ui:tmw/255/player/crossbow/reload/linear_count
     scoreboard players operation $bullets ui_temp = $check ui_temp
+
+# クールタイム解除時刻.mod
+    execute if score $bullets ui_temp matches 0 store result score $ct ui_temp run data get storage ui:gun temp2.BurstCT
+    execute store result score $cooltime ui_temp run time query gametime
+    scoreboard players operation $cooltime ui_temp += $ct ui_temp
+    execute if score $burst ui_temp matches 1.. run scoreboard players remove $burst ui_temp 1

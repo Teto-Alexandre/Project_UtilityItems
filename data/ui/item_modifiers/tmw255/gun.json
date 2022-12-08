@@ -36,6 +36,10 @@
         {"score":{"name":"$BurstCT","objective":"ui_temp"}}
       ],
       [
+        {"text": "ReloadTime: ","color": "gray","italic": false},
+        {"score":{"name":"$ReloadMax","objective":"ui_temp"}}
+      ],
+      [
         {"text": "Spread: ","color": "gray","italic": false},
         {"score":{"name":"$Spread","objective":"ui_temp"}}
       ],

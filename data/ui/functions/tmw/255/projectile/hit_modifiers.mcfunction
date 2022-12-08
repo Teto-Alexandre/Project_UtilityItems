@@ -6,6 +6,7 @@
     execute store result score $level ui_temp run data get storage ui:temp temp.Modifier.lvl
     execute if data storage ui:temp temp.Modifier{id:"flame"} run function ui:tmw/255/projectile/modifier/flame
     execute if data storage ui:temp temp.Modifier{id:"cold"} run function ui:tmw/255/projectile/modifier/cold
+    execute if data storage ui:temp temp.Modifier{id:"acid"} run function ui:tmw/255/projectile/modifier/acid
     execute if data storage ui:temp temp.Modifier{id:"armor_pierce"} run function ui:tmw/255/projectile/modifier/armor_pierce
     execute if data storage ui:temp temp.Modifier{id:"silver"} run function ui:tmw/255/projectile/modifier/silver
     execute if data storage ui:temp temp.Modifier{id:"armor_damage"} run function ui:tmw/255/projectile/modifier/armor_damage

@@ -11,7 +11,7 @@
     scoreboard players operation #temp tds_dmg += $rand ui_calc1
     execute store result storage tds: Damage float 1 run scoreboard players get #temp tds_dmg
     execute at @s run function tds:attack
-    scoreboard players operation $Return tds_dmg /= #20000 ui_num
+    scoreboard players operation $Return tds_dmg /= #2000 ui_num
     scoreboard players operation @s tds_cold += $Return tds_dmg
 
 #エフェクト

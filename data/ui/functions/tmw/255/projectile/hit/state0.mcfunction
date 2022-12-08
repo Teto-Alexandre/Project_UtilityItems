@@ -26,6 +26,6 @@
     data modify storage tds: WeaponName set from storage ui:temp temp.Name
     data modify storage tds: Owner set from storage ui:temp temp.UUID
     execute if score $def_state ui_temp matches 0 at @s run function tds:attack
-    scoreboard players operation $Return tds_dmg /= #20000 ui_num
+    scoreboard players operation $Return tds_dmg /= #2000 ui_num
     execute if score $damage_type ui_temp matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
     execute if score $damage_type ui_temp matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg

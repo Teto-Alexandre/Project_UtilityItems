@@ -2,6 +2,7 @@
 execute if score $stats ui_temp matches 1 run scoreboard players set $burst ui_temp 0
 execute store result storage ui:gun temp.now.Burst int 1 run scoreboard players get $burst ui_temp
 execute store result storage ui:gun temp.now.CT int 1 run scoreboard players get $cooltime ui_temp
+execute store result storage ui:gun temp.now.ReloadTime int 1 run scoreboard players get $reloadtime ui_temp
 execute store result storage ui:gun temp.now.IsHold int 1 run scoreboard players get $ishold ui_temp
 #execute store result storage ui:gun temp.now.Charge int 1 run scoreboard players get $charge ui_temp
 execute store result storage ui:gun temp.now.Time int 1 run scoreboard players get $lasttime ui_temp

@@ -62,6 +62,11 @@
     #execute if score $temp ui_temp matches -1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8 0.8 0
 
 #発射音
+    # 連射系 - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
+        execute if score $temp ui_temp matches -2 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -2 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -2 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+
     #HG
         execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.8 0
         execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 1 0
