@@ -13,6 +13,10 @@
 
 #
     execute store result score $common.armor_damage ui_temp run data get storage ui:common input.Damage
+    scoreboard players set $mult ui_temp 100
+    scoreboard players operation $mult ui_temp += @s tds_acid
+    scoreboard players operation $common.armor_damage ui_temp *= $mult ui_temp
+    scoreboard players operation $common.armor_damage ui_temp /= #100 ui_num
 
 #
     playsound item.shield.block player @a ~ ~ ~ 1 1 0
