@@ -1,5 +1,21 @@
 # 最前列の弾の情報を取得
     data modify storage ui:temp temp2 set from storage ui:temp temp[0]
+
+    #execute store result score $stack ui_temp run data get storage ui:temp temp2.tag.tmw.bullet.Stack
+    #execute if score $stack ui_temp matches 0 run scoreboard players set $stack ui_temp 1
+    #scoreboard players operation $magazine.temp ui_temp = $magazine ui_temp
+    #scoreboard players remove $magazine.temp ui_temp 1
+    #scoreboard players operation $magazine.temp ui_temp /= $stack ui_temp
+    #scoreboard players add $magazine.temp ui_temp 1
+    #execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
+    #execute if score $magazine.temp ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
+    #scoreboard players operation $magazine.temp ui_temp < $temp ui_temp
+    #scoreboard players operation $magazine.temp ui_temp *= $stack ui_temp
+    #scoreboard players operation $magazine.temp ui_temp < $magazine ui_temp
+    #scoreboard players operation $magazine ui_temp < $magazine.temp ui_temp
+
+    # ここ入れ替え
+
     execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
     execute if score $magazine ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
     scoreboard players operation $magazine ui_temp < $temp ui_temp

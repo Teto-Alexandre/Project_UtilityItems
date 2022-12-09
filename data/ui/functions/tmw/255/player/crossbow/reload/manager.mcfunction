@@ -11,7 +11,7 @@
     execute store result score $magazine ui_temp run data get storage ui:gun temp.Magazine
     scoreboard players operation $magazine ui_temp -= $check ui_temp
 
-# 弾を消費
+# 装弾数が最大装弾数より少ないなら弾を消費
     scoreboard players set $add ui_temp 0
     execute if score $magazine ui_temp matches ..0 at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 0.8 0
     execute if score $magazine ui_temp matches 1.. run function ui:tmw/255/player/crossbow/reload/ammo_checked
