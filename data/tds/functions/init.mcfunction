@@ -43,4 +43,6 @@ scoreboard players set $2^19 tds_dmg 524288
 scoreboard players set $max tds_fire 200
 scoreboard players set $max tds_cold 200
 scoreboard players set $max tds_acid 200
-scoreboard players set $version tds_dmg 4
+
+#
+scoreboard players set $version tds_dmg 5
