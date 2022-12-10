@@ -52,7 +52,7 @@
 # DeathMessage一覧
 
     ##  1:         Null
-    ##  2:         Null
+    ##  2: 〇 @ ©「VictimはAttackerに溶かされた」酸ダメージで殺される
     ##  3: 〇 @ ©「VictimはAttackerに真っ黒焦げにされた」炎熱ダメージで殺される
     ##  4: 〇 @ ©「VictimはAttackerに氷像にされた」冷却ダメージで殺される
     ##  5: 〇 @ ©「VictimはAttackerの操る不思議エネルギーによって死んだ」霊気ダメージで殺される

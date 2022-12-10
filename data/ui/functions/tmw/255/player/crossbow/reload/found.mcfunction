@@ -1,24 +1,25 @@
 # 最前列の弾の情報を取得
     data modify storage ui:temp temp2 set from storage ui:temp temp[0]
 
-    #execute store result score $stack ui_temp run data get storage ui:temp temp2.tag.tmw.bullet.Stack
-    #execute if score $stack ui_temp matches 0 run scoreboard players set $stack ui_temp 1
-    #scoreboard players operation $magazine.temp ui_temp = $magazine ui_temp
-    #scoreboard players remove $magazine.temp ui_temp 1
-    #scoreboard players operation $magazine.temp ui_temp /= $stack ui_temp
-    #scoreboard players add $magazine.temp ui_temp 1
-    #execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
-    #execute if score $magazine.temp ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
-    #scoreboard players operation $magazine.temp ui_temp < $temp ui_temp
-    #scoreboard players operation $magazine.temp ui_temp *= $stack ui_temp
-    #scoreboard players operation $magazine.temp ui_temp < $magazine ui_temp
-    #scoreboard players operation $magazine ui_temp < $magazine.temp ui_temp
+    execute store result score $stack ui_temp run data get storage ui:temp temp2.tag.tmw.bullet.Stack
+    execute if score $stack ui_temp matches 0 run scoreboard players set $stack ui_temp 1
+    scoreboard players operation $magazine.temp ui_temp = $magazine ui_temp
+    scoreboard players remove $magazine.temp ui_temp 1
+    scoreboard players operation $magazine.temp ui_temp /= $stack ui_temp
+    scoreboard players add $magazine.temp ui_temp 1
+    scoreboard players operation $magazine.reload ui_temp = $magazine.temp ui_temp
+    execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
+    execute if score $magazine.temp ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
+    scoreboard players operation $magazine.temp ui_temp < $temp ui_temp
+    scoreboard players operation $magazine.temp ui_temp *= $stack ui_temp
+    scoreboard players operation $magazine.temp ui_temp < $magazine ui_temp
+    scoreboard players operation $magazine ui_temp < $magazine.temp ui_temp
 
     # ここ入れ替え
 
-    execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
-    execute if score $magazine ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
-    scoreboard players operation $magazine ui_temp < $temp ui_temp
+    #execute store result score $temp ui_temp run data get storage ui:temp temp2.Count
+    #execute if score $magazine ui_temp > $temp ui_temp run scoreboard players set $add ui_temp 1
+    #scoreboard players operation $magazine ui_temp < $temp ui_temp
 
 # 銃側の書き込み情報を取得 - スタックして装填するかを検証
     data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw.bullets
@@ -42,7 +43,7 @@
     function ui:common/item
     data modify storage ui:common input.Item set from storage ui:common_result temp
     data merge storage ui:common {input:{Mode:"count",Num:1,Text:"add"}}
-    execute store result storage ui:common input.Num int -1 run scoreboard players get $magazine ui_temp
+    execute store result storage ui:common input.Num int -1 run scoreboard players get $magazine.reload ui_temp
     function ui:common/item
     data modify storage ui:common input.Item set from storage ui:common_result temp
     data merge storage ui:common {input:{Mode:"replace",Num:-1}}

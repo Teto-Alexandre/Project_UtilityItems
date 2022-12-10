@@ -30,6 +30,7 @@ scoreboard players operation $team ui_temp = @s ui_team
 scoreboard players operation $sneak_time ui_temp = @s ui_st2
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
+execute store result score $addct ui_temp run data get storage ui:gun temp.now.AddCT
 execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets

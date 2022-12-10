@@ -66,6 +66,32 @@
         execute if score $temp ui_temp matches -2 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
         execute if score $temp ui_temp matches -2 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
         execute if score $temp ui_temp matches -2 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+    # LMG - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0,ITEM_BREAK-1-2-2,NOTE_SNARE_DRUM-1-0-2,BLAZE_HIT-1-2-0,DOOR_CLOSE-1-2-4
+        execute if score $temp ui_temp matches -3 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -3 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -3 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -3 run playsound entity.item.break player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -3 run playsound block.note_block.snare player @a ~ ~ ~ 1 0.5 0
+        execute if score $temp ui_temp matches -3 run playsound entity.blaze.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -3 run playsound block.wooden_door.close player @a ~ ~ ~ 1 2 0
+    # PDW - SHOOT_ARROW-1-2-0,NOTE_SNARE_DRUM-1-0-2,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
+        execute if score $temp ui_temp matches -4 run playsound entity.arrow.shoot player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -4 run playsound block.note_block.snare player @a ~ ~ ~ 1 0.5 0
+        execute if score $temp ui_temp matches -4 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -4 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+    # SG - WITHER_SHOOT-1-2-0,EXPLODE-1-2-0
+        execute if score $temp ui_temp matches -5 run playsound entity.wither.shoot player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -5 run playsound entity.generic.explode player @a ~ ~ ~ 1 2 0
+    # HG - BLAZE_HIT-1-2-0,ZOMBIE_WOOD-1-2-0,DOOR_CLOSE-1-2-4
+        execute if score $temp ui_temp matches -6 run playsound entity.blaze.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -6 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -6 run playsound block.wooden_door.close player @a ~ ~ ~ 1 2 0
+    # SR - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0,FIRE_IGNITE-1-1-4,DOOR_OPEN-1-2-6
+        execute if score $temp ui_temp matches -7 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -7 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -7 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -7 run playsound item.flintandsteel.use player @a ~ ~ ~ 1 1 0
+        execute if score $temp ui_temp matches -7 run playsound block.wooden_door.open player @a ~ ~ ~ 1 2 0
 
     #HG
         execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.8 0

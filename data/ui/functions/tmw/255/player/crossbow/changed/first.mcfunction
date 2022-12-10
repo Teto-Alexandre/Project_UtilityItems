@@ -12,7 +12,7 @@ execute store result storage ui:gun temp.BurstMax int 1 run scoreboard players g
 data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw
 data modify storage ui:temp temp.gun set from storage ui:gun temp
 execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp temp.gun.now merge value {QFType:1}
-data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,ReloadTime:0,Burst:0,IsHold:0,First:1}
+data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,AddCT:0,ReloadTime:0,Burst:0,IsHold:0,First:1}
 scoreboard players set $bullets ui_temp 0
 
 # 書き込み終了
