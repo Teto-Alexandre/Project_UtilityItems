@@ -3,7 +3,8 @@
 #
     execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
     execute if score $hand ui_temp matches 1 run data modify storage ui:tmw temp.this set from entity @s Inventory[{Slot:-106b}]
-    data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
+    execute if score $reloaditem ui_temp matches 0 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
+    execute if score $reloaditem ui_temp matches 1 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet
     execute store result score $mass ui_temp run data get storage ui:gun temp3.Mass
     execute store result score $power ui_temp run data get storage ui:gun temp3.Power
     scoreboard players set $speed.add ui_temp 0
@@ -14,17 +15,14 @@
     execute store result score $damage_type ui_temp run data get storage ui:gun temp3.DamageType
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp3.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp3.EndParticle
+    execute store result score $weak_mult ui_temp run data get storage ui:gun temp3.WeakMultiplier
 
 # 計算
     # 弾速 = 弾体質量 x 火力 [基準：ハンドガンで100ぐらいを想定]
     scoreboard players operation $speed ui_temp = $power ui_temp
     scoreboard players operation $speed ui_temp /= $mass ui_temp
-    scoreboard players operation $speed ui_temp -= $barrel ui_temp
-    scoreboard players operation $speed_over ui_temp = $speed ui_temp
-    scoreboard players operation $speed ui_temp < #0 ui_num
-    execute if score $speed_over ui_temp matches 1.. run scoreboard players operation $speed_over ui_temp /= #10 ui_num
-    scoreboard players operation $speed ui_temp += $barrel ui_temp
-    execute if score $speed_over ui_temp matches 1.. run scoreboard players operation $speed ui_temp += $speed_over ui_temp
+    execute if score $speed ui_temp > $barrel ui_temp run function ui:tmw/255/player/crossbow/attack/shot/over_barrel
+    #tellraw @a [{"text":"Speed:","color":"red"},{"score":{"name":"$speed","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$barrel","objective":"ui_temp"},"color":"red"}]
     # 弾速振幅最大値 = 弾速 x 0.2 ( 弾速 = 本来の弾速 x 1 ~ 1.2 )
     scoreboard players operation $speed.plus ui_temp = $speed ui_temp
     scoreboard players operation $speed.plus ui_temp /= #5 ui_num
@@ -47,21 +45,25 @@
 
 # タイプごとに拡散して発射
     #function ui:tmw/255/player/crossbow/attack/shot/loop
-    execute anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.4 3
     execute anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
 
-# 発射音
-    execute store result score $temp ui_temp run data get storage ui:gun temp3.Sound
-    #execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.2 1.6 0
-    #execute if score $temp ui_temp matches 2 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.4 1.4 0
-    #execute if score $temp ui_temp matches 3 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.6 1.2 0
-    #execute if score $temp ui_temp matches 4 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.8 1.0 0
-    #execute if score $temp ui_temp matches 5 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 2.0 0.9 0
-    #execute if score $temp ui_temp matches 101 run playsound minecraft:entity.bat.loop player @a ~ ~ ~ 1 1.6 0
-    #execute if score $temp ui_temp matches 101 run effect give @s slowness 1 2 true
-    #execute if score $temp ui_temp matches -1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8 0.8 0
+# マズルフラッシュ
+    # 読み込み
+    execute store result score $temp ui_temp run data get storage ui:gun temp3.Muzzle
+    execute if score $temp ui_temp matches 1 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 1
+    execute if score $temp ui_temp matches 2 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 3
+    execute if score $temp ui_temp matches 3 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 10
+    execute if score $temp ui_temp matches 11 anchored eyes run particle smoke ^-0.25 ^-0.1 ^0.7 0 0 0 0.05 5
+    execute if score $temp ui_temp matches 21 anchored eyes run particle dust 1 1 1 0.5 ^-0.25 ^-0.1 ^0.7 0.2 0.2 0.2 0 5
+    execute if score $temp ui_temp matches 31 anchored eyes run particle electric_spark ^-0.25 ^-0.1 ^0.7 0 0 0 0.8 5
+    execute if score $temp ui_temp matches 41 run data merge storage ui:common {input:{Mode:"create",Var:3}}
+    execute if score $temp ui_temp matches 42 run data merge storage ui:common {input:{Mode:"create",Var:4}}
+    execute if score $temp ui_temp matches 41..42 anchored eyes positioned ^-0.25 ^-0.1 ^0.7 run function ui:common/particle
 
-#発射音
+# 発射音
+    # 読み込み
+    execute store result score $temp ui_temp run data get storage ui:gun temp3.Sound
+
     # 連射系 - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
         execute if score $temp ui_temp matches -2 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
         execute if score $temp ui_temp matches -2 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
@@ -92,6 +94,14 @@
         execute if score $temp ui_temp matches -7 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
         execute if score $temp ui_temp matches -7 run playsound item.flintandsteel.use player @a ~ ~ ~ 1 1 0
         execute if score $temp ui_temp matches -7 run playsound block.wooden_door.open player @a ~ ~ ~ 1 2 0
+    # DustShot
+        execute if score $temp ui_temp matches -8 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 0.8 0
+        execute if score $temp ui_temp matches -8 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -8 run playsound block.wooden_door.open player @a ~ ~ ~ 1 2 0
+    # Rocket - ghast_fireball-1-2-0,SHOOT_ARROW-1-2-0,MAGMACUBE_WALK-1-2-0
+        execute if score $temp ui_temp matches -9 run playsound entity.ghast.shoot player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -9 run playsound entity.arrow.shoot player @a ~ ~ ~ 1 2 0
+        execute if score $temp ui_temp matches -9 run playsound entity.magma_cube.jump player @a ~ ~ ~ 1 2 0
 
     #HG
         execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.8 0

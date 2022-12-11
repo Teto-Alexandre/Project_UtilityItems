@@ -19,11 +19,12 @@ execute if score $type ui_temp matches 115 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 201 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 202 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 301 run scoreboard players set $w.ink ui_temp 600
-execute if score $type ui_temp matches 399 run scoreboard players set $w.ink ui_temp 1
+execute if score $type ui_temp matches 399 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 402 run scoreboard players set $w.ink ui_temp 700
-execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_temp 400
+execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_temp 350
 execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 500
+execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_temp 900
 
 # 効果時間
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.time ui_temp 0
@@ -56,6 +57,7 @@ execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ct
 execute if score $type ui_temp matches 401..500 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ct ui_temp 3
 execute if score $type ui_temp matches 402 run scoreboard players set $w.ct ui_temp 6
+execute if score $type ui_temp matches 405 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 151 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 152 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 251 run scoreboard players set $w.ct ui_temp 0
@@ -106,6 +108,7 @@ execute if score $type ui_temp matches 401 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 402 run data modify storage ui:temp temp.Name set value " - SUB:ヘルハウンド"
 execute if score $type ui_temp matches 403 run data modify storage ui:temp temp.Name set value " - SUB:ラインマーカー"
 execute if score $type ui_temp matches 404 run data modify storage ui:temp temp.Name set value " - SUB:ブーメラン"
+execute if score $type ui_temp matches 405 run data modify storage ui:temp temp.Name set value " - SUB:ペネトレイター"
 execute if score $type ui_temp matches 151 run data modify storage ui:temp temp.Name set value " - SP:トルネード"
 execute if score $type ui_temp matches 152 run data modify storage ui:temp temp.Name set value " - SP:アメフラシ"
 execute if score $type ui_temp matches 251 run data modify storage ui:temp temp.Name set value " - SP:ノヴァ"

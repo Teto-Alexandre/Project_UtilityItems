@@ -24,7 +24,7 @@
     execute if score $slot ui_temp matches 21 run scoreboard players set $sub ui_temp 112
     execute if score $slot ui_temp matches 22 run scoreboard players set $sub ui_temp 113
     execute if score $slot ui_temp matches 23 run scoreboard players set $sub ui_temp 114
-    execute if score $slot ui_temp matches 24 run scoreboard players set $sub ui_temp 201
+    execute if score $slot ui_temp matches 24 run scoreboard players set $sub ui_temp 115
     execute if score $slot ui_temp matches 25 run scoreboard players set $page ui_temp 2
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -61,7 +61,7 @@
     item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:121112,display:{Name:'{"text":"[アクセラレーター]","color":"gray","italic":false}',Lore:['{"text":"弾を加速する装置を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:121113,display:{Name:'{"text":"[ロボットボム]","color":"gray","italic":false}',Lore:['{"text":"敵を追跡する爆弾を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:121114,display:{Name:'{"text":"[カーリングボム]","color":"gray","italic":false}',Lore:['{"text":"一直線に進み反射する爆弾を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
-    item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:121201,display:{Name:'{"text":"[リコール]","color":"gray","italic":false}',Lore:['{"text":"瞬時にリスポーン地点に戻る","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:121115,display:{Name:'{"text":"[タンサンボム]","color":"gray","italic":false}',Lore:['{"text":"連続で爆発し移動する爆弾を投げる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
 
     item replace entity @s enderchest.25 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
     item replace entity @s enderchest.26 with black_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}

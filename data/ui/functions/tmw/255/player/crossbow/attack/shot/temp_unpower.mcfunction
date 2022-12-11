@@ -10,6 +10,7 @@ scoreboard players operation @s ui_dmg = $mass ui_temp
 scoreboard players operation @s ui_autohit = $air_res ui_temp
 scoreboard players operation @s ui_br_temp = $gravity ui_temp
 scoreboard players operation @s ui_bdt = $damage_type ui_temp
+scoreboard players operation @s ui_bu = $weak_mult ui_temp
 scoreboard players operation @s ui_id = $id ui_temp
 scoreboard players operation @s ui_team = $team ui_temp
 data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui:gun temp.DisplayName

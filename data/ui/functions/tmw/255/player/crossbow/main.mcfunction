@@ -17,10 +17,14 @@ scoreboard players set $burst_alt.id ui_temp 0
 # チャージ変数をリセット
 scoreboard players set $ishold ui_temp 0
 
+#
+scoreboard players set $reloaditem ui_temp 0
+
 # 必要データ収集
 data modify storage ui:tmw temp.this set from entity @s SelectedItem
 data modify storage ui:gun temp set from storage ui:tmw temp.this.tag.tmw.gun
 data modify storage ui:gun temp.DisplayName set from storage ui:tmw temp.this.tag.display.Name
+execute if data storage ui:gun temp.ReloadItem run scoreboard players set $reloaditem ui_temp 1
 
 # 初期設定
 execute unless data storage ui:gun temp.now.First run function ui:tmw/255/player/crossbow/changed/first

@@ -32,7 +32,8 @@
         #execute if score $check ui_temp matches 0 run say 弾をスタックして装填
     #
     execute if score $empty ui_temp matches 0 run scoreboard players set $check ui_temp 1
-    execute if score $check ui_temp matches 1 run data modify storage ui:temp temp append from storage ui:temp temp2.tag.tmw.bullet
+    execute if score $check ui_temp matches 1 if score $reloaditem ui_temp matches 0 run data modify storage ui:temp temp append from storage ui:temp temp2.tag.tmw.bullet
+    execute if score $check ui_temp matches 1 if score $reloaditem ui_temp matches 1 run data modify storage ui:temp temp append value {}
     execute if score $check ui_temp matches 1 run data modify storage ui:temp temp[-1] merge value {Count:1}
     execute if score $check ui_temp matches 1 store result storage ui:temp temp[-1].Count int 1 run scoreboard players get $magazine ui_temp
 

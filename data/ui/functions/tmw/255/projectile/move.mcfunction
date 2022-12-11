@@ -15,6 +15,7 @@
 # 見た目
     execute if score @s ui_bpart matches -1 run function ui:tmw/255/projectile/move/-1
     execute if score @s ui_bpart matches 1 run function ui:tmw/255/projectile/move/1
+    execute if score @s ui_bpart matches 2 run function ui:tmw/255/projectile/move/2
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:tmw/255/projectile/col/block_col

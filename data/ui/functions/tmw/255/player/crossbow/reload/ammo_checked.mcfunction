@@ -6,8 +6,9 @@
     scoreboard players set $slot ui_temp -1
     #execute if data storage ui:temp temp[{tag:{tmw:{id:255,type:2}}}] store result score $slot ui_temp run data get storage ui:temp temp[{tag:{tmw:{id:255,type:2}}}].Slot
     execute store result score $num ui_temp run data get storage ui:temp temp
-    execute if score $max_size ui_temp matches 0.. run function ui:tmw/255/player/crossbow/reload/linear_search
-    execute if score $max_size ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/reload/linear_search_ud
+    execute if score $max_size ui_temp matches 1.. run function ui:tmw/255/player/crossbow/reload/ui_normal/linear_search
+    execute if score $max_size ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/vanilla/linear_search
+    execute if score $max_size ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/reload/stacked/linear_search
     #tellraw @a {"score":{"name":"$slot","objective":"ui_temp"},"color":"gold"}
 
 # 弾を消費

@@ -7,4 +7,5 @@
     function ui:tmw/255/player/crossbow/reload/manager
 
 # リロード成功
+    execute if score $success ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/fail
     execute if score $success ui_temp matches 1 run function ui:tmw/255/player/crossbow/reload/success
