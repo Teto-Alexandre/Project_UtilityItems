@@ -10,6 +10,3 @@
 
 #
     execute if score @s ui_mine matches 1 run function ui:misc/act/break/pickaxe/mined
-
-#
-    execute if entity @s[tag=tmw_drop_s] unless score @s ui_ct matches 1.. if score @s ui_lvl_mine_lvl matches 1.. run function ui:misc/act/break/pickaxe/super_breaker
