@@ -9,6 +9,7 @@
     scoreboard players set $check ui_temp 0
     function ui:tmw/255/player/crossbow/reload/linear_count
     execute store result score $magazine ui_temp run data get storage ui:gun temp.Magazine
+    scoreboard players operation $magazine.max ui_temp = $magazine ui_temp
     scoreboard players operation $magazine ui_temp -= $check ui_temp
 
 # 装弾数が最大装弾数より少ないなら弾を消費
