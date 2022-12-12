@@ -41,7 +41,6 @@ execute store result score $bullets ui_temp run data get storage ui:gun temp.now
 
 # 検知範囲拡大
 tag @a[tag=tmw_crossbow_mh_s] add tmw_crossbow_mh_n
-tag @a[tag=tmw_drop_s] add tmw_drop_n
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
@@ -67,6 +66,9 @@ execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbo
 
 # Qキーでリロード（仮）
 execute as @s[tag=tmw_drop_n] run function ui:tmw/255/player/crossbow/reload/top
+
+# Fでスコープ
+execute as @s[tag=tmw_drop_s] at @s run function ui:tmw/255/player/crossbow/scope
 
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/255/player/crossbow/ct

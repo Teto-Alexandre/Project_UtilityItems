@@ -5,5 +5,3 @@ execute if score $temp ui_temp matches 1.. run summon area_effect_cloud ~ ~ ~ {D
 execute if score $temp ui_temp matches 1.. run playsound entity.ender_dragon.flap player @a ~ ~ ~ 0.4 1.8 0
 execute if score $temp ui_temp matches 1.. run playsound item.spyglass.use player @a ~ ~ ~ 1 0.8 0
 execute if score $temp ui_temp matches 1.. store result entity @e[tag=tmw_235.snipe,sort=nearest,limit=1] Effects.[0].Amplifier byte 1 run scoreboard players get $temp ui_temp
-execute if score $temp ui_temp matches 0 run item replace entity @s weapon.offhand from entity @s weapon.mainhand
-execute if score $temp ui_temp matches 0 run item replace entity @s weapon.mainhand with air
