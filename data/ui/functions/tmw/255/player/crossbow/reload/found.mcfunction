@@ -23,6 +23,7 @@
 
 # 銃側の書き込み情報を取得 - スタックして装填するかを検証
     data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw.bullets
+    execute if score $stack ui_temp matches -1 run function ui:tmw/255/player/crossbow/reload/full_exchange_load
     #割り込み：同型ならスタック
         execute store success score $empty ui_temp run data modify storage ui:temp temp3 set from storage ui:temp temp[-1]
         execute store result score $count ui_temp run data get storage ui:temp temp3.Count

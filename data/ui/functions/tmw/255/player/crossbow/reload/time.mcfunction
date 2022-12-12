@@ -7,8 +7,8 @@
     scoreboard players operation $reloadtime.temp ui_temp -= $time ui_temp
 
 #
-    execute if score $reloadid ui_temp matches ..-1 at @s run function ui:tmw/255/player/crossbow/reload/id/downer/manager
-    execute if score $reloadid ui_temp matches 1.. at @s run function ui:tmw/255/player/crossbow/reload/id/upper/manager
+    execute if score $reloadid ui_temp matches ..-1 at @s run function ui:tmw/255/player/crossbow/reload/id/downer/rel_d
+    execute if score $reloadid ui_temp matches 1.. at @s run function ui:tmw/255/player/crossbow/reload/id/upper/rel_u
 
 # 書き込み
     #tellraw @a {"score":{"name":"$reloadtime.temp","objective":"ui_temp"}}
