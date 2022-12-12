@@ -49,85 +49,15 @@
 
 # マズルフラッシュ
     # 読み込み
-    execute store result score $temp ui_temp run data get storage ui:gun temp3.Muzzle
-    execute if score $temp ui_temp matches 1 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 1
-    execute if score $temp ui_temp matches 2 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 3
-    execute if score $temp ui_temp matches 3 anchored eyes run particle crit ^-0.25 ^-0.1 ^0.7 0 0 0 0.3 10
-    execute if score $temp ui_temp matches 11 anchored eyes run particle smoke ^-0.25 ^-0.1 ^0.7 0 0 0 0.05 5
-    execute if score $temp ui_temp matches 21 anchored eyes run particle dust 1 1 1 0.5 ^-0.25 ^-0.1 ^0.7 0.2 0.2 0.2 0 5
-    execute if score $temp ui_temp matches 31 anchored eyes run particle electric_spark ^-0.25 ^-0.1 ^0.7 0 0 0 0.8 5
-    execute if score $temp ui_temp matches 41 run data merge storage ui:common {input:{Mode:"create",Var:3}}
-    execute if score $temp ui_temp matches 42 run data merge storage ui:common {input:{Mode:"create",Var:4}}
-    execute if score $temp ui_temp matches 41..42 anchored eyes positioned ^-0.25 ^-0.1 ^0.7 run function ui:common/particle
+    execute store result score $muzzle ui_temp run data get storage ui:gun temp3.Muzzle
+    execute if score $muzzle ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/muzzle/downer/muz_d
+    execute if score $muzzle ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/muzzle/upper/muz_u
 
 # 発射音
     # 読み込み
-    execute store result score $temp ui_temp run data get storage ui:gun temp3.Sound
-
-    # 連射系 - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
-        execute if score $temp ui_temp matches -2 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -2 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -2 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-    # LMG - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0,ITEM_BREAK-1-2-2,NOTE_SNARE_DRUM-1-0-2,BLAZE_HIT-1-2-0,DOOR_CLOSE-1-2-4
-        execute if score $temp ui_temp matches -3 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -3 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -3 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -3 run playsound entity.item.break player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -3 run playsound block.note_block.snare player @a ~ ~ ~ 1 0.5 0
-        execute if score $temp ui_temp matches -3 run playsound entity.blaze.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -3 run playsound block.wooden_door.close player @a ~ ~ ~ 1 2 0
-    # PDW - SHOOT_ARROW-1-2-0,NOTE_SNARE_DRUM-1-0-2,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
-        execute if score $temp ui_temp matches -4 run playsound entity.arrow.shoot player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -4 run playsound block.note_block.snare player @a ~ ~ ~ 1 0.5 0
-        execute if score $temp ui_temp matches -4 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -4 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-    # SG - WITHER_SHOOT-1-2-0,EXPLODE-1-2-0
-        execute if score $temp ui_temp matches -5 run playsound entity.wither.shoot player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -5 run playsound entity.generic.explode player @a ~ ~ ~ 1 2 0
-    # HG - BLAZE_HIT-1-2-0,ZOMBIE_WOOD-1-2-0,DOOR_CLOSE-1-2-4
-        execute if score $temp ui_temp matches -6 run playsound entity.blaze.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -6 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -6 run playsound block.wooden_door.close player @a ~ ~ ~ 1 2 0
-    # SR - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0,FIRE_IGNITE-1-1-4,DOOR_OPEN-1-2-6
-        execute if score $temp ui_temp matches -7 run playsound entity.iron_golem.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -7 run playsound entity.skeleton.hurt player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -7 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -7 run playsound item.flintandsteel.use player @a ~ ~ ~ 1 1 0
-        execute if score $temp ui_temp matches -7 run playsound block.wooden_door.open player @a ~ ~ ~ 1 2 0
-    # DustShot
-        execute if score $temp ui_temp matches -8 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 0.8 0
-        execute if score $temp ui_temp matches -8 run playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -8 run playsound block.wooden_door.open player @a ~ ~ ~ 1 2 0
-    # Rocket - ghast_fireball-1-2-0,SHOOT_ARROW-1-2-0,MAGMACUBE_WALK-1-2-0
-        execute if score $temp ui_temp matches -9 run playsound entity.ghast.shoot player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -9 run playsound entity.arrow.shoot player @a ~ ~ ~ 1 2 0
-        execute if score $temp ui_temp matches -9 run playsound entity.magma_cube.jump player @a ~ ~ ~ 1 2 0
-
-    #HG
-        execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.8 0
-        execute if score $temp ui_temp matches 1 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 1 0
-        execute if score $temp ui_temp matches 1 run playsound entity.blaze.hurt player @a ~ ~ ~ 2 2 0
-        execute if score $temp ui_temp matches 6 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 1.4 0
-        execute if score $temp ui_temp matches 6 run playsound block.chain.break player @a ~ ~ ~ 1.5 2 0
-    #Bullet
-        execute if score $temp ui_temp matches 2 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.6 0
-        execute if score $temp ui_temp matches 2 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.8 0
-        execute if score $temp ui_temp matches 2 run playsound entity.blaze.hurt player @a ~ ~ ~ 2 1.5 0
-    #AR
-        execute if score $temp ui_temp matches 3 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.2 1 0
-        execute if score $temp ui_temp matches 3 run playsound entity.blaze.hurt player @a ~ ~ ~ 1 2 0
-    #SG
-        execute if score $temp ui_temp matches 4 run playsound entity.generic.explode player @a ~ ~ ~ 3 2 0
-        execute if score $temp ui_temp matches 4 run playsound entity.firework_rocket.large_blast player @a ~ ~ ~ 4 1.2 0
-        execute if score $temp ui_temp matches 4 run playsound item.shield.break player @a ~ ~ ~ 2 1.8 0
-        execute if score $temp ui_temp matches 4 run playsound entity.blaze.hurt player @a ~ ~ ~ 3 1.2 0
-    #SR
-        execute if score $temp ui_temp matches 5 run playsound entity.generic.explode player @a ~ ~ ~ 4 2 0
-        execute if score $temp ui_temp matches 5 run playsound entity.firework_rocket.large_blast player @a ~ ~ ~ 5 1.5 0
-        execute if score $temp ui_temp matches 5 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.5 0
-        execute if score $temp ui_temp matches 5 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.6 0
-        execute if score $temp ui_temp matches 5 run playsound item.shield.break player @a ~ ~ ~ 2 1.5 0
-        execute if score $temp ui_temp matches 5 run playsound entity.blaze.hurt player @a ~ ~ ~ 3 0.7 0
+    execute store result score $sound ui_temp run data get storage ui:gun temp3.Sound
+    execute if score $sound ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/snd_d
+    execute if score $sound ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/snd_u
 
 #
     data remove storage ui:gun temp3
