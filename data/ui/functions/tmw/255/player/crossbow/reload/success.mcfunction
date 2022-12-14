@@ -1,6 +1,7 @@
 # リロード
 
 # 共通
+    scoreboard players set $burst ui_temp 0
     scoreboard players set $changed ui_temp 1
     execute at @s run playsound block.iron_door.close player @s ~ ~ ~ 0.6 1.2 0
     ## 現在の装弾数を確認

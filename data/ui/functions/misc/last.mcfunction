@@ -10,10 +10,12 @@
 
     ## 操作要件リセット
         execute as @a[tag=tmw_use_c] run function ui:misc/act/uc.rst
+        execute as @a[tag=tmw_crossbow_c] run function ui:misc/act/usec.rst
         execute as @a[scores={ui_di=1..}] run function ui:misc/act/di
         execute as @a[scores={ui_use2_tc=1..}] run function ui:misc/act/uc.c
         execute as @a[scores={ui_use1=1..}] run function ui:misc/act/uc
         execute as @a[tag=tmw_use] run function ui:misc/act/dd
+        execute as @a[scores={ui_usec2_tc=1..}] run function ui:misc/act/usec.c
         execute as @a[scores={ui_usec=1..}] run function ui:misc/act/usec
         execute as @a[scores={ui_break=1..}] run function ui:misc/act/break/last
         #execute as @a[tag=tmw_shield] run function ui:misc/act/last/shield

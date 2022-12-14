@@ -1,5 +1,5 @@
 #
-    data merge storage ui:temp {temp:{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"C.S.",Mass:0,BaseType:1,Magazine:0,MaxSize:0,BurstType:0,Burst:0,BurstMax:-1,now:{Speed:0,Attack:0,AttackSpeed:0,Model:180001}},main:{ShotType:1,ShotCT:0,BurstCT:0,Spread:0,AirSpread:0,MultiShot:0,Barrel:0},bullets:[]}}}
+    data merge storage ui:temp {temp:{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"C.S.",Mass:0,Magazine:0,MaxSize:0,BurstType:0,Burst:0,BurstMax:-1,now:{Speed:0,Attack:0,AttackSpeed:0,Model:180001}},main:{ShotCT:0,BurstCT:0,Spread:0,AirSpread:0,MultiShot:0,Barrel:0},bullets:[]}}}
 
 # 武器作成2
     execute store result storage ui:temp temp.tmw.main.MultiShot int 1 store result score $MultiShot ui_temp run data get storage ui:temp temp.Item2.stats.MultiShot

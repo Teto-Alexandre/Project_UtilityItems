@@ -1,3 +1,5 @@
+# デッドロック
+    execute if score $sound ui_temp matches -1 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/1
 # 連射系 - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0
     execute if score $sound ui_temp matches -2 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/2
 # LMG - IRONGOLEM_HIT-1-2-0,SKELETON_HURT-1-2-0,ZOMBIE_WOOD-1-2-0,ITEM_BREAK-1-2-2,NOTE_SNARE_DRUM-1-0-2,BLAZE_HIT-1-2-0,DOOR_CLOSE-1-2-4

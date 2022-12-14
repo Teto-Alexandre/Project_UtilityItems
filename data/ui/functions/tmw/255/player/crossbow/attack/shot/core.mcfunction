@@ -2,9 +2,6 @@
     # UUID 収集
     data modify storage ui:gun temp2.UUID set from entity @s UUID
     #
-    execute unless score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp2.ShotCT
-    execute if score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp2.BurstCT
-    execute store result score $addct.max ui_temp run data get storage ui:gun temp2.AddCT
     execute if entity @s[nbt={OnGround:1b}] store result score $spread ui_temp run data get storage ui:gun temp2.Spread
     execute if entity @s[nbt={OnGround:0b}] store result score $spread ui_temp run data get storage ui:gun temp2.AirSpread
     execute store result score $barrel ui_temp run data get storage ui:gun temp2.Barrel
@@ -28,14 +25,3 @@
     scoreboard players set $check ui_temp 0
     function ui:tmw/255/player/crossbow/reload/linear_count
     scoreboard players operation $bullets ui_temp = $check ui_temp
-
-# クールタイム解除時刻.mod
-    execute if score $bullets ui_temp matches 0 store result score $ct ui_temp run data get storage ui:gun temp2.BurstCT
-    execute store result score $cooltime ui_temp run time query gametime
-    scoreboard players operation $cooltime ui_temp += $ct ui_temp
-    #addct
-    execute if score $addct.max ui_temp matches 1.. if score $addct ui_temp matches 0 run scoreboard players add $cooltime ui_temp 1
-    execute if score $addct.max ui_temp matches 1.. if score $addct ui_temp matches 0 run scoreboard players operation $addct ui_temp = $addct.max ui_temp
-    execute if score $addct.max ui_temp matches 1.. unless score $addct ui_temp matches 0 run scoreboard players remove $addct ui_temp 1
-    #
-    execute if score $burst ui_temp matches 1.. run scoreboard players remove $burst ui_temp 1

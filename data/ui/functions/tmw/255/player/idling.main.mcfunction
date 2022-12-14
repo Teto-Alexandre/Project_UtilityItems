@@ -7,10 +7,6 @@ scoreboard players set $hand ui_temp 0
 # 装備更新変数をリセット
 scoreboard players set $changed ui_temp 0
 
-# バースト管理変数をリセット
-scoreboard players set $burst_alt ui_temp 0
-scoreboard players set $burst_alt.id ui_temp 0
-
 # チャージ変数をリセット
 scoreboard players set $ishold ui_temp 0
 
@@ -30,7 +26,10 @@ scoreboard players operation $id ui_temp = @s ui_id
 scoreboard players operation $team ui_temp = @s ui_team
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
+scoreboard players set $addct ui_temp 0
 execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
+scoreboard players set $firetime ui_temp 0
+scoreboard players set $firecount ui_temp 0
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 scoreboard players set $bullets ui_temp 0
 
@@ -39,7 +38,6 @@ tag @a[tag=tmw_use_s] add tmw_use_n
 tag @a[tag=tmw_drop_s] add tmw_drop_n
 
 # 常駐効果
-scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core
 
 # Qキーでリロード（仮）

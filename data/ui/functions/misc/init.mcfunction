@@ -50,6 +50,8 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_use1 minecraft.used:minecraft.carrot_on_a_stick {"text":"UtilityItems_Use1","color":"dark_blue"}
     scoreboard objectives add ui_use2 dummy {"text":"UtilityItems_Use2","color":"dark_blue"}
     scoreboard objectives add ui_use2_tc dummy {"text":"UtilityItems_Use2_TimeCount","color":"dark_blue"}
+    scoreboard objectives add ui_usec2 dummy {"text":"UtilityItems_UseC2","color":"dark_blue"}
+    scoreboard objectives add ui_usec2_tc dummy {"text":"UtilityItems_UseC2_TimeCount","color":"dark_blue"}
     scoreboard objectives add ui_lg minecraft.custom:minecraft.leave_game {"text":"UtilityItems_LeaveGame","color":"dark_blue"}
     #コープスフラッグ専用
     scoreboard objectives add ui_openc minecraft.custom:minecraft.open_chest {"text":"UtilityItems_OpenChest","color":"dark_blue"}

@@ -31,6 +31,7 @@
     scoreboard players operation $recoil ui_temp *= $pack ui_temp
     # 新散布係数 = 散布係数 + 反動
     scoreboard players operation $spread ui_temp += $recoil ui_temp
+    execute as @e[tag=tmw_255.snipe,distance=..0.1,limit=1] run function ui:tmw/255/player/crossbow/attack/shot/scope
     scoreboard players operation $sneak_time ui_temp < #60 ui_num
     scoreboard players operation $sneak_time ui_temp *= #100 ui_num
     scoreboard players operation $spread ui_temp -= $sneak_time ui_temp

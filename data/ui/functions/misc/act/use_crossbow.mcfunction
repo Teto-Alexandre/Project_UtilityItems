@@ -18,3 +18,6 @@
 
 # 照合データをもとにタグ付けを行う
     execute if score $temp ui_temp matches 1 run function ui:misc/act/use_crossbow.checked
+
+#
+    scoreboard players set @s ui_usec2_tc 6
