@@ -16,3 +16,5 @@
     execute if score $sound ui_temp matches -8 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/8
 # Rocket - ghast_fireball-1-2-0,SHOOT_ARROW-1-2-0,MAGMACUBE_WALK-1-2-0
     execute if score $sound ui_temp matches -9 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/9
+# walther
+    execute if score $sound ui_temp matches -10 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/10

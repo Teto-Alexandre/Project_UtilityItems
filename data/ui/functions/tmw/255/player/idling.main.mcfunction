@@ -28,7 +28,7 @@ execute store result score $basetype ui_temp run data get storage ui:gun temp.Ba
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
 scoreboard players set $addct ui_temp 0
 execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
-scoreboard players set $firetime ui_temp 0
+execute store result score $firetime ui_temp run data get storage ui:gun temp.now.FireTime
 scoreboard players set $firecount ui_temp 0
 execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 scoreboard players set $bullets ui_temp 0
@@ -48,6 +48,9 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/255/player/
 
 # リロード中
 execute unless score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/time
+
+# 射撃管制
+execute unless score $firetime ui_temp matches 0 run function ui:tmw/255/player/crossbow/fire/time
 
 # 右クリックでリロード
 execute as @s[tag=tmw_use_n] if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/top
