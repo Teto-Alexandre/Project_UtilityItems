@@ -18,3 +18,5 @@
     execute if score $type ui_temp matches 4 run function ui:common/particle/ss/4
     # 指向性拡散出力テスト用
     execute if score $type ui_temp matches 5 run function ui:common/particle/ss/5
+    # 指向性拡散出力テスト用サンプル
+    execute if score $type ui_temp matches 6 run function ui:common/particle/ss/6

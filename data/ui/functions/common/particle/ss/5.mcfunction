@@ -12,4 +12,4 @@ particle dust 1 0.5 0 1.25 ^ ^ ^2.9 0 0 0 0 1 force
 particle dust 1 0.5 0 1 ^ ^ ^3 0 0 0 0 1 force
 
 #
-execute if score $is ui_temp matches 100.. run kill @s
+execute if score $is ui_temp matches 200.. run kill @s
