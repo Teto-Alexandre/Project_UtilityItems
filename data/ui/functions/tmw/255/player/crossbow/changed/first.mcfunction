@@ -1,6 +1,12 @@
 # 数値の設定が共通でめんどくさい奴はオートで設定するようにする
 
 #
+execute store result score $custom_stats ui_temp run data get storage ui:gun temp.now.CustomStats 1
+
+# カスタムステータスが設定されていないなら質量より武器性能を算出する
+execute if score $custom_stats ui_temp matches 0 run function ui:tmw/255/player/crossbow/changed/non_custom_stats
+
+#
 execute store result score $speed ui_temp run data get storage ui:gun temp.now.Speed 100
 execute store result score $attack ui_temp run data get storage ui:gun temp.now.Attack 100
 execute store result score $attack_speed ui_temp run data get storage ui:gun temp.now.AttackSpeed 100

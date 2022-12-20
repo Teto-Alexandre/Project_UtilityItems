@@ -1,6 +1,6 @@
 #魔法の弾を削除
 tag @s add ui_proj_common_nocol
-summon marker ~ ~ ~ {Tags:["ui_proj_common_part","ui_temp"]}
+summon marker ~ ~ ~ {Tags:["tmw237_killeffect","ui_temp"]}
 teleport @e[tag=ui_temp] ~ ~ ~ ~ ~
 scoreboard players operation @e[tag=ui_temp] ui_hpart = @s ui_hpart
 scoreboard players operation @e[tag=ui_temp] ui_team = @s ui_team

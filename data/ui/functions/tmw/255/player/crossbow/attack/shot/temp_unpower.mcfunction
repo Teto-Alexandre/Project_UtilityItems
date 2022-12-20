@@ -1,5 +1,5 @@
 # 弾にデータを込める
-teleport @s ^ ^ ^1 ~ ~
+teleport @s ^ ^ ^0.5 ~ ~
 scoreboard players operation @s ui_bpart = $particle.fly ui_temp
 scoreboard players operation @s ui_hpart = $particle.end ui_temp
 scoreboard players operation @s ui_bm = $speed ui_temp

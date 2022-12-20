@@ -149,6 +149,8 @@
         execute if entity @a[scores={ui_tmw_id=258}] run function ui:tmw/258/lim
     #スキルツリーメーカー
         execute if entity @a[scores={ui_tmw_id=259}] run function ui:tmw/259/lim
+    #モードチェンジャー
+        execute if entity @a[scores={ui_tmw_id=260}] run function ui:tmw/260/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
