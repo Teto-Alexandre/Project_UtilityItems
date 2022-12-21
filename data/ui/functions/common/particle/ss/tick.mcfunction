@@ -20,3 +20,9 @@
     execute if score $type ui_temp matches 5 run function ui:common/particle/ss/5
     # 指向性拡散出力テスト用サンプル
     execute if score $type ui_temp matches 6 run function ui:common/particle/ss/6
+    # 魔法陣
+    execute if score $type ui_temp matches 7 run function ui:common/particle/ss/7
+    # 収束 > 拡散（レーザーなし）
+    execute if score $type ui_temp matches 8 run function ui:common/particle/ss/8
+    # 魔法陣じゃない魔法陣
+    execute if score $type ui_temp matches 9 run function ui:common/particle/ss/9

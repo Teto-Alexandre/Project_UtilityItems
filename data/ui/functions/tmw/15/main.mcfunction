@@ -15,5 +15,9 @@ execute if score $type ui_temp matches 13 if score @s ui_use1 matches 1.. unless
 execute if score $type ui_temp matches 14 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/14
 execute if score $type ui_temp matches 14 at @s run particle witch ^ ^ ^6 0 0 0 0.1 1 normal @s
 execute if score $type ui_temp matches 15 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/15
+execute if score $type ui_temp matches 16 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/16
+execute if score $type ui_temp matches 17 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/17
+execute if score $type ui_temp matches 18 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/18
+execute if score $type ui_temp matches 19 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/19
 
 execute if score $success ui_temp matches 1 at @s run function ui:common/cooltime
