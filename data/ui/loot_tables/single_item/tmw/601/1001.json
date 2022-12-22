@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:chainmail_boots","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:1001},display:{Name:'{\"text\":\"ホバーブーツ\",\"color\":\"light_purple\",\"italic\":false}',Lore:['[{\"text\":\"スニークで浮遊する:⌚20\",\"color\":\"aqua\",\"italic\":false}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;3,1,4,1],Slot:\"feet\"}]}"}]}
+            ]
+        }
+    ]
+}

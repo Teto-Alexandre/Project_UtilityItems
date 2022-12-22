@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:golden_leggings","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:2002},display:{Name:'{\"text\":\"アサルトグロウ\",\"color\":\"light_purple\",\"italic\":false}',Lore:['[{\"text\":\"周囲の生物が光る\",\"color\":\"aqua\",\"italic\":false}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:3,Operation:0,UUID:[I;3,2,4,1],Slot:\"legs\"}]}"}]}
+            ]
+        }
+    ]
+}

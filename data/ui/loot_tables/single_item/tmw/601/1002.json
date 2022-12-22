@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:golden_boots","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:1002},display:{Name:'{\"text\":\"チャージングブーツ\",\"color\":\"light_purple\",\"italic\":false}',Lore:['[{\"text\":\"スニークで加速する:⌚10\",\"color\":\"aqua\",\"italic\":false}]']},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:1,Operation:0,UUID:[I;3,1,4,1],Slot:\"feet\"}]}"}]}
+            ]
+        }
+    ]
+}

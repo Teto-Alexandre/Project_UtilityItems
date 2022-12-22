@@ -32,6 +32,9 @@ scoreboard players set @s[scores={ui_calc1=11}] ui_hp 0
 effect give @s[scores={ui_calc1=11}] regeneration 10 1 true
 execute at @s[scores={ui_calc1=11}] run playsound entity.player.levelup player @s ~ ~ ~ 1 2 0
 
+# 爆発の矢
+execute as @s[scores={ui_calc1=12}] at @s run summon minecraft:creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4}
+
 #エンダーアロー
 execute as @s[scores={ui_calc1=17}] at @s at @a[tag=ui_luck17,sort=nearest,limit=1] run particle witch ~ ~1 ~ 0.1 0.5 0.1 0.1 15 force
 execute as @s[scores={ui_calc1=17}] at @s at @a[tag=ui_luck17,sort=nearest,limit=1] run playsound entity.enderman.teleport player @a ~ ~ ~ 1.2 1.5 0

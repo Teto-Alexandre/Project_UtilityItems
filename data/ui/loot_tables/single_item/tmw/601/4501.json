@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:leather_helmet","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:4501},display:{Name:'{\"text\":\"採掘者の衣\",\"color\":\"white\",\"italic\":false}',Lore:['[{\"text\":\"フルセットボーナス\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"- 採掘速度上昇II\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"- 防御力 +5\",\"color\":\"gray\",\"italic\":false}]'],color:7500402},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;3,4,4,1],Slot:\"head\"}]}"}]}
+            ]
+        }
+    ]
+}

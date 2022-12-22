@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:tipped_arrow","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{arrow:-1},display:{Name:'{\"text\":\"爆発の矢\",\"color\":\"white\",\"bold\":true,\"italic\":false}',Lore:['{\"text\":\"着弾地点を爆発させる\",\"color\":\"gray\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}']},HideFlags:32,CustomPotionEffects:[{Id:26,Amplifier:12b,Duration:2,ShowParticles:0b}],CustomPotionColor:9868950}"}]}
+            ]
+        }
+    ]
+}

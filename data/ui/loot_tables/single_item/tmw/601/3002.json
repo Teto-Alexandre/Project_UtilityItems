@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:leather_chestplate","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:3002},display:{Name:'{\"text\":\"ラッキーガーダー\",\"color\":\"light_purple\",\"italic\":false}',Lore:['[{\"text\":\"定期的に防御力が上がる\",\"color\":\"aqua\",\"italic\":false}]'],color:6803455},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:3,Operation:0,UUID:[I;3,3,4,1],Slot:\"chest\"}]}"}]}
+            ]
+        }
+    ]
+}

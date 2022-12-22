@@ -8,26 +8,29 @@
 
 # ===== 以下 着弾時の追加効果 =====
 
-#雷矢
+# 雷矢
 execute as @s[scores={ui_calc1=2}] at @s run summon minecraft:lightning_bolt
 
-#花火の矢
+# 花火の矢
 execute as @s[scores={ui_calc1=3}] at @s run summon minecraft:firework_rocket ~ ~ ~ {Life:0,LifeTime:0,Motion:[0.0,-1.0,0.0],FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:1,Colors:[I;16711680]}]}}}}
 
-#滅撃の矢
+# 滅撃の矢
 execute as @s[scores={ui_calc1=6}] at @s run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 
-#火矢
+# 火矢
 execute as @s[scores={ui_calc1=9}] at @s run particle minecraft:flame ~ ~ ~ 0 0 0 0.1 10 force
 
-#ダークプリズム
+# ダークプリズム
 execute as @s[scores={ui_calc1=10}] at @s run particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.1 10 force
 
-#隕石の矢
+# 爆発の矢
+execute as @s[scores={ui_calc1=12}] at @s run summon minecraft:creeper ~ ~ ~ {Fuse:0,ignited:1b,ExplosionRadius:4}
+
+# 隕石の矢
 execute as @s[scores={ui_calc1=16}] at @s run particle minecraft:flame ~ ~ ~ 0.3 5 0.3 0.05 100 force
 execute as @s[scores={ui_calc1=16}] at @s run summon minecraft:fireball ~ ~50 ~ {power:[0.0d,-0.1d,0.0d],ExplosionPower:6}
 
-#エンダーアロー
+# エンダーアロー
 execute as @s[scores={ui_calc1=17}] at @s at @a[tag=ui_luck17,sort=nearest,limit=1] run particle witch ~ ~1 ~ 0.1 0.5 0.1 0.1 15 force
 execute as @s[scores={ui_calc1=17}] at @s at @a[tag=ui_luck17,sort=nearest,limit=1] run playsound entity.enderman.teleport player @a ~ ~ ~ 1.2 1.5 0
 execute as @s[scores={ui_calc1=17}] at @s run gamerule sendCommandFeedback false
@@ -40,7 +43,7 @@ execute as @s[scores={ui_calc1=17}] at @s run tag @a[tag=ui_luck17,sort=nearest,
 execute as @s[scores={ui_calc1=17}] at @s run tag @a[tag=ui_luck17,sort=nearest,limit=1,tag=ui_luck17_2] remove ui_luck17_2
 execute as @s[scores={ui_calc1=17}] at @s run tag @a[tag=ui_luck17,sort=nearest,limit=1] remove ui_luck17
 
-#抹消シリーズ
+# 抹消シリーズ
 execute as @s[scores={ui_calc1=19..21}] store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_calc1=19}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-7,posY:-7,posZ:-7,sizeX:15,sizeY:15,sizeZ:15,name:"ui:sphere15"}
 execute as @s[scores={ui_calc1=19}] at @s run particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
@@ -62,7 +65,7 @@ execute at @s[scores={ui_calc1=21}] as @e[type=!#ui:unhurtable,distance=..16] ru
 execute at @s[scores={ui_calc1=21}] run kill @e[type=end_crystal,distance=..16]
 execute as @s[scores={ui_calc1=19..21}] if score $temp ui_temp matches 1 at @s run execute at @s run setblock ~ ~1 ~ redstone_block
 
-#対空近接信管の矢
+# 対空近接信管の矢
 execute as @s[scores={ui_calc1=23}] store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_calc1=23}] at @s run summon creeper ~ ~ ~ {ExplosionRadius:16,ignited:1b,Invulnerable:1b,Fuse:0,CustomName:'[{"text":"[","color":"white"},{"text":"対空近接信管の矢","color":"yellow","bold":true},{"text":"]","color":"white"}]'}
 execute as @s[scores={ui_calc1=23}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:-7,posY:-7,posZ:-7,sizeX:15,sizeY:15,sizeZ:15,name:"ui:sphere15"}
@@ -71,7 +74,7 @@ execute as @s[scores={ui_calc1=23}] at @s run particle cloud ~ ~ ~ 0 0 0 0.6 50 
 execute as @s[scores={ui_calc1=23}] at @s run playsound entity.generic.explode neutral @a ~ ~ ~ 2 0.5 0
 execute as @s[scores={ui_calc1=23}] if score $temp ui_temp matches 1 at @s run execute at @s run setblock ~ ~1 ~ redstone_block
 
-#ノヴァイレイサー
+# ノヴァイレイサー
 execute as @s[scores={ui_calc1=24}] store result score $temp ui_temp run gamerule mobGriefing
 execute as @s[scores={ui_calc1=24}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~ structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:0,posY:0,posZ:0,sizeX:32,sizeY:31,sizeZ:32,name:"ui:sphere63/ppp"}
 execute as @s[scores={ui_calc1=24}] if score $temp ui_temp matches 1 at @s run setblock ~ ~ ~-1 structure_block{powered:0b,showboundingbox:1b,mode:"LOAD",posX:0,posY:0,posZ:-30,sizeX:32,sizeY:31,sizeZ:31,name:"ui:sphere63/pnp"}
