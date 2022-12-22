@@ -12,7 +12,7 @@ scoreboard players reset @s[scores={ui_calc1=0}] ui_calc1
 #滅撃の矢
 execute as @s[scores={ui_calc1=6}] at @s run data merge entity @s {damage:5.5d,SoundEvent:"minecraft:entity.generic.explode"}
 #ストームブリンガー
-execute at @s[scores={ui_calc1=7}] as @p run item replace entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] weapon.mainhand with minecraft:crossbow{Unbreakable:1b,HideFlags:4,Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}]}
+execute at @s[scores={ui_calc1=7}] as @p run item modify entity @s[nbt={SelectedItem:{id:"minecraft:crossbow"}}] weapon.mainhand ui:crossbow_charge_arrow3
 execute as @s[scores={ui_calc1=7}] at @s run playsound minecraft:block.iron_trapdoor.open master @a ~ ~ ~ 1 1 0
 #ティルフィング
 execute as @s[scores={ui_calc1=8}] at @s run data merge entity @s {SoundEvent:"minecraft:entity.elder_guardian.curse"}
