@@ -1,6 +1,9 @@
-# 自爆
+# ガード
+
+# 装着時演出
+execute if entity @s[tag=tmw601_changed] run particle crit ~ ~1.1 ~ 0.5 0 0.5 0.5 8
+execute if entity @s[tag=tmw601_changed] run particle dust 0.5 0.8 1 0.5 ~ ~1.1 ~ 0.5 0.2 0.5 0 15
+execute if entity @s[tag=tmw601_changed] run playsound block.anvil.use player @a ~ ~ ~ 0.5 1.8
 
 #
-scoreboard players set $mod ui_calc1 1000
-function ui:common/rand
-execute if score $rand ui_calc1 matches 0..9 run effect give @s resistance 1 3 false
+execute if predicate ui:percentage/2.5 run effect give @s resistance 1 2 false

@@ -11,3 +11,6 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:16,ct:{Amount:100}},display:
 give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:15,ct:{Amount:1800}},display:{Name:'{"text":"光条III","color":"white","italic":false}',Lore:['[{"text":"時間差で攻撃する魔法陣を無数に展開する","color":"gray","italic":false}]']},HideFlags:4}
 give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:18,ct:{Amount:200}},display:{Name:'{"text":"光条 - 集中砲火","color":"white","italic":false}',Lore:['[{"text":"時間差で攻撃する魔法陣を一か所を狙うように展開する","color":"gray","italic":false}]']},HideFlags:4}
 give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:19,ct:{Amount:1800}},display:{Name:'{"text":"光条 - 貫通","color":"white","italic":false}',Lore:['[{"text":"眼前の全てを吹き飛ばす","color":"gray","italic":false}]']},HideFlags:4}
+
+give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:20,ct:{Amount:0}},display:{Name:'{"text":"サイレントビルダー","color":"white","italic":false}',Lore:['[{"text":"無音で木材を設置・抹消する","color":"gray","italic":false}]']},HideFlags:4}
+give @p minecraft:carrot_on_a_stick{tmw:{id:15,type:21,ct:{Amount:5}},display:{Name:'{"text":"頭装備ャー","color":"white","italic":false}',Lore:['[{"text":"オフハンドのアイテムを頭に装備する","color":"gray","italic":false}]']},HideFlags:4}

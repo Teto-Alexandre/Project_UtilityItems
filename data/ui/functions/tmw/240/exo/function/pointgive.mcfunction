@@ -13,7 +13,7 @@
         execute store result storage ui:temp temp.point int 1 run scoreboard players operation $point ui_temp += $temp ui_temp
     #反映
         item modify entity @s container.17 ui:tmw240/core
-        say スキルポイントを獲得しました
+        tellraw @s ["",{"text":"> スキルポイントを獲得しました"}]
 
 # 一時的記憶領域のリセット
     data remove storage ui:temp temp

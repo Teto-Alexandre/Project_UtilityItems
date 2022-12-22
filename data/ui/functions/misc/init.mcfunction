@@ -278,6 +278,12 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_d_sh dummy {"text":"UtilityItems_Dungeon_Shield","color":"gold"}
     scoreboard objectives add ui_d_d dummy {"text":"UtilityItems_Dungeon_Damage","color":"gold"}
 
+## 装備用
+    scoreboard objectives add ui_tmw601_head dummy {"text":"UtilityItems_ArmorHead","color":"dark_blue"}
+    scoreboard objectives add ui_tmw601_chest dummy {"text":"UtilityItems_ArmorChest","color":"dark_blue"}
+    scoreboard objectives add ui_tmw601_legs dummy {"text":"UtilityItems_ArmorLegs","color":"dark_blue"}
+    scoreboard objectives add ui_tmw601_feet dummy {"text":"UtilityItems_ArmorFeet","color":"dark_blue"}
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1

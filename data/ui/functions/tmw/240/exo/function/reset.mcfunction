@@ -8,12 +8,14 @@
         execute at @s run playsound entity.ghast.scream player @s ~ ~ ~ 0.8 0.8 0
     #取得
         data modify storage ui:temp temp.skills set value []
+        data modify storage ui:temp temp.skills2 set value []
     #スキルポイントが減る
+        scoreboard players remove $point ui_temp 1
         execute store result storage ui:temp temp.point int 1 run scoreboard players operation $point ui_temp += $pointused ui_temp
         execute store result storage ui:temp temp.pointused int 1 run scoreboard players set $pointused ui_temp 0
     #反映
         item modify entity @s container.17 ui:tmw240/core
-        say スキルツリーをリセットしました
+        tellraw @s ["",{"text":"> スキルツリーをリセットしました"}]
 
 # 一時的記憶領域のリセット
     data remove storage ui:temp temp
