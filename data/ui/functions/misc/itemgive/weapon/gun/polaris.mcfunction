@@ -1,25 +1,21 @@
 # 特殊武器データ
 
 # 銃
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-AR-01",Mass:250,Magazine:30,MaxSize:-2,ShotCT:1,BurstCT:10,Burst:4,FireID:-2,ReloadMax:40,ReloadID:3,Scope:2,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:0,AirSpread:1500,MultiShot:1,Barrel:100},bullets:[]},display:{Lore:['{"text":"装填可能: Porライフル弾","color":"gold","italic":false}','{"text":"普遍的な突撃銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-BR-01",Mass:200,Magazine:30,MaxSize:-2,ShotCT:1,BurstCT:5,Burst:3,FireID:-1,ReloadMax:40,ReloadID:3,Scope:2,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-1000,AirSpread:500,MultiShot:1,Barrel:115},bullets:[]},display:{Lore:['{"text":"装填可能: Porライフル弾","color":"gold","italic":false}','{"text":"普遍的な中射程銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:-1,Mass:12,Power:1500,AirRes:0.97,Gravity:20,Pack:1,Size:-2,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-2,Muzzle:42}},CustomModelData:190001,display:{Name:'{"text":"Porライフルマガジン","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
+loot give @p loot ui:single_item/tmw/255/polaris/ar
+loot give @p loot ui:single_item/tmw/255/polaris/br
+loot give @p loot ui:single_item/tmw/255/polaris/mg
+loot give @p loot ui:single_item/tmw/255/polaris/dw
+loot give @p loot ui:single_item/tmw/255/polaris/sg
+loot give @p loot ui:single_item/tmw/255/polaris/dsg
+loot give @p loot ui:single_item/tmw/255/polaris/hg
+loot give @p loot ui:single_item/tmw/255/polaris/sr
+loot give @p loot ui:single_item/tmw/255/polaris/rl
 
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-MG-01",Mass:600,Magazine:120,MaxSize:-3,AddCT:2,BurstCT:10,Burst:6,FireID:-2,ReloadMax:80,ReloadID:4,Scope:1,now:{Speed:0,Model:180006,Info:-1}},main:{ShotCT:0,Spread:1000,AirSpread:2000,MultiShot:1,Barrel:100},bullets:[]},display:{Lore:['{"text":"装填可能: Por機関銃マガジン","color":"gold","italic":false}','{"text":"普遍的な機関銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:-1,Mass:8,Power:1200,AirRes:0.95,Gravity:20,Pack:1,Size:-3,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-3,Muzzle:42}},CustomModelData:190001,display:{Name:'{"text":"Por機関銃マガジン","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
-
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-DW-01",Mass:200,Magazine:40,MaxSize:-4,AddCT:3,BurstCT:10,Burst:5,FireID:-2,ReloadMax:40,ReloadID:3,now:{Speed:0,Model:180006,Info:-1}},main:{ShotCT:0,Spread:0,AirSpread:1500,MultiShot:1,Barrel:100},bullets:[]},display:{Lore:['{"text":"装填可能: Por貫通弾マガジン","color":"gold","italic":false}','{"text":"普遍的な主力銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:-1,Mass:14,Power:2000,AirRes:0.97,Gravity:20,Pack:1,Size:-4,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-4,Muzzle:42}},CustomModelData:190001,display:{Name:'{"text":"Por貫通弾マガジン","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
-
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-SG-01",Mass:400,Magazine:8,MaxSize:-5,ShotCT:7,BurstCT:15,Burst:1,FireID:-1,ReloadMax:60,ReloadID:5,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-21000,AirSpread:-19500,MultiShot:1,Barrel:100},bullets:[]},display:{Lore:['{"text":"装填可能: Porショットシェル","color":"gold","italic":false}','{"text":"普遍的な散弾銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-DSG-01",Mass:400,Magazine:2,MaxSize:-5,ShotCT:1,BurstCT:5,Burst:1,FireID:-1,ReloadMax:30,ReloadID:6,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-20000,AirSpread:-18500,MultiShot:1,Barrel:110},bullets:[]},display:{Lore:['{"text":"装填可能: Porショットシェル","color":"gold","italic":false}','{"text":"普遍的な二筒散弾銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:1,Mass:13,Power:2500,AirRes:0.9,Gravity:20,Pack:10,Size:-5,Spread:120,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-5,Muzzle:41}},CustomModelData:190001,display:{Name:'{"text":"Porショットシェル","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
-
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-HG-01",Mass:100,Magazine:12,MaxSize:-6,ShotCT:2,BurstCT:2,Burst:1,FireID:0,ReloadMax:25,ReloadID:7,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-1500,AirSpread:0,MultiShot:1,Barrel:100},bullets:[]},display:{Lore:['{"text":"装填可能: Porハンドガンマガジン","color":"gold","italic":false}','{"text":"普遍的な拳銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:-1,Mass:15,Power:1800,AirRes:0.95,Gravity:20,Pack:1,Size:-6,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-6,Muzzle:41}},CustomModelData:190001,display:{Name:'{"text":"Porハンドガンマガジン","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
-
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-SR-01",Mass:700,Magazine:1,MaxSize:-7,ShotCT:2,BurstCT:2,Burst:1,FireID:-1,ReloadMax:80,ReloadID:8,Scope:9,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-6000,AirSpread:-4500,MultiShot:1,Barrel:300},bullets:[]},display:{Lore:['{"text":"装填可能: Por狙撃弾","color":"gold","italic":false}','{"text":"普遍的な狙撃銃","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Stack:-1,Mass:23,Power:10000,AirRes:0.98,Gravity:20,Pack:1,Size:-7,Spread:0,DamageType:4,WeakMultiplier:200,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-7,Muzzle:41}},CustomModelData:190001,display:{Name:'{"text":"Por狙撃弾","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
-
-give @p minecraft:carrot_on_a_stick{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"Por-RL-01",Mass:900,Magazine:1,MaxSize:-8,ShotCT:2,BurstCT:2,Burst:1,FireID:-1,ReloadMax:80,ReloadID:8,now:{Speed:0,Model:180006,Info:-1}},main:{Spread:-6000,AirSpread:-4500,MultiShot:1,Barrel:90},bullets:[]},display:{Lore:['{"text":"装填可能: Porロケット弾","color":"gold","italic":false}','{"text":"普遍的なロケット砲","color":"gray","italic":false}','{"text":"統一規格ではないため通常弾は装填できない","color":"gray","italic":false}']}}
-give @p minecraft:command_block{tmw:{id:255,type:2,bullet:{Mass:12,Power:2000,AirRes:0.99,Gravity:20,Pack:1,Size:-8,Spread:0,DamageType:4,WeakMultiplier:200,FlyParticle:2,EndParticle:101,HitModifiers:[],FlyModifiers:[],Sound:-9,Muzzle:41}},CustomModelData:190005,display:{Name:'{"text":"Porロケット弾","color":"white","italic":false}',Lore:['{"text":"統一規格ではないため通常の銃には装填できない","color":"gray","italic":false}']}} 64
+# 弾
+loot give @p loot ui:single_item/tmw/255/polaris/r_mag
+loot give @p loot ui:single_item/tmw/255/polaris/mg_mag
+loot give @p loot ui:single_item/tmw/255/polaris/dw_mag
+loot give @p loot ui:single_item/tmw/255/polaris/sg_mag
+loot give @p loot ui:single_item/tmw/255/polaris/hg_mag
+loot give @p loot ui:single_item/tmw/255/polaris/sr_mag
+loot give @p loot ui:single_item/tmw/255/polaris/rl_mag

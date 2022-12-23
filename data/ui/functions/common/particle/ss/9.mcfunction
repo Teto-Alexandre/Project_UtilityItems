@@ -1,4 +1,4 @@
-# 魔法陣仮
+# 光線が見えない爆破魔法陣
 
 #
 execute if score $is ui_temp matches 34..35 run scoreboard players set $count ui_temp 300

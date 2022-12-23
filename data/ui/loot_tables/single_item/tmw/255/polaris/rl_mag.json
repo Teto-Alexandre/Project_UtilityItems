@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 0,
+              "max": 8
+            }
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190005,tmw:{id:255,type:2,bullet:{Mass:12,Power:2000,AirRes:0.99,Gravity:20,Pack:1,Size:-8,Spread:0,DamageType:4,WeakMultiplier:200,FlyParticle:2,EndParticle:101,HitModifiers:[],FlyModifiers:[],Sound:-9,Muzzle:41}},display:{Name:'{\"text\":\"Polロケット弾\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"専用の銃以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

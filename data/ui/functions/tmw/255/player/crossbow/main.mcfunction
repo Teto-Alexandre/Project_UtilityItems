@@ -34,7 +34,6 @@ execute store result score $addct ui_temp run data get storage ui:gun temp.now.A
 execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
 execute store result score $firetime ui_temp run data get storage ui:gun temp.now.FireTime
 execute store result score $firecount ui_temp run data get storage ui:gun temp.now.FireCount
-execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
 

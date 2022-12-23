@@ -30,7 +30,6 @@ scoreboard players set $addct ui_temp 0
 execute store result score $reloadtime ui_temp run data get storage ui:gun temp.now.ReloadTime
 execute store result score $firetime ui_temp run data get storage ui:gun temp.now.FireTime
 scoreboard players set $firecount ui_temp 0
-execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 scoreboard players set $bullets ui_temp 0
 
 # 検知範囲拡大

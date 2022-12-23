@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 9,
+          "name": "ui:single_item/tmw/255/polaris/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 6,
+          "name": "ui:single_item/tmw/255/gw/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "ui:single_item/tmw/255/pillar/random"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 6,
+          "name": "ui:single_item/tmw/255/vanilla/random"
+        }
+      ]
+    }
+  ]
+}
+

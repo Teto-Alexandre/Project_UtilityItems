@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 16
+            }
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190001,tmw:{id:255,type:2,bullet:{Stack:1,Mass:95,Power:18000,AirRes:0.9,Gravity:20,Pack:1,Size:-11,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-5,Muzzle:41}},display:{Name:'{\"text\":\"GW-スラッグ\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"単発の大型弾\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の銃以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,35 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "ui:single_item/tmw/255/gw/shot"
+          }
+        ],
+        "conditions": [
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.3
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "weight": 2,
+            "name": "ui:single_item/tmw/255/gw/shot_mag1"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "ui:single_item/tmw/255/gw/shot_mag2"
+          }
+        ]
+      }
+    ]
+  }

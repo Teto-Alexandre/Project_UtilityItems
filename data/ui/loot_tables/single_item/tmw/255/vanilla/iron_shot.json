@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Surv-IronShot\",Mass:350,Magazine:1,MaxSize:0,ShotCT:9,BurstCT:18,Burst:1,FireID:-1,ReloadType:1,ReloadMax:35,ReloadID:-1,ReloadItem:1,now:{Speed:0,Info:-1}},main:{Spread:0,AirSpread:1500,MultiShot:1,Barrel:120},bullet:{Mass:30,Power:3000,AirRes:0.95,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:300}],FlyModifiers:[],Sound:-8,Muzzle:2},bullets:[]},display:{Name:'{\"text\":\"Surv-IronShot\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 鉄塊, 火薬\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"鉄塊を発射する立派な武器\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"軽い装甲を貫通し損害を与える\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

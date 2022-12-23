@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180010,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Surv-Rapid\",Mass:150,Magazine:12,MaxSize:0,ShotCT:0,BurstCT:0,Burst:1,FireID:-1,ReloadType:1,ReloadMax:30,ReloadID:-1,ReloadItem:3,now:{Speed:0,Info:-1}},main:{Spread:-500,AirSpread:1000,MultiShot:1,Barrel:100},bullet:{Stack:4,Mass:5,Power:1000,AirRes:0.9,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:100,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"lethal\",lvl:10}],FlyModifiers:[],Sound:1,Muzzle:1},bullets:[]},display:{Name:'{\"text\":\"Surv-Rapid\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 丸石, 火薬\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"*撃って撃って撃ちまくれ！*\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

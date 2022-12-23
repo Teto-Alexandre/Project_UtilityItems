@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180007,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Surv-DeadRock\",Mass:650,Magazine:1,MaxSize:0,ShotCT:10,BurstCT:20,Burst:1,FireID:1,ReloadMax:40,ReloadID:-2,ReloadItem:{id:\"minecraft:tnt\"},now:{Speed:0,Info:-1}},main:{Spread:-11000,AirSpread:-9500,MultiShot:1,Barrel:300},bullet:{Mass:60,Power:17500,AirRes:0.9,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:1000},{id:\"armor_damage\",lvl:10}],FlyModifiers:[],Sound:-1,Muzzle:4},bullets:[]},display:{Name:'{\"text\":\"Surv-DeadRock\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: TNT\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"強力な爆発を指向性の攻撃に転化する武器\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

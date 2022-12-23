@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 16
+            }
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190001,tmw:{id:255,type:2,bullet:{Stack:10,Mass:13,Power:1500,AirRes:0.98,Gravity:20,Pack:1,Size:-9,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-4,Muzzle:42}},display:{Name:'{\"text\":\"GW-低反動カートリッジ\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"低反動かつ通用の弾\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"GW汎用規格Iに属する\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

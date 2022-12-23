@@ -1,0 +1,40 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/dust_shot"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/dead_rock"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/iron_shot"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/rapid"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/magnum"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/walther"
+        }
+      ]
+    }
+  ]
+}
+

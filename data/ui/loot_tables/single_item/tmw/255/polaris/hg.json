@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Pol-HG-01\",Mass:100,Magazine:12,MaxSize:-6,ShotCT:2,BurstCT:2,Burst:1,FireID:0,ReloadMax:25,ReloadID:7,now:{Speed:0,Info:-1}},main:{Spread:-1500,AirSpread:0,MultiShot:1,Barrel:100},bullets:[]},display:{Name:'{\"text\":\"Pol-HG-01\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: Polハンドガンマガジン\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ポラリスの拳銃\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

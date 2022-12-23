@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 36,
+              "max": 64
+            }
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190006,tmw:{id:255,type:2,bullet:{Stack:1,Mass:5,Power:3000,AirRes:0.90,Gravity:0,Pack:1,Size:-1,Spread:50,DamageType:4,FlyParticle:-1,EndParticle:-1,HitModifiers:[{id:\"lethal\",lvl:25},{id:\"acid\",lvl:5},{id:\"armor_damage\",lvl:2}],FlyModifiers:[],Sound:1,Muzzle:21}},Enchantments:[{id:\"protection\",lvl:1s}],HideFlags:1,display:{Name:'{\"text\":\"アシッド\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"強酸性の化合物が装甲を損傷させる\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"もちろん生身に受けるのは非常に危険\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の銃以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

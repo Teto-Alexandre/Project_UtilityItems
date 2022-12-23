@@ -130,6 +130,13 @@ execute as @s[tag=ui_18] run tag @e[tag=ui_18_1_temp] remove ui_18_1_temp
 execute as @s[tag=ui_18] at @s run playsound block.metal.place block @a ~ ~ ~ 1 1 0
 execute as @s[tag=ui_18] at @s run function ui:ui/18/ss
 
+# SST
+execute as @s[tag=ui_19] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Tags:["ui_19_1"]}
+execute as @s[tag=ui_19] at @s run playsound entity.painting.place player @a ~ ~ ~
+execute as @s[tag=ui_19] at @s run particle large_smoke ~ ~1 ~ 0.3 0.6 0.3 0 15 force
+execute as @s[tag=ui_19] at @s run scoreboard players add $ui19 ui_world 1
+execute as @s[tag=ui_19] at @s run function ui:ui/19/ss
+
 teleport @s 0 -200 0
 kill @s
 

@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/random",
+                    "weight": 50
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/1",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

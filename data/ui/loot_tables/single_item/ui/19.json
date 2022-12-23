@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:skeleton_spawn_egg","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{egg:19},display:{Name:'{\"text\":\"SST\",\"italic\":false,\"color\":\"white\"}',Lore:['[{\"text\":\" Super_Shock_Tester\",\"color\":\"gold\",\"italic\":false}]','[{\"text\":\" 近くでしゃがむと回収できる\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\" 地形破壊の強さを測定する\",\"color\":\"gray\",\"italic\":false}]']},EntityTag:{id:\"minecraft:bat\",Silent:1b,NoAI:1b,Tags:[\"ui_egg\",\"ui_19\"]}}"}]}
+            ]
+        }
+    ]
+}

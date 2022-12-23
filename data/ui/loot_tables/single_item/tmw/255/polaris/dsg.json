@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Pol-DSG-01\",Mass:400,Magazine:2,MaxSize:-5,ShotCT:1,BurstCT:5,Burst:1,FireID:-1,ReloadMax:30,ReloadID:6,now:{Speed:0,Info:-1}},main:{Spread:-20000,AirSpread:-18500,MultiShot:1,Barrel:110},bullets:[]},display:{Name:'{\"text\":\"Pol-DSG-01\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: Polショットシェル\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ポラリスの二筒散弾銃\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

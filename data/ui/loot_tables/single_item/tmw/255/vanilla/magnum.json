@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180011,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Surv-Magnum\",Mass:200,Magazine:1,MaxSize:0,ShotCT:20,BurstCT:20,Burst:1,FireID:-1,ReloadType:1,ReloadMax:30,ReloadID:-1,ReloadItem:4,now:{Speed:0,Info:-1}},main:{Spread:-2500,AirSpread:0,MultiShot:1,Barrel:150},bullet:{Mass:60,Power:9000,AirRes:0.95,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:100,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"armor_damage\",lvl:5}],FlyModifiers:[],Sound:4,Muzzle:4},bullets:[]},display:{Name:'{\"text\":\"Surv-Magnum\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 鉄インゴット, 火薬x3\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"大口径高威力のハンドキャノン\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"*ちゃんと狙わないと大変なことになるよ*\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

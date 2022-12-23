@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180013,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"walther P38\",Mass:100,Magazine:1,MaxSize:0,ShotCT:30,BurstCT:30,Burst:1,FireID:2,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:2,now:{Speed:0,Info:-1}},main:{Spread:-5000,AirSpread:-3000,MultiShot:1,Barrel:140},bullet:{Mass:35,Power:6000,AirRes:0.95,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:200},{id:\"lethal\",lvl:50}],FlyModifiers:[],Sound:-10,Muzzle:3},bullets:[]},display:{Name:'{\"text\":\"walther P38\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 金塊, 火薬x2\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"防御力の低い敵に致命傷を与える\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+
