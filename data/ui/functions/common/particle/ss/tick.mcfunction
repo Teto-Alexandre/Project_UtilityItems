@@ -24,5 +24,19 @@
     execute if score $type ui_temp matches 7 run function ui:common/particle/ss/7
     # 収束 > 拡散（レーザーなし）
     execute if score $type ui_temp matches 8 run function ui:common/particle/ss/8
-    # 魔法陣じゃない魔法陣
+    # 魔法陣が出ない魔法弾
     execute if score $type ui_temp matches 9 run function ui:common/particle/ss/9
+    # 火属性爆発
+    execute if score $type ui_temp matches 10 run function ui:common/particle/ss/10
+    # 火属性連続爆発
+    execute if score $type ui_temp matches 11 run function ui:common/particle/ss/11
+    # 雷撃
+    execute if score $type ui_temp matches 12 run function ui:common/particle/ss/12
+    # 大雷撃
+    execute if score $type ui_temp matches 13 run function ui:common/particle/ss/13
+    # 雷撃連続
+    execute if score $type ui_temp matches 14 run function ui:common/particle/ss/14
+    # 雷撃連続大
+    execute if score $type ui_temp matches 15 run function ui:common/particle/ss/15
+    # コンパス
+    execute if score $type ui_temp matches 16 run function ui:common/particle/ss/16

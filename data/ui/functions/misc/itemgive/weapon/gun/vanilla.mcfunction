@@ -7,3 +7,4 @@ loot give @p loot ui:single_item/tmw/255/vanilla/iron_shot
 loot give @p loot ui:single_item/tmw/255/vanilla/rapid
 loot give @p loot ui:single_item/tmw/255/vanilla/magnum
 loot give @p loot ui:single_item/tmw/255/vanilla/walther
+loot give @p loot ui:single_item/tmw/255/vanilla/echo_rod

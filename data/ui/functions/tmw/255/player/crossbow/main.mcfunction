@@ -1,11 +1,11 @@
 #
 
+#
+item modify entity @s weapon.mainhand ui:crossbow_charge
+
 # 今の状態はいつでも射撃できる
 scoreboard players set $stats ui_temp 0
 scoreboard players set $hand ui_temp 0
-
-#
-item modify entity @s weapon.mainhand ui:crossbow_charge
 
 # 装備更新変数をリセット
 scoreboard players set $changed ui_temp 0
@@ -40,7 +40,8 @@ execute store result score $burst ui_temp run data get storage ui:gun temp.now.B
 execute store result score $burst.max ui_temp run data get storage ui:gun temp.Burst
 
 # 検知範囲拡大
-tag @a[tag=tmw_crossbow_mh_s] add tmw_crossbow_mh_n
+tag @s[tag=tmw_crossbow_mh_s] add tmw_active_temp
+tag @s[tag=tmw_crossbow_mh_n] add tmw_active_temp
 
 # 常駐効果
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core
@@ -59,12 +60,12 @@ execute unless score $reloadtime ui_temp matches 0 run function ui:tmw/255/playe
 
 # 射撃管制
 scoreboard players set $fire ui_temp 0
-execute if entity @s[tag=tmw_crossbow_mh_n] if score $reloadtime ui_temp matches 0 run scoreboard players set $fire ui_temp 1
+execute if entity @s[tag=tmw_active_temp] if score $reloadtime ui_temp matches 0 run scoreboard players set $fire ui_temp 1
 execute unless score $firetime ui_temp matches 0 run scoreboard players set $fire ui_temp 1
 execute if score $fire ui_temp matches 1 run function ui:tmw/255/player/crossbow/fire/time
 
 # 弾丸の射出
-execute if score $fire ui_temp matches 1 run function ui:tmw/255/player/crossbow/fire/attack
+execute if score $fire ui_temp matches 1.. run function ui:tmw/255/player/crossbow/fire/attack
 
 # 逆変換
 execute if score $changed ui_temp matches 1 run function ui:tmw/255/player/crossbow/changed/core
@@ -72,6 +73,7 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/255/player/cross
 # タグ消し
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
+tag @s[tag=tmw_active_temp] remove tmw_active_temp
 
 # 一時的ストレージクリア
 data remove storage ui:gun temp

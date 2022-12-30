@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180014,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"先征く者の悲鳴\",Mass:100,Magazine:50,MaxSize:0,ShotCT:5,BurstCT:30,Burst:1,FireID:101,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:101,now:{Speed:0,Attack:7,AttackSpeed:-0.925,Info:-1,CustomStats:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:2000},bullet:{Mass:9,Power:1900,AirRes:0.95,Gravity:0,Pack:1,Size:0,Spread:30,DamageType:4,WeakMultiplier:100,FlyParticle:-2,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:500}],FlyModifiers:[],Sound:-11,Muzzle:51},bullet2:{Mass:5,Power:1100,AirRes:0.95,Gravity:0,Pack:1,Size:0,Spread:100,DamageType:4,WeakMultiplier:100,FlyParticle:-2,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:300}],FlyModifiers:[],Sound:-11,Muzzle:51},bullet3:{Mass:5,Power:10000,AirRes:0,Gravity:0,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:100,FlyParticle:-3,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:2000},{id:\"armor_damage\",lvl:2}],FlyModifiers:[],Sound:-11,Muzzle:52},bullets:[]},display:{Name:'{\"text\":\"先征く者の悲鳴\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: スカルク、ソウルソイル、ソウルサンド\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"魂を吸収し解放する杖\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"防御を貫通する強力な衝撃波を放つ\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"-- ActiveSkill --\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" R 魂弾\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" RR 魂連弾\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" RRHold 魂弾乱れ打ち\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" RRFinal 衝撃波\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"--------------\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"熱射の黒穹機:改\",HoldItemType:1,Mass:100,Magazine:40,MaxSize:0,ShotCT:1,BurstCT:8,Burst:8,FireID:-1,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:201,now:{Speed:0,Attack:7,AttackSpeed:-0.925,Info:-1,CustomStats:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:20,Mass:5,Power:750,AirRes:0.95,Gravity:0,Pack:1,Size:0,Spread:30,DamageType:2,WeakMultiplier:100,FlyParticle:-5,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:300},{id:\"flame\",lvl:2}],FlyModifiers:[],Sound:-12,Muzzle:61},bullets:[]},display:{Name:'{\"text\":\"熱射の黒穹機:改\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 小さな黒穹の断片\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ウルボスの携行機具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"活栓によって湧き出す力を制御する\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"出力は低いが安定して熱に転化できる\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

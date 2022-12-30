@@ -23,7 +23,18 @@
         execute if score @s ui_hpart matches 9 run function ui:tmw/255/projectile/killeffect/9
         execute if score @s ui_hpart matches 10 run function ui:tmw/255/projectile/killeffect/10
     # 個別
+        #RPG
         execute if score @s ui_hpart matches 101 run function ui:tmw/255/projectile/killeffect/101
+        #炎爆発
+        execute if score @s ui_hpart matches 102 run function ui:tmw/255/projectile/killeffect/102
+        #雷1
+        execute if score @s ui_hpart matches 103 run function ui:tmw/255/projectile/killeffect/103
+        #雷2
+        execute if score @s ui_hpart matches 104 run function ui:tmw/255/projectile/killeffect/104
+        #雷3
+        execute if score @s ui_hpart matches 105 run function ui:tmw/255/projectile/killeffect/105
+        #雷4
+        execute if score @s ui_hpart matches 106 run function ui:tmw/255/projectile/killeffect/106
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp

@@ -6,12 +6,13 @@
     #
     scoreboard players set $bypass_armor ui_temp 0
     scoreboard players set $headshot ui_temp 0
+    scoreboard players set $backstub ui_temp 0
     scoreboard players operation $armor_damage ui_temp = $damage ui_temp
     scoreboard players operation $shield_damage ui_temp = $damage ui_temp
 
-# サヴァイブ検知
+# 盾検知
     scoreboard players set $def_state ui_temp 0
-    execute if entity @s[tag=tmw_shield] positioned ~ ~1 ~ positioned ^ ^ ^0.7 if entity @e[tag=ui_temp_hit,distance=..1] run scoreboard players set $def_state ui_temp 1
+    execute if entity @s[tag=tmw_shield] positioned ~ ~1 ~ positioned ^ ^ ^1.4 if entity @e[tag=ui_temp_hit,distance=..2] run scoreboard players set $def_state ui_temp 1
 
 # 追加効果
     execute if score $temp ui_hmods matches 1.. run function ui:tmw/255/projectile/hit_modifiers

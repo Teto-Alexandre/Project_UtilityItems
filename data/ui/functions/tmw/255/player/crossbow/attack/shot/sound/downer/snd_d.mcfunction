@@ -18,3 +18,9 @@
     execute if score $sound ui_temp matches -9 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/9
 # walther
     execute if score $sound ui_temp matches -10 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/10
+# Echo
+    execute if score $sound ui_temp matches -11 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/11
+# Flame
+    execute if score $sound ui_temp matches -12 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/12
+# Lightning
+    execute if score $sound ui_temp matches -13 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/13

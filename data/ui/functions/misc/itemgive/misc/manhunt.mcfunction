@@ -1,0 +1,1 @@
+loot give @p loot ui:single_item/tmw/255/moderated/compass

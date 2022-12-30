@@ -1,0 +1,2 @@
+#
+    execute at @e[predicate=ui:load_unhurtable] facing entity @s eyes positioned ^ ^ ^1 facing entity @s eyes positioned as @s anchored eyes positioned ^ ^ ^-0.5 run particle minecraft:dust 1 0.5 0.5 0.1 ~ ~ ~ 0 0 0 0 1 normal @s

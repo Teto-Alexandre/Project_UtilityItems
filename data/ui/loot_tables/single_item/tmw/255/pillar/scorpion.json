@@ -3,7 +3,7 @@
     {
       "rolls": 1,
       "entries": [
-        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180002,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Scorpion\",Mass:200,Magazine:36,MaxSize:-1,ShotCT:0,BurstCT:5,Burst:6,FireID:-1,ReloadMax:30,ReloadID:-1,now:{CustomStats:1,Speed:-0.1,Attack:5,AttackSpeed:-0.8,Info:-1}},main:{Spread:-1500,AirSpread:-500,MultiShot:1,Barrel:600},bullets:[]},display:{Name:'{\"text\":\"Scorpion\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: アシッド\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"小型で近接武器としても使える火器\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180002,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Scorpion\",Mass:200,Magazine:36,MaxSize:-1,ShotCT:0,BurstCT:5,Burst:6,FireID:-1,ReloadMax:30,ReloadID:1,now:{CustomStats:1,Speed:-0.1,Attack:5,AttackSpeed:-0.8,Info:-1}},main:{Spread:-1500,AirSpread:-500,MultiShot:1,Barrel:600},bullets:[]},display:{Name:'{\"text\":\"Scorpion\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: アシッド\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"小型で近接武器としても使える火器\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"専用の弾以外は装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
       ]
     }
   ]

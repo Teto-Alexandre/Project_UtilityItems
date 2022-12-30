@@ -5,6 +5,7 @@
     execute if entity @s[scores={ui_tmw_con_id=1}] run function ui:tmw/501/contract/1
     execute if entity @s[scores={ui_tmw_con_id=2}] run function ui:tmw/501/contract/2
     execute if entity @s[scores={ui_tmw_con_id=3}] run function ui:tmw/501/contract/3
+    execute if entity @s[scores={ui_tmw_con_id=4}] run function ui:tmw/501/contract/4
     execute if entity @s[scores={ui_tmw_con_id=5}] run function ui:tmw/501/contract/5
     execute if entity @s[scores={ui_tmw_con_id=6}] run function ui:tmw/501/contract/6
     execute if entity @s[scores={ui_tmw_con_id=7}] run function ui:tmw/501/contract/7
@@ -16,6 +17,7 @@
     execute if entity @s[scores={ui_tmw_con_id=15}] run function ui:tmw/501/contract/15
     execute if entity @s[scores={ui_tmw_con_id=16}] run function ui:tmw/501/contract/16
     execute if entity @s[scores={ui_tmw_con_id=17}] run function ui:tmw/501/contract/17
+    execute if entity @s[scores={ui_tmw_con_id=18}] run function ui:tmw/501/contract/18
 
 # 契約書消える
     execute if entity @s[scores={ui_tmw_con_id=1..}] run item replace entity @s weapon.mainhand with air

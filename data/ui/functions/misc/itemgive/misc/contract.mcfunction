@@ -6,6 +6,8 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:2},CustomModelData:110201
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:3},CustomModelData:110201,display:{Name:'{"text":"上天の契約書","color":"gold","italic":false}',Lore:['[{"text":" 昼夜サイクルと天候サイクルを切り替える","color":"gray","italic":false}]','[{"text":" ディメンション全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:4},CustomModelData:110201,display:{Name:'{"text":"天眼の契約書","color":"gold","italic":false}',Lore:['[{"text":" 定期的にすべてのプレイヤーの場所が分かる","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
+
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:5},CustomModelData:110201,display:{Name:'{"text":"誘雷の契約書","color":"gold","italic":false}',Lore:['[{"text":" 死ぬまで定期的に周囲に雷が落ちるようになる","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:6},CustomModelData:110201,display:{Name:'{"text":"送還の契約書","color":"gold","italic":false}',Lore:['[{"text":" リスポーン地点にテレポートする","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
@@ -26,5 +28,7 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:15},CustomModelData:11020
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:16},CustomModelData:110201,display:{Name:'{"text":"冷撃限界突破の契約書","color":"gold","italic":false}',Lore:['[{"text":" 冷気(tds_cold)のスタック数の上限がなくなる","color":"gray","italic":false}]','[{"text":" ワールド全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:17},CustomModelData:110201,display:{Name:'{"text":"ダメージインジケーター表示","color":"gold","italic":false}',Lore:['[{"text":" 特殊ダメージ表記を切り替える","color":"gray","italic":false}]','[{"text":" ワールド全体に適応される","color":"red","italic":false}]']},Unbreakable:1b,HideFlags:4}
+
+give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:18},CustomModelData:110201,display:{Name:'{"text":"追われる者の契約書","color":"gold","italic":false}',Lore:['[{"text":" 一部アイテムによってターゲットされるようになる","color":"gray","italic":false}]','[{"text":" ・追跡コンパス","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
 #=======================================================================================

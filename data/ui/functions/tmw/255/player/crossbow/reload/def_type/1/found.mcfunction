@@ -2,6 +2,7 @@
     execute store result score $stack ui_temp run data get storage ui:tmw temp.this.tag.tmw.bullet.Stack
     execute if score $stack ui_temp matches 0 run scoreboard players set $stack ui_temp 1
     scoreboard players operation $magazine ui_temp -= $stack ui_temp
+    scoreboard players operation $magazine ui_temp > #0 ui_num
     execute if score $magazine ui_temp matches 1.. run scoreboard players set $add ui_temp 1
     scoreboard players operation $magazine.temp ui_temp = $magazine.max ui_temp
 

@@ -13,6 +13,11 @@
     scoreboard players set $paint ui_temp 0
 
 # 見た目
+    execute if score @s ui_bpart matches -6 run function ui:tmw/255/projectile/move/-6
+    execute if score @s ui_bpart matches -5 run function ui:tmw/255/projectile/move/-5
+    execute if score @s ui_bpart matches -4 run function ui:tmw/255/projectile/move/-4
+    execute if score @s ui_bpart matches -3 run function ui:tmw/255/projectile/move/-3
+    execute if score @s ui_bpart matches -2 run function ui:tmw/255/projectile/move/-2
     execute if score @s ui_bpart matches -1 run function ui:tmw/255/projectile/move/-1
     execute if score @s ui_bpart matches 1 run function ui:tmw/255/projectile/move/1
     execute if score @s ui_bpart matches 2 run function ui:tmw/255/projectile/move/2

@@ -4,7 +4,10 @@
     execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
     execute if score $hand ui_temp matches 1 run data modify storage ui:tmw temp.this set from entity @s Inventory[{Slot:-106b}]
     execute if score $reloaditem ui_temp matches 0 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
-    execute if score $reloaditem ui_temp matches 1 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet
+    execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 1 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet
+    execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 2 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet2
+    execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 3 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet3
+    execute store result score $no_shot ui_temp run data get storage ui:gun temp3.NoShot
     execute store result score $mass ui_temp run data get storage ui:gun temp3.Mass
     execute store result score $power ui_temp run data get storage ui:gun temp3.Power
     scoreboard players set $speed.add ui_temp 0
@@ -16,6 +19,7 @@
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp3.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp3.EndParticle
     execute store result score $weak_mult ui_temp run data get storage ui:gun temp3.WeakMultiplier
+    execute store result score $back_mult ui_temp run data get storage ui:gun temp3.BackMultiplier
 
 # 計算
     # 弾速 = 弾体質量 x 火力 [基準：ハンドガンで100ぐらいを想定]
@@ -46,7 +50,7 @@
 
 # タイプごとに拡散して発射
     #function ui:tmw/255/player/crossbow/attack/shot/loop
-    execute anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
+    execute if score $no_shot ui_temp matches 0 anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
 
 # マズルフラッシュ
     # 読み込み

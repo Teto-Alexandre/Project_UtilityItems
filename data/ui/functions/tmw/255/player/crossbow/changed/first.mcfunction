@@ -16,7 +16,7 @@ execute store result score $Info ui_temp run data get storage ui:gun temp.now.In
 data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw
 data modify storage ui:temp temp.gun set from storage ui:gun temp
 execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp temp.gun.now merge value {QFType:1}
-data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,AddCT:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
+data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,AddCT:0,Noidle:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
 scoreboard players set $bullets ui_temp 0
 
 # 書き込み終了

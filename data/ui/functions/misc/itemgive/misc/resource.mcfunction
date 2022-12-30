@@ -1,6 +1,6 @@
-#=======================================================================================
-
 #素材
+
+#
 give @p minecraft:iron_ingot{tmw:{id:1006},CustomModelData:211002,display:{Name:'{"text":"アナザー合金","color":"white","italic":false}'}}
 give @p minecraft:iron_ingot{tmw:{id:1008},CustomModelData:211003,display:{Name:'{"text":"鉄のメカニカルパーツ","color":"white","italic":false}'}}
 
@@ -15,8 +15,6 @@ give @p minecraft:gold_ingot{tmw:{id:1014},CustomModelData:215002,display:{Name:
 
 give @p minecraft:amethyst_shard{tmw:{id:1015},CustomModelData:216001,display:{Name:'{"text":"精製アメジスト","color":"white","italic":false}'}}
 
-give @p minecraft:command_block{tmw:{id:1016},CustomModelData:191001,display:{Name:'{"text":"小さな黒穹の断片","color":"light_purple","italic":false}'}}
-give @p minecraft:command_block{tmw:{id:1017},CustomModelData:191002,display:{Name:'{"text":"黒穹の断片","color":"light_purple","italic":false}'}}
-give @p minecraft:command_block{tmw:{id:1018},CustomModelData:191003,display:{Name:'{"text":"黒穹インゴット","color":"green","italic":false}'}}
-
-#=======================================================================================
+loot give @p loot ui:single_item/tmw/res/1016
+loot give @p loot ui:single_item/tmw/res/1017
+loot give @p loot ui:single_item/tmw/res/1018

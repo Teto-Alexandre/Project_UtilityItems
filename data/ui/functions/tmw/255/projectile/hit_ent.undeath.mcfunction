@@ -10,6 +10,3 @@
     scoreboard players operation $Attacker tds_dmg = $id ui_temp
     data modify storage tds: WeaponName set from storage ui:temp Name
     function tds:attack
-    scoreboard players operation $Return tds_dmg /= #2000 ui_num
-    execute if score $damage_type ui_temp matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
-    execute if score $damage_type ui_temp matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg

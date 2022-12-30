@@ -74,6 +74,12 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_kills minecraft.custom:player_kills {"text":"UtilityItems_Kills","color":"dark_blue"}
     scoreboard objectives add ui_deaths deathCount {"text":"UtilityItems_Deaths","color":"dark_blue"}
 
+## 条件逐次更新型
+    scoreboard objectives add ui_rot_x dummy {"text":"UtilityItems_Rotation_X","color":"dark_blue"}
+    scoreboard objectives add ui_rot_x_old dummy {"text":"UtilityItems_Rotation_X_Old","color":"dark_blue"}
+    scoreboard objectives add ui_rot_y dummy {"text":"UtilityItems_Rotation_Y","color":"dark_blue"}
+    scoreboard objectives add ui_rot_y_old dummy {"text":"UtilityItems_Rotation_Y_Old","color":"dark_blue"}
+
 ## トリガー
     scoreboard objectives add ui_trg trigger {"text":"UtilityItems_Trigger","color":"gold"}
     scoreboard objectives add ui_trg2 trigger {"text":"UtilityItems_Trigger2","color":"gold"}

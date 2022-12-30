@@ -10,6 +10,13 @@
     execute if score $reloaditem ui_temp matches 2 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/2
     execute if score $reloaditem ui_temp matches 3 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/3
     execute if score $reloaditem ui_temp matches 4 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/4
+    execute if score $reloaditem ui_temp matches 5 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/5
+
+    execute if score $reloaditem ui_temp matches 101 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/101
+
+    execute if score $reloaditem ui_temp matches 201 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/201
+    execute if score $reloaditem ui_temp matches 202 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/202
+    execute if score $reloaditem ui_temp matches 203 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/203
 
 # 弾を消費
     execute unless score $success.section ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/def_type/1/found

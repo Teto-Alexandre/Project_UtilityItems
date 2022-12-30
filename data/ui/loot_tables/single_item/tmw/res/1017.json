@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:1017},CustomModelData:191002,display:{Name:'{\"text\":\"黒穹の断片\",\"color\":\"light_purple\",\"italic\":false}'}}"}]}
+            ]
+        }
+    ]
+}
