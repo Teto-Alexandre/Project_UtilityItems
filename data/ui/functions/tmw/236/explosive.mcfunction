@@ -9,6 +9,7 @@
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:6}}}}] run function ui:tmw/236/ex6
     execute as @s[nbt={Item:{tag:{tmw:{type:7}}}}] run function ui:tmw/236/ex7
     execute as @s[scores={ui_uses=40..},nbt={Item:{tag:{tmw:{type:8}}}}] run function ui:tmw/236/ex8
+    execute as @s[scores={ui_uses=2..},nbt={Item:{tag:{tmw:{type:9}}}}] run function ui:tmw/236/ex9
 
 #
     particle dust 0.3 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force

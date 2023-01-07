@@ -16,6 +16,10 @@
 # 成功
     tag @s add ui_temp_success
 
+# 射撃後
+    ## 消滅
+    execute if data storage ui:gun temp.OneTimeUse run function ui:tmw/255/player/crossbow/attack/one_time_use
+
 # 変更した
     scoreboard players set $changed ui_temp 1
     ## 装弾数確認

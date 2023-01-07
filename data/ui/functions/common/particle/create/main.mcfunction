@@ -1,8 +1,11 @@
 # スコア化
+    scoreboard players set $id ui_temp 0
     execute store result score $input ui_temp run data get storage ui:common input.Var
+    execute if entity @s run scoreboard players operation $id ui_temp = @s ui_id
 
 #
     summon marker ~ ~ ~ {Tags:["ui","ui_common_particle","ui_common_particle_unpower"]}
+    execute if data storage ui:common input.Num run function ui:common/particle/create/num.start
 
 #
     execute as @e[tag=ui_common_particle_unpower] run function ui:common/particle/create/temp_unpower

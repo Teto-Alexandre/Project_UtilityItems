@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#ui:overworld_vines",
+        "#ui:nether_vines"
+    ]
+}
