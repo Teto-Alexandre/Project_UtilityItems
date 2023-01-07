@@ -3,6 +3,9 @@
     data modify entity @e[tag=ui_temp_this,limit=1] Motion set from entity @e[type=snowball,sort=nearest,limit=1] Motion
     data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.type set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.tmw.type
     data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.CustomModelData
+    #スコア付与
+    scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
+    scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
     tag @e[tag=ui_temp_this] remove ui_temp_this
     kill @e[type=snowball,sort=nearest,limit=1]
     scoreboard players reset @s ui_uses

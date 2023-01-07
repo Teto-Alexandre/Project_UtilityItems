@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:yellow_dye","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:261},Enchantments:[{id:\"unbreaking\",lvl:1s}],HideFlags:1,display:{Name:'[{\"text\":\"松明の加護\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"光源レベル0の場所に松明を設置する\",\"color\":\"yellow\",\"italic\":false}]','[{\"text\":\"\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"オフハンドに持ったとき:\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"松明自動設置\",\"color\":\"green\",\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

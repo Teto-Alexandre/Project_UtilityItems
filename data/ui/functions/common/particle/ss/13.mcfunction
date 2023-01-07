@@ -1,13 +1,13 @@
 #
-    execute if score $is ui_temp matches 0 run summon lightning_bolt ~ ~ ~
-    execute if score $is ui_temp matches 1 run summon lightning_bolt ~2 ~ ~
-    execute if score $is ui_temp matches 2 run summon lightning_bolt ~4 ~ ~
-    execute if score $is ui_temp matches 1 run summon lightning_bolt ~-2 ~ ~
-    execute if score $is ui_temp matches 2 run summon lightning_bolt ~-4 ~ ~
-    execute if score $is ui_temp matches 1 run summon lightning_bolt ~ ~ ~2
-    execute if score $is ui_temp matches 2 run summon lightning_bolt ~ ~ ~4
-    execute if score $is ui_temp matches 1 run summon lightning_bolt ~ ~ ~-2
-    execute if score $is ui_temp matches 2 run summon lightning_bolt ~ ~ ~-4
+    execute if score $is ui_temp matches 1 run summon lightning_bolt ~ ~ ~
+    execute if score $is ui_temp matches 2 run summon lightning_bolt ~2 ~ ~
+    execute if score $is ui_temp matches 3 run summon lightning_bolt ~4 ~ ~
+    execute if score $is ui_temp matches 2 run summon lightning_bolt ~-2 ~ ~
+    execute if score $is ui_temp matches 3 run summon lightning_bolt ~-4 ~ ~
+    execute if score $is ui_temp matches 2 run summon lightning_bolt ~ ~ ~2
+    execute if score $is ui_temp matches 3 run summon lightning_bolt ~ ~ ~4
+    execute if score $is ui_temp matches 2 run summon lightning_bolt ~ ~ ~-2
+    execute if score $is ui_temp matches 3 run summon lightning_bolt ~ ~ ~-4
 
 #
     execute if score $is ui_temp matches 1 run execute as @e[distance=5..7,predicate=ui:load_unhurtable] at @s run function ui:common/particle/ss/13.1
