@@ -11,13 +11,16 @@ execute store result score $speed ui_temp run data get storage ui:gun temp.now.S
 execute store result score $attack ui_temp run data get storage ui:gun temp.now.Attack 100
 execute store result score $attack_speed ui_temp run data get storage ui:gun temp.now.AttackSpeed 100
 execute store result score $Info ui_temp run data get storage ui:gun temp.now.Info
+execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets
+#tellraw @a [{"score":{"objective":"ui_temp","name":"$bullets"}}]
 
 # 書き込み開始
 data modify storage ui:temp temp set from storage ui:tmw temp.this.tag.tmw
 data modify storage ui:temp temp.gun set from storage ui:gun temp
 execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp temp.gun.now merge value {QFType:1}
-data modify storage ui:temp temp.gun.now merge value {Magazine:0,CT:0,AddCT:0,Noidle:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
-scoreboard players set $bullets ui_temp 0
+execute if score $bullets ui_temp matches 0 run data modify storage ui:temp temp.gun.now merge value {Bullets:0,Noidle:0}
+execute unless score $bullets ui_temp matches 0 run data modify storage ui:temp temp.gun.now merge value {Noidle:1}
+data modify storage ui:temp temp.gun.now merge value {CT:0,AddCT:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
 
 # 書き込み終了
 execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/all
@@ -25,8 +28,8 @@ execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhan
 scoreboard players set $changed ui_temp 1
 
 # 速度追加
-execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
-execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.now.NoUI if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.now.NoUI if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
 
 # 必要なデータ読み取り
     execute store result score $Mass ui_temp run data get storage ui:tmw temp.this.tag.tmw.gun.Mass

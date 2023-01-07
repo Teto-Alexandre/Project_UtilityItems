@@ -40,3 +40,7 @@
     execute if score $type ui_temp matches 15 run function ui:common/particle/ss/15
     # コンパス
     execute if score $type ui_temp matches 16 run function ui:common/particle/ss/16
+    # 回復
+    execute if score $type ui_temp matches 17 run function ui:common/particle/ss/17
+    # 回復2
+    execute if score $type ui_temp matches 18 run function ui:common/particle/ss/18

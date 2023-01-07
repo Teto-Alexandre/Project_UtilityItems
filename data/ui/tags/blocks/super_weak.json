@@ -16,6 +16,7 @@
     "#minecraft:beds",
     "minecraft:glowstone",
     "minecraft:sea_lantern",
-    "minecraft:redstone_lamp"
+    "minecraft:redstone_lamp",
+    "minecraft:powder_snow"
   ]
 }

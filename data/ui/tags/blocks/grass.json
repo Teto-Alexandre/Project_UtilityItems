@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "#ui:overworld_grass",
+        "#ui:nether_grass"
+    ]
+}
