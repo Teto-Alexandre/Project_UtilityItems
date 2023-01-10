@@ -3,7 +3,7 @@
     {
       "rolls": 1,
       "entries": [
-        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180015,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{OneTimeUse:1b,Name:\"ファイアーボール\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:30,BurstCT:30,Burst:1,FireID:109,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:201,now:{Speed:0,Attack:0,AttackSpeed:0,Info:-1,CustomStats:1,Bullets:1,Noidle:1,NoUI:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:1,NoShot:1,Sound:0,Muzzle:0},bullets:[{Count:1}]},display:{Name:'{\"text\":\"ファイアーボール\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"- R click to use\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180015,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{OneTimeUse:1b,Name:\"ファイアーボール\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:30,BurstCT:30,Burst:1,FireID:109,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:201,NoUI:1,now:{Speed:0,Attack:0,AttackSpeed:0,Info:-1,CustomStats:1,Bullets:1,Noidle:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:1,NoShot:1,Sound:0,Muzzle:0},bullets:[{Count:1}]},display:{Name:'{\"text\":\"ファイアーボール\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"- R click to use\",\"color\":\"gray\",\"italic\":false}']}}"}]}
       ]
     }
   ]

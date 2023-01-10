@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:snowball","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:217201,tmw:{id:262,type:1},display:{Name:'[{\"text\":\"橋卵\",\"color\":\"white\",\"italic\":false}]',Lore:['[{\"text\":\"白の羊毛で橋を架ける\",\"color\":\"gray\",\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

@@ -25,3 +25,17 @@
     execute if score $fireid ui_temp matches 108 run function ui:tmw/255/player/crossbow/fire/id/upper/108
     # 即席ファイアーボール
     execute if score $fireid ui_temp matches 109 run function ui:tmw/255/player/crossbow/fire/id/upper/109
+    # コンパス2
+    execute if score $fireid ui_temp matches 110 run function ui:tmw/255/player/crossbow/fire/id/upper/110
+    # 灰の呪い
+    execute if score $fireid ui_temp matches 111 run function ui:tmw/255/player/crossbow/fire/id/upper/111
+    # フレイムサークル
+    execute if score $fireid ui_temp matches 112 run function ui:tmw/255/player/crossbow/fire/id/upper/112/core
+    # ライズゾンビ
+    execute if score $fireid ui_temp matches 113 run function ui:tmw/255/player/crossbow/fire/id/upper/113
+    # 氷獄の槌
+    execute if score $fireid ui_temp matches 114 run function ui:tmw/255/player/crossbow/fire/id/upper/114
+    # 氷獄の陣
+    execute if score $fireid ui_temp matches 115 run function ui:tmw/255/player/crossbow/fire/id/upper/115/core
+    # 猛烈な衝撃
+    execute if score $fireid ui_temp matches 116 run function ui:tmw/255/player/crossbow/fire/id/upper/116

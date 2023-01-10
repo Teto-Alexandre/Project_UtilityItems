@@ -1,1 +1,1 @@
-loot give @p loot ui:single_item/tmw/255/moderated/compass
+loot give @p loot ui:single_item/tmw/255/moderated/manhunt_compass

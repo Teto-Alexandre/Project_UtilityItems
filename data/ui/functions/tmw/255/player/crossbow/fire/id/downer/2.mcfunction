@@ -1,5 +1,8 @@
-#
+#スプレー型
     function ui:tmw/255/player/crossbow/fire/template/f_replace
+
+#
+    execute if score $stats ui_temp matches 1 if score $cooltime ui_temp matches 0 run scoreboard players set $firetime ui_temp 0
 
 #
     scoreboard players set $firetime.max ui_temp 100

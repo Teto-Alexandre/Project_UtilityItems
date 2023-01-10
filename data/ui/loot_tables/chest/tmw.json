@@ -6,13 +6,110 @@
                 {
                     "type": "loot_table",
                     "name": "ui:single_item/tmw/255/random",
-                    "weight": 50
-                },
-                {
-                    "type": "loot_table",
-                    "name": "ui:single_item/tmw/1",
                     "weight": 1
                 }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.6
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/601/random",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.5
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/521/random",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.5
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/261",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.01
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/250",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.01
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/res/1016",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.7
+              }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/res/1017",
+                    "weight": 1
+                }
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:random_chance",
+                "chance": 0.01
+              }
             ]
         }
     ]

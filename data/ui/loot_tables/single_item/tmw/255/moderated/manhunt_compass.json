@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180016,HideFlags:2,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"追う者の羅針盤\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:100,BurstCT:100,Burst:1,FireID:103,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:5,ChangedType:1,now:{Speed:0,Attack:-1,AttackSpeed:0,Info:-1,CustomStats:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:4,NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"追う者の羅針盤\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 鉄インゴット, レッドストーントーチ\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"[対応する契約書必須]\",\"color\":\"red\",\"italic\":false}','{\"text\":\"一定時間追われる者を指すコンパス\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"短い収束の後、その場に展開する\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

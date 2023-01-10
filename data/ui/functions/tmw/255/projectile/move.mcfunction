@@ -14,17 +14,12 @@
     scoreboard players set $paint ui_temp 0
 
 # 見た目
-    execute if score @s ui_bpart matches -6 run function ui:tmw/255/projectile/move/-6
-    execute if score @s ui_bpart matches -5 run function ui:tmw/255/projectile/move/-5
-    execute if score @s ui_bpart matches -4 run function ui:tmw/255/projectile/move/-4
-    execute if score @s ui_bpart matches -3 run function ui:tmw/255/projectile/move/-3
-    execute if score @s ui_bpart matches -2 run function ui:tmw/255/projectile/move/-2
-    execute if score @s ui_bpart matches -1 run function ui:tmw/255/projectile/move/-1
-    execute if score @s ui_bpart matches 1 run function ui:tmw/255/projectile/move/1
-    execute if score @s ui_bpart matches 2 run function ui:tmw/255/projectile/move/2
+    execute unless score @s ui_bpart matches 0 run function ui:tmw/255/projectile/move/id
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
-    execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:tmw/255/projectile/col/block_col
+    #execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:tmw/255/projectile/col/block_col
+    execute positioned ^ ^ ^0.5 run function better_collision:api/
+    execute if score $Hit BCollision.core matches 1 run function ui:tmw/255/projectile/col/block_col
     execute as @s[tag=!ui_temp_col] positioned ^ ^ ^0.5 if block ~ ~ ~ #ui:liq run function ui:tmw/255/projectile/col/liq_col
 
 # 移動値が無くなるまで繰り返す

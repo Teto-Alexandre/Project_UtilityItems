@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:111308,tmw:{id:263,enableQ:1},display:{Name:'[{\"text\":\"RedLaser\",\"color\":\"red\",\"italic\":false}]',Lore:['[{\"text\":\"お気に入りのレーザーポインター\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"赤ガラスをボタンとして使える\",\"color\":\"gray\",\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

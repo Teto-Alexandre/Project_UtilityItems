@@ -156,6 +156,8 @@
     #雪玉
         execute if entity @a[scores={ui_tmw_id=262}] run function ui:tmw/262/lim
         execute if entity @a[scores={ui_tmw_id2=262}] run function ui:tmw/262/lim
+    #レッドレーザー
+        execute if entity @a[scores={ui_tmw_id=263}] run function ui:tmw/263/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

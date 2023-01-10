@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"灰の呪い\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:500,BurstCT:500,Burst:1,FireID:111,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:10,ChangedType:1,now:{Speed:0,Attack:4,AttackSpeed:-0.85,Info:-1,CustomStats:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:1,NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"灰の呪い\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 紙, 金塊, 石炭\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"明星の携行機具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"刻まれた回路が術を発動する\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"その場に灰の呪いを生み出す\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

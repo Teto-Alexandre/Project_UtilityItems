@@ -1,3 +1,6 @@
+# 修飾タイプの選択
+execute store result score $changedtype ui_temp run data get storage ui:gun temp.ChangedType
+
 # 何かしらの変更が加えられていたなら現在のステータスをまとめて変更する
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$bullets"}}]
 execute if score $stats ui_temp matches 1 run scoreboard players set $burst ui_temp 1
@@ -14,9 +17,8 @@ execute store result storage ui:gun temp.now.Time int 1 run scoreboard players g
 execute store result storage ui:gun temp.now.Amp int 1 run scoreboard players get $amp ui_temp
 execute store result storage ui:gun temp.now.Bullets int 1 run scoreboard players get $bullets ui_temp
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
-execute unless data storage ui:gun temp.now.NoUI if score $subtime ui_temp matches 0 if score $sptime ui_temp matches 0 run function ui:tmw/255/player/crossbow/changed/bar_ink
-execute unless data storage ui:gun temp.now.NoUI if score $subtime ui_temp matches 1.. if score $sptime ui_temp matches 0 run function ui:tmw/255/player/crossbow/changed/bar_sub
-execute unless data storage ui:gun temp.now.NoUI if score $sptime ui_temp matches 1.. run function ui:tmw/255/player/crossbow/changed/bar_sp
-execute unless data storage ui:gun temp.now.NoUI if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/now
-execute unless data storage ui:gun temp.now.NoUI if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/now
-#say a
+
+#
+execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches 0 at @s run function ui:tmw/255/player/crossbow/changed/id/0
+execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches ..-1 at @s run function ui:tmw/255/player/crossbow/changed/id/downer/chg_d
+execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches 1.. at @s run function ui:tmw/255/player/crossbow/changed/id/upper/chg_u

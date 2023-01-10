@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/smelt_iron",
+  "display": {
+    "icon": {
+      "item": "minecraft:recovery_compass"
+    },
+    "title": "追う者たち",
+    "description": [
+      {
+        "text": "魂追いの羅針盤を組み立てる"
+      },
+      {
+        "font": "ui:recipe",
+        "color": "white",
+        "translate": "\u0007\n\n\n\n\n\n"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "crafted"
+    ]
+  ]
+}

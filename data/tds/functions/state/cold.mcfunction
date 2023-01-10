@@ -14,7 +14,7 @@
 
 #効果を設定（跳ぶな！）
     execute if score @s tds_cold matches 10.. run effect clear @s jump_boost
-    execute if score @s tds_cold matches 10.. run effect give @s jump_boost 2 129 true
+    #execute if score @s tds_cold matches 10.. run effect give @s jump_boost 2 129 true
     execute if score @s tds_cold matches 10.. run effect give @s slowness 2 5 true
 
 #氷結カウント減少

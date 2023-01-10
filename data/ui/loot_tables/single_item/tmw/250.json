@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:111302,tmw:{id:250,type:-1,mine_square:{Size:6,Bomb:6,Life:2}},display:{Name:'[{\"text\":\"MineSquare 0\",\"color\":\"white\",\"italic\":false}]',Lore:['{\"text\":\"右クリックで開始\",\"color\":\"gold\",\"italic\":false}']},HideFlags:4}"}]}
+            ]
+        }
+    ]
+}

@@ -11,6 +11,7 @@
     execute if score $DamageType tds_dmg matches 8 run function tds:core/epf/damagetypes/8
     execute if score $DamageType tds_dmg matches 9 run function tds:core/epf/damagetypes/9
     execute if score $DamageType tds_dmg matches 10 run function tds:core/epf/damagetypes/10
+    execute if score $DamageType tds_dmg matches 11 run function tds:core/epf/damagetypes/11
 
 # カスタムエンチャントを持っているなら分岐
     scoreboard players set $temp tds_dmg 0

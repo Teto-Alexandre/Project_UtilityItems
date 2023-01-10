@@ -37,6 +37,11 @@
           "type": "minecraft:loot_table",
           "weight": 1,
           "name": "ui:single_item/tmw/255/vanilla/echo_rod"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/vanilla/fireball"
         }
       ]
     }

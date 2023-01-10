@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1001"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1002"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1003"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1004"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1005"},
+
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/2001"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/2002"},
+
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/3001"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/3002"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/3003"},
+
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/4001"},
+
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1501"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/2501"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/3501"},
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/4501"}
+      ]
+    }
+  ]
+}
+

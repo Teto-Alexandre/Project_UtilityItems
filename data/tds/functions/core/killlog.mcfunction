@@ -21,3 +21,4 @@
     execute if score $DeathMessage tds_dmg matches 15 run function tds:message/15
     execute if score $DeathMessage tds_dmg matches 16 run function tds:message/16
     execute if score $DeathMessage tds_dmg matches 17 run function tds:message/17
+    execute if score $DeathMessage tds_dmg matches 18 run function tds:message/18

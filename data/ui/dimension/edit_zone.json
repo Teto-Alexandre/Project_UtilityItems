@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "type": "debug",
+    "seed": 1
+  }
+}

@@ -56,6 +56,7 @@ execute unless score $firetime ui_temp matches 0 run function ui:tmw/255/player/
 execute as @s[tag=tmw_active_temp] if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/top
 
 # 逆変換
+execute if score $cooltime ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 execute if score $changed ui_temp matches 1 run function ui:tmw/255/player/crossbow/changed/core
 
 # タグ消し
