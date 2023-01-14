@@ -5,12 +5,12 @@ scoreboard players add @s ui_tc 1
 teleport @s ^ ^ ^0.6
 
 scoreboard players set $mod ui_calc1 4
-function ui:rand
+function ui:common/rand
 execute if score $rand ui_calc1 matches 0 run summon marker ~0.5 ~2 ~0.5 {Tags:["ui_temp"]}
 execute if score $rand ui_calc1 matches 1 run summon marker ~-0.5 ~2 ~0.5 {Tags:["ui_temp"]}
 execute if score $rand ui_calc1 matches 2 run summon marker ~0.5 ~2 ~-0.5 {Tags:["ui_temp"]}
 execute if score $rand ui_calc1 matches 3 run summon marker ~-0.5 ~2 ~-0.5 {Tags:["ui_temp"]}
-function ui:rand
+function ui:common/rand
 execute at @s[scores={ui_tc=4..}] if score $rand ui_calc1 matches 0 positioned ~0.5 ~ ~0.5 facing entity @e[tag=ui_temp,limit=1] feet run function ui:tmw/102/102_2
 execute at @s[scores={ui_tc=4..}] if score $rand ui_calc1 matches 1 positioned ~-0.5 ~ ~0.5 facing entity @e[tag=ui_temp,limit=1] feet run function ui:tmw/102/102_2
 execute at @s[scores={ui_tc=4..}] if score $rand ui_calc1 matches 2 positioned ~0.5 ~ ~-0.5 facing entity @e[tag=ui_temp,limit=1] feet run function ui:tmw/102/102_2

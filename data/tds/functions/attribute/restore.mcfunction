@@ -1,4 +1,5 @@
 #使用したHP最大値編集は全部リセットしましょうね
+attribute @s minecraft:generic.max_health modifier remove 1-0-0-0-12
 attribute @s minecraft:generic.max_health modifier remove 1-0-0-0-11
 attribute @s minecraft:generic.max_health modifier remove 1-0-0-0-10
 attribute @s minecraft:generic.max_health modifier remove 1-0-0-0-F

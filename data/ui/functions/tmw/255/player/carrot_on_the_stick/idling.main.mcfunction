@@ -33,9 +33,9 @@ scoreboard players set $firecount ui_temp 0
 scoreboard players set $bullets ui_temp 0
 
 # 検知範囲拡大
-tag @a[tag=tmw_use_s] add tmw_active_temp
-tag @a[tag=tmw_use_n] add tmw_active_temp
-tag @a[tag=tmw_drop_s] add tmw_drop_n
+tag @s[tag=tmw_use_s] add tmw_active_temp
+tag @s[tag=tmw_use_n] add tmw_active_temp
+tag @s[tag=tmw_drop_s] add tmw_drop_n
 
 # 常駐効果
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core

@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"サイレントエコー\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:6000,BurstCT:6000,Burst:1,FireID:117,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:15,ChangedType:1,now:{Speed:0,Attack:4,AttackSpeed:-0.85,Info:-1,CustomStats:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Stack:1,NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"サイレントエコー\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 紙, 金ブロック, 残響の欠片\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"クリスタルの携行機具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"小型の自動機構が儀式を行う\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"拡大する静寂の残響を発生させ\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"範囲内に持続的な干渉を行う\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

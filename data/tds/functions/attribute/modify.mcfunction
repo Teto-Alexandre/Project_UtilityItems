@@ -8,6 +8,7 @@
 #現在のHP最大値を取得
 #tds_hpsを今の最大値以下にする（つまりHPが今の最大値以上になることはない）
 execute store result score #_ tds_hps run attribute @s minecraft:generic.max_health get 100
+#scoreboard players add #_ tds_hps 1
 scoreboard players operation @s tds_hps < #_ tds_hps
 #最大HPは1.0f以下にならないので強制的に最大HPを1.0fにする
 attribute @s minecraft:generic.max_health modifier add 1-0-0-0-11 "tds_hp" -1000 add
@@ -83,6 +84,10 @@ execute if score @s tds_hps > #_ tds_hps run attribute @s minecraft:generic.max_
 execute store result score #_ tds_hps run attribute @s minecraft:generic.max_health get 100
 execute if score @s tds_hps <= #_ tds_hps run attribute @s minecraft:generic.max_health modifier add 1-0-0-0-0 "tds_hp" -0.01 add
 execute if score @s tds_hps > #_ tds_hps run attribute @s minecraft:generic.max_health modifier add 1-0-0-0-0 "tds_hp" 0.01 add
+
+execute store result score #_ tds_hps run attribute @s minecraft:generic.max_health get 100
+execute if score @s tds_hps < #_ tds_hps run attribute @s minecraft:generic.max_health modifier add 1-0-0-0-12 "tds_hp" -0.01 add
+execute if score @s tds_hps > #_ tds_hps run attribute @s minecraft:generic.max_health modifier add 1-0-0-0-12 "tds_hp" 0.01 add
 
 
 #最大値変更tick内なので回復するとバグの発生なく数値の正常化可能

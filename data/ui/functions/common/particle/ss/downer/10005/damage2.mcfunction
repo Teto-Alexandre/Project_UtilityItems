@@ -1,5 +1,5 @@
 scoreboard players operation $Attacker tds_dmg = $id ui_temp
-data merge storage tds: {Damage:7.00,DamageType:2,DeathMessage:3,WeaponName:'[{"text":"フレイムサークル","color":"white","italic":"false"},{"text":" ●","color":"gray","italic":"false"}]',EPF:-1,BypassArmor:2000,BypassResistance:false}
+data merge storage tds: {Damage:7.00,DamageType:2,DeathMessage:3,WeaponName:'[{"text":"フレイムサークル","color":"white","italic":"false"}]',EPF:-1,BypassArmor:2000,BypassResistance:false}
 function tds:attack
 
 particle explosion ~ ~ ~ 0 0 0 0 1 force

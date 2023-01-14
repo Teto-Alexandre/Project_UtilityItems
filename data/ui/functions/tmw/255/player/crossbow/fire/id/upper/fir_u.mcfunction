@@ -39,3 +39,15 @@
     execute if score $fireid ui_temp matches 115 run function ui:tmw/255/player/crossbow/fire/id/upper/115/core
     # 猛烈な衝撃
     execute if score $fireid ui_temp matches 116 run function ui:tmw/255/player/crossbow/fire/id/upper/116
+    # サイレントエコー
+    execute if score $fireid ui_temp matches 117 run function ui:tmw/255/player/crossbow/fire/id/upper/117/core
+    # サンダーストーム
+    execute if score $fireid ui_temp matches 118 run function ui:tmw/255/player/crossbow/fire/id/upper/118/core
+    # ヴォルカニックファイア
+    execute if score $fireid ui_temp matches 119 run function ui:tmw/255/player/crossbow/fire/id/upper/119/core
+    # 微風
+    execute if score $fireid ui_temp matches 120 run function ui:tmw/255/player/crossbow/fire/id/upper/120
+    # 風塵
+    execute if score $fireid ui_temp matches 121 run function ui:tmw/255/player/crossbow/fire/id/upper/121/core
+    # 断空
+    execute if score $fireid ui_temp matches 122 run function ui:tmw/255/player/crossbow/fire/id/upper/122/core

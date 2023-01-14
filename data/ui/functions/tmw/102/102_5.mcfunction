@@ -3,7 +3,7 @@
 #ダメージ本体
     data merge storage tds: {Damage:1.00,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}
     scoreboard players set $mod ui_calc1 7
-    function ui:rand
+    function ui:common/rand
     scoreboard players operation #temp tds_dmg = #12 ui_num
     scoreboard players operation #temp tds_dmg += $rand ui_calc1
     execute store result storage tds: Damage float 1 run scoreboard players get #temp tds_dmg

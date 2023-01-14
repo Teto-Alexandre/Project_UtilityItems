@@ -13,5 +13,7 @@
 # 書き込み
     #tellraw @a [{"score":{"name":"$fireid","objective":"ui_temp"}},{"text":": "},{"score":{"name":"$firetime","objective":"ui_temp"}},{"text":" "},{"score":{"name":"$firetime.temp","objective":"ui_temp"}},{"text":" ("},{"score":{"objective":"ui_temp","name":"$cooltime"}},{"text":")"}]
     execute if score $firetime.temp ui_temp > $firetime.max ui_temp store success score $changed ui_temp run scoreboard players set $firetime ui_temp 0
+    #死亡したら中断
+    execute store success score $changed ui_temp if entity @s[tag=tmw255_dead] run scoreboard players set $firetime ui_temp 0
     execute if score $firetime ui_temp matches 0 run scoreboard players set $burst ui_temp 0
     #execute at @s run playsound block.note_block.hat player @a ~ ~ ~ 0.5 2 0

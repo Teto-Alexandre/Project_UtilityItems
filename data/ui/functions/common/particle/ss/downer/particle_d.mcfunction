@@ -36,6 +36,18 @@ execute if score $type ui_temp matches -10009 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10010 run function ui:common/particle/ss/downer/10010/core
 # 猛烈な衝撃 - 親
 execute if score $type ui_temp matches -10011 run function ui:common/particle/ss/downer/10011/core
+# 静寂の残響
+execute if score $type ui_temp matches -10012 run function ui:common/particle/ss/downer/10012/core
+# 連続爆発
+execute if score $type ui_temp matches -10013 run function ui:common/particle/ss/downer/10013/core
+# サンダーストーム付属
+execute if score $type ui_temp matches -10014 run function ui:common/particle/ss/downer/10014/core
+# 微風
+execute if score $type ui_temp matches -10015 run function ui:common/particle/ss/downer/10015/core
+# 風塵
+execute if score $type ui_temp matches -10016 run function ui:common/particle/ss/downer/10016/core
+# 断空
+execute if score $type ui_temp matches -10017 run function ui:common/particle/ss/downer/10017/core
 
 #
 tag @a[tag=ui_temp_player] remove ui_temp_player

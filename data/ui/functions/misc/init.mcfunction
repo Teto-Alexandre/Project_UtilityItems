@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 48 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 49 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -290,6 +290,11 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_tmw601_legs dummy {"text":"UtilityItems_ArmorLegs","color":"dark_blue"}
     scoreboard objectives add ui_tmw601_feet dummy {"text":"UtilityItems_ArmorFeet","color":"dark_blue"}
 
+## コモン
+
+    ### MOB
+    scoreboard objectives add ui_common_mob_target_obj dummy {"text":"UtilityItems_Common_Mob_Target_Obj","color":"dark_blue"}
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
@@ -357,7 +362,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard players set $max ui_i_resitem2 64
     scoreboard players set $tmw10 ui_calc1 1
     scoreboard players set $gun.react ui_world 1
-    execute unless score $base ui_id matches -2147483648..2147483647 run scoreboard players set $base ui_id 1
+    execute unless score $base ui_id matches -2147483648..2147483647 run scoreboard players set $base ui_id 17
     execute unless score $base ui_obj_id matches -2147483648..2147483647 run scoreboard players set $base ui_obj_id 1
     execute unless score $base ui_i_id matches -2147483648..2147483647 run scoreboard players set $base ui_i_id 1
 
@@ -434,5 +439,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 48
+    scoreboard players set $version ui_world 49
     #say operationed

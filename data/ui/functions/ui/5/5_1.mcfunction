@@ -30,7 +30,7 @@ scoreboard players add @s ui_tc 1
 scoreboard players add @s[scores={ui_tc=21..}] ui_calc1 1
 scoreboard players set @s[scores={ui_tc=21..}] ui_tc 1
 scoreboard players set $mod ui_calc1 1000
-execute at @s[scores={ui_tc=1}] run function ui:rand
+execute at @s[scores={ui_tc=1}] run function ui:common/rand
 execute at @s[scores={ui_tc=1}] if score $rand ui_calc1 matches 995..999 run tag @s add ui_5_1_2
 execute at @s[scores={ui_tc=1,ui_calc1=10..}] if score $rand ui_calc1 matches 960..994 run tag @s add ui_5_1_2
 execute at @s[scores={ui_tc=1,ui_calc1=20..}] if score $rand ui_calc1 matches 800..959 run tag @s add ui_5_1_2

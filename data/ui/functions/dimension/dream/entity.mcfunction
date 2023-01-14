@@ -2,7 +2,7 @@
 
 #確率ロール
     scoreboard players set $mod ui_calc1 1000
-    function ui:rand
+    function ui:common/rand
 
 #ゾンビを幽鬼に置き換え
     data merge entity @s {CustomName:'{"text":"幽鬼","italic":false}',Silent:1b,ArmorItems:[{id:"iron_boots",Count:1b},{id:"iron_leggings",Count:1b},{id:"iron_chestplate",Count:1b},{id:"iron_block",Count:1b}],HandItems:[{id:"iron_sword",Count:1b},{id:"iron_sword",Count:1b}],ArmorDropChances:[-1.0f,-1.0f,-1.0f,-1.0f],HandDropChances:[-1.0f,-1.0f],DeathLootTable:"ui:entity/dream1",ActiveEffects:[{Id:14,Amplifier:0,Duration:2000000000,ShowParticles:false},{Id:5,Amplifier:0,Duration:2000000000,ShowParticles:false}],Tags:["ui","ui_enemy","ui_enemy_dream","ui_enemy_dream1","T.HardAlreadyInit"]}

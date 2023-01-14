@@ -41,4 +41,4 @@ scoreboard players set @s ui_lvl_harv_exp -10000
 scoreboard players set @s ui_mine_f 0
 
 #プレイヤーidを振る
-execute as @s unless entity @s[scores={ui_id=1..}] run function ui:make_id
+execute as @s unless entity @s[scores={ui_id=1..}] run function ui:misc/act/make_id

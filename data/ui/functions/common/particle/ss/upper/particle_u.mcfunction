@@ -43,3 +43,5 @@ execute if score $type ui_temp matches 16 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 17 run function ui:common/particle/ss/upper/17/core
 # 回復2
 execute if score $type ui_temp matches 18 run function ui:common/particle/ss/upper/18/core
+# 風刃のおまけ
+execute if score $type ui_temp matches 19 run function ui:common/particle/ss/upper/19/core

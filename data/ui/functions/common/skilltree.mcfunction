@@ -6,22 +6,7 @@
 #   Mode: String
 #       作動モードを入力
 #
-#   generate -
-#      Size: int
-#          大きさを指定
-#      Bomb: int
-#          爆弾数を指定
-#
-#   add -
-#      Slot1: {}
-#          第一対象スロットを入力、一個の場合はこちらを優先
-#      Slot2: {}
-#          第二対象スロットを入力
-#      ResSlot: {}
-#          第三対象スロットを入力、主に出力側
-#
-#   job -
-#      Num: int
+#   get -
 #
 # @public
 

@@ -6,6 +6,7 @@
 
 # カラクラ銃を持っているなら
 execute if entity @s[scores={ui_tmw_id_old=237}] run function ui:misc/dead/tmw237/dead
+execute if entity @s[scores={ui_tmw_id_old=255}] run function ui:misc/dead/tmw255/dead
 
 # もう一回死亡しないように状態異常リセット
 scoreboard players reset @s tds_fire

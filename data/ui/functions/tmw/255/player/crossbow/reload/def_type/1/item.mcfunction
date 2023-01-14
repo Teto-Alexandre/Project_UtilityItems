@@ -20,6 +20,11 @@
     execute if score $reloaditem ui_temp matches 12 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/12
     execute if score $reloaditem ui_temp matches 13 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/13
     execute if score $reloaditem ui_temp matches 14 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/14
+    execute if score $reloaditem ui_temp matches 15 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/15
+    execute if score $reloaditem ui_temp matches 16 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/16
+    execute if score $reloaditem ui_temp matches 17 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/17
+    execute if score $reloaditem ui_temp matches 18 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/18
+    execute if score $reloaditem ui_temp matches 19 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/19
 
     execute if score $reloaditem ui_temp matches 101 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/101
 
