@@ -8,8 +8,8 @@
     scoreboard players set $needcount ui_temp 0
     function ui:common/skilltree/get/needed_checker/list
     execute if score $metcount ui_temp = $needcount ui_temp run scoreboard players add $mettotal ui_temp 1
-    execute if score $metcount ui_temp < $needcount ui_temp run tellraw @s ["",{"text":">> 合致する要素数が不足しています"},{"score":{"name":"$metcount","objective":"ui_temp"},"color":"red"},{"text":" < "},{"score":{"name":"$needcount","objective":"ui_temp"},"color":"red"}]
-    execute unless score $metcount ui_temp < $needcount ui_temp run tellraw @s ["",{"text":">> 合致する要素数が充足しました"},{"score":{"name":"$metcount","objective":"ui_temp"},"color":"green"},{"text":" < "},{"score":{"name":"$needcount","objective":"ui_temp"},"color":"green"}]
+    #execute if score $metcount ui_temp < $needcount ui_temp run tellraw @s ["",{"text":">> 合致する要素数が不足しています"},{"score":{"name":"$metcount","objective":"ui_temp"},"color":"red"},{"text":" < "},{"score":{"name":"$needcount","objective":"ui_temp"},"color":"red"}]
+    #execute unless score $metcount ui_temp < $needcount ui_temp run tellraw @s ["",{"text":">> 合致する要素数が充足しました"},{"score":{"name":"$metcount","objective":"ui_temp"},"color":"green"},{"text":" < "},{"score":{"name":"$needcount","objective":"ui_temp"},"color":"green"}]
 
 # 参照した条件を削除
     data remove storage ui:skill2 temp[0]

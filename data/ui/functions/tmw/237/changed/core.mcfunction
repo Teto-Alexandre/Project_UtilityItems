@@ -12,7 +12,11 @@ execute store result storage ui:gun temp.now.IsHold int 1 run scoreboard players
 execute store result storage ui:gun temp.now.Time int 1 run scoreboard players get $lasttime ui_temp
 execute store result storage ui:gun temp.now.Amp int 1 run scoreboard players get $amp ui_temp
 
-execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/changed/core.burst11
+execute if score $bursttype ui_temp matches 11 store result storage ui:gun temp.now.Shotmode int 1 run scoreboard players get $shotmode ui_temp
+execute if score $bursttype ui_temp matches 11 store result storage ui:gun temp.now.Chargetime int 1 run scoreboard players get $chargetime ui_temp
+execute if score $bursttype ui_temp matches 11 store result storage ui:gun temp.now.Shottime int 1 run scoreboard players get $shottime ui_temp
+
+execute if score $bursttype ui_temp matches 12 store result storage ui:gun temp.now.Multibullet int 1 run scoreboard players get $multibullet ui_temp
 
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
 execute if score $subtime ui_temp matches 0 if score $sptime ui_temp matches 0 run function ui:tmw/237/changed/bar_ink

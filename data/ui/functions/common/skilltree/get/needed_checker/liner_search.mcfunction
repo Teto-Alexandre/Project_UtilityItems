@@ -7,7 +7,7 @@
     execute store result score $core ui_temp run data get storage ui:temp2 temp[0]
     execute store result score $skill ui_temp run data get storage ui:skill2 temp[0][0]
     execute if score $core ui_temp = $skill ui_temp run scoreboard players add $metcount ui_temp 1
-    execute if score $core ui_temp = $skill ui_temp run tellraw @a ["",{"text":">>> 要素が合致します"}]
+    #execute if score $core ui_temp = $skill ui_temp run tellraw @a ["",{"text":">>> 要素が合致します"}]
 
 # 参照した条件を削除
     data remove storage ui:temp2 temp[0]

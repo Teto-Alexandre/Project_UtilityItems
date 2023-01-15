@@ -21,17 +21,17 @@
     execute if score $nodetype ui_temp matches 0 if score $point ui_temp matches 8 run setblock ~ ~5 ~ blue_wool
     execute if score $nodetype ui_temp matches 0 if score $point ui_temp matches 9 run setblock ~ ~5 ~ purple_wool
     execute if score $nodetype ui_temp matches 0 if score $point ui_temp matches 10.. run setblock ~ ~5 ~ black_wool
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches ..0 run setblock ~ ~5 ~ light_gray_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 1 run setblock ~ ~5 ~ white_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 2 run setblock ~ ~5 ~ pink_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 3 run setblock ~ ~5 ~ red_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 4 run setblock ~ ~5 ~ orange_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 5 run setblock ~ ~5 ~ yellow_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 6 run setblock ~ ~5 ~ lime_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 7 run setblock ~ ~5 ~ cyan_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 8 run setblock ~ ~5 ~ blue_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 9 run setblock ~ ~5 ~ purple_terracotta
-    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 10.. run setblock ~ ~5 ~ black_terracotta
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches ..0 run setblock ~ ~5 ~ light_gray_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 1 run setblock ~ ~5 ~ white_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 2 run setblock ~ ~5 ~ pink_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 3 run setblock ~ ~5 ~ red_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 4 run setblock ~ ~5 ~ orange_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 5 run setblock ~ ~5 ~ yellow_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 6 run setblock ~ ~5 ~ lime_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 7 run setblock ~ ~5 ~ cyan_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 8 run setblock ~ ~5 ~ blue_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 9 run setblock ~ ~5 ~ purple_concrete
+    execute if score $nodetype ui_temp matches 1 if score $point ui_temp matches 10.. run setblock ~ ~5 ~ black_concrete
     setblock ~1 ~5 ~ stone_button[face=wall,facing=east]
     setblock ~-1 ~5 ~ stone_button[face=wall,facing=west]
     setblock ~ ~5 ~1 stone_button[face=wall,facing=south]
@@ -50,6 +50,7 @@
     execute store result entity @e[tag=ui_temp_unpower,limit=1] ArmorItems[0].tag.tmw.skilltree.id int 1 run scoreboard players operation @e[tag=ui_temp_unpower] ui_obj_id = $obj_id ui_temp
     execute store result entity @e[tag=ui_temp_unpower,limit=1] ArmorItems[0].tag.tmw.skilltree.point int 1 run scoreboard players get $point ui_temp
     execute if score $nodetype ui_temp matches 1 store result entity @e[tag=ui_temp_unpower,limit=1] ArmorItems[0].tag.tmw.skilltree.nodetype int 1 run scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
+    execute if data storage ui:temp temp[0].tag.display.Name run data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems[0].tag.tmw.skilltree.name set from storage ui:temp temp[0].tag.display.Name
     #execute if score $nodetype ui_temp matches 1 run say 削除タイプノード
 
 

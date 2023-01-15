@@ -2,6 +2,7 @@
 
 # チャージキープ
     execute if score $ishold ui_temp matches 2.. run function ui:tmw/237/constant/charge_cancel
+    execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run function ui:tmw/237/constant/charge_cancel
 
 # 特殊効果
     effect clear @s slowness
@@ -13,9 +14,9 @@
     scoreboard players set @s ui_use2 0
 
 # チームカラーに合わせた防具を削除
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.head with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.chest with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.legs with air
+    item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air
+    item replace entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]}] armor.chest with air
+    item replace entity @s[nbt={Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]}] armor.legs with air
     item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.feet with air
 
 # ストレージにモデルデータを隔離

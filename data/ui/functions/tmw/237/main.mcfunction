@@ -2,6 +2,8 @@
 # 我こそがキングである : tmw_237_king
 # 攻撃を無効化する能力 : tmw_237_sp_survive
 
+#declare storage ui:gun
+
 # 装備更新変数をリセット
 scoreboard players set $changed ui_temp 0
 
@@ -37,6 +39,15 @@ execute store result score $model ui_temp run data get storage ui:gun temp.now.M
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
+
+execute if score $bursttype ui_temp matches 11 store result score $shotmode ui_temp run data get storage ui:gun temp.now.Shotmode
+execute if score $bursttype ui_temp matches 11 store result score $chargetime ui_temp run data get storage ui:gun temp.now.Chargetime
+execute if score $bursttype ui_temp matches 11 store result score $shottime ui_temp run data get storage ui:gun temp.now.Shottime
+execute if score $bursttype ui_temp matches 11 store result score $chargechange ui_temp run data get storage ui:gun temp.ChargeChange
+execute if score $bursttype ui_temp matches 11 store result score $shotchange ui_temp run data get storage ui:gun temp.ShotChange
+
+execute if score $bursttype ui_temp matches 12 store result score $multibullet ui_temp run data get storage ui:gun temp.now.Multibullet
+execute if score $bursttype ui_temp matches 12 store result score $multibulletmax ui_temp run data get storage ui:gun temp.MultibulletMax
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
@@ -78,8 +89,7 @@ execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/burs
 execute if score $bursttype ui_temp matches 9 run function ui:tmw/237/burst/burst9
 execute if score $bursttype ui_temp matches 10 run function ui:tmw/237/burst/burst10
 execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/burst/burst11
-
-
+execute if score $bursttype ui_temp matches 12 run function ui:tmw/237/burst/burst12
 
 # 常駐効果
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1

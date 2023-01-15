@@ -38,7 +38,7 @@ execute if score $type ui_temp matches 253 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 254 run scoreboard players set $w.time ui_temp 160
 execute if score $type ui_temp matches 255 run scoreboard players set $w.time ui_temp 120
 execute if score $type ui_temp matches 256 run scoreboard players set $w.time ui_temp 200
-execute if score $type ui_temp matches 257 run scoreboard players set $w.time ui_temp 180
+execute if score $type ui_temp matches 257 run scoreboard players set $w.time ui_temp 110
 execute if score $type ui_temp matches 258 run scoreboard players set $w.time ui_temp 0
 execute if score $type ui_temp matches 351 run scoreboard players set $w.time ui_temp 20
 execute if score $type ui_temp matches 451 run scoreboard players set $w.time ui_temp 126

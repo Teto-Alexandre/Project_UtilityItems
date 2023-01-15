@@ -48,6 +48,8 @@ execute if score $type ui_temp matches -10015 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10016 run function ui:common/particle/ss/downer/10016/core
 # 断空
 execute if score $type ui_temp matches -10017 run function ui:common/particle/ss/downer/10017/core
+# カスタムモデル落とし
+execute if score $type ui_temp matches -10018 run function ui:common/particle/ss/downer/10018/core
 
 #
 tag @a[tag=ui_temp_player] remove ui_temp_player

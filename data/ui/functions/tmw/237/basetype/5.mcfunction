@@ -5,6 +5,7 @@
 # メインウェポン消費インク取得
     execute store result score $ink.main ui_temp run data get storage ui:gun temp.MainInkUse
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 store result score $ink.main ui_temp run data get storage ui:gun temp.MainInkUse2
+    execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. store result score $ink.main ui_temp run data get storage ui:gun temp.MainInkUse2
 # ホールド状態を取得
     execute store result score $ishold ui_temp run data get storage ui:gun temp.now.IsHold
     #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]

@@ -14,7 +14,7 @@
 
 #
     execute if score $metcount ui_temp matches 0 run data modify storage ui:temp temp.skills2 append from storage ui:temp temp.skills[0]
-    execute if score $metcount ui_temp matches 1.. run say 削除したよ
+    #execute if score $metcount ui_temp matches 1.. run say 削除したよ
 
 # 参照した条件を削除
     data remove storage ui:temp temp.skills[0]

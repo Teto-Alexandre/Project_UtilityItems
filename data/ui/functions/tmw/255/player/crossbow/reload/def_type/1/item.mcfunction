@@ -25,6 +25,7 @@
     execute if score $reloaditem ui_temp matches 17 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/17
     execute if score $reloaditem ui_temp matches 18 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/18
     execute if score $reloaditem ui_temp matches 19 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/19
+    execute if score $reloaditem ui_temp matches 20 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/20
 
     execute if score $reloaditem ui_temp matches 101 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/101
 
