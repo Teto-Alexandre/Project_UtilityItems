@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:leather_boots","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:1006},display:{Name:'{\"text\":\"TNTブーツ\",\"color\":\"light_purple\",\"italic\":false}',Lore:['[{\"text\":\"足場が次々に消えていく\",\"color\":\"aqua\",\"italic\":false}]'],color:16711680},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:1,Operation:0,UUID:[I;3,1,4,1],Slot:\"feet\"},{AttributeName:\"generic.armor_toughness\",Name:\"generic.armor_toughness\",Amount:0,Operation:0,UUID:[I;3,1,4,2],Slot:\"feet\"}]}"}]}
+            ]
+        }
+    ]
+}
