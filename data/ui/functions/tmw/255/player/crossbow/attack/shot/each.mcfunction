@@ -20,6 +20,14 @@
     execute store result score $particle.end ui_temp run data get storage ui:gun temp3.EndParticle
     execute store result score $weak_mult ui_temp run data get storage ui:gun temp3.WeakMultiplier
     execute store result score $back_mult ui_temp run data get storage ui:gun temp3.BackMultiplier
+    execute store result score $muzzle ui_temp run data get storage ui:gun temp3.Muzzle
+    execute store result score $sound ui_temp run data get storage ui:gun temp3.Sound
+
+#
+    data modify storage ui:object_maker temp.DisplayName set from storage ui:gun temp.DisplayName
+    data modify storage ui:object_maker temp.UUID set from storage ui:gun temp2.UUID
+    data modify storage ui:object_maker temp.FlyModifiers set from storage ui:gun temp3.FlyModifiers
+    data modify storage ui:object_maker temp.HitModifiers set from storage ui:gun temp3.HitModifiers
 
 # 計算
     # 弾速 = 弾体質量 x 火力 [基準：ハンドガンで100ぐらいを想定]
@@ -42,27 +50,8 @@
     scoreboard players operation $spread ui_temp /= #20 ui_num
     scoreboard players operation $spread ui_temp > $spread.min ui_temp
 
-# チャージ補正
-    execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/255/player/crossbow/attack/shot/burst4
-    execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/255/player/crossbow/attack/shot/burst5
-    execute if score $burst_alt.id ui_temp matches 201..300 run function ui:tmw/255/player/crossbow/attack/shot/burst8
-    execute if score $burst_alt.id ui_temp matches 301..400 run function ui:tmw/255/player/crossbow/attack/shot/burst9
-
-# タイプごとに拡散して発射
-    #function ui:tmw/255/player/crossbow/attack/shot/loop
-    execute if score $no_shot ui_temp matches 0 anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
-
-# マズルフラッシュ
-    # 読み込み
-    execute store result score $muzzle ui_temp run data get storage ui:gun temp3.Muzzle
-    execute if score $muzzle ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/muzzle/downer/muz_d
-    execute if score $muzzle ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/muzzle/upper/muz_u
-
-# 発射音
-    # 読み込み
-    execute store result score $sound ui_temp run data get storage ui:gun temp3.Sound
-    execute if score $sound ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/snd_d
-    execute if score $sound ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/snd_u
+#
+    execute anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/make_projectile
 
 #
     data remove storage ui:gun temp3

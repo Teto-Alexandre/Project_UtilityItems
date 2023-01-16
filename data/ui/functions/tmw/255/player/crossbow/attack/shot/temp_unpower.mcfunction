@@ -14,10 +14,10 @@ scoreboard players operation @s ui_bu = $weak_mult ui_temp
 scoreboard players operation @s ui_gms = $back_mult ui_temp
 scoreboard players operation @s ui_id = $id ui_temp
 scoreboard players operation @s ui_team = $team ui_temp
-data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui:gun temp.DisplayName
-data modify entity @s ArmorItems.[0].tag.uuid set from storage ui:gun temp2.UUID
-data modify entity @s ArmorItems.[0].tag.fly_modifiers set from storage ui:gun temp3.FlyModifiers
-data modify entity @s ArmorItems.[0].tag.hit_modifiers set from storage ui:gun temp3.HitModifiers
-execute store result score @s ui_bmods run data get storage ui:gun temp3.FlyModifiers
-execute store result score @s ui_hmods run data get storage ui:gun temp3.HitModifiers
+data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui:object_maker temp.DisplayName
+data modify entity @s ArmorItems.[0].tag.uuid set from storage ui:object_maker temp.UUID
+data modify entity @s ArmorItems.[0].tag.fly_modifiers set from storage ui:object_maker temp.FlyModifiers
+data modify entity @s ArmorItems.[0].tag.hit_modifiers set from storage ui:object_maker temp.HitModifiers
+execute store result score @s ui_bmods run data get storage ui:object_maker temp.FlyModifiers
+execute store result score @s ui_hmods run data get storage ui:object_maker temp.HitModifiers
 tag @s remove ui_temp_unpower

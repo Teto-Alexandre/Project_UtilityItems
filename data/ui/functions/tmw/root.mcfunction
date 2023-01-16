@@ -141,6 +141,7 @@
         execute if entity @a[scores={ui_tmw_id=254}] run function ui:tmw/254/lim
     #質量銃器
         execute if entity @a[scores={ui_tmw_id=255}] run function ui:tmw/255/lim
+        execute if entity @a[scores={ui_tmw_id2=255}] run function ui:tmw/255/lim_oh
     #バランスぶっ飛んだカラクラ
         execute if entity @a[scores={ui_tmw_id=256}] run function ui:tmw/256/lim
     #黒穹の剣
