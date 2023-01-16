@@ -1,9 +1,15 @@
 #鉱石辞書
-    execute as @e[type=item,nbt={Age:0s},limit=1,sort=nearest,distance=..6] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 run summon minecraft:armor_stand ~ ~ ~ {Tags:["ui_H","ui_H_2"],NoGravity:1b,Marker:1b,Invisible:1b}
-    execute unless entity @e[type=armor_stand,tag=ui_H] at @s run function ui:tmw/204/harv/dirt
-    execute as @e[type=armor_stand,tag=ui_H] at @s run function ui:tmw/204/harv/farm
-    execute as @e[type=armor_stand,tag=ui_H] at @s run function ui:tmw/204/harv/main
-    kill @e[type=armor_stand,tag=ui_H]
+    execute as @e[type=item,nbt={Age:0s,Item:{id:"minecraft:wheat_seeds"}},limit=1,sort=nearest,distance=..6] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 run summon minecraft:marker ~ ~ ~ {Tags:["ui_H","ui_H_2","ui_H_2_0"]}
+    execute as @e[type=item,nbt={Age:0s,Item:{id:"minecraft:carrot"}},limit=1,sort=nearest,distance=..6] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 run summon minecraft:marker ~ ~ ~ {Tags:["ui_H","ui_H_2","ui_H_2_1"]}
+    execute as @e[type=item,nbt={Age:0s,Item:{id:"minecraft:potato"}},limit=1,sort=nearest,distance=..6] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 run summon minecraft:marker ~ ~ ~ {Tags:["ui_H","ui_H_2","ui_H_2_2"]}
+    execute as @e[type=item,nbt={Age:0s,Item:{id:"minecraft:beetroot_seeds"}},limit=1,sort=nearest,distance=..6] at @s align x align y align z positioned ~0.5 ~0.5 ~0.5 run summon minecraft:marker ~ ~ ~ {Tags:["ui_H","ui_H_2","ui_H_2_3"]}
+    execute unless entity @e[tag=ui_H] at @s run function ui:tmw/204/harv/dirt
+    execute as @e[tag=ui_H] at @s run function ui:tmw/204/harv/farm
+    execute as @e[tag=ui_H_2_0] at @s run function ui:tmw/204/harv/wheat
+    execute as @e[tag=ui_H_2_1] at @s run function ui:tmw/204/harv/carrot
+    execute as @e[tag=ui_H_2_2] at @s run function ui:tmw/204/harv/potato
+    execute as @e[tag=ui_H_2_3] at @s run function ui:tmw/204/harv/beetroot
+    kill @e[tag=ui_H]
 
 # ID共有
     scoreboard players operation $id ui_temp = @s ui_id
