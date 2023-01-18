@@ -31,4 +31,6 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:17},CustomModelData:11020
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:18},CustomModelData:110201,display:{Name:'{"text":"追われる者の契約書","color":"gold","italic":false}',Lore:['[{"text":" 一部アイテムによってターゲットされるようになる","color":"gray","italic":false}]','[{"text":" ・追跡コンパス","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:19},CustomModelData:110201,display:{Name:'{"text":"常時読み込みテストの契約書","color":"gold","italic":false}',Lore:['[{"text":" タグ制御、カスタマイズ可能","color":"gray","italic":false}]','[{"text":" SSロジックでプレイヤーを常に読み込み","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
+
 #=======================================================================================
