@@ -295,6 +295,31 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     ### MOB
     scoreboard objectives add ui_common_mob_target_obj dummy {"text":"UtilityItems_Common_Mob_Target_Obj","color":"dark_blue"}
 
+## ROB
+    ### Time
+    scoreboard objectives add ui_tmw501_19_mct dummy {"text":"UtilityItems_ROB_ModeChangeTime","color":"dark_blue"}
+    ### Now
+    scoreboard objectives add ui_tmw501_19_now_mode dummy {"text":"UtilityItems_ROB_Now_Mode","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_camera dummy {"text":"UtilityItems_ROB_Now_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_jet dummy {"text":"UtilityItems_ROB_Now_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_en dummy {"text":"UtilityItems_ROB_Now_Energy","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_s1 dummy {"text":"UtilityItems_ROB_Now_Shield1","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_s2 dummy {"text":"UtilityItems_ROB_Now_Shield2","color":"dark_blue"}
+    ### Stat
+    scoreboard objectives add ui_tmw501_19_stat_en_max dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_regen dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_camera dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_jet dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Jet","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_speed dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Speed","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_jet_type dummy {"text":"UtilityItems_ROB_Stat_Jet_Type","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_speed_type dummy {"text":"UtilityItems_ROB_Stat_Speed_Type","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_s1_max dummy {"text":"UtilityItems_ROB_Stat_Shield1_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_s1_regen dummy {"text":"UtilityItems_ROB_Stat_Shield1_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_s2_max dummy {"text":"UtilityItems_ROB_Stat_Shield2_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_s2_regen dummy {"text":"UtilityItems_ROB_Stat_Shield2_Max","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_rot_x dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_X","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_rot_y dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_Y","color":"dark_blue"}
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1

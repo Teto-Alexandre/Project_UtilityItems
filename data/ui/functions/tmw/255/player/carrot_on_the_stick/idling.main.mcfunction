@@ -37,6 +37,11 @@ tag @s[tag=tmw_use_s] add tmw_active_temp
 tag @s[tag=tmw_use_n] add tmw_active_temp
 tag @s[tag=tmw_drop_s] add tmw_drop_n
 
+# 発射無効化
+tag @s[tag=tmw_active_temp,tag=tmw255_disable_fire] remove tmw_active_temp
+tag @s[tag=tmw_active_temp,tag=tmw255_disable_fire] remove tmw_active_temp
+tag @s[tag=tmw_drop_n,tag=tmw255_disable_fire] remove tmw_drop_n
+
 # 常駐効果
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core
 

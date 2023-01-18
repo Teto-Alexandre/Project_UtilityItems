@@ -1,0 +1,4 @@
+#
+
+#
+effect clear @s speed

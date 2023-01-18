@@ -1,0 +1,1 @@
+give @p minecraft:carrot_on_a_stick{tmw:{id:264,enableQ:1,enableF:1},CustomModelData:1,display:{Name:'{"text":"モードチェンジ","color":"gold","italic":false}',Lore:['[{"text":" Rclick: Mode Change","color":"gray","italic":false}]','[{"text":" Q: Toggle Camera","color":"gray","italic":false}]']}}

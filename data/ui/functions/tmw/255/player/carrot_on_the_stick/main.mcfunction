@@ -40,6 +40,11 @@ execute store result score $burst.max ui_temp run data get storage ui:gun temp.B
 tag @s[tag=tmw_use_s] add tmw_active_temp
 tag @s[tag=tmw_use_n] add tmw_active_temp
 
+# 発射無効化
+tag @s[tag=tmw_active_temp,tag=tmw255_disable_fire] remove tmw_active_temp
+tag @s[tag=tmw_drop_n,tag=tmw255_disable_fire] remove tmw_drop_n
+tag @s[tag=tmw_drop_s,tag=tmw255_disable_fire] remove tmw_drop_s
+
 # 常駐効果
 execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbow/constant/core
 

@@ -10,7 +10,7 @@
 ## ・その他固有アクティブ、パッシブ
 ## 
 ## 要素:モード: モードの切り替えは数秒 or 無防備
-## ・コンバットモード  武装使用可能 + 防御力上昇
+## ・コンバットモード  武装使用可能
 ## ・スキャンモード  武装使用不可 + エネルギー回復は大
 ## ・モード変更中  移動不可、武装使用不可、エネルギー回復は並
 
@@ -18,3 +18,12 @@
 
 # 戦闘開始時
 execute if entity @s[tag=tmw_501_19_battle_first] run function ui:tmw/501/19/periodic/battle_first
+
+# 回復
+function ui:tmw/501/19/functions/shield/regen
+
+# モード
+function ui:tmw/501/19/battle/mode/core
+function ui:tmw/501/19/battle/camera/core
+function ui:tmw/501/19/battle/jet/core
+execute if score @s ui_tmw501_19_stat_speed_type matches 1.. if score @s ui_tmw501_19_mct matches 0 run function ui:tmw/501/19/battle/speed/core
