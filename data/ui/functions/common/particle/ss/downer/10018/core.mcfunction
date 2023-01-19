@@ -5,6 +5,12 @@ execute at @s if score $is ui_temp matches 1 run summon armor_stand ~30 ~60 ~20 
 execute if score $is ui_temp matches 1 run function ui:common/particle/ss/downer/10018/custom_model/ss
 
 #
+#scoreboard players operation $is_temp ui_temp = $is ui_temp
+#scoreboard players operation $is_temp ui_temp %= #2 ui_num
+#execute if score $is ui_temp matches ..50 if score $is_temp ui_temp matches 0 as @a[distance=..50] at @s run teleport @s ~0.1 ~0.15 ~
+#execute if score $is ui_temp matches ..50 if score $is_temp ui_temp matches 1 as @a[distance=..50] at @s run teleport @s ~-0.1 ~0.15 ~
+
+#
 scoreboard players operation $is_temp ui_temp = $is ui_temp
 scoreboard players operation $is_temp ui_temp %= #3 ui_num
 execute if score $is ui_temp matches ..50 if score $is_temp ui_temp matches 0 at @e[tag=ui_common_projectile_-10018_model,sort=nearest,limit=1] as @e[distance=..7,predicate=ui:load_unhurtable,tag=!ui_temp_team] at @s run function ui:common/particle/ss/downer/10018/damage_direct
