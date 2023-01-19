@@ -5,7 +5,7 @@
     execute unless data storage tds: temp.DamageType run data modify storage tds: temp.DamageType set value 0
     execute unless data storage tds: temp.DeathMessage run data modify storage tds: temp.DeathMessage set value 0
     execute unless data storage tds: temp.EPF run data modify storage tds: temp.EPF set value -1
-    execute unless data storage tds: temp.DisableParticle run data modify storage tds: temp.DisableParticle set value 0b
+    execute store result score $DisableParticle tds_dmg run data get storage tds: temp.DisableParticle
     execute unless data storage tds: temp.BypassArmor run data modify storage tds: temp.BypassArmor set value 0
     execute unless data storage tds: temp.BypassResistance run data modify storage tds: temp.BypassResistance set value 0b
 
@@ -132,7 +132,7 @@
     execute if score $damage_indicator ui_world matches 1 run function tds:core/num_indicator
 
 # 演出
-    function tds:core/damage_indicator
+    execute if score $DisableParticle tds_dmg matches 0 run function tds:core/damage_indicator
 
 # リセット
     scoreboard players reset $Damage tds_dmg

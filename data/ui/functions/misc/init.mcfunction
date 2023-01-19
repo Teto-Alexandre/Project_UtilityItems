@@ -296,6 +296,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_common_mob_target_obj dummy {"text":"UtilityItems_Common_Mob_Target_Obj","color":"dark_blue"}
 
 ## ROB
+    ### World
+    scoreboard objectives add ui_tmw501_19_world dummy {"text":"UtilityItems_ROB_World","color":"dark_blue"}
+    scoreboard players set $point ui_tmw501_19_world 2000
     ### Time
     scoreboard objectives add ui_tmw501_19_mct dummy {"text":"UtilityItems_ROB_ModeChangeTime","color":"dark_blue"}
     ### Now
@@ -305,6 +308,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_tmw501_19_now_en dummy {"text":"UtilityItems_ROB_Now_Energy","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_s1 dummy {"text":"UtilityItems_ROB_Now_Shield1","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_s2 dummy {"text":"UtilityItems_ROB_Now_Shield2","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_shock_absorber dummy {"text":"UtilityItems_ROB_Now_Shock_Absorber","color":"dark_blue"}
     ### Stat
     scoreboard objectives add ui_tmw501_19_stat_en_max dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_regen dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
@@ -320,9 +324,13 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_tmw501_19_stat_s2_regen dummy {"text":"UtilityItems_ROB_Stat_Shield2_Max","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_rot_x dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_X","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_rot_y dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_Y","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_fda dummy {"text":"UtilityItems_ROB_Stat_FallDamageAbsorber","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_mov dummy {"text":"UtilityItems_ROB_Stat_MovementSpeed","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_ilv dummy {"text":"UtilityItems_ROB_Stat_InformationLevel","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_hudt dummy {"text":"UtilityItems_ROB_Stat_HUDType","color":"dark_blue"}
+    ### Test
+    scoreboard objectives add ui_tmw501_19_test_fd minecraft.custom:fall_one_cm {"text":"UtilityItems_ROB_Test_FallDistance","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_test_dt minecraft.custom:damage_taken {"text":"UtilityItems_ROB_Test_DamageTaken","color":"dark_blue"}
 
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1

@@ -10,7 +10,7 @@
     execute if score $temp ui_temp matches 0 run tag @s add tmw_501_19
     execute if score $temp ui_temp matches 0 run tag @s add tmw_501_19_lobby
     execute if score $temp ui_temp matches 0 run tag @s add tmw_501_19_lobby_first
-    execute if score $temp ui_temp matches 0 run gamerule naturalRegeneration true
+    execute if score $temp ui_temp matches 0 run gamerule naturalRegeneration false
     execute if score $temp ui_temp matches 0 run scoreboard players add $tmw_501_19 ui_world 1
     execute if score $temp ui_temp matches 0 run tellraw @a [{"text":"Contract_World","color":"yellow"},{"text":"> ","color":"gray"},{"selector":"@s"},{"text":"をプレイヤーとして認証します","color":"gray"}]
     execute if score $temp ui_temp matches 0 run schedule function ui:tmw/501/19/ss 1t append

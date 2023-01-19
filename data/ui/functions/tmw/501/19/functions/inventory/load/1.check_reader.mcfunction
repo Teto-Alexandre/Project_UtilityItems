@@ -6,6 +6,7 @@
 data modify storage ui:rob temp.Front set from storage ui:rob temp.Inventory[0].tag.tmw.501_19_parts
 
 # スコア化
+execute store result score $shock_absorber ui_temp run data get storage ui:rob temp.Front.shock_absorber
 execute store result score $en_max ui_temp run data get storage ui:rob temp.Front.en_max
 execute store result score $en_regen ui_temp run data get storage ui:rob temp.Front.en_regen
 execute store result score $en_use_camera_act ui_temp run data get storage ui:rob temp.Front.en_use_camera_act
@@ -25,6 +26,7 @@ execute store result score $ilv ui_temp run data get storage ui:rob temp.Front.i
 execute store result score $hudt ui_temp run data get storage ui:rob temp.Front.hudt
 
 # 加算
+scoreboard players operation @s ui_tmw501_19_now_shock_absorber += $shock_absorber ui_temp
 scoreboard players operation @s ui_tmw501_19_stat_en_max += $en_max ui_temp
 scoreboard players operation @s ui_tmw501_19_stat_en_regen += $en_regen ui_temp
 scoreboard players operation @s ui_tmw501_19_stat_en_use_camera_act += $en_use_camera_act ui_temp

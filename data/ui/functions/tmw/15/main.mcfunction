@@ -22,5 +22,6 @@ execute if score $type ui_temp matches 19 if score @s ui_use1 matches 1.. unless
 execute if score $type ui_temp matches 20 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/15/20
 execute if score $type ui_temp matches 20 at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/15/20.1
 execute if score $type ui_temp matches 21 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/21
+execute if score $type ui_temp matches 22 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/22
 
 execute if score $success ui_temp matches 1 at @s run function ui:common/cooltime

@@ -15,50 +15,50 @@
     execute if score $firetime.temp ui_temp matches 2 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 2 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 2 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 2 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 2 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 2 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 4 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 4 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 4 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 4 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 4 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 4 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 6 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 6 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 6 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 6 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 6 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 6 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 8 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 8 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 8 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 8 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 8 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 8 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 10 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 10 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 10 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 10 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 10 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 10 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 12 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 12 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 12 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 12 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 12 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 12 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 14 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 14 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 14 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 14 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 14 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 14 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 16 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 16 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 16 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 16 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 16 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 16 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 18 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 18 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 18 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 18 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 18 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 18 at @s run function tds:heal
     execute if score $firetime.temp ui_temp matches 20 at @s run playsound entity.chicken.egg player @a ~ ~ ~ 1 1.2
     execute if score $firetime.temp ui_temp matches 20 at @s run particle dust 1 1 1 0.6 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
     execute if score $firetime.temp ui_temp matches 20 at @s run particle dust 0.5 1 0.5 0.8 ~ ~0.9 ~ 0.4 0.4 0.4 0 10 force
-    execute if score $firetime.temp ui_temp matches 20 run data merge storage tds: {Amount:0.50f,DisableParticle:false}
+    execute if score $firetime.temp ui_temp matches 20 run data merge storage tds: {temp:{Amount:0.50f,DisableParticle:true}}
     execute if score $firetime.temp ui_temp matches 20 at @s run function tds:heal

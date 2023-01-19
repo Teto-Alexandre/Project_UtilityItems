@@ -17,6 +17,7 @@
 # 戦闘時の tick
 
 # 戦闘開始時
+execute if entity @s[tag=tmw_501_19_battle_second] run function ui:tmw/501/19/periodic/battle_second
 execute if entity @s[tag=tmw_501_19_battle_first] run function ui:tmw/501/19/periodic/battle_first
 
 # 回復
@@ -24,6 +25,10 @@ function ui:tmw/501/19/functions/shield/regen
 
 # ダメージ
 function ui:tmw/501/19/battle/rotation
+
+# 落下
+execute if entity @s[nbt={OnGround:1b}] if score @s ui_tmw501_19_test_fd matches 1.. run function ui:tmw/501/19/battle/fall/core
+execute if score @s ui_tmw501_19_test_dt matches 1.. run function ui:tmw/501/19/battle/damaged/core
 
 # 状況変化
 function ui:tmw/501/19/battle/mode/core

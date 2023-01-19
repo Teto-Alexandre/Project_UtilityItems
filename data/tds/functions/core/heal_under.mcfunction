@@ -1,8 +1,8 @@
 # ダメージを与える
 
 # 引数データをコピー
-    execute store result score $Amount tds_dmg run data get storage tds: Amount 100
-    execute unless data storage tds: DisableParticle run data modify storage tds: DisableParticle set value 0b
+    execute store result score $Amount tds_dmg run data get storage tds: temp.Amount 100
+    execute store result score $DisableParticle tds_dmg run data get storage tds: temp.DisableParticle
     scoreboard players operation $Amount tds_dmg > $0 tds_dmg
 
 # =
@@ -25,8 +25,9 @@
     execute if score $damage_indicator ui_world matches 1 run function tds:core/heal_num_indicator
 
 # 演出
-    function tds:core/heal_indicator
+    execute if score $DisableParticle tds_dmg matches 0 run function tds:core/heal_indicator
 
 # リセット
     scoreboard players reset $Amount tds_dmg
     scoreboard players reset $Health tds_dmg
+    scoreboard players reset $DisableParticle tds_dmg

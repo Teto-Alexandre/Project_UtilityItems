@@ -24,3 +24,7 @@ item replace entity @s inventory.17 with gray_stained_glass_pane{CustomModelData
 
 item replace entity @s inventory.18 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
 item replace entity @s inventory.26 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+
+
+# パーツポイント読み取り
+function ui:tmw/501/19/functions/inventory/point/

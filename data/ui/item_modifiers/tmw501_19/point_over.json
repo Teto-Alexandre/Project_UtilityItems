@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "white",
+        "text": "残ポイント:"
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": " ["
+      },
+      {
+        "italic": false,
+        "color": "red",
+        "score": {
+          "name": "$point",
+          "objective": "ui_temp"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "]"
+      }
+    ]
+  }
+]

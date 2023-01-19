@@ -35,6 +35,7 @@ scoreboard players set $25 tds_dmg 25
 scoreboard players set $100 tds_dmg 100
 scoreboard players set $1000 tds_dmg 1000
 scoreboard players set $2000 tds_dmg 2000
+scoreboard players set $2^13 tds_dmg 8192
 scoreboard players set $10000 tds_dmg 10000
 scoreboard players set $20000 tds_dmg 20000
 scoreboard players set $2^19 tds_dmg 524288

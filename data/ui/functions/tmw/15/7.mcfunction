@@ -1,6 +1,6 @@
 #
     #effect give @s instant_health 1 0 true
-    data merge storage tds: {Amount:4.00f,DisableParticle:false}
+    data merge storage tds: {temp:{Amount:4.00f,DisableParticle:false}}
     function tds:heal
 
 #
