@@ -308,7 +308,8 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     ### Stat
     scoreboard objectives add ui_tmw501_19_stat_en_max dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_regen dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
-    scoreboard objectives add ui_tmw501_19_stat_en_use_camera dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_camera_act dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_camera_con dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_use_jet dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Jet","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_use_speed dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Speed","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_jet_type dummy {"text":"UtilityItems_ROB_Stat_Jet_Type","color":"dark_blue"}
@@ -319,6 +320,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_tmw501_19_stat_s2_regen dummy {"text":"UtilityItems_ROB_Stat_Shield2_Max","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_rot_x dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_X","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_rot_y dummy {"text":"UtilityItems_ROB_Stat_RotationLimit_Y","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_mov dummy {"text":"UtilityItems_ROB_Stat_MovementSpeed","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_ilv dummy {"text":"UtilityItems_ROB_Stat_InformationLevel","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_hudt dummy {"text":"UtilityItems_ROB_Stat_HUDType","color":"dark_blue"}
 
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1

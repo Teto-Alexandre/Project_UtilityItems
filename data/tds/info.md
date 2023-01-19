@@ -2,7 +2,7 @@
 〇防具によるダメージ軽減を考えてくれる高度な計算ソフトです
 
 引数を設定
-    data merge storage tds: {Damage:10.00f,DamageType:1,DeathMessage:1,WeaponName:"",EPF:0,BypassArmor:-1/0/1..,BypassResistance:true/false}
+    data merge storage tds: {temp:{Damage:10.00f,DamageType:1,DeathMessage:1,WeaponName:"",EPF:0,BypassArmor:-1/0/1..,BypassResistance:true/false}}
 対象を実行者にしてfunctionを実行
     execute as 対象 run function tds:attack
 

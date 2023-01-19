@@ -24,7 +24,7 @@
 #ui:object_maker temp.HitModifiers
 
 # タイプごとに拡散して発射
-    execute if score $no_shot ui_temp matches 0 anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
+    execute if score $no_shot ui_temp matches 0 run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
 
 # マズルフラッシュ
     execute if score $muzzle ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/muzzle/downer/muz_d

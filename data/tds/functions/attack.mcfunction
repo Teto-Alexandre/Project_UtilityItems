@@ -24,12 +24,17 @@
 # @context EPFが-1以下の時 EntityのProtectionを参照します
 # @public
 
+#declare storage tds:
+
 # 返り値をリセット
     scoreboard players set $Return tds_dmg 0
     scoreboard players set $Lethal tds_dmg 0
 
 # ダメージを与えるためのタグが足りていないならエラーを吐く
-    execute unless data storage tds: Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]
+    execute unless data storage tds: temp.Damage run tellraw @a [{"text":"ERROR >>","color":"red"},{"text":"引数が足りません","color":"white"},{"text":"\nMissing Damage at tds:attack","color":"white"}]
 
 # タグが足りていれば実行（Healthを持ってなかったら即死する）
-    execute if data storage tds: Damage unless entity @s[tag=ui_resistance] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[tag=tds_temp_death] run function tds:core/attack
+    execute if data storage tds: temp.Damage unless entity @s[tag=ui_resistance] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[tag=tds_temp_death] run function tds:core/manager
+
+# 消す
+    data remove storage tds: temp

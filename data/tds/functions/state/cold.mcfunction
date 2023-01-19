@@ -6,10 +6,10 @@
     execute if score @s tds_cold matches 10.. run particle block ice ~ ~1 ~ 0.2 0.4 0.2 0 15
     
 #ダメージ本体
-    execute if score @s tds_cold matches 10.. run data merge storage tds: {Damage:1f,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:-1,BypassResistance:false,DisableParticle:true}
+    execute if score @s tds_cold matches 10.. run data merge storage tds: {temp:{Damage:1f,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:-1,BypassResistance:false,DisableParticle:true}}
     execute if score @s tds_cold matches 10.. run scoreboard players operation #temp tds_dmg = @s tds_cold
     execute if score @s tds_cold matches 10.. run scoreboard players operation #temp tds_dmg > $100 tds_dmg
-    execute if score @s tds_cold matches 10.. store result storage tds: Damage float 0.01 run scoreboard players get #temp tds_dmg
+    execute if score @s tds_cold matches 10.. store result storage tds: temp.Damage float 0.01 run scoreboard players get #temp tds_dmg
     execute if score @s tds_cold matches 10.. at @s run function tds:attack
 
 #効果を設定（跳ぶな！）

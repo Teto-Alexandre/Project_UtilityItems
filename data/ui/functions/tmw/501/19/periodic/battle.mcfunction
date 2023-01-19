@@ -22,7 +22,10 @@ execute if entity @s[tag=tmw_501_19_battle_first] run function ui:tmw/501/19/per
 # 回復
 function ui:tmw/501/19/functions/shield/regen
 
-# モード
+# ダメージ
+function ui:tmw/501/19/battle/rotation
+
+# 状況変化
 function ui:tmw/501/19/battle/mode/core
 function ui:tmw/501/19/battle/camera/core
 function ui:tmw/501/19/battle/jet/core

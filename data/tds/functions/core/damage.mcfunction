@@ -7,5 +7,5 @@
 
 # UUID が設定されてるならオーナーに書き込む
     execute if score $UUID tds_dmg matches 0 run data remove entity @e[tag=tds_temp_uuid,limit=1] Owner
-    execute if score $UUID tds_dmg matches 1 run data modify entity @e[tag=tds_temp_uuid,limit=1] Owner set from storage tds: Owner
+    execute if score $UUID tds_dmg matches 1 run data modify entity @e[tag=tds_temp_uuid,limit=1] Owner set from storage tds: temp.Owner
     tag @e[tag=tds_temp_uuid] remove tds_temp_uuid

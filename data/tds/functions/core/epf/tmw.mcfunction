@@ -1,7 +1,7 @@
 # カスタムエンチャント
 
 ## 保護
-    execute store result score $Damage tds_dmg run data get storage tds: Damage 100
+    execute store result score $Damage tds_dmg run data get storage tds: temp.Damage 100
 
 # 頭
     execute store result score $Temp tds_dmg run data get storage tds:temp armor_head.tmw.ench[{id:"guard"}].lvl 10

@@ -1,33 +1,32 @@
 # ダメージを与える
 
 # 引数データをコピー
-    execute store result score $Damage tds_dmg run data get storage tds: Damage 100
     execute if entity @s[gamemode=creative] run scoreboard players set $Damage tds_dmg 0
-    execute unless data storage tds: DamageType run data modify storage tds: DamageType set value 0
-    execute unless data storage tds: DeathMessage run data modify storage tds: DeathMessage set value 0
-    execute unless data storage tds: EPF run data modify storage tds: EPF set value -1
-    execute unless data storage tds: DisableParticle run data modify storage tds: DisableParticle set value 0b
-    execute unless data storage tds: BypassArmor run data modify storage tds: BypassArmor set value 0
-    execute unless data storage tds: BypassResistance run data modify storage tds: BypassResistance set value 0b
+    execute unless data storage tds: temp.DamageType run data modify storage tds: temp.DamageType set value 0
+    execute unless data storage tds: temp.DeathMessage run data modify storage tds: temp.DeathMessage set value 0
+    execute unless data storage tds: temp.EPF run data modify storage tds: temp.EPF set value -1
+    execute unless data storage tds: temp.DisableParticle run data modify storage tds: temp.DisableParticle set value 0b
+    execute unless data storage tds: temp.BypassArmor run data modify storage tds: temp.BypassArmor set value 0
+    execute unless data storage tds: temp.BypassResistance run data modify storage tds: temp.BypassResistance set value 0b
 
 # 攻撃者情報を含むか確認
     scoreboard players set $UUID tds_dmg 0
-    execute if data storage tds: Owner run scoreboard players set $UUID tds_dmg 1
+    execute if data storage tds: temp.Owner run scoreboard players set $UUID tds_dmg 1
 
 # 計算に必要な値を取得
     #function tds:core/get_status
     execute unless score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run data get entity @s Health 10000
     execute if score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run scoreboard players operation @s tds_hps *= $100 tds_dmg
-    execute unless data storage tds: {BypassArmor:-1} run function tds:core/armor/manager
-    execute store result score $DamageType tds_dmg run data get storage tds: DamageType
-    execute store result score $DeathMessage tds_dmg run data get storage tds: DeathMessage
-    execute store result score $EPF tds_dmg run data get storage tds: EPF
+    execute unless data storage tds: {temp:{BypassArmor:-1}} run function tds:core/armor/manager
+    execute store result score $DamageType tds_dmg run data get storage tds: temp.DamageType
+    execute store result score $DeathMessage tds_dmg run data get storage tds: temp.DeathMessage
+    execute store result score $EPF tds_dmg run data get storage tds: temp.EPF
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
     execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/player
-    execute if data storage tds: {BypassArmor:-1} run function tds:core/armor/full_bypass
-    execute if data storage tds: {BypassResistance:0b} store result score $Resistance tds_dmg run data get entity @s ActiveEffects[{Id:11}].Amplifier
-    execute if data storage tds: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance tds_dmg 1
-    execute if data storage tds: {BypassResistance:1b} run scoreboard players set $Resistance tds_dmg 0
+    execute if data storage tds: {temp:{BypassArmor:-1}} run function tds:core/armor/full_bypass
+    execute if data storage tds: {temp:{BypassResistance:0b}} store result score $Resistance tds_dmg run data get entity @s ActiveEffects[{Id:11}].Amplifier
+    execute if data storage tds: {temp:{BypassResistance:0b}} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance tds_dmg 1
+    execute if data storage tds: {temp:{BypassResistance:1b}} run scoreboard players set $Resistance tds_dmg 0
     scoreboard players operation $Damage tds_dmg > $0 tds_dmg
 
 # 与えるダメージの計算
@@ -143,4 +142,3 @@
     scoreboard players reset $Attacker tds_dmg
     tag @e[tag=tds_tempa] remove tds_tempa
     data remove storage ui:temp Name
-    data remove storage tds: Owner

@@ -4,12 +4,12 @@
     playsound minecraft:item.totem.use player @a ~ ~ ~ 2 1.8 0
 
 #ダメージ本体
-    data merge storage tds: {Damage:1.00,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}
+    data merge storage tds: {temp:{Damage:1.00,DamageType:6,DeathMessage:4,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
     scoreboard players set $mod ui_calc1 6
     function ui:common/rand
     scoreboard players operation #temp tds_dmg = #10 ui_num
     scoreboard players operation #temp tds_dmg += $rand ui_calc1
-    execute store result storage tds: Damage float 1 run scoreboard players get #temp tds_dmg
+    execute store result storage tds: temp.Damage float 1 run scoreboard players get #temp tds_dmg
     execute at @s run function tds:attack
     scoreboard players operation $Return tds_dmg /= #2000 ui_num
     scoreboard players operation @s tds_cold += $Return tds_dmg

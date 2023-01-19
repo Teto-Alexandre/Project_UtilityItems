@@ -15,5 +15,5 @@
     playsound minecraft:block.redstone_torch.burnout player @a ~ ~ ~ 1 2
 
 #ダメージ本体
-    data merge storage tds: {Damage:2.00,DamageType:-1,DeathMessage:10,WeaponName:"",EPF:0,BypassArmor:-1,BypassResistance:true}
+    data merge storage tds: {temp:{Damage:2.00,DamageType:-1,DeathMessage:10,WeaponName:"",EPF:0,BypassArmor:-1,BypassResistance:true}}
     execute at @s run function tds:attack

@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:leather_helmet","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:4602},display:{Name:'{\"text\":\"ロボトップ\",\"color\":\"white\",\"italic\":false}',Lore:['[{\"text\":\"スコア参照\",\"color\":\"gray\",\"italic\":false}]'],color:16777215},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:0,Operation:0,UUID:[I;3,4,4,1],Slot:\"head\"}]}"}]}
+            ]
+        }
+    ]
+}

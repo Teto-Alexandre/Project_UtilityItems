@@ -7,10 +7,10 @@
     execute if score @s tds_acid matches 20.. run particle dust 1 1 0.5 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 10
     
 #ダメージ本体
-    execute if score @s tds_acid matches 20.. run data merge storage tds: {Damage:1.0f,DamageType:1,DeathMessage:2,WeaponName:"",EPF:-1,BypassArmor:-1,BypassResistance:false,DisableParticle:true}
+    execute if score @s tds_acid matches 20.. run data merge storage tds: {temp:{Damage:1.0f,DamageType:1,DeathMessage:2,WeaponName:"",EPF:-1,BypassArmor:-1,BypassResistance:false,DisableParticle:true}}
     execute if score @s tds_acid matches 20.. run scoreboard players operation #temp tds_dmg = @s tds_acid
     execute if score @s tds_acid matches 20.. run scoreboard players operation #temp tds_dmg > $25 tds_dmg
-    execute if score @s tds_acid matches 20.. store result storage tds: Damage float 0.02 run scoreboard players get #temp tds_dmg
+    execute if score @s tds_acid matches 20.. store result storage tds: temp.Damage float 0.02 run scoreboard players get #temp tds_dmg
     execute if score @s tds_acid matches 20.. at @s run function tds:attack
 
 # 耐久度ダメージ

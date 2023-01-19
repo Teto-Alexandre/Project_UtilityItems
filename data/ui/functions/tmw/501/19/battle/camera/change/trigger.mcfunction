@@ -4,6 +4,7 @@ execute if score @s ui_tmw501_19_mct matches 1.. run scoreboard players set $mod
 
 # on
 execute if score $mode ui_temp matches 1 run scoreboard players set @s ui_tmw501_19_now_camera 2
+execute if score $mode ui_temp matches 1 run function ui:tmw/501/19/functions/energy/camera_use_act
 execute if score $mode ui_temp matches 1 run tellraw @s {"text":"カメラ: ON"}
 
 # off

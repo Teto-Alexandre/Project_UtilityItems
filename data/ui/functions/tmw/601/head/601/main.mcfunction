@@ -1,4 +1,4 @@
-# 採掘
+# 回転制限
 
 # 装着時演出
 execute if entity @s[tag=tmw601_changed] run particle block iron_block ~ ~1.6 ~ 0.4 0.2 0.4 0 8
@@ -29,10 +29,11 @@ scoreboard players operation $x_lim^2*25 ui_temp = $x_lim^2 ui_temp
 scoreboard players operation $y_lim^2*25 ui_temp = $y_lim^2 ui_temp
 scoreboard players operation $x_lim^2*25 ui_temp *= #25 ui_num
 scoreboard players operation $y_lim^2*25 ui_temp *= #25 ui_num
-data merge storage tds: {Damage:0.50,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:2000,BypassResistance:false}
-execute if score $x^2 ui_temp > $x_lim^2*25 ui_temp run data merge storage tds: {Damage:2.50,DamageType:1,DeathMessage:13,WeaponName:"過負荷",EPF:-1,BypassArmor:2000,BypassResistance:false}
-execute if score $y^2 ui_temp > $y_lim^2*25 ui_temp run data merge storage tds: {Damage:2.50,DamageType:1,DeathMessage:13,WeaponName:"過負荷",EPF:-1,BypassArmor:2000,BypassResistance:false}
-execute if score $x ui_temp matches 1.. if score $x^2 ui_temp > $x_lim^2 ui_temp run function tds:attack
-execute if score $x ui_temp matches ..-1 if score $x^2 ui_temp > $x_lim^2 ui_temp run function tds:attack
-execute if score $y ui_temp matches 1.. if score $y^2 ui_temp > $y_lim^2 ui_temp run function tds:attack
-execute if score $y ui_temp matches ..-1 if score $y^2 ui_temp > $y_lim^2 ui_temp run function tds:attack
+data merge storage tds: {temp:{Damage:0.50,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:2000,BypassResistance:false}}
+execute if score $x^2 ui_temp > $x_lim^2*25 ui_temp run data merge storage tds: {temp:{Damage:2.50,DamageType:1,DeathMessage:13,WeaponName:'{"text":"過負荷"}',EPF:-1,BypassArmor:2000,BypassResistance:false}}
+execute if score $y^2 ui_temp > $y_lim^2*25 ui_temp run data merge storage tds: {temp:{Damage:2.50,DamageType:1,DeathMessage:13,WeaponName:'{"text":"過負荷"}',EPF:-1,BypassArmor:2000,BypassResistance:false}}
+execute if score $x ui_temp matches 1.. if score $x^2 ui_temp > $x_lim^2 ui_temp run function tds:attack_keep
+execute if score $x ui_temp matches ..-1 if score $x^2 ui_temp > $x_lim^2 ui_temp run function tds:attack_keep
+execute if score $y ui_temp matches 1.. if score $y^2 ui_temp > $y_lim^2 ui_temp run function tds:attack_keep
+execute if score $y ui_temp matches ..-1 if score $y^2 ui_temp > $y_lim^2 ui_temp run function tds:attack_keep
+function tds:remove_tds

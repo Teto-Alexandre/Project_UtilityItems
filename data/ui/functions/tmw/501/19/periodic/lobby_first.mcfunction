@@ -6,11 +6,13 @@
 tag @s remove tmw_501_19_lobby_first
 
 #
+clear @s
 effect clear @s
 
 #
 effect give @s resistance 1000000 127 true
 effect give @s regeneration 1000000 0 true
+effect give @s instant_health 10 10 true
 effect give @s saturation 1000000 0 true
 effect give @s weakness 1000000 127 true
 

@@ -6,6 +6,7 @@
 tag @s remove tmw_501_19_dead_first
 
 #
+clear @s
 effect clear @s
 
 #
