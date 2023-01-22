@@ -18,7 +18,7 @@ scoreboard players operation $x^2 ui_temp *= $x^2 ui_temp
 scoreboard players operation $y^2 ui_temp *= $y^2 ui_temp
 
 #
-#execute unless score $x ui_temp matches 0 unless score $y ui_temp matches 0 run tellraw @a [{"score":{"name":"$x","objective":"ui_temp"}},{"text":":"},{"score":{"name":"$y","objective":"ui_temp"}}]
+execute unless score $x ui_temp matches 0 unless score $y ui_temp matches 0 run tellraw @s [{"score":{"name":"$x","objective":"ui_temp"}},{"text":":"},{"score":{"name":"$y","objective":"ui_temp"}}]
 execute store result score $x_lim ui_temp run data get entity @s Inventory[{Slot:103b}].tag.tmw.601_4600.X
 execute store result score $y_lim ui_temp run data get entity @s Inventory[{Slot:103b}].tag.tmw.601_4600.Y
 scoreboard players operation $x_lim^2 ui_temp = $x_lim ui_temp

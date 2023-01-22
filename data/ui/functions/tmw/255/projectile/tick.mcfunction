@@ -52,7 +52,8 @@ scoreboard players operation @s ui_bm /= $break.max ui_temp
 # キル条件
 #tellraw @a [{"score":{"name":"@s","objective":"ui_br"}},{"text":"<"},{"score":{"name":"@s","objective":"ui_bm"}},{"text":"[res:"},{"score":{"name":"@s","objective":"ui_autohit"}},{"text":"],"},{"text":"Break:","color":"red"},{"score":{"name":"$break","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$break.max","objective":"ui_temp"},"color":"red"},{"text":","},{"text":"Mass:","color":"aqua"},{"score":{"name":"@s","objective":"ui_dmg"},"color":"aqua"}]
 #tellraw @a [,{"text":" : "},{"score":{"name":"@s","objective":"ui_bm"}}]
-execute at @s if score @s ui_bm <= @s ui_br run function ui:tmw/255/projectile/end
+execute if score @s ui_bm <= @s ui_bm_lim at @s run function ui:tmw/255/projectile/end
+execute if score @s ui_br_temp >= @s ui_br at @s run function ui:tmw/255/projectile/end
 
 # 一時タグ削除
 tag @a[tag=ui_temp_team] remove ui_temp_team

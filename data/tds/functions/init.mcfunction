@@ -1,7 +1,7 @@
 #初回
 
 tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 4 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 6 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 # hpの桁数をint型で表現する
 scoreboard objectives add tds_hpp dummy {"text":"TetoDamageSystem_HealthPointPlace","color":"gold","italic":true}
@@ -18,6 +18,9 @@ scoreboard objectives add tds_amethyst_t dummy {"text":"TetoDamageSystem_Amethys
 scoreboard objectives add tds_acid dummy {"text":"TetoDamageSystem_Acid","color":"gold","italic":true}
 
 scoreboard objectives add tds_totem dummy {"text":"TetoDamageSystem_Totem","color":"gold","italic":true}
+
+scoreboard objectives add tds_damage_cooltime_amount dummy {"text":"TetoDamageSystem_Damage_Cooltime_Amount","color":"gold","italic":true}
+scoreboard objectives add tds_damage_cooltime_time dummy {"text":"TetoDamageSystem_Damage_Cooltime_Time","color":"gold","italic":true}
 
 scoreboard players set $0 tds_dmg 0
 scoreboard players set $1 tds_dmg 1
@@ -46,4 +49,4 @@ scoreboard players set $max tds_cold 200
 scoreboard players set $max tds_acid 200
 
 #
-scoreboard players set $version tds_dmg 5
+scoreboard players set $version tds_dmg 6

@@ -40,6 +40,11 @@ execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
 
+# $basetype よりバーストタイプ、インク消費を取得
+execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
+function ui:tmw/237/basetype/basetype
+
+# 固有
 execute if score $bursttype ui_temp matches 11 store result score $shotmode ui_temp run data get storage ui:gun temp.now.Shotmode
 execute if score $bursttype ui_temp matches 11 store result score $chargetime ui_temp run data get storage ui:gun temp.now.Chargetime
 execute if score $bursttype ui_temp matches 11 store result score $shottime ui_temp run data get storage ui:gun temp.now.Shottime
@@ -48,10 +53,6 @@ execute if score $bursttype ui_temp matches 11 store result score $shotchange ui
 
 execute if score $bursttype ui_temp matches 12 store result score $multibullet ui_temp run data get storage ui:gun temp.now.Multibullet
 execute if score $bursttype ui_temp matches 12 store result score $multibulletmax ui_temp run data get storage ui:gun temp.MultibulletMax
-
-# $basetype よりバーストタイプ、インク消費を取得
-execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
-function ui:tmw/237/basetype/basetype
 
 # 非メインウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse

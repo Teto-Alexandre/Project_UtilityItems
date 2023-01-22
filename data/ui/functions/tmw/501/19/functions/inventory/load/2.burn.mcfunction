@@ -1,6 +1,7 @@
 ## 拡張パーツの拡張 id を読み込む
 
 # データ隔離
+data remove storage ui:rob temp.Front
 data modify storage ui:rob temp.Front set from storage ui:rob temp.Inventory[0].tag.tmw.501_19_parts
 #tellraw @s {"storage":"ui:rob","nbt":"temp.Inventory[0]","interpret":false}
 

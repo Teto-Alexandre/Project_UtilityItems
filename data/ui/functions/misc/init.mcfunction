@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 49 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 50 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -187,8 +187,10 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 ## 主に銃系統（リロードと弾薬がある射撃武器）に使用
     scoreboard objectives add ui_bm dummy {"text":"UtilityItems_BulletMove","color":"dark_blue"}
     scoreboard objectives add ui_bm_temp dummy {"text":"UtilityItems_BulletMove_Temp","color":"dark_blue"}
+    scoreboard objectives add ui_bm_lim dummy {"text":"UtilityItems_UnderLimit","color":"dark_blue"}
     scoreboard objectives add ui_br dummy {"text":"UtilityItems_BulletRange","color":"dark_blue"}
     scoreboard objectives add ui_br_temp dummy {"text":"UtilityItems_BulletRange_Temp","color":"dark_blue"}
+    scoreboard objectives add ui_bg dummy {"text":"UtilityItems_BulletGravity","color":"dark_blue"}
     scoreboard objectives add ui_rt dummy {"text":"UtilityItems_ReloadTime","color":"dark_blue"}
     scoreboard objectives add ui_grs dummy {"text":"UtilityItems_GunReloadSlot","color":"dark_blue"}
     scoreboard objectives add ui_bc dummy {"text":"UtilityItems_BurstCount","color":"dark_blue"}
@@ -249,6 +251,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 
 ## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_survive dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
 
 ## 復活、ゲームモード関連
     #復活までの時間
@@ -476,5 +479,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 49
+    scoreboard players set $version ui_world 50
     #say operationed

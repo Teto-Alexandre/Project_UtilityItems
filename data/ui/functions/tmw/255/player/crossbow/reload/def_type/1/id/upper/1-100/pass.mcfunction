@@ -1,4 +1,4 @@
-#execute if score $reloaditem ui_temp matches 1 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/upper/1-100/1
+execute if score $reloaditem ui_temp matches 1 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/upper/1-100/1
 execute if score $reloaditem ui_temp matches 2 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/upper/1-100/2
 execute if score $reloaditem ui_temp matches 3 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/upper/1-100/3
 execute if score $reloaditem ui_temp matches 4 run function ui:tmw/255/player/crossbow/reload/def_type/1/id/upper/1-100/4

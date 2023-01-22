@@ -47,3 +47,7 @@ execute if score $type ui_temp matches 18 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 19 run function ui:common/particle/ss/upper/19/core
 # オレンジの線
 execute if score $type ui_temp matches 20 run function ui:common/particle/ss/upper/20/core
+# 最寄りの人間のディスプレイを電光掲示板に変える情報災害
+execute if score $type ui_temp matches 21 run function ui:common/particle/ss/upper/21/core
+# 斬撃
+execute if score $type ui_temp matches 22 run function ui:common/particle/ss/upper/22/core

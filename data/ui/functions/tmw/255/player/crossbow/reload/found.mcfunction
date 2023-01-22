@@ -14,6 +14,7 @@
     scoreboard players operation $magazine.temp ui_temp *= $stack ui_temp
     scoreboard players operation $magazine.temp ui_temp < $magazine ui_temp
     scoreboard players operation $magazine ui_temp < $magazine.temp ui_temp
+    #tellraw @a [{"score":{"name":"$stack","objective":"ui_temp"}},{"text":" "},{"score":{"name":"$magazine","objective":"ui_temp"}},{"text":" - "},{"score":{"name":"$magazine.reload","objective":"ui_temp"}}]
 
     # ここ入れ替え
 

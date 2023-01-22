@@ -14,6 +14,7 @@ tag @s add tmw_501_19_battle_second
 function ui:template/get_rotation
 
 #
+title @s times 0 20 0
 effect clear @s
 effect give @s resistance 5 127 true
 effect give @s instant_health 10 10 true
@@ -40,10 +41,11 @@ scoreboard players set @s ui_tmw501_19_stat_s2_max 0
 scoreboard players set @s ui_tmw501_19_stat_s2_regen 0
 scoreboard players set @s ui_tmw501_19_stat_rot_x 0
 scoreboard players set @s ui_tmw501_19_stat_rot_y 0
-scoreboard players set @s ui_tmw501_19_stat_mov 0
+scoreboard players set @s ui_tmw501_19_stat_mov -100
 scoreboard players set @s ui_tmw501_19_stat_ilv 0
 scoreboard players set @s ui_tmw501_19_stat_hudt 0
 scoreboard players set @s ui_tmw501_19_test_fd 0
+scoreboard players set @s ui_tmw501_19_test_dt 0
 
 # アイテムを消す
 item replace entity @s weapon.offhand with air
@@ -108,3 +110,6 @@ item replace entity @s inventory.25 with air
 scoreboard players operation @s ui_tmw501_19_now_en = @s ui_tmw501_19_stat_en_max
 scoreboard players operation @s ui_tmw501_19_now_s1 = @s ui_tmw501_19_stat_s1_max
 scoreboard players operation @s ui_tmw501_19_now_s2 = @s ui_tmw501_19_stat_s2_max
+
+# 速度計算
+function ui:tmw/501/19/functions/speed

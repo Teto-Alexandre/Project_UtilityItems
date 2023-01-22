@@ -52,6 +52,13 @@ execute if score $type ui_temp matches -10017 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10018 run function ui:common/particle/ss/downer/10018/core
 # 銃テスト
 execute if score $type ui_temp matches -10019 run function ui:common/particle/ss/downer/10019/core
+# 斬撃2
+execute if score $type ui_temp matches -10020 run function ui:common/particle/ss/downer/10020/core
+# 斬撃マルチ
+execute if score $type ui_temp matches -10021 run function ui:common/particle/ss/downer/10021/core
+
+# 横切り
+execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core
 
 #
 tag @a[tag=ui_temp_player] remove ui_temp_player

@@ -82,6 +82,12 @@
 
 #===========================================================================
 
+# ダメージクールタイムを使用
+    execute if data storage tds: temp.DamageCooltime if score @s tds_damage_cooltime_time matches 1.. run function tds:core/damage_cooltime
+    execute if data storage tds: temp.DamageCooltime unless score @s tds_damage_cooltime_time matches 1.. run function tds:core/first_damage_cooltime
+
+#===========================================================================
+
 # Mobに適用
     #function tds:core/health_subtract
 
@@ -129,10 +135,10 @@
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg
 
 # ダメージを数値表示
-    execute if score $damage_indicator ui_world matches 1 run function tds:core/num_indicator
+    execute if score $Damage tds_dmg matches 1.. if score $damage_indicator ui_world matches 1 run function tds:core/num_indicator
 
 # 演出
-    execute if score $DisableParticle tds_dmg matches 0 run function tds:core/damage_indicator
+    execute if score $Damage tds_dmg matches 1.. if score $DisableParticle tds_dmg matches 0 run function tds:core/damage_indicator
 
 # リセット
     scoreboard players reset $Damage tds_dmg

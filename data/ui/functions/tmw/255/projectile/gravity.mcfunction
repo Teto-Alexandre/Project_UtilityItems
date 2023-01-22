@@ -1,7 +1,7 @@
 #重力加速度の疑似再現
 
 # tickごとに重力加速
-    scoreboard players operation @s ui_bcp += @s ui_br_temp
+    scoreboard players operation @s ui_bcp += @s ui_bg
     scoreboard players operation $temp ui_bcp = @s ui_bcp
 
 # 座標取得

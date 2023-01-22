@@ -21,7 +21,7 @@ execute if score @s ui_tmw501_19_mct matches 1 if score @s ui_tmw501_19_now_mode
 execute if score @s ui_tmw501_19_mct matches 1 if score @s ui_tmw501_19_now_mode matches 2 run tellraw @s {"text":"モード: スキャン"}
 
 #
-execute if score @s ui_tmw501_19_mct matches 1 run effect clear @s darkness
+execute if score @s ui_tmw501_19_mct matches 1 run effect clear @s[tag=!tmw_501_19_camera_low] darkness
 execute if score @s ui_tmw501_19_mct matches 1 if score @s ui_tmw501_19_now_mode matches 1 run effect clear @s weakness
 execute if score @s ui_tmw501_19_mct matches 1 run effect clear @s slowness
 

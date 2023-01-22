@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:265,type:1,enableQ:1,enableF:1,sword:{Damage:100}},display:{Name:'{\"text\":\"シャムシール\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"専用の技を使用できる\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"アジド工房の携行機具\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

@@ -8,6 +8,8 @@
     execute store result score $gravity ui_temp run data get storage ui:object_maker temp.Gravity
     execute store result score $pack ui_temp run data get storage ui:object_maker temp.Pack
     execute store result score $spread ui_temp run data get storage ui:object_maker temp.Spread
+    scoreboard players set $range ui_temp 2000
+    execute if data storage ui:object_maker temp.Range store result score $range ui_temp run data get storage ui:object_maker temp.Range
     execute store result score $damage_type ui_temp run data get storage ui:object_maker temp.DamageType
     execute store result score $particle.fly ui_temp run data get storage ui:object_maker temp.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:object_maker temp.EndParticle

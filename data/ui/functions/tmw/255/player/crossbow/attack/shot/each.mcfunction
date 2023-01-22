@@ -15,6 +15,8 @@
     execute store result score $gravity ui_temp run data get storage ui:gun temp3.Gravity
     execute store result score $pack ui_temp run data get storage ui:gun temp3.Pack
     execute store result score $spread.min ui_temp run data get storage ui:gun temp3.Spread
+    scoreboard players set $range ui_temp 2000
+    execute if data storage ui:gun temp3.Range store result score $range ui_temp run data get storage ui:gun temp3.Range
     execute store result score $damage_type ui_temp run data get storage ui:gun temp3.DamageType
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp3.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp3.EndParticle

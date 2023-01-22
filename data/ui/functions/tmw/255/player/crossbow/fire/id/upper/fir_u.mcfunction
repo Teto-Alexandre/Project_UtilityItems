@@ -53,3 +53,7 @@
     execute if score $fireid ui_temp matches 122 run function ui:tmw/255/player/crossbow/fire/id/upper/122/core
     # メテオストライク
     execute if score $fireid ui_temp matches 123 run function ui:tmw/255/player/crossbow/fire/id/upper/123/core
+    # 真空ブレード
+    execute if score $fireid ui_temp matches 124 run function ui:tmw/255/player/crossbow/fire/id/upper/124
+    # 真空マルチブレード
+    execute if score $fireid ui_temp matches 125 run function ui:tmw/255/player/crossbow/fire/id/upper/125

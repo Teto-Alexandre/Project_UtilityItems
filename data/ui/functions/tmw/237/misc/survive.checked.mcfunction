@@ -4,4 +4,4 @@
     # 一秒間80%カット
     effect give @s resistance 1 3 true
     # サヴァイブのタグが消える
-    tag @s remove tmw_237_sp_survive
+    scoreboard players reset @s ui_tmw237_survive

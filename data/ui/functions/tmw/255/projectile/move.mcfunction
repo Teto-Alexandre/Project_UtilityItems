@@ -1,5 +1,6 @@
 # 射程うんぬん
     scoreboard players remove @s ui_temp 10
+    scoreboard players add @s ui_br_temp 1
 
 # 移動と反射コモン
     teleport @s ^ ^ ^0.5

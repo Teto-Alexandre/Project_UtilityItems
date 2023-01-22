@@ -1,0 +1,2 @@
+# タイトル
+title @s title ["",{"score":{"name":"$en","objective":"ui_temp"},"color":"yellow"},{"text":"               ","color":"white"},{"score":{"name":"$s2","objective":"ui_temp"},"color":"aqua"},{"text":":","color":"white"},{"score":{"name":"$s1","objective":"ui_temp"},"color":"green"}]

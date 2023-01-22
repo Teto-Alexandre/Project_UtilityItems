@@ -1,5 +1,6 @@
 # メッセージ
 tellraw @p [{"color":"gray","text":"damage"},{"color":"green","text":"> "},{"color":"gray","text":"============= Record Ended ============="}]
+data merge entity @s {PortalCooldown:0}
 
 # 既定値を越えたら経験値を産出
 execute if score @s ui_is matches 1000.. run summon experience_orb ~ ~ ~ {Tags:["tmw_r_exp"],Value:1s}

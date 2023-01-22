@@ -15,13 +15,14 @@ execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions
 execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/load/1.check_reader
 execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/load/1.check_reader
 execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/load/1.check_reader
+execute if score $check ui_temp matches 0 run function ui:tmw/501/19/functions/inventory/load/3.unarmed
 
 # 拡張パーツ
 execute store result score $length ui_temp run data get storage ui:rob temp.Inventory
-tellraw @s [{"text": "拡張パーツ数: "},{"score":{"name": "$num","objective": "ui_temp"}}]
+tellraw @s [{"text": "拡張パーツ数: "},{"score":{"name": "$length","objective": "ui_temp"}}]
 
 # 成功かどうか
-execute if score $check ui_temp matches 0 run kill @s
+#execute if score $check ui_temp matches 0 run kill @s
 execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/load/2.burn
 
 # 最後に
