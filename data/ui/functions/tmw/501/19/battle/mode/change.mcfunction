@@ -2,6 +2,10 @@
 tag @s add tmw255_disable_fire
 
 #
+execute as @s[tag=tmw_501_19_scan_ilv] run scoreboard players remove @s ui_tmw501_19_stat_ilv 1
+execute as @s[tag=tmw_501_19_scan_ilv] run tag @s remove tmw_501_19_scan_ilv
+
+#
 effect give @s darkness 10 127 true
 effect give @s slowness 10 127 true
 effect give @s weakness 10 127 true

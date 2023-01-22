@@ -3,6 +3,7 @@
 #
 tag @s remove tmw255_disable_fire
 tag @s remove tmw_501_19_camera_low
+tag @s remove tmw_501_19_scan_ilv
 
 tag @s remove tmw_501_19_quick_mode_change_1
 tag @s remove tmw_501_19_quick_mode_change_2

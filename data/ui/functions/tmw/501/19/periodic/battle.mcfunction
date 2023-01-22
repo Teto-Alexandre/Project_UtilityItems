@@ -36,5 +36,9 @@ function ui:tmw/501/19/battle/camera/core
 function ui:tmw/501/19/battle/jet/core
 execute if score @s ui_tmw501_19_stat_speed_type matches 1.. if score @s ui_tmw501_19_mct matches 0 run function ui:tmw/501/19/battle/speed/core
 
+# time
+execute store result score $time ui_temp run time query gametime
+scoreboard players operation $time ui_temp %= #2 ui_num
+
 # HUD
-execute if score @s ui_tmw501_19_stat_hudt matches 1.. run function ui:tmw/501/19/battle/hud/core
+execute if score $time ui_temp matches 0 if score @s ui_tmw501_19_stat_hudt matches 1.. run function ui:tmw/501/19/battle/hud/core

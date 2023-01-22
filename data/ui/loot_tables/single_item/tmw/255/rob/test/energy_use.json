@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"TEST-03\",Mass:250,Magazine:30,MaxSize:0,ShotCT:1,BurstCT:10,Burst:4,FireID:-4,ShotEN:150,ReloadMax:40,ReloadID:3,Scope:2,ReloadType:2,ReloadItem:0,now:{Speed:0,Info:-1}},main:{Spread:0,AirSpread:1500,MultiShot:1,Barrel:100},bullet:{Mass:12,Power:1500,AirRes:0.97,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-2,Muzzle:42},bullets:[]},display:{Name:'{\"text\":\"TEST-03\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"発射可能: 150 EN\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"テスト用のエネルギー銃\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"発射時にエネルギーを消費するタイプ\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"ShotEN\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

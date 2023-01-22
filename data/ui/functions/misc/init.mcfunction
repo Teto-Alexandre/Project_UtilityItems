@@ -364,6 +364,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard players set #24 ui_num 24
     scoreboard players set #25 ui_num 25
     scoreboard players set #30 ui_num 30
+    scoreboard players set #36 ui_num 36
     scoreboard players set #40 ui_num 40
     scoreboard players set #50 ui_num 50
     scoreboard players set #60 ui_num 60
