@@ -15,6 +15,8 @@
     execute if score $check ui_temp matches 1 as @s[scores={ui_st=1..}] run tag @s add tmw_shield_mh_s
     execute if score $check ui_temp matches 2 as @s[scores={ui_st=..0}] run tag @s add tmw_shield_oh_n
     execute if score $check ui_temp matches 2 as @s[scores={ui_st=1..}] run tag @s add tmw_shield_oh_s
+    execute if score $check ui_temp matches 1 run tag @s add tmw_shield_mh
+    execute if score $check ui_temp matches 2 run tag @s add tmw_shield_oh
     execute as @s[scores={ui_st=..0}] run tag @s add tmw_shield_n
     execute as @s[scores={ui_st=1..}] run tag @s add tmw_shield_s
     tag @s add tmw_shield

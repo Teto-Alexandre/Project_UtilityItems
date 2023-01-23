@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:shield","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:265,type:1,enableQ:1},display:{Name:'{\"text\":\"TEST-04\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"耐久値: -\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"テスト用の盾\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"構えればダメージを防げる\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

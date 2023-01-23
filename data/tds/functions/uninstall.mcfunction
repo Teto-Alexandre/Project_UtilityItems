@@ -1,0 +1,14 @@
+# hpの桁数をint型で表現する
+scoreboard objectives remove tds_hpp
+scoreboard objectives remove tds_hps
+scoreboard objectives remove tds_tick
+scoreboard objectives remove tds_fire
+scoreboard objectives remove tds_firer
+scoreboard objectives remove tds_cold
+scoreboard objectives remove tds_coldr
+scoreboard objectives remove tds_amethyst
+scoreboard objectives remove tds_amethyst_t
+scoreboard objectives remove tds_acid
+scoreboard objectives remove tds_totem
+scoreboard objectives remove tds_damage_cooltime_amount
+scoreboard objectives remove tds_damage_cooltime_time

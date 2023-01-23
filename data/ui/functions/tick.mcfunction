@@ -46,7 +46,7 @@
         execute if entity @a[scores={ui_tmw_id2=1..}] run scoreboard players set $tmw.act ui_world 1
         execute if entity @a[scores={ui_tmw_id_old=1..}] run scoreboard players set $tmw.act ui_world 1
         execute if entity @a[scores={ui_tmw_id_old2=1..}] run scoreboard players set $tmw.act ui_world 1
-        execute if score $tmw.act ui_world matches 1 run function ui:tmw/root
+        execute if score $tmw.act ui_world matches 1 if score $tmw.activation ui_world matches 1 run function ui:tmw/root
     
     ## ブロック破壊されたアイテムの本体
         execute if score $tick.break ui_world matches 1 run function ui:misc/act/break/major

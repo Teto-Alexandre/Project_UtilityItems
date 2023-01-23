@@ -20,12 +20,11 @@
 
 #
     playsound item.shield.block player @a ~ ~ ~ 1 1 0
+    particle crit ~ ~1 ~ 0.3 0.3 0.3 0.5 10 force
 
 # エンティティタイプで分岐
-    execute if entity @s[tag=tmw_shield_mh_n] run function ui:common/shield_guard/mainhand
-    execute if entity @s[tag=tmw_shield_mh_s] run function ui:common/shield_guard/mainhand
-    execute if entity @s[tag=tmw_shield_oh_n] run function ui:common/shield_guard/offhand
-    execute if entity @s[tag=tmw_shield_oh_s] run function ui:common/shield_guard/offhand
+    execute if entity @s[tag=tmw_shield_mh] run function ui:common/shield_guard/mainhand
+    execute if entity @s[tag=tmw_shield_oh] run function ui:common/shield_guard/offhand
 
 # データ削除
     data remove storage ui:common input
