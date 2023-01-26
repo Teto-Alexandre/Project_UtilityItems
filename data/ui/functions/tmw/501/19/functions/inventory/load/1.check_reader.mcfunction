@@ -5,9 +5,6 @@
 # データ隔離
 data modify storage ui:rob temp.Front set from storage ui:rob temp.Inventory[0].tag.tmw.501_19_parts
 
-# タグ
-execute if data storage ui:rob temp.Front.camera_low run tag @s add tmw_501_19_camera_low
-
 # スコア化
 execute store result score $shock_absorber ui_temp run data get storage ui:rob temp.Front.shock_absorber
 execute store result score $en_max ui_temp run data get storage ui:rob temp.Front.en_max
