@@ -27,6 +27,7 @@ effect give @s weakness 1000000 127 true
 
 #
 gamemode adventure @s
+gamemode creative @s
 
 #
 function ui:tmw/501/19/functions/tag_score_reset

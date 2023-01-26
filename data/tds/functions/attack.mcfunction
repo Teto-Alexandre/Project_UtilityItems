@@ -17,10 +17,17 @@
 #       軽減効果のある[エンチャントプロテクションファクター]の合計値
 #   DisableParticle: boolean
 #       パーティクルを表示するか否か, bool値
-#   BypassArmor: boolean
-#       防御力/防具強度を無視するか否か, bool値
+#   BypassArmor: int
+#       防御力/防具強度を無視するか否か, int
 #   BypassResistance: boolean
 #       耐性エフェクトを無視するか否か, bool値
+#   ShieldGuardable: int
+#       盾で防げるか否か
+#       0: ガー不   1: 通常ガード可能   2: 斧属性
+#   BypassShield: int
+#       盾で防げないダメージの割合
+#   ShieldDamageMult: int
+#       対盾ダメージブーストの百分率
 # @context EPFが-1以下の時 EntityのProtectionを参照します
 # @public
 

@@ -10,3 +10,7 @@
     execute if score $sound ui_temp matches 5 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/5
 # サプ付きHG
     execute if score $sound ui_temp matches 6 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/6
+# レーザーライフル
+    execute if score $sound ui_temp matches 7 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/7
+# レーザーガトリング
+    execute if score $sound ui_temp matches 8 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/8

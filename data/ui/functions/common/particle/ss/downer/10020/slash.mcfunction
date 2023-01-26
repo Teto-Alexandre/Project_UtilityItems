@@ -1,4 +1,6 @@
 #
+tag @e[tag=ui_temp_damaged] remove ui_temp_damaged
+
 execute positioned ^1.75 ^0 ^-0.75 run function ui:common/particle/ss/downer/10020/point
 execute positioned ^1.75 ^0 ^-0.625 run function ui:common/particle/ss/downer/10020/point
 execute positioned ^1.75 ^0 ^-0.5 run function ui:common/particle/ss/downer/10020/point

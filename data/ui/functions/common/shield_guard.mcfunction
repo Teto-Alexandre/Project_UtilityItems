@@ -9,7 +9,7 @@
 # @public
 
 # スコア化
-    #data merge storage ui:common {input:{Damage:10}}
+    #data merge storage ui:common {input:{Damage:10,Break:1}}
 
 #
     execute store result score $common.armor_damage ui_temp run data get storage ui:common input.Damage

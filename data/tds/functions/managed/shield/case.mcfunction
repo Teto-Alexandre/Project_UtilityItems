@@ -1,13 +1,28 @@
 # 盾で防ぐ
 
 #
-    execute at @s positioned ^ ^ ^0.1 rotated ~ 0 run summon magma_cube ~ ~ ~ {Tags:["ui_common_shield_slime"],ActiveEffects:[{Id:14,Duration:20,ShowParticles:0b}],HandItems:[{id:"wooden_axe",Count:1b},{}],Attributes:[{Name:"generic.attack_damage",Base:-100}]}
-    execute as @e[tag=ui_common_shield_slime] facing entity @p feet run teleport @s ~ ~ ~ ~ ~
-    schedule function ui:common/shield_guard/kill_slime 1t
+scoreboard players operation $DamageTemp tds_dmg = $Damage tds_dmg
 
-data merge storage ui:common {input:{Damage:1}}
-execute store result storage ui:common input.Damage int 0.02 run scoreboard players add $Damage tds_dmg 100
+# バイパス
+execute store result score $Bypass tds_dmg run data get storage tds: temp.BypassShield
+scoreboard players set $BypassA tds_dmg 100
+scoreboard players operation $BypassA tds_dmg -= $Bypass tds_dmg
+
+#
+execute store result score $DamageMult tds_dmg run data get storage tds: temp.ShieldDamageMult
+execute unless data storage tds: temp.ShieldDamageMult run scoreboard players set $DamageMult tds_dmg 100
+
+#
+data merge storage ui:common {input:{Damage:1,Break:0}}
+execute if data storage tds: temp{ShieldGuardable:2} run data modify storage ui:common input.Break set value 1
+scoreboard players operation $Damage tds_dmg *= $DamageMult tds_dmg
+scoreboard players operation $Damage tds_dmg /= $100 tds_dmg
+scoreboard players operation $Damage tds_dmg *= $BypassA tds_dmg
+scoreboard players operation $Damage tds_dmg /= $100 tds_dmg
+execute store result storage ui:common input.Damage int 0.01 run scoreboard players add $Damage tds_dmg 100
 
 function ui:common/shield_guard
 
-scoreboard players set $Damage tds_dmg 0
+scoreboard players operation $Damage tds_dmg = $DamageTemp tds_dmg
+scoreboard players operation $Damage tds_dmg *= $Bypass tds_dmg
+scoreboard players operation $Damage tds_dmg /= $100 tds_dmg

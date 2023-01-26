@@ -27,12 +27,12 @@
     execute if score $no_shot ui_temp matches 0 run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
 
 # マズルフラッシュ
-    execute if score $muzzle ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/muzzle/downer/muz_d
-    execute if score $muzzle ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/muzzle/upper/muz_u
+    execute if score $muzzle ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/muzzle/muz_d
+    execute if score $muzzle ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/muzzle/muz_u
 
 # 発射音
-    execute if score $sound ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/snd_d
-    execute if score $sound ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/snd_u
+    execute if score $sound ui_temp matches ..-1 run function ui:tmw/255/player/crossbow/attack/shot/sound/snd_d
+    execute if score $sound ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/sound/snd_u
 
 #
     schedule function ui:tmw/255/player/crossbow/ss/1 1t append

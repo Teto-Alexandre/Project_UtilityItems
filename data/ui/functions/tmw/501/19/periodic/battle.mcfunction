@@ -20,6 +20,13 @@
 execute if entity @s[tag=tmw_501_19_battle_second] run function ui:tmw/501/19/periodic/battle_second
 execute if entity @s[tag=tmw_501_19_battle_first] run function ui:tmw/501/19/periodic/battle_first
 
+# time
+execute store result score $time ui_temp run time query gametime
+scoreboard players operation $time ui_temp %= #2 ui_num
+
+# sound
+execute if score $time ui_temp matches 0 run tag @s[tag=tmw_501_19_sound_shield] remove tmw_501_19_sound_shield
+
 # 回復
 function ui:tmw/501/19/functions/shield/regen
 
@@ -35,10 +42,6 @@ function ui:tmw/501/19/battle/mode/core
 function ui:tmw/501/19/battle/camera/core
 function ui:tmw/501/19/battle/jet/core
 execute if score @s ui_tmw501_19_stat_speed_type matches 1.. if score @s ui_tmw501_19_mct matches 0 run function ui:tmw/501/19/battle/speed/core
-
-# time
-execute store result score $time ui_temp run time query gametime
-scoreboard players operation $time ui_temp %= #2 ui_num
 
 # HUD
 execute if score $time ui_temp matches 0 if score @s ui_tmw501_19_stat_hudt matches 1.. run function ui:tmw/501/19/battle/hud/core

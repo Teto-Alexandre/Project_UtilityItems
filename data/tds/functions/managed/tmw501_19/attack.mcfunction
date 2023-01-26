@@ -9,5 +9,12 @@ execute if score $temp tds_dmg matches 1 run scoreboard players operation @s ui_
 
 execute if score $temp tds_dmg matches 1..2 run scoreboard players set $Damage tds_dmg 0
 
-execute if score $temp tds_dmg matches 1 run tellraw @s [{"text":"長期シールド: "},{"score":{"name": "@s","objective": "ui_tmw501_19_now_s1"}}]
-execute if score $temp tds_dmg matches 2 run tellraw @s [{"text":"短期シールド: "},{"score":{"name": "@s","objective": "ui_tmw501_19_now_s2"}}]
+execute if score $temp tds_dmg matches 1 unless entity @s[tag=tmw_501_19_sound_shield] run playsound ui:shield player @a ~ ~ ~ 0.7 1.2 0
+execute if score $temp tds_dmg matches 1 run particle dust 0 0 1 0.7 ~ ~0.9 ~ 0.4 0.6 0.4 0 10 force
+execute if score $temp tds_dmg matches 1 run particle block lapis_block ~ ~0.9 ~ 0.4 0.6 0.4 0 5 force
+
+execute if score $temp tds_dmg matches 2 unless entity @s[tag=tmw_501_19_sound_shield] run playsound ui:shield player @a ~ ~ ~ 0.6 1.6 0
+execute if score $temp tds_dmg matches 2 run particle dust 0 1 1 0.7 ~ ~0.9 ~ 0.4 0.6 0.4 0 10 force
+execute if score $temp tds_dmg matches 2 run particle block diamond_block ~ ~0.9 ~ 0.4 0.6 0.4 0 5 force
+
+execute if score $temp tds_dmg matches 1..2 run tag @s add tmw_501_19_sound_shield
