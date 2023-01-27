@@ -280,16 +280,17 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives remove ui_tmw501_19_world
     scoreboard objectives remove ui_tmw501_19_mct
     scoreboard objectives remove ui_tmw501_19_now_mode
-    scoreboard objectives remove ui_tmw501_19_now_camera
+    scoreboard objectives remove ui_tmw501_19_now_hud
     scoreboard objectives remove ui_tmw501_19_now_jet
     scoreboard objectives remove ui_tmw501_19_now_en
     scoreboard objectives remove ui_tmw501_19_now_s1
     scoreboard objectives remove ui_tmw501_19_now_s2
     scoreboard objectives remove ui_tmw501_19_now_shock_absorber
+    scoreboard objectives remove ui_tmw501_19_now_life
+    scoreboard objectives remove ui_tmw501_19_now_respawn_time
     scoreboard objectives remove ui_tmw501_19_stat_en_max
     scoreboard objectives remove ui_tmw501_19_stat_en_regen
-    scoreboard objectives remove ui_tmw501_19_stat_en_use_camera_act
-    scoreboard objectives remove ui_tmw501_19_stat_en_use_camera_con
+    scoreboard objectives remove ui_tmw501_19_stat_en_use_hud
     scoreboard objectives remove ui_tmw501_19_stat_en_use_jet
     scoreboard objectives remove ui_tmw501_19_stat_en_use_speed
     scoreboard objectives remove ui_tmw501_19_stat_jet_type

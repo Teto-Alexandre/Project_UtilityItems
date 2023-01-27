@@ -28,3 +28,12 @@ item replace entity @s inventory.26 with gray_stained_glass_pane{CustomModelData
 
 # パーツポイント読み取り
 function ui:tmw/501/19/functions/inventory/point/
+
+# 成功かどうか
+execute if score $Return ui_temp matches 1 run item replace entity @s hotbar.4 with minecraft:emerald
+execute if score $Return ui_temp matches 1 run item modify entity @s hotbar.4 ui:tmw501_19/point_plus
+execute if score $Return ui_temp matches 0 run item replace entity @s hotbar.4 with minecraft:red_stained_glass_pane
+execute if score $Return ui_temp matches 0 run item modify entity @s hotbar.4 ui:tmw501_19/point_over
+
+execute if score $Return ui_temp matches 0 run title @s title [{"text":"※ポイントオーバーしています※","color":"red"}]
+execute if score $Return ui_temp matches 0 run title @s times 5 10 5

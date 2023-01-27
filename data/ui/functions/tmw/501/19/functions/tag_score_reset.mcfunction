@@ -7,13 +7,13 @@ tag @s remove tmw_501_19_scan_ilv
 #
 scoreboard players reset @s ui_tmw501_19_mct
 scoreboard players reset @s ui_tmw501_19_now_mode
-scoreboard players reset @s ui_tmw501_19_now_camera
+scoreboard players reset @s ui_tmw501_19_now_hud
 scoreboard players reset @s ui_tmw501_19_now_jet
+scoreboard players reset @s ui_tmw501_19_now_shock_absorber
 
 scoreboard players reset @s ui_tmw501_19_stat_en_max
 scoreboard players reset @s ui_tmw501_19_stat_en_regen
-scoreboard players reset @s ui_tmw501_19_stat_en_use_camera_act
-scoreboard players reset @s ui_tmw501_19_stat_en_use_camera_con
+scoreboard players reset @s ui_tmw501_19_stat_en_use_hud
 scoreboard players reset @s ui_tmw501_19_stat_en_use_jet
 scoreboard players reset @s ui_tmw501_19_stat_en_use_speed
 scoreboard players reset @s ui_tmw501_19_stat_jet_type

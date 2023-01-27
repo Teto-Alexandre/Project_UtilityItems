@@ -5,6 +5,7 @@ tag @s[tag=tmw_oh_s] add tmw_oh_n
 
 # 実行
 execute as @s[tag=tmw_use_n] run function ui:tmw/501/19/battle/mode/change/trigger
-execute as @s[tag=tmw_drop_n] run function ui:tmw/501/19/battle/camera/change/trigger
+execute as @s[tag=tmw_drop_n] if score @s ui_tmw501_19_stat_hudt matches 0 run function ui:tmw/501/19/battle/hud/change/trigger_not
+execute as @s[tag=tmw_drop_n] unless score @s ui_tmw501_19_stat_hudt matches 0 run function ui:tmw/501/19/battle/hud/change/trigger
 execute as @s[tag=tmw_oh_n] if score @s ui_tmw501_19_stat_jet_type matches 0 run function ui:tmw/501/19/battle/jet/change/trigger_not
 execute as @s[tag=tmw_oh_n] unless score @s ui_tmw501_19_stat_jet_type matches 0 run function ui:tmw/501/19/battle/jet/change/trigger

@@ -37,10 +37,8 @@ scoreboard players operation $point ui_temp = $point ui_tmw501_19_world
 execute if score $num ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/point/1.burn
 
 # 成功かどうか
-execute if score $point ui_temp matches 0.. run item replace entity @s hotbar.4 with minecraft:emerald
-execute if score $point ui_temp matches 0.. run item modify entity @s hotbar.4 ui:tmw501_19/point_plus
-execute if score $point ui_temp matches ..-1 run item replace entity @s hotbar.4 with minecraft:red_stained_glass_pane
-execute if score $point ui_temp matches ..-1 run item modify entity @s hotbar.4 ui:tmw501_19/point_over
+execute if score $point ui_temp matches 0.. run scoreboard players set $Return ui_temp 1
+execute if score $point ui_temp matches ..-1 run scoreboard players set $Return ui_temp 0
 
 # 最後に
 data remove storage ui:rob temp

@@ -3,8 +3,7 @@
 # スコア化
 execute store result score $en_max ui_temp run data get storage ui:rob temp.Front.en_max
 execute store result score $en_regen ui_temp run data get storage ui:rob temp.Front.en_regen
-execute store result score $en_use_camera_act ui_temp run data get storage ui:rob temp.Front.en_use_camera_act
-execute store result score $en_use_camera_con ui_temp run data get storage ui:rob temp.Front.en_use_camera_con
+execute store result score $en_use_hud ui_temp run data get storage ui:rob temp.Front.en_use_hud
 execute store result score $en_use_jet ui_temp run data get storage ui:rob temp.Front.en_use_jet
 execute store result score $en_use_speed ui_temp run data get storage ui:rob temp.Front.en_use_speed
 execute store result score $s1_max ui_temp run data get storage ui:rob temp.Front.s1_max
@@ -20,10 +19,8 @@ execute if score $en_max ui_temp matches 1.. run scoreboard players operation @s
 execute if score $en_max ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_max /= #100 ui_num
 execute if score $en_regen ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_regen *= $en_regen ui_temp
 execute if score $en_regen ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_regen /= #100 ui_num
-execute if score $en_use_camera_act ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_camera_act *= $en_use_camera_act ui_temp
-execute if score $en_use_camera_act ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_camera_act /= #100 ui_num
-execute if score $en_use_camera_con ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_camera_con *= $en_use_camera_con ui_temp
-execute if score $en_use_camera_con ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_camera_con /= #100 ui_num
+execute if score $en_use_hud ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_hud *= $en_use_hud ui_temp
+execute if score $en_use_hud ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_hud /= #100 ui_num
 execute if score $en_use_jet ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_jet *= $en_use_jet ui_temp
 execute if score $en_use_jet ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_jet /= #100 ui_num
 execute if score $en_use_speed ui_temp matches 1.. run scoreboard players operation @s ui_tmw501_19_stat_en_use_speed *= $en_use_speed ui_temp

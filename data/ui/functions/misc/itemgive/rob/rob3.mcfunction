@@ -3,6 +3,7 @@ give @p minecraft:carrot_on_a_stick{CustomModelData:111005,tmw:{501_19_parts:{po
 
 give @p minecraft:furnace{tmw:{501_19_parts:{pos:"add",point:100,add_id:2,en_regen:3}},display:{Name:'{"text":"発電機","color":"gold","italic":false}',Lore:['[{"text":" EN回復:0.3","color":"gray","italic":false}]','[{"text":" 固定値ステータス増加は id:2","color":"gray","italic":false}]']}}
 give @p minecraft:iron_ingot{tmw:{501_19_parts:{pos:"add",point:200,add_id:2,mov:10}},display:{Name:'{"text":"加速ギア","color":"gold","italic":false}',Lore:['[{"text":" MOV:10%","color":"gray","italic":false}]','[{"text":" 固定値ステータス増加は id:2","color":"gray","italic":false}]']}}
+give @p minecraft:torch{tmw:{501_19_parts:{pos:"add",point:100,add_id:2,ilv:1}},display:{Name:'{"text":"情報機","color":"gold","italic":false}',Lore:['[{"text":" 情報強度:1","color":"gray","italic":false}]','[{"text":" 固定値ステータス増加は id:2","color":"gray","italic":false}]']}}
 
 give @p minecraft:glowstone{tmw:{501_19_parts:{pos:"add",point:300,add_id:3,en_max:120}},display:{Name:'{"text":"エネルギーブースター","color":"gold","italic":false}',Lore:['[{"text":" ENMAX:+20%","color":"gray","italic":false}]','[{"text":" 割合ステータス増加は id:3","color":"gray","italic":false}]']}}
 give @p minecraft:lapis_lazuli{tmw:{501_19_parts:{pos:"add",point:300,add_id:3,s2_max:120}},display:{Name:'{"text":"外部シールドブースター","color":"gold","italic":false}',Lore:['[{"text":" SHP:+20%","color":"gray","italic":false}]','[{"text":" 割合ステータス増加は id:3","color":"gray","italic":false}]']}}

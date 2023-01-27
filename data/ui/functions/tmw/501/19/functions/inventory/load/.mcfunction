@@ -1,10 +1,10 @@
-##パーツ性能読み取ってプレイヤーに加算する
+##PDAからパーツ性能読み取ってプレイヤーに加算する
 ##必ず初期値のある状態で設定すること
 
 #declare storage ui:rob
 
 # データ隔離
-data modify storage ui:rob temp.Inventory set from entity @s Inventory
+data modify storage ui:rob temp.Inventory set from entity @e[tag=ui_temp_pda,limit=1] ArmorItems[0].tag.PDA.Inventory
 
 # 成功検知
 scoreboard players set $check ui_temp 0
@@ -20,10 +20,10 @@ execute if score $check ui_temp matches 0 run function ui:tmw/501/19/functions/i
 # 拡張パーツ
 execute store result score $length ui_temp run data get storage ui:rob temp.Inventory
 tellraw @s [{"text": "拡張パーツ数: "},{"score":{"name": "$length","objective": "ui_temp"}}]
+function ui:tmw/501/19/functions/inventory/load/2.burn
 
 # 成功かどうか
 #execute if score $check ui_temp matches 0 run kill @s
-execute if score $check ui_temp matches 1.. run function ui:tmw/501/19/functions/inventory/load/2.burn
 
 # 最後に
 data remove storage ui:rob temp

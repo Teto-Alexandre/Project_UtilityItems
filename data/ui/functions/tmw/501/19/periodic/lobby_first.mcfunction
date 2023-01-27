@@ -31,3 +31,5 @@ gamemode creative @s
 
 #
 function ui:tmw/501/19/functions/tag_score_reset
+scoreboard players reset @s ui_tmw501_19_now_life
+scoreboard players reset @s ui_tmw501_19_now_respawn_time

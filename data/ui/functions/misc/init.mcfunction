@@ -302,21 +302,23 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     ### World
     scoreboard objectives add ui_tmw501_19_world dummy {"text":"UtilityItems_ROB_World","color":"dark_blue"}
     scoreboard players set $point ui_tmw501_19_world 2000
+    scoreboard players set $life ui_tmw501_19_world 0
     ### Time
     scoreboard objectives add ui_tmw501_19_mct dummy {"text":"UtilityItems_ROB_ModeChangeTime","color":"dark_blue"}
     ### Now
     scoreboard objectives add ui_tmw501_19_now_mode dummy {"text":"UtilityItems_ROB_Now_Mode","color":"dark_blue"}
-    scoreboard objectives add ui_tmw501_19_now_camera dummy {"text":"UtilityItems_ROB_Now_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_hud dummy {"text":"UtilityItems_ROB_Now_Camera","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_jet dummy {"text":"UtilityItems_ROB_Now_Camera","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_en dummy {"text":"UtilityItems_ROB_Now_Energy","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_s1 dummy {"text":"UtilityItems_ROB_Now_Shield1","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_s2 dummy {"text":"UtilityItems_ROB_Now_Shield2","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_now_shock_absorber dummy {"text":"UtilityItems_ROB_Now_Shock_Absorber","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_life dummy {"text":"UtilityItems_ROB_Now_Life","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_now_respawn_time dummy {"text":"UtilityItems_ROB_Now_Respawn_Time","color":"dark_blue"}
     ### Stat
     scoreboard objectives add ui_tmw501_19_stat_en_max dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_regen dummy {"text":"UtilityItems_ROB_Stat_Energy_Max","color":"dark_blue"}
-    scoreboard objectives add ui_tmw501_19_stat_en_use_camera_act dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
-    scoreboard objectives add ui_tmw501_19_stat_en_use_camera_con dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Camera","color":"dark_blue"}
+    scoreboard objectives add ui_tmw501_19_stat_en_use_hud dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Hud","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_use_jet dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Jet","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_en_use_speed dummy {"text":"UtilityItems_ROB_Stat_Energy_Use_Speed","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_stat_jet_type dummy {"text":"UtilityItems_ROB_Stat_Jet_Type","color":"dark_blue"}
