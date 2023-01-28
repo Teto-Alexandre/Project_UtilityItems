@@ -2,7 +2,7 @@
 scoreboard players set $c.dice.max ui_temp 13
 scoreboard players set $c.dice.add ui_temp 3
 scoreboard players set $c.dice.dis ui_temp 0
-function ui:common/dice
+function ui:common/dice/
 
 give @s stone_pickaxe
 data merge storage ui:temp {give:{id:"minecraft:cobblestone",Count:1b}}

@@ -12,7 +12,7 @@ scoreboard players set $c.proj.break ui_temp 5
 scoreboard players set $c.dice.max ui_temp 7
 scoreboard players set $c.dice.add ui_temp 5
 scoreboard players set $c.dice.dis ui_temp 0
-function ui:common/dice
+function ui:common/dice/
 scoreboard players operation $c.proj.damage ui_temp = @s ui_d_num
 scoreboard players operation $c.proj.damage ui_temp *= #10 ui_num
 

@@ -2,7 +2,7 @@
 scoreboard players set $c.dice.max ui_temp 25
 scoreboard players set $c.dice.add ui_temp 7
 scoreboard players set $c.dice.dis ui_temp 0
-function ui:common/dice
+function ui:common/dice/
 
 data merge storage ui:temp {give:{id:"minecraft:apple",Count:1b}}
 scoreboard players operation $c.give.num ui_temp = @s ui_d_num

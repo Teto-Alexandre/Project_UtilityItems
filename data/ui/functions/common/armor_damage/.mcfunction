@@ -1,4 +1,4 @@
-#> ui:common/armor_damage
+#> ui:common/armor_damage/
 #
 # 身に着けている全ての防具にダメージを与えるスーパーコモン
 #

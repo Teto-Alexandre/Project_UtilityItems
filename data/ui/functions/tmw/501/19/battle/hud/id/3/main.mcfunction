@@ -27,7 +27,6 @@ function ui:template/text_board/close
 
 # タイトル
 function ui:template/text_board/open
-scoreboard players set $count ui_temp 0
 execute as @e[tag=ui_template_text_board,limit=1] run function ui:tmw/501/19/battle/hud/id/3/title
 function ui:template/text_board/bro_title
 function ui:template/text_board/close

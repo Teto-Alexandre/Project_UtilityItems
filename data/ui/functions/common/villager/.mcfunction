@@ -1,4 +1,4 @@
-#> ui:common/villager
+#> ui:common/villager/
 #
 # 村人に干渉するコモン
 #

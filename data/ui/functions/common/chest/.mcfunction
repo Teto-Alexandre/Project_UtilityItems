@@ -1,4 +1,4 @@
-#> ui:common/chest
+#> ui:common/chest/
 #
 # チェストに干渉するコモン
 #

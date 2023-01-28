@@ -1,4 +1,4 @@
-#> ui:common/dice
+#> ui:common/dice/
 #
 # スコアを元にダイスをシミュレートするコモン
 #

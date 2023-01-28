@@ -1,4 +1,5 @@
-#execute as @e[tag=x] at @e[tag=p,limit=1] facing entity @e[tag=q,limit=1] feet facing ^ ^1 ^ positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^10 facing entity @e[tag=p,limit=1] feet positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^-10 facing entity @e[tag=p,limit=1] feet positioned as @e[tag=p,limit=1] positioned ^ ^ ^2000 facing entity @e[tag=q,limit=1] feet positioned ^ ^ ^2000 rotated as @s run tp @s ~ ~ ~ ~15 0
+## ターゲットがx軸回転の二倍の値に対応する円上の点に移動する
+#execute as @e[tag=x] at @e[tag=p,limit=1] facing entity @e[tag=q,limit=1] feet facing ^ ^1 ^ positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^10 facing entity @e[tag=p,limit=1] feet positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^-10 facing entity @e[tag=p,limit=1] feet positioned as @e[tag=p,limit=1] positioned ^ ^ ^2000 facing entity @e[tag=q,limit=1] feet positioned ^ ^ ^2000 rotated as @s run tp @s ~ ~ ~ ~ 0
 
 execute as @e[tag=x] at @e[tag=p,limit=1] facing entity @e[tag=q,limit=1] feet facing ^ ^1 ^ positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^10 facing entity @e[tag=p,limit=1] feet positioned ^ ^ ^2000 rotated as @s positioned ^ ^ ^-10 facing entity @e[tag=p,limit=1] feet positioned as @e[tag=p,limit=1] positioned ^ ^ ^2000 facing entity @e[tag=q,limit=1] feet positioned ^ ^ ^2000 rotated as @s run particle end_rod ~ ~ ~ 0 0 0 0.03 1 force
 

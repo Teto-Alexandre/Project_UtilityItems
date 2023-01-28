@@ -5,7 +5,7 @@
     scoreboard players operation $armor_damage ui_temp /= #40 ui_num
     scoreboard players operation $armor_damage ui_temp > #1 ui_num
     execute store result storage ui:common input.Damage int 1 run scoreboard players get $armor_damage ui_temp
-    execute at @s run function ui:common/armor_damage
+    execute at @s run function ui:common/armor_damage/
 
 # ダメージ本体
     data merge storage tds: {temp:{Damage:1.00,DamageType:1,DeathMessage:8,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}

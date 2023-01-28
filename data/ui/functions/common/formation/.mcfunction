@@ -1,4 +1,4 @@
-#> ui:common/formation
+#> ui:common/formation/
 #
 # 特定の配置の通りにマーカーを整列生成するコモン
 # ui_isで生成順を示す

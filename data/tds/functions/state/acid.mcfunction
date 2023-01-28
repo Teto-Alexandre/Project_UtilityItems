@@ -19,7 +19,7 @@
     scoreboard players operation $armor_damage tds_acid /= #50 ui_num
     scoreboard players operation $armor_damage tds_acid > #1 ui_num
     execute store result storage ui:common input.Damage int 1 run scoreboard players get $armor_damage tds_acid
-    execute at @s run function ui:common/armor_damage
+    execute at @s run function ui:common/armor_damage/
 
 #炎上カウント減少
     scoreboard players operation @s tds_acid *= $9 tds_dmg

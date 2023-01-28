@@ -2,7 +2,7 @@
 #scoreboard players set $c.dice.max ui_temp 9
 #scoreboard players set $c.dice.add ui_temp 7
 #scoreboard players set $c.dice.dis ui_temp 0
-#function ui:common/dice
+#function ui:common/dice/
 
 effect give @s glowing 60 0 false
 tag @s add ui_card_104

@@ -21,7 +21,6 @@ function ui:template/text_board/close
 
 # タイトル
 function ui:template/text_board/open
-scoreboard players set $count ui_temp 0
 function ui:tmw/501/19/battle/hud/id/2/title
 function ui:template/text_board/bro_title
 function ui:template/text_board/close

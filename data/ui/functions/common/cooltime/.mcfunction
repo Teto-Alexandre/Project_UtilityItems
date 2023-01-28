@@ -1,4 +1,4 @@
-#> ui:common/cooltime
+#> ui:common/cooltime/
 #
 # 汎用フールタイム読み取り+書き込みコモン
 #
