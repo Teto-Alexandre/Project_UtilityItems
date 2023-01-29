@@ -10,14 +10,14 @@
     scoreboard players set $changed ui_temp 0
     data merge storage ui:common {input:{Mode:"check"}}
     function ui:common/ender
-    execute if score $slot ui_temp matches 2 run scoreboard players set $sp ui_temp 455
-    execute if score $slot ui_temp matches 3 run scoreboard players set $sp ui_temp 456
-    execute if score $slot ui_temp matches 4 run scoreboard players set $sp ui_temp 457
-    execute if score $slot ui_temp matches 5 run scoreboard players set $sp ui_temp 458
-    execute if score $slot ui_temp matches 6 run scoreboard players set $sp ui_temp 459
-    execute if score $slot ui_temp matches 11 run scoreboard players set $sp ui_temp 460
-    execute if score $slot ui_temp matches 12 run scoreboard players set $sp ui_temp 461
-    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
+    execute if score $slot ui_temp matches 2 run scoreboard players set $sub ui_temp 455
+    execute if score $slot ui_temp matches 3 run scoreboard players set $sub ui_temp 456
+    execute if score $slot ui_temp matches 4 run scoreboard players set $sub ui_temp 457
+    execute if score $slot ui_temp matches 5 run scoreboard players set $sub ui_temp 458
+    execute if score $slot ui_temp matches 6 run scoreboard players set $sub ui_temp 459
+    execute if score $slot ui_temp matches 11 run scoreboard players set $sub ui_temp 460
+    execute if score $slot ui_temp matches 12 run scoreboard players set $sub ui_temp 461
+    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 1
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 

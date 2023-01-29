@@ -17,21 +17,20 @@
     execute if score $activator ui_temp matches 252 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 3 0.5 0
     execute if score $activator ui_temp matches 252 run particle totem_of_undying ~ ~ ~ 5 5 5 0.02 20 force
     execute if score $activator ui_temp matches 252 run effect give @s resistance 6 126 false
-    execute if score $activator ui_temp matches 252 run effect give @s strength 6 2 false
     execute if score $activator ui_temp matches 252 run effect give @s glowing 6 0 false
 
 # サブラッシュ
     execute if score $activator ui_temp matches 253 run playsound block.beacon.power_select player @a ~ ~ ~ 3 1.8 0
 
-# ヴァリアブル
+# インクリメント
+    execute if score $activator ui_temp matches 254 run effect give @s instant_health 1 1 true
+    execute if score $activator ui_temp matches 254 run effect give @s health_boost 8 1 true
     execute if score $activator ui_temp matches 254 run effect give @s resistance 8 0 false
-    execute if score $activator ui_temp matches 254 run effect give @s strength 8 0 false
-    execute if score $activator ui_temp matches 254 run effect give @s speed 8 0 false
     execute if score $activator ui_temp matches 254 run playsound block.beacon.activate player @a ~ ~ ~ 3 1.4 0
 
 # レーダー
     execute if score $activator ui_temp matches 255 run scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $activator ui_temp matches 255 as @a unless score $team ui_temp = @s ui_team run effect give @s glowing 6 0 false
+    execute if score $activator ui_temp matches 255 as @a unless score $team ui_temp = @s ui_team run effect give @s glowing 7 0 false
     execute if score $activator ui_temp matches 255 run playsound block.beacon.deactivate player @a ~ ~ ~ 3 1.4 0
 
 # チャクチ

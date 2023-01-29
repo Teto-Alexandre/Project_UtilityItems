@@ -11,6 +11,9 @@ scoreboard players set @s ui_rst 100
 scoreboard players add $tmw237 ui_rst 1
 tag @s add tmw_237_respawning
 
+# スーパーブーストリセット
+scoreboard players reset @s ui_tmw237_boost
+
 # サブ消滅
 scoreboard players set $success ui_temp 0
 scoreboard players operation $id ui_temp = @s ui_id

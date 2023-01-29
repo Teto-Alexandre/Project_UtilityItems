@@ -5,7 +5,7 @@
     data merge storage ui:common {input:{Mode:"check"}}
     function ui:common/ender
     execute if score $slot ui_temp matches 2 run scoreboard players add $qf ui_temp 1
-    execute if score $slot ui_temp matches 2 if score $qf ui_temp matches 3.. run scoreboard players set $qf ui_temp 1
+    execute if score $slot ui_temp matches 2 if score $qf ui_temp matches 4.. run scoreboard players set $qf ui_temp 1
     execute if score $slot ui_temp matches 3 run scoreboard players set $page ui_temp 1
     execute if score $slot ui_temp matches 4 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -19,9 +19,12 @@
     item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     execute if score $qf ui_temp matches 1 run item replace entity @s enderchest.2 with lime_stained_glass_pane{display:{Name:'{"text":"System: Sub and Special","color":"white","italic":false}',Lore:['{"text":"Q: Sub weapon","color":"gray","italic":false}','{"text":"F: Special weapon","color":"gray","italic":false}']},ui:{ismenu:1}}
     execute if score $qf ui_temp matches 2 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"System: Sub and Sub","color":"white","italic":false}',Lore:['{"text":"Q: Sub Weapon 1","color":"gray","italic":false}','{"text":"F: Sub Weapon 2","color":"gray","italic":false}','{"text":"Auto: Ink regain","color":"gray","italic":false}']},ui:{ismenu:1}}
+    execute if score $qf ui_temp matches 3 run item replace entity @s enderchest.2 with blue_stained_glass_pane{display:{Name:'{"text":"System: Special and Special","color":"white","italic":false}',Lore:['{"text":"Q: Special Weapon 1","color":"gray","italic":false}','{"text":"F: Special Weapon 2","color":"gray","italic":false}']},ui:{ismenu:1}}
     execute if score $qf ui_temp matches 1..2 run item replace entity @s enderchest.3 with iron_sword{display:{Name:'{"text":"Select sub weapon","color":"white","italic":false}',Lore:['{"text":"click to open","color":"gray","italic":false}']},ui:{ismenu:1}}
+    execute if score $qf ui_temp matches 3 run item replace entity @s enderchest.3 with diamond_sword{display:{Name:'{"text":"Select special weapon 1","color":"white","italic":false}',Lore:['{"text":"click to open","color":"gray","italic":false}']},ui:{ismenu:1}}
     execute if score $qf ui_temp matches 1 run item replace entity @s enderchest.4 with diamond_sword{display:{Name:'{"text":"Select special weapon","color":"white","italic":false}',Lore:['{"text":"click to open","color":"gray","italic":false}']},ui:{ismenu:1}}
     execute if score $qf ui_temp matches 2 run item replace entity @s enderchest.4 with golden_sword{display:{Name:'{"text":"Select sub weapon 2","color":"white","italic":false}',Lore:['{"text":"click to open","color":"gray","italic":false}']},ui:{ismenu:1}}
+    execute if score $qf ui_temp matches 3 run item replace entity @s enderchest.4 with golden_sword{display:{Name:'{"text":"Select special weapon 2","color":"white","italic":false}',Lore:['{"text":"click to open","color":"gray","italic":false}']},ui:{ismenu:1}}
     item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

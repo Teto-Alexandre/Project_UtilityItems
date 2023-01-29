@@ -29,13 +29,13 @@ execute store result score $spneed ui_temp run data get storage ui:gun temp.SPNe
 execute store result score $ink.m ui_temp run data get storage ui:gun temp.MoveInkRegen
 execute store result score $ink.s ui_temp run data get storage ui:gun temp.ShootInkRegen
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
+execute store result score $subtype ui_temp run data get storage ui:gun temp.SubType
 execute store result score $subtime ui_temp run data get storage ui:gun temp.now.SubTime
 execute store result score $subtime.max ui_temp run data get storage ui:gun temp.SubTime
 execute store result score $sp ui_temp run data get storage ui:gun temp.now.SP
 execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
 execute store result score $sptime ui_temp run data get storage ui:gun temp.now.SPTime
 execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
-execute store result score $model ui_temp run data get storage ui:gun temp.now.Model
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
@@ -127,6 +127,10 @@ execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function 
 
 # スペシャルウェポン発動
 execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
+
+# ブースト発動
+execute as @s[tag=tmw_oh_s] unless score @s ui_tmw237_boost matches -2147483648..2147483647 if score $cooltime ui_temp matches 0 run scoreboard players set @s ui_tmw237_boost 1
+execute if score @s ui_tmw237_boost matches 1.. run function ui:tmw/237/constant/boost
 
 # サブスペ時限式
 execute if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/sub

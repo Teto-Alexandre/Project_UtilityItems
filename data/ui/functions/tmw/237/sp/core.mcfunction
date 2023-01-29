@@ -30,6 +30,7 @@ execute if score $sptype ui_temp matches 457 run tellraw @a [{"selector":"@s"},{
 execute if score $sptype ui_temp matches 458 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ウルトラショット","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 459 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ロケッティア","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 460 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ナイスダマ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
+execute if score $sptype ui_temp matches 461 run tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ウルトラハンコ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 
 # スペシャルタイムをセット
 scoreboard players operation $sptime ui_temp = $sptime.max ui_temp

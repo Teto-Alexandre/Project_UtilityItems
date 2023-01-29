@@ -1,5 +1,4 @@
 # 必要データ収集
-execute store result score $subtype ui_temp run data get storage ui:gun temp.SubType
 execute store result score $ct ui_temp run data get storage ui:gun temp.SubCT
 
 # サブウェポン発動

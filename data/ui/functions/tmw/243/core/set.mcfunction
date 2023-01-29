@@ -7,9 +7,13 @@
 
 #
     execute if score $page ui_temp matches 0 run function ui:tmw/243/core/page/0
-    execute if score $page ui_temp matches 1 run function ui:tmw/243/core/page/1
-    execute if score $page ui_temp matches 2 run function ui:tmw/243/core/page/2
+    execute if score $page ui_temp matches 1 if score $qf ui_temp matches 1..2 run function ui:tmw/243/core/page/1
+    execute if score $page ui_temp matches 2 if score $qf ui_temp matches 1..2 run function ui:tmw/243/core/page/2
+    execute if score $page ui_temp matches 1 if score $qf ui_temp matches 3 run function ui:tmw/243/core/page/11alt
+    execute if score $page ui_temp matches 2 if score $qf ui_temp matches 3 run function ui:tmw/243/core/page/12alt
     execute if score $page ui_temp matches 11 if score $qf ui_temp matches 1 run function ui:tmw/243/core/page/11
     execute if score $page ui_temp matches 12 if score $qf ui_temp matches 1 run function ui:tmw/243/core/page/12
     execute if score $page ui_temp matches 11 if score $qf ui_temp matches 2 run function ui:tmw/243/core/page/1alt
     execute if score $page ui_temp matches 12 if score $qf ui_temp matches 2 run function ui:tmw/243/core/page/2alt
+    execute if score $page ui_temp matches 11 if score $qf ui_temp matches 3 run function ui:tmw/243/core/page/11
+    execute if score $page ui_temp matches 12 if score $qf ui_temp matches 3 run function ui:tmw/243/core/page/12

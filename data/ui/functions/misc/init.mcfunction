@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 51 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 52 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -252,6 +252,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 ## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_survive dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_boost dummy {"text":"UtilityItems_Tmw237_boost","color":"dark_blue"}
 
 ## 復活、ゲームモード関連
     #復活までの時間
@@ -422,25 +423,25 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     team add blue
     team modify blue color aqua
     team modify blue friendlyFire false
-    team modify blue collisionRule never
+    team modify blue collisionRule pushOwnTeam
     team modify blue nametagVisibility hideForOtherTeams
     team modify blue seeFriendlyInvisibles false
     team add red
     team modify red color light_purple
     team modify red friendlyFire false
-    team modify red collisionRule never
+    team modify red collisionRule pushOwnTeam
     team modify red nametagVisibility hideForOtherTeams
     team modify red seeFriendlyInvisibles false
     team add yellow
     team modify yellow color yellow
     team modify yellow friendlyFire false
-    team modify yellow collisionRule never
+    team modify yellow collisionRule pushOwnTeam
     team modify yellow nametagVisibility hideForOtherTeams
     team modify yellow seeFriendlyInvisibles false
     team add green
     team modify green color green
     team modify green friendlyFire false
-    team modify green collisionRule never
+    team modify green collisionRule pushOwnTeam
     team modify green nametagVisibility hideForOtherTeams
     team modify green seeFriendlyInvisibles false
 
@@ -483,5 +484,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 51
+    scoreboard players set $version ui_world 52
     #say operationed

@@ -4,18 +4,18 @@
 execute if score $type ui_temp matches 101 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 102 run scoreboard players set $w.ink ui_temp 600
 execute if score $type ui_temp matches 103 run scoreboard players set $w.ink ui_temp 450
-execute if score $type ui_temp matches 104 run scoreboard players set $w.ink ui_temp 600
+execute if score $type ui_temp matches 104 run scoreboard players set $w.ink ui_temp 450
 execute if score $type ui_temp matches 105 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 106 run scoreboard players set $w.ink ui_temp 550
-execute if score $type ui_temp matches 107 run scoreboard players set $w.ink ui_temp 800
+execute if score $type ui_temp matches 107 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 108 run scoreboard players set $w.ink ui_temp 700
-execute if score $type ui_temp matches 109 run scoreboard players set $w.ink ui_temp 550
+execute if score $type ui_temp matches 109 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 110 run scoreboard players set $w.ink ui_temp 600
 execute if score $type ui_temp matches 111 run scoreboard players set $w.ink ui_temp 1000
 execute if score $type ui_temp matches 112 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 113 run scoreboard players set $w.ink ui_temp 550
 execute if score $type ui_temp matches 114 run scoreboard players set $w.ink ui_temp 700
-execute if score $type ui_temp matches 115 run scoreboard players set $w.ink ui_temp 700
+execute if score $type ui_temp matches 115 run scoreboard players set $w.ink ui_temp 600
 execute if score $type ui_temp matches 201 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 202 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 301 run scoreboard players set $w.ink ui_temp 600
@@ -23,7 +23,7 @@ execute if score $type ui_temp matches 399 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 402 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_temp 350
-execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 500
+execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_temp 900
 
 # 効果時間
@@ -31,7 +31,7 @@ execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ti
 execute if score $type ui_temp matches 401..500 run scoreboard players set $w.time ui_temp 100
 execute if score $type ui_temp matches 202 run scoreboard players set $w.time ui_temp 20
 execute if score $type ui_temp matches 151 run scoreboard players set $w.time ui_temp 100
-execute if score $type ui_temp matches 152 run scoreboard players set $w.time ui_temp 100
+execute if score $type ui_temp matches 152 run scoreboard players set $w.time ui_temp 20
 execute if score $type ui_temp matches 251 run scoreboard players set $w.time ui_temp 25
 execute if score $type ui_temp matches 252 run scoreboard players set $w.time ui_temp 120
 execute if score $type ui_temp matches 253 run scoreboard players set $w.time ui_temp 120
@@ -51,15 +51,16 @@ execute if score $type ui_temp matches 457 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 458 run scoreboard players set $w.time ui_temp 200
 execute if score $type ui_temp matches 459 run scoreboard players set $w.time ui_temp 220
 execute if score $type ui_temp matches 460 run scoreboard players set $w.time ui_temp 200
+execute if score $type ui_temp matches 461 run scoreboard players set $w.time ui_temp 200
 
 # クールタイム
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ct ui_temp 3
 execute if score $type ui_temp matches 401..500 run scoreboard players set $w.ct ui_temp 0
+execute if score $type ui_temp matches 104 run scoreboard players set $w.ct ui_temp 2
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ct ui_temp 3
-execute if score $type ui_temp matches 402 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 151 run scoreboard players set $w.ct ui_temp 10
-execute if score $type ui_temp matches 152 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 152 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 251 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 252 run scoreboard players set $w.ct ui_temp 15
 execute if score $type ui_temp matches 253 run scoreboard players set $w.ct ui_temp 3
@@ -79,6 +80,7 @@ execute if score $type ui_temp matches 457 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 458 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 459 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_temp 20
+execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 10
 
 # スペシャルポイント必要量
 execute if score $type ui_temp matches 101.. run scoreboard players set $w.need ui_temp 300
@@ -130,3 +132,4 @@ execute if score $type ui_temp matches 457 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 458 run data modify storage ui:temp temp.Name set value " - SP:ウルトラショット"
 execute if score $type ui_temp matches 459 run data modify storage ui:temp temp.Name set value " - SP:ロケッティア"
 execute if score $type ui_temp matches 460 run data modify storage ui:temp temp.Name set value " - SP:ナイスダマ"
+execute if score $type ui_temp matches 461 run data modify storage ui:temp temp.Name set value " - SP:ウルトラハンコ"

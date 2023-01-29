@@ -1,5 +1,4 @@
 # 必要データ収集
-execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
 execute store result score $ct ui_temp run data get storage ui:gun temp.SPCT
 
 # サブウェポン発動

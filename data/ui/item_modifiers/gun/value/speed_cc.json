@@ -1,0 +1,23 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "name": "agi",
+        "amount": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "$speed"
+          },
+          "score": "ui_temp",
+          "scale": 0.01
+        },
+        "operation": "multiply_base",
+        "id": "96ed988e-73e0-4c83-a213-68d61b55e3cd",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]

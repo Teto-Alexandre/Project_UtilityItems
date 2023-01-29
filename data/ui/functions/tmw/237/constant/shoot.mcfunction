@@ -4,7 +4,7 @@
     execute if entity @s[tag=tmw_237_king] run function ui:tmw/237/amp/king
 
 # レーザーサイト
-    execute if score $model ui_temp matches 110811 run function ui:tmw/237/constant/laser
+    execute if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
 
 # エフェクトクリア
     effect clear @s speed
@@ -37,5 +37,6 @@
     execute if score $team ui_temp matches 4 run team join green @s
 
 # ストレージのモデルデータを読み込み
-    execute store result storage ui:gun temp.value int 1 run scoreboard players get $model ui_temp
+    data modify storage ui:gun temp.value set from storage ui:gun temp.Model
+    execute if score $sptype ui_temp matches 461 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110912
     item modify entity @s weapon.mainhand ui:gun/value/model
