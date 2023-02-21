@@ -5,6 +5,7 @@ scoreboard players set $success ui_temp 0
 execute if score $type ui_temp matches 1 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/1
 execute if score $type ui_temp matches 2 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/2
 execute if score $type ui_temp matches 3 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/3
+execute if score $type ui_temp matches 4 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/4
 execute if score $type ui_temp matches 7 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/7
 execute if score $type ui_temp matches 8 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/8
 execute if score $type ui_temp matches 9 if score @s ui_use1 matches 1.. unless score @s ui_ct matches 1.. at @s run function ui:tmw/15/9

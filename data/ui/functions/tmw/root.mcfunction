@@ -38,6 +38,8 @@
         execute if entity @a[scores={ui_tmw_id=14}] run function ui:tmw/14/lim
     #ファイアロッド
         execute if entity @a[scores={ui_tmw_id=15}] run function ui:tmw/15/lim
+    #オフハンドテキスター
+        execute if entity @a[scores={ui_tmw_id=16}] run function ui:tmw/16/lim
     #暁の翼
         execute if entity @a[scores={ui_tmw_id=101}] run function ui:tmw/101/lim
     #凍て付いた博愛

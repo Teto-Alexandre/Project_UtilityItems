@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:111317,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{OneTimeUse:1b,Name:\"苦痛の鎖\",HoldItemType:1,Mass:100,Magazine:1,MaxSize:0,ShotCT:30,BurstCT:30,Burst:1,FireID:-1,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:201,NoUI:1,now:{Speed:0,Attack:0,AttackSpeed:0,Info:-1,CustomStats:1,Bullets:1,Noidle:1}},main:{Spread:-15000,AirSpread:-12000,MultiShot:1,Barrel:150},bullet:{Mass:1,Power:1000,AirRes:1,Gravity:0,Pack:1,Size:0,Spread:0,DamageType:1,WeakMultiplier:100,FlyParticle:-9,EndParticle:-1,HitModifiers:[{id:\"dice\",sub:\"num\",lvl:-1}],FlyModifiers:[],Sound:-14,Muzzle:92,Range:200},bullets:[{Count:1}]},display:{Name:'{\"text\":\"苦痛の鎖\",\"color\":\"white\",\"bold\":true}',Lore:['{\"text\":\"使用時右クリック\",\"color\":\"gray\",\"bold\":true}','{\"text\":\"命中した対象の次のロールを-1する\",\"color\":\"red\",\"bold\":false}']}}"}]}
+      ]
+    }
+  ]
+}

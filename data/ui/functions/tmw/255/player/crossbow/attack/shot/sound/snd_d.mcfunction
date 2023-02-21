@@ -24,3 +24,5 @@
     execute if score $sound ui_temp matches -12 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/12
 # Lightning
     execute if score $sound ui_temp matches -13 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/13
+# DiceCurse
+    execute if score $sound ui_temp matches -14 run function ui:tmw/255/player/crossbow/attack/shot/sound/downer/14

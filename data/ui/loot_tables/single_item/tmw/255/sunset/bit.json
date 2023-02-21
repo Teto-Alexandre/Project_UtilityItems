@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180006,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"開展\",Mass:900,Magazine:1,MaxSize:0,ShotCT:10,BurstCT:20,Burst:1,FireID:127,ReloadMax:40,ReloadID:-2,ReloadItem:{id:\"minecraft:nether_star\"},now:{Speed:0,Info:-1}},main:{Spread:-11000,AirSpread:-9500,MultiShot:1,Barrel:300},bullet:{NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"開展\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: ネザースター\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"斜陽の携行機具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"複数の浮遊砲台を拡散させる\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"砲台はランダムなターゲットを連続で攻撃する\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

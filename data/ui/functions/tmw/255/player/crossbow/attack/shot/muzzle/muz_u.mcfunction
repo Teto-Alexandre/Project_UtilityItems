@@ -18,3 +18,5 @@ execute if score $muzzle ui_temp matches 61 run particle small_flame ^ ^ ^0.7 0.
 execute if score $muzzle ui_temp matches 71 run particle dust 1 1 0 0.5 ^ ^ ^0.7 0.3 0.3 0.3 0 8
 execute if score $muzzle ui_temp matches 81 run particle dust 0.3 1 0.3 0.4 ^ ^ ^0.7 0.3 0.3 0.3 0 8
 execute if score $muzzle ui_temp matches 82 run particle dust 0.3 1 0.3 0.35 ^ ^ ^0.7 0.3 0.3 0.3 0 6
+execute if score $muzzle ui_temp matches 91 run particle dust 1 0 1 1 ^ ^ ^0.7 0.4 0.4 0.4 0 10
+execute if score $muzzle ui_temp matches 92 run particle dust 0 0.7 0 1 ^ ^ ^0.7 0.4 0.4 0.4 0 10

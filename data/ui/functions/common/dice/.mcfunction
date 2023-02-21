@@ -20,7 +20,7 @@
 #
 #       - @s ui_d_addmin ダイスの最小値がn上昇
 #
-#       - @s ui_d_addmax ダイスの最終値がn上昇
+#       - @s ui_d_addnum ダイスの最終値がn上昇
 #
 #       - @s ui_d_mult ダイスの最終値をn/10倍する
 #
