@@ -4,10 +4,13 @@
     data modify storage ui:common temp set from entity @s SelectedItem.tag.tmw.dice
     # 幸運
     execute store result score $luck ui_temp run data get storage ui:common temp.luck
+    execute unless data storage ui:common temp.luck run scoreboard players set $luck ui_temp 0
     # 固定値
     execute store result score $num ui_temp run data get storage ui:common temp.num
+    execute unless data storage ui:common temp.num run scoreboard players set $num ui_temp 0
     # 積
     execute store result score $mult ui_temp run data get storage ui:common temp.mult
+    execute unless data storage ui:common temp.mult run scoreboard players set $mult ui_temp 10
     # 上書きか加算か
     execute store result score $update ui_temp run data get storage ui:common temp.update
     # 秘匿
@@ -35,18 +38,19 @@
     execute unless score $num ui_temp matches 0 if score @s ui_d_addnum matches 0 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"text":"±0","color":"white"},{"text":"される","color":"gray"}]
     execute unless score $num ui_temp matches 0 if score @s ui_d_addnum matches ..-1 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"score":{"name": "@s","objective": "ui_d_addnum"},"color":"red"},{"text":"される","color":"gray"}]
 
-    execute unless score $mult ui_temp matches 0 if score $update ui_temp matches 0 run scoreboard players operation @s ui_d_mult += $num ui_temp
-    execute unless score $mult ui_temp matches 0 if score $update ui_temp matches 1 run scoreboard players operation @s ui_d_mult = $num ui_temp
-    execute unless score $mult ui_temp matches 0 run scoreboard players operation $temp ui_temp = @s ui_d_mult
-    execute unless score $mult ui_temp matches 0 run scoreboard players operation $temp2 ui_temp = $temp ui_temp
-    execute unless score $mult ui_temp matches 0 run scoreboard players operation $temp ui_temp /= #10 ui_num
-    execute unless score $mult ui_temp matches 0 run scoreboard players operation $temp2 ui_temp %= #10 ui_num
-    execute unless score $mult ui_temp matches 0 if score $hide ui_temp matches 0 if score @s ui_d_mult matches 1.. run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"aqua"},{"text":".","color":"aqua"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"aqua"},{"text":"倍","color":"aqua"},{"text":"になる","color":"gray"}]
-    execute unless score $mult ui_temp matches 0 if score $hide ui_temp matches 0 if score @s ui_d_mult matches 0 run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"text":"0","color":"white"},{"text":"になる","color":"gray"}]
-    execute unless score $mult ui_temp matches 0 if score $hide ui_temp matches 0 if score @s ui_d_mult matches ..-1 run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"red"},{"text":".","color":"red"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"red"},{"text":"倍","color":"red"},{"text":"になる","color":"gray"}]
-    execute unless score $mult ui_temp matches 0 if score @s ui_d_mult matches 1.. run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"aqua"},{"text":".","color":"aqua"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"aqua"},{"text":"倍","color":"aqua"},{"text":"になる","color":"gray"}]
-    execute unless score $mult ui_temp matches 0 if score @s ui_d_mult matches 0 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"text":"0","color":"white"},{"text":"になる","color":"gray"}]
-    execute unless score $mult ui_temp matches 0 if score @s ui_d_mult matches ..-1 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"red"},{"text":".","color":"red"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"red"},{"text":"倍","color":"red"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score $update ui_temp matches 0 run scoreboard players operation @s ui_d_mult *= $mult ui_temp
+    execute unless score $mult ui_temp matches 10 if score $update ui_temp matches 0 run scoreboard players operation @s ui_d_mult /= #10 ui_num
+    execute unless score $mult ui_temp matches 10 if score $update ui_temp matches 1 run scoreboard players operation @s ui_d_mult = $mult ui_temp
+    execute unless score $mult ui_temp matches 10 run scoreboard players operation $temp ui_temp = @s ui_d_mult
+    execute unless score $mult ui_temp matches 10 run scoreboard players operation $temp2 ui_temp = $temp ui_temp
+    execute unless score $mult ui_temp matches 10 run scoreboard players operation $temp ui_temp /= #10 ui_num
+    execute unless score $mult ui_temp matches 10 run scoreboard players operation $temp2 ui_temp %= #10 ui_num
+    execute unless score $mult ui_temp matches 10 if score $hide ui_temp matches 0 if score @s ui_d_mult matches 1.. run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"aqua"},{"text":".","color":"aqua"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"aqua"},{"text":"倍","color":"aqua"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score $hide ui_temp matches 0 if score @s ui_d_mult matches 0 run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"text":"0","color":"white"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score $hide ui_temp matches 0 if score @s ui_d_mult matches ..-1 run tellraw @a[distance=1..] [{"text":"※ダイス干渉※ ","color":"dark_green"},{"selector":"@s"},{"text":"の次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"red"},{"text":".","color":"red"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"red"},{"text":"倍","color":"red"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score @s ui_d_mult matches 1.. run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"aqua"},{"text":".","color":"aqua"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"aqua"},{"text":"倍","color":"aqua"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score @s ui_d_mult matches 0 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"text":"0","color":"white"},{"text":"になる","color":"gray"}]
+    execute unless score $mult ui_temp matches 10 if score @s ui_d_mult matches ..-1 run tellraw @s [{"text":"※ダイス干渉※ ","color":"dark_green"},{"text":"あなたの次のダイスは","color":"gray"},{"score":{"name": "$temp","objective": "ui_temp"},"color":"red"},{"text":".","color":"red"},{"score":{"name": "$temp2","objective": "ui_temp"},"color":"red"},{"text":"倍","color":"red"},{"text":"になる","color":"gray"}]
 
     execute unless score $luck ui_temp matches 0 if score $hide ui_temp matches 0..1 at @s run particle dust 1 0 1 4 ~ ~ ~ 0.5 0.5 0.5 0 15 force
     execute unless score $num ui_temp matches 0 if score $hide ui_temp matches 0..1 at @s run particle dust 0 0.7 0 4 ~ ~ ~ 0.5 0.5 0.5 0 15 force
