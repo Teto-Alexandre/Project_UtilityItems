@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180025,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"弓\",HoldItemType:1,Mass:0,Magazine:15,MaxSize:0,ShotCT:0,BurstCT:0,Burst:1,FireID:128,ReloadMax:1,ReloadID:-1,ReloadItem:{id:\"minecraft:arrow\"},ChangedType:3,now:{Speed:0,Info:-1,CustomStats:1}},main:{Spread:-5000,AirSpread:-3500,MultiShot:1,Barrel:120},bullet:{Mass:60,Power:6000,AirRes:0.9,Gravity:40,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:100,FlyParticle:-10,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-15,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"弓\",\"color\":\"white\",\"italic\":false}'},HideFlags:6,Unbreakable:1b}"}]}
+      ]
+    }
+  ]
+}
+

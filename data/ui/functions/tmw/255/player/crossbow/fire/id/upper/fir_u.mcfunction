@@ -61,3 +61,5 @@
     execute if score $fireid ui_temp matches 126 run function ui:tmw/255/player/crossbow/fire/id/upper/126
     # レーザービット
     execute if score $fireid ui_temp matches 127 run function ui:tmw/255/player/crossbow/fire/id/upper/127
+    # 弓
+    execute if score $fireid ui_temp matches 128 run function ui:tmw/255/player/crossbow/fire/id/upper/128

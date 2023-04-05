@@ -165,6 +165,8 @@
         execute if entity @a[scores={ui_tmw_id=264}] run function ui:tmw/264/lim
     #スキル武器
         execute if entity @a[scores={ui_tmw_id=265}] run function ui:tmw/265/lim
+    #連射式に代わる弓
+        execute if entity @a[scores={ui_tmw_id=266}] run function ui:tmw/266/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
