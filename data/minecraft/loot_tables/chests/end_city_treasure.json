@@ -345,6 +345,17 @@
           ]
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "ui:chest/tmw",
+          "weight": 1,
+          "quality": 0
+        }
+      ]
     }
   ]
 }
