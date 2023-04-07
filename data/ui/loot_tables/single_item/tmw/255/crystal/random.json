@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 10,
+          "name": "ui:single_item/tmw/255/crystal/flame_circle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 10,
+          "name": "ui:single_item/tmw/255/crystal/lightning1"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "ui:single_item/tmw/255/crystal/lightning2"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/crystal/lightning3"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 9,
+          "name": "ui:single_item/tmw/255/crystal/raise_zombie"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/crystal/silent_echo"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/crystal/star_fall"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "ui:single_item/tmw/255/crystal/volcanic_fire"
+        }
+      ]
+    }
+  ]
+}
+

@@ -5,22 +5,22 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/ourbos/fire1"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/fire2"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/fire3"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/fire4"
         },
         {
@@ -30,7 +30,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/ourbos/fireball"
         },
         {
@@ -40,22 +40,22 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/ourbos/heal1"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/heal2"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/ourbos/lightning1"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/lightning2"
         },
         {
@@ -70,12 +70,12 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/ourbos/wither"
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
+          "weight": 3,
           "name": "ui:single_item/tmw/255/ourbos/wither2"
         }
       ]

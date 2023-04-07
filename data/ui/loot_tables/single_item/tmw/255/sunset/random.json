@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/sunset/bit"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 10,
+          "name": "ui:single_item/tmw/255/sunset/blade"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "ui:single_item/tmw/255/sunset/blade2"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "ui:single_item/tmw/255/sunset/booster"
+        }
+      ]
+    }
+  ]
+}
+
