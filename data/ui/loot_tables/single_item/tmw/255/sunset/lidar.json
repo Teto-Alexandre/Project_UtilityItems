@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"投光測量機\",HoldItemType:1,Mass:100,Magazine:1000,MaxSize:0,ShotCT:0,BurstCT:0,Burst:6,FireID:-1,ReloadType:1,ReloadMax:12,ReloadID:-3,ReloadItem:21,ChangedType:0,now:{Speed:0,Attack:3,AttackSpeed:-0.8,Info:-1,CustomStats:1}},main:{Spread:-10000,AirSpread:-10000,MultiShot:1,Barrel:300},bullet:{Stack:1000,Mass:1,Power:100,Range:400,AirRes:1,Gravity:0,Pack:10,Size:0,Spread:900,DamageType:4,WeakMultiplier:100,FlyParticle:3,EndParticle:-2,FlyModifiers:[],Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"投光測量機\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 石炭ブロック\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"斜陽の携行機具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"ランダムに微弱な光線を射出、\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"反応から地形状況を分析する\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

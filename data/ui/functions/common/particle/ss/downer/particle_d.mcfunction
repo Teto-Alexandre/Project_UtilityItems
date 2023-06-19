@@ -14,6 +14,8 @@
 
 # コンパス2
 execute if score $type ui_temp matches -1 run function ui:common/particle/ss/downer/1/core
+# LiDAR
+execute if score $type ui_temp matches -2 run function ui:common/particle/ss/downer/2/core
 # パーティクル雷
 execute if score $type ui_temp matches -10001 run function ui:common/particle/ss/downer/10001/core
 # パーティクル雷2
