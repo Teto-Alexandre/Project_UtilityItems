@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:vanilla/hayabusas_sword"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/vanilla/hayabusas_sword"
+  }
+}

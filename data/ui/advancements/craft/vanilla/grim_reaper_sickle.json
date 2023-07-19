@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:vanilla/grim_reaper_sickle"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/vanilla/grim_reaper_sickle"
+  }
+}

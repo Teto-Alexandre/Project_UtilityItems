@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:vanilla/poseidon_spear"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/vanilla/poseidon_spear"
+  }
+}

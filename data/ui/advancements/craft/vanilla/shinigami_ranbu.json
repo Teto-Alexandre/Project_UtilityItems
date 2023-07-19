@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:vanilla/shinigami_ranbu"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/vanilla/shinigami_ranbu"
+  }
+}

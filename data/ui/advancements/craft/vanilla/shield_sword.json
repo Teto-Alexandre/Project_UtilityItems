@@ -1,0 +1,14 @@
+{
+  "parent": "ui:craft/root",
+  "criteria": {
+    "unlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "ui:vanilla/shield_sword"
+      }
+    }
+  },
+  "rewards": {
+    "function": "ui:craft/vanilla/shield_sword"
+  }
+}

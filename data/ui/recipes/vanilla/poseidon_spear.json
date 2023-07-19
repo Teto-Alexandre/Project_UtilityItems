@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #H",
+        " A#",
+        "A  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:prismarine_crystals"
+        },
+        "H": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "A": {
+            "item": "minecraft:amethyst_shard"
+        }
+    },
+    "result": {
+        "item": "minecraft:structure_block",
+        "count": 1
+    }
+}

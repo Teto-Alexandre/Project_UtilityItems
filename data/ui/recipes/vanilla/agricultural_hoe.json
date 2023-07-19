@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#IH",
+        " /H",
+        " /H"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:heavy_weighted_pressure_plate"
+        },
+        "I": {
+            "item": "minecraft:iron_trapdoor"
+        },
+        "H": {
+            "item": "minecraft:hay_block"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "minecraft:structure_block",
+        "count": 1
+    }
+}
