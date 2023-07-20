@@ -14,3 +14,5 @@
     execute if score $sound ui_temp matches 7 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/7
 # レーザーガトリング
     execute if score $sound ui_temp matches 8 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/8
+# 軌道破壊
+    execute if score $sound ui_temp matches 9 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/9

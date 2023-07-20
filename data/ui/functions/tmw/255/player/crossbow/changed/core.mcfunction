@@ -19,6 +19,6 @@ execute store result storage ui:gun temp.now.Bullets int 1 run scoreboard player
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
 
 #
-execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches 0 at @s run function ui:tmw/255/player/crossbow/changed/id/0
-execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches ..-1 at @s run function ui:tmw/255/player/crossbow/changed/id/downer/chg_d
-execute unless data storage ui:gun temp.NoUI if score $changedtype ui_temp matches 1.. at @s run function ui:tmw/255/player/crossbow/changed/id/upper/chg_u
+execute unless data storage ui:gun temp.NoUI unless score $tmw.type ui_temp matches 2 if score $changedtype ui_temp matches 0 at @s run function ui:tmw/255/player/crossbow/changed/id/0
+execute unless data storage ui:gun temp.NoUI unless score $tmw.type ui_temp matches 2 if score $changedtype ui_temp matches ..-1 at @s run function ui:tmw/255/player/crossbow/changed/id/downer/chg_d
+execute unless data storage ui:gun temp.NoUI unless score $tmw.type ui_temp matches 2 if score $changedtype ui_temp matches 1.. at @s run function ui:tmw/255/player/crossbow/changed/id/upper/chg_u
