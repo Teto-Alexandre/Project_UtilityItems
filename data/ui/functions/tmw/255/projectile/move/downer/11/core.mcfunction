@@ -8,8 +8,7 @@
     function ui:common/rand
 
     particle dust 1 1 1 10 ~ ~ ~ 0 0 0 0 1 force
-    execute if score $rand ui_calc1 matches 4..5 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/2.5
-    execute if score $rand ui_calc1 matches 6 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/3
+    execute if score $rand ui_calc1 matches ..6 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/3
     execute if score $rand ui_calc1 matches 7 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/4
     execute if score $rand ui_calc1 matches 8 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/7
     execute if score $rand ui_calc1 matches 9 positioned ^ ^ ^1 run function ui:template/circle_particle_eyef/10
@@ -23,9 +22,7 @@
     execute at @e[tag=ui_temp_particle] unless block ~ ~1 ~ #ui:nobreak run fill ~ ~1 ~ ~ ~1 ~ air hollow
     execute at @e[tag=ui_temp_particle] unless block ~ ~ ~1 #ui:nobreak run fill ~ ~ ~1 ~ ~ ~1 air hollow
     execute at @e[tag=ui_temp_particle] unless block ~ ~ ~ #ui:nobreak run fill ~ ~ ~ ~ ~ ~ air hollow
-    execute if score $rand ui_calc1 matches ..3 positioned ^ ^ ^1 run kill @e[distance=..2.1,tag=ui_temp_particle]
-    execute if score $rand ui_calc1 matches 4..5 positioned ^ ^ ^1 run kill @e[distance=..2.6,tag=ui_temp_particle]
-    execute if score $rand ui_calc1 matches 6 positioned ^ ^ ^1 run kill @e[distance=..3.1,tag=ui_temp_particle]
+    execute if score $rand ui_calc1 matches ..6 positioned ^ ^ ^1 run kill @e[distance=..4,tag=ui_temp_particle]
     execute if score $rand ui_calc1 matches 7 positioned ^ ^ ^1 run kill @e[distance=..3,tag=ui_temp_particle]
     execute if score $rand ui_calc1 matches 8 positioned ^ ^ ^1 run kill @e[distance=..6,tag=ui_temp_particle]
     execute if score $rand ui_calc1 matches 9 positioned ^ ^ ^1 run kill @e[distance=..9,tag=ui_temp_particle]

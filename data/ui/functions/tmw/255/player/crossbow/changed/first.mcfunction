@@ -23,13 +23,13 @@ execute unless score $bullets ui_temp matches 0 run data modify storage ui:temp 
 data modify storage ui:temp temp.gun.now merge value {CT:0,AddCT:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
 
 # 書き込み終了
-execute unless score $tmw.type ui_temp matches 2 if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/all
-execute unless score $tmw.type ui_temp matches 2 if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/all
+execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/all
+execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/all
 scoreboard players set $changed ui_temp 1
 
 # 速度追加
-execute unless score $tmw.type ui_temp matches 2 unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
-execute unless score $tmw.type ui_temp matches 2 unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
 
 # 必要なデータ読み取り
     execute store result score $Mass ui_temp run data get storage ui:tmw temp.this.tag.tmw.gun.Mass
@@ -47,8 +47,8 @@ execute unless score $tmw.type ui_temp matches 2 unless data storage ui:gun temp
     execute store result score $MultiShot ui_temp run data get storage ui:tmw temp.this.tag.tmw.main.MultiShot
 
 # 書き込み終了
-    execute unless score $tmw.type ui_temp matches 2 unless score $Info ui_temp matches -1 if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/gun
-    execute unless score $tmw.type ui_temp matches 2 unless score $Info ui_temp matches -1 if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/gun
+    execute unless score $Info ui_temp matches -1 if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:tmw255/gun
+    execute unless score $Info ui_temp matches -1 if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:tmw255/gun
 
 # 初期状態に戻す
 execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
