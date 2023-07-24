@@ -74,4 +74,5 @@ data remove storage ui:gun temp2
 data remove storage ui:tmw temp
 
 # 最後に
+scoreboard players set $tmw.success ui_temp 1
 schedule function ui:tmw/255/player/crossbow/last 1t append
