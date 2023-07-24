@@ -5,10 +5,10 @@
     
 # 再入力受付
     scoreboard players set $combo ui_temp 0
-    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. store result score $firetime ui_temp run time query gametime
-    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. run scoreboard players set $combo ui_temp 1
-    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. run playsound entity.zombie.attack_iron_door player @a ~ ~ ~ 1 1.8 0
-    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. run function ui:tmw/255/player/crossbow/fire/template/calc
+    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. if score $bullets ui_temp matches 1.. store result score $firetime ui_temp run time query gametime
+    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. if score $bullets ui_temp matches 1.. run scoreboard players set $combo ui_temp 1
+    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. if score $bullets ui_temp matches 1.. run playsound entity.zombie.attack_iron_door player @a ~ ~ ~ 1 1.8 0
+    execute if entity @s[tag=tmw_active_temp] if score $firetime.temp ui_temp matches 8.. if score $bullets ui_temp matches 1.. run function ui:tmw/255/player/crossbow/fire/template/calc
 
 #
     scoreboard players set $firetime.max ui_temp 30
