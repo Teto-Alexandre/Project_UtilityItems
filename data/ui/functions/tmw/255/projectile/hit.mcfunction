@@ -19,5 +19,6 @@
     data remove storage ui:temp temp
 
 # 消失
-    tag @s add tmw_255_proj_del
+    execute if entity @s[tag=!ui_proj_pierce_entity] run tag @s add tmw_255_proj_del
+    execute if entity @s[tag=ui_proj_pierce_entity] run function ui:tmw/255/projectile/hit/pierce_entity
     kill @e[tag=ui_temp_hit]

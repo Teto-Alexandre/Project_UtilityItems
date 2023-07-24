@@ -16,6 +16,7 @@
 #declare score_holder $muzzle
 #declare score_holder $sound
 #declare score_holder $no_shot
+#declare score_holder $pierce_ent
 #declare storage ui:object_maker
 
 #ui:object_maker temp.DisplayName

@@ -24,6 +24,10 @@
     execute store result score $back_mult ui_temp run data get storage ui:gun temp3.BackMultiplier
     execute store result score $muzzle ui_temp run data get storage ui:gun temp3.Muzzle
     execute store result score $sound ui_temp run data get storage ui:gun temp3.Sound
+    scoreboard players reset $recoil ui_temp
+    execute if data storage ui:gun temp3.Recoil store result score $recoil ui_temp run data get storage ui:gun temp3.Recoil
+    scoreboard players reset $pierce_ent ui_temp
+    execute if data storage ui:gun temp3.PierceEntity store result score $pierce_ent ui_temp run data get storage ui:gun temp3.PierceEntity
 
 #
     data modify storage ui:object_maker temp.DisplayName set from storage ui:gun temp.DisplayName
@@ -41,10 +45,10 @@
     scoreboard players operation $speed.plus ui_temp = $speed ui_temp
     scoreboard players operation $speed.plus ui_temp /= #5 ui_num
     # 反動 = 火力 x 弾体数 [基準：ハンドガンで100,ショットガンで300ぐらい]
-    scoreboard players operation $recoil ui_temp = $power ui_temp
-    scoreboard players operation $recoil ui_temp *= $pack ui_temp
+    scoreboard players operation $unstability ui_temp = $power ui_temp
+    scoreboard players operation $unstability ui_temp *= $pack ui_temp
     # 新散布係数 = 散布係数 + 反動
-    scoreboard players operation $spread ui_temp += $recoil ui_temp
+    scoreboard players operation $spread ui_temp += $unstability ui_temp
     execute as @e[tag=tmw_255.snipe,distance=..0.1,limit=1] run function ui:tmw/255/player/crossbow/attack/shot/scope
     scoreboard players operation $sneak_time ui_temp < #60 ui_num
     scoreboard players operation $sneak_time ui_temp *= #100 ui_num
@@ -54,6 +58,9 @@
 
 #
     execute anchored eyes positioned ^-0.25 ^-0.1 ^ run function ui:tmw/255/player/crossbow/attack/shot/make_projectile
+
+# リコイル
+    execute if score $recoil ui_temp matches 1.. run function ui:tmw/255/player/crossbow/attack/shot/recoil
 
 #
     data remove storage ui:gun temp3

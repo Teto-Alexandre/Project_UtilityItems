@@ -46,8 +46,10 @@ scoreboard players operation @s ui_bm_temp = @s ui_temp
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 # 破壊力の減り具合を速度に掛ける
+#tellraw @a [{"text":"move_airres : "},{"score":{"name":"@s","objective":"ui_bm"}}]
 scoreboard players operation @s ui_bm *= $break ui_temp
 scoreboard players operation @s ui_bm /= $break.max ui_temp
+#tellraw @a [{"text":"move_processed : "},{"score":{"name":"@s","objective":"ui_bm"}},{"text":","},{"text":"Break:","color":"aqua"},{"score":{"name":"$break","objective":"ui_temp"},"color":"aqua"},{"text":"/","color":"aqua"},{"score":{"name":"$break.max","objective":"ui_temp"},"color":"aqua"}]
 
 # キル条件
 #tellraw @a [{"score":{"name":"@s","objective":"ui_br"}},{"text":"<"},{"score":{"name":"@s","objective":"ui_bm"}},{"text":"[res:"},{"score":{"name":"@s","objective":"ui_autohit"}},{"text":"],"},{"text":"Break:","color":"red"},{"score":{"name":"$break","objective":"ui_temp"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$break.max","objective":"ui_temp"},"color":"red"},{"text":","},{"text":"Mass:","color":"aqua"},{"score":{"name":"@s","objective":"ui_dmg"},"color":"aqua"}]

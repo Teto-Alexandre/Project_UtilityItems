@@ -13,6 +13,9 @@ scoreboard players operation @s ui_bg = $gravity ui_temp
 scoreboard players operation @s ui_bdt = $damage_type ui_temp
 scoreboard players operation @s ui_bu = $weak_mult ui_temp
 scoreboard players operation @s ui_gms = $back_mult ui_temp
+scoreboard players operation @s ui_proj_stat_pierce_entity = $pierce_ent ui_temp
+execute if score $pierce_ent ui_temp matches 1.. run scoreboard players set @s ui_proj_stat_pierce_entity.obj_id 0
+execute if score $pierce_ent ui_temp matches 1.. run tag @s add ui_proj_pierce_entity
 scoreboard players operation @s ui_id = $id ui_temp
 scoreboard players operation @s ui_team = $team ui_temp
 data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui:object_maker temp.DisplayName

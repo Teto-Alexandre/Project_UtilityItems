@@ -17,6 +17,7 @@
     execute store result score $back_mult ui_temp run data get storage ui:object_maker temp.BackMultiplier
     execute store result score $muzzle ui_temp run data get storage ui:object_maker temp.Muzzle
     execute store result score $sound ui_temp run data get storage ui:object_maker temp.Sound
+    execute store result score $pierce_ent ui_temp run data get storage ui:object_maker temp.PierceEntity
 
 # id と team は既にあるものを使用
 

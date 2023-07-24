@@ -214,6 +214,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_bcp dummy {"text":"UtilityItems_BulletCountPassed","color":"dark_blue"}
     #狙撃用
     scoreboard objectives add ui_snipe dummy {"text":"UtilityItems_Snipe","color":"dark_blue"}
+    #新しく増やしたもの
+    scoreboard objectives add ui_proj_stat_pierce_entity dummy {"text":"UtilityItems_PierceEntity","color":"dark_blue"}
+    scoreboard objectives add ui_proj_stat_pierce_entity.obj_id dummy {"text":"UtilityItems_PierceEntity.Obj","color":"dark_blue"}
 
 ## スキルツリー
     scoreboard objectives add ui_skilltree_v trigger {"text":"UtilityItems_SkillTree_View","color":"dark_blue"}
