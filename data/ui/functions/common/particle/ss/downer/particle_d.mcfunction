@@ -62,6 +62,8 @@ execute if score $type ui_temp matches -10021 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10022 run function ui:common/particle/ss/downer/10022/core
 # レーザービット
 execute if score $type ui_temp matches -10023 run function ui:common/particle/ss/downer/10023/core
+# 追尾する目
+execute if score $type ui_temp matches -10024 run function ui:common/particle/ss/downer/10024/core
 
 # 横切り
 execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core

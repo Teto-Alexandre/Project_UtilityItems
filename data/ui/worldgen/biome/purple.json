@@ -1,0 +1,40 @@
+{
+  "has_precipitation": false,
+  "surface_builder": "minecraft:grass",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "category": "plains",
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0,
+  "effects": {
+    "sky_color": 11206862,
+    "fog_color": 11206862,
+    "water_color": 11206862,
+    "water_fog_color": 0,
+    "grass_color": 11206862,
+    "foliage_color": 11206862,
+    "particle": {
+      "options": {
+        "type": "minecraft:dragon_breath"
+      },
+      "probability": 0.002
+    }
+  },
+  "starts": [],
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:endermite",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 10
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}

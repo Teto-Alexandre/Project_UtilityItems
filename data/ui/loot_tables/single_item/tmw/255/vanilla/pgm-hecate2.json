@@ -1,0 +1,11 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180070,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"pgm-hecate2\",Mass:100,Magazine:7,MaxSize:0,ShotCT:12,BurstCT:24,Burst:1,FireID:-1,ReloadType:1,ReloadMax:30,ReloadID:-3,ReloadItem:23,Scope:20,now:{Speed:0,Info:-1}},main:{Spread:-20000,AirSpread:-16000,MultiShot:1,Barrel:480},bullet:{Mass:60,Power:30000,AirRes:0.97,Gravity:20,Pack:1,Size:0,Spread:0,DamageType:4,WeakMultiplier:200,FlyParticle:1,EndParticle:-1,HitModifiers:[{id:\"armor_pierce\",lvl:500},{id:\"lethal\",lvl:150}],FlyModifiers:[],Sound:10,Muzzle:3,Recoil:50,PierceEntity:2},bullets:[]},display:{Name:'{\"text\":\"pgm-hecate2\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 金インゴット, TNT\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"防御力の低い敵に致命傷を与える\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"装弾数1、スコープ、貫通2\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

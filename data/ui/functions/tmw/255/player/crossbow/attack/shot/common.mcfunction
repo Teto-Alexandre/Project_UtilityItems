@@ -18,6 +18,8 @@
     execute store result score $muzzle ui_temp run data get storage ui:object_maker temp.Muzzle
     execute store result score $sound ui_temp run data get storage ui:object_maker temp.Sound
     execute store result score $pierce_ent ui_temp run data get storage ui:object_maker temp.PierceEntity
+    scoreboard players set $break_mult ui_temp 100
+    execute if data storage ui:object_maker temp.BreakMult store result score $break_mult ui_temp run data get storage ui:object_maker temp.BreakMult
 
 # id と team は既にあるものを使用
 

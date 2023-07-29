@@ -25,6 +25,7 @@ scoreboard players operation $damage_type ui_temp = @s ui_bdt
 # 破壊力を計算
 scoreboard players operation $break ui_temp = $damage ui_temp
 scoreboard players operation $break ui_temp *= #2 ui_num
+execute unless score @s ui_proj_stat_break_mult matches 100 run function ui:tmw/255/projectile/col/mult
 scoreboard players operation $break.max ui_temp = $break ui_temp
 
 # idを共有

@@ -28,6 +28,8 @@
     execute if data storage ui:gun temp3.Recoil store result score $recoil ui_temp run data get storage ui:gun temp3.Recoil
     scoreboard players reset $pierce_ent ui_temp
     execute if data storage ui:gun temp3.PierceEntity store result score $pierce_ent ui_temp run data get storage ui:gun temp3.PierceEntity
+    scoreboard players set $break_mult ui_temp 100
+    execute if data storage ui:gun temp3.BreakMult store result score $break_mult ui_temp run data get storage ui:gun temp3.BreakMult
 
 #
     data modify storage ui:object_maker temp.DisplayName set from storage ui:gun temp.DisplayName
@@ -53,6 +55,7 @@
     scoreboard players operation $sneak_time ui_temp < #60 ui_num
     scoreboard players operation $sneak_time ui_temp *= #100 ui_num
     scoreboard players operation $spread ui_temp -= $sneak_time ui_temp
+    #tellraw @a [{"text":"Spread:","color":"red"},{"score":{"name":"$spread","objective":"ui_temp"},"color":"red"}]
     scoreboard players operation $spread ui_temp /= #20 ui_num
     scoreboard players operation $spread ui_temp > $spread.min ui_temp
 

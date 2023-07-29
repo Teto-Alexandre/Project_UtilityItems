@@ -148,7 +148,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
         scoreboard objectives add ui_i_sum dummy {"text":"UtilityItems_Industry_StarUnitMax","color":"dark_blue"}
         scoreboard objectives add ui_i_suo dummy {"text":"UtilityItems_Industry_StarUnitOutput","color":"dark_blue"}
         scoreboard objectives add ui_i_suc dummy {"text":"UtilityItems_Industry_StarUnitCalc","color":"dark_blue"}
-        scoreboard objectives add ui_i_sui dummy {"text":"UtilityItems_Industry_StarUnitImput","color":"dark_blue"}
+        scoreboard objectives add ui_i_sui dummy {"text":"UtilityItems_Industry_StarUnitInput","color":"dark_blue"}
         scoreboard objectives add ui_i_suu dummy {"text":"UtilityItems_Industry_StarUnitUse","color":"dark_blue"}
         scoreboard objectives add ui_i_sug dummy {"text":"UtilityItems_Industry_StarUnitGen","color":"dark_blue"}
     #機械IDとエネルギーリンク
@@ -217,6 +217,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     #新しく増やしたもの
     scoreboard objectives add ui_proj_stat_pierce_entity dummy {"text":"UtilityItems_PierceEntity","color":"dark_blue"}
     scoreboard objectives add ui_proj_stat_pierce_entity.obj_id dummy {"text":"UtilityItems_PierceEntity.Obj","color":"dark_blue"}
+    scoreboard objectives add ui_proj_stat_break_mult dummy {"text":"UtilityItems_BreakMult","color":"dark_blue"}
 
 ## スキルツリー
     scoreboard objectives add ui_skilltree_v trigger {"text":"UtilityItems_SkillTree_View","color":"dark_blue"}
@@ -455,6 +456,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     setblock 0 1 0 air replace
     setblock 0 0 0 minecraft:dropper{Items:[{Slot:0b,id:"minecraft:stone",Count:1b},{Slot:1b,id:"minecraft:stone",Count:1b},{Slot:2b,id:"minecraft:stone",Count:1b},{Slot:3b,id:"minecraft:stone",Count:1b},{Slot:4b,id:"minecraft:stone",Count:1b},{Slot:5b,id:"minecraft:stone",Count:1b},{Slot:6b,id:"minecraft:stone",Count:1b},{Slot:7b,id:"minecraft:stone",Count:1b},{Slot:8b,id:"minecraft:stone",Count:1b}]} replace
     setblock 0 1 0 minecraft:oak_sign replace
+    gamerule maxCommandChainLength 900000
 
 #=====================================================================================
 #

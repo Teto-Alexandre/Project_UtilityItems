@@ -51,3 +51,5 @@ execute if score $type ui_temp matches 20 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 21 run function ui:common/particle/ss/upper/21/core
 # 斬撃
 execute if score $type ui_temp matches 22 run function ui:common/particle/ss/upper/22/core
+# 自壊する岩石（モブグリで上書き設定を変える）
+execute if score $type ui_temp matches 23 run function ui:common/particle/ss/upper/23/core
