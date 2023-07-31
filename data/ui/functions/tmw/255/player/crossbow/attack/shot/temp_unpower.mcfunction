@@ -10,6 +10,7 @@ scoreboard players operation @s ui_br = $range ui_temp
 scoreboard players operation @s ui_dmg = $mass ui_temp
 scoreboard players operation @s ui_autohit = $air_res ui_temp
 scoreboard players operation @s ui_bg = $gravity ui_temp
+scoreboard players operation @s ui_proj_stat_damage_factor = $damage_factor ui_temp
 scoreboard players operation @s ui_bdt = $damage_type ui_temp
 scoreboard players operation @s ui_bu = $weak_mult ui_temp
 scoreboard players operation @s ui_gms = $back_mult ui_temp

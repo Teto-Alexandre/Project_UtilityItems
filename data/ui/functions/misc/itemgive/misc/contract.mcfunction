@@ -35,4 +35,6 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:19},CustomModelData:11020
 
 give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:21},CustomModelData:111319,display:{Name:'{"text":"パラシュート","color":"gold","italic":false}',Lore:['[{"text":"Usage: R-Click","color":"gray","italic":false}]','[{"text":"10秒間落下速度を緩める","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
 
+give @p minecraft:carrot_on_a_stick{tmw:{id:501,con_id:22},CustomModelData:110201,display:{Name:'{"text":"天地の契約書","color":"gold","italic":false}',Lore:['[{"text":" 20m以上落ちた時に発動","color":"gray","italic":false}]','[{"text":" 落下中無敵になるが","color":"gray","italic":false}]','[{"text":" 着地時にHPが1になる","color":"gray","italic":false}]']},Unbreakable:1b,HideFlags:4}
+
 #=======================================================================================

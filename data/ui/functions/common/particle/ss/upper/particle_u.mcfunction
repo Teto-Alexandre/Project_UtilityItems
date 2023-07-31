@@ -53,3 +53,11 @@ execute if score $type ui_temp matches 21 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 22 run function ui:common/particle/ss/upper/22/core
 # 自壊する岩石（モブグリで上書き設定を変える）
 execute if score $type ui_temp matches 23 run function ui:common/particle/ss/upper/23/core
+# 白魔法陣
+execute if score $type ui_temp matches 24 run function ui:common/particle/ss/upper/24/core
+# 広がるリングテンプレ
+execute if score $type ui_temp matches 25 run function ui:common/particle/ss/upper/25/core
+# 黄色の波動が壁に当たったエフェクト
+execute if score $type ui_temp matches 26 run function ui:common/particle/ss/upper/26/core
+# 黄色の波動が壁に当たったエフェクト小
+execute if score $type ui_temp matches 27 run function ui:common/particle/ss/upper/27/core

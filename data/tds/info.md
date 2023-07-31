@@ -6,6 +6,11 @@
 対象を実行者にしてfunctionを実行
     execute as 対象 run function tds:attack
 
+DamageFactor一覧
+
+0（デフォルト） : バニラ物理 :防具と防具強度で軽減する計算式を適応
+1 : 魔法 :ディーラーの魔法ダメージ倍率と防具の魔法耐性を参照する
+
 DamageType一覧
 
 1 : 衝撃 (ダメージ軽減:4%) :消滅の矢とか、大多数はここ

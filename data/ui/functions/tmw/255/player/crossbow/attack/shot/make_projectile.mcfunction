@@ -6,6 +6,7 @@
 #declare score_holder $mass
 #declare score_holder $air_res
 #declare score_holder $gravity
+#declare score_holder $damage_factor
 #declare score_holder $damage_type
 #declare score_holder $weak_mult
 #declare score_holder $back_mult

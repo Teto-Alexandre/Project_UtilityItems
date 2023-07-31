@@ -7,7 +7,6 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
     scoreboard objectives add ui_calc2 dummy {"text":"UtilityItems_Calculation2","color":"dark_blue"}
     scoreboard objectives add ui_calc3 dummy {"text":"UtilityItems_Calculation3","color":"dark_blue"}
-    scoreboard objectives add ui_mp dummy {"text":"UtilityItems_MP","color":"dark_blue"}
     scoreboard objectives add ui_tc dummy {"text":"UtilityItems_TimeCount","color":"dark_blue"}
     scoreboard objectives add ui_temp dummy {"text":"UtilityItems_TEMP","color":"dark_blue"}
     scoreboard objectives add ui_temp2 dummy {"text":"UtilityItems_TEMP2","color":"dark_blue"}
@@ -26,11 +25,16 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_di minecraft.custom:minecraft.drop {"text":"UtilityItems_DropItem","color":"dark_blue"}
     scoreboard objectives add ui_tmw_con_id dummy {"text":"UtilityItems_TetoMysticWeapon_Consume_ID","color":"dark_blue"}
     scoreboard objectives add ui_face_up dummy {"text":"UtilityItems_Face_Up","color":"dark_blue"}
+    scoreboard objectives add ui_mp dummy {"text":"UtilityItems_MP","color":"dark_blue"}
     #未分類だけどとりあえず連射させたくない奴
     scoreboard objectives add ui_ct dummy {"text":"UtilityItems_CoolTime","color":"dark_blue"}
 
 ## ランダム用
     scoreboard objectives add ui_rand dummy {"text":"UtilityItems_Rand","color":"dark_blue"}
+
+## 汎用ステータス
+    scoreboard objectives add ui_stat_dmg_phys dummy {"text":"UtilityItems_DamagePhysic","color":"dark_blue"}
+    scoreboard objectives add ui_stat_dmg_magi dummy {"text":"UtilityItems_DamageMagic","color":"dark_blue"}
 
 ## 数字ライブラリ
     scoreboard objectives add ui_num dummy {"text":"UtilityItems_Number","color":"dark_blue"}
@@ -218,6 +222,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_proj_stat_pierce_entity dummy {"text":"UtilityItems_PierceEntity","color":"dark_blue"}
     scoreboard objectives add ui_proj_stat_pierce_entity.obj_id dummy {"text":"UtilityItems_PierceEntity.Obj","color":"dark_blue"}
     scoreboard objectives add ui_proj_stat_break_mult dummy {"text":"UtilityItems_BreakMult","color":"dark_blue"}
+    scoreboard objectives add ui_proj_stat_damage_factor dummy {"text":"UtilityItems_DamageFactor","color":"dark_blue"}
 
 ## スキルツリー
     scoreboard objectives add ui_skilltree_v trigger {"text":"UtilityItems_SkillTree_View","color":"dark_blue"}

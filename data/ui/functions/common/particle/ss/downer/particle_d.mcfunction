@@ -64,6 +64,20 @@ execute if score $type ui_temp matches -10022 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10023 run function ui:common/particle/ss/downer/10023/core
 # 追尾する目
 execute if score $type ui_temp matches -10024 run function ui:common/particle/ss/downer/10024/core
+# 追尾する目2
+execute if score $type ui_temp matches -10025 run function ui:common/particle/ss/downer/10025/core
+# 黄色い波動と線
+execute if score $type ui_temp matches -10026 run function ui:common/particle/ss/downer/10026/core
+# 黄色い波動と線2
+execute if score $type ui_temp matches -10027 run function ui:common/particle/ss/downer/10027/core
+# 黄色い波動と線3
+execute if score $type ui_temp matches -10028 run function ui:common/particle/ss/downer/10028/core
+# 黄色い波動と線4
+execute if score $type ui_temp matches -10029 run function ui:common/particle/ss/downer/10029/core
+# 黄色い波動と線5 - 子
+execute if score $type ui_temp matches -10030 run function ui:common/particle/ss/downer/10030/core
+# 黄色い波動と線5
+execute if score $type ui_temp matches -10031 run function ui:common/particle/ss/downer/10031/core
 
 # 横切り
 execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core

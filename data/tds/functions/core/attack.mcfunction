@@ -142,6 +142,7 @@
 
 # リセット
     scoreboard players reset $Damage tds_dmg
+    scoreboard players reset $DamageFactor tds_dmg
     scoreboard players reset $DamageType tds_dmg
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg

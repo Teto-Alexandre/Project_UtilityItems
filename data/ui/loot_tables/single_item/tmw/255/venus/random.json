@@ -40,6 +40,41 @@
           "type": "minecraft:loot_table",
           "weight": 1,
           "name": "ui:single_item/tmw/255/venus/wind3"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "name": "ui:single_item/tmw/255/venus/eye2"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/venus/eye3"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "ui:single_item/tmw/255/venus/gold_cage"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "ui:single_item/tmw/255/venus/gold_pierce"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "ui:single_item/tmw/255/venus/gold_single"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "ui:single_item/tmw/255/venus/gold_triple"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/venus/gold3"
         }
       ]
     }

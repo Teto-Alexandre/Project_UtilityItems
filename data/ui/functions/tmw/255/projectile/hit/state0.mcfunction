@@ -1,4 +1,4 @@
-# 盾で防がれなかったと金
+# 盾で防がれなかったとき
 
 # これヘッドショット？
     execute if score $weak_mult ui_temp matches 101.. run function ui:tmw/255/projectile/hit/weak_mult
@@ -12,9 +12,10 @@
     execute at @s run function ui:common/armor_damage/
 
 # ダメージ本体
-    data merge storage tds: {temp:{Damage:1.00,DamageType:1,DeathMessage:8,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
+    data merge storage tds: {temp:{Damage:1.00,DamageFactor:1,DamageType:1,DeathMessage:8,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
     #tellraw @a [{"text":"Attacker:"},{"score":{"name":"$id","objective":"ui_temp"}},{"text":" Team:"},{"score":{"name":"$team","objective":"ui_temp"}},{"text":" Obj:"},{"score":{"name":"$Attacker","objective":"tds_dmg"}}]
     execute store result storage tds: temp.Damage float 0.1 run scoreboard players get $damage ui_temp
+    execute store result storage tds: temp.DamageFactor int 1 run scoreboard players get $damage_factor ui_temp
     execute store result storage tds: temp.DamageType int 1 run scoreboard players get $damage_type ui_temp
     execute store result storage tds: temp.BypassArmor int 1 run scoreboard players get $bypass_armor ui_temp
     scoreboard players operation $Attacker tds_dmg = $id ui_temp

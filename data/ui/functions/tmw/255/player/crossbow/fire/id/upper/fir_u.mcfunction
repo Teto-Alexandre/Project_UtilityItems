@@ -63,3 +63,17 @@
     execute if score $fireid ui_temp matches 127 run function ui:tmw/255/player/crossbow/fire/id/upper/127
     # 弓
     execute if score $fireid ui_temp matches 128 run function ui:tmw/255/player/crossbow/fire/id/upper/128
+    # 天眼の刻
+    execute if score $fireid ui_temp matches 129 run function ui:tmw/255/player/crossbow/fire/id/upper/129
+    # 天眼の識
+    execute if score $fireid ui_temp matches 130 run function ui:tmw/255/player/crossbow/fire/id/upper/130/
+    # 金線の軌
+    execute if score $fireid ui_temp matches 131 run function ui:tmw/255/player/crossbow/fire/id/upper/131
+    # 金線の牢
+    execute if score $fireid ui_temp matches 132 run function ui:tmw/255/player/crossbow/fire/id/upper/132
+    # 金線の貫
+    execute if score $fireid ui_temp matches 133 run function ui:tmw/255/player/crossbow/fire/id/upper/133
+    # 金線の随
+    execute if score $fireid ui_temp matches 134 run function ui:tmw/255/player/crossbow/fire/id/upper/134
+    # 金線の迅
+    execute if score $fireid ui_temp matches 135 run function ui:tmw/255/player/crossbow/fire/id/upper/135

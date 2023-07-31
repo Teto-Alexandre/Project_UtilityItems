@@ -21,6 +21,7 @@
     execute if entity @s[scores={ui_tmw_con_id=19}] run function ui:tmw/501/contract/19
     execute if entity @s[scores={ui_tmw_con_id=20}] run function ui:tmw/501/contract/20
     execute if entity @s[scores={ui_tmw_con_id=21}] run function ui:tmw/501/contract/21
+    execute if entity @s[scores={ui_tmw_con_id=22}] run function ui:tmw/501/contract/22/
 
 # 契約書消える
     execute if entity @s[scores={ui_tmw_con_id=1..}] run item replace entity @s weapon.mainhand with air

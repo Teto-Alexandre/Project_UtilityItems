@@ -21,6 +21,7 @@ scoreboard players operation $rangetype ui_temp = @s ui_gpc
 scoreboard players operation $damage ui_temp = @s ui_dmg
 scoreboard players operation $damage ui_temp *= @s ui_bm
 scoreboard players operation $damage ui_temp /= #50 ui_num
+scoreboard players operation $damage_factor ui_temp = @s ui_proj_stat_damage_factor
 scoreboard players operation $damage_type ui_temp = @s ui_bdt
 # 破壊力を計算
 scoreboard players operation $break ui_temp = $damage ui_temp
