@@ -43,5 +43,7 @@ scoreboard players set @s ui_mine_f 0
 scoreboard players set @s ui_stat_dmg_phys 100
 scoreboard players set @s ui_stat_dmg_magi 100
 
+title @s times 0 10 0
+
 #プレイヤーidを振る
 execute as @s unless entity @s[scores={ui_id=1..}] run function ui:misc/act/make_id
