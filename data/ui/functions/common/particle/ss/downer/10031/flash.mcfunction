@@ -32,6 +32,19 @@ execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/
 execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
 execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
 execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
+execute unless entity @s[tag=ui_temp_hit] at @s run function ui:common/particle/ss/downer/10031/laser/move
 
 #tellraw @a [{"score":{"name": "@s","objective": "ui_team"},"color": "aqua"},{"score":{"name": "@s","objective": "ui_id"},"color": "green"}]
 

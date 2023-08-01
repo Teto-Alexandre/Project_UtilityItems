@@ -4,7 +4,7 @@ execute as @e[tag=ui_temp_damage,sort=nearest,limit=1] run function tds:attack
 
 data merge storage ui:common {input:{Mode:"create",Var:25,Var2:1}}
 execute positioned ~ ~1 ~ facing entity @e[tag=ui_temp_particle_10031_position] feet positioned ^ ^ ^1 run function ui:common/particle
-data merge storage ui:common {input:{Mode:"create",Var:-10030,Num:3}}
+data merge storage ui:common {input:{Mode:"create",Var:-10030,Num:4}}
 function ui:common/particle
 scoreboard players reset $id_temp ui_temp
 particle firework ~ ~1 ~ 0.5 0.5 0.5 0.5 30 force

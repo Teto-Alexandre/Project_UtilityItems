@@ -7,81 +7,77 @@
 # 情報共有
     scoreboard players operation $type ui_temp = @s ui_gpc
     scoreboard players operation $is ui_temp = @s ui_is
-    scoreboard players operation $id ui_temp = @s ui_id
-    scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $type ui_temp matches ..-1 as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
-    execute if score $type ui_temp matches ..-10001 as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+    #scoreboard players operation $id ui_temp = @s ui_id
+    #scoreboard players operation $team ui_temp = @s ui_team
+    #execute if score $type ui_temp matches ..-1 as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
+    #execute if score $type ui_temp matches ..-10001 as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # コンパス2
-execute if score $type ui_temp matches -1 run function ui:common/particle/ss/downer/1/core
+execute if score $type ui_temp matches -1 at @s run function ui:common/particle/ss/downer/1/core
 # LiDAR
-execute if score $type ui_temp matches -2 run function ui:common/particle/ss/downer/2/core
+execute if score $type ui_temp matches -2 at @s run function ui:common/particle/ss/downer/2/core
 # パーティクル雷
-execute if score $type ui_temp matches -10001 run function ui:common/particle/ss/downer/10001/core
+execute if score $type ui_temp matches -10001 at @s run function ui:common/particle/ss/downer/10001/core
 # パーティクル雷2
-execute if score $type ui_temp matches -10002 run function ui:common/particle/ss/downer/10002/core
+execute if score $type ui_temp matches -10002 at @s run function ui:common/particle/ss/downer/10002/core
 # パーティクル雷3
-execute if score $type ui_temp matches -10003 run function ui:common/particle/ss/downer/10003/core
+execute if score $type ui_temp matches -10003 at @s run function ui:common/particle/ss/downer/10003/core
 # 炎十字
-execute if score $type ui_temp matches -10004 run function ui:common/particle/ss/downer/10004/core
+execute if score $type ui_temp matches -10004 at @s run function ui:common/particle/ss/downer/10004/core
 # 火魔法陣
-execute if score $type ui_temp matches -10005 run function ui:common/particle/ss/downer/10005/core
+execute if score $type ui_temp matches -10005 at @s run function ui:common/particle/ss/downer/10005/core
 # 召喚魔法陣
-execute if score $type ui_temp matches -10006 run function ui:common/particle/ss/downer/10006/core
+execute if score $type ui_temp matches -10006 at @s run function ui:common/particle/ss/downer/10006/core
 # 氷魔法陣
-execute if score $type ui_temp matches -10007 run function ui:common/particle/ss/downer/10007/core
+execute if score $type ui_temp matches -10007 at @s run function ui:common/particle/ss/downer/10007/core
 # 大氷魔法陣
-execute if score $type ui_temp matches -10008 run function ui:common/particle/ss/downer/10008/core
+execute if score $type ui_temp matches -10008 at @s run function ui:common/particle/ss/downer/10008/core
 # 大氷魔法陣の魔法陣
-execute if score $type ui_temp matches -10009 run function ui:common/particle/ss/downer/10009/core
+execute if score $type ui_temp matches -10009 at @s run function ui:common/particle/ss/downer/10009/core
 # 猛烈な衝撃
-execute if score $type ui_temp matches -10010 run function ui:common/particle/ss/downer/10010/core
+execute if score $type ui_temp matches -10010 at @s run function ui:common/particle/ss/downer/10010/core
 # 猛烈な衝撃 - 親
-execute if score $type ui_temp matches -10011 run function ui:common/particle/ss/downer/10011/core
+execute if score $type ui_temp matches -10011 at @s run function ui:common/particle/ss/downer/10011/core
 # 静寂の残響
-execute if score $type ui_temp matches -10012 run function ui:common/particle/ss/downer/10012/core
+execute if score $type ui_temp matches -10012 at @s run function ui:common/particle/ss/downer/10012/core
 # 連続爆発
-execute if score $type ui_temp matches -10013 run function ui:common/particle/ss/downer/10013/core
+execute if score $type ui_temp matches -10013 at @s run function ui:common/particle/ss/downer/10013/core
 # サンダーストーム付属
-execute if score $type ui_temp matches -10014 run function ui:common/particle/ss/downer/10014/core
+execute if score $type ui_temp matches -10014 at @s run function ui:common/particle/ss/downer/10014/core
 # 微風
-execute if score $type ui_temp matches -10015 run function ui:common/particle/ss/downer/10015/core
+execute if score $type ui_temp matches -10015 at @s run function ui:common/particle/ss/downer/10015/core
 # 風塵
-execute if score $type ui_temp matches -10016 run function ui:common/particle/ss/downer/10016/core
+execute if score $type ui_temp matches -10016 at @s run function ui:common/particle/ss/downer/10016/core
 # 断空
-execute if score $type ui_temp matches -10017 run function ui:common/particle/ss/downer/10017/core
+execute if score $type ui_temp matches -10017 at @s run function ui:common/particle/ss/downer/10017/core
 # カスタムモデル落とし
-execute if score $type ui_temp matches -10018 run function ui:common/particle/ss/downer/10018/core
+execute if score $type ui_temp matches -10018 at @s run function ui:common/particle/ss/downer/10018/core
 # 銃テスト
-execute if score $type ui_temp matches -10019 run function ui:common/particle/ss/downer/10019/core
+execute if score $type ui_temp matches -10019 at @s run function ui:common/particle/ss/downer/10019/core
 # 斬撃2
-execute if score $type ui_temp matches -10020 run function ui:common/particle/ss/downer/10020/core
+execute if score $type ui_temp matches -10020 at @s run function ui:common/particle/ss/downer/10020/core
 # 斬撃マルチ
-execute if score $type ui_temp matches -10021 run function ui:common/particle/ss/downer/10021/core
+execute if score $type ui_temp matches -10021 at @s run function ui:common/particle/ss/downer/10021/core
 # 回転魔法陣
-execute if score $type ui_temp matches -10022 run function ui:common/particle/ss/downer/10022/core
+execute if score $type ui_temp matches -10022 at @s run function ui:common/particle/ss/downer/10022/core
 # レーザービット
-execute if score $type ui_temp matches -10023 run function ui:common/particle/ss/downer/10023/core
+execute if score $type ui_temp matches -10023 at @s run function ui:common/particle/ss/downer/10023/core
 # 追尾する目
-execute if score $type ui_temp matches -10024 run function ui:common/particle/ss/downer/10024/core
+execute if score $type ui_temp matches -10024 at @s run function ui:common/particle/ss/downer/10024/core
 # 追尾する目2
-execute if score $type ui_temp matches -10025 run function ui:common/particle/ss/downer/10025/core
+execute if score $type ui_temp matches -10025 at @s run function ui:common/particle/ss/downer/10025/core
 # 黄色い波動と線
-execute if score $type ui_temp matches -10026 run function ui:common/particle/ss/downer/10026/core
+execute if score $type ui_temp matches -10026 at @s run function ui:common/particle/ss/downer/10026/core
 # 黄色い波動と線2
-execute if score $type ui_temp matches -10027 run function ui:common/particle/ss/downer/10027/core
+execute if score $type ui_temp matches -10027 at @s run function ui:common/particle/ss/downer/10027/core
 # 黄色い波動と線3
-execute if score $type ui_temp matches -10028 run function ui:common/particle/ss/downer/10028/core
+execute if score $type ui_temp matches -10028 at @s run function ui:common/particle/ss/downer/10028/core
 # 黄色い波動と線4
-execute if score $type ui_temp matches -10029 run function ui:common/particle/ss/downer/10029/core
+execute if score $type ui_temp matches -10029 at @s run function ui:common/particle/ss/downer/10029/core
 # 黄色い波動と線5 - 子
-execute if score $type ui_temp matches -10030 run function ui:common/particle/ss/downer/10030/core
+execute if score $type ui_temp matches -10030 at @s run function ui:common/particle/ss/downer/10030/core
 # 黄色い波動と線5
-execute if score $type ui_temp matches -10031 run function ui:common/particle/ss/downer/10031/core
+execute if score $type ui_temp matches -10031 at @s run function ui:common/particle/ss/downer/10031/core
 
 # 横切り
-execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core
-
-#
-tag @a[tag=ui_temp_player] remove ui_temp_player
-tag @e[tag=ui_temp_team] remove ui_temp_team
+execute if score $type ui_temp matches -11001 at @s run function ui:common/particle/ss/downer/11001/core
