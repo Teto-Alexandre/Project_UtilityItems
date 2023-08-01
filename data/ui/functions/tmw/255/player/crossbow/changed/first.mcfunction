@@ -21,6 +21,7 @@ execute unless score $qf ui_temp matches 1.. run data modify storage ui:temp tem
 execute if score $bullets ui_temp matches 0 run data modify storage ui:temp temp.gun.now merge value {Bullets:0,Noidle:0}
 execute unless score $bullets ui_temp matches 0 run data modify storage ui:temp temp.gun.now merge value {Noidle:1}
 data modify storage ui:temp temp.gun.now merge value {CT:0,AddCT:0,ReloadTime:0,FireTime:0,FireCount:0,Burst:1,IsHold:0,First:1}
+execute if data storage ui:gun temp.FireSpellCast run data modify storage ui:temp temp.gun.now merge value {FireSpellCast:0}
 
 # 書き込み終了
 execute if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/all

@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:gold_nugget","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:5001},display:{Name:'{\"text\":\"金線の欠片\",\"color\":\"yellow\",\"italic\":false}',Lore:['[{\"text\":\"根源たる金線の真髄を組み込んだ明星の宝飾\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"その力は稚拙な金線術を高次へと昇華する\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"装備時、中級金線術が強化される\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"---------- Inventory ----------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  ■□□□□□□□□  指定のスロットに入れると\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  効果が発動するタイプの\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  装飾品です\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"------------------------------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

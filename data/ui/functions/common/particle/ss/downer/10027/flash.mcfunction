@@ -10,4 +10,4 @@ execute at @s positioned ^ ^ ^0.2 run playsound entity.iron_golem.hurt player @a
 execute at @s run function ui:common/particle/ss/downer/10027/laser/move_straight
 
 execute if entity @s[tag=ui_temp_hit] at @s facing entity @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,limit=1] eyes run function ui:common/particle/ss/downer/10027/laser/manual
-execute if entity @s[tag=ui_temp_hit] as @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,sort=nearest,limit=1] at @s run function ui:common/particle/ss/downer/10027/damage1
+execute if entity @s[tag=ui_temp_hit] at @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,sort=nearest,limit=1] run function ui:common/particle/ss/downer/10027/damage1

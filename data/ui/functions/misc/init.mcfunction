@@ -303,6 +303,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_tmw601_chest dummy {"text":"UtilityItems_ArmorChest","color":"dark_blue"}
     scoreboard objectives add ui_tmw601_legs dummy {"text":"UtilityItems_ArmorLegs","color":"dark_blue"}
     scoreboard objectives add ui_tmw601_feet dummy {"text":"UtilityItems_ArmorFeet","color":"dark_blue"}
+    scoreboard objectives add ui_tmw601_accessory dummy {"text":"UtilityItems_Accessory","color":"dark_blue"}
 
 ## コモン
 

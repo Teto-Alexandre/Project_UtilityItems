@@ -6,8 +6,10 @@ execute at @e[tag=ui_temp_target] run teleport @s ~ ~ ~
 execute as @s run function ui:template/square_shuffle
 execute as @s run function ui:template/square_shuffle
 execute at @e[tag=ui_temp_target] facing entity @s feet run teleport @s ^ ^ ^5
+execute if score @s ui_is2 matches 1.. at @e[tag=ui_temp_target] facing entity @s feet run teleport @s ^ ^ ^10
 execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=ui_temp_target,limit=1] eyes
-execute at @s run summon marker ^ ^ ^1.1 {Tags:["ui_temp_square_shuffle"]}
+execute unless score @s ui_is2 matches 1.. at @s run summon marker ^ ^ ^1.1 {Tags:["ui_temp_square_shuffle"]}
+execute if score @s ui_is2 matches 1.. at @s run summon marker ^ ^ ^2 {Tags:["ui_temp_square_shuffle"]}
 execute as @e[tag=ui_temp_square_shuffle] run function ui:template/square_shuffle
 execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=ui_temp_square_shuffle,limit=1] feet
 kill @e[tag=ui_temp_square_shuffle]

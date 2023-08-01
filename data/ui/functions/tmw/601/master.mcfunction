@@ -8,16 +8,24 @@ scoreboard players operation $team ui_temp = @s ui_team
 execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # 装備データ更新
+execute store result score $accessory ui_temp run data get entity @s Inventory.[{Slot:9b}].tag.tmw.type
 execute store result score $head ui_temp run data get entity @s Inventory.[{Slot:103b}].tag.tmw.type
 execute store result score $chest ui_temp run data get entity @s Inventory.[{Slot:102b}].tag.tmw.type
 execute store result score $legs ui_temp run data get entity @s Inventory.[{Slot:101b}].tag.tmw.type
 execute store result score $feet ui_temp run data get entity @s Inventory.[{Slot:100b}].tag.tmw.type
 
 # 装備変更全体
+execute unless score @s ui_tmw601_accessory = $accessory ui_temp run tag @s add tmw601_changed_all
 execute unless score @s ui_tmw601_head = $head ui_temp run tag @s add tmw601_changed_all
 execute unless score @s ui_tmw601_chest = $chest ui_temp run tag @s add tmw601_changed_all
 execute unless score @s ui_tmw601_legs = $legs ui_temp run tag @s add tmw601_changed_all
 execute unless score @s ui_tmw601_feet = $feet ui_temp run tag @s add tmw601_changed_all
+
+# アクセサリー
+execute if entity @s[tag=tmw601_changed_all] unless score @s ui_tmw601_accessory = $accessory ui_temp run tag @s add tmw601_changed
+execute if score @s[tag=tmw601_changed] ui_tmw601_accessory matches 5001..6000 run function ui:tmw/601/accessory/remove
+execute if score $accessory ui_temp matches 5001..6000 run function ui:tmw/601/accessory/manager
+tag @s[tag=tmw601_changed] remove tmw601_changed
 
 # 頭
 execute if entity @s[tag=tmw601_changed_all] unless score @s ui_tmw601_head = $head ui_temp run tag @s add tmw601_changed
@@ -44,6 +52,7 @@ execute if score $feet ui_temp matches 1001..2000 run function ui:tmw/601/feet/m
 tag @s[tag=tmw601_changed] remove tmw601_changed
 
 # 次tick用の今つけてる装備データ更新
+scoreboard players operation @s ui_tmw601_accessory = $accessory ui_temp
 scoreboard players operation @s ui_tmw601_head = $head ui_temp
 scoreboard players operation @s ui_tmw601_chest = $chest ui_temp
 scoreboard players operation @s ui_tmw601_legs = $legs ui_temp

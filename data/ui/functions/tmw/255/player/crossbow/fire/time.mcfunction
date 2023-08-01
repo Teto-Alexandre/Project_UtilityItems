@@ -4,6 +4,9 @@
     scoreboard players set $firetime.max ui_temp -1
 
 #
+    execute if data storage ui:gun temp.FireSpellCast run function ui:tmw/255/player/crossbow/fire/template/spellcast
+
+#
     execute if entity @s[tag=tmw_active_temp] run scoreboard players set $changed ui_temp 1
 
 #
@@ -16,4 +19,5 @@
     #死亡したら中断
     execute store success score $changed ui_temp if entity @s[tag=tmw255_dead] run scoreboard players set $firetime ui_temp 0
     execute if score $firetime ui_temp matches 0 run scoreboard players set $burst ui_temp 0
+    execute if score $firetime ui_temp matches 0 if data storage ui:gun temp.FireSpellCast run scoreboard players set $firespellcast ui_temp 0
     #execute at @s run playsound block.note_block.hat player @a ~ ~ ~ 0.5 2 0

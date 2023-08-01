@@ -14,3 +14,7 @@
     execute if score $firetime.temp ui_temp matches 0 at @s run particle dust 1 0.8 0 1 ~ ~1 ~ 0.5 0.5 0.5 0 20 force
     execute if score $firetime.temp ui_temp matches 2 run data merge storage ui:common {input:{Mode:"create",Var:-10027,Num:10}}
     execute if score $firetime.temp ui_temp matches 2 at @s anchored eyes positioned ^ ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10027,Num:10,Var2:10}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^ ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10027,Num:25,Var2:30}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^ ^ ^ run function ui:common/particle

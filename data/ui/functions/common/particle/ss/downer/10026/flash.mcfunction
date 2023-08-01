@@ -1,6 +1,9 @@
 #
 tag @e[tag=ui_temp_target] remove ui_temp_target
-execute positioned ^ ^ ^15 run tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..35,sort=nearest,limit=1] add ui_temp_target
+execute unless entity @s[tag=ui_temp_boost] positioned ^ ^ ^15 run tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..35,sort=nearest,limit=1] add ui_temp_target
+execute if entity @s[tag=ui_temp_boost] if entity @a[tag=ui_temp_player,predicate=ui:is_sprinting] positioned ^ ^ ^5 run tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..35,sort=nearest,limit=1] add ui_temp_target
+execute if entity @s[tag=ui_temp_boost] if entity @a[tag=ui_temp_player,predicate=!ui:is_sprinting,predicate=!ui:is_sneaking] positioned ^ ^ ^15 run tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..35,sort=nearest,limit=1] add ui_temp_target
+execute if entity @s[tag=ui_temp_boost] if entity @a[tag=ui_temp_player,predicate=ui:is_sneaking] positioned ^ ^ ^25 run tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..35,sort=nearest,limit=1] add ui_temp_target
 teleport @s ~ ~ ~ facing entity @e[tag=ui_temp_target,limit=1] eyes
 execute at @s run teleport @s ^ ^ ^1 ~ ~
 summon marker ~ ~ ~ {Tags:["ui_temp_particle_10026_position"]}
@@ -28,11 +31,14 @@ execute unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run fun
 execute unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
 execute unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
 execute unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
+execute if entity @s[tag=ui_temp_boost] unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
+execute if entity @s[tag=ui_temp_boost] unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
+execute if entity @s[tag=ui_temp_boost] unless entity @s[tag=ui_temp_hit] at @s if block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10026/laser/move
 
 execute unless entity @s[tag=ui_temp_hit] at @s unless block ~ ~ ~ #ui:nocol run data merge storage ui:common {input:{Mode:"create",Var:26}}
 execute unless entity @s[tag=ui_temp_hit] at @s unless block ~ ~ ~ #ui:nocol positioned ^ ^ ^1 facing entity @s feet positioned ^ ^ ^1 run function ui:common/particle
 
 execute if entity @s[tag=ui_temp_hit] at @s facing entity @e[tag=ui_temp_target,limit=1] eyes run function ui:common/particle/ss/downer/10026/laser/manual
-execute if entity @s[tag=ui_temp_hit] as @e[tag=ui_temp_target] at @s run function ui:common/particle/ss/downer/10026/damage1
+execute if entity @s[tag=ui_temp_hit] at @e[tag=ui_temp_target] run function ui:common/particle/ss/downer/10026/damage1
 
 tag @e[tag=ui_temp_target] remove ui_temp_target

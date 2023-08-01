@@ -20,7 +20,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 9,
+          "weight": 10,
           "name": "ui:single_item/tmw/255/vanilla/random"
         },
         {

@@ -31,6 +31,7 @@ execute store result score $reloadtime ui_temp run data get storage ui:gun temp.
 execute store result score $firetime ui_temp run data get storage ui:gun temp.now.FireTime
 scoreboard players set $firecount ui_temp 0
 scoreboard players set $bullets ui_temp 0
+execute if data storage ui:gun temp.FireSpellCast store result score $firespellcast ui_temp run data get storage ui:gun temp.now.FireSpellCast
 
 # 検知範囲拡大
 tag @s[tag=tmw_use_s] add tmw_active_temp
@@ -48,17 +49,23 @@ execute if entity @s[gamemode=!spectator] run function ui:tmw/255/player/crossbo
 # Qキーでリロード（仮）
 execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/top
 
+# 右クリックでリロード
+execute as @s[tag=tmw_active_temp] if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/top
+
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/255/player/crossbow/ct
 
 # リロード中
-execute unless score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/time
+#execute unless score $reloadtime ui_temp matches 0 run tellraw @a {"storage":"ui:gun","nbt":"temp.ImmidiatelyFire","interpret":false}
+execute unless score $reloadtime ui_temp matches 0 unless data storage ui:gun temp.ImmidiatelyFire run function ui:tmw/255/player/crossbow/reload/time
 
 # 射撃管制
+scoreboard players set $fire ui_temp 0
 execute unless score $firetime ui_temp matches 0 run function ui:tmw/255/player/crossbow/fire/time
+execute unless score $reloadtime ui_temp matches 0 if data storage ui:gun temp.ImmidiatelyFire run function ui:tmw/255/player/crossbow/reload/immidiately_fire
 
-# 右クリックでリロード
-execute as @s[tag=tmw_active_temp] if score $cooltime ui_temp matches 0 if score $reloadtime ui_temp matches 0 run function ui:tmw/255/player/crossbow/reload/top
+# 弾丸の射出
+execute if score $fire ui_temp matches 1.. if data storage ui:gun temp.ImmidiatelyFire run function ui:tmw/255/player/crossbow/fire/attack
 
 # 逆変換
 execute if score $cooltime ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -66,6 +73,7 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/255/player/cross
 
 # タグ消し
 tag @s remove ui_temp_move
+tag @s remove ui_temp_success
 tag @s[tag=tmw_active_temp] remove tmw_active_temp
 
 # 一時的ストレージクリア

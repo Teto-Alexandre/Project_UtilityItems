@@ -31,6 +31,6 @@ execute unless entity @s[tag=ui_temp_hit] at @s unless block ~ ~ ~ #ui:nocol run
 execute unless entity @s[tag=ui_temp_hit] at @s unless block ~ ~ ~ #ui:nocol positioned ^ ^ ^1 facing entity @s feet positioned ^ ^ ^1 run function ui:common/particle
 
 execute if entity @s[tag=ui_temp_hit] at @s facing entity @e[tag=ui_temp_target,limit=1] eyes run function ui:common/particle/ss/downer/10029/laser/manual
-execute if entity @s[tag=ui_temp_hit] as @e[tag=ui_temp_target] at @s run function ui:common/particle/ss/downer/10029/damage1
+execute if entity @s[tag=ui_temp_hit] at @e[tag=ui_temp_target] run function ui:common/particle/ss/downer/10029/damage1
 
 tag @e[tag=ui_temp_target] remove ui_temp_target

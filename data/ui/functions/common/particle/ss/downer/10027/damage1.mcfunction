@@ -1,6 +1,7 @@
 scoreboard players operation $Attacker tds_dmg = $id ui_temp
 data merge storage tds: {temp:{Damage:4.0,DamageType:4,DeathMessage:8,WeaponName:'[{"text":"金線の牢","color":"white","italic":"false"}]',EPF:-1,BypassArmor:5000,BypassResistance:false}}
-function tds:attack
+execute if score @s ui_is2 matches 1.. run data modify storage tds: temp.Damage set value 6.5
+execute as @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,sort=nearest,limit=1] run function tds:attack
 
 data merge storage ui:common {input:{Mode:"create",Var:25,Var2:1}}
 execute positioned ~ ~1 ~ facing entity @e[tag=ui_temp_particle_10027_position] feet positioned ^ ^ ^1 run function ui:common/particle

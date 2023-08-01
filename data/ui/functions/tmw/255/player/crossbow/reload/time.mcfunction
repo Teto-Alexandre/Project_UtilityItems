@@ -13,4 +13,3 @@
 # 書き込み
     #tellraw @a {"score":{"name":"$reloadtime.temp","objective":"ui_temp"}}
     execute if score $reloadtime.temp ui_temp matches ..-1 store success score $changed ui_temp run scoreboard players set $reloadtime ui_temp 0
-    #execute at @s run playsound block.note_block.hat player @a ~ ~ ~ 0.5 2 0

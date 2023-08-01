@@ -18,3 +18,21 @@
     execute if score $firetime.temp ui_temp matches 2 at @s anchored eyes positioned ^-4 ^ ^ run function ui:common/particle
     execute if score $firetime.temp ui_temp matches 2 run data merge storage ui:common {input:{Mode:"create",Var:-10029}}
     execute if score $firetime.temp ui_temp matches 2 at @s anchored eyes positioned ^ ^4 ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:10}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^5 ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:20}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^6 ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:30}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^7 ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:10}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^ ^5 ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:20}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^ ^6 ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:30}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^ ^7 ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:10}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^-5 ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:20}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^-6 ^ ^ run function ui:common/particle
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 run data merge storage ui:common {input:{Mode:"create",Var:-10029,Var2:30}}
+    execute if score $firetime.temp ui_temp matches 2 if score @s ui_tmw601_accessory matches 5001 at @s anchored eyes positioned ^-7 ^ ^ run function ui:common/particle
