@@ -6,6 +6,7 @@ scoreboard players operation @e[tag=ui_temp] ui_hpart = @s ui_hpart
 scoreboard players operation @e[tag=ui_temp] ui_team = @s ui_team
 scoreboard players operation @e[tag=ui_temp] ui_id = @s ui_id
 tag @e[tag=ui_temp] remove ui_temp
+scoreboard players set $Cache ui_temp 1
 kill @s
 
 #命中・終端時効果を起動する

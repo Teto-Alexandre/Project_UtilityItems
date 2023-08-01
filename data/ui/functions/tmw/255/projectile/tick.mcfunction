@@ -7,6 +7,9 @@
 # これはこれ
 tag @s add ui_temp_this
 
+#
+scoreboard players set $Cache ui_temp 0
+
 # キルログを宣言
 scoreboard players set $deathmessage ui_temp 0
 execute if entity @s[tag=ui_refd,tag=!tmw_255_noref] run scoreboard players set $deathmessage ui_temp 2
@@ -58,6 +61,9 @@ scoreboard players operation @s ui_bm /= $break.max ui_temp
 #tellraw @a [,{"text":" : "},{"score":{"name":"@s","objective":"ui_bm"}}]
 execute if score @s ui_bm <= @s ui_bm_lim at @s run function ui:tmw/255/projectile/end
 execute if score @s ui_br_temp >= @s ui_br at @s run function ui:tmw/255/projectile/end
+
+#
+execute if score $Cache ui_temp matches 1 run scoreboard players reset @s
 
 # 一時タグ削除
 tag @a[tag=ui_temp_team] remove ui_temp_team
