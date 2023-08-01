@@ -61,3 +61,5 @@ execute if score $type ui_temp matches 25 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 26 run function ui:common/particle/ss/upper/26/core
 # 黄色の波動が壁に当たったエフェクト小
 execute if score $type ui_temp matches 27 run function ui:common/particle/ss/upper/27/core
+# 回転する/しない魔法陣の演出テンプレ
+execute if score $type ui_temp matches 28 run function ui:common/particle/ss/upper/28/core

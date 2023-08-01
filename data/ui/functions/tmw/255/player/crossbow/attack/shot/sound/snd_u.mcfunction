@@ -18,3 +18,5 @@
     execute if score $sound ui_temp matches 9 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/9
 # スナイパー
     execute if score $sound ui_temp matches 10 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/10
+# 魔弾
+    execute if score $sound ui_temp matches 11 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/11

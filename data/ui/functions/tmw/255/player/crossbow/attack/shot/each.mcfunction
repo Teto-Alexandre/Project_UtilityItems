@@ -3,6 +3,7 @@
 #
     execute if score $hand ui_temp matches 0 run data modify storage ui:tmw temp.this set from entity @s SelectedItem
     execute if score $hand ui_temp matches 1 run data modify storage ui:tmw temp.this set from entity @s Inventory[{Slot:-106b}]
+    #tellraw @a [{"text":"reloaditem:","color":"yellow"},{"score":{"name":"$reloaditem","objective":"ui_temp"},"color":"yellow"}]
     execute if score $reloaditem ui_temp matches 0 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullets[0]
     execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 1 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet
     execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 2 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet2
@@ -15,7 +16,7 @@
     execute store result score $gravity ui_temp run data get storage ui:gun temp3.Gravity
     execute store result score $pack ui_temp run data get storage ui:gun temp3.Pack
     execute store result score $spread.min ui_temp run data get storage ui:gun temp3.Spread
-    scoreboard players set $range ui_temp 2000
+    scoreboard players reset $range ui_temp
     execute if data storage ui:gun temp3.Range store result score $range ui_temp run data get storage ui:gun temp3.Range
     execute store result score $damage_factor ui_temp run data get storage ui:gun temp3.DamageFactor
     execute store result score $damage_type ui_temp run data get storage ui:gun temp3.DamageType

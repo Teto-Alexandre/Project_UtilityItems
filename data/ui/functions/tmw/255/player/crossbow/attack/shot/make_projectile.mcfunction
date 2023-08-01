@@ -26,6 +26,8 @@
 #ui:object_maker temp.FlyModifiers
 #ui:object_maker temp.HitModifiers
 
+#tellraw @a [{"text":"Muzzle:","color":"yellow"},{"score":{"name":"$muzzle","objective":"ui_temp"},"color":"yellow"},{"text":" Sound:","color":"yellow"},{"score":{"name":"$sound","objective":"ui_temp"},"color":"yellow"}]
+
 # タイプごとに拡散して発射
     execute if score $no_shot ui_temp matches 0 run function ui:tmw/255/player/crossbow/attack/shot/spreadmanager/1
 

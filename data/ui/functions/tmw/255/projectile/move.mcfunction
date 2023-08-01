@@ -19,9 +19,9 @@
 
 #壁接触判定 - 液体の中ならスピードが最低値になる上に毎tick貫通力が減っていく
     #execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ui:nocol run function ui:tmw/255/projectile/col/block_col
-    execute positioned ^ ^ ^0.5 run function better_collision:api/
-    execute if score $Hit BCollision.core matches 1 run function ui:tmw/255/projectile/col/block_col
-    execute as @s[tag=!ui_temp_col] positioned ^ ^ ^0.5 if block ~ ~ ~ #ui:liq run function ui:tmw/255/projectile/col/liq_col
+    execute unless entity @s[tag=ui_255_proj_ghost] positioned ^ ^ ^0.5 run function better_collision:api/
+    execute unless entity @s[tag=ui_255_proj_ghost] if score $Hit BCollision.core matches 1 run function ui:tmw/255/projectile/col/block_col
+    execute unless entity @s[tag=ui_255_proj_ghost] as @s[tag=!ui_temp_col] positioned ^ ^ ^0.5 if block ~ ~ ~ #ui:liq run function ui:tmw/255/projectile/col/liq_col
 
 # 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col,tag=!tmw_255_proj_del] at @s run function ui:tmw/255/projectile/move

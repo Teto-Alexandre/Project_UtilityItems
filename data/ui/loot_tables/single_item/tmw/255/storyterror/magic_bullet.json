@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180071,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"魔弾の射手\",HoldItemType:0,ScoreReload:1,ScoreReloadAmount:6000,Mass:100,Magazine:1,MaxSize:0,ShotCT:120,BurstCT:120,Burst:1,FireID:-1,ReloadType:3,ReloadMax:12,ReloadID:-3,ReloadCost:6,ChangedType:1,now:{Speed:0,Attack:4,AttackSpeed:-0.85,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{Mass:100,Power:10000,AirRes:1,Range:250,Gravity:0,Pack:1,Size:0,Spread:0,DamageType:2,WeakMultiplier:100,FlyParticle:-12,EndParticle:-1,FlyModifiers:[],Sound:11,Muzzle:101,PierceEntity:999,BreakMult:0},bullets:[]},display:{Name:'{\"text\":\"魔弾の射手\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 6HP\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"代替消費MP: 6000\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ストーリーテラーの装具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"射手の望むところに必ず命中する銃\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"最後の弾丸は最愛の者を撃ち殺すという\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
