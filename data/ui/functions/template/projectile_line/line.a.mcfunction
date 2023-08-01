@@ -15,6 +15,7 @@
     #particle dust 1 0 0 0.7 ~ ~ ~ 0 0 0 0 1 force @a[tag=ui_temp]
     summon marker ~ ~ ~ {Tags:["ui_temp_snow3"]}
     execute positioned ~-1 ~-0.3 ~-1 if entity @e[predicate=ui:load_unhurtable,dx=1,dy=1,dz=1] run scoreboard players set $temp2 ui_temp 1
+    execute positioned ~-1 ~-0.3 ~-1 if entity @e[type=end_crystal,dx=1,dy=1,dz=1] run scoreboard players set $temp2 ui_temp 1
 
 # 実践
     #scoreboard players operation $x1 ui_temp *= #98 ui_num
