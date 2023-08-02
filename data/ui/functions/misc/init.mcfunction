@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 52 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 53 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -496,5 +496,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 52
+    scoreboard players set $version ui_world 53
     #say operationed
