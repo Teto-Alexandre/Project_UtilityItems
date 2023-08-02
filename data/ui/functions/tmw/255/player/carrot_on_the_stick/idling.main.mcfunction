@@ -32,6 +32,7 @@ execute store result score $firetime ui_temp run data get storage ui:gun temp.no
 scoreboard players set $firecount ui_temp 0
 scoreboard players set $bullets ui_temp 0
 execute if data storage ui:gun temp.FireSpellCast store result score $firespellcast ui_temp run data get storage ui:gun temp.now.FireSpellCast
+execute if data storage ui:gun temp.now.CustomCount store result score $customcount ui_temp run data get storage ui:gun temp.now.CustomCount
 
 # 検知範囲拡大
 tag @s[tag=tmw_use_s] add tmw_active_temp

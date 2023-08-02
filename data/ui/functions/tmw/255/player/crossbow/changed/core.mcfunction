@@ -17,6 +17,7 @@ execute store result storage ui:gun temp.now.Time int 1 run scoreboard players g
 execute store result storage ui:gun temp.now.Amp int 1 run scoreboard players get $amp ui_temp
 execute store result storage ui:gun temp.now.Bullets int 1 run scoreboard players get $bullets ui_temp
 execute if data storage ui:gun temp.FireSpellCast run function ui:tmw/255/player/crossbow/changed/misc/spellcast
+execute if data storage ui:gun temp.now.CustomCount run function ui:tmw/255/player/crossbow/changed/misc/customcount
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
 
 #

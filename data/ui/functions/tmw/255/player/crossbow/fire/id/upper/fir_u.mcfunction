@@ -77,3 +77,5 @@
     execute if score $fireid ui_temp matches 134 run function ui:tmw/255/player/crossbow/fire/id/upper/134
     # 金線の迅
     execute if score $fireid ui_temp matches 135 run function ui:tmw/255/player/crossbow/fire/id/upper/135
+    # 魔法の弾丸
+    execute if score $fireid ui_temp matches 136 run function ui:tmw/255/player/crossbow/fire/id/upper/136

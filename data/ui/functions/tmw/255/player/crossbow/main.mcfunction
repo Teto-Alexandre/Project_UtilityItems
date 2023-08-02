@@ -38,6 +38,7 @@ execute store result score $firecount ui_temp run data get storage ui:gun temp.n
 execute store result score $bullets ui_temp run data get storage ui:gun temp.now.Bullets
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
 execute if data storage ui:gun temp.FireSpellCast store result score $firespellcast ui_temp run data get storage ui:gun temp.now.FireSpellCast
+execute if data storage ui:gun temp.now.CustomCount store result score $customcount ui_temp run data get storage ui:gun temp.now.CustomCount
 
 execute store result score $burst.max ui_temp run data get storage ui:gun temp.Burst
 
