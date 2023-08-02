@@ -1,4 +1,4 @@
-# ディメンション
+# 金線の欠片
 
 # 装着時演出
 execute if entity @s[tag=tmw601_changed] run particle dust 1 0.8 0 1.5 ~ ~0.9 ~ 0.4 0.4 0.4 0 20
