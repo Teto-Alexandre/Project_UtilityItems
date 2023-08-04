@@ -14,3 +14,4 @@ execute if score @s ui_bpart matches -10 run function ui:tmw/255/projectile/move
 execute if score @s ui_bpart matches -11 run function ui:tmw/255/projectile/move/downer/11/
 execute if score @s ui_bpart matches -12 run function ui:tmw/255/projectile/move/downer/12/
 execute if score @s ui_bpart matches -13 run function ui:tmw/255/projectile/move/downer/13/
+execute if score @s ui_bpart matches -14 run function ui:tmw/255/projectile/move/downer/14/

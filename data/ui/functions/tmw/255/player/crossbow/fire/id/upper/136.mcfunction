@@ -16,6 +16,6 @@
     execute unless score @s ui_tmw601_accessory matches 5002 if score $cooltime ui_temp matches 0 if score $firetime.temp ui_temp matches ..100 run function ui:tmw/255/player/crossbow/fire/template/fire_burst
 
 # 発車時、回数を計測
-    execute if score $fire ui_temp matches 1 run scoreboard players add $customcount ui_temp 1
+    execute if score $firetime.temp ui_temp matches ..10 if score $fire ui_temp matches 1 run scoreboard players add $customcount ui_temp 1
     execute if score $fire ui_temp matches 1 if score $customcount ui_temp matches 8.. run scoreboard players set $fire ui_temp 2
     execute if score $fire ui_temp matches 2 if score $customcount ui_temp matches 8.. run scoreboard players set $customcount ui_temp 1

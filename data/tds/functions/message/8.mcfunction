@@ -11,5 +11,8 @@ execute if entity @e[tag=tds_tempa] unless data storage tds: {temp:{WeaponName:"
 execute if entity @e[tag=tds_tempa] if data storage tds: {temp:{WeaponName:""}} run tellraw @a ["",{"selector":"@s"},{"text":"は","color":"white"},{"selector":"@e[tag=tds_tempa]"},{"text":"に撃ち抜かれた","color":"white"}]
 execute unless entity @e[tag=tds_tempa] run tellraw @a ["",{"selector":"@s"},{"text":"は撃ち抜かれた","color":"white"}]
 
+#外部出力タグ
+execute if entity @s[tag=!tds_output_killmessage8] run tag @s add tds_output_killmessage8
+
 #死
 function tds:death
