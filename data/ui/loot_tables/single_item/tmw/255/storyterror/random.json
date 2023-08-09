@@ -10,6 +10,16 @@
           "type": "minecraft:loot_table",
           "weight": 1,
           "name": "ui:single_item/tmw/255/storyterror/magic_bullet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/storyterror/mimic"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "ui:single_item/tmw/255/storyterror/paradise_lost"
         }
       ]
     }

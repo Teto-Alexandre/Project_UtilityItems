@@ -23,7 +23,13 @@
         {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/1501"},
         {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/2501"},
         {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/3501"},
-        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/4501"}
+        {"type": "minecraft:loot_table","weight": 10,"name": "ui:single_item/tmw/601/4501"},
+
+        {"type": "minecraft:loot_table","weight": 5,"name": "ui:single_item/tmw/601/5001"},
+        {"type": "minecraft:loot_table","weight": 5,"name": "ui:single_item/tmw/601/5002"},
+        {"type": "minecraft:loot_table","weight": 5,"name": "ui:single_item/tmw/601/5003"},
+        {"type": "minecraft:loot_table","weight": 5,"name": "ui:single_item/tmw/601/5004"},
+        {"type": "minecraft:loot_table","weight": 1,"name": "ui:single_item/tmw/601/5005"}
       ]
     }
   ]
