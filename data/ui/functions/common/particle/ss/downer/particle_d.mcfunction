@@ -7,10 +7,6 @@
 # 情報共有
     scoreboard players operation $type ui_temp = @s ui_gpc
     scoreboard players operation $is ui_temp = @s ui_is
-    #scoreboard players operation $id ui_temp = @s ui_id
-    #scoreboard players operation $team ui_temp = @s ui_team
-    #execute if score $type ui_temp matches ..-1 as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
-    #execute if score $type ui_temp matches ..-10001 as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # コンパス2
 execute if score $type ui_temp matches -1 at @s run function ui:common/particle/ss/downer/1/core
@@ -78,6 +74,10 @@ execute if score $type ui_temp matches -10029 at @s run function ui:common/parti
 execute if score $type ui_temp matches -10030 at @s run function ui:common/particle/ss/downer/10030/core
 # 黄色い波動と線5
 execute if score $type ui_temp matches -10031 at @s run function ui:common/particle/ss/downer/10031/core
+# ミミックの斬撃
+execute if score $type ui_temp matches -10032 at @s run function ui:common/particle/ss/downer/10032/core
+# 失楽園
+execute if score $type ui_temp matches -10033 at @s run function ui:common/particle/ss/downer/10033/core
 
 # 横切り
 execute if score $type ui_temp matches -11001 at @s run function ui:common/particle/ss/downer/11001/core

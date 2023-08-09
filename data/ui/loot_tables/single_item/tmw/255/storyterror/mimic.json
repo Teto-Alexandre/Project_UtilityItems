@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180072,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"ミミック\",HoldItemType:1,ScoreReload:1,ScoreReloadAmount:1000,Mass:100,Magazine:16,MaxSize:0,ShotCT:2,BurstCT:8,Burst:1,FireID:142,ReloadType:3,ReloadMax:6,ReloadID:-3,ReloadCost:1,ChangedType:4,now:{CustomCount:1,Speed:0,Attack:10,AttackSpeed:-0.70,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{Stack:1,NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"ミミック\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 1HP\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"代替消費MP: 1000\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ストーリーテラーの装具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"多種多様な斬撃を繰り出すことができる\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"*人間の外見を模倣しようとした欲望だけが中途半端に残っている*\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

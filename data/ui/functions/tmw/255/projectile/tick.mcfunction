@@ -37,7 +37,7 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-execute as @a[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+function ui:common/tag_temp_team
 
 # 追加効果
 #execute if score @s ui_bmods matches 1.. run function ui:tmw/255/projectile/modifiers
@@ -66,5 +66,4 @@ execute if score @s ui_br_temp >= @s ui_br at @s run function ui:tmw/255/project
 execute if score $Cache ui_temp matches 1 run scoreboard players reset @s
 
 # 一時タグ削除
-tag @a[tag=ui_temp_team] remove ui_temp_team
 tag @e[tag=ui_temp_this] remove ui_temp_this

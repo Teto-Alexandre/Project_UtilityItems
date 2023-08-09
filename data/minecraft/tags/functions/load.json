@@ -1,6 +1,7 @@
 {
   "values": [
     "ui:load",
-    "tds:load"
+    "tds:load",
+    "oh_my_dat:sys/load"
   ]
 }

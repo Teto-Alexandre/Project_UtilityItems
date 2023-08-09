@@ -7,7 +7,7 @@
 # チームを認識して敵味方の識別タグを付与する
 scoreboard players operation $team ui_temp = @s ui_team
 execute as @e[tag=ui_tec] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team_control
-execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+function ui:common/tag_temp_team
 
 #
 #tellraw @a [{"text":"Team> "},{"text":": "},{"selector":"@e[tag=ui_temp_team]"}]
@@ -17,7 +17,6 @@ execute as @e[limit=1,tag=ui_temp_team_control] run function ui:common/particle/
 # 一時タグ削除
 tag @e[tag=ui_temp_team_control] remove ui_tec
 tag @e[tag=ui_temp_team_control] remove ui_temp_team_control
-tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 再帰
 execute if entity @e[tag=ui_tec] as @e[limit=1,tag=ui_tec] run function ui:common/particle/ss/eo/tec

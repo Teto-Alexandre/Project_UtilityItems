@@ -32,7 +32,7 @@
     execute as @e[tag=tmw_256_sub_153_1,tag=ui_temp_obj] at @s run teleport @s ~ ~ ~ ~24 ~
 
 # チームを認識
-    execute as @e[type=!#ui:notmob] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+    function ui:common/tag_temp_team
     scoreboard players set $damage ui_temp 40
     scoreboard players operation $temp2 ui_temp = @s ui_uses
     scoreboard players operation $temp2 ui_temp %= #2 ui_num
@@ -49,9 +49,6 @@
     execute if score @s ui_uses matches 2 run playsound item.elytra.flying player @a ~ ~ ~ 1 1.8 0
     execute if score @s ui_uses matches 2 run playsound entity.minecart.inside.underwater player @a ~ ~ ~ 2 1.2 0
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 2..30 run playsound block.honey_block.step player @a ~ ~ ~ 1 1.2 0
-
-# チーム識別解除
-    tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 死ぬ(同じidの奴らまとめて)
     execute if score @s ui_uses matches 40.. run tag @s add ui_256_sub_explode

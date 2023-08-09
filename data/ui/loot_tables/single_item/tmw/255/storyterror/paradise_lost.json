@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180073,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"失楽園\",HoldItemType:1,ScoreReload:1,ScoreReloadAmount:10000,Mass:100,Magazine:1,MaxSize:0,ShotCT:20,BurstCT:20,Burst:1,FireID:143,ReloadType:3,ReloadMax:12,ReloadID:-3,ReloadCost:10,ImmidiatelyFire:1,ChangedType:1,now:{CustomCount:1,Speed:0,Attack:12,AttackSpeed:-0.9,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"失楽園\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 10HP\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"代替消費MP: 10000\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ストーリーテラーの装具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"*汝は扉を叩き。今や扉は開いた。*\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

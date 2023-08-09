@@ -3,7 +3,6 @@
 #>
 # ショートカット用
 # @private
-#declare tag tmw_237_sub_107
 #declare tag ui_temp_obj
 
 # 最初idがないなら生成

@@ -18,6 +18,7 @@ data modify storage ui:tmw temp.this set from entity @s SelectedItem
 data modify storage ui:gun temp set from storage ui:tmw temp.this.tag.tmw.gun
 data modify storage ui:gun temp.DisplayName set from storage ui:tmw temp.this.tag.display.Name
 execute if data storage ui:gun temp.ReloadItem run scoreboard players set $reloaditem ui_temp 1
+execute if data storage ui:gun temp.ReloadCost run scoreboard players set $reloaditem ui_temp 1
 
 # 初期設定
 execute unless data storage ui:gun temp.now.First run function ui:tmw/255/player/crossbow/changed/first
@@ -83,6 +84,7 @@ tag @s[tag=tmw_active_temp] remove tmw_active_temp
 data remove storage ui:gun temp
 data remove storage ui:gun temp2
 data remove storage ui:tmw temp
+data remove storage ui:temp temp
 
 # 最後に
 schedule function ui:tmw/255/player/crossbow/last 1t append

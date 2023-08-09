@@ -12,6 +12,7 @@
     execute if data storage ui:temp temp.Modifier{id:"armor_damage"} run function ui:tmw/255/projectile/modifier/armor_damage
     execute if data storage ui:temp temp.Modifier{id:"lethal"} run function ui:tmw/255/projectile/modifier/lethal
     execute if data storage ui:temp temp.Modifier{id:"dice"} run function ui:tmw/255/projectile/modifier/dice
+    execute if data storage ui:temp temp.Modifier{id:"knockback"} run function ui:tmw/255/projectile/modifier/knockback
 
 # 読み込み終わり
     scoreboard players remove $temp ui_hmods 1

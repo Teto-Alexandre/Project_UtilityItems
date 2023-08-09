@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180010,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"Handgun-J\",Mass:150,Magazine:14,MaxSize:0,ShotCT:0,BurstCT:0,Burst:1,FireID:-1,ReloadType:1,ReloadMax:40,ReloadID:-1,ReloadItem:28,now:{Speed:0,Attack:0,AttackSpeed:0,Zero:1,Info:-1,CustomStats:1}},main:{Spread:-1500,AirSpread:-500,MultiShot:1,Barrel:100},bullet:{Stack:14,Mass:60,Power:3000,AirRes:0.99,Range:200,Gravity:20,Pack:1,Size:0,Spread:30,DamageType:4,WeakMultiplier:100,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:1,Muzzle:1,Recoil:10,BreakMult:30},bullets:[]},display:{Name:'{\"text\":\"Handgun-J\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 汎用エネルギーパック\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"内蔵した3Dプリンターと大気反応触媒で\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"無から銃弾を生み出すハンドガン\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" ガラクタ工房の刻印がある\",\"color\":\"dark_gray\",\"italic\":false}','{\"text\":\" 使うには問題ないらしい\",\"color\":\"dark_gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:glowstone_dust","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:5005},display:{Name:'{\"text\":\"救済の権能\",\"color\":\"white\",\"italic\":false,\"bold\":true}',Lore:['[{\"text\":\"浮遊する光の輪のような冠\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"世界に一つしか存在することができない\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"競合不可<対消滅>\",\"color\":\"dark_red\",\"italic\":false}]','[{\"text\":\"装備時、失楽園の技が強化\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"・ダメージが防御力を無視する\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"・発動時に他の全ての味方を回復\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"・使徒が居なければ目の前の生物を使徒化\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"・発動時に使徒を永続的に強化\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"懺悔の発動時に装備者が死亡する\",\"color\":\"dark_gray\",\"italic\":false}]','[{\"text\":\"装備者死亡時に使徒が死亡する\",\"color\":\"dark_gray\",\"italic\":false}]','[{\"text\":\"---------- Inventory ----------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  ■□□□□□□□□  指定のスロットに入れると\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  効果が発動するタイプの\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  装飾品です\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"------------------------------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"恐れるなかれ。私は汝の救世主なり。\",\"color\":\"dark_gray\",\"italic\":false}]','[{\"text\":\"私は汝と共に在るであろう。\",\"color\":\"dark_gray\",\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

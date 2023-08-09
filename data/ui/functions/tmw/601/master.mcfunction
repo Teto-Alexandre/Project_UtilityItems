@@ -5,7 +5,7 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+function ui:common/tag_temp_team
 
 # 装備データ更新
 execute store result score $accessory ui_temp run data get entity @s Inventory.[{Slot:9b}].tag.tmw.type

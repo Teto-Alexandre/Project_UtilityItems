@@ -137,6 +137,16 @@ execute as @s[tag=ui_19] at @s run particle large_smoke ~ ~1 ~ 0.3 0.6 0.3 0 15 
 execute as @s[tag=ui_19] at @s run scoreboard players add $ui19 ui_world 1
 execute as @s[tag=ui_19] at @s run function ui:ui/19/ss
 
+# 亜空間チェスト
+execute as @s[tag=ui_20] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_20_1","ui_20_1_unpower"]}
+#execute as @s[tag=ui_20] at @s as @e[tag=ui_20_1_unpower] run function ui:misc/act/make_obj_id
+#execute as @s[tag=ui_20] at @s run tag @e[tag=ui_20_1_unpower] remove ui_20_1_unpower
+execute as @s[tag=ui_20] at @s run setblock ~ ~ ~ chest{CustomName:'{"italic": false,"bold": true,"text":"亜空間チェスト"}'}
+execute as @s[tag=ui_20] at @s run playsound block.chest.locked player @a ~ ~ ~
+execute as @s[tag=ui_20] at @s run particle large_smoke ~ ~1 ~ 0.3 0.6 0.3 0 15 force
+execute as @s[tag=ui_20] at @s run scoreboard players add $ui20 ui_world 1
+execute as @s[tag=ui_20] at @s run function ui:ui/20/ss
+
 teleport @s 0 -200 0
 kill @s
 

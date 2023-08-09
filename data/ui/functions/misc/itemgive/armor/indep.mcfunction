@@ -13,3 +13,4 @@ loot give @s loot ui:single_item/tmw/601/1003
 loot give @s loot ui:single_item/tmw/601/1004
 loot give @s loot ui:single_item/tmw/601/1005
 loot give @s loot ui:single_item/tmw/601/1006
+loot give @s loot ui:single_item/tmw/601/1007

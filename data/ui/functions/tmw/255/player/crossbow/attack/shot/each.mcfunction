@@ -8,6 +8,7 @@
     execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 1 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet
     execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 2 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet2
     execute if score $reloaditem ui_temp matches 1 if score $fire ui_temp matches 3 run data modify storage ui:gun temp3 set from storage ui:tmw temp.this.tag.tmw.bullet3
+    #tellraw @a {"nbt":"temp3","storage":"ui:gun"}
     execute store result score $no_shot ui_temp run data get storage ui:gun temp3.NoShot
     execute store result score $mass ui_temp run data get storage ui:gun temp3.Mass
     execute store result score $power ui_temp run data get storage ui:gun temp3.Power

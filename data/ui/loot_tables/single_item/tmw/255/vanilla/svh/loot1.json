@@ -1,0 +1,57 @@
+{
+    "pools": [
+        {
+          "rolls": {
+            "min": 4,
+            "max": 5
+          },
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/bandage",
+                    "weight": 120
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/med_kit",
+                    "weight": 80
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/junkworkshop/en_mag1",
+                    "weight": 200
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/svh/barricade1",
+                    "weight": 259
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/svh/barricade2",
+                    "weight": 160
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/adrenaline",
+                    "weight": 80
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/chicken",
+                    "weight": 50
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/svh/tnt",
+                    "weight": 50
+                },
+                {
+                    "type": "loot_table",
+                    "name": "ui:single_item/tmw/255/vanilla/parachute",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

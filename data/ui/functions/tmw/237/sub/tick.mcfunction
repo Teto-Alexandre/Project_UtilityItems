@@ -5,7 +5,7 @@
     execute store result score $type ui_temp run data get entity @s Item.tag.tmw.type
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
-    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+    function ui:common/tag_temp_team
 
 # それぞれの起爆
     execute if score $type ui_temp matches 101 run function ui:tmw/237/sub/explosive/101/tick
@@ -50,9 +50,6 @@
     #execute store result score $temp ui_temp run data get entity @s OnGround
     #tellraw @a {"score":{"name":"$temp","objective":"ui_temp"}}
     scoreboard players add @s[nbt={OnGround:1b}] ui_uses 1
-
-# タグ消し
-    tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 水対策
     execute if block ~ ~-0.5 ~ #ui:liq run tag @s add ui_237_sub_explode

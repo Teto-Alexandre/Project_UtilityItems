@@ -48,6 +48,8 @@ execute as @e[tag=tmw_oh_n] at @s run effect give @s wither 1 1 true
 execute as @e[tag=tmw_oh_n] at @s run scoreboard players add @s ui_hp 2
 #execute as @s[tag=tmw_oh_n] at @s run item replace entity @s weapon.offhand with air
 #tag @s[tag=tmw_oh_n] add tmw_r_4
+## 救済の権能を身に着けているプレイヤーを無条件で破壊する
+execute as @e[tag=tmw_oh_n] at @a[scores={ui_tmw601_accessory=5005}] run function ui:tmw/4/dead
 
 #S+F:5s:10 10秒間無敵化
 execute as @s[tag=tmw_oh_s,scores={ui_st2=100..}] at @s run playsound minecraft:block.respawn_anchor.charge master @a ~ ~ ~ 0.8 0.5 0

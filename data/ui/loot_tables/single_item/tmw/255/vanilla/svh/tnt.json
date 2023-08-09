@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:chicken_spawn_egg","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{display:{Name:'{\"text\":\"サイレントTNT\",\"italic\":false}',Lore:['{\"text\":\"- Place to use\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" ★1 拠点を破壊されました\",\"color\":\"dark_gray\",\"italic\":false}','{\"text\":\" > by 名無しの社員\",\"color\":\"dark_gray\",\"italic\":false}','{\"text\":\" ★5 これのおかげで拠点が破壊できました\",\"color\":\"dark_gray\",\"italic\":false}','{\"text\":\" > by 名無しの社員\",\"color\":\"dark_gray\",\"italic\":false}']},EntityTag:{id:\"minecraft:tnt\",Fuse:80,Motion:[0.0,0.1,0.0]}}"}]}
+      ]
+    }
+  ]
+}

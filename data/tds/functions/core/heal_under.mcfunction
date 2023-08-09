@@ -6,6 +6,7 @@
     scoreboard players operation $Amount tds_dmg > $0 tds_dmg
 
 # =
+    #tellraw @a [{"text":"Health:"},{"score":{"name": "$Health","objective": "tds_dmg"}},{"text":" Max:"},{"score":{"name": "$HealthMax","objective": "tds_dmg"}},{"text":" Amount:"},{"score":{"name": "$Amount","objective": "tds_dmg"}}]
 
 # Health加算
     scoreboard players operation $Health tds_dmg += $Amount tds_dmg

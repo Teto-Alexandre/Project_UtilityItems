@@ -79,3 +79,17 @@
     execute if score $fireid ui_temp matches 135 run function ui:tmw/255/player/crossbow/fire/id/upper/135
     # 魔法の弾丸
     execute if score $fireid ui_temp matches 136 run function ui:tmw/255/player/crossbow/fire/id/upper/136
+    # 包帯
+    execute if score $fireid ui_temp matches 137 run function ui:tmw/255/player/crossbow/fire/id/upper/137
+    # パラシュート
+    execute if score $fireid ui_temp matches 138 run function ui:tmw/255/player/crossbow/fire/id/upper/138
+    # 医療キット
+    execute if score $fireid ui_temp matches 139 run function ui:tmw/255/player/crossbow/fire/id/upper/139
+    # アドレナリン
+    execute if score $fireid ui_temp matches 140 run function ui:tmw/255/player/crossbow/fire/id/upper/140
+    # 電磁カモ
+    execute if score $fireid ui_temp matches 141 run function ui:tmw/255/player/crossbow/fire/id/upper/141/
+    # ミミック
+    execute if score $fireid ui_temp matches 142 run function ui:tmw/255/player/crossbow/fire/id/upper/142/
+    # 失楽園
+    execute if score $fireid ui_temp matches 143 run function ui:tmw/255/player/crossbow/fire/id/upper/143/

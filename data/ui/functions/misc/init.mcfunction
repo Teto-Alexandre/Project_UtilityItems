@@ -352,6 +352,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
+    scoreboard players set #-100 ui_num -100
     scoreboard players set #-5 ui_num -5
     scoreboard players set #-1 ui_num -1
     scoreboard players set #0 ui_num 0

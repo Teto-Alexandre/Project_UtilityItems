@@ -1,4 +1,5 @@
 #
+execute if score $is ui_temp matches 1 run scoreboard players set $count ui_temp 0
 execute if score $is ui_temp matches 1 unless block ~ ~ ~ #ui:nocol run function ui:common/particle/ss/downer/10018/inblock
 execute at @s if score $is ui_temp matches 1 if block ~ ~-0.1 ~ #ui:nocol run function ui:common/particle/ss/downer/10018/inair
 execute at @s if score $is ui_temp matches 1 run summon armor_stand ~30 ~60 ~20 {ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192001}}],Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ui_common_projectile_-10018_model"]}

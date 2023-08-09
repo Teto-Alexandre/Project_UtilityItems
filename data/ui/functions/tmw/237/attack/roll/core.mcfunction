@@ -8,7 +8,7 @@
 # id共有
 
 # チームメンバー識別
-    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+    function ui:common/tag_temp_team
 
 # 座標設定
     scoreboard players set $temp ui_temp 1

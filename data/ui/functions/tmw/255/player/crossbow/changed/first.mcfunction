@@ -29,8 +29,11 @@ execute if score $hand ui_temp matches 1 run item modify entity @s weapon.offhan
 scoreboard players set $changed ui_temp 1
 
 # 速度追加
-execute unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
-execute unless data storage ui:gun temp.NoUI if score $hand ui_temp matches 1 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.NoUI unless data storage ui:gun temp.now.Zero if score $hand ui_temp matches 0 unless score $speed ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp
+execute unless data storage ui:gun temp.NoUI unless data storage ui:gun temp.now.Zero if score $hand ui_temp matches 1 unless score $speed ui_temp matches 0 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp
+
+execute unless data storage ui:gun temp.NoUI unless data storage ui:gun temp.now.Zero if score $hand ui_temp matches 0 if score $speed ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/spd_atk_asp_mh
+execute unless data storage ui:gun temp.NoUI unless data storage ui:gun temp.now.Zero if score $hand ui_temp matches 1 if score $speed ui_temp matches 0 run item modify entity @s weapon.offhand ui:gun/value/spd_atk_asp_mh
 
 # 必要なデータ読み取り
     execute store result score $Mass ui_temp run data get storage ui:tmw temp.this.tag.tmw.gun.Mass

@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:polished_andesite","weight": 1,"quality": 0,
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": 5
+          },{"function": "minecraft:set_nbt","tag": "{display:{Name:'{\"text\":\"強化バリケード\",\"italic\":false}',Lore:['{\"text\":\"- Place to use\",\"color\":\"gray\",\"italic\":false}','{\"text\":\" ★5 素晴らしい\",\"color\":\"dark_gray\",\"italic\":false}','{\"text\":\" > by 名無しの社員\",\"color\":\"dark_gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

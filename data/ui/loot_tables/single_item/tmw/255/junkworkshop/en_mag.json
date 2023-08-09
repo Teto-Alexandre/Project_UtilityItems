@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:command_block","weight": 1,"quality": 0,"functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 32,
+              "max": 32
+            }
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190008,tmw:{id:255,type:2,bullet:{IDName:\"en_pack\"}},display:{Name:'{\"text\":\"汎用エネルギーパック\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"専用の機材以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}
+

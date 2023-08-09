@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:iron_nugget","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:5003},display:{Name:'{\"text\":\"偽塊の囁き\",\"color\":\"red\",\"italic\":false}',Lore:['[{\"text\":\"ミミックの研究で生み出されたイヤーカフ\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"訓練用というタグが付いている\",\"color\":\"gray\",\"italic\":false}]','[{\"text\":\"装備時、ミミックの技の派生が可視化\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"---------- Inventory ----------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  ■□□□□□□□□  指定のスロットに入れると\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  効果が発動するタイプの\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  装飾品です\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"------------------------------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}
