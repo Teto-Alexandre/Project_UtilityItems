@@ -1,0 +1,10 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {"type": "item","name": "minecraft:light_blue_dye","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{tmw:{id:601,type:5006},display:{Name:'{\"text\":\"代替の腕輪\",\"color\":\"aqua\",\"italic\":false}',Lore:['[{\"text\":\"装備時、HPの代替で最大HPを装填可能\",\"color\":\"aqua\",\"italic\":false}]','[{\"text\":\"---------- Inventory ----------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  ■□□□□□□□□  指定のスロットに入れると\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  効果が発動するタイプの\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"  □□□□□□□□□  装飾品です\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]','[{\"text\":\"------------------------------\",\"color\":\"yellow\",\"bold\":true,\"italic\":false}]']}}"}]}
+            ]
+        }
+    ]
+}

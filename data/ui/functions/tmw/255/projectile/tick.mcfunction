@@ -33,11 +33,11 @@ execute unless score @s ui_proj_stat_break_mult matches 100 run function ui:tmw/
 scoreboard players operation $break.max ui_temp = $break ui_temp
 
 # idを共有
-scoreboard players operation $id ui_temp = @s ui_id
+#scoreboard players operation $id ui_temp = @s ui_id
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
-scoreboard players operation $team ui_temp = @s ui_team
-function ui:common/tag_temp_team
+#scoreboard players operation $team ui_temp = @s ui_team
+#function ui:common/tag_temp_team
 
 # 追加効果
 #execute if score @s ui_bmods matches 1.. run function ui:tmw/255/projectile/modifiers

@@ -2,8 +2,6 @@ tag @s add ui_tmw255_proj_move_-14_first
 
 tag @s add ui_temp_this
 
-execute as @a if score $id ui_temp = @s ui_id run tag @s add ui_temp_player
-
 scoreboard players set $mp ui_temp 0
 execute store result score $mp ui_temp run scoreboard players get @a[tag=ui_temp_player,limit=1] ui_mp
 scoreboard players operation $mp ui_temp < #200 ui_num

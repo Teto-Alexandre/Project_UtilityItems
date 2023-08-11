@@ -4,9 +4,6 @@
     #tellraw @a [{"score":{"name": "@s","objective": "ui_id"},"color": "red"},{"text":":"},{"score":{"name": "$id","objective": "ui_temp"},"color": "red"}]
     execute if entity @s[tag=!ui_tmw255_proj_move_-12_first] run function ui:tmw/255/projectile/move/downer/12/first
 
-#
-    execute as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
-
 # 当たり判定拡張
     #tellraw @a [{"score":{"name": "@s","objective": "ui_id"},"color": "yellow"},{"text":":"},{"score":{"name": "$id","objective": "ui_temp"},"color": "yellow"}]
     #say @e[tag=!ui_temp_player,predicate=ui:load_unhurtable]

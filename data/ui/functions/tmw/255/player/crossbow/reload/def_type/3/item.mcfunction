@@ -12,7 +12,7 @@
 #
     execute if score $reloadenergy ui_temp < $health ui_temp run scoreboard players set $success.section ui_temp 1
     execute if score $success.section ui_temp matches 1 run function ui:tmw/255/player/crossbow/reload/def_type/3/success
-    execute if score $success.section ui_temp matches 0 if score @s ui_tmw601_accessory matches 5006 unless score @s ui_hp matches 18.. run scoreboard players set $success.section ui_temp 2
+    execute if score $success.section ui_temp matches 0 unless score $reloadenergy ui_temp <= @s ui_hp if score @s ui_tmw601_accessory matches 5006 run scoreboard players set $success.section ui_temp 2
     execute if score $success.section ui_temp matches 2 run function ui:tmw/255/player/crossbow/reload/def_type/3/success_601_5006
 
 
