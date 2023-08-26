@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180075,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"グリッチ\",HoldItemType:1,ScoreReload:1,ScoreReloadAmount:255,Mass:100,Magazine:1,MaxSize:0,ShotCT:0,BurstCT:0,Burst:1,ConstantID:2,FireID:144,ReloadType:3,ReloadMax:12,ReloadID:-3,ReloadCost:-1,ImmidiatelyFire:1,ChangedType:1,now:{CustomCount:1,Speed:0,Attack:-1,AttackSpeed:327.67,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"グリッチ\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"装填可能: 0HP\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"代替消費MP: 255\",\"color\":\"gold\",\"italic\":false}','{\"text\":\"ストーリーテラーの装具\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"伝播性の認識災害を発生させている槌\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"橙色の槌身。然りとてそれを知覚することはできない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

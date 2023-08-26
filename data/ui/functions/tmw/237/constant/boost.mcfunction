@@ -7,7 +7,7 @@
     execute if score $boost ui_temp matches 281 run scoreboard players reset @s ui_tmw237_boost
 
 #
-    execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
+    execute if score $boost ui_temp matches 0 run execute in overworld store result score $cooltime ui_temp run time query gametime
     execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 80
     execute if score $boost ui_temp matches 0 run scoreboard players set $changed ui_temp 1
     execute if score $boost ui_temp matches 80 at @s run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.5 1.5

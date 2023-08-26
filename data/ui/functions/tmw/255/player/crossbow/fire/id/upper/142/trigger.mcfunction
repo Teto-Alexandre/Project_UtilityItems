@@ -1,11 +1,11 @@
 #
-execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 6..100 store result score $firetime ui_temp run time query gametime
+execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 6..100 in overworld store result score $firetime ui_temp run time query gametime
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 6..100 run scoreboard players remove $firetime ui_temp 100
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 6..100 run function ui:tmw/255/player/crossbow/fire/template/calc
-execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 106..200 store result score $firetime ui_temp run time query gametime
+execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 106..200 in overworld store result score $firetime ui_temp run time query gametime
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 106..200 run scoreboard players remove $firetime ui_temp 200
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 106..200 run function ui:tmw/255/player/crossbow/fire/template/calc
-execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 210..300 store result score $firetime ui_temp run time query gametime
+execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 210..300 in overworld store result score $firetime ui_temp run time query gametime
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 210..300 run scoreboard players remove $firetime ui_temp 300
 execute unless score $customcount ui_temp matches 11 if score $firetime.temp ui_temp matches 210..300 run function ui:tmw/255/player/crossbow/fire/template/calc
 

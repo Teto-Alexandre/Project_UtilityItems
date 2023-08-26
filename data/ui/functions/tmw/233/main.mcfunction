@@ -4,7 +4,7 @@ tag @s[tag=tmw_drop_s] add tmw_drop_n
 
 #time比較
 execute store result score $temp ui_temp run data get entity @s SelectedItem.tag.tmw.ct
-execute store result score $temp2 ui_temp run time query gametime
+execute store result score $temp2 ui_temp in overworld run time query gametime
 execute if score $temp2 ui_temp >= $temp ui_temp run item modify entity @s weapon.mainhand ui:temp/tmw.ct.0
 execute if score $temp2 ui_temp >= $temp ui_temp run scoreboard players set $temp2 ui_temp 0
 

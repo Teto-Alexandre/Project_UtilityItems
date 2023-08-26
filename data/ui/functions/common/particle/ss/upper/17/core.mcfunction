@@ -847,6 +847,6 @@ particle minecraft:dust 0.5 1 0.5 0.4 ^-1.9375 ^0 ^0.3125 0 0 0 0 1 force @a
 execute if score $is ui_temp matches 60.. run kill @s
 
 #
-execute store result score $time ui_temp run time query gametime
+execute store result score $time ui_temp in overworld run time query gametime
 scoreboard players operation $time ui_temp %= #2 ui_num
 execute if score $time ui_temp matches 0 as @e[predicate=ui:load_unhurtable,distance=..2] at @s run function ui:common/particle/ss/upper/17/1

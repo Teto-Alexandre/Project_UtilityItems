@@ -22,7 +22,7 @@
     execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[nbt={OnGround:0b}] run tp @s @s
     execute if score $holdjump ui_temp matches 1 if score @s ui_use2 matches 5 run effect clear @s slow_falling
     execute if score $holdjump ui_temp matches 1 if score @s ui_use2 matches 2 run effect clear @s levitation
-    execute if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 store result score $cooltime ui_temp run time query gametime
+    execute if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 store result score $cooltime ui_temp in overworld run time query gametime
     execute if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 store result score $ct ui_temp run data get storage ui:gun temp.WaitCT
     execute if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 run scoreboard players operation $cooltime ui_temp += $ct ui_temp
     execute if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 run scoreboard players set $ishold ui_temp 0

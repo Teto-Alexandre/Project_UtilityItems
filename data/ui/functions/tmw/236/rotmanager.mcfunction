@@ -1,5 +1,5 @@
 # 爆発半径をクルクル回してそれっぽく表示するやつ
-execute store result score $time ui_temp run time query gametime
+execute store result score $time ui_temp in overworld run time query gametime
 scoreboard players operation $time ui_temp %= #10 ui_num
 execute if score $time ui_temp matches 1 run teleport @s ~ ~ ~ ~7 ~
 execute if score $time ui_temp matches 2 run teleport @s ~ ~ ~ ~14 ~

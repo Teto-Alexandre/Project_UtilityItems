@@ -37,7 +37,7 @@ scoreboard players operation $subtime ui_temp = $subtime.max ui_temp
 
 # インクを最大値まで回復し耐久バーに反映
 scoreboard players operation $ink ui_temp = $ink.max ui_temp
-execute store result score $cooltime ui_temp run time query gametime
+execute in overworld store result score $cooltime ui_temp run time query gametime
 scoreboard players operation $cooltime ui_temp += $ct ui_temp
 
 # 塗りPをリセット

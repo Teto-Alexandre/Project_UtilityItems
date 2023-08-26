@@ -14,7 +14,7 @@ execute if score $is ui_temp matches 40..59 run playsound entity.generic.explode
 #
 scoreboard players operation $is_temp ui_temp = $is ui_temp
 scoreboard players operation $is_temp ui_temp %= #3 ui_num
-execute if score $is ui_temp matches 60..69 if score $is_temp ui_temp matches 0 run data merge storage ui:object_maker {temp:{NoShot:0,Mass:1,Speed:10000,AirRes:1,Gravity:0,Pack:1,Spread:100,DamageType:2,WeakMultiplier:100,BackMultiplier:100,FlyParticle:1,EndParticle:-1,FlyModifiers:[],Sound:1,Muzzle:71,Range:100}}
+execute if score $is ui_temp matches 60..69 if score $is_temp ui_temp matches 0 run data merge storage ui:object_maker {temp:{DisplayName:'{"text":"開展","color":"white"}',NoShot:0,Mass:1,Speed:10000,AirRes:1,Gravity:0,Pack:1,Spread:100,DamageType:2,WeakMultiplier:100,BackMultiplier:100,FlyParticle:1,EndParticle:-1,FlyModifiers:[],Sound:1,Muzzle:71,Range:100}}
 execute if score $is ui_temp matches 60..69 if score $is_temp ui_temp matches 0 run execute at @s facing entity @e[distance=..50,predicate=ui:load_unhurtable,tag=!ui_temp_team,sort=random,limit=1] eyes run function ui:tmw/255/player/crossbow/attack/shot/common
 
 #

@@ -2,7 +2,7 @@
     execute store result score $reloadid ui_temp run data get storage ui:gun temp.ReloadID
 
 # データ取り
-    execute store result score $time ui_temp run time query gametime
+    execute store result score $time ui_temp in overworld run time query gametime
     scoreboard players operation $reloadtime.temp ui_temp = $reloadtime ui_temp
     scoreboard players operation $reloadtime.temp ui_temp -= $time ui_temp
 

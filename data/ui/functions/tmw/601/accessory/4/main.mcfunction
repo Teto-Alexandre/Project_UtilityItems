@@ -10,7 +10,7 @@ execute if entity @s[tag=tmw601_changed] run playsound entity.firework_rocket.tw
 
 #
 ##execute if score @s ui_st matches 1.. unless score @s ui_ct matches 1.. run function ui:tmw/601/head/1/act
-#execute store result score $time ui_temp run time query gametime
+#execute store result score $time ui_temp in overworld run time query gametime
 #execute store result score $time2 ui_temp run data get entity @s HurtByTimestamp
 #scoreboard players operation $time ui_temp -= $time2 ui_temp
 #execute if score $time ui_temp matches 200.. if score $world ui_tc matches 1 run effect give @s regeneration 1 0 true

@@ -1,7 +1,7 @@
 # バースト回数記録
     execute store result storage ui:temp value int 1 run scoreboard players operation $temp ui_temp -= #1 ui_num
     item modify entity @s weapon.mainhand ui:temp/tmw.temp
-    execute store result score $temp ui_temp run time query gametime
+    execute store result score $temp ui_temp in overworld run time query gametime
     execute store result storage ui:temp value int 1 run scoreboard players operation $temp ui_temp += #3 ui_num
     item modify entity @s weapon.mainhand ui:temp/tmw.ct
     execute at @s run playsound block.dispenser.launch player @a ~ ~ ~ 0.5 1.8 0

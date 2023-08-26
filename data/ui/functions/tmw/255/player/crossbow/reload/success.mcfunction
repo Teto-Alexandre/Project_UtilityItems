@@ -14,7 +14,7 @@
 
 # クールタイム解除時刻.mod
     execute store result score $rt ui_temp run data get storage ui:gun temp.ReloadMax
-    execute store result score $reloadtime ui_temp run time query gametime
+    execute store result score $reloadtime ui_temp in overworld run time query gametime
     scoreboard players operation $reloadtime ui_temp += $rt ui_temp
     #tellraw @a {"score":{"name":"$reloadtime","objective":"ui_temp"}}
 

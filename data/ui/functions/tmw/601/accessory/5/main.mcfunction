@@ -14,7 +14,7 @@ execute if score $temp ui_temp matches 2.. run playsound entity.wither.death pla
 execute if score $temp ui_temp matches 2.. run tellraw @a [{"text":"ParadiseLost","color":"gray"},{"text":"> ","color":"green"},{"text":"[","color": "white"},{"text":"救済の権能","color": "white","bold": true},{"text":"]","color": "white"},{"text":"が対消滅しました"}]
 
 #
-execute store result score $time_temp ui_temp run time query gametime
+execute store result score $time_temp ui_temp in overworld run time query gametime
 scoreboard players operation $time_temp ui_temp %= #16 ui_num
 execute if score $time_temp ui_temp matches 0 at @s positioned ~ ~2.2 ~ rotated 0.000 90 run function ui:common/particle/ss/upper/25/ring/base
 execute if score $time_temp ui_temp matches 1 at @s positioned ~ ~2.2 ~ rotated 3.281 90 run function ui:common/particle/ss/upper/25/ring/base

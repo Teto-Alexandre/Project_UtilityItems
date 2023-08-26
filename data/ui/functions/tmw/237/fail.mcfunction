@@ -4,7 +4,7 @@
 # クールタイム
     execute unless score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.ShotCT
     execute if score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.BurstCT
-    execute store result score $cooltime ui_temp run time query gametime
+    execute in overworld store result score $cooltime ui_temp run time query gametime
     scoreboard players operation $cooltime ui_temp += $temp ui_temp
     scoreboard players remove $burst ui_temp 1
 

@@ -1,0 +1,2 @@
+give @p minecraft:carrot_on_a_stick{tmw:{id:17,type:1,range:100},HideFlags:1,display:{Name:'[{"text":"アクティベーター・Ｌ","italic":false,"color":"yellow"}]',Lore:['[{"text":"10m先までのオブジェクトをアクティベートできる","color":"gray","italic":false}]']}}
+give @p minecraft:carrot_on_a_stick{tmw:{id:17,type:2},HideFlags:1,display:{Name:'[{"text":"ブロックを設置","italic":false,"color":"yellow"}]',Lore:['[{"text":"ブロックを置く","color":"gray","italic":false}]']}}

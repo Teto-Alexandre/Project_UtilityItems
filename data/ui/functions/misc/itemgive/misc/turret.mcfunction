@@ -1,0 +1,1 @@
+give @p minecraft:carrot_on_a_stick{tmw:{id:270,type:1,TurretType:1},display:{Name:'[{"text":"バルカンもどき","color":"white","italic":false}]',Lore:['{"text":"右クリックで設置","color":"gold","italic":false}']},Unbreakable:1b,HideFlags:4}

@@ -14,7 +14,7 @@ scoreboard players operation $subtime ui_temp = $subtime.max ui_temp
 
 # インク減少
 scoreboard players operation $ink ui_temp -= $ink.sub ui_temp
-execute store result score $cooltime ui_temp run time query gametime
+execute in overworld store result score $cooltime ui_temp run time query gametime
 scoreboard players operation $cooltime ui_temp += $ct ui_temp
 
 #

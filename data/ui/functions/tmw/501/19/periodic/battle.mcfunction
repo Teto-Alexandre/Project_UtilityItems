@@ -21,7 +21,7 @@ execute if entity @s[tag=tmw_501_19_battle_second] run function ui:tmw/501/19/pe
 execute if entity @s[tag=tmw_501_19_battle_first] run function ui:tmw/501/19/periodic/battle_first
 
 # time
-execute store result score $time ui_temp run time query gametime
+execute store result score $time ui_temp in overworld run time query gametime
 scoreboard players operation $time ui_temp %= #2 ui_num
 
 # sound

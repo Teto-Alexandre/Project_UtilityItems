@@ -1,4 +1,5 @@
 #
+scoreboard players set $boost ui_temp 0
 execute if entity @a[tag=ui_temp_player,scores={ui_tmw601_accessory=5005}] run scoreboard players set $boost ui_temp 1
 #execute if score $boost ui_temp matches 1 run 
 

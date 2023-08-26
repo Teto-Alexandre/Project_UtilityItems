@@ -1,7 +1,7 @@
 # データ取り
     execute store result score $temp ui_temp run data get storage ui:gun temp.rt
     execute store result score $reload ui_temp run data get storage ui:gun temp.now.reload
-    execute store result score $time ui_temp run time query gametime
+    execute store result score $time ui_temp in overworld run time query gametime
     scoreboard players operation $cooltime ui_temp -= $time ui_temp
 
 # リロード中のサウンドと耐久値管理はココ

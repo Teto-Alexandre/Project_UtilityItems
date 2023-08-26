@@ -13,6 +13,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     #独立は義務です 個々が干渉しないように割り当てるテキトーな数字
     scoreboard objectives add ui_is dummy {"text":"UtilityItems_IndependentScore","color":"dark_blue"}
     scoreboard objectives add ui_is2 dummy {"text":"UtilityItems_IndependentScore2","color":"dark_blue"}
+    scoreboard objectives add ui_is3 dummy {"text":"UtilityItems_IndependentScore3","color":"dark_blue"}
 
 ## 特殊武装のスキル発動関連
     scoreboard objectives add ui_tmw_id dummy {"text":"UtilityItems_TetoMysticWeapon_ID","color":"dark_blue"}
@@ -84,6 +85,10 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_rot_x_old dummy {"text":"UtilityItems_Rotation_X_Old","color":"dark_blue"}
     scoreboard objectives add ui_rot_y dummy {"text":"UtilityItems_Rotation_Y","color":"dark_blue"}
     scoreboard objectives add ui_rot_y_old dummy {"text":"UtilityItems_Rotation_Y_Old","color":"dark_blue"}
+    
+    scoreboard objectives add ui_pos_x_core_relative dummy {"text":"UtilityItems_X_CoreRelative","color":"dark_blue"}
+    scoreboard objectives add ui_pos_y_core_relative dummy {"text":"UtilityItems_Y_CoreRelative","color":"dark_blue"}
+    scoreboard objectives add ui_pos_z_core_relative dummy {"text":"UtilityItems_Z_CoreRelative","color":"dark_blue"}
 
 ## トリガー
     scoreboard objectives add ui_trg trigger {"text":"UtilityItems_Trigger","color":"gold"}
@@ -348,6 +353,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     ### Test
     scoreboard objectives add ui_tmw501_19_test_fd minecraft.custom:fall_one_cm {"text":"UtilityItems_ROB_Test_FallDistance","color":"dark_blue"}
     scoreboard objectives add ui_tmw501_19_test_dt minecraft.custom:damage_taken {"text":"UtilityItems_ROB_Test_DamageTaken","color":"dark_blue"}
+
+## 装備用
+    scoreboard objectives add ui_tmw255_state_glitch dummy {"text":"UtilityItems_Glitch","color":"dark_blue"}
 
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1

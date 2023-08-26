@@ -1,5 +1,5 @@
 # データ取り
-    execute store result score $time ui_temp run time query gametime
+    execute store result score $time ui_temp in overworld run time query gametime
     scoreboard players operation $cooltime.temp ui_temp = $cooltime ui_temp
     scoreboard players operation $cooltime.temp ui_temp -= $time ui_temp
 

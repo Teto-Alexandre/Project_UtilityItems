@@ -40,6 +40,8 @@
         execute if entity @a[scores={ui_tmw_id=15}] run function ui:tmw/15/lim
     #オフハンドテキスター
         execute if entity @a[scores={ui_tmw_id=16}] run function ui:tmw/16/lim
+    #アスレ
+        execute if entity @a[scores={ui_tmw_id=17}] run function ui:tmw/17/lim
     #暁の翼
         execute if entity @a[scores={ui_tmw_id=101}] run function ui:tmw/101/lim
     #凍て付いた博愛
@@ -124,7 +126,7 @@
     #ドラゴンウォッチャー
         execute if entity @a[scores={ui_tmw_id=245}] run function ui:tmw/245/lim
     #ダンジョンメーカー
-        #246
+        execute if entity @a[scores={ui_tmw_id=246}] run schedule function ui:tmw/246/tick 1t append
     #ミサイルディテクター
         execute if entity @a[scores={ui_tmw_id=247}] run function ui:tmw/247/lim
     #IDチェッカー
@@ -167,6 +169,15 @@
         execute if entity @a[scores={ui_tmw_id=265}] run function ui:tmw/265/lim
     #連射式に代わる弓
         execute if entity @a[scores={ui_tmw_id=266}] run function ui:tmw/266/lim
+    #PvPのスニークアイテム用
+        execute if entity @a[scores={ui_tmw_id=267}] run function ui:tmw/267/lim
+        execute if entity @a[scores={ui_tmw_id2=267}] run function ui:tmw/267/lim_off
+    #ブロックアクティベーター
+        execute if entity @a[scores={ui_tmw_id=268}] run function ui:tmw/268/lim
+    #ジョイントコントローラー
+        execute if entity @a[scores={ui_tmw_id=269}] run function ui:tmw/269/lim
+    #タレット
+        execute if entity @a[scores={ui_tmw_id=270}] run function ui:tmw/270/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター

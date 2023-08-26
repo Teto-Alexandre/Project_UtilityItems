@@ -49,7 +49,7 @@
 # クールタイム解除時刻.mod
     execute unless score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.ct1
     execute if score $burst ui_temp matches 1 store result score $temp ui_temp run data get storage ui:gun temp.ct2
-    execute store result score $ct.temp ui_temp run time query gametime
+    execute store result score $ct.temp ui_temp in overworld run time query gametime
     scoreboard players operation $ct.temp ui_temp += $temp ui_temp
     execute store result storage ui:beacongametemp value int 1 run scoreboard players get $ct.temp ui_temp
     item modify entity @s weapon.offhand ui:gun/value/now.ct

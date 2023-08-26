@@ -93,3 +93,5 @@
     execute if score $fireid ui_temp matches 142 run function ui:tmw/255/player/crossbow/fire/id/upper/142/
     # 失楽園
     execute if score $fireid ui_temp matches 143 run function ui:tmw/255/player/crossbow/fire/id/upper/143/
+    # グリッチ
+    execute if score $fireid ui_temp matches 144 run function ui:tmw/255/player/crossbow/fire/id/upper/144/

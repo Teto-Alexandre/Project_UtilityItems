@@ -1,8 +1,8 @@
 #魔法の弾丸
 
 #
-    execute if entity @s[tag=tmw_active_temp] if score $firetime ui_temp matches 0 store result score $firetime ui_temp run time query gametime
-    execute store result score $time ui_temp run time query gametime
+    execute if entity @s[tag=tmw_active_temp] if score $firetime ui_temp matches 0 in overworld store result score $firetime ui_temp run time query gametime
+    execute store result score $time ui_temp in overworld run time query gametime
     scoreboard players operation $firetime.temp ui_temp = $time ui_temp
     scoreboard players operation $firetime.temp ui_temp -= $firetime ui_temp
 

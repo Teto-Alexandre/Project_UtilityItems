@@ -1,0 +1,45 @@
+scoreboard players set $mod ui_calc1 42
+function ui:common/rand
+
+execute if score $rand ui_calc1 matches 0 run item modify entity @s weapon.mainhand ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 1 run item modify entity @s weapon.offhand ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 2 run item modify entity @s armor.head ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 3 run item modify entity @s armor.chest ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 4 run item modify entity @s armor.legs ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 5 run item modify entity @s armor.feet ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 6 run item modify entity @s hotbar.0 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 7 run item modify entity @s hotbar.1 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 8 run item modify entity @s hotbar.2 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 9 run item modify entity @s hotbar.3 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 10 run item modify entity @s hotbar.4 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 11 run item modify entity @s hotbar.5 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 12 run item modify entity @s hotbar.6 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 13 run item modify entity @s hotbar.7 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 14 run item modify entity @s hotbar.8 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 15 run item modify entity @s inventory.0 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 16 run item modify entity @s inventory.1 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 17 run item modify entity @s inventory.2 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 18 run item modify entity @s inventory.3 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 19 run item modify entity @s inventory.4 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 20 run item modify entity @s inventory.5 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 21 run item modify entity @s inventory.6 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 22 run item modify entity @s inventory.7 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 23 run item modify entity @s inventory.8 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 24 run item modify entity @s inventory.9 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 25 run item modify entity @s inventory.10 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 26 run item modify entity @s inventory.11 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 27 run item modify entity @s inventory.12 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 28 run item modify entity @s inventory.13 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 29 run item modify entity @s inventory.14 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 30 run item modify entity @s inventory.15 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 31 run item modify entity @s inventory.16 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 32 run item modify entity @s inventory.17 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 33 run item modify entity @s inventory.18 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 34 run item modify entity @s inventory.19 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 35 run item modify entity @s inventory.20 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 36 run item modify entity @s inventory.21 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 37 run item modify entity @s inventory.22 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 38 run item modify entity @s inventory.23 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 39 run item modify entity @s inventory.24 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 40 run item modify entity @s inventory.25 ui:gun/each/model_glitch
+execute if score $rand ui_calc1 matches 41 run item modify entity @s inventory.26 ui:gun/each/model_glitch

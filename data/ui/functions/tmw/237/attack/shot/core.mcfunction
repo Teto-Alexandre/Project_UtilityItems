@@ -60,7 +60,7 @@
     execute if score $temp ui_temp matches -1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8 0.8 0
 
 # クールタイム解除時刻.mod
-    execute store result score $cooltime ui_temp run time query gametime
+    execute in overworld store result score $cooltime ui_temp run time query gametime
     scoreboard players operation $cooltime ui_temp += $ct ui_temp
     execute if score $burst ui_temp matches 1.. run scoreboard players remove $burst ui_temp 1
 
