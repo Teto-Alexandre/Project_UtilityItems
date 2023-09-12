@@ -78,6 +78,10 @@ execute if score $type ui_temp matches -10031 at @s run function ui:common/parti
 execute if score $type ui_temp matches -10032 at @s run function ui:common/particle/ss/downer/10032/core
 # 失楽園
 execute if score $type ui_temp matches -10033 at @s run function ui:common/particle/ss/downer/10033/core
+# デュランダル
+execute if score $type ui_temp matches -10034 at @s run function ui:common/particle/ss/downer/10034/core
+# 緑青ビット
+execute if score $type ui_temp matches -10035 at @s run function ui:common/particle/ss/downer/10035/core
 
 # 横切り
 execute if score $type ui_temp matches -11001 at @s run function ui:common/particle/ss/downer/11001/core

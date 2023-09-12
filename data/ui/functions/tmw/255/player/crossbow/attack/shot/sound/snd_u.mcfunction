@@ -20,3 +20,7 @@
     execute if score $sound ui_temp matches 10 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/10
 # 魔弾
     execute if score $sound ui_temp matches 11 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/11
+# 緑青ビット（エンチェスの音）
+    execute if score $sound ui_temp matches 12 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/12
+# ロジックアトリエ（ゾンビ木攻）
+    execute if score $sound ui_temp matches 13 run function ui:tmw/255/player/crossbow/attack/shot/sound/upper/13

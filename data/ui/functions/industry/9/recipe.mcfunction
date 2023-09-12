@@ -72,6 +72,12 @@
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{ammo:{name:"IH-RF-Bullet"}}}},{Slot:11b,tag:{tmw:{id:1009}}}]} run scoreboard players set @s ui_i_recipe 404
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{ammo:{name:"IH-SR-Bullet"}}}},{Slot:11b,tag:{tmw:{id:1009}}}]} run scoreboard players set @s ui_i_recipe 405
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{ammo:{name:"IH-SR-Bullet"}}}},{Slot:11b,id:"minecraft:nether_star"}]} run scoreboard players set @s ui_i_recipe 406
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:1}}},{Slot:11b,id:"minecraft:iron_block"}]} run scoreboard players set @s ui_i_recipe 407
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:2}}},{Slot:11b,id:"minecraft:iron_block"}]} run scoreboard players set @s ui_i_recipe 407
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:11}}},{Slot:11b,id:"minecraft:diamond_block"}]} run scoreboard players set @s ui_i_recipe 408
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:12}}},{Slot:11b,id:"minecraft:diamond_block"}]} run scoreboard players set @s ui_i_recipe 408
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:21}}},{Slot:11b,id:"minecraft:netherite_block"}]} run scoreboard players set @s ui_i_recipe 409
+        execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:8,type:22}}},{Slot:11b,id:"minecraft:netherite_block"}]} run scoreboard players set @s ui_i_recipe 409
         
         # 64-1軽量化用定型レシピ
         execute if block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b,tag:{tmw:{id:1011}}},{Slot:11b,id:"minecraft:nether_star"}]} run scoreboard players set @s ui_i_recipe 501

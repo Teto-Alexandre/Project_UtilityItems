@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180079,tmw:{id:255,type:1,enableUse:1,enableQ:1,enableF:1,gun:{Name:\"デュランダル\",HoldItemType:1,ScoreReload:1,ScoreReloadAmount:0,Mass:100,Magazine:1,MaxSize:0,ShotCT:10,BurstCT:400,Burst:1,ConstantID:0,FireID:145,ReloadType:3,ReloadMax:12,ReloadID:-3,ReloadCost:0,ImmidiatelyFire:1,ChangedType:1,now:{CustomCount:1,Speed:0,Attack:9,AttackSpeed:-0.8,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"デュランダル\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"黒い沈黙の装備の一つ\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"命中すると攻撃力が上がる\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

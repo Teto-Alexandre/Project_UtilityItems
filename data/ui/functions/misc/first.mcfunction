@@ -9,7 +9,7 @@
 # Tickの最初にやること
 
 ##鯖から抜けてた人対策
-    execute as @a[scores={ui_lg=1..}] run function ui:misc/leave_game
+    execute as @a[scores={ui_lg=1..}] run function ui:misc/leave_game/
 
 ##メニューキル
     kill @e[type=item,nbt={Item:{tag:{ui:{ismenu:1}}}}]

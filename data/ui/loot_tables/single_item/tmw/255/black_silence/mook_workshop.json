@@ -1,0 +1,10 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {"type": "item","name": "minecraft:carrot_on_a_stick","weight": 1,"quality": 0,"functions": [{"function": "minecraft:set_nbt","tag": "{CustomModelData:180082,tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:\"ムク工房\",HoldItemType:1,ScoreReload:1,ScoreReloadAmount:0,Mass:100,Magazine:1,MaxSize:0,ShotCT:10,BurstCT:400,Burst:1,FireID:148,ReloadType:3,ReloadMax:12,ReloadID:-3,ReloadCost:0,ImmidiatelyFire:1,ChangedType:1,now:{CustomCount:1,Speed:0,Attack:8,AttackSpeed:-0.9,Info:-1,CustomStats:1}},main:{Spread:-99999,AirSpread:-99999,MultiShot:1,Barrel:250},bullet:{NoShot:1,Sound:0,Muzzle:0},bullets:[]},display:{Name:'{\"text\":\"ムク工房\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"黒い沈黙の装備の一つ\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"抜刀と共に範囲攻撃を行う\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+      ]
+    }
+  ]
+}

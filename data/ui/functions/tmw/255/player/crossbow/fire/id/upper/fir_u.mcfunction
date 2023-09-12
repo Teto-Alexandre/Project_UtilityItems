@@ -95,3 +95,21 @@
     execute if score $fireid ui_temp matches 143 run function ui:tmw/255/player/crossbow/fire/id/upper/143/
     # グリッチ
     execute if score $fireid ui_temp matches 144 run function ui:tmw/255/player/crossbow/fire/id/upper/144/
+    # デュランダル
+    execute if score $fireid ui_temp matches 145 run function ui:tmw/255/player/crossbow/fire/id/upper/145
+    # ホイールズインダストリー
+    execute if score $fireid ui_temp matches 146 run function ui:tmw/255/player/crossbow/fire/id/upper/146
+    # クリスタルアトリエ
+    execute if score $fireid ui_temp matches 147 run function ui:tmw/255/player/crossbow/fire/id/upper/147/
+    # ムク工房
+    execute if score $fireid ui_temp matches 148 run function ui:tmw/255/player/crossbow/fire/id/upper/148
+    # アラス工房
+    execute if score $fireid ui_temp matches 149 run function ui:tmw/255/player/crossbow/fire/id/upper/149
+    # 狼牙工房
+    execute if score $fireid ui_temp matches 150 run function ui:tmw/255/player/crossbow/fire/id/upper/150/
+    # ケヤキ工房
+    execute if score $fireid ui_temp matches 151 run function ui:tmw/255/player/crossbow/fire/id/upper/151
+    # 老いた少年工房
+    execute if score $fireid ui_temp matches 152 run function ui:tmw/255/player/crossbow/fire/id/upper/152
+    # ロジックアトリエ
+    execute if score $fireid ui_temp matches 153 run function ui:tmw/255/player/crossbow/fire/id/upper/153/
