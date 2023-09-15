@@ -15,7 +15,7 @@
     execute if entity @s[tag=tmw_shield] positioned ~ ~1 ~ positioned ^ ^ ^1.4 if entity @e[tag=ui_temp_hit,distance=..2] run scoreboard players set $def_state ui_temp 1
 
 # 追加効果
-    execute if score $temp ui_hmods matches 1.. run function ui:tmw/255/projectile/hit_modifiers
+    execute if score $temp ui_hmods matches 1.. run function ui:tmw/255/projectile/hit/modifiers
 
 #
     execute if score $def_state ui_temp matches 0 run function ui:tmw/255/projectile/hit/state0

@@ -17,4 +17,4 @@
 # 読み込み終わり
     scoreboard players remove $temp ui_hmods 1
     data remove storage ui:temp temp.HitModifiers[0]
-    execute if score $temp ui_hmods matches 1.. run function ui:tmw/255/projectile/hit_modifiers
+    execute if score $temp ui_hmods matches 1.. run function ui:tmw/255/projectile/hit/modifiers

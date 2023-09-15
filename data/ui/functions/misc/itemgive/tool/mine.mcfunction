@@ -22,3 +22,7 @@ give @p minecraft:netherite_hoe{tmw:{id:206},display:{Name:'[{"text":"メカニ�
 give @p minecraft:iron_axe{Unbreakable:1b,tmw:{is:1,id:8,type:12,enableQ:1},HideFlags:7,display:{Name:'[{"text":"可変ツールII[斧モード]","color":"gold","italic":false,"bold":true}]',Lore:['[{"text":"Q: ツルハシモードに変更","color":"gray","italic":false}]','[{"text":"S+Q: KOモードに変更","color":"gray","italic":false}]']}}
 give @p minecraft:diamond_axe{Unbreakable:1b,tmw:{is:1,id:8,type:22,enableQ:1},HideFlags:7,display:{Name:'[{"text":"可変ツールIII[斧モード]","color":"gold","italic":false,"bold":true}]',Lore:['[{"text":"Q: ツルハシモードに変更","color":"gray","italic":false}]','[{"text":"S+Q: KOモードに変更","color":"gray","italic":false}]']}}
 give @p minecraft:netherite_axe{Unbreakable:1b,tmw:{is:1,id:8,type:32,enableQ:1},HideFlags:7,display:{Name:'[{"text":"可変ツールIV[斧モード]","color":"gold","italic":false,"bold":true}]',Lore:['[{"text":"Q: ツルハシモードに変更","color":"gray","italic":false}]','[{"text":"S+Q: KOモードに変更","color":"gray","italic":false}]']}}
+
+give @p minecraft:iron_pickaxe{tmw:{id:201,type:1},display:{Name:'[{"text":"メカニカルピッケル甲","color":"aqua","italic":false}]'}}
+give @p minecraft:iron_axe{tmw:{id:202,type:1},display:{Name:'[{"text":"メカニカルアクス甲","color":"aqua","italic":false}]'}}
+give @p minecraft:iron_shovel{tmw:{id:203,type:1},display:{Name:'[{"text":"メカニカルシャベル甲","color":"aqua","italic":false}]'}}

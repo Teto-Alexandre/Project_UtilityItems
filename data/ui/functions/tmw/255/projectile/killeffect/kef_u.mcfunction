@@ -1,5 +1,10 @@
 # ヒットパーティクル
 
+# 汎用着弾エフェクト
+    execute if score @s ui_hpart matches 1 run function ui:tmw/255/projectile/killeffect/upper/1
+# サイズ別通常爆発
+    execute if score @s ui_hpart matches 3..10 run function ui:tmw/255/projectile/killeffect/upper/generic_explosion/master
+
 # 個別
 
 #RPG
