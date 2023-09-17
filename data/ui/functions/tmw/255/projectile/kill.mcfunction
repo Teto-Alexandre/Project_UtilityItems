@@ -10,4 +10,4 @@ scoreboard players set $Cache ui_temp 1
 kill @s
 
 #命中・終端時効果を起動する
-schedule function ui:tmw/255/projectile/kill.effect 1t append
+schedule function ui:tmw/255/projectile/killeffect/loader 1t append
