@@ -140,12 +140,58 @@ execute as @s[tag=ui_19] at @s run function ui:ui/19/ss
 # 亜空間チェスト
 execute as @s[tag=ui_20] at @s run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_20_1","ui_20_1_unpower"]}
 #execute as @s[tag=ui_20] at @s as @e[tag=ui_20_1_unpower] run function ui:misc/act/make_obj_id
-#execute as @s[tag=ui_20] at @s run tag @e[tag=ui_20_1_unpower] remove ui_20_1_unpower
+execute as @s[tag=ui_20] at @s run tag @e[tag=ui_20_1_unpower] remove ui_20_1_unpower
 execute as @s[tag=ui_20] at @s run setblock ~ ~ ~ chest{CustomName:'{"italic": false,"bold": true,"text":"亜空間チェスト"}'}
 execute as @s[tag=ui_20] at @s run playsound block.chest.locked player @a ~ ~ ~
 execute as @s[tag=ui_20] at @s run particle large_smoke ~ ~1 ~ 0.3 0.6 0.3 0 15 force
 execute as @s[tag=ui_20] at @s run scoreboard players add $ui20 ui_world 1
 execute as @s[tag=ui_20] at @s run function ui:ui/20/ss
+
+# 亜空間ラージチェスト
+execute as @s[tag=ui_21] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=0.0..45.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_21_1","ui_21_1_unpower","ui_21_1_rot1"],Rotation:[0.0f,0.0f]}
+execute as @s[tag=ui_21] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=45.1..135.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_21_1","ui_21_1_unpower","ui_21_1_rot2"],Rotation:[90.0f,0.0f]}
+execute as @s[tag=ui_21] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=135.1..225.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_21_1","ui_21_1_unpower","ui_21_1_rot3"],Rotation:[180.0f,0.0f]}
+execute as @s[tag=ui_21] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=225.1..315.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_21_1","ui_21_1_unpower","ui_21_1_rot4"],Rotation:[270.0f,0.0f]}
+execute as @s[tag=ui_21] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=315.1..360.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_21_1","ui_21_1_unpower","ui_21_1_rot1"],Rotation:[0.0f,0.0f]}
+#execute as @s[tag=ui_21] at @s as @e[tag=ui_21_1_unpower] run function ui:misc/act/make_obj_id
+execute as @e[tag=ui_21_1_rot1,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~ chest[facing=west,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot1,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~1 chest[facing=west,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot2,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~ chest[facing=north,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot2,tag=ui_21_1_unpower] at @s run setblock ~-1 ~ ~ chest[facing=north,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot3,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~ chest[facing=east,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot3,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~-1 chest[facing=east,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot4,tag=ui_21_1_unpower] at @s run setblock ~ ~ ~ chest[facing=south,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @e[tag=ui_21_1_rot4,tag=ui_21_1_unpower] at @s run setblock ~1 ~ ~ chest[facing=south,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間ラージチェスト"}'}
+execute as @s[tag=ui_21] at @s run tag @e[tag=ui_21_1_unpower] remove ui_21_1_unpower
+execute as @s[tag=ui_21] at @s run playsound block.chest.locked player @a ~0.5 ~ ~
+execute as @s[tag=ui_21] at @s run particle large_smoke ~0.5 ~1 ~ 0.3 0.6 0.3 0 15 force
+execute as @s[tag=ui_21] at @s run scoreboard players add $ui21 ui_world 1
+execute as @s[tag=ui_21] at @s run function ui:ui/21/ss
+
+# 亜空間ヒュージチェスト
+execute as @s[tag=ui_22] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=0.0..45.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_22_1","ui_22_1_unpower","ui_22_1_rot1"],Rotation:[0.0f,0.0f]}
+execute as @s[tag=ui_22] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=45.1..135.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_22_1","ui_22_1_unpower","ui_22_1_rot2"],Rotation:[90.0f,0.0f]}
+execute as @s[tag=ui_22] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=135.1..225.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_22_1","ui_22_1_unpower","ui_22_1_rot3"],Rotation:[180.0f,0.0f]}
+execute as @s[tag=ui_22] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=225.1..315.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_22_1","ui_22_1_unpower","ui_22_1_rot4"],Rotation:[270.0f,0.0f]}
+execute as @s[tag=ui_22] at @s at @p[gamemode=!spectator] if entity @p[distance=..1,y_rotation=315.1..360.0] at @s align xyz run summon minecraft:armor_stand ~0.5 ~ ~0.5 {Marker:1b,Invulnerable:1b,Invisible:1b,Tags:["ui_22_1","ui_22_1_unpower","ui_22_1_rot1"],Rotation:[0.0f,0.0f]}
+#execute as @s[tag=ui_22] at @s as @e[tag=ui_22_1_unpower] run function ui:misc/act/make_obj_id
+execute as @e[tag=ui_22_1_rot1,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~ chest[facing=west,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot1,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~1 chest[facing=west,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot2,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~ chest[facing=north,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot2,tag=ui_22_1_unpower] at @s run setblock ~-1 ~ ~ chest[facing=north,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot3,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~ chest[facing=east,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot3,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~-1 chest[facing=east,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot4,tag=ui_22_1_unpower] at @s run setblock ~ ~ ~ chest[facing=south,type=right]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @e[tag=ui_22_1_rot4,tag=ui_22_1_unpower] at @s run setblock ~1 ~ ~ chest[facing=south,type=left]{CustomName:'{"italic": false,"bold": true,"text":"亜空間マルチページチェスト"}'}
+execute as @s[tag=ui_22] at @s run scoreboard players set @e[tag=ui_22_1_unpower] ui_is 1
+execute as @s[tag=ui_22] at @s run scoreboard players set @e[tag=ui_22_1_unpower] ui_is2 -1
+execute as @s[tag=ui_22] as @e[tag=ui_22_1_unpower] run function oh_my_dat:please
+execute as @s[tag=ui_22] as @e[tag=ui_22_1_unpower] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items set value [[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]],[[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]],[[],[]]]]
+execute as @s[tag=ui_22] at @s run tag @e[tag=ui_22_1_unpower] remove ui_22_1_unpower
+execute as @s[tag=ui_22] at @s run playsound block.chest.locked player @a ~0.5 ~ ~
+execute as @s[tag=ui_22] at @s run particle large_smoke ~0.5 ~1 ~ 0.3 0.6 0.3 0 15 force
+execute as @s[tag=ui_22] at @s run scoreboard players add $ui22 ui_world 1
+execute as @s[tag=ui_22] at @s run function ui:ui/22/ss
 
 teleport @s 0 -200 0
 kill @s

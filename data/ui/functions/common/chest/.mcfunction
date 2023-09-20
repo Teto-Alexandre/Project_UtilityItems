@@ -30,6 +30,8 @@
 # 分岐
     execute if data storage ui:common input{Mode:"dropall"} run function ui:common/chest/dropall/main
     execute if data storage ui:common input{Mode:"check"} run function ui:common/chest/check/main
+    execute if data storage ui:common input{Mode:"check_all"} run function ui:common/chest/check_all/main
+    execute if data storage ui:common input{Mode:"check_downer1"} run function ui:common/chest/check_downer1/main
 
 # データ削除
     data remove storage ui:common input

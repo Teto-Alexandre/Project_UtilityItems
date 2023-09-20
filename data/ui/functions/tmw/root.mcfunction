@@ -196,6 +196,8 @@
         execute if entity @a[scores={ui_tmw_id=308}] run function ui:tmw/308/lim
     #血の金庫
         execute if entity @a[scores={ui_tmw_id=309}] run function ui:tmw/309/lim
+    #血の金庫v2.7
+        execute if entity @a[scores={ui_tmw_id=310}] run function ui:tmw/310/lim
     #契約書
         execute if entity @a[scores={ui_tmw_id=501}] run function ui:tmw/501/lim
     #カード

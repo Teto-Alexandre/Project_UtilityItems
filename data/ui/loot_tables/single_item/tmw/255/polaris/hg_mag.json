@@ -10,7 +10,7 @@
               "min": 1,
               "max": 16
             }
-          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190001,tmw:{id:255,type:2,bullet:{Stack:-1,Mass:15,Power:1800,AirRes:0.95,Gravity:20,Pack:1,Size:-6,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:-1,HitModifiers:[],FlyModifiers:[],Sound:-6,Muzzle:41}},display:{Name:'{\"text\":\"Polハンドガンマガジン\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"専用の銃以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
+          },{"function": "minecraft:set_nbt","tag": "{CustomModelData:190001,tmw:{id:255,type:2,bullet:{Stack:-1,Mass:15,Power:1800,AirRes:0.95,Gravity:20,Pack:1,Size:-6,Spread:0,DamageType:4,WeakMultiplier:150,FlyParticle:1,EndParticle:1,HitModifiers:[],FlyModifiers:[],Sound:-6,Muzzle:41}},display:{Name:'{\"text\":\"Polハンドガンマガジン\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"専用の銃以外には装填できない\",\"color\":\"gray\",\"italic\":false}']}}"}]}
       ]
     }
   ]

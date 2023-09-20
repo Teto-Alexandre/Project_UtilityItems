@@ -30,6 +30,10 @@
     "minecraft:spectral_arrow",
     "minecraft:tnt",
     "minecraft:trident",
-    "minecraft:wither_skull"
+    "minecraft:wither_skull",
+    {"id":"minecraft:block_display","required":false},
+    {"id":"minecraft:item_display","required":false},
+    {"id":"minecraft:text_display","required":false},
+    {"id":"minecraft:interaction","required":false}
   ]
 }

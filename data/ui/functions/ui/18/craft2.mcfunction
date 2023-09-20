@@ -1,5 +1,5 @@
 #
-    data merge storage ui:temp {temp:{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"C.S.",Mass:0,Magazine:0,MaxSize:0,BurstType:0,Burst:0,BurstMax:-1,now:{Speed:0,Attack:0,AttackSpeed:0,Model:180001}},main:{ShotCT:0,BurstCT:0,Spread:0,AirSpread:0,MultiShot:0,Barrel:0},bullets:[]}}}
+    data merge storage ui:temp {temp:{tmw:{id:255,type:1,enableUse:1,enableQ:1,gun:{Name:"C.S.",Mass:0,Magazine:0,MaxSize:0,BurstType:0,Burst:0,BurstMax:-1,ShotCT:0,BurstCT:0,FireID:-2,now:{Speed:0,Attack:0,AttackSpeed:0,Model:180001}},main:{Spread:0,AirSpread:0,MultiShot:0,Barrel:0},bullets:[]}}}
 
 # 武器作成2
     execute store result storage ui:temp temp.tmw.main.MultiShot int 1 store result score $MultiShot ui_temp run data get storage ui:temp temp.Item2.stats.MultiShot
@@ -37,10 +37,10 @@
     execute store result score $CT2 ui_temp run data get storage ui:temp temp.Item2.stats.CT
     execute store result score $CT3 ui_temp run data get storage ui:temp temp.Item3.stats.CT
     scoreboard players operation $CT2 ui_temp > $CT1 ui_temp
-    execute store result storage ui:temp temp.tmw.main.BurstCT int 1 run scoreboard players operation $CT2 ui_temp > $CT3 ui_temp
+    execute store result storage ui:temp temp.tmw.gun.BurstCT int 1 run scoreboard players operation $CT2 ui_temp > $CT3 ui_temp
     scoreboard players operation $CT2 ui_temp /= #2 ui_num
     scoreboard players operation $CT2 ui_temp > $CT1 ui_temp
-    execute store result storage ui:temp temp.tmw.main.ShotCT int 1 run scoreboard players operation $CT2 ui_temp > $CT3 ui_temp
+    execute store result storage ui:temp temp.tmw.gun.ShotCT int 1 run scoreboard players operation $CT2 ui_temp > $CT3 ui_temp
     execute store result score $Spread1 ui_temp run data get storage ui:temp temp.Item1.stats.Spread
     execute store result score $Spread2 ui_temp run data get storage ui:temp temp.Item2.stats.Spread
     execute store result score $Spread3 ui_temp run data get storage ui:temp temp.Item3.stats.Spread

@@ -37,6 +37,6 @@
     "minecraft:scaffolding",
     "minecraft:repeater",
     "minecraft:comparator",
-    "minecraft:sculk_vein"
+    {"id":"minecraft:sculk_vein","required":false}
   ]
 }

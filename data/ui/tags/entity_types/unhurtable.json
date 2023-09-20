@@ -40,6 +40,10 @@
     {"id":"minecraft:tnt","required":false},
     {"id":"minecraft:tnt_minecart","required":false},
     {"id":"minecraft:trident","required":false},
-    {"id":"minecraft:wither_skull","required":false}
+    {"id":"minecraft:wither_skull","required":false},
+    {"id":"minecraft:block_display","required":false},
+    {"id":"minecraft:item_display","required":false},
+    {"id":"minecraft:text_display","required":false},
+    {"id":"minecraft:interaction","required":false}
   ]
 }
