@@ -2,7 +2,8 @@
     summon marker ^ ^ ^-2 {Tags:["ui_temp_hit"]}
 
 # 命中処理
-    scoreboard players set $sound ui_temp 0
+    scoreboard players set $hit_sound ui_temp 0
+    scoreboard players set $hit_sound_type ui_temp 0
     data merge storage ui:temp {temp:{}}
     data modify storage ui:temp temp.Name set from entity @s ArmorItems.[0].tag.display.Name
     data modify storage ui:temp temp.UUID set from entity @s ArmorItems.[0].tag.uuid
@@ -11,9 +12,9 @@
     scoreboard players operation $weak_mult ui_temp = @s ui_bu
     scoreboard players operation $back_mult ui_temp = @s ui_gms
     execute as @e[tag=!ui_temp_player,predicate=ui:load_unhurtable,sort=nearest,limit=1] at @s run function ui:tmw/255/projectile/hit/ent
-    execute if score $sound ui_temp matches 1 as @a if score @s ui_id = $id ui_temp at @s run playsound entity.snow_golem.shoot player @s ~ ~ ~ 0.7 2 0
-    execute if score $sound ui_temp matches 2 as @a if score @s ui_id = $id ui_temp at @s run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 2 0
-    execute if score $sound ui_temp matches 3 as @a if score @s ui_id = $id ui_temp at @s run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1.5 0
+    function ui:tmw/255/projectile/hit/sound/
+    scoreboard players reset $hit_sound ui_temp
+    scoreboard players reset $hit_sound_type ui_temp
 
 # データ消し
     data remove storage ui:temp temp

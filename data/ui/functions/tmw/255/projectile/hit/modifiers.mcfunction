@@ -1,5 +1,6 @@
 # 追加効果
 # Modifiers:[{id:"flame",lvl:1}]
+# Modifiers:[{id:"hit_sound",lvl:-1}]
 
 #
     data modify storage ui:temp temp.Modifier set from storage ui:temp temp.HitModifiers[0]
@@ -13,6 +14,7 @@
     execute if data storage ui:temp temp.Modifier{id:"lethal"} run function ui:tmw/255/projectile/modifier/lethal
     execute if data storage ui:temp temp.Modifier{id:"dice"} run function ui:tmw/255/projectile/modifier/dice
     execute if data storage ui:temp temp.Modifier{id:"knockback"} run function ui:tmw/255/projectile/modifier/knockback
+    execute if data storage ui:temp temp.Modifier{id:"hit_sound"} run function ui:tmw/255/projectile/modifier/hit_sound
 
 # 読み込み終わり
     scoreboard players remove $temp ui_hmods 1

@@ -22,6 +22,6 @@
     execute if score $def_state ui_temp matches 1 run function ui:tmw/255/projectile/hit/state1
 
 # ヒット音
-    execute if score $headshot ui_temp matches 0 run scoreboard players set $sound ui_temp 1
-    execute if score $headshot ui_temp matches 1 run scoreboard players set $sound ui_temp 2
-    execute if score $Lethal tds_dmg matches 1 run scoreboard players set $sound ui_temp 3
+    execute if score $headshot ui_temp matches 0 run scoreboard players set $hit_sound ui_temp 1
+    execute if score $headshot ui_temp matches 1 run scoreboard players set $hit_sound ui_temp 2
+    execute if score $Lethal tds_dmg matches 1 run scoreboard players set $hit_sound ui_temp 3
