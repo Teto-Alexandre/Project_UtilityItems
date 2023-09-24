@@ -94,21 +94,21 @@ execute if data storage ui:temp temp[0][0][1][{Slot:15b}] run data modify block 
 execute if data storage ui:temp temp[0][0][1][{Slot:16b}] run data modify block ^ ^ ^1 Items[16] set from storage ui:temp temp[0][0][1][{Slot:16b}]
 execute if data storage ui:temp temp[0][0][1][{Slot:17b}] run data modify block ^ ^ ^1 Items[17] set from storage ui:temp temp[0][0][1][{Slot:17b}]
 
-item replace block ^ ^ ^1 container.18 with black_wool{display:{Name:'{"text":"Page 1"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.19 with black_wool{display:{Name:'{"text":"Page 2"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.20 with black_wool{display:{Name:'{"text":"Page 3"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.21 with black_wool{display:{Name:'{"text":"Page 4"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.22 with black_wool{display:{Name:'{"text":"Page 5"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.23 with black_wool{display:{Name:'{"text":"Page 6"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.24 with black_wool{display:{Name:'{"text":"Page 7"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.25 with black_wool{display:{Name:'{"text":"Page 8"}'},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.26 with black_wool{display:{Name:'{"text":"Page 9"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 1 run item replace block ^ ^ ^1 container.18 with white_wool{display:{Name:'{"text":"Page 1"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 2 run item replace block ^ ^ ^1 container.19 with white_wool{display:{Name:'{"text":"Page 2"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 3 run item replace block ^ ^ ^1 container.20 with white_wool{display:{Name:'{"text":"Page 3"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 4 run item replace block ^ ^ ^1 container.21 with white_wool{display:{Name:'{"text":"Page 4"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 5 run item replace block ^ ^ ^1 container.22 with white_wool{display:{Name:'{"text":"Page 5"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 6 run item replace block ^ ^ ^1 container.23 with white_wool{display:{Name:'{"text":"Page 6"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 7 run item replace block ^ ^ ^1 container.24 with white_wool{display:{Name:'{"text":"Page 7"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 8 run item replace block ^ ^ ^1 container.25 with white_wool{display:{Name:'{"text":"Page 8"}'},ui:{ismenu:1}}
-execute if score @s ui_is matches 9 run item replace block ^ ^ ^1 container.26 with white_wool{display:{Name:'{"text":"Page 9"}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.18 with black_wool{display:{Name:'{"text":"Page 1","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.19 with black_wool{display:{Name:'{"text":"Page 2","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.20 with black_wool{display:{Name:'{"text":"Page 3","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.21 with black_wool{display:{Name:'{"text":"Page 4","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.22 with black_wool{display:{Name:'{"text":"Page 5","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.23 with black_wool{display:{Name:'{"text":"Page 6","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.24 with black_wool{display:{Name:'{"text":"Page 7","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.25 with black_wool{display:{Name:'{"text":"Page 8","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.26 with black_wool{display:{Name:'{"text":"Page 9","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 1 run item replace block ^ ^ ^1 container.18 with white_wool{display:{Name:'{"text":"Page 1","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 2 run item replace block ^ ^ ^1 container.19 with white_wool{display:{Name:'{"text":"Page 2","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 3 run item replace block ^ ^ ^1 container.20 with white_wool{display:{Name:'{"text":"Page 3","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 4 run item replace block ^ ^ ^1 container.21 with white_wool{display:{Name:'{"text":"Page 4","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 5 run item replace block ^ ^ ^1 container.22 with white_wool{display:{Name:'{"text":"Page 5","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 6 run item replace block ^ ^ ^1 container.23 with white_wool{display:{Name:'{"text":"Page 6","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 7 run item replace block ^ ^ ^1 container.24 with white_wool{display:{Name:'{"text":"Page 7","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 8 run item replace block ^ ^ ^1 container.25 with white_wool{display:{Name:'{"text":"Page 8","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ^ ^ ^1 container.26 with white_wool{display:{Name:'{"text":"Page 9","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}

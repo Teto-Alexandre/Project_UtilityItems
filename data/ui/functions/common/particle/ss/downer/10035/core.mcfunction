@@ -4,10 +4,10 @@ scoreboard players set $boost ui_temp 0
 #execute if score $boost ui_temp matches 1 run 
 
 #
-execute if score @s ui_is2 matches 1 at @s if score $is ui_temp matches ..20 run function ui:common/particle/ss/upper/25/9_3
-execute if score @s ui_is2 matches 1 at @s if score $is ui_temp matches 21.. run function ui:common/particle/ss/downer/10035/flash
+execute if score @s ui_is2 matches 1 at @s if score $is ui_temp matches ..200 run function ui:common/particle/ss/downer/10035/before
+execute if score @s ui_is2 matches 1 at @s if score $is ui_temp matches 201.. facing entity @e[distance=..50,predicate=ui:load_unhurtable,tag=!ui_temp_team,sort=nearest,limit=1] eyes run function ui:common/particle/ss/downer/10035/flash
 
-execute if score @s ui_is2 matches 1 if score $is ui_temp matches 21.. run kill @s
+execute if score @s ui_is2 matches 1 if score $is ui_temp matches 201.. run kill @s
 
 #
 #execute if score @s ui_is2 matches 2 at @s if score $is ui_temp matches 1 run function ui:common/particle/ss/downer/10035/particle/cross

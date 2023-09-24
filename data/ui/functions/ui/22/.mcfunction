@@ -6,6 +6,7 @@ execute if block ~ ~ ~ #ui:nocol run function ui:ui/22/dt_right
 execute if block ^ ^ ^1 #ui:nocol run function ui:ui/22/dt_left
 
 # クリック時
+scoreboard players reset $slot ui_temp
 scoreboard players operation $temp ui_temp = @s ui_is
 scoreboard players operation $temp2 ui_temp = @s ui_is2
 data merge storage ui:common {input:{Mode:"check_all"}}
