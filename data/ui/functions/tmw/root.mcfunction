@@ -180,6 +180,8 @@
         execute if entity @a[scores={ui_tmw_id=270}] run function ui:tmw/270/lim
     #人狼スターター
         execute if entity @a[scores={ui_tmw_id=271}] run function ui:tmw/271/lim
+    #カードゲーム1
+        execute if entity @a[scores={ui_tmw_id=272}] run function ui:tmw/272/lim
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
