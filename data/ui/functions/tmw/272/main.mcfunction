@@ -9,8 +9,8 @@ execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
     execute as @s[tag=tmw272_active] anchored eyes positioned ^ ^ ^ run function ui:tmw/272/common/visual_input/
 
 #
-execute if score $type ui_temp matches -1 run function ui:tmw/272/id/-1/
-execute if score $type ui_temp matches 1 if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/
+execute if score $type ui_temp matches 1 if entity @s[tag=tmw_use_n] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 
 #
 execute if entity @s[tag=ui_temp_del] run item replace entity @s weapon.mainhand with air

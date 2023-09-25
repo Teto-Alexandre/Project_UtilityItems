@@ -12,7 +12,7 @@ scoreboard players set @a ui_tmw271_job 1
 scoreboard players set @a[scores={ui_tmw271_job=1},sort=random,limit=1] ui_tmw271_job 2
 execute if score $players ui_tmw271_sys matches 2.. run scoreboard players set @a[scores={ui_tmw271_job=1},sort=random,limit=1] ui_tmw271_job 3
 execute if score $players ui_tmw271_sys matches 5.. run scoreboard players set @a[scores={ui_tmw271_job=1},sort=random,limit=1] ui_tmw271_job 2
-execute if score $players ui_tmw271_sys matches 5.. run scoreboard players set @a[scores={ui_tmw271_job=1},sort=random,limit=1] ui_tmw271_job 4
+execute if score $players ui_tmw271_sys matches 3.. run scoreboard players set @a[scores={ui_tmw271_job=1},sort=random,limit=1] ui_tmw271_job 4
 execute as @a[tag=tmw_271_player,scores={ui_tmw271_job=1}] run tellraw @s [{"text":"村人です"}]
 execute as @a[tag=tmw_271_player,scores={ui_tmw271_job=2}] run tellraw @s [{"text":"人狼です"}]
 execute as @a[tag=tmw_271_player,scores={ui_tmw271_job=3}] run tellraw @s [{"text":"占い師です"}]

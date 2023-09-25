@@ -5,7 +5,7 @@ scoreboard players set $success ui_temp 0
 
 execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=2}] run say 村側の勝利
 execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=2}] run scoreboard players set $success ui_temp 1
-execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=1}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=3}] run say 狼側の勝利
-execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=1}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=3}] run scoreboard players set $success ui_temp 1
+execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=1}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=3}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=4}] run say 狼側の勝利
+execute unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=1}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=3}] unless entity @a[tag=tmw_271_player_alive,scores={ui_tmw271_job=4}] run scoreboard players set $success ui_temp 1
 
 execute if score $success ui_temp matches 1 run function ui:tmw/271/game/end

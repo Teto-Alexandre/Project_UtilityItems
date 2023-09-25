@@ -7,7 +7,7 @@ execute store result score $cost_type ui_temp run data get storage ui:temp card.
 execute store result score $cost ui_temp run data get storage ui:temp card.cost
 
 # コストタイプ別に参照
-execute
+execute if score $cost_type ui_temp matches 0 run function ui:tmw/272/common/check_cost/cost_type/0
 
 # キャッシュクリア
 scoreboard players reset $cost_type ui_temp

@@ -1,0 +1,2 @@
+execute if score $cost ui_temp <= @s ui_tmw272_mana run scoreboard players set $check_cost ui_temp 1
+execute if score $check_cost ui_temp matches 1 run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp

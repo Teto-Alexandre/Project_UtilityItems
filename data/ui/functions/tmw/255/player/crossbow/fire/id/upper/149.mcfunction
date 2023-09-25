@@ -20,6 +20,7 @@
     execute if score $firetime.temp ui_temp matches 10 run data merge storage ui:common {input:{Mode:"create",Var:-10034,Var2:5}}
     execute if score $firetime.temp ui_temp matches 10 at @s anchored eyes rotated ~ 0 positioned ^ ^-0.3 ^1 run function ui:common/particle
     execute if score $firetime.temp ui_temp matches 10 run effect give @s speed 1 4 true
+    execute if score $firetime.temp ui_temp matches 10 run effect give @s resistance 2 1 true
     execute if score $firetime.temp ui_temp matches 30 run data merge storage ui:common {input:{Mode:"create",Var:-10034,Var2:5}}
     execute if score $firetime.temp ui_temp matches 30 at @s anchored eyes rotated ~ 0 positioned ^ ^-0.3 ^1 run function ui:common/particle
     execute if score $firetime.temp ui_temp matches 30 run scoreboard players set $success ui_temp 1
