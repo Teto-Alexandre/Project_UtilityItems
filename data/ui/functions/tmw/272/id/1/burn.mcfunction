@@ -5,7 +5,7 @@ data modify storage ui:temp temp.effect set from storage ui:temp temp.card.effec
 
 
 # デバッグメッセ
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"解決"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":" : "},{"strage":"ui:temp","nbt":"temp.effect"}]
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"解決"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":" : "},{"storage":"ui:temp","nbt":"temp.effect"}]
 
 # 汎用変数を記録
 execute store result score $target_type ui_temp run data get storage ui:temp temp.effect.target_type 1

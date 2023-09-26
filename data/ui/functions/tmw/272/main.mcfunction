@@ -6,7 +6,7 @@ tag @s add ui_temp_player
 scoreboard players reset $link_id ui_temp
 execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
     #HC:視線入力
-    execute as @s[tag=tmw272_active] at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/272/common/visual_input/
+    execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_input/
 
 #
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/

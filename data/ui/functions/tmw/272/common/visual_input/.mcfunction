@@ -3,7 +3,15 @@ execute if predicate ui:percentage/1 run tellraw @s[scores={ui_tmw601_accessory=
 
 # ターゲット出来るエンティティを周囲に表示
     execute at @s as @e[tag=ui_temp_players,tag=!ui_temp_player] run function ui:tmw/272/common/visual_input/target_marker
-    execute at @s positioned ^ ^ ^0.8 run tag @e[tag=ui_temp_marker,sort=nearest,limit=1] add ui_temp_target2
-    execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~ ~ 0 0 0 0 1 normal @s
-    tag @e[tag=ui_temp_target2] add tmw272_visual_input
+    execute at @s positioned ^ ^ ^0.4 run tag @e[tag=ui_temp_marker,sort=nearest,limit=1] add ui_temp_target2
+    execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
+
+# 選択したポインターのIDを取得
+    execute store result score $select_obj_id ui_temp run scoreboard players get @e[tag=ui_temp_target2,limit=1] ui_obj_id
+
+# マーカーを削除して参照
     kill @e[tag=ui_temp_marker]
+    execute as @e[tag=tmw272_active] if score @s ui_obj_id = $select_obj_id ui_temp run tag @s add tmw272_visual_input
+
+# IDをクリア
+    scoreboard players reset $select_obj_id ui_temp
