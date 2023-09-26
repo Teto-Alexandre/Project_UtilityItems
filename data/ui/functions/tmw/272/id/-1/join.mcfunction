@@ -1,22 +1,22 @@
 # プレイヤー追加
 tag @e[tag=ui_temp_game] add tmw272_unpower
 
-scoreboard players operation @e[tag=ui_temp_target,limit=1] ui_tmw272_link_id = $link_id ui_temp
+scoreboard players operation @s ui_tmw272_link_id = $link_id ui_temp
 
 data modify storage ui:temp player_template set value {id:-1,health:100,mana:100,deck:[   {id:"minecraft:carrot_on_a_stick",tag:{tmw:{id:272,type:1,cg:{name:"attack1",cost:1,effects:[{target_type:1,effect_type:1,var:1}]}},HideFlags:1,display:{Name:'[{"text":"軽い攻撃","italic":false,"color":"white"}]',Lore:['[{"text":"相手に１ダメージ与える","color":"gray","italic":false}]']}}}   ]}
-execute store result storage ui:temp player_template.id int 1 run scoreboard players get $obj_id ui_temp
+execute store result storage ui:temp player_template.id int 1 run scoreboard players get $host_id ui_temp
 execute as @e[tag=tmw272_unpower] run data modify entity @s item.tag.players append from storage ui:temp player_template
 
 data modify storage ui:temp player_template set value {id:-1}
-execute store result storage ui:temp player_template.id int 1 run scoreboard players get $obj_id ui_temp
+execute store result storage ui:temp player_template.id int 1 run scoreboard players get $host_id ui_temp
 execute as @e[tag=tmw272_unpower] run data modify entity @s item.tag.anti_rejoin append from storage ui:temp player_template
 
 # デバッグメッセージ
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"追加プレイヤーをマッチへ追加しました"}]
+tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"追加プレイヤーがマッチへ参加しました"}]
 #tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"entity":"@e[tag=tmw272_unpower]","nbt":"item.tag"}]
 
 # タグ消し
 tag @e[tag=tmw272_unpower] remove tmw272_unpower
 
 # 初期ステータス設定
-execute as @e[tag=ui_temp_target,limit=1] run function ui:tmw/272/id/-1/player
+execute as @s run function ui:tmw/272/id/-1/player

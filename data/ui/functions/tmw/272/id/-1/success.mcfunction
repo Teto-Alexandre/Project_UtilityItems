@@ -1,5 +1,5 @@
 # 私だ
-tag @e[predicate=ui:load_unhurtable,tag=!ui_temp_player,distance=..1,sort=nearest,limit=1] add ui_temp_target
+tag @e[tag=ui_temp_targetable,distance=..1,sort=nearest,limit=1] add ui_temp_target
 
 # 対象にIDが存在しないなら割り振る
 execute as @s unless score @s ui_obj_id matches -2147483648..2147483647 run function ui:misc/act/make_obj_id
@@ -9,17 +9,19 @@ execute as @e[tag=ui_temp_target] unless score @s ui_obj_id matches -2147483648.
 scoreboard objectives add ui_tmw272_link_id dummy
 
 # 各種IDをキャッシュ
-scoreboard players operation $link_id ui_temp = @s ui_tmw272_link_id
+execute if score $shot_type ui_temp matches 2 run scoreboard players operation $link_id ui_temp = @s ui_tmw272_link_id
+execute if score $shot_type ui_temp matches 1 run scoreboard players operation $link_id ui_temp = @e[tag=ui_temp_target,limit=1] ui_tmw272_link_id
 scoreboard players operation $host_id ui_temp = @s ui_obj_id
 scoreboard players operation $obj_id ui_temp = @e[tag=ui_temp_target,limit=1] ui_obj_id
 
 # 発動者の参加しているゲームテーブルが存在するかサーチ
 execute as @e[tag=tmw272] if score @s ui_obj_id = $link_id ui_temp run tag @s add ui_temp_game
 
-# プレイヤー追加/初回だけ  追加と同時に再入場不可リストにobj_idだけ登録する
-    ##再入場不可リスト : -1使用時　操作者の所属するマッチから取得および探索して、該当者全員にタグ付与して-1の対象から外す
-execute if entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/add
-execute unless entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/first
+# プレイヤー追加/初回だけ
+execute if score $shot_type ui_temp matches 2 if entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/add
+execute if score $shot_type ui_temp matches 2 unless entity @e[tag=ui_temp_game] run say このメッセージは出ないはずだよ
+execute if score $shot_type ui_temp matches 1 if entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/join
+execute if score $shot_type ui_temp matches 1 unless entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/first
 
 #
 execute as @e[predicate=ui:load_unhurtable] if score @s ui_tmw272_link_id = $link_id ui_temp run tag @s add tmw272_active_temp

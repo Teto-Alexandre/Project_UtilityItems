@@ -1,4 +1,4 @@
-execute positioned ~ ~-1 ~ if entity @e[predicate=ui:load_unhurtable,tag=!ui_temp_player,distance=..1] run scoreboard players set $success ui_temp 1
+execute positioned ~ ~-1 ~ if entity @e[tag=ui_temp_targetable,distance=..1] run scoreboard players set $success ui_temp 1
 particle dust 0 0 0 0.8 ~ ~ ~ 0 0 0 0 1 force
 
 scoreboard players remove $range ui_temp 1

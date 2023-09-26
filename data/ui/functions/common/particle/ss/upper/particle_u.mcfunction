@@ -69,3 +69,5 @@ execute if score $type ui_temp matches 29 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 30 run function ui:common/particle/ss/upper/30/core
 # よくある宙に浮かぶテキスト
 execute if score $type ui_temp matches 31 run function ui:common/particle/ss/upper/31/core
+# ダメージエフェクト
+execute if score $type ui_temp matches 32 run function ui:common/particle/ss/upper/32/core

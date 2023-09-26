@@ -13,6 +13,7 @@ tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_ta
 # 汎用変数を削除
 scoreboard players reset $target_type ui_temp
 scoreboard players reset $effect_type ui_temp
+scoreboard players reset $hit_effect ui_temp
 scoreboard players reset $var ui_temp
 
 # カードの一時データも削除

@@ -24,6 +24,9 @@ execute if score $effect_type ui_temp matches 1 run function ui:tmw/272/id/1/eff
 execute if score $effect_type ui_temp matches 2 run function ui:tmw/272/id/1/effect_type/2
 # ここにドロー
 
+# ヒットエフェクト
+execute if score $effect_type ui_temp matches 10001 as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/id/1/hit_effect
+
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old
 tag @e[tag=tmw272_temp_card_effect_target] remove tmw272_temp_card_effect_target

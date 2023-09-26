@@ -1,4 +1,6 @@
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"MATCH_"},{"score":{"name": "@s","objective": "ui_is"}},{"text":"_5SEC が読み込まれました"}]
+tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"MATCH_"},{"score":{"name": "@s","objective": "ui_obj_id"}},{"text":"_5SEC が読み込まれました"}]
+
+playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 1.5 1
 
 execute as @e[tag=ui_temp_players] run scoreboard players add @s ui_tmw272_mana_max 1
 execute as @e[tag=ui_temp_players] run scoreboard players operation @s ui_tmw272_mana = @s ui_tmw272_mana_max
