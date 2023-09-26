@@ -1,0 +1,1 @@
+tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"MATCH_"},{"score":{"name": "@s","objective": "ui_is"}},{"text":"_INIT が読み込まれました"}]

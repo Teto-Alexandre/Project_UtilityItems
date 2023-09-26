@@ -10,3 +10,7 @@ execute if score $accessory ui_temp matches 5003 run function ui:tmw/601/accesso
 execute if score $accessory ui_temp matches 5004 run function ui:tmw/601/accessory/4/main
 # 救済の権能
 execute if score $accessory ui_temp matches 5005 run function ui:tmw/601/accessory/5/main
+# 代替の腕輪
+execute if score $accessory ui_temp matches 5006 run function ui:tmw/601/accessory/6/main
+# デバッガーインカムCG1
+execute if score $accessory ui_temp matches 5007 run function ui:tmw/601/accessory/7/main

@@ -65,5 +65,7 @@ execute if score $type ui_temp matches 27 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 28 run function ui:common/particle/ss/upper/28/core
 # 地面を走る光
 execute if score $type ui_temp matches 29 run function ui:common/particle/ss/upper/29/core
-# ロジックアトリエ
+# ロジックアトリエ - マズルフラッシュ
 execute if score $type ui_temp matches 30 run function ui:common/particle/ss/upper/30/core
+# よくある宙に浮かぶテキスト
+execute if score $type ui_temp matches 31 run function ui:common/particle/ss/upper/31/core

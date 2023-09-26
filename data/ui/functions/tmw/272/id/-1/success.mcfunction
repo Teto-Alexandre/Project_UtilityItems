@@ -16,7 +16,8 @@ scoreboard players operation $obj_id ui_temp = @e[tag=ui_temp_target,limit=1] ui
 # 発動者の参加しているゲームテーブルが存在するかサーチ
 execute as @e[tag=tmw272] if score @s ui_obj_id = $link_id ui_temp run tag @s add ui_temp_game
 
-# プレイヤー追加/初回だけ
+# プレイヤー追加/初回だけ  追加と同時に再入場不可リストにobj_idだけ登録する
+    ##再入場不可リスト : -1使用時　操作者の所属するマッチから取得および探索して、該当者全員にタグ付与して-1の対象から外す
 execute if entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/add
 execute unless entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/first
 
