@@ -22,7 +22,7 @@ execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scor
 # ターゲットを対象に取ってエフェクトを実行する
 execute if score $effect_type ui_temp matches 1 run function ui:tmw/272/id/1/effect_type/1
 execute if score $effect_type ui_temp matches 2 run function ui:tmw/272/id/1/effect_type/2
-# ここにドロー
+execute if score $effect_type ui_temp matches 3 run function ui:tmw/272/id/1/effect_type/3
 
 # ヒットエフェクト
 execute if score $effect_type ui_temp matches 10001 as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/id/1/hit_effect
