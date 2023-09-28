@@ -25,7 +25,7 @@ execute if score $shot_type ui_temp matches 1 unless entity @e[tag=ui_temp_game]
 
 #
 execute as @e[predicate=ui:load_unhurtable] if score @s ui_tmw272_link_id = $link_id ui_temp run tag @s add tmw272_active_temp
-tellraw @a [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"selector":"@e[tag=tmw272_active_temp]"},{"text":"が参加しています"}]
+execute if score $shot_type ui_temp matches 1 unless entity @e[tag=ui_temp_game] run tellraw @a [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"selector":"@e[tag=tmw272_active_temp]"},{"text":"が戦線を開きました"}]
 tag @e[tag=tmw272_active_temp] add tmw272_active
 
 # キャッシュ削除各種

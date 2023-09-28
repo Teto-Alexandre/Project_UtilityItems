@@ -1,9 +1,6 @@
 # 切削する
 data modify storage ui:temp temp.effect set from storage ui:temp temp.card.effects[0]
 
-##data modify storage ui:temp player_template set value {name:"attack1",cost_type:0,cost:1,effects:[{target_type:1,effect_type:1,var:1}]}
-
-
 # デバッグメッセ
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"解決"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":" : "},{"storage":"ui:temp","nbt":"temp.effect"}]
 
