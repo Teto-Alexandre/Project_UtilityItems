@@ -5,7 +5,8 @@
 
 execute if entity @s[tag=tmw272_active] run tag @s add tmw272_stats_listener
 
+execute if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/
 execute unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/
-execute if entity @s[tag=tmw272_active] run function ui:tmw/272/common/stats_open/tellraw
+#execute if entity @s[tag=tmw272_active] run function ui:tmw/272/common/stats_open/tellraw
 
 tag @a[tag=tmw272_stats_listener] remove tmw272_stats_listener

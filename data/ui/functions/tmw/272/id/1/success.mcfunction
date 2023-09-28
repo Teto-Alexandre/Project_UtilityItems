@@ -5,6 +5,8 @@ execute store result score $count ui_temp run data get storage ui:temp temp.card
 #
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"CHECK_COST が承認しました EFFECT解決数:"},{"score":{"name": "$count","objective": "ui_temp"}}]
 
+tellraw @a[tag=ui_temp_players] ["",{"selector":"@s"},{"text":"> ","color":"gray"},{"text":"["},{"storage":"ui:temp","nbt":"name","interpret":true},{"text":"]"}]
+
 execute if score $count ui_temp matches 1.. run function ui:tmw/272/id/1/burn
 
 # カードは消す

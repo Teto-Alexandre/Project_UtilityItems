@@ -16,7 +16,7 @@ execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
 # 視線入力
 execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_input/
     #HC:ステータス参照
-    execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/stats_open/actionbar_self
+    #execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/stats_open/actionbar_self
 
 #
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/n

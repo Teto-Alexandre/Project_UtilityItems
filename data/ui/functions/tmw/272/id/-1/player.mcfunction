@@ -1,10 +1,12 @@
 scoreboard objectives add ui_tmw272_health dummy
 scoreboard objectives add ui_tmw272_mana_max dummy
 scoreboard objectives add ui_tmw272_mana dummy
+scoreboard objectives add ui_tmw272_match_time dummy
 
 scoreboard players set @s ui_tmw272_health 20
 scoreboard players set @s ui_tmw272_mana_max 0
 scoreboard players set @s ui_tmw272_mana 0
+scoreboard players set @s ui_tmw272_match_time 0
 
 # OMDを取り出す
 function oh_my_dat:please
