@@ -35,6 +35,12 @@ tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 # タグ消し
 tag @e[tag=tmw272_unpower] remove tmw272_unpower
 
+# 次のプレイヤー認証用のスコアを作成
+scoreboard objectives add ui_tmw272_health dummy
+scoreboard objectives add ui_tmw272_mana_max dummy
+scoreboard objectives add ui_tmw272_mana dummy
+scoreboard objectives add ui_tmw272_match_time dummy
+
 # 初期ステータス設定
 execute as @s run function ui:tmw/272/id/-1/player
 execute as @e[tag=ui_temp_target,limit=1] run function ui:tmw/272/id/-1/player

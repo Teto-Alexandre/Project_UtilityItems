@@ -1,5 +1,7 @@
+# 	えんてぅてぃの処理タイミング
+
 # アイテムのID参照 ( -1:開始ツール, 1:アイテム )
-execute store result score $type ui_temp run data get entity @s SelectedItem.tag.tmw.type
+scoreboard players set $type ui_temp 1
 
 # 簡略化タグを設定
 tag @s add ui_temp_player

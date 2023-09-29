@@ -18,6 +18,8 @@ execute if score $temp_5sec ui_temp matches 79 run playsound entity.experience_o
 execute if score $temp_5sec ui_temp matches 89 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
 execute if score $temp_5sec ui_temp matches 99 run function ui:tmw/272/match/periodic/5sec
 
+## エンティティはここで動かす
+
 # プレイヤーごとに実行する常在効果
 execute as @e[tag=ui_temp_players] run function ui:tmw/272/match/player/
 

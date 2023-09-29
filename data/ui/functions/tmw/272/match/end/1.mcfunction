@@ -7,3 +7,6 @@ playsound entity.wither.spawn player @a ~ ~ ~ 1 2 0
 
 scoreboard players reset @s ui_tmw272_link_id
 tag @s remove tmw272_active
+
+execute at @s run kill @e[type=item,tag=tmw272_dropitem_card,distance=..5]
+function ui:template/inventory/pull
