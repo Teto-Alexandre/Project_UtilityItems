@@ -19,12 +19,21 @@ execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_inp
     #execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/stats_open/actionbar_self
 
 #
+execute if score $type ui_temp matches -1 as @e[tag=tmw272_deck_dropper_core] if score @s ui_id = $id ui_temp run tag @s add ui_temp_targetable_dropper
+
+#
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/n
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_s] run function ui:tmw/272/id/-1/s
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
 execute if score $type ui_temp matches 1 if entity @s[scores={ui_use1=1..}] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 execute if score $type ui_temp matches 1 if entity @s[tag=tmw_drop_n] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
+
+#
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] at @s run function ui:tmw/272/id/-1/success2
+
+#
+tag @e[tag=ui_temp_targetable_dropper] remove ui_temp_targetable_dropper
 
 #
 #execute if entity @s[tag=ui_temp_del] run item replace entity @s weapon.mainhand with air

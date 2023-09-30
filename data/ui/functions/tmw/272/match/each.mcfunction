@@ -1,8 +1,6 @@
 # カウントを増やす
-scoreboard players operation $global_time ui_temp = @s ui_is2
-scoreboard players add @s ui_is2 1
-scoreboard players operation $temp_5sec ui_temp = $global_time ui_temp
-scoreboard players operation $temp_5sec ui_temp %= #100 ui_num
+scoreboard players operation $turn_time ui_temp = @s ui_is2
+scoreboard players remove @s ui_is2 1
 
 # プレイヤー認識
 scoreboard players operation $link_id ui_temp = @s ui_obj_id
@@ -10,13 +8,13 @@ execute as @e[tag=tmw272_active] if score @s ui_tmw272_link_id = $link_id ui_tem
 tag @s add tmw272_active_match
 
 # 初回実行時
-execute if score $global_time ui_temp matches 0 run function ui:tmw/272/match/periodic/init
+execute if entity @s[tag=!tmw272_match_init] run function ui:tmw/272/match/periodic/init
 
 # 五秒経過ごとに通知
-execute if score $temp_5sec ui_temp matches 69 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $temp_5sec ui_temp matches 79 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $temp_5sec ui_temp matches 89 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $temp_5sec ui_temp matches 99 run function ui:tmw/272/match/periodic/5sec
+execute if score $turn_time ui_temp matches 30 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 20 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 10 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/periodic/turn
 
 ## エンティティはここで動かす
 
