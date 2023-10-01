@@ -40,6 +40,7 @@ scoreboard objectives add ui_tmw272_health dummy
 scoreboard objectives add ui_tmw272_mana_max dummy
 scoreboard objectives add ui_tmw272_mana dummy
 scoreboard objectives add ui_tmw272_match_time dummy
+scoreboard objectives add ui_tmw272_duplication dummy
 
 # 初期ステータス設定
 execute as @s run function ui:tmw/272/id/-1/player

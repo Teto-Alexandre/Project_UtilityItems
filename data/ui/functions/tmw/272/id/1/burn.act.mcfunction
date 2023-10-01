@@ -21,6 +21,7 @@ execute if score $effect_type ui_temp matches 2 run function ui:tmw/272/id/1/eff
 execute if score $effect_type ui_temp matches 3 run function ui:tmw/272/id/1/effect_type/3
 execute if score $effect_type ui_temp matches 4 run function ui:tmw/272/id/1/effect_type/4
 execute if score $effect_type ui_temp matches 5 run function ui:tmw/272/id/1/effect_type/5
+execute if score $effect_type ui_temp matches 6 run function ui:tmw/272/id/1/effect_type/6
 
 # ヒットエフェクト
 execute if score $effect_type ui_temp matches 10001 as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/id/1/hit_effect

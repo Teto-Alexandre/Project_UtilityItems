@@ -5,9 +5,6 @@ tag @e[tag=ui_temp_targetable,distance=..1,sort=nearest,limit=1] add ui_temp_tar
 execute as @s unless score @s ui_obj_id matches -2147483648..2147483647 run function ui:misc/act/make_obj_id
 execute as @e[tag=ui_temp_target] unless score @s ui_obj_id matches -2147483648..2147483647 run function ui:misc/act/make_obj_id
 
-# スコア作ろうね
-scoreboard objectives add ui_tmw272_link_id dummy
-
 # 各種IDをキャッシュ
 execute if score $shot_type ui_temp matches 2 run scoreboard players operation $link_id ui_temp = @s ui_tmw272_link_id
 execute if score $shot_type ui_temp matches 1 run scoreboard players operation $link_id ui_temp = @e[tag=ui_temp_target,limit=1] ui_tmw272_link_id

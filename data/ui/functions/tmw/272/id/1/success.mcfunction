@@ -1,6 +1,8 @@
 # 使用成功した場合
 data modify storage ui:temp temp.card set from storage ui:temp card
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects
+execute store result score $duplication ui_temp run scoreboard players get @s ui_tmw272_duplication
+execute if score $duplication ui_temp matches 1.. run function ui:tmw/272/id/1/misc/duplication/
 
 # 汎用変数を準備
 scoreboard players set $condition_checker ui_temp 0

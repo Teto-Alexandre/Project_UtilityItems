@@ -357,6 +357,9 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 ## 装備用
     scoreboard objectives add ui_tmw255_state_glitch dummy {"text":"UtilityItems_Glitch","color":"dark_blue"}
 
+## DDBF
+    scoreboard objectives add ui_tmw272_link_id dummy
+
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
     scoreboard players set #type2 ui_rand 1
@@ -505,5 +508,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 53
+    scoreboard players set $version ui_world 54
     #say operationed
