@@ -10,6 +10,7 @@ execute if entity @s[scores={ui_tmw_id_old=255}] run function ui:misc/dead/tmw25
 execute if entity @s[tag=tmw_501_19] run function ui:misc/dead/tmw501/19/dead
 execute if entity @s[scores={ui_tmw601_accessory=5005}] run function ui:misc/dead/tmw601/5005/dead
 execute if entity @s[tag=tmw_271_player_alive] run function ui:misc/dead/tmw_271_player_alive
+execute if entity @s[tag=tmw272_active] run function ui:misc/dead/tmw272_active
 
 # もう一回死亡しないように状態異常リセット
 scoreboard players reset @s tds_fire
