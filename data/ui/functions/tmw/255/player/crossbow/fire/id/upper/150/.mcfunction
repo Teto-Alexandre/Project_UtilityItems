@@ -15,7 +15,7 @@
 #
     execute if score $firetime.temp ui_temp matches 0 at @s run playsound block.iron_trapdoor.close player @a ~ ~ ~ 1 0.8
     execute if score $firetime.temp ui_temp matches 0 at @s run particle crit ~ ~1 ~ 0.5 0.5 0.5 1 20 force
-    execute if score $firetime.temp ui_temp matches 0 run item replace entity @s[nbt=!{Inventory:[{Slot:-106b}]}] weapon.offhand with carrot_on_a_stick{CustomModelData:180087,Null:1,Damage:25,display:{Name:'{"text":"クリスタルアトリエ・双剣"}'}}
+    execute if score $firetime.temp ui_temp matches 0 run item replace entity @s[nbt=!{Inventory:[{Slot:-106b}]}] weapon.offhand with carrot_on_a_stick{CustomModelData:180087,Null:1,Damage:25,display:{Name:'{"text":"狼牙工房"}'}}
     execute if score $firetime.temp ui_temp matches 10 at @s rotated ~ 0 run function ui:tmw/255/player/crossbow/fire/id/upper/150/slash1
     execute if score $firetime.temp ui_temp matches 13 at @s facing entity @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..9,sort=nearest,limit=1] feet rotated ~ 0 run function ui:tmw/255/player/crossbow/fire/id/upper/150/slash1
     execute if score $firetime.temp ui_temp matches 16 at @s facing entity @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..9,sort=nearest,limit=1] feet rotated ~ 0 run function ui:tmw/255/player/crossbow/fire/id/upper/150/slash2
