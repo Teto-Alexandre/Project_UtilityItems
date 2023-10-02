@@ -314,6 +314,10 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 
     ### MOB
     scoreboard objectives add ui_common_mob_target_obj dummy {"text":"UtilityItems_Common_Mob_Target_Obj","color":"dark_blue"}
+    ### Particle
+    scoreboard objectives add ui_common_particle_target_obj1 dummy {"text":"UtilityItems_Common_Particle_Target_Obj1","color":"dark_blue"}
+    scoreboard objectives add ui_common_particle_target_obj2 dummy {"text":"UtilityItems_Common_Particle_Target_Obj2","color":"dark_blue"}
+
 
 ## ROB
     ### World

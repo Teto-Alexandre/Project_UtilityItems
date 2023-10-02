@@ -5,4 +5,5 @@ scoreboard players operation @s ui_gpc = $input ui_temp
 scoreboard players set @s ui_is 0
 scoreboard players set @s ui_is2 0
 execute if data storage ui:common input.Var2 store result score @s ui_is2 run data get storage ui:common input.Var2
+execute if data storage ui:common input.Var3 store result score @s ui_is3 run data get storage ui:common input.Var3
 teleport @s ~ ~ ~ ~ ~

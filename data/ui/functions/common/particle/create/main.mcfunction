@@ -2,6 +2,7 @@
     execute store result score $input ui_temp run data get storage ui:common input.Var
     execute if score $input ui_temp matches ..-1 if entity @s run scoreboard players operation $common_particle_id ui_temp = @s ui_id
     execute if score $input ui_temp matches ..-10001 if entity @s run scoreboard players operation $common_particle_team ui_temp = @s ui_team
+    #execute if entity @e[tag=ui_particle_input_object1] run function ui:common/particle/create/input_object
 
 #
     summon marker ~ ~ ~ {Tags:["ui","ui_common_particle","ui_common_particle_unpower"]}

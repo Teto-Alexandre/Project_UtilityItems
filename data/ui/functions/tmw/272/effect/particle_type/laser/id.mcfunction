@@ -1,0 +1,1 @@
+execute if score $particle ui_temp matches 1.. run function ui:tmw/272/effect/particle_type/laser/1

@@ -71,3 +71,7 @@ execute if score $type ui_temp matches 30 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 31 run function ui:common/particle/ss/upper/31/core
 # ダメージエフェクト
 execute if score $type ui_temp matches 32 run function ui:common/particle/ss/upper/32/core
+# 相手に飛んでいく線（チームの色対応版）
+execute if score $type ui_temp matches 33 run function ui:common/particle/ss/upper/33/core
+# 癖のない普通の斬撃
+execute if score $type ui_temp matches 34 run function ui:common/particle/ss/upper/34/core
