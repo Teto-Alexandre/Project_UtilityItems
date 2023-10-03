@@ -11,9 +11,6 @@ execute store result score $particle_laser ui_temp run data get storage ui:temp 
 # 汎用変数を準備
 scoreboard players set $condition_checker ui_temp 0
 
-# カードは消す
-item replace entity @s weapon.mainhand with air
-
 #
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"CHECK_COST が承認しました EFFECT解決数:"},{"score":{"name": "$count","objective": "ui_temp"}}]
 

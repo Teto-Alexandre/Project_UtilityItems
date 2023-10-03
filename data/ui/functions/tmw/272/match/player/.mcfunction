@@ -11,6 +11,10 @@ execute if score @s ui_tmw272_match_time matches 30 at @s run function ui:tmw/27
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
 
+#
+execute unless score @s ui_ct matches 1.. run function oh_my_dat:please
+execute unless score @s ui_ct matches 1.. run execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] run function ui:tmw/272/effect/
+
 # HPが0になったプレイヤーをマッチから除外する
 execute if score @s ui_tmw272_health matches ..0 run function ui:tmw/272/match/player/death
 

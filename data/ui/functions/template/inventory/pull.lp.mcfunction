@@ -9,8 +9,6 @@ data modify storage ui:common input.Item.tag set from storage ui:inventory temp[
 data modify storage ui:common input.Item.tag.tmw.gun.now.SubTime set value 0
 data modify storage ui:common input.Item.tag.tmw.gun.now.SPTime set value 0
 
-execute if score $phase game_state matches 1 if entity @s[tag=tmw_237_random] run function ui:template/inventory/random/1
-
 execute store result score $limited ui_temp run data get storage ui:common input.Item.tag.tmw.gun.Limited
 execute unless score $limited_weapon party_mode >= $limited ui_temp run data modify storage ui:common input.Item.id set value "minecraft:air"
 execute unless score $limited_weapon party_mode >= $limited ui_temp run tellraw @s [{"text":"> ","color": "gray"},{"text":"現在の制限レベルでは許可されていない武器です","color": "red"}]

@@ -1,8 +1,14 @@
 give @p minecraft:carrot_on_a_stick{tmw:{id:272,type:-1,enableQ:1,cg:{list:[]}},HideFlags:1,display:{Name:'{"text":"デッキ名(9文字)"}',Lore:['[{"text":"右クリックで起動","color":"gray","italic":false}]','[{"text":"Sneak+Qで編集","color":"gray","italic":false}]']}}
 loot give @p loot ui:single_item/tmw/601/5007
 
-give @p minecraft:red_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"attack1",cost:1,particle_laser:1,particle_self:1001,particle_look:1,effects:[{target_type:1,effect_type:1,var:1}]}},HideFlags:1,display:{Name:'[{"text":"1:軽い攻撃","italic":false,"color":"white"}]',Lore:['[{"text":"相手に１ダメージ与える","color":"gray","italic":false}]']}}
-give @p minecraft:orange_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"test_debug1",cost:10,particle_laser:1,effects:[{target_type:1,effect_type:1,var:3},{target_type:2,effect_type:2,var:1},{target_type:3,effect_type:1,var:2},{target_type:2,effect_type:3,var:1}]}},HideFlags:1,display:{Name:'[{"text":"テストデバッグ1","italic":false,"color":"white"}]',Lore:['[{"text":"コスト10 解決数4","color":"gray","italic":false}]']}}
+## 発動タイミングとキーワード案
+
+## 0     20     40     60    80    100
+## 開幕 → 始刻 →      → 終刻 → 閉幕 →    
+##   即時 一刻 →  二刻 → 三刻 → 四刻 → 一幕
+
+give @p minecraft:red_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"attack1",cost:1,particle_laser:1,particle_self:1001,particle_look:1,effects:[{target_type:1,effect_type:1,var:1}]}},HideFlags:1,display:{Name:'[{"text":"1:軽い攻撃","italic":false,"color":"white"}]',Lore:['[{"text":"⌚1 ","color":"green","italic":false},{"text":"標敵に1ダメージ","color":"gray","italic":false}]']}}
+give @p minecraft:orange_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"test_debug1",cost:10,particle_laser:1,effects:[{target_type:1,effect_type:1,var:3},{target_type:2,effect_type:2,var:1},{target_type:3,effect_type:1,var:2},{target_type:2,effect_type:3,var:1}]}},HideFlags:1,display:{Name:'[{"text":"10:テストデバッグ1","italic":false,"color":"white"}]',Lore:['[{"text":"標敵に3ダメージ、自身を1回復","color":"gray","italic":false}]','[{"text":"全員に2ダメージ、ドロー1","color":"gray","italic":false}]']}}
 give @p minecraft:yellow_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"heal1",cost:1,particle_self:1002,effects:[{target_type:2,effect_type:2,var:1}]}},HideFlags:1,display:{Name:'[{"text":"1:軽い回復","italic":false,"color":"white"}]',Lore:['[{"text":"自分を１回復する","color":"gray","italic":false}]']}}
 give @p minecraft:lime_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"acc1",cost:2,effects:[{target_type:2,effect_type:1,var:4},{target_type:2,effect_type:3,var:2}]}},HideFlags:1,display:{Name:'[{"text":"2:加速","italic":false,"color":"white"}]',Lore:['[{"text":"自分に４ダメージ与え、２ドロー","color":"gray","italic":false}]']}}
 give @p minecraft:green_dye{tmw:{id:272,type:1,enableQ:1,cg:{name:"drain1",cost:3,effects:[{target_type:1,effect_type:1,var:2},{target_type:2,effect_type:2,var:2}]}},HideFlags:1,display:{Name:'[{"text":"3:吸収","italic":false,"color":"white"}]',Lore:['[{"text":"体力を2吸収する","color":"gray","italic":false}]']}}

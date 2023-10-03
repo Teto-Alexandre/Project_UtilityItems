@@ -1,6 +1,6 @@
 function ui:template/text_board/open
 
-data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"Your Stats: ","color":"white"}'
+data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"You: ","color":"white"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"HP:","color":"red"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@s","objective": "ui_tmw272_health"},"color":"red"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":", "}'
@@ -9,7 +9,7 @@ data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore 
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"/","color":"aqua"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@s","objective": "ui_tmw272_mana_max"},"color":"aqua"}'
 
-execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":" - Enemy Stats: ","color":"white"}'
+execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":" - Enemy: ","color":"white"}'
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"HP:","color":"red"}'
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@e[tag=tmw272_visual_input,limit=1]","objective": "ui_tmw272_health"},"color":"red"}'
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":", "}'

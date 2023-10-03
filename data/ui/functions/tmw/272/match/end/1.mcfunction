@@ -5,8 +5,4 @@ tellraw @a ["",{"selector":"@s"},{"text": "が戦線に勝利しました"}]
 particle dust 0 1 0 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 10 force
 playsound entity.wither.spawn player @a ~ ~ ~ 1 2 0
 
-scoreboard players reset @s ui_tmw272_link_id
-tag @s remove tmw272_active
-
-execute at @s run kill @e[type=item,tag=tmw272_dropitem_card,distance=..5]
-function ui:template/inventory/pull
+function ui:tmw/272/common/player_remove
