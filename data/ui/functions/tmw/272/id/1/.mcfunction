@@ -25,4 +25,4 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItem
 # カードは消す
 item replace entity @s weapon.mainhand with air
 
-scoreboard players set @s ui_ct 20
+#scoreboard players set @s ui_ct 20

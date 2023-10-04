@@ -11,7 +11,7 @@ scoreboard players operation @s ui_tmw272_link_id = $link_id ui_temp
 scoreboard players operation @e[tag=ui_temp_target,limit=1] ui_tmw272_link_id = $link_id ui_temp
 execute as @e[tag=tmw272_unpower] run function ui:misc/act/make_obj_id
 
-execute as @e[tag=tmw272_unpower] run scoreboard players set @s ui_is2 200
+execute as @e[tag=tmw272_unpower] run scoreboard players set @s ui_is2 201
 scoreboard objectives add ui_tmw272_match_round dummy
 execute as @e[tag=tmw272_unpower] run scoreboard players set @s ui_tmw272_match_round 0
 

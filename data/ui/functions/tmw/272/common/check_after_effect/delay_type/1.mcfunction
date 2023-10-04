@@ -1,0 +1,1 @@
+execute if score $delay ui_temp = $turn_time_rev ui_temp run scoreboard players set $check_after_effect ui_temp 1

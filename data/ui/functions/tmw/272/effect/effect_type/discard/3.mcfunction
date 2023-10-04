@@ -4,4 +4,4 @@ scoreboard players operation $condition_checker ui_temp += $condition_checker_te
 scoreboard players reset $condition_checker_temp ui_temp
 
 scoreboard players remove $var_temp ui_temp 1
-execute if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/4.3
+execute if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3
