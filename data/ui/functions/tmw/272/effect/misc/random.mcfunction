@@ -9,4 +9,5 @@ function ui:common/rand
 scoreboard players operation $rand ui_temp = $rand ui_calc1
 scoreboard players operation $rand ui_temp += $rand_min ui_temp
 
-execute if data storage ui:temp temp.effect.rand.to_var run scoreboard players operation $var ui_temp = $rand ui_temp
+##execute if data storage ui:temp temp.effect.rand.to_var run scoreboard players operation $var ui_temp = $rand ui_temp
+scoreboard players operation $var ui_temp = $rand ui_temp
