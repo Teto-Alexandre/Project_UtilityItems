@@ -43,9 +43,10 @@ execute if data storage ui:temp temp.effect{effect_type:"after_effect"} run func
 execute if data storage ui:temp temp.effect{effect_type:"health_averaging"} run function ui:tmw/272/effect/effect_type/health_averaging
 ## 体力入れ替え（全員の体力をランダムに入れ替え、変化なしにならないように）
 execute if data storage ui:temp temp.effect{effect_type:"health_swap"} run function ui:tmw/272/effect/effect_type/health_swap/
-## 様々な数値を $condition_checker に入力する
+## ターゲットの持つ様々な数値を $condition_checker に入力する
 execute if data storage ui:temp temp.effect{effect_type:"condition_input"} run function ui:tmw/272/effect/effect_type/condition_input/
-
+## $var を ターゲットの持つ様々な数値に出力する
+execute if data storage ui:temp temp.effect{effect_type:"modify_value"} run function ui:tmw/272/effect/effect_type/modify_value/
 ## マナの数値を加算する
 execute if data storage ui:temp temp.effect{effect_type:"mana"} run function ui:tmw/272/effect/effect_type/mana
 ## マナの最大値を加算する

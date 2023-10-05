@@ -42,6 +42,14 @@ scoreboard objectives add ui_tmw272_mana dummy
 scoreboard objectives add ui_tmw272_match_time dummy
 scoreboard objectives add ui_tmw272_duplication dummy
 
+# 拡張スコアも作成
+scoreboard objectives add ui_tmw272_self_hurt dummy
+scoreboard objectives add ui_tmw272_candle dummy
+scoreboard objectives add ui_tmw272_index_count dummy
+scoreboard objectives add ui_tmw272_more_attack_more dummy
+scoreboard objectives add ui_tmw272_curse dummy
+scoreboard objectives add ui_tmw272_blessing dummy
+
 # 初期ステータス設定
 execute as @s run function ui:tmw/272/id/-1/player
 execute as @e[tag=ui_temp_target,limit=1] run function ui:tmw/272/id/-1/player

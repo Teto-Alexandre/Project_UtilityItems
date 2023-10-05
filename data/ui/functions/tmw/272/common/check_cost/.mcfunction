@@ -14,6 +14,7 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 
 # コストタイプ別に参照
 execute if score $cost_type ui_temp matches 0 run function ui:tmw/272/common/check_cost/cost_type/0
+execute if score $cost_type ui_temp matches 1 run function ui:tmw/272/common/check_cost/cost_type/1/
 
 # キャッシュクリア
 scoreboard players reset $cost_type ui_temp

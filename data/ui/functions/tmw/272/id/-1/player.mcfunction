@@ -4,6 +4,13 @@ scoreboard players set @s ui_tmw272_mana 0
 scoreboard players set @s ui_tmw272_match_time 0
 scoreboard players set @s ui_tmw272_duplication 0
 
+scoreboard players set @s ui_tmw272_self_hurt 0
+scoreboard players set @s ui_tmw272_candle 0
+scoreboard players set @s ui_tmw272_index_count 0
+scoreboard players set @s ui_tmw272_more_attack_more 0
+scoreboard players set @s ui_tmw272_curse 0
+scoreboard players set @s ui_tmw272_blessing 0
+
 # OMDを取り出す
 function oh_my_dat:please
 
