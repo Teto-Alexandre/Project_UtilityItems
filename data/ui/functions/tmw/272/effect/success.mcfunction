@@ -39,7 +39,7 @@ scoreboard players reset $particle_laser ui_temp
 scoreboard players reset $particle ui_temp
 scoreboard players reset $condition_checker ui_temp
 scoreboard players reset $condition ui_temp
-scoreboard players reset $condition_type ui_temp
+scoreboard players reset $condition_id ui_temp
 scoreboard players reset $target_type ui_temp
 scoreboard players reset $effect_type ui_temp
 scoreboard players reset $hit_effect ui_temp

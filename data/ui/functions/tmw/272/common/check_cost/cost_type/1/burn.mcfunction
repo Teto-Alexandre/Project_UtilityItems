@@ -10,6 +10,8 @@ execute unless data storage ui:temp temp.mod.type run function ui:tmw/272/common
 execute if data storage ui:temp temp.mod{type:"advance_value"} run function ui:tmw/272/common/get_advance_value
 scoreboard players operation $cost_act ui_temp = $tmw272_get_value ui_temp
 
+#tellraw @a {"text":"a"}
+
 #
 scoreboard players reset $tmw272_get_value ui_temp
 

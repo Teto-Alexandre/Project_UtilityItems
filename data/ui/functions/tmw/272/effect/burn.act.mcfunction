@@ -4,7 +4,7 @@ execute store result score $target_type ui_temp run data get storage ui:temp tem
 #execute store result score $effect_type ui_temp run data get storage ui:temp temp.effect.effect_type 1
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random
-execute if data storage ui:temp temp.effect.input run function ui:tmw/272/effect/misc/input
+execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手

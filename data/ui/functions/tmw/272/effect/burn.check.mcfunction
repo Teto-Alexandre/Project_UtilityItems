@@ -6,13 +6,11 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 
 #
 scoreboard players set $condition ui_temp 0
-execute store result score $condition_type ui_temp run data get storage ui:temp temp.effect.condition_type 1
-execute if data storage ui:temp temp.effect.condition_type if data storage ui:temp temp.effect.condition_var store result score $condition_var ui_temp run data get storage ui:temp temp.effect.condition_var 1
-execute if data storage ui:temp temp.effect.condition_type unless data storage ui:temp temp.effect.condition_var run scoreboard players set $condition_var ui_temp 1
+execute store result score $condition_id ui_temp run data get storage ui:temp temp.effect.condition.id 1
 
 #
-execute if score $condition_type ui_temp matches 0 run scoreboard players set $condition ui_temp 1
-execute if score $condition_type ui_temp matches 1 run function ui:tmw/272/effect/condition_type/1
+execute if score $condition_id ui_temp matches 0 run scoreboard players set $condition ui_temp 1
+execute if score $condition_id ui_temp matches 1 run function ui:tmw/272/effect/condition_type/1
 
 #
 execute if score $condition ui_temp matches 1 run function ui:tmw/272/effect/burn.act
