@@ -1,24 +1,29 @@
-#data modify storage ui:temp temp.list2 set from storage ui:temp temp.list
-#tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"storage":"ui:temp","nbt":"temp.list2[0]"}]
+execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
+execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
+execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.StackUUID set from entity @e[tag=tmw272_temp_item,limit=1] UUID
+execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.IsCG1 set value 1
 
-#scoreboard players operation $mod ui_calc1 = $cg1_list_count ui_temp
-#function ui:common/rand
+execute if entity @s[type=player] if entity @e[tag=tmw272_temp_steal,type=!player] run data modify storage ui:temp temp.draw_card set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
 
-#execute if score $rand ui_calc1 matches 1.. run function ui:tmw/272/common/draw/burn
-#tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"storage":"ui:temp","nbt":"temp.list2[0]"}]
+execute if entity @s[type=!player] run data modify storage ui:temp temp.draw_card set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
 
-#execute store result score $cg1_list_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
-#execute unless score $cg1_list_count ui_temp matches 1.. run function ui:tmw/272/common/list_match/copy
-#execute unless score $cg1_list_count ui_temp matches 1.. run function ui:tmw/272/common/shuffle/
-
-summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
-data modify entity @e[tag=tmw272_temp_item,limit=1] Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
-data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.StackUUID set from entity @e[tag=tmw272_temp_item,limit=1] UUID
-data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.IsCG1 set value 1
-
-tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
+execute if entity @s[type=!player] if entity @e[tag=tmw272_temp_steal,type=player] run summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
+execute if entity @s[type=!player] if entity @e[tag=tmw272_temp_steal,type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
+execute if entity @s[type=!player] if entity @e[tag=tmw272_temp_steal,type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.StackUUID set from entity @e[tag=tmw272_temp_item,limit=1] UUID
+execute if entity @s[type=!player] if entity @e[tag=tmw272_temp_steal,type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.IsCG1 set value 1
 
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
+
+# 盗む？
+execute if entity @e[tag=tmw272_temp_steal,type=player] as @e[tag=tmw272_temp_steal] run tp @e[tag=tmw272_temp_item] @s
+execute if entity @e[tag=tmw272_temp_steal,type=!player] as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
+execute if entity @e[tag=tmw272_temp_steal,type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
+execute if entity @e[tag=tmw272_temp_steal,type=!player] run function oh_my_dat:please
+execute unless entity @e[tag=tmw272_temp_steal] if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
+
+# アイテムのタグ削除
+kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
+tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
 # カードプールがなくなったらボックスから補充を行う
 execute store result score $cg1_list_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match

@@ -1,0 +1,4 @@
+scoreboard players operation @s ui_tmw272_shield = @s ui_tmw272_shield_next
+scoreboard players set @s ui_tmw272_shield_next 0
+execute if score @s ui_tmw272_shield matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"【シールド】","color":"aqua"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"【シールド】","color":"aqua"},{"text": "が消滅した！"}]
+execute unless score @s ui_tmw272_shield matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"【シールド】","color":"aqua"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"【シールド】","color":"aqua"},{"text": "が"},{"score":{"name": "@s","objective": "ui_tmw272_shield"}},{"text": "になった！"}]

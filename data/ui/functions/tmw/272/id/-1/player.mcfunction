@@ -10,6 +10,15 @@ scoreboard players set @s ui_tmw272_index_count 0
 scoreboard players set @s ui_tmw272_more_attack_more 0
 scoreboard players set @s ui_tmw272_curse 0
 scoreboard players set @s ui_tmw272_blessing 0
+scoreboard players set @s ui_tmw272_shield 0
+scoreboard players set @s ui_tmw272_shield_next 0
+scoreboard players set @s ui_tmw272_seeds 0
+scoreboard players set @s ui_tmw272_crops 0
+scoreboard players set @s ui_tmw272_bullet 0
+
+scoreboard players set @s ui_tmw272_temp1 0
+scoreboard players set @s ui_tmw272_temp2 0
+scoreboard players set @s ui_tmw272_temp3 0
 
 # OMDを取り出す
 function oh_my_dat:please

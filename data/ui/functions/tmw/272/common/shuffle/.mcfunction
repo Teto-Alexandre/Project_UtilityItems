@@ -5,17 +5,17 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 function oh_my_dat:please
 
 #
-data modify storage ui:temp temp.list set value []
+data modify storage ui:temp temp.temp.list set value []
 execute store result score $cg1_list_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
 
 #
 function ui:tmw/272/common/shuffle/1.randget
 
 #
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match set from storage ui:temp temp.list
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match set from storage ui:temp temp.temp.list
 
 #
-data remove storage ui:temp temp
+data remove storage ui:temp temp.temp
 
 # IDをクリア
     scoreboard players reset $cg1_list_count ui_temp

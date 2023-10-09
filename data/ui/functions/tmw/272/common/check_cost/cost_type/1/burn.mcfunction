@@ -3,6 +3,7 @@ data modify storage ui:temp temp.mod set from storage ui:temp temp.mods[0]
 
 #
 data modify storage ui:tmw272 temp.input set from storage ui:temp temp.mod.name
+execute if data storage ui:temp temp.mod.mute run data modify storage ui:tmw272 temp.mute set value 1
 
 #
 tellraw @s[scores={ui_tmw601_accessory=5007}] [{"storage":"ui:temp","nbt":"temp.mod"}]
@@ -22,9 +23,9 @@ execute if score $cost_pow ui_temp matches 2.. run scoreboard players remove $co
 execute if score $cost_pow ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/1/pow
 
 # mult
-execute store result score $cost_mult ui_temp run data get storage ui:temp temp.mod.mult 10
+execute store result score $cost_mult ui_temp run data get storage ui:temp temp.mod.mult 100
 execute unless score $cost_mult ui_temp matches 0 run scoreboard players operation $cost_act ui_temp *= $cost_mult ui_temp
-execute unless score $cost_mult ui_temp matches 0 run scoreboard players operation $cost_act ui_temp /= #10 ui_num
+execute unless score $cost_mult ui_temp matches 0 run scoreboard players operation $cost_act ui_temp /= #100 ui_num
 
 # add
 execute store result score $cost_add ui_temp run data get storage ui:temp temp.mod.add 1
@@ -36,6 +37,7 @@ scoreboard players operation $cost ui_temp += $cost_act ui_temp
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
 
 #
+scoreboard players reset $cost_act_temp ui_temp
 scoreboard players reset $cost_pow ui_temp
 scoreboard players reset $cost_mult ui_temp
 scoreboard players reset $cost_add ui_temp

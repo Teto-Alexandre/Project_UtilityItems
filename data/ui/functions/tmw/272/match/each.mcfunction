@@ -18,12 +18,13 @@ tag @s add tmw272_active_match
 execute if entity @s[tag=!tmw272_match_init] run function ui:tmw/272/match/periodic/init
 
 # 時間経過ごとに通知
-execute if score $turn_time ui_temp matches 30 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $turn_time ui_temp matches 20 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $turn_time ui_temp matches 10 run playsound entity.experience_orb.pickup player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 30 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 20 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 10 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
 execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/periodic/turn
 
-## エンティティはここで動かす
+## <== エンティティはここで動かす
+execute as @e[tag=ui_temp_players,type=!player] run function ui:tmw/272/match/entity/
 
 # プレイヤーごとに実行する常在効果
 execute as @e[tag=ui_temp_players] run function ui:tmw/272/match/player/

@@ -1,5 +1,6 @@
 # ターゲット全員で体力を平均化する
 function ui:tmw/272/common/count_targets
+scoreboard players remove $count_targets ui_temp 1
 
 function ui:tmw/272/effect/effect_type/health_swap/loop
 

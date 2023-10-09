@@ -1,4 +1,4 @@
-execute if score @s ui_is2 matches 5.. run particle dust 1 1 1 1.5 ~ ~ ~ 0 0 0 0 1 force
+execute unless score @s ui_is2 matches 1..4 run particle dust 1 1 1 1.5 ~ ~ ~ 0 0 0 0 1 force
 execute if score @s ui_is2 matches 1 run particle dust 0 1 1 1.5 ~ ~ ~ 0 0 0 0 1 force
 execute if score @s ui_is2 matches 2 run particle dust 1 0 1 1.5 ~ ~ ~ 0 0 0 0 1 force
 execute if score @s ui_is2 matches 3 run particle dust 1 1 0 1.5 ~ ~ ~ 0 0 0 0 1 force

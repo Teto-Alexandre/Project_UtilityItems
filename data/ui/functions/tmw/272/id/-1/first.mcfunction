@@ -49,6 +49,16 @@ scoreboard objectives add ui_tmw272_index_count dummy
 scoreboard objectives add ui_tmw272_more_attack_more dummy
 scoreboard objectives add ui_tmw272_curse dummy
 scoreboard objectives add ui_tmw272_blessing dummy
+scoreboard objectives add ui_tmw272_shield dummy
+scoreboard objectives add ui_tmw272_shield_next dummy
+scoreboard objectives add ui_tmw272_seeds dummy
+scoreboard objectives add ui_tmw272_crops dummy
+scoreboard objectives add ui_tmw272_bullet dummy
+
+# ユーザー用一次変数
+scoreboard objectives add ui_tmw272_temp1 dummy
+scoreboard objectives add ui_tmw272_temp2 dummy
+scoreboard objectives add ui_tmw272_temp3 dummy
 
 # 初期ステータス設定
 execute as @s run function ui:tmw/272/id/-1/player

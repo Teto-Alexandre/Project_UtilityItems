@@ -24,7 +24,7 @@ execute if score $count ui_temp matches 1.. run function ui:tmw/272/effect/burn.
 execute if score $particle_self ui_temp matches 1.. positioned as @s run function ui:tmw/272/effect/particle_type/self
 execute if score $particle_look ui_temp matches 1.. positioned as @e[tag=tmw272_visual_input] run function ui:tmw/272/effect/particle_type/look
 execute if score $particle_other ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old,tag=!ui_temp_player,tag=!tmw272_visual_input] run function ui:tmw/272/effect/particle_type/other
-execute if score $particle_target ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old,tag=!ui_temp_player] run function ui:tmw/272/effect/particle_type/target
+execute if score $particle_target ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old] run function ui:tmw/272/effect/particle_type/target
 execute if score $particle_laser ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old,tag=!ui_temp_player] run function ui:tmw/272/effect/particle_type/laser
 
 # 一連のターゲットを削除

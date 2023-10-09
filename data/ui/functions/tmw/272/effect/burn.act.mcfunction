@@ -4,7 +4,7 @@ execute store result score $target_type ui_temp run data get storage ui:temp tem
 #execute store result score $effect_type ui_temp run data get storage ui:temp temp.effect.effect_type 1
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random
-execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input
+execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
@@ -21,12 +21,14 @@ execute if score $target_type ui_temp matches 5 run function ui:tmw/272/effect/t
 execute if score $target_type ui_temp matches 6 run function ui:tmw/272/effect/target_type/6
 ## target_ids:[] で指名
 execute if score $target_type ui_temp matches 7 run function ui:tmw/272/effect/target_type/7/
+## 自分とVEで見ている相手
+execute if score $target_type ui_temp matches 8 run function ui:tmw/272/effect/target_type/8
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
 # ターゲットを対象に取ってエフェクトを実行する
 ## ダメージ　未実装（condition_checker:タゲの現在の体力「最大・最小」）
-execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage
+execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
 ## 回復　未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal
 ## ドロー　未実装（condition_checker:手札枚数「最大・最小・合計」）

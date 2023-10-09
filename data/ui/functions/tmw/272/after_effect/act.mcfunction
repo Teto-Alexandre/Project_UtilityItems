@@ -23,5 +23,5 @@ data remove storage ui:temp card
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0]
 
 # まだあるなら - 次のエフェクトに移動
-scoreboard players remove $count ui_temp 1
-execute if score $count ui_temp matches 1.. run function ui:tmw/272/after_effect/act
+scoreboard players remove $count_active_effects ui_temp 1
+execute if score $count_active_effects ui_temp matches 1.. run function ui:tmw/272/after_effect/act

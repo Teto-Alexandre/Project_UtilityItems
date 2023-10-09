@@ -1,0 +1,2 @@
+scoreboard players operation @s ui_tmw272_health -= @s ui_tmw272_curse
+tellraw @a[tag=ui_temp_players] ["",{"text":"【呪い】","color":"light_purple"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"score":{"name": "@s","objective": "ui_tmw272_curse"}},{"text": "ダメージ！"}]

@@ -22,3 +22,6 @@ execute if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272
     scoreboard players reset $cg1_list_count ui_temp
     scoreboard players reset $cg1_common_draw_type ui_temp
     scoreboard players reset $cg1_common_draw_num ui_temp
+
+#
+    data remove storage ui:temp temp.draw_card

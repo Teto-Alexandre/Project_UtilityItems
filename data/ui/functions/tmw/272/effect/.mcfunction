@@ -24,6 +24,9 @@ function ui:tmw/272/common/check_cost/
 # テキストボードを閉じる
 #function ui:template/text_board/close
 
+# 他のプレイヤーの OMD かもしれないので呼び戻す
+function oh_my_dat:please
+
 # キャッシュクリア
 scoreboard players reset $broadcast_type ui_temp
 scoreboard players reset $check_cost ui_temp
