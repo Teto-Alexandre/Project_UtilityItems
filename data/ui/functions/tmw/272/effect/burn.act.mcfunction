@@ -30,7 +30,7 @@ execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scor
 ## ダメージ　未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
 ## 回復　未実装（condition_checker:タゲの現在の体力「最大・最小」）
-execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal
+execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal/
 ## ドロー　未実装（condition_checker:手札枚数「最大・最小・合計」）
 execute if data storage ui:temp temp.effect{effect_type:"draw"} run function ui:tmw/272/effect/effect_type/draw/
 ## 捨てる（condition_checker:捨てた枚数）

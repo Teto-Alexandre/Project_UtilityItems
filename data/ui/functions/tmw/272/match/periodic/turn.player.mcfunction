@@ -9,10 +9,9 @@ execute if score @e[tag=tmw272_active_match,limit=1] ui_tmw272_match_round match
 
 execute unless score @s ui_tmw272_blessing matches 0 run function ui:tmw/272/match/periodic/blessing
 execute unless score @s ui_tmw272_curse matches 0 run function ui:tmw/272/match/periodic/curse
-
-#execute if score @s ui_tmw272_hunger matches 1..
-#execute if score @s ui_tmw272_burn matches 1..
-#execute if score @s ui_tmw272_speed matches 1..
+execute if score @s ui_tmw272_hunger matches 1.. run function ui:tmw/272/match/periodic/hunger
+execute if score @s ui_tmw272_burn matches 1.. run function ui:tmw/272/match/periodic/burn
+execute if score @s ui_tmw272_speed matches 1.. run function ui:tmw/272/match/periodic/speed
 #execute if score @s ui_tmw272_attack matches 1..
 #execute if score @s ui_tmw272_poison matches 1..
 #execute if score @s ui_tmw272_invisible matches 1..

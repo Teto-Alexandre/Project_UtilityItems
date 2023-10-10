@@ -16,6 +16,9 @@ function ui:tmw/272/common/check_cost/
 # 使用可能だった場合
     execute if score $check_cost ui_temp matches 1.. run function ui:tmw/272/effect/success
 
+# 他のプレイヤーの OMD かもしれないので呼び戻す
+function oh_my_dat:please
+
 # キャッシュクリア
 scoreboard players reset $broadcast_type ui_temp
 scoreboard players reset $check_cost ui_temp
