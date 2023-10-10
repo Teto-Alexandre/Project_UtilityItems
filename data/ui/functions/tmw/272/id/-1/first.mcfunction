@@ -55,6 +55,27 @@ scoreboard objectives add ui_tmw272_seeds dummy
 scoreboard objectives add ui_tmw272_crops dummy
 scoreboard objectives add ui_tmw272_bullet dummy
 
+scoreboard objectives add ui_tmw272_slowness dummy
+scoreboard objectives add ui_tmw272_hunger dummy
+scoreboard objectives add ui_tmw272_burn dummy
+scoreboard objectives add ui_tmw272_speed dummy
+scoreboard objectives add ui_tmw272_attack dummy
+scoreboard objectives add ui_tmw272_poison dummy
+scoreboard objectives add ui_tmw272_invisible dummy
+scoreboard objectives add ui_tmw272_regeneration dummy
+scoreboard objectives add ui_tmw272_unluck dummy
+scoreboard objectives add ui_tmw272_darkness dummy
+scoreboard objectives add ui_tmw272_resistance dummy
+scoreboard objectives add ui_tmw272_fire_resistance dummy
+scoreboard objectives add ui_tmw272_flying dummy
+scoreboard objectives add ui_tmw272_trade dummy
+scoreboard objectives add ui_tmw272_nausea dummy
+scoreboard objectives add ui_tmw272_bleed dummy
+scoreboard objectives add ui_tmw272_blindness dummy
+scoreboard objectives add ui_tmw272_glowing dummy
+scoreboard objectives add ui_tmw272_luck dummy
+scoreboard objectives add ui_tmw272_wither dummy
+
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy
 scoreboard objectives add ui_tmw272_temp2 dummy

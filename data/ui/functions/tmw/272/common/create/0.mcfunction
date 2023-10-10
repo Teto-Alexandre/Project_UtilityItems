@@ -1,3 +1,5 @@
+function oh_my_dat:please
+
 execute if entity @s[type=player] run summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.id set from storage ui:cg1 temp.list[0].id
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag set from storage ui:cg1 temp.list[0].tag
@@ -5,6 +7,9 @@ execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.IsCG1 set value 1
 
 execute if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:cg1 temp.list[0]
+
+# 引いた時の効果を AfterEffect に追加
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect
 
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item

@@ -1,4 +1,5 @@
 # 数値を入れる
+## 固定値モード
 execute if data storage ui:tmw272 temp{input:"health"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana_max"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_max = $var ui_temp
@@ -16,12 +17,36 @@ execute if data storage ui:tmw272 temp{input:"shield_next"} if data storage ui:t
 execute if data storage ui:tmw272 temp{input:"seeds"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_seeds = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"crops"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_crops = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"bullet"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_bullet = $var ui_temp
+
+execute if data storage ui:tmw272 temp{input:"slowness"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_slowness = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"hunger"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_hunger = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"burn"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_burn = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"speed"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_speed = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"attack"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_attack = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"poison"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_poison = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"invisible"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_invisible = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"regeneration"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_regeneration = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"unluck"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_unluck = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"darkness"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_darkness = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"resistance"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_resistance = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"fire_resistance"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_fire_resistance = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"flying"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_flying = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"trade"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_trade = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"nausea"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_nausea = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"bleed"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_bleed = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"blindness"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_blindness = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"glowing"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_glowing = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"luck"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_luck = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"wither"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_wither = $var ui_temp
+
 execute if data storage ui:tmw272 temp{input:"turn_count"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat int 1 run scoreboard players get $var ui_temp
+
 execute if data storage ui:tmw272 temp{input:"temp1"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp1 = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"temp2"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp2 = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"temp3"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp3 = $var ui_temp
 
+## 加算モード
 execute if data storage ui:tmw272 temp{input:"health"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana_max"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_max += $var ui_temp
@@ -39,18 +64,41 @@ execute if data storage ui:tmw272 temp{input:"shield_next"} unless data storage 
 execute if data storage ui:tmw272 temp{input:"seeds"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_seeds += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"crops"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_crops += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"bullet"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_bullet += $var ui_temp
+
+execute if data storage ui:tmw272 temp{input:"slowness"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_slowness += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"hunger"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_hunger += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"burn"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_burn += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"speed"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_speed += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"attack"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_attack += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"poison"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_poison += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"invisible"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_invisible += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"regeneration"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_regeneration += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"unluck"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_unluck += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"darkness"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_darkness += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"resistance"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_resistance += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"fire_resistance"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_fire_resistance += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"flying"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_flying += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"trade"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_trade += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"nausea"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_nausea += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"bleed"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_bleed += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"blindness"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_blindness += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"glowing"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_glowing += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"luck"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_luck += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"wither"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_wither += $var ui_temp
+
 execute if data storage ui:tmw272 temp{input:"turn_count"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round += $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $repeat ui_temp run data get storage ui:temp temp.card.repeat
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat int 1 run scoreboard players operation $repeat ui_temp = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run scoreboard players reset $repeat ui_temp
+
 execute if data storage ui:tmw272 temp{input:"temp1"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp1 += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"temp2"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp2 += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"temp3"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_temp3 += $var ui_temp
 
 # フィードバック
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"health"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"HP","color":"red"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_health"}},{"text":"になった！"}]
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"Mana","color":"aqua"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_mana"}},{"text":"になった！"}]
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana_max"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"Mana_Max","color":"aqua"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_mana_max"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"health"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"体力","color":"red"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_health"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"マナ","color":"aqua"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_mana"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana_max"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"最大マナ","color":"aqua"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_mana_max"}},{"text":"になった！"}]
 #execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"var"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"text":"単独変数"},{"text":"が"},{"score":{"name": "$var","objective": "ui_temp"}},{"text":"になった！"}]
 #execute unless data storage ui:tmw272 temp.mute if @s storage ui:tmw272 ui_temp{input:"rand"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"text":"ランダム値"},{"text":"が"},{"score":{"name": "$var","objective": "ui_temp"}},{"text":"になった！"}]
 #execute unless data storage ui:tmw272 temp.mute if @s storage ui:tmw272 ui_temp{input:"hand_num"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"手札枚数"},{"text":"が"},{"score":{"name": "$var","objective": @s"}},{"text":"var"}]
@@ -65,6 +113,28 @@ execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{i
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"seeds"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"苗","color":"green"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_seeds"}},{"text":"になった！"}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"crops"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"作物","color":"green"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_crops"}},{"text":"になった！"}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"bullet"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"弾丸","color":"#aaaa00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_bullet"}},{"text":"になった！"}]
+
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"slowness"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"鈍足","color":"#00aaaa"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_slowness"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"hunger"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"空腹","color":"#aa6600"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_hunger"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"burn"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"燃焼","color":"#ffaa00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_burn"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"speed"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"速度","color":"#00ffaa"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_speed"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"attack"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"攻撃","color":"red"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_attack"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"poison"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"毒","color":"#00aa00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_poison"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"invisible"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"透明化","color":"white"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_invisible"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"regeneration"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"再生","color":"#ffcc66"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_regeneration"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"unluck"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"不運","color":"#cccc00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_unluck"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"darkness"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"暗闇","color":"#0066cc"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_darkness"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"resistance"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"耐性","color":"blue"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_resistance"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"fire_resistance"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"火炎耐性","color":"#ffaa00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_fire_resistance"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"flying"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"飛行","color":"#0099ff"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_flying"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"trade"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"取引","color":"#66ff66"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_trade"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"nausea"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"酩酊","color":"#cccc66"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_nausea"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"bleed"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"出血","color":"red"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_bleed"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"blindness"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"盲目","color":"black"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_blindness"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"glowing"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"発光","color":"gold"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_glowing"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"luck"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"幸運","color":"green"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_luck"}},{"text":"になった！"}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"wither"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"枯渇","color":"dark_gray"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_wither"}},{"text":"になった！"}]
+
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"turn_count"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"text":"経過ターン数","color":"gray"},{"text":"が"},{"score":{"name": "@e[tag=tmw272_active_match,limit=1]","objective": "ui_tmw272_match_round"}},{"text":"になった！"}]
 #execute if data storage ui:tmw272 temp{input:"repeat"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"text":"リピート数","color":"gray"},{"text":"が"},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat"},{"text":"になった！"}]
 

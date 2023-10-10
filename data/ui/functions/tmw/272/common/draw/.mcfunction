@@ -13,7 +13,7 @@ function oh_my_dat:please
 execute store result score $cg1_list_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
 
 #
-execute if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/draw/0
+execute if score $cg1_common_draw_type ui_temp matches 0 if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
 
 #
 #data remove storage ui:temp temp

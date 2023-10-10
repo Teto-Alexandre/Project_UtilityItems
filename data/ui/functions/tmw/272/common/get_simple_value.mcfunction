@@ -16,6 +16,28 @@ execute if data storage ui:tmw272 temp{input:"shield_next"} run scoreboard playe
 execute if data storage ui:tmw272 temp{input:"seeds"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_seeds
 execute if data storage ui:tmw272 temp{input:"crops"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_crops
 execute if data storage ui:tmw272 temp{input:"bullet"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_bullet
+
+execute if data storage ui:tmw272 temp{input:"slowness"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_slowness
+execute if data storage ui:tmw272 temp{input:"hunger"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_hunger
+execute if data storage ui:tmw272 temp{input:"burn"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_burn
+execute if data storage ui:tmw272 temp{input:"speed"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_speed
+execute if data storage ui:tmw272 temp{input:"attack"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_attack
+execute if data storage ui:tmw272 temp{input:"poison"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_poison
+execute if data storage ui:tmw272 temp{input:"invisible"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_invisible
+execute if data storage ui:tmw272 temp{input:"regeneration"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_regeneration
+execute if data storage ui:tmw272 temp{input:"unluck"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_unluck
+execute if data storage ui:tmw272 temp{input:"darkness"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_darkness
+execute if data storage ui:tmw272 temp{input:"resistance"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_resistance
+execute if data storage ui:tmw272 temp{input:"fire_resistance"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_fire_resistance
+execute if data storage ui:tmw272 temp{input:"flying"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_flying
+execute if data storage ui:tmw272 temp{input:"trade"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_trade
+execute if data storage ui:tmw272 temp{input:"nausea"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_nausea
+execute if data storage ui:tmw272 temp{input:"bleed"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_bleed
+execute if data storage ui:tmw272 temp{input:"blindness"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_blindness
+execute if data storage ui:tmw272 temp{input:"glowing"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_glowing
+execute if data storage ui:tmw272 temp{input:"luck"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_luck
+execute if data storage ui:tmw272 temp{input:"wither"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_wither
+
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat
 
@@ -25,9 +47,9 @@ execute if data storage ui:tmw272 temp{input:"temp3"} run scoreboard players ope
 execute if data storage ui:tmw272 temp{input:"condition"} run scoreboard players operation $tmw272_get_value ui_temp = $condition_checker ui_temp
 
 # フィードバック
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"health"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"HP","color":"red"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"Mana","color":"aqua"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
-execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana_max"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"Mana_Max","color":"aqua"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"health"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"体力","color":"red"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"マナ","color":"aqua"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"mana_max"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"最大マナ","color":"aqua"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 #execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"var"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"text":"単独変数"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 #execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"rand"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"text":"ランダム値"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"hand_num"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"手札枚数"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
@@ -42,6 +64,28 @@ execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{i
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"seeds"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"苗","color":"green"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"crops"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"作物","color":"green"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"bullet"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"弾丸","color":"#aaaa00"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"slowness"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"鈍足","color":"#00aaaa"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"hunger"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"空腹","color":"#aa6600"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"burn"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"燃焼","color":"#ffaa00"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"speed"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"速度","color":"#00ffaa"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"attack"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"攻撃","color":"red"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"poison"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"毒","color":"#00aa00"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"invisible"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"透明化","color":"white"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"regeneration"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"再生","color":"#ffcc66"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"unluck"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"不運","color":"#cccc00"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"darkness"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"暗闇","color":"#0066cc"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"resistance"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"耐性","color":"blue"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"fire_resistance"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"火炎耐性","color":"#ffaa00"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"flying"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"飛行","color":"#0099ff"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"trade"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"取引","color":"#66ff66"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"nausea"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"酩酊","color":"#cccc66"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"bleed"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"出血","color":"red"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"blindness"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"盲目","color":"black"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"glowing"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"発光","color":"gold"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"luck"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"幸運","color":"green"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"wither"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"枯渇","color":"dark_gray"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
+
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"turn_count"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"text":"経過ターン数","color":"gray"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"repeat"} run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"text":"この効果の発動数","color":"gray"},{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
 
