@@ -6,6 +6,11 @@ execute store result score $var ui_temp run data get storage ui:temp temp.effect
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/
 
+execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
+execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
+execute if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
+execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
+
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
 execute if score $target_type ui_temp matches 1 run function ui:tmw/272/effect/target_type/1
@@ -26,16 +31,18 @@ execute if score $target_type ui_temp matches 8 run function ui:tmw/272/effect/t
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
+tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
+
 # ターゲットを対象に取ってエフェクトを実行する
-## ダメージ　未実装（condition_checker:タゲの現在の体力「最大・最小」）
+## ダメージ  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
-## 回復　未実装（condition_checker:タゲの現在の体力「最大・最小」）
+## 回復  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal/
-## ドロー　未実装（condition_checker:手札枚数「最大・最小・合計」）
+## ドロー  未実装（condition_checker:手札枚数「最大・最小・合計」）
 execute if data storage ui:temp temp.effect{effect_type:"draw"} run function ui:tmw/272/effect/effect_type/draw/
 ## 捨てる（condition_checker:捨てた枚数）
 execute if data storage ui:temp temp.effect{effect_type:"discard"} run function ui:tmw/272/effect/effect_type/discard/
-## 仮想デッキドロー　未実装（condition_checker:手札枚数「最大・最小・合計」）
+## 仮想デッキドロー  未実装（condition_checker:手札枚数「最大・最小・合計」）
 execute if data storage ui:temp temp.effect{effect_type:"create"} run function ui:tmw/272/effect/effect_type/create/
 ## 効果反復
 execute if data storage ui:temp temp.effect{effect_type:"duplication"} run function ui:tmw/272/effect/effect_type/duplication

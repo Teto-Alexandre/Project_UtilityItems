@@ -1,3 +1,6 @@
+# 出血チェック
+execute if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/effect/misc/bleed
+
 # 使用成功した場合
 data modify storage ui:temp temp.card set from storage ui:temp card
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects

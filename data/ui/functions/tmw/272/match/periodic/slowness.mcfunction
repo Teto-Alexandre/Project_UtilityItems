@@ -1,0 +1,2 @@
+scoreboard players remove @s ui_tmw272_slowness 1
+tellraw @a[tag=ui_temp_players] ["",{"text":"【鈍足】","color":"#00aaaa"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"鈍足","color":"#00aaaa"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_slowness"}},{"text": "になった！"}]

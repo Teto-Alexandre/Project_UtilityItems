@@ -1,0 +1,2 @@
+scoreboard players remove @s ui_tmw272_nausea 1
+tellraw @a[tag=ui_temp_players] ["",{"text":"【酩酊】","color":"#cccc66"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"酩酊","color":"#cccc66"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_nausea"}},{"text": "になった！"}]

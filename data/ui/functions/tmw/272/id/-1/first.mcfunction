@@ -59,7 +59,7 @@ scoreboard objectives add ui_tmw272_slowness dummy
 scoreboard objectives add ui_tmw272_hunger dummy
 scoreboard objectives add ui_tmw272_burn dummy
 scoreboard objectives add ui_tmw272_speed dummy
-scoreboard objectives add ui_tmw272_attack dummy
+scoreboard objectives add ui_tmw272_strength dummy
 scoreboard objectives add ui_tmw272_poison dummy
 scoreboard objectives add ui_tmw272_invisible dummy
 scoreboard objectives add ui_tmw272_regeneration dummy

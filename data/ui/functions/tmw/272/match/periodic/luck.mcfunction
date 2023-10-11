@@ -1,0 +1,2 @@
+scoreboard players remove @s ui_tmw272_luck 1
+tellraw @a[tag=ui_temp_players] ["",{"text":"【幸運】","color":"green"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"幸運","color":"green"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_luck"}},{"text": "になった！"}]

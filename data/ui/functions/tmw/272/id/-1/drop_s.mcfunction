@@ -15,15 +15,15 @@ execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Lock se
 execute as @e[tag=tmw272_temp_unpower] at @s run scoreboard players operation @s ui_id = $id ui_temp
 
 # ドロッパーの中に呼び出したデッキリストを入れる
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[8] set from storage ui:temp temp2.list[8]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[7] set from storage ui:temp temp2.list[7]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[6] set from storage ui:temp temp2.list[6]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[5] set from storage ui:temp temp2.list[5]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[4] set from storage ui:temp temp2.list[4]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[3] set from storage ui:temp temp2.list[3]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[2] set from storage ui:temp temp2.list[2]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[1] set from storage ui:temp temp2.list[1]
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[0] set from storage ui:temp temp2.list[0]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[8] set from storage ui:temp temp2.list[{Slot:8b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[7] set from storage ui:temp temp2.list[{Slot:7b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[6] set from storage ui:temp temp2.list[{Slot:6b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[5] set from storage ui:temp temp2.list[{Slot:5b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[4] set from storage ui:temp temp2.list[{Slot:4b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[3] set from storage ui:temp temp2.list[{Slot:3b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[2] set from storage ui:temp temp2.list[{Slot:2b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[1] set from storage ui:temp temp2.list[{Slot:1b}]
+execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Items[0] set from storage ui:temp temp2.list[{Slot:0b}]
 execute as @e[tag=tmw272_temp_unpower] at @s if block ~ ~ ~ dropper{Items:[{Slot:0b,tag:{ui:{ismenu:1}}}]} run item replace block ~ ~ ~ container.0 with air
 execute as @e[tag=tmw272_temp_unpower] at @s if block ~ ~ ~ dropper{Items:[{Slot:1b,tag:{ui:{ismenu:1}}}]} run item replace block ~ ~ ~ container.1 with air
 execute as @e[tag=tmw272_temp_unpower] at @s if block ~ ~ ~ dropper{Items:[{Slot:2b,tag:{ui:{ismenu:1}}}]} run item replace block ~ ~ ~ container.2 with air

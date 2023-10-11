@@ -6,6 +6,24 @@ data modify storage ui:temp temp set from entity @a[tag=ui_temp_player,limit=1] 
 tag @s add tmw272_temp_unpower
 
 # ドロッパーの中に呼び出したデッキリストを入れる
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:0b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:1b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:2b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:3b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:4b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:5b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:6b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:7b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:8b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:0b}].tag.IsCG1 run item replace block ~ ~ ~ container.0 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:1b}].tag.IsCG1 run item replace block ~ ~ ~ container.1 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:2b}].tag.IsCG1 run item replace block ~ ~ ~ container.2 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:3b}].tag.IsCG1 run item replace block ~ ~ ~ container.3 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:4b}].tag.IsCG1 run item replace block ~ ~ ~ container.4 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:5b}].tag.IsCG1 run item replace block ~ ~ ~ container.5 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:6b}].tag.IsCG1 run item replace block ~ ~ ~ container.6 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:7b}].tag.IsCG1 run item replace block ~ ~ ~ container.7 with air
+execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:8b}].tag.IsCG1 run item replace block ~ ~ ~ container.8 with air
 execute as @e[tag=tmw272_temp_unpower] at @s run data modify storage ui:temp temp.cg.list[0] set from block ~ ~ ~ Items[0]
 execute as @e[tag=tmw272_temp_unpower] at @s run data modify storage ui:temp temp.cg.list[1] set from block ~ ~ ~ Items[1]
 execute as @e[tag=tmw272_temp_unpower] at @s run data modify storage ui:temp temp.cg.list[2] set from block ~ ~ ~ Items[2]

@@ -20,7 +20,7 @@ scoreboard players set @s ui_tmw272_slowness 0
 scoreboard players set @s ui_tmw272_hunger 0
 scoreboard players set @s ui_tmw272_burn 0
 scoreboard players set @s ui_tmw272_speed 0
-scoreboard players set @s ui_tmw272_attack 0
+scoreboard players set @s ui_tmw272_strength 0
 scoreboard players set @s ui_tmw272_poison 0
 scoreboard players set @s ui_tmw272_invisible 0
 scoreboard players set @s ui_tmw272_regeneration 0

@@ -16,8 +16,10 @@ data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_mat
 execute if entity @e[tag=tmw272_temp_steal,type=player] as @e[tag=tmw272_temp_steal] run tp @e[tag=tmw272_temp_item] @s
 execute if entity @e[tag=tmw272_temp_steal,type=!player] as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 execute if entity @e[tag=tmw272_temp_steal,type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
+execute if entity @e[tag=tmw272_temp_steal,type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[-1].tag.IsCG1 set value 1
 execute if entity @e[tag=tmw272_temp_steal,type=!player] run function oh_my_dat:please
 execute unless entity @e[tag=tmw272_temp_steal] if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
+execute unless entity @e[tag=tmw272_temp_steal] if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[-1].tag.IsCG1 set value 1
 
 # 引いた時の効果を AfterEffect に追加
 execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
