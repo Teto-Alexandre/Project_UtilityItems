@@ -1,2 +1,0 @@
-scoreboard players remove @s ui_tmw272_fire_resistance 1
-tellraw @a[tag=ui_temp_players] ["",{"text":"【火炎耐性】","color":"#ff6600"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"火炎耐性","color":"#ff6600"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_fire_resistance"}},{"text": "になった！"}]

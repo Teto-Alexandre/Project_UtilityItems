@@ -1,2 +1,0 @@
-scoreboard players remove @s ui_tmw272_invisible 1
-tellraw @a[tag=ui_temp_players] ["",{"text":"【透明化】","color":"white"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"透明化","color":"white"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_invisible"}},{"text": "になった！"}]

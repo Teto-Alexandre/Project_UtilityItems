@@ -1,2 +1,0 @@
-scoreboard players remove @s ui_tmw272_trade 1
-tellraw @a[tag=ui_temp_players] ["",{"text":"【取引】","color":"#66ff66"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"取引","color":"#66ff66"},{"text": "がリセットされた！"}]

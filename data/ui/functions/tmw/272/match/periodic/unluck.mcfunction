@@ -1,2 +1,0 @@
-scoreboard players remove @s ui_tmw272_unluck 1
-tellraw @a[tag=ui_temp_players] ["",{"text":"【不運】","color":"#cccc00"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"不運","color":"#cccc00"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_unluck"}},{"text": "になった！"}]

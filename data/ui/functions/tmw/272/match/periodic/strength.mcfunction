@@ -1,2 +1,0 @@
-scoreboard players set @s ui_tmw272_strength 0
-tellraw @a[tag=ui_temp_players] ["",{"text":"【攻撃力】","color":"red"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"攻撃力","color":"red"},{"text": "が元に戻った！"}]

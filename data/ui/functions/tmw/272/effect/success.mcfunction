@@ -1,6 +1,3 @@
-# 出血チェック
-execute if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/effect/misc/bleed
-
 # 使用成功した場合
 data modify storage ui:temp temp.card set from storage ui:temp card
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects
@@ -21,6 +18,10 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 # カード発動（説明文表示のために多数分岐）
 function ui:tmw/272/effect/broadcast/
 
+# 出血チェック
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/effect/misc/bleed
+
+# effect消化に移行
 execute if score $count ui_temp matches 1.. run function ui:tmw/272/effect/burn.check
 
 # パーティクル
