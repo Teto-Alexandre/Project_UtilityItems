@@ -3,8 +3,6 @@ function oh_my_dat:please
 data modify storage ui:cg1 temp.list[0].Count set value 1
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match prepend from storage ui:cg1 temp.list[0]
 
-tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
-
 data remove storage ui:cg1 temp.list[0]
 
 # カードプールがなくなったらボックスから補充を行う
