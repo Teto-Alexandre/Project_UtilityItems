@@ -1,2 +1,0 @@
-scoreboard players remove @s ui_tmw272_blindness 1
-tellraw @a[tag=ui_temp_players] ["",{"text":"【盲目】","color":"black"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"盲目","color":"black"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_blindness"}},{"text": "になった！"}]

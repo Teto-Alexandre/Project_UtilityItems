@@ -81,6 +81,9 @@ scoreboard objectives add ui_tmw272_temp1 dummy
 scoreboard objectives add ui_tmw272_temp2 dummy
 scoreboard objectives add ui_tmw272_temp3 dummy
 
+# 説明文情報の再設定
+function ui:tmw/272/common/preset_text
+
 # 初期ステータス設定
 execute as @s run function ui:tmw/272/id/-1/player
 execute as @e[tag=ui_temp_target,limit=1] run function ui:tmw/272/id/-1/player

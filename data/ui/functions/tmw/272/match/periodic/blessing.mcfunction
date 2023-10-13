@@ -1,2 +1,0 @@
-scoreboard players operation @s ui_tmw272_health += @s ui_tmw272_blessing
-tellraw @a[tag=ui_temp_players] ["",{"text":"【祝福】","color":"yellow"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"は"},{"score":{"name": "@s","objective": "ui_tmw272_blessing"}},{"text": "回復！"}]
