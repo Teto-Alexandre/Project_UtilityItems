@@ -36,10 +36,13 @@ scoreboard players set @s ui_tmw272_blindness 0
 scoreboard players set @s ui_tmw272_glowing 0
 scoreboard players set @s ui_tmw272_luck 0
 scoreboard players set @s ui_tmw272_wither 0
+scoreboard players set @s ui_tmw272_armor 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
 scoreboard players set @s ui_tmw272_temp3 0
+
+tag @s remove tmw272_ready
 
 # OMDを取り出す
 function oh_my_dat:please
@@ -47,6 +50,9 @@ function oh_my_dat:please
 # (プレイヤーがデッキを持っているなら) OMD に上書き
 execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:272,type:-1}}}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list set from entity @s SelectedItem.tag.tmw.cg.list
 execute if entity @s[type=!player] run function ui:tmw/272/id/-1/non_player/
+
+# ここでデバッグ 参戦者のデッキリストをチャットに表示する
+function ui:tmw/272/id/-1/debug/bro_list
 
 # OMD の一次デッキに現在のデッキをコピー
 function ui:tmw/272/common/list_match/copy

@@ -64,6 +64,8 @@ execute if data storage ui:temp temp.effect{effect_type:"mana_max"} run function
 execute if data storage ui:temp temp.effect{effect_type:"show_text"} run function ui:tmw/272/effect/effect_type/show_text
 ## 仮想デッキからデッキに前からカード追加、そしてシャッフル   オプションでシャッフル無効にできる
 execute if data storage ui:temp temp.effect{effect_type:"insert"} run function ui:tmw/272/effect/effect_type/insert/
+## タゲが最後に使ったカードをAEに追加する
+execute if data storage ui:temp temp.effect{effect_type:"last_used"} run function ui:tmw/272/effect/effect_type/last_used/
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old

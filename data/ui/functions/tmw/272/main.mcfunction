@@ -26,11 +26,15 @@ execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run functi
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_s] run function ui:tmw/272/id/-1/s
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_n] run function ui:tmw/272/id/-1/ready
 #execute if score $type ui_temp matches 1 if entity @s[scores={ui_use1=1..}] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 execute if score $type ui_temp matches 1 if entity @s[tag=tmw_drop_n] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 
 #
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] at @s run function ui:tmw/272/id/-1/success2
+
+#
+execute at @s[tag=tmw272_ready] run particle happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 1 force
 
 #
 tag @e[tag=ui_temp_targetable_dropper] remove ui_temp_targetable_dropper

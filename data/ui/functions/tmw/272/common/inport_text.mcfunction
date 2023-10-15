@@ -36,6 +36,7 @@ execute if data storage ui:tmw272 temp{input:"blindness"} run data modify storag
 execute if data storage ui:tmw272 temp{input:"glowing"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.glowing
 execute if data storage ui:tmw272 temp{input:"luck"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.luck
 execute if data storage ui:tmw272 temp{input:"wither"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.wither
+execute if data storage ui:tmw272 temp{input:"armor"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.armor
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

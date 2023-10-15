@@ -16,6 +16,10 @@ scoreboard players operation $cost_act ui_temp = $tmw272_get_value ui_temp
 #
 scoreboard players reset $tmw272_get_value ui_temp
 
+# mod
+execute store result score $cost_mod ui_temp run data get storage ui:temp temp.mod.mod 1
+execute unless score $cost_mod ui_temp matches 0 run scoreboard players operation $cost_act ui_temp %= $cost_mod ui_temp
+
 # pow
 execute store result score $cost_pow ui_temp run data get storage ui:temp temp.mod.pow
 execute if score $cost_pow ui_temp matches 2.. run scoreboard players operation $cost_act_temp ui_temp = $cost_act ui_temp
@@ -38,6 +42,7 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 
 #
 scoreboard players reset $cost_act_temp ui_temp
+scoreboard players reset $cost_mod ui_temp
 scoreboard players reset $cost_pow ui_temp
 scoreboard players reset $cost_mult ui_temp
 scoreboard players reset $cost_add ui_temp

@@ -18,6 +18,7 @@ execute if score @s ui_tmw272_link_id matches 1..2147483647 run scoreboard playe
 
 execute unless score @s ui_tmw272_link_id matches 1..2147483647 as @e[predicate=ui:load_unhurtable,tag=!ui_temp_player] run tag @s add ui_temp_targetable
 execute if score @s ui_tmw272_link_id matches 1..2147483647 as @e[predicate=ui:load_unhurtable,tag=!ui_temp_player] unless score @s ui_tmw272_link_id matches 1..2147483647 run tag @s add ui_temp_targetable
+execute as @a[tag=!tmw272_ready] unless score @s ui_tmw272_link_id matches 1..2147483647 run tag @s remove ui_temp_targetable
 
 execute as @e[tag=tmw272_deck_dropper_core] if score @s ui_id = $id ui_temp run tag @s add ui_temp_targetable_dropper
 

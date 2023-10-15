@@ -8,6 +8,7 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 #
 #data modify storage ui:temp temp.list set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
 execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 temp.list
+execute store result score $cg1_common_draw_num ui_temp run data get storage ui:cg1 temp.list
 
 #
 execute if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/create/shuffle/

@@ -15,6 +15,10 @@ scoreboard players reset $tmw272_get_value ui_temp
 
 
 
+# mod
+execute store result score $input_mod ui_temp run data get storage ui:temp temp.effect.var_input.mod 1
+execute unless score $input_mod ui_temp matches 0 run scoreboard players operation $input_act ui_temp %= $input_mod ui_temp
+
 # pow
 execute store result score $input_pow ui_temp run data get storage ui:temp temp.effect.var_input.pow
 execute if score $input_pow ui_temp matches 2.. run scoreboard players operation $input_act_temp ui_temp = $input_act ui_temp
@@ -44,6 +48,7 @@ scoreboard players reset $tmw272_get_value ui_temp
 
 #
 scoreboard players reset $input_act_temp ui_temp
+scoreboard players reset $input_mod ui_temp
 scoreboard players reset $input_pow ui_temp
 scoreboard players reset $input_mult ui_temp
 scoreboard players reset $input_add ui_temp

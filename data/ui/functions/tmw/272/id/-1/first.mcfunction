@@ -75,6 +75,7 @@ scoreboard objectives add ui_tmw272_blindness dummy
 scoreboard objectives add ui_tmw272_glowing dummy
 scoreboard objectives add ui_tmw272_luck dummy
 scoreboard objectives add ui_tmw272_wither dummy
+scoreboard objectives add ui_tmw272_armor dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

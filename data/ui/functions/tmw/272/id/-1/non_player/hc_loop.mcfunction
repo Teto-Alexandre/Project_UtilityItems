@@ -28,5 +28,8 @@ execute if score $rand ui_calc1 matches 108 run data modify storage oh_my_dat: _
 execute if score $rand ui_calc1 matches 109 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list append value {id:"minecraft:rotten_flesh",tag:{tmw:{id:272,type:1,enableQ:1,cg:{cost:0,effects:[{target_type:2,effect_type:"mana",var:3},{target_type:2,effect_type:"after_effect",cg:{delay:0,delay_type:1,name:'[{"text":"不吉","italic":false,"color":"aqua"}]',cost:3,particle_laser:0,effects:[]}}]}},HideFlags:1,display:{Name:'[{"text":"0:不吉な力","italic":false,"color":"aqua"}]',Lore:['[{"text":"マナ+3","color":"gray","italic":false}]','[{"text":"次のターンの開始時に3コストの不吉を使用","color":"gray","italic":false}]']}}}
 
 
+#data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[-1]
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list append value {id:"minecraft:rotten_flesh",tag:{tmw:{id:272,type:1,enableQ:1,cg:{cost:99,effects:[]}},HideFlags:1,display:{Name:'[{"text":"99:何の効果もない","italic":false,"color":"aqua"}]',Lore:[]}}}
+
 scoreboard players add $list_card_count ui_temp 1
 execute if score $list_card_count ui_temp matches ..8 run function ui:tmw/272/id/-1/non_player/hc_loop

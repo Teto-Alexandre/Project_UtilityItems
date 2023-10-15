@@ -37,6 +37,7 @@ execute if data storage ui:tmw272 temp{input:"blindness"} run scoreboard players
 execute if data storage ui:tmw272 temp{input:"glowing"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_glowing
 execute if data storage ui:tmw272 temp{input:"luck"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_luck
 execute if data storage ui:tmw272 temp{input:"wither"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_wither
+execute if data storage ui:tmw272 temp{input:"armor"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_armor
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat
