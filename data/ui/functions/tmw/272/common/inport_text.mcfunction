@@ -15,7 +15,6 @@ execute if data storage ui:tmw272 temp{input:"shield_next"} run data modify stor
 execute if data storage ui:tmw272 temp{input:"seeds"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.seeds
 execute if data storage ui:tmw272 temp{input:"crops"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.crops
 execute if data storage ui:tmw272 temp{input:"bullet"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.bullet
-
 execute if data storage ui:tmw272 temp{input:"slowness"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.slowness
 execute if data storage ui:tmw272 temp{input:"hunger"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.hunger
 execute if data storage ui:tmw272 temp{input:"burn"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.burn
@@ -37,6 +36,15 @@ execute if data storage ui:tmw272 temp{input:"glowing"} run data modify storage 
 execute if data storage ui:tmw272 temp{input:"luck"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.luck
 execute if data storage ui:tmw272 temp{input:"wither"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.wither
 execute if data storage ui:tmw272 temp{input:"armor"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.armor
+execute if data storage ui:tmw272 temp{input:"seal"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.seal
+execute if data storage ui:tmw272 temp{input:"invulnerable"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.invulnerable
+execute if data storage ui:tmw272 temp{input:"only_one"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.only_one
+execute if data storage ui:tmw272 temp{input:"energy"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.energy
+execute if data storage ui:tmw272 temp{input:"construct"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.construct
+execute if data storage ui:tmw272 temp{input:"void"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.void
+execute if data storage ui:tmw272 temp{input:"myth"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.myth
+execute if data storage ui:tmw272 temp{input:"taint"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.taint
+execute if data storage ui:tmw272 temp{input:"insanity"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.insanity
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

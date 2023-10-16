@@ -15,7 +15,6 @@ scoreboard players set @s ui_tmw272_shield_next 0
 scoreboard players set @s ui_tmw272_seeds 0
 scoreboard players set @s ui_tmw272_crops 0
 scoreboard players set @s ui_tmw272_bullet 0
-
 scoreboard players set @s ui_tmw272_slowness 0
 scoreboard players set @s ui_tmw272_hunger 0
 scoreboard players set @s ui_tmw272_burn 0
@@ -37,6 +36,15 @@ scoreboard players set @s ui_tmw272_glowing 0
 scoreboard players set @s ui_tmw272_luck 0
 scoreboard players set @s ui_tmw272_wither 0
 scoreboard players set @s ui_tmw272_armor 0
+scoreboard players set @s ui_tmw272_seal 0
+scoreboard players set @s ui_tmw272_invulnerable 0
+scoreboard players set @s ui_tmw272_only_one 0
+scoreboard players set @s ui_tmw272_energy 0
+scoreboard players set @s ui_tmw272_construct 0
+scoreboard players set @s ui_tmw272_void 0
+scoreboard players set @s ui_tmw272_myth 0
+scoreboard players set @s ui_tmw272_taint 0
+scoreboard players set @s ui_tmw272_insanity 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

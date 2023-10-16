@@ -53,6 +53,10 @@ execute if score @s ui_tmw272_luck matches 1.. run function ui:tmw/272/match/per
 execute if score @s ui_tmw272_wither matches 1.. run function ui:tmw/272/match/periodic/state/wither
 # 被攻撃時：varが増減、消える
 execute unless score @s ui_tmw272_armor matches 0 run function ui:tmw/272/match/periodic/state/armor
+# 常在：カードのコストがN上昇する、開幕消える
+execute unless score @s ui_tmw272_seal matches 0 run function ui:tmw/272/match/periodic/state/seal
+# 常在：ダメージのeffect_typeのターゲットになったとき対象から外れる、開幕1減る
+execute unless score @s ui_tmw272_invulnerable matches 0 run function ui:tmw/272/match/periodic/state/invulnerable
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
