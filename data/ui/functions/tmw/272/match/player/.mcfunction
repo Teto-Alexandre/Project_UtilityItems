@@ -19,6 +19,8 @@ execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!ui_temp_p
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
 execute if score @s ui_tmw272_flying matches 1.. at @s run particle sweep_attack ~ ~0.3 ~ 0.1 0.1 0.1 0 1 force
 execute if score @s ui_tmw272_glowing matches 1.. at @s run effect give @s glowing 1 0 true
+execute if score @s ui_tmw272_invulnerable matches 1.. at @s run particle dust 1 0.5 0 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
+execute if score @s ui_tmw272_stun matches 1.. at @s run particle crit ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
 
 #
 function oh_my_dat:please
@@ -27,7 +29,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.Afte
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
 
 # HPが0になったプレイヤーをマッチから除外する
-execute if score @s ui_tmw272_health matches ..0 run function ui:tmw/272/match/player/death
+execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_undying > @s ui_tmw272_undying_count run function ui:tmw/272/match/player/state/undying
+execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
 
 #
 tag @e[tag=ui_temp_player] remove ui_temp_player

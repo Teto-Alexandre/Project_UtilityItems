@@ -25,6 +25,9 @@ function ui:tmw/272/effect/broadcast/
 
 # 出血チェック
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/effect/misc/bleed
+# 帯電チェック
+execute if score $broadcast_type ui_temp matches 1 run scoreboard players set $shock_checker ui_temp 0
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_shock matches 1.. run scoreboard players operation $shock_checker ui_temp = @s ui_tmw272_shock
 
 # effect消化に移行
 execute if score $count ui_temp matches 1.. run function ui:tmw/272/effect/burn.check
@@ -36,7 +39,11 @@ execute if score $particle_other ui_temp matches 1.. positioned as @e[tag=tmw272
 execute if score $particle_target ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old] run function ui:tmw/272/effect/particle_type/target
 execute if score $particle_laser ui_temp matches 1.. positioned as @e[tag=tmw272_temp_card_effect_target_old,tag=!ui_temp_player] run function ui:tmw/272/effect/particle_type/laser
 
+# 帯電
+execute if score $broadcast_type ui_temp matches 1 if score $shock_checker ui_temp >= @s ui_tmw272_shock if score @s ui_tmw272_shock matches 1.. run function ui:tmw/272/effect/misc/shock
+
 # 一連のターゲットを削除
+tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge
 tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_target_old
 
 # 汎用変数を削除

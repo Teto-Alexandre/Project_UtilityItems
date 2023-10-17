@@ -1,5 +1,7 @@
 # 数値を入れる
+execute if data storage ui:tmw272 temp{input:"health_max"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_health_max
 execute if data storage ui:tmw272 temp{input:"health"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_health
+execute if data storage ui:tmw272 temp{input:"damage"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_damage
 execute if data storage ui:tmw272 temp{input:"mana"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_mana
 execute if data storage ui:tmw272 temp{input:"mana_max"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_mana_max
 execute if data storage ui:tmw272 temp{input:"var"} run scoreboard players operation $tmw272_get_value ui_temp = $var ui_temp
@@ -46,6 +48,15 @@ execute if data storage ui:tmw272 temp{input:"void"} run scoreboard players oper
 execute if data storage ui:tmw272 temp{input:"myth"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_myth
 execute if data storage ui:tmw272 temp{input:"taint"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_taint
 execute if data storage ui:tmw272 temp{input:"insanity"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_insanity
+execute if data storage ui:tmw272 temp{input:"stun"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_stun
+execute if data storage ui:tmw272 temp{input:"shock"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_shock
+execute if data storage ui:tmw272 temp{input:"freeze"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_freeze
+execute if data storage ui:tmw272 temp{input:"undying"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_undying
+execute if data storage ui:tmw272 temp{input:"undying_count"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_undying_count
+execute if data storage ui:tmw272 temp{input:"lethal_range"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_lethal_range
+execute if data storage ui:tmw272 temp{input:"soul_break"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_soul_break
+execute if data storage ui:tmw272 temp{input:"dodge"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_dodge
+execute if data storage ui:tmw272 temp{input:"dodge_next"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_dodge_next
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat

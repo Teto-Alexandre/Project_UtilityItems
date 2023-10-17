@@ -21,6 +21,10 @@ execute if score $cost_type ui_temp matches 1 run function ui:tmw/272/common/che
 execute if score $cost_type ui_temp matches 2 run function ui:tmw/272/common/check_cost/cost_type/2/
 execute if score $cost_type ui_temp matches 3 run function ui:tmw/272/common/check_cost/cost_type/3/
 
+# スタンしているなら問答無用で却下
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. run scoreboard players set $check_cost ui_temp 0
+
 # キャッシュクリア
 scoreboard players reset $cost_type ui_temp
 scoreboard players reset $cost ui_temp

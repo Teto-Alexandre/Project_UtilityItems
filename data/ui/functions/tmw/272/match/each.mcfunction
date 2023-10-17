@@ -23,6 +23,9 @@ execute if score $turn_time ui_temp matches 20 run playsound block.note_block.ha
 execute if score $turn_time ui_temp matches 10 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
 execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/periodic/turn
 
+# 最大体力を計測
+execute as @e[tag=ui_temp_players] run scoreboard players operation @s ui_tmw272_health_max > @s ui_tmw272_health
+
 ## <== エンティティはここで動かす
 execute as @e[tag=ui_temp_players,type=!player] run function ui:tmw/272/match/entity/
 

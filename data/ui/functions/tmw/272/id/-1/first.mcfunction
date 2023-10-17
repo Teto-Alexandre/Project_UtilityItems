@@ -1,7 +1,6 @@
 # 初回だけ
 #summon item_display ~ ~ ~ {Tags:["tmw272","tmw272_unpower"],item:{Count:1b,id:"minecraft:command_block",tag:{host_id:-1,players:[],anti_rejoin:[]}}}
 summon item_display ~ ~ ~ {Tags:["tmw272","tmw272_unpower"],item:{Count:1b,id:"minecraft:command_block",tag:{host_id:-1,anti_rejoin:[]}}}
-##↑アンチリジョインを追記すること
 
 execute as @e[tag=tmw272_unpower] run execute store result entity @s item.tag.host_id int 1 run scoreboard players get $host_id ui_temp
 execute as @e[tag=tmw272_unpower] run scoreboard players operation @s ui_is = $host_id ui_temp
@@ -36,7 +35,9 @@ tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 tag @e[tag=tmw272_unpower] remove tmw272_unpower
 
 # 次のプレイヤー認証用のスコアを作成
+scoreboard objectives add ui_tmw272_health_max dummy
 scoreboard objectives add ui_tmw272_health dummy
+scoreboard objectives add ui_tmw272_damage dummy
 scoreboard objectives add ui_tmw272_mana_max dummy
 scoreboard objectives add ui_tmw272_mana dummy
 scoreboard objectives add ui_tmw272_match_time dummy
@@ -84,6 +85,15 @@ scoreboard objectives add ui_tmw272_void dummy
 scoreboard objectives add ui_tmw272_myth dummy
 scoreboard objectives add ui_tmw272_taint dummy
 scoreboard objectives add ui_tmw272_insanity dummy
+scoreboard objectives add ui_tmw272_stun dummy
+scoreboard objectives add ui_tmw272_shock dummy
+scoreboard objectives add ui_tmw272_freeze dummy
+scoreboard objectives add ui_tmw272_undying dummy
+scoreboard objectives add ui_tmw272_undying_count dummy
+scoreboard objectives add ui_tmw272_lethal_range dummy
+scoreboard objectives add ui_tmw272_soul_break dummy
+scoreboard objectives add ui_tmw272_dodge dummy
+scoreboard objectives add ui_tmw272_dodge_next dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

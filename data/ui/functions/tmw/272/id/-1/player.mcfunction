@@ -1,4 +1,6 @@
+scoreboard players set @s ui_tmw272_health_max 20
 scoreboard players set @s ui_tmw272_health 20
+scoreboard players set @s ui_tmw272_damage 0
 scoreboard players set @s ui_tmw272_mana_max 0
 scoreboard players set @s ui_tmw272_mana 0
 scoreboard players set @s ui_tmw272_match_time 0
@@ -45,6 +47,15 @@ scoreboard players set @s ui_tmw272_void 0
 scoreboard players set @s ui_tmw272_myth 0
 scoreboard players set @s ui_tmw272_taint 0
 scoreboard players set @s ui_tmw272_insanity 0
+scoreboard players set @s ui_tmw272_stun 0
+scoreboard players set @s ui_tmw272_shock 0
+scoreboard players set @s ui_tmw272_freeze 0
+scoreboard players set @s ui_tmw272_undying 0
+scoreboard players set @s ui_tmw272_undying_count 0
+scoreboard players set @s ui_tmw272_lethal_range 0
+scoreboard players set @s ui_tmw272_soul_break 0
+scoreboard players set @s ui_tmw272_dodge 0
+scoreboard players set @s ui_tmw272_dodge_next 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

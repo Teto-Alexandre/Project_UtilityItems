@@ -57,8 +57,19 @@ execute unless score @s ui_tmw272_armor matches 0 run function ui:tmw/272/match/
 execute unless score @s ui_tmw272_seal matches 0 run function ui:tmw/272/match/periodic/state/seal
 # 常在：ダメージのeffect_typeのターゲットになったとき対象から外れる、開幕1減る
 execute unless score @s ui_tmw272_invulnerable matches 0 run function ui:tmw/272/match/periodic/state/invulnerable
+# 常在：カードが使えなくなる、開幕1減る
+execute if score @s ui_tmw272_stun matches 1.. run function ui:tmw/272/match/periodic/state/stun
+# 開幕：1ダメージ、1減る
+execute if score @s ui_tmw272_freeze matches 1.. run function ui:tmw/272/match/periodic/state/freeze
+# 開幕：体力が最大体力のN%減る
+execute if score @s ui_tmw272_soul_break matches 1.. run function ui:tmw/272/match/periodic/state/soul_break
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_shield_next matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/shield
+
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_dodge matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_dodge_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/dodge

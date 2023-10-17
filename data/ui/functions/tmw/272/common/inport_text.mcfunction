@@ -1,4 +1,6 @@
+execute if data storage ui:tmw272 temp{input:"health_max"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.health_max
 execute if data storage ui:tmw272 temp{input:"health"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.health
+execute if data storage ui:tmw272 temp{input:"damage"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.damage
 execute if data storage ui:tmw272 temp{input:"mana"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.mana
 execute if data storage ui:tmw272 temp{input:"mana_max"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.mana_max
 execute if data storage ui:tmw272 temp{input:"var"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.var
@@ -45,6 +47,15 @@ execute if data storage ui:tmw272 temp{input:"void"} run data modify storage ui:
 execute if data storage ui:tmw272 temp{input:"myth"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.myth
 execute if data storage ui:tmw272 temp{input:"taint"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.taint
 execute if data storage ui:tmw272 temp{input:"insanity"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.insanity
+execute if data storage ui:tmw272 temp{input:"stun"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.stun
+execute if data storage ui:tmw272 temp{input:"shock"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.shock
+execute if data storage ui:tmw272 temp{input:"freeze"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.freeze
+execute if data storage ui:tmw272 temp{input:"undying"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.undying
+execute if data storage ui:tmw272 temp{input:"undying_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.undying_count
+execute if data storage ui:tmw272 temp{input:"lethal_range"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.lethal_range
+execute if data storage ui:tmw272 temp{input:"soul_break"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.soul_break
+execute if data storage ui:tmw272 temp{input:"dodge"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.dodge
+execute if data storage ui:tmw272 temp{input:"dodge_next"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.dodge_next
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

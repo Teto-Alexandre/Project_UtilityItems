@@ -1,0 +1,5 @@
+execute if score @s ui_tmw272_dodge >= $var ui_temp run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"した！"}]
+execute if score @s ui_tmw272_dodge <= $var ui_temp run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が消滅した！"}]
+execute if score @s ui_tmw272_dodge >= $var ui_temp run tag @s add tmw272_temp_card_effect_dodge
+execute if score @s ui_tmw272_dodge >= $var ui_temp run tag @s remove tmw272_temp_card_effect_target
+execute if score @s ui_tmw272_dodge <= $var ui_temp run scoreboard players set @s ui_tmw272_dodge 0

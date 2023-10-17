@@ -92,5 +92,7 @@ execute if score @s ui_is2 matches 44 run function ui:common/particle/ss/upper/3
 execute if score @s ui_is2 matches 45 run function ui:common/particle/ss/upper/32/41-50/45
 # クロスボウ
 execute if score @s ui_is2 matches 46 run function ui:common/particle/ss/upper/32/41-50/46
+# 紫電
+execute if score @s ui_is2 matches 47 run function ui:common/particle/ss/upper/32/41-50/47
 
 execute if score $is ui_temp matches 50.. run kill @s
