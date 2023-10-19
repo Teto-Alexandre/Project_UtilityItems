@@ -8,9 +8,9 @@ data modify storage ui:temp temp.draw_card set from storage oh_my_dat: _[-4][-4]
 execute if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
 
 # 引いた時の効果を AfterEffect に追加
-execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
+#execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.oo_draw_effect
-execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
+#execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 
 # アイテムのタグ削除
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]

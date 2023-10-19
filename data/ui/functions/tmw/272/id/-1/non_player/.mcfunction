@@ -26,7 +26,9 @@ execute if score $rand ui_calc1 < $cardrate_only ui_temp run scoreboard players 
 
 # カード投入開始
 scoreboard players set $list_card_count ui_temp 0
-function ui:tmw/272/id/-1/non_player/hc_loop
+execute if entity @s[type=!creeper,type=!skeleton] run function ui:tmw/272/id/-1/non_player/hc_loop
+execute if entity @s[type=creeper] run function ui:tmw/272/id/-1/non_player/raijin
+execute if entity @s[type=skeleton] run function ui:tmw/272/id/-1/non_player/skeleton
 
 # リセット
 scoreboard players reset $list_card_oo ui_temp

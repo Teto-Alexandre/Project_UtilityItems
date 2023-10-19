@@ -1,8 +1,8 @@
 scoreboard players operation @s ui_tmw272_health = @s ui_tmw272_lethal_range
 scoreboard players add @s ui_tmw272_health 1
 
-playsound item.totem.use player @a ~ ~ ~ 1 1 0
-particle totem_of_undying ~ ~1 ~ 0.5 0.5 0.5 0.2 20 force
+execute at @s run playsound item.totem.use player @a ~ ~ ~ 1 1 0
+execute at @s run particle totem_of_undying ~ ~1 ~ 0.5 0.5 0.5 0.2 20 force
 
 data merge storage ui:tmw272 {temp:{input:"undying"}}
 function ui:tmw/272/common/inport_text

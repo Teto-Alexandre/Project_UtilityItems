@@ -32,11 +32,14 @@ execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
-tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
 
 # ターゲットを対象に取ってエフェクトを実行する
 ## ダメージ  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
+
+# ここで回避済みならターゲットから消える
+tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
+
 ## 回復  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal/
 ## ドロー  未実装（condition_checker:手札枚数「最大・最小・合計」）
@@ -67,6 +70,8 @@ execute if data storage ui:temp temp.effect{effect_type:"show_text"} run functio
 execute if data storage ui:temp temp.effect{effect_type:"insert"} run function ui:tmw/272/effect/effect_type/insert/
 ## タゲが最後に使ったカードをAEに追加する
 execute if data storage ui:temp temp.effect{effect_type:"last_used"} run function ui:tmw/272/effect/effect_type/last_used/
+## アフターエフェクトへの編集
+execute if data storage ui:temp temp.effect{effect_type:"modify_after_effect"} run function ui:tmw/272/effect/effect_type/modify_after_effect/
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old

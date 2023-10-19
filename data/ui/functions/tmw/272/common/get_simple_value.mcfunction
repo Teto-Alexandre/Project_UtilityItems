@@ -57,6 +57,8 @@ execute if data storage ui:tmw272 temp{input:"lethal_range"} run scoreboard play
 execute if data storage ui:tmw272 temp{input:"soul_break"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_soul_break
 execute if data storage ui:tmw272 temp{input:"dodge"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_dodge
 execute if data storage ui:tmw272 temp{input:"dodge_next"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_dodge_next
+execute if data storage ui:tmw272 temp{input:"accumulation"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_accumulation
+execute if data storage ui:tmw272 temp{input:"fairy"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_fairy
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat

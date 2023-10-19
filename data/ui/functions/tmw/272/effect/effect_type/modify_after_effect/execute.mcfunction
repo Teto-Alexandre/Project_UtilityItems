@@ -1,0 +1,1 @@
+execute if data storage ui:temp temp.effect{effect_mode:"delete"} run data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[-1]

@@ -25,6 +25,8 @@ function ui:tmw/272/effect/broadcast/
 
 # 出血チェック
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/effect/misc/bleed
+# 出血チェック
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_fairy matches 1.. run function ui:tmw/272/effect/misc/fairy
 # 帯電チェック
 execute if score $broadcast_type ui_temp matches 1 run scoreboard players set $shock_checker ui_temp 0
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_shock matches 1.. run scoreboard players operation $shock_checker ui_temp = @s ui_tmw272_shock

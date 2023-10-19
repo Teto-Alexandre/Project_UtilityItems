@@ -56,6 +56,8 @@ scoreboard players set @s ui_tmw272_lethal_range 0
 scoreboard players set @s ui_tmw272_soul_break 0
 scoreboard players set @s ui_tmw272_dodge 0
 scoreboard players set @s ui_tmw272_dodge_next 0
+scoreboard players set @s ui_tmw272_accumulation 0
+scoreboard players set @s ui_tmw272_fairy 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

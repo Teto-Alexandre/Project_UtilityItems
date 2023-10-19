@@ -12,4 +12,6 @@ execute store result storage oh_my_dat: update byte 1 run data modify storage oh
 execute if data storage oh_my_dat: {update:true} run function oh_my_dat:sys/provide
 
 #
-tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed"}]
+#tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand"}]
+execute store result score $temp ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand
+tellraw @a [{"score":{"name": "$temp","objective": "ui_temp"}}]

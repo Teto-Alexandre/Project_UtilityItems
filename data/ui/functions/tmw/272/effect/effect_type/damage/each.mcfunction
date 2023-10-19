@@ -1,15 +1,17 @@
 # 装甲
-data merge storage ui:tmw272 {temp:{input:"armor"}}
-function ui:tmw/272/common/inport_text
-execute unless score @s ui_tmw272_armor matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
-scoreboard players operation $var_temp ui_temp -= @s ui_tmw272_armor
-scoreboard players operation $var_temp ui_temp > #0 ui_num
+execute unless data storage ui:temp temp.effect.no_armor run data merge storage ui:tmw272 {temp:{input:"armor"}}
+execute unless data storage ui:temp temp.effect.no_armor run function ui:tmw/272/common/inport_text
+execute unless data storage ui:temp temp.effect.no_armor run execute unless score @s ui_tmw272_armor matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
+execute unless data storage ui:temp temp.effect.no_armor run scoreboard players operation $var_temp ui_temp -= @s ui_tmw272_armor
+execute unless data storage ui:temp temp.effect.no_armor run scoreboard players operation $var_temp ui_temp > #0 ui_num
 
 # ダメージ
 execute if score @s ui_tmw272_shield matches 0 run scoreboard players set $effect_type_damage_info ui_temp 1
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $effect_type_damage_info ui_temp 2
 execute if entity @s[tag=ui_temp_player] run scoreboard players set $effect_type_damage_info ui_temp 1
+execute if data storage ui:temp temp.effect.no_shield run scoreboard players set $effect_type_damage_info ui_temp 1
 execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @s ui_tmw272_health -= $var_temp ui_temp
+execute if score $effect_type_damage_info ui_temp matches 1 if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 2 run scoreboard players operation @s ui_tmw272_shield -= $var_temp ui_temp
 
 execute if score $effect_type_damage_info ui_temp matches 1 run data merge storage ui:tmw272 {temp:{input:"health"}}
@@ -25,6 +27,7 @@ execute if score @s ui_tmw272_shield matches ..-1 run scoreboard players set $ef
 execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players operation @s ui_tmw272_health += @s ui_tmw272_shield
 execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players operation @s ui_tmw272_shield *= #-1 ui_num
 execute if score $effect_type_damage_info ui_temp matches 3 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が崩壊し"},{"selector":"@s"},{"text":"に"},{"score":{"name": "@s","objective": "ui_tmw272_shield"}},{"text": "ダメージ！"}]
+execute if score $effect_type_damage_info ui_temp matches 3 if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += @s ui_tmw272_shield
 execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players set @s ui_tmw272_shield 0
 
 execute if score $effect_type_damage_info ui_temp matches 2 at @s run playsound ui:shield_m player @a ~ ~ ~ 0.7 1.2 0

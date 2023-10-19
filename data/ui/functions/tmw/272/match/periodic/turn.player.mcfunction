@@ -41,7 +41,7 @@ execute if score @s ui_tmw272_flying matches 1.. run function ui:tmw/272/match/p
 execute if score @s ui_tmw272_trade matches 1.. run function ui:tmw/272/match/periodic/state/trade
 # 常在：標敵を取る攻撃がランダム敵一体に変わる、開幕1減る
 execute if score @s ui_tmw272_nausea matches 1.. run function ui:tmw/272/match/periodic/state/nausea
-# 常在：カードを使うとnダメージ、発動と開幕で2/3
+# 常在：カードを使うとnダメージ、発動で2/3、開幕消滅
 execute if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/match/periodic/state/bleed
 # 常在：敵全体対象が標敵に、全員対象が自分と標敵に変わる、開幕1減る
 execute if score @s ui_tmw272_blindness matches 1.. run function ui:tmw/272/match/periodic/state/blindness
@@ -63,6 +63,8 @@ execute if score @s ui_tmw272_stun matches 1.. run function ui:tmw/272/match/per
 execute if score @s ui_tmw272_freeze matches 1.. run function ui:tmw/272/match/periodic/state/freeze
 # 開幕：体力が最大体力のN%減る
 execute if score @s ui_tmw272_soul_break matches 1.. run function ui:tmw/272/match/periodic/state/soul_break
+# 常在：カードを使うとnダメージ、開幕でNダメージと1/2
+execute if score @s ui_tmw272_fairy matches 1.. run function ui:tmw/272/match/periodic/state/fairy
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1

@@ -56,6 +56,8 @@ execute if data storage ui:tmw272 temp{input:"lethal_range"} run data modify sto
 execute if data storage ui:tmw272 temp{input:"soul_break"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.soul_break
 execute if data storage ui:tmw272 temp{input:"dodge"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.dodge
 execute if data storage ui:tmw272 temp{input:"dodge_next"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.dodge_next
+execute if data storage ui:tmw272 temp{input:"accumulation"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.accumulation
+execute if data storage ui:tmw272 temp{input:"fairy"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.fairy
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

@@ -58,6 +58,8 @@ execute if data storage ui:tmw272 temp{input:"lethal_range"} if data storage ui:
 execute if data storage ui:tmw272 temp{input:"soul_break"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_soul_break = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"dodge"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_dodge = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"dodge_next"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_dodge_next = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"accumulation"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_accumulation = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"fairy"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_fairy = $var ui_temp
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat int 1 run scoreboard players get $var ui_temp
@@ -125,6 +127,8 @@ execute if data storage ui:tmw272 temp{input:"lethal_range"} unless data storage
 execute if data storage ui:tmw272 temp{input:"soul_break"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_soul_break += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"dodge"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_dodge += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"dodge_next"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_dodge_next += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"accumulation"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_accumulation += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"fairy"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_fairy += $var ui_temp
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round += $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $repeat ui_temp run data get storage ui:temp temp.card.repeat

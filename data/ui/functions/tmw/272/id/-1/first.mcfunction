@@ -94,6 +94,8 @@ scoreboard objectives add ui_tmw272_lethal_range dummy
 scoreboard objectives add ui_tmw272_soul_break dummy
 scoreboard objectives add ui_tmw272_dodge dummy
 scoreboard objectives add ui_tmw272_dodge_next dummy
+scoreboard objectives add ui_tmw272_accumulation dummy
+scoreboard objectives add ui_tmw272_fairy dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy
