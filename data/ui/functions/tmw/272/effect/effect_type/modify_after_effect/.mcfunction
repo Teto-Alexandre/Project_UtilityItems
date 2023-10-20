@@ -1,9 +1,12 @@
 # アフターエフェクト編集
+scoreboard players set $condition_checker_temp ui_temp 0
+
 execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/modify_after_effect/each
 
 #execute if data storage ui:temp temp.effect{effect_mode:"give"} run execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/modify_after_effect/each
 
-#execute as @e[tag=tmw272_temp_card_effect_target] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"は","color":"gray"},{"selector":"@e[tag=ui_temp_player]"},{"text":"のAEの予約を受けた"}]
+execute if data storage ui:temp temp.effect{effect_mode:"msg"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が","color":"gray"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"の","color":"gray"},{"score":{"name": "$condition_checker_temp","objective": "ui_temp"}},{"text":"つの持続効果に干渉した！"}]
+execute if data storage ui:temp temp.effect.export_condition run scoreboard players operation $condition_checker ui_temp += $condition_checker_temp ui_temp
 
 data remove storage ui:temp temp.after_effect
 scoreboard players reset $after_effect_num ui_temp

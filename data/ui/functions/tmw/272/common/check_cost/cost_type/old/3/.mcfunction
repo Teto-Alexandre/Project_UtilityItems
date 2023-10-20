@@ -5,7 +5,7 @@ data modify storage ui:temp temp.mods set from storage ui:temp card.cost_mods
 execute store result score $cost_count ui_temp run data get storage ui:temp card.cost_mods
 
 # cost_countの数だけ走査処理をする
-execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/3/burn
+execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/old/3/burn
 
 # 最終値を最大最小の範囲内に収める（minは記載がない場合0、maxは記載がない場合青天井）
 execute store result score $cost_min ui_temp run data get storage ui:temp card.cost_min

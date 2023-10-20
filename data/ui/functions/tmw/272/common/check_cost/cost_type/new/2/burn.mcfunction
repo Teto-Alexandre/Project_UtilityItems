@@ -24,7 +24,7 @@ execute unless score $cost_mod ui_temp matches 0 run scoreboard players operatio
 execute store result score $cost_pow ui_temp run data get storage ui:temp temp.mod.pow
 execute if score $cost_pow ui_temp matches 2.. run scoreboard players operation $cost_act_temp ui_temp = $cost_act ui_temp
 execute if score $cost_pow ui_temp matches 2.. run scoreboard players remove $cost_pow ui_temp 1
-execute if score $cost_pow ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/2/pow
+execute if score $cost_pow ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/2/pow
 
 # mult
 execute store result score $cost_mult ui_temp run data get storage ui:temp temp.mod.mult 100
@@ -61,4 +61,4 @@ scoreboard players reset $cost_act_temp ui_temp
 data remove storage ui:temp temp.mod
 data remove storage ui:temp temp.mods[0]
 scoreboard players remove $cost_count ui_temp 1
-execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/2/burn
+execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/2/burn
