@@ -65,6 +65,10 @@ execute if score @s ui_tmw272_freeze matches 1.. run function ui:tmw/272/match/p
 execute if score @s ui_tmw272_soul_break matches 1.. run function ui:tmw/272/match/periodic/state/soul_break
 # 常在：カードを使うとnダメージ、開幕でNダメージと1/2
 execute if score @s ui_tmw272_fairy matches 1.. run function ui:tmw/272/match/periodic/state/fairy
+# 常在：カード使うと1増加 閉幕リセット
+execute if score @s ui_tmw272_chain matches 1.. run function ui:tmw/272/match/periodic/state/chain
+# 回復時：varが増減、消える
+execute unless score @s ui_tmw272_hope matches 0 run function ui:tmw/272/match/periodic/state/hope
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1

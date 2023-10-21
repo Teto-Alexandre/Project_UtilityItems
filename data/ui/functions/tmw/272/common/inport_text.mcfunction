@@ -58,6 +58,10 @@ execute if data storage ui:tmw272 temp{input:"dodge"} run data modify storage ui
 execute if data storage ui:tmw272 temp{input:"dodge_next"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.dodge_next
 execute if data storage ui:tmw272 temp{input:"accumulation"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.accumulation
 execute if data storage ui:tmw272 temp{input:"fairy"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.fairy
+execute if data storage ui:tmw272 temp{input:"memory"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.memory
+execute if data storage ui:tmw272 temp{input:"chain"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.chain
+execute if data storage ui:tmw272 temp{input:"hope"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.hope
+execute if data storage ui:tmw272 temp{input:"ec"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.ec
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

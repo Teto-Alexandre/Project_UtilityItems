@@ -1,0 +1,1 @@
+scoreboard players set @s ui_tmw272_chain 0

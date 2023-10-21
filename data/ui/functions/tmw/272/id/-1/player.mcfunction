@@ -58,6 +58,10 @@ scoreboard players set @s ui_tmw272_dodge 0
 scoreboard players set @s ui_tmw272_dodge_next 0
 scoreboard players set @s ui_tmw272_accumulation 0
 scoreboard players set @s ui_tmw272_fairy 0
+scoreboard players set @s ui_tmw272_memory 0
+scoreboard players set @s ui_tmw272_chain 0
+scoreboard players set @s ui_tmw272_hope 0
+scoreboard players set @s ui_tmw272_ec 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
@@ -70,7 +74,7 @@ function oh_my_dat:please
 
 # (プレイヤーがデッキを持っているなら) OMD に上書き
 execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:272,type:-1}}}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list set from entity @s SelectedItem.tag.tmw.cg.list
-execute if entity @s[type=!player] run function ui:tmw/272/id/-1/non_player/
+execute if entity @s[type=!player,tag=!hc_deck] run function ui:tmw/272/id/-1/non_player/
 
 # ここでデバッグ 参戦者のデッキリストをチャットに表示する
 function ui:tmw/272/id/-1/debug/bro_list

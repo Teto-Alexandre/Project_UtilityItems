@@ -64,6 +64,9 @@ scoreboard players reset $hit_effect ui_temp
 scoreboard players reset $var ui_temp
 scoreboard players reset $rand ui_temp
 
+#
+execute if score $broadcast_type ui_temp matches 1 run scoreboard players add @s ui_tmw272_chain 1
+
 # カードの一時データも削除
 data remove storage ui:temp temp
 scoreboard players reset $count ui_temp

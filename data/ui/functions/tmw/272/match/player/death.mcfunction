@@ -6,4 +6,5 @@ tellraw @a[tag=ui_temp_players] ["",{"selector":"@s"},{"text": "が戦線離脱�
 #tag @s remove tmw272_active
 
 execute if entity @s[type=player] at @s run function ui:tmw/272/match/player/death.player
-execute if entity @s[type=!player] at @s run function ui:tmw/272/match/player/death.entity
+execute if entity @s[tag=hc_deck] at @s run function ui:tmw/272/match/player/death.player
+execute if entity @s[tag=!hc_deck] if entity @s[type=!player] at @s run function ui:tmw/272/match/player/death.entity

@@ -5,6 +5,7 @@ execute if predicate ui:percentage/1 run tellraw @s[scores={ui_tmw601_accessory=
     execute at @s as @e[tag=ui_temp_players,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 0 run function ui:tmw/272/common/visual_input/target_marker
     execute at @s as @e[tag=ui_temp_players,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 1.. if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/common/visual_input/target_marker
     execute at @s positioned ^ ^ ^0.4 run tag @e[tag=ui_temp_marker,sort=nearest,limit=1] add ui_temp_target2
+    execute at @e[tag=ui_temp_marker,tag=!ui_temp_target2] run particle dust 1 0 0 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
     execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
 
 # 選択したポインターのIDを取得

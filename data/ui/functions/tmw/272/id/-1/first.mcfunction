@@ -96,6 +96,10 @@ scoreboard objectives add ui_tmw272_dodge dummy
 scoreboard objectives add ui_tmw272_dodge_next dummy
 scoreboard objectives add ui_tmw272_accumulation dummy
 scoreboard objectives add ui_tmw272_fairy dummy
+scoreboard objectives add ui_tmw272_memory dummy
+scoreboard objectives add ui_tmw272_chain dummy
+scoreboard objectives add ui_tmw272_hope dummy
+scoreboard objectives add ui_tmw272_ec dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

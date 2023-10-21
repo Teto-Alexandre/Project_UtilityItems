@@ -27,6 +27,7 @@ execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_s] run functi
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
 execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_n] run function ui:tmw/272/id/-1/ready
+execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_s] run function ui:tmw/272/id/-1/clone
 #execute if score $type ui_temp matches 1 if entity @s[scores={ui_use1=1..}] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 execute if score $type ui_temp matches 1 if entity @s[tag=tmw_drop_n] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 
