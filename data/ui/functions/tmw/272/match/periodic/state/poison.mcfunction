@@ -1,5 +1,6 @@
 scoreboard players operation #poison ui_temp = @s ui_tmw272_health
 scoreboard players operation #poison ui_temp /= #20 ui_num
+scoreboard players add #poison ui_temp 1
 scoreboard players operation @s ui_tmw272_health -= #poison ui_temp
 particle block green_concrete ~ ~2 ~ 0.4 0 0.4 0 30 force
 playsound block.brewing_stand.brew player @a ~ ~ ~ 1 0.5 0
