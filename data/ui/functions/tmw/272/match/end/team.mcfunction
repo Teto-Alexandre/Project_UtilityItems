@@ -1,3 +1,5 @@
+execute as @e[tag=ui_temp_players] if score @s ui_tmw272_karma matches 1.. run function ui:tmw/272/match/end/karma
+
 #tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"がマッチに勝利しました"}]
 
 tellraw @a ["",{"selector":"@e[tag=ui_temp_players,tag=!tmw272_spectate]"},{"text": "が戦線に勝利しました"}]

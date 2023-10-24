@@ -471,6 +471,12 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     team modify green collisionRule pushOwnTeam
     team modify green nametagVisibility hideForOtherTeams
     team modify green seeFriendlyInvisibles false
+    team add gray
+    team modify gray color gray
+    team modify gray friendlyFire false
+    team modify gray collisionRule pushOwnTeam
+    team modify gray nametagVisibility hideForOtherTeams
+    team modify gray seeFriendlyInvisibles false
 
 ## その他
     forceload add 0 0

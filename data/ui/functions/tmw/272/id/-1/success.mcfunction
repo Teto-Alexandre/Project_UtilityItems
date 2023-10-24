@@ -15,7 +15,7 @@ scoreboard players operation $obj_id ui_temp = @e[tag=ui_temp_target,limit=1] ui
 # 発動者の参加しているゲームテーブルが存在するかサーチ
 execute as @e[tag=tmw272] if score @s ui_obj_id = $link_id ui_temp run tag @s add ui_temp_game
 execute as @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/ng_filter/
-execute if score $shot_type ui_temp matches 404 run tellraw @a [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"text":"一度離脱した戦線に再び参加することはできません"}]
+execute if score $shot_type ui_temp matches 404 run tellraw @s [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"text":"一度離脱した戦線に再び参加することはできません"}]
 
 # プレイヤー追加/初回だけ
 execute if score $shot_type ui_temp matches 2 if entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/add

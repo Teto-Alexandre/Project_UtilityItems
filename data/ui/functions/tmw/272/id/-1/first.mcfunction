@@ -100,6 +100,10 @@ scoreboard objectives add ui_tmw272_memory dummy
 scoreboard objectives add ui_tmw272_chain dummy
 scoreboard objectives add ui_tmw272_hope dummy
 scoreboard objectives add ui_tmw272_ec dummy
+scoreboard objectives add ui_tmw272_karma dummy
+scoreboard objectives add ui_tmw272_tenacity dummy
+scoreboard objectives add ui_tmw272_hexproof dummy
+scoreboard objectives add ui_tmw272_stop dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

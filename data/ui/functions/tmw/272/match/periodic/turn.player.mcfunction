@@ -69,6 +69,10 @@ execute if score @s ui_tmw272_fairy matches 1.. run function ui:tmw/272/match/pe
 execute if score @s ui_tmw272_chain matches 1.. run function ui:tmw/272/match/periodic/state/chain
 # 回復時：varが増減、消える
 execute unless score @s ui_tmw272_hope matches 0 run function ui:tmw/272/match/periodic/state/hope
+# 100以上なら死ぬ
+execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
+# 常在：modify_valueを受けない、開幕1減る
+execute if score @s ui_tmw272_hexproof matches 1.. run function ui:tmw/272/match/periodic/state/hexproof
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1

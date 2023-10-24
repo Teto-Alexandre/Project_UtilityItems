@@ -1,3 +1,5 @@
+execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_tenacity matches 1.. run tag @s remove tmw272_temp_card_effect_target
+
 # ターゲット全員で体力を平均化する
 function ui:tmw/272/common/count_targets
 

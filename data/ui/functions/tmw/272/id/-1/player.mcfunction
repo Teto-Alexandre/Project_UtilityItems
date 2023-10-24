@@ -62,6 +62,10 @@ scoreboard players set @s ui_tmw272_memory 0
 scoreboard players set @s ui_tmw272_chain 0
 scoreboard players set @s ui_tmw272_hope 0
 scoreboard players set @s ui_tmw272_ec 0
+scoreboard players set @s ui_tmw272_karma 0
+scoreboard players set @s ui_tmw272_tenacity 0
+scoreboard players set @s ui_tmw272_hexproof 0
+scoreboard players set @s ui_tmw272_stop 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
@@ -88,7 +92,7 @@ data modify storage ui:temp merge_checker set from storage oh_my_dat: _[-4][-4][
 execute store result score $merge_check ui_temp run data modify storage ui:temp merge_checker set value [{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1}]
 data remove storage ui:temp merge_checker
 execute if score $merge_check ui_temp matches 0 run tag @s add tmw272_spectate
-execute if score $merge_check ui_temp matches 0 run say 観戦モード起動
+execute if score $merge_check ui_temp matches 0 run tellraw @s [{"text":"> 観戦モード起動"}]
 scoreboard players reset $merge_check ui_temp
 
 # チーム
@@ -96,7 +100,7 @@ team join blue @s[scores={ui_team=1}]
 team join red @s[scores={ui_team=2}]
 team join yellow @s[scores={ui_team=3}]
 team join green @s[scores={ui_team=4}]
-team leave @s[tag=tmw272_spectate]
+team join gray @s[tag=tmw272_spectate]
 
 # インベントリのコピーをとって全消し
 execute if entity @s[type=player] run function ui:template/inventory/push

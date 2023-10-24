@@ -63,6 +63,10 @@ execute if data storage ui:tmw272 temp{input:"memory"} run scoreboard players op
 execute if data storage ui:tmw272 temp{input:"chain"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_chain
 execute if data storage ui:tmw272 temp{input:"hope"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_hope
 execute if data storage ui:tmw272 temp{input:"ec"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_ec
+execute if data storage ui:tmw272 temp{input:"karma"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_karma
+execute if data storage ui:tmw272 temp{input:"tenacity"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_tenacity
+execute if data storage ui:tmw272 temp{input:"hexproof"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_hexproof
+execute if data storage ui:tmw272 temp{input:"stop"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_stop
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat
