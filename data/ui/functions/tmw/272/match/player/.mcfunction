@@ -13,7 +13,7 @@ execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/27
 # 視線入力、ステータス参照
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
-execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!ui_temp_player,sort=random,limit=1] add tmw272_visual_input
+execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1] add tmw272_visual_input
 
 #
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
@@ -31,6 +31,8 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.Afte
 # HPが0になったプレイヤーをマッチから除外する
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_undying > @s ui_tmw272_undying_count run function ui:tmw/272/match/player/state/undying
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
+execute if entity @s[scores={ui_st2=5}] run tellraw @s [{"text":"戦線から撤退しますか？","color": "red"}]
+execute if entity @s[x_rotation=89..90,scores={ui_st2=20..}] run function ui:tmw/272/match/player/death
 
 #
 tag @e[tag=ui_temp_player] remove ui_temp_player

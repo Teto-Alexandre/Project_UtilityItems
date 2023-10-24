@@ -12,6 +12,10 @@ execute if entity @s[type=!player] if entity @e[tag=tmw272_temp_steal,type=playe
 
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
 
+# アイテムオーナー
+execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @s UUID
+execute if entity @e[tag=tmw272_temp_steal,type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @e[tag=tmw272_temp_steal,type=player,limit=1] UUID
+
 # 盗む？
 execute if entity @e[tag=tmw272_temp_steal,type=player] as @e[tag=tmw272_temp_steal] run tp @e[tag=tmw272_temp_item] @s
 execute if entity @e[tag=tmw272_temp_steal,type=!player] as @e[tag=tmw272_temp_steal] run function oh_my_dat:please

@@ -1,7 +1,7 @@
 scoreboard players set $check_after_effect ui_temp 0
 
 #
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" CHECK_AFTER_EFFECT の解決を行います"}]
+#tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" CHECK_AFTER_EFFECT の解決を行います"}]
 
 # データの書き出し
 ##ディレイ計算の種類( 0:tick, 1:ターン開始からの時間 2:ターン終了までの時間 )

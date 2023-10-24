@@ -6,3 +6,4 @@ particle dust 0 1 0 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 10 force
 playsound entity.wither.spawn player @a ~ ~ ~ 1 2 0
 
 function ui:tmw/272/common/player_remove
+execute as @e[tag=ui_temp_players,tag=tmw272_spectate] run function ui:tmw/272/common/player_remove

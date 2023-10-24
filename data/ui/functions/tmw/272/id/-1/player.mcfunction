@@ -83,6 +83,21 @@ function ui:tmw/272/id/-1/debug/bro_list
 function ui:tmw/272/common/list_match/copy
 function ui:tmw/272/common/shuffle/
 
+# デッキが空なら観戦モードへ
+data modify storage ui:temp merge_checker set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
+execute store result score $merge_check ui_temp run data modify storage ui:temp merge_checker set value [{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1},{Count:1}]
+data remove storage ui:temp merge_checker
+execute if score $merge_check ui_temp matches 0 run tag @s add tmw272_spectate
+execute if score $merge_check ui_temp matches 0 run say 観戦モード起動
+scoreboard players reset $merge_check ui_temp
+
+# チーム
+team join blue @s[scores={ui_team=1}]
+team join red @s[scores={ui_team=2}]
+team join yellow @s[scores={ui_team=3}]
+team join green @s[scores={ui_team=4}]
+team leave @s[tag=tmw272_spectate]
+
 # インベントリのコピーをとって全消し
 execute if entity @s[type=player] run function ui:template/inventory/push
 clear @s

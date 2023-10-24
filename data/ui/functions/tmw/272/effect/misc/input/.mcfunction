@@ -34,6 +34,13 @@ execute unless score $input_mult ui_temp matches 0 run scoreboard players operat
 execute store result score $input_add ui_temp run data get storage ui:temp temp.effect.var_input.add 1
 execute unless score $input_add ui_temp matches 0 run scoreboard players operation $input_act ui_temp += $input_add ui_temp
 
+# min max
+execute if data storage ui:temp temp.effect.var_input.min store result score $input_min ui_temp run data get storage ui:temp temp.effect.var_input.min
+execute if data storage ui:temp temp.effect.var_input.max store result score $input_max ui_temp run data get storage ui:temp temp.effect.var_input.max
+execute if data storage ui:temp temp.effect.var_input.min run scoreboard players operation $input_act ui_temp > $input_min ui_temp
+execute if data storage ui:temp temp.effect.var_input.max run scoreboard players operation $input_act ui_temp < $input_max ui_temp
+
+
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$input","objective": "ui_temp"}},{"text":"  input_act: "},{"score":{"name": "$input_act","objective": "ui_temp"}}]
 
 
@@ -52,6 +59,8 @@ scoreboard players reset $input_mod ui_temp
 scoreboard players reset $input_pow ui_temp
 scoreboard players reset $input_mult ui_temp
 scoreboard players reset $input_add ui_temp
+scoreboard players reset $input_min ui_temp
+scoreboard players reset $input_max ui_temp
 
 # まだあるなら - 次のエフェクトに移動
 data remove storage ui:temp temp.mod

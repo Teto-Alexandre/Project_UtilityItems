@@ -8,6 +8,12 @@ tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","b
 #
 #data modify storage ui:temp temp.list set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
 execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 temp.list
+execute if entity @s[type=player] store result score $cg1_common_draw_inventory ui_temp run data get entity @s Inventory
+execute if entity @s[type=!player] store result score $cg1_common_draw_inventory ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand
+scoreboard players operation $cg1_common_draw_inventory ui_temp += $cg1_common_draw_num ui_temp
+scoreboard players remove $cg1_common_draw_inventory ui_temp 35
+scoreboard players operation $cg1_common_draw_inventory ui_temp > #0 ui_num
+scoreboard players operation $cg1_common_draw_num ui_temp -= $cg1_common_draw_inventory ui_temp
 
 #
 execute if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/create/shuffle/
@@ -23,3 +29,4 @@ data remove storage ui:cg1 temp.list
     scoreboard players reset $cg1_list_count ui_temp
     scoreboard players reset $cg1_common_draw_type ui_temp
     scoreboard players reset $cg1_common_draw_num ui_temp
+    scoreboard players reset $cg1_common_draw_inventory ui_temp
