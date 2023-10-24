@@ -1,15 +1,51 @@
 基本の形
 {cost:1,particle_laser:1,particle_self:1001,particle_look:1,effects:[{target_type:1,effect_type:"damage",var:1}]}
 
-cost            - 必須      - マナコスト
-cost_type       - 任意      - 1から3 にしてね
-    1のとき（マナコストを１次関数ぐらいの幅で変動）
-        cost_min
-        cost_mods   - ↑を使うなら 基本の形 cost_mods:[{name:"turn_count",pow:0,mult:-1.0,add:0}]
-            name    - 軽減に使うステータス  下の「ステータスの名前対応表」を見ること
-    2のとき
-        cost_mods   - ↑を使うなら 基本の形 cost_mods:[{name:"turn_count",pow:0,mult:-1.0,add:0}]
-            name    - 軽減に使うステータス  下の「ステータスの名前対応表」を見ること
+以下cgの中に書くもの　＞＞＞
+
+（after_effect限定）
+delay       :　　、発動までのtick数
+delay_base  :必須、繰り返した時のdelayの再設定の値
+delay_type  :　　、0-2 (1なら↑が開幕からの時間、2なら閉幕までの時間)
+repeat      :　　、繰り返す回数
+name        :　　、display.NameのAE版
+lore        :　　、display.LoreのAE版
+
+cost            - 必須      - マナコストの設定 例：cost:3 or cost:{amount:3,type:1,mods:[{name:"turn_count",mult:-1.0}]}
+    amount      - 必須      - コスト
+    bypass:1    - 　　      - 何がなんでも実行可能
+    type        - 　　      - 1から3 にしてね
+        1のとき（マナコストが各要素の数に合わせて直線で変動）
+            min
+            mods   - ↑を使うなら 基本の形 type:1,mods:[{name:"turn_count",pow:0,mult:-1.0,add:0}]
+                name    - 軽減に使うステータス  下の「ステータスの名前対応表」を見ること
+                mod     - 　　、Nで割った余りにしたい時に使う
+                pow     - 　　、N乗、整数値だけよ
+                mult    - 　　、N倍、小数第二位まで対応 例：0.05
+                add     - 　　、Nを加算、整数値 例:-10
+        2のとき（要素全てを満たしていないと使えない）
+            mods   - ↑を使うなら 基本の形 type:2,mods:[{name:"turn_count",min:5}]
+                name    - 軽減に使うステータス  下の「ステータスの名前対応表」を見ること
+                mod     - 　　、Nで割った余りにしたい時に使う
+                pow     - 　　、N乗、整数値だけよ
+                mult    - 　　、N倍、小数第二位まで対応 例：0.05
+                add     - 　　、Nを加算、整数値 例:-10
+                 ↓ 上の結果で出た数値が
+                min     - 　　、最小値
+                max     - 　　、最大値 の間なら「満たしている」状態
+        3のとき（要素を満たしているとコストが変動）
+            mods   - ↑を使うなら 基本の形 type:3,mods:[{name:"turn_count",min:5,var:-2}]
+                name    - 軽減に使うステータス  下の「ステータスの名前対応表」を見ること
+                mod     - 　　、Nで割った余りにしたい時に使う
+                pow     - 　　、N乗、整数値だけよ
+                mult    - 　　、N倍、小数第二位まで対応 例：0.05
+                add     - 　　、Nを加算、整数値 例:-10
+                 ↓ 上の結果で出た数値が
+                min     - 　　、最小値
+                max     - 　　、最大値 の間なら「満たしている」状態
+                 ↓ 満たしているなら
+                var     - 必須、コストがこの値だけ増減する
+
 particle_laser  - 任意      - 1 にしてね（レーザー表示）
 particle_self   - 任意      - 数値idに対応するパーティクル表示
 particle_look   - 任意      - 数値idに対応するパーティクル表示
@@ -28,20 +64,26 @@ effects
             target_count: N
         7 : (AfterEffect限定) 実行時のターゲット
         8 : 自分と見ている敵
-    effect_type
-        damage : ダメージ
-        heal : 回復
-        draw : ドロー
-        discard : カードを捨てる
-        create : カードを創造する
-        duplication : 次のカードの効果を複製
-        after_effect : チュートリアル５を読んで
-        health_averaging : ターゲット全員で体力を平均化
-        health_swap : ターゲット全員で体力を入れ替え
-        condition_input : チュートリアル３を読んで
-        modify_value : ステータスにvarだけ加算
-        mana : マナを加算
-        mana_max : マナ最大値を加算
+    effect_type (拡張オプションはeffect_type:""の横に書くこと)
+        damage              : ダメージ
+        heal                : 回復
+        draw                : ドロー
+        discard             : カードを捨てる
+        create              : カードを創造する
+        duplication         : 次のカードの効果を複製
+        after_effect        : チュートリアル５を読んで
+        health_averaging    : ターゲット全員で体力を平均化
+        health_swap         : ターゲット全員で体力を入れ替え
+        condition_input     : チュートリアル３を読んで
+        modify_value        : ステータスにvarだけ加算
+        mana                : マナを加算
+            effect_mode:"set" : 加算の代わりに代入
+        mana_max            : マナ最大値を加算
+            effect_mode:"set" : 加算の代わりに代入
+        show_text           : テキストを表示
+            target_type - 表示する対象
+            text        - 表示する内容 例 text:'[{"selector":"@a[sort=furthest,limit=1]"},{"text":"の座標を表示します ↓"}]'
+            
     var : エフェクトに入れる数値
         rand - ランダムな数 - 基本の形 rand:{min:2,max:6}
             min 最小値
