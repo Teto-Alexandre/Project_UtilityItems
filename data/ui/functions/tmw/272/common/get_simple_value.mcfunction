@@ -80,5 +80,3 @@ execute if data storage ui:tmw272 temp{input:"condition"} run scoreboard players
 function ui:tmw/272/common/inport_text
 ## 下は例外以外を全部共通化する
 execute unless data storage ui:tmw272 temp.mute run tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}     },{"text":"は"},{"score":{"name": "$tmw272_get_value","objective": "ui_temp"}}]
-
-data remove storage ui:tmw272 temp

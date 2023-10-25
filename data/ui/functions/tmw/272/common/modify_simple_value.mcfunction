@@ -164,5 +164,3 @@ execute unless data storage ui:tmw272 temp.mute run tellraw @a[tag=ui_temp_playe
 
 # フィードバック
 # execute unless data storage ui:tmw272 temp.mute if data storage ui:tmw272 temp{input:"health"} run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"text":"体力","color":"red"},{"text":"が"},{"score":{"name": "@s","objective": "ui_tmw272_health"}},{"text":"になった！"}]
-
-data remove storage ui:tmw272 temp

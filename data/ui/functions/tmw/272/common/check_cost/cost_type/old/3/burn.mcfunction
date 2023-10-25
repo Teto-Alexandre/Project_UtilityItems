@@ -63,6 +63,8 @@ scoreboard players reset $cost_pow ui_temp
 scoreboard players reset $cost_mult ui_temp
 scoreboard players reset $cost_add ui_temp
 
+data remove storage ui:tmw272 temp
+
 # まだあるなら - 次のエフェクトに移動
 scoreboard players reset $cost_act_temp ui_temp
 data remove storage ui:temp temp.mod

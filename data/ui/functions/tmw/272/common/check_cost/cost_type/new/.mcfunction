@@ -16,15 +16,15 @@ execute if score $broadcast_type ui_temp matches 1 run scoreboard players operat
 # デバッグメッセ
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
 
+# スタンしているなら問答無用で却下
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run scoreboard players set $cost_type ui_temp -1
+
 # コストタイプ別に参照
 execute if score $cost_type ui_temp matches 0 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/0
 execute if score $cost_type ui_temp matches 1 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/1/
 execute if score $cost_type ui_temp matches 2 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/2/
 execute if score $cost_type ui_temp matches 3 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/3/
-
-# スタンしているなら問答無用で却下
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run scoreboard players set $check_cost ui_temp 0
 
 # バイパス
 execute if score $bypass ui_temp matches 1.. run scoreboard players set $check_cost ui_temp 1

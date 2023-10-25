@@ -13,7 +13,8 @@ execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/27
 # 視線入力、ステータス参照
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
-execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1] add tmw272_visual_input
+execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
+execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
 
 #
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
@@ -21,6 +22,7 @@ execute if score @s ui_tmw272_flying matches 1.. at @s run particle sweep_attack
 execute if score @s ui_tmw272_glowing matches 1.. at @s run effect give @s glowing 1 0 true
 execute if score @s ui_tmw272_invulnerable matches 1.. at @s run particle dust 1 0.5 0 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
 execute if score @s ui_tmw272_stun matches 1.. at @s run particle crit ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
+execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
 
 #
 function oh_my_dat:please
