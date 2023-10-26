@@ -39,4 +39,4 @@ tag @e[tag=ui_temp_player] remove ui_temp_player
 tag @e[tag=ui_temp_target] remove ui_temp_target
 tag @e[tag=ui_temp_game] remove ui_temp_game
 data remove storage ui:temp player_template
-data remove storage ui:temp temp
+data remove storage ui:temp init_manager

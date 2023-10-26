@@ -1,5 +1,7 @@
 #
 tag @s add ui_temp_player
+scoreboard players operation $team ui_temp = @s ui_team
+function ui:common/tag_temp_team
 
 #
 scoreboard players add @s ui_tmw272_match_time 1
@@ -13,8 +15,8 @@ execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/27
 # 視線入力、ステータス参照
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
-execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
-execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
+execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
+execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
 
 #
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force

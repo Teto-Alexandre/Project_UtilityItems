@@ -1,5 +1,5 @@
-data modify storage ui:temp temp.obj_ids set from entity @s item.tag.anti_rejoin
-execute store result score $count ui_temp run data get storage ui:temp temp.obj_ids
+data modify storage ui:temp init_manager.obj_ids set from entity @s item.tag.anti_rejoin
+execute store result score $count ui_temp run data get storage ui:temp init_manager.obj_ids
 
 execute if score $count ui_temp matches 1.. run function ui:tmw/272/id/-1/ng_filter/burn
 
