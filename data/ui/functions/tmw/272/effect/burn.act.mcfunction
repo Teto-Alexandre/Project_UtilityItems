@@ -74,6 +74,8 @@ execute if data storage ui:temp temp.effect{effect_type:"insert"} run function u
 execute if data storage ui:temp temp.effect{effect_type:"last_used"} run function ui:tmw/272/effect/effect_type/last_used/
 ## アフターエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_after_effect"} run function ui:tmw/272/effect/effect_type/modify_after_effect/
+## エンティティを戦線に追加する
+execute if data storage ui:temp temp.effect{effect_type:"summon"} run function ui:tmw/272/effect/effect_type/summon/
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old

@@ -70,3 +70,7 @@ execute if data storage ui:tmw272 temp{input:"stop"} run data modify storage ui:
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat
 execute if data storage ui:tmw272 temp{input:"condition"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.condition
+
+execute if data storage ui:tmw272 temp{input:"temp1"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.temp1
+execute if data storage ui:tmw272 temp{input:"temp2"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.temp2
+execute if data storage ui:tmw272 temp{input:"temp3"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.temp3

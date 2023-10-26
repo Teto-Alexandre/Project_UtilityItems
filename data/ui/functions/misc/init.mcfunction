@@ -418,6 +418,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard players set #2220 ui_num 2220
     scoreboard players set #3000 ui_num 3000
     scoreboard players set #3600 ui_num 3600
+    scoreboard players set #5000 ui_num 5000
     scoreboard players set #10000 ui_num 10000
     scoreboard players set #20000 ui_num 20000
     scoreboard players set #31743 ui_num 31743
