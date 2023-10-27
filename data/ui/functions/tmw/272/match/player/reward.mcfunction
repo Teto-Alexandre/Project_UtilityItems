@@ -23,4 +23,4 @@ scoreboard players operation $rand_old1 ui_calc1 = $rand ui_calc1
 
 #tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward"}]
 
-execute if predicate ui:percentage/30 run function ui:tmw/272/match/player/reward
+execute if predicate ui:percentage/50 run function ui:tmw/272/match/player/reward
