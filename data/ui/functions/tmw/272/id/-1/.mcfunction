@@ -1,29 +1,18 @@
-# 対戦作成、参加、巻き込みレーザー  兼  デッキ編集
+#
+tag @s[tag=tmw_drop_n] add tmw_drop_s
 
-# 想定されるケース
-
-# 1: 自分 x - 全員に命中
-    # 1: 相手 x（リンクを更新して新規作成）
-    # 2: 相手 o（相手のリンクを自分に取得）
-    # E: ドロッパーコア ID同じ（ターゲット可能、命中で吸収）
-
-# 2: 自分 o - リンクを持っていない相手にのみ命中
-    # 1: 相手 x（自分のリンクを相手に共有）
-    # 2: 相手 一緒（ターゲットではないのですり抜ける）
-    # 3: 相手 別 （ターゲットではないのですり抜ける）
-    # E: ドロッパーコア ID同じ（ターゲット可能、命中で吸収）
-
-execute unless score @s ui_tmw272_link_id matches 1..2147483647 run scoreboard players set $shot_type ui_temp 1
-execute if score @s ui_tmw272_link_id matches 1..2147483647 run scoreboard players set $shot_type ui_temp 2
-
-execute unless score @s ui_tmw272_link_id matches 1..2147483647 as @e[predicate=ui:load_unhurtable,tag=!ui_temp_player] run tag @s add ui_temp_targetable
-execute if score @s ui_tmw272_link_id matches 1..2147483647 as @e[predicate=ui:load_unhurtable,tag=!ui_temp_player] unless score @s ui_tmw272_link_id matches 1..2147483647 run tag @s add ui_temp_targetable
-execute as @a[tag=!tmw272_ready] unless score @s ui_tmw272_link_id matches 1..2147483647 run tag @s remove ui_temp_targetable
-
+#
 execute as @e[tag=tmw272_deck_dropper_core] if score @s ui_id = $id ui_temp run tag @s add ui_temp_targetable_dropper
+execute if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/n
+execute if entity @s[tag=tmw_use_s] run function ui:tmw/272/id/-1/s
+execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
+execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
+execute if entity @s[tag=tmw_oh_n] run function ui:tmw/272/id/-1/ready
+execute if entity @s[tag=tmw_oh_s,scores={ui_st2=..20}] run function ui:tmw/272/id/-1/clone
+execute if entity @s[scores={ui_st2=21}] at @s run particle dust 1 0 1 2 ~ ~ ~ 1 1 1 0 15 force
+execute if entity @s[scores={ui_st2=21}] at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 1 0.5 0
+execute if entity @s[tag=tmw_oh_s,scores={ui_st2=21..}] as @e[type=sheep,sort=nearest,limit=1] at @s run function ui:tmw/272/id/-1/sheep_decomposer
+execute if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] at @s run function ui:tmw/272/id/-1/success2
 
-function ui:tmw/272/id/-1/shot
-
-scoreboard players reset $shot_type ui_temp
-tag @e[tag=ui_temp_targetable] remove ui_temp_targetable
-tag @e[tag=ui_temp_targetable_dropper] remove ui_temp_targetable_dropper
+#
+execute at @s[tag=tmw272_ready] run particle happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 1 force

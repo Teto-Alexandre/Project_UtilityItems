@@ -94,7 +94,7 @@ scoreboard players operation @e[tag=hc_deck_temp] ui_team = @s ui_team
 execute as @e[tag=hc_deck_temp] at @s run function ui:template/horizontal_shuffle5
 execute as @e[tag=hc_deck_temp] at @s run particle dust 1 1 1 5 ~ ~ ~ 1 1 1 0 10 force
 execute as @e[tag=hc_deck_temp] at @s run particle end_rod ~ ~ ~ 0 0 0 0.1 10 force
-execute as @e[tag=hc_deck_temp] at @s run playsound entity.experience_orb.pickup player @a ~ ~ ~ 1 2 0
+execute as @e[tag=hc_deck_temp] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1.4 0
 execute as @e[tag=hc_deck_temp] at @s run function ui:tmw/272/id/-1/success
 
 tag @e[tag=hc_deck_temp] remove hc_deck_temp

@@ -14,31 +14,15 @@ execute unless entity @e[tag=tmw272_match] if score @s ui_tmw272_link_id matches
 # リンク形成
 execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
 # 視線入力
-execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_input/
+#execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_input/
     #HC:ステータス参照
     #execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/stats_open/actionbar_self
 
 #
-execute if score $type ui_temp matches -1 as @e[tag=tmw272_deck_dropper_core] if score @s ui_id = $id ui_temp run tag @s add ui_temp_targetable_dropper
-
-#
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/n
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_use_s] run function ui:tmw/272/id/-1/s
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_n] run function ui:tmw/272/id/-1/ready
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_s,scores={ui_st2=..20}] run function ui:tmw/272/id/-1/clone
-execute if score $type ui_temp matches -1 if entity @s[scores={ui_st2=21}] at @s run particle dust 1 0 1 2 ~ ~ ~ 1 1 1 0 15 force
-execute if score $type ui_temp matches -1 if entity @s[scores={ui_st2=21}] at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 1 0.5 0
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_oh_s,scores={ui_st2=21..}] as @e[type=sheep,sort=nearest,limit=1] at @s run function ui:tmw/272/id/-1/sheep_decomposer
+execute if score $type ui_temp matches -1 run function ui:tmw/272/id/-1/
+execute if score $type ui_temp matches -2 run function ui:tmw/272/id/-2/
 #execute if score $type ui_temp matches 1 if entity @s[scores={ui_use1=1..}] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 execute if score $type ui_temp matches 1 if entity @s[tag=tmw_drop_n] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
-
-#
-execute if score $type ui_temp matches -1 if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] at @s run function ui:tmw/272/id/-1/success2
-
-#
-execute at @s[tag=tmw272_ready] run particle happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 1 force
 
 #
 tag @e[tag=ui_temp_targetable_dropper] remove ui_temp_targetable_dropper

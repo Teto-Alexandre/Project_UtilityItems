@@ -1,6 +1,7 @@
 #
 tag @s add ui_temp_player
 scoreboard players operation $team ui_temp = @s ui_team
+execute if score $team ui_temp matches 0 run scoreboard players set $team ui_temp -32767
 function ui:common/tag_temp_team
 
 #

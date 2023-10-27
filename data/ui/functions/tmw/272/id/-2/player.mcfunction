@@ -98,9 +98,6 @@ execute if score $merge_check ui_temp matches 0 run tag @s add tmw272_spectate
 execute if score $merge_check ui_temp matches 0 run tellraw @s [{"text":"> 観戦モード起動"}]
 scoreboard players reset $merge_check ui_temp
 
-#
-#execute if entity @s[type=player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward set value []
-
 # チーム
 team join blue @s[scores={ui_team=1}]
 team join red @s[scores={ui_team=2}]

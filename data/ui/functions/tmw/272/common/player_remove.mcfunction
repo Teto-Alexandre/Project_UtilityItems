@@ -5,7 +5,10 @@ tag @s remove ui_temp_players
 execute at @s run kill @e[type=item,tag=tmw272_dropitem_card,distance=..5]
 function ui:template/inventory/pull
 
+execute if entity @s[type=player,gamemode=!creative,gamemode=!spectator] at @s run function ui:tmw/272/common/reward/
+
 function oh_my_dat:please
+data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems
