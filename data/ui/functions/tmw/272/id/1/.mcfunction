@@ -1,10 +1,7 @@
-function oh_my_dat:please
-execute if entity @s[type=player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append from entity @s SelectedItem
-execute if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
-#execute if entity @s[type=!player] run say a
+# 戦線中
+execute if entity @s[tag=tmw272_active] if entity @s[tag=tmw_drop_n] run function ui:tmw/272/id/1/use
 
-# カードは消す
-execute if entity @s[type=player] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[-1].tag.tmw.cg.not_consume run item replace entity @s weapon.mainhand with air
-execute if entity @s[type=!player] unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[-1].tag.tmw.cg.not_consume run data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
-
-#scoreboard players set @s ui_ct 20
+# 非
+execute if entity @s[tag=!tmw272_active] if entity @s[scores={ui_st2=21}] at @s run particle dust 1 1 0 2 ~ ~0.9 ~ 0.6 0.6 0.6 0 15 force
+execute if entity @s[tag=!tmw272_active] if entity @s[scores={ui_st2=21}] at @s run playsound block.chain.break player @a ~ ~ ~ 1 0.8 0
+execute if entity @s[tag=!tmw272_active] if entity @s[scores={ui_st2=5}] at @s run tellraw @s [{"text":"[Idling] > ","color": "yellow"},{"text":"長Sneak+Fキーでカードを分解","color": "gray"}]

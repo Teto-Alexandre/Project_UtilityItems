@@ -182,6 +182,7 @@
         execute if entity @a[scores={ui_tmw_id=271}] run function ui:tmw/271/lim
     #カードゲーム1
         execute if entity @a[scores={ui_tmw_id=272}] run function ui:tmw/272/lim
+        execute if entity @a[scores={ui_tmw_id2=272}] run function ui:tmw/272/lim_oh
     #チェーンリンクメーカー
         execute if entity @a[scores={ui_tmw_id=301}] run function ui:tmw/301/lim
     #エーテリウムシューター
