@@ -3,6 +3,9 @@ execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.StackUUID set from entity @e[tag=tmw272_temp_item,limit=1] UUID
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.IsCG1 set value 2
 
+# アイテムオーナー
+execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @s UUID
+
 data modify storage ui:temp temp.draw_card set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0]
 
 execute if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card

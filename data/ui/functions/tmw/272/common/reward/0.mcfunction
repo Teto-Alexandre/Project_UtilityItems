@@ -7,8 +7,7 @@ function ui:tmw/272/effect/broadcast/
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward[0]
 
 # アイテムオーナー
-execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @s UUID
-execute if entity @e[tag=tmw272_temp_steal,type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @e[tag=tmw272_temp_steal,type=player,limit=1] UUID
+data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @s UUID
 
 # アイテムのタグ削除
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
