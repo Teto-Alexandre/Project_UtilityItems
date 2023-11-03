@@ -73,6 +73,8 @@ scoreboard players set @s ui_tmw272_temp3 0
 
 tag @s remove tmw272_ready
 
+scoreboard players add @s ui_tmw272_battlefront_joins 1
+
 # OMDを取り出す
 function oh_my_dat:please
 
