@@ -50,6 +50,7 @@ scoreboard players reset $turn_time_rev ui_temp
 scoreboard players reset $turn_time ui_temp
 scoreboard players reset $players_count ui_temp
 scoreboard players reset $team_count ui_temp
+scoreboard players set $tmw272_team_last_temped ui_temp -1
 
 # タグリセット
 tag @e[tag=ui_temp_players] remove ui_temp_players
