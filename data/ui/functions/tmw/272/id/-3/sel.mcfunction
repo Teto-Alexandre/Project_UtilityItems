@@ -79,6 +79,10 @@ execute if data storage ui:temp temp.chest[{Slot:26b}] run data modify entity @e
 execute if data storage ui:temp temp.chest[{Slot:26b}] run data remove storage ui:temp temp.chest[-1]
 
 #
+data modify entity @e[tag=ui_temp_item,limit=1] Item.tag.display.Lore append value '[{"text":"ラインナップ:","color":"green","italic":false}]'
+
+#
+setblock ~ ~ ~ oak_sign replace
 execute store result score $loop ui_temp run data get storage ui:temp temp.chest
 execute if score $loop ui_temp matches 1.. run function ui:tmw/272/id/-3/sel.lp
 
