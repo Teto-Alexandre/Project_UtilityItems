@@ -38,10 +38,10 @@ execute as @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate] ru
 
 scoreboard players set $team_count ui_temp 0
 execute as @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate] unless score @s ui_team matches 1..4 run scoreboard players add $team_count ui_temp 2
-execute if entity @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate,scores={ui_team=1}] run scoreboard players add $team_count ui_temp 1
-execute if entity @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate,scores={ui_team=2}] run scoreboard players add $team_count ui_temp 1
-execute if entity @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate,scores={ui_team=3}] run scoreboard players add $team_count ui_temp 1
-execute if entity @e[tag=ui_temp_players,tag=!summoned_nocount,tag=!tmw272_spectate,scores={ui_team=4}] run scoreboard players add $team_count ui_temp 1
+execute if entity @e[tag=ui_temp_players,scores={ui_team=1},tag=!summoned_nocount,tag=!tmw272_spectate] run scoreboard players add $team_count ui_temp 1
+execute if entity @e[tag=ui_temp_players,scores={ui_team=2},tag=!summoned_nocount,tag=!tmw272_spectate] run scoreboard players add $team_count ui_temp 1
+execute if entity @e[tag=ui_temp_players,scores={ui_team=3},tag=!summoned_nocount,tag=!tmw272_spectate] run scoreboard players add $team_count ui_temp 1
+execute if entity @e[tag=ui_temp_players,scores={ui_team=4},tag=!summoned_nocount,tag=!tmw272_spectate] run scoreboard players add $team_count ui_temp 1
 execute if score $team_count ui_temp matches 1 run function ui:tmw/272/match/end/team
 execute unless score $team_count ui_temp matches 1 if score $players_count ui_temp matches ..1 run function ui:tmw/272/match/end/
 

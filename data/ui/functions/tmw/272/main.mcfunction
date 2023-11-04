@@ -12,7 +12,7 @@ execute as @e[tag=tmw272] if score @s ui_obj_id = $link_id ui_temp run tag @s ad
 execute unless entity @e[tag=tmw272_match] if score @s ui_tmw272_link_id matches 1..2147483647 run function ui:tmw/272/init/_main.connection_lost
 
 # リンク形成
-execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
+#execute if entity @s[tag=tmw272_active] run function ui:tmw/272/init/_main
 # 視線入力
 #execute as @s[tag=tmw272_active] at @s run function ui:tmw/272/common/visual_input/
     #HC:ステータス参照
@@ -34,9 +34,9 @@ tag @e[tag=ui_temp_targetable_dropper] remove ui_temp_targetable_dropper
 # 情報クリア
 scoreboard players reset $link_id ui_temp
 scoreboard players reset $obj_id ui_temp
-tag @s remove ui_temp_del
+#tag @s remove ui_temp_del
 tag @s remove ui_temp_player
 tag @e[tag=tmw272_match] remove tmw272_match
-tag @e[tag=ui_temp_players] remove ui_temp_players
-tag @e[tag=tmw272_active_match] remove tmw272_active_match
+#tag @e[tag=ui_temp_players] remove ui_temp_players
+#tag @e[tag=tmw272_active_match] remove tmw272_active_match
 tag @e[tag=tmw272_visual_input] remove tmw272_visual_input

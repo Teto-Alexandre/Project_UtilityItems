@@ -24,7 +24,7 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-function ui:common/tag_temp_team
+function ui:common/tag_temp_team/
 
 #重力補正
 execute if score $rangetype ui_temp matches 2..3 at @s run function ui:tmw/256/projectile/gravity

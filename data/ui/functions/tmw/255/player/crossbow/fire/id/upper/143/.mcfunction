@@ -14,7 +14,7 @@
     execute if score $firetime.temp ui_temp matches 1 at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 20 force
     execute if score $firetime.temp ui_temp matches 10 run tag @s add ui_temp_this
     execute if score $firetime.temp ui_temp matches 10 run scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $firetime.temp ui_temp matches 10 run function ui:common/tag_temp_team
+    execute if score $firetime.temp ui_temp matches 10 run function ui:common/tag_temp_team/
     execute if score $firetime.temp ui_temp matches 10 if score @s ui_tmw601_accessory matches 5005 as @e[predicate=ui:load_unhurtable,tag=ui_temp_team,tag=!ui_temp_this] at @s run function ui:tmw/255/player/crossbow/fire/id/upper/143/heal
     execute if score $firetime.temp ui_temp matches 10 if entity @s[scores={ui_st=0}] at @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,nbt={OnGround:1b},distance=..100,sort=nearest,limit=1] run function ui:tmw/255/player/crossbow/fire/id/upper/143/attack
     execute if score $firetime.temp ui_temp matches 10 if entity @s[scores={ui_st=0}] at @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,nbt={OnGround:1b},distance=..100,sort=random,limit=9] run function ui:tmw/255/player/crossbow/fire/id/upper/143/attack

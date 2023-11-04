@@ -1,6 +1,6 @@
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
     scoreboard players operation $team ui_temp = @s ui_team
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 # ヒット音
     execute if score @s ui_hpart matches 0 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1 1

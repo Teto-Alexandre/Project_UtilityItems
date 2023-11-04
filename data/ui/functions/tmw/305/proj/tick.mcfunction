@@ -6,7 +6,7 @@ scoreboard players operation $id ui_temp = @s ui_id
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-function ui:common/tag_temp_team
+function ui:common/tag_temp_team/
 
 #tick毎弾移動ループ
 function ui:tmw/305/proj/move

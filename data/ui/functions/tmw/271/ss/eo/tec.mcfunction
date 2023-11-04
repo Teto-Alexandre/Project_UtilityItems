@@ -7,7 +7,7 @@
 # チームを認識して敵味方の識別タグを付与する
 scoreboard players operation $team ui_temp = @s ui_team
 execute as @e[tag=ui_tec] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team_control
-function ui:common/tag_temp_team
+function ui:common/tag_temp_team/
 
 #
 #tellraw @a [{"text":"Team> "},{"text":": "},{"selector":"@e[tag=ui_temp_team]"}]

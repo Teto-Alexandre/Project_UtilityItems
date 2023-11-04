@@ -5,7 +5,7 @@
     execute store result score $type ui_temp run data get entity @s Item.tag.tmw.type
 
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 # それぞれの起爆
     execute if score $type ui_temp matches 101 run function ui:tmw/256/sub/explosive/101/tick

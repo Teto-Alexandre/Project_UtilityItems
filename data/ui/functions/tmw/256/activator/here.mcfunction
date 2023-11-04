@@ -42,7 +42,7 @@
     execute if score $activator ui_temp matches 256 run effect give @s levitation 1 29 false
 
 # トーテム
-    execute if score $activator ui_temp matches 257 run function ui:common/tag_temp_team
+    execute if score $activator ui_temp matches 257 run function ui:common/tag_temp_team/
     execute if score $activator ui_temp matches 257 run tag @a[tag=ui_temp_team] add tmw_256_sp_survive
     execute if score $activator ui_temp matches 257 at @a[tag=ui_temp_team] run playsound entity.evoker.cast_spell player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 257 at @a[tag=ui_temp_team] run particle totem_of_undying ~ ~1 ~ 0.4 0.6 0.4 0.2 10 force

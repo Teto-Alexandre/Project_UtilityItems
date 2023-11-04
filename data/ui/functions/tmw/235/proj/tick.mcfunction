@@ -6,7 +6,7 @@
 
 # tick毎弾移動ループ
     scoreboard players operation $team ui_temp = @s ui_team
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
     function ui:tmw/235/proj/move
 
 # キル条件

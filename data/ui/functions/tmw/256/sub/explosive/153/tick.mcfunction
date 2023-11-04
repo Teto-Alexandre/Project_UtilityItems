@@ -32,7 +32,7 @@
     execute as @e[tag=tmw_256_sub_153_1,tag=ui_temp_obj] at @s run teleport @s ~ ~ ~ ~24 ~
 
 # チームを認識
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
     scoreboard players set $damage ui_temp 40
     scoreboard players operation $temp2 ui_temp = @s ui_uses
     scoreboard players operation $temp2 ui_temp %= #2 ui_num

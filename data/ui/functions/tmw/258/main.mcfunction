@@ -4,7 +4,7 @@
 tag @s add ui_temp_this
 
 scoreboard players operation $team ui_temp = @s ui_team
-function ui:common/tag_temp_team
+function ui:common/tag_temp_team/
 
 execute at @s anchored eyes positioned ^ ^ ^ if score @s ui_use1 matches 1.. run function ui:tmw/258/use/laser.manager
 

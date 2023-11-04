@@ -14,7 +14,7 @@
 
 #
     scoreboard players operation $team ui_temp = @s ui_team
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 #
     execute if score $firetime.temp ui_temp matches 0 at @s run playsound block.iron_trapdoor.close player @a ~ ~ ~ 1 0.8

@@ -8,7 +8,7 @@
 # id共有
 
 # チームメンバー識別
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 # 座標設定
     scoreboard players set $temp ui_temp 1

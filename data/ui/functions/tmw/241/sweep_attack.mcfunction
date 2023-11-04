@@ -6,7 +6,7 @@
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
     scoreboard players operation $team ui_temp = @s ui_team
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 # ダメージを与える
     data modify storage ui:temp Name set value '{"text":"範囲攻撃","color":"gray"}'

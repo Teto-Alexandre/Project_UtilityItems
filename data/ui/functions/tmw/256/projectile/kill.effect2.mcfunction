@@ -2,7 +2,7 @@
     tag @s add ui_temp_this
     scoreboard players operation $id ui_temp = @s ui_id
     scoreboard players operation $team ui_temp = @s ui_team
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
 
 # ヒット音
     #execute if score @s ui_hpart matches 0 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1 1

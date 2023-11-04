@@ -52,7 +52,7 @@
     execute if score @s ui_team matches 4 run function ui:tmw/237/sub/explosive/151/4
 
 # チームを認識
-    function ui:common/tag_temp_team
+    function ui:common/tag_temp_team/
     scoreboard players set $damage ui_temp 35
     scoreboard players operation $temp ui_temp = @s ui_uses
     scoreboard players operation $temp ui_temp /= #5 ui_num

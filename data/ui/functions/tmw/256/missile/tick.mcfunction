@@ -27,7 +27,7 @@ scoreboard players operation $obj_id ui_temp = @s ui_gpc
 
 #同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
 scoreboard players operation $team ui_temp = @s ui_team
-function ui:common/tag_temp_team
+function ui:common/tag_temp_team/
 
 # 最初に発射元に発射エフェクトを出す
 execute if score @s ui_is matches 1 run function ui:tmw/256/missile/particle_unit

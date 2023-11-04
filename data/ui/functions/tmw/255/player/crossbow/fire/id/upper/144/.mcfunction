@@ -14,5 +14,5 @@
     execute if score $firetime.temp ui_temp matches 1 at @s anchored eyes run particle dust 1 0 1 1 ^ ^ ^3 1 1 1 0 30 force
     execute if score $firetime.temp ui_temp matches 1 at @s anchored eyes run particle dust 0 0 0 1 ^ ^ ^3 1 1 1 0 30 force
     execute if score $firetime.temp ui_temp matches 1 run scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $firetime.temp ui_temp matches 1 run function ui:common/tag_temp_team
+    execute if score $firetime.temp ui_temp matches 1 run function ui:common/tag_temp_team/
     execute if score $firetime.temp ui_temp matches 1 at @s anchored eyes positioned ^ ^ ^3 as @e[predicate=ui:load_unhurtable,tag=!ui_temp_team,distance=..3] run function ui:tmw/255/player/crossbow/fire/id/upper/144/attack
