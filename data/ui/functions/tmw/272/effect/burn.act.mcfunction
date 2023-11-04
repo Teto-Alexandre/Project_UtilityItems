@@ -30,6 +30,14 @@ execute if score $target_type ui_temp matches 7 run function ui:tmw/272/effect/t
 execute if score $target_type ui_temp matches 8 run function ui:tmw/272/effect/target_type/8
 ## 戦線に参加している全員（show_textなどにどうぞ）
 execute if score $target_type ui_temp matches 9 run function ui:tmw/272/effect/target_type/9
+## 自分含む味方全員
+execute if score $target_type ui_temp matches 10 run function ui:tmw/272/effect/target_type/10
+## 自分含む味方から target_count の数だけランダムに抽選
+execute if score $target_type ui_temp matches 11 run function ui:tmw/272/effect/target_type/11
+## 自分以外味方全員
+execute if score $target_type ui_temp matches 12 run function ui:tmw/272/effect/target_type/12
+## 自分以外味方から target_count の数だけランダムに抽選
+execute if score $target_type ui_temp matches 13 run function ui:tmw/272/effect/target_type/13
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
