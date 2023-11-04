@@ -1,9 +1,9 @@
 data modify storage ui:temp init_manager.obj_ids set from entity @s item.tag.anti_rejoin
-execute store result score $count ui_temp run data get storage ui:temp init_manager.obj_ids
+execute store result score $count_ng_filter ui_temp run data get storage ui:temp init_manager.obj_ids
 
-execute if score $count ui_temp matches 1.. run function ui:tmw/272/id/-1/ng_filter/burn
+execute if score $count_ng_filter ui_temp matches 1.. run function ui:tmw/272/id/-1/ng_filter/burn
 
-scoreboard players reset $count ui_temp
+scoreboard players reset $count_ng_filter ui_temp
 
 #
 execute if entity @e[tag=ui_temp_player,tag=ui_temp_ng_temp] run scoreboard players set $shot_type ui_temp 404
