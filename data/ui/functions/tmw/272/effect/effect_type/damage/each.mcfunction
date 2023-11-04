@@ -1,3 +1,5 @@
+scoreboard players operation $var_temp ui_temp = $var ui_temp
+
 # 装甲
 execute unless data storage ui:temp temp.effect.no_armor run data merge storage ui:tmw272 {temp:{input:"armor"}}
 execute unless data storage ui:temp temp.effect.no_armor run function ui:tmw/272/common/inport_text

@@ -15,6 +15,6 @@ execute unless data storage ui:temp temp.effect.no_dodge run data merge storage 
 execute unless data storage ui:temp temp.effect.no_dodge run function ui:tmw/272/common/inport_text
 execute unless data storage ui:temp temp.effect.no_dodge run execute as @e[tag=!ui_temp_player,tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_dodge matches 1.. run function ui:tmw/272/effect/effect_type/damage/dodge
 
-scoreboard players operation $var_temp ui_temp = $var ui_temp
-scoreboard players operation $var_temp ui_temp > #0 ui_num
+scoreboard players operation $var ui_temp > #0 ui_num
+
 execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/damage/each
