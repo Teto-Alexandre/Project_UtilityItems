@@ -6,6 +6,9 @@ function ui:tmw/272/common/inport_text
 execute unless data storage ui:temp temp.effect.no_hope run execute unless score @s ui_tmw272_hope matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
 execute unless data storage ui:temp temp.effect.no_hope run scoreboard players operation $var_temp ui_temp += @s ui_tmw272_hope
 
+# 下限設定
+execute unless data storage ui:temp temp.effect.under_zero run scoreboard players operation $var_temp ui_temp > #0 ui_num
+
 # 空腹の解除方法は回復
 execute if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
 
