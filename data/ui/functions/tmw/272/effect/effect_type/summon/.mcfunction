@@ -97,6 +97,10 @@ execute as @e[tag=hc_deck_temp] at @s run particle end_rod ~ ~ ~ 0 0 0 0.1 10 fo
 execute as @e[tag=hc_deck_temp] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1.4 0
 execute as @e[tag=hc_deck_temp] at @s run function ui:tmw/272/id/-1/success
 
+execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.mana store result score @s ui_tmw272_mana_limit run data get storage ui:temp temp.effect.mana
+execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health_limit run data get storage ui:temp temp.effect.health
+execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health run data get storage ui:temp temp.effect.health
+
 tag @e[tag=hc_deck_temp] remove hc_deck_temp
 
 function oh_my_dat:please
