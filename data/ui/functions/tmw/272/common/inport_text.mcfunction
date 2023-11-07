@@ -1,7 +1,9 @@
+execute if data storage ui:tmw272 temp{input:"health_limit"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.health_limit
 execute if data storage ui:tmw272 temp{input:"health_max"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.health_max
 execute if data storage ui:tmw272 temp{input:"health"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.health
 execute if data storage ui:tmw272 temp{input:"damage"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.damage
 execute if data storage ui:tmw272 temp{input:"mana"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.mana
+execute if data storage ui:tmw272 temp{input:"mana_limit"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.mana_limit
 execute if data storage ui:tmw272 temp{input:"mana_max"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.mana_max
 execute if data storage ui:tmw272 temp{input:"var"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.var
 execute if data storage ui:tmw272 temp{input:"rand"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.rand

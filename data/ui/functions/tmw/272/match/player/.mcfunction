@@ -4,6 +4,11 @@ scoreboard players operation $tmw272_team ui_temp = @s ui_team
 execute if score $tmw272_team ui_temp matches 0 run scoreboard players set $tmw272_team ui_temp -32767
 function ui:tmw/272/match/tag_temp_team/
 
+# 最大体力計測などなど
+scoreboard players operation @s ui_tmw272_mana < @s ui_tmw272_mana_limit
+scoreboard players operation @s ui_tmw272_health < @s ui_tmw272_health_limit
+scoreboard players operation @s ui_tmw272_health_max > @s ui_tmw272_health
+
 #
 scoreboard players add @s ui_tmw272_match_time 1
 execute if score @s ui_tmw272_match_time matches 20 at @s run function ui:tmw/272/common/draw/once

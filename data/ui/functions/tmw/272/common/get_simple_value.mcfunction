@@ -1,8 +1,10 @@
 # 数値を入れる
+execute if data storage ui:tmw272 temp{input:"health_limit"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_health_limit
 execute if data storage ui:tmw272 temp{input:"health_max"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_health_max
 execute if data storage ui:tmw272 temp{input:"health"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_health
 execute if data storage ui:tmw272 temp{input:"damage"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_damage
 execute if data storage ui:tmw272 temp{input:"mana"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_mana
+execute if data storage ui:tmw272 temp{input:"mana_limit"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_mana_limit
 execute if data storage ui:tmw272 temp{input:"mana_max"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_mana_max
 execute if data storage ui:tmw272 temp{input:"var"} run scoreboard players operation $tmw272_get_value ui_temp = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"rand"} run scoreboard players operation $tmw272_get_value ui_temp = $rand ui_temp

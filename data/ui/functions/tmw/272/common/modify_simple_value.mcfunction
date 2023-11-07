@@ -1,9 +1,11 @@
 # 数値を入れる
 ## 固定値モード
+execute if data storage ui:tmw272 temp{input:"health_limit"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health_limit = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"health_max"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health_max = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"health"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"damage"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_damage = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"mana_limit"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_limit = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana_max"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_max = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"var"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $var ui_temp = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"rand"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $rand ui_temp = $var ui_temp
@@ -78,10 +80,12 @@ execute if data storage ui:tmw272 temp{input:"temp3"} if data storage ui:temp te
 execute if data storage ui:tmw272 temp{input:"condition"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $condition_checker ui_temp = $var ui_temp
 
 ## 加算モード
+execute if data storage ui:tmw272 temp{input:"health_limit"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health_limit += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"health_max"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health_max += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"health"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_health += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"damage"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_damage += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"mana_limit"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_limit += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"mana_max"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_mana_max += $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"var"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $var ui_temp += $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"rand"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $rand ui_temp += $var ui_temp

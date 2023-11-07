@@ -1,10 +1,12 @@
 data modify storage ui:tmw272_text simple_value set value {}
 
 # フィードバック
+data modify storage ui:tmw272_text simple_value.health_limit set value {title:'[{"text":"【上限体力】","color":"red"}]',name:'[{"text":"上限体力","color":"red"}]',hover:'[{"text":"体力はこれ以下の値になる"},{"text":"\\n毎tick反映されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health_limit"}}]'}
 data modify storage ui:tmw272_text simple_value.health_max set value {title:'[{"text":"【最大体力】","color":"red"}]',name:'[{"text":"最大体力","color":"red"}]',hover:'[{"text":"最も高かったタイミングの体力"},{"text":"\\n毎tick計測されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health_max"}}]'}
 data modify storage ui:tmw272_text simple_value.health set value {title:'[{"text":"【体力】","color":"red"}]',name:'[{"text":"体力","color":"red"}]',hover:'[{"text":"減ると戦線離脱する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health"}}]'}
 data modify storage ui:tmw272_text simple_value.damage set value {title:'[{"text":"【ダメージ】","color":"red"}]',name:'[{"text":"ダメージ","color":"red"}]',hover:'[{"text":"シールドや装甲の影響を受ける"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_damage"}}]'}
 data modify storage ui:tmw272_text simple_value.mana set value {title:'[{"text":"【マナ】","color":"aqua"}]',name:'[{"text":"マナ","color":"aqua"}]',hover:'[{"text":"カードを使うのに必要\\nターン開始時に回復する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mana"}}]'}
+data modify storage ui:tmw272_text simple_value.mana_limit set value {title:'[{"text":"【上限マナ】","color":"aqua"}]',name:'[{"text":"上限マナ","color":"aqua"}]',hover:'[{"text":"マナはこれ以下の値になる"},{"text":"\\n毎tick反映されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mana_limit"}}]'}
 data modify storage ui:tmw272_text simple_value.mana_max set value {title:'[{"text":"【最大マナ】","color":"aqua"}]',name:'[{"text":"最大マナ","color":"aqua"}]',hover:'[{"text":"マナの最大回復量でもある"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mana_max"}}]'}
 data modify storage ui:tmw272_text simple_value.var set value {title:'[{"text":"【汎用共通変数】","color":"white"}]',name:'[{"text":"汎用共通変数","color":"white"}]',hover:'[{"text":"汎用共通変数"}]',score:'[{"score":{"name":"$var","objective":"ui_temp"}}]'}
 data modify storage ui:tmw272_text simple_value.rand set value {title:'[{"text":"【汎用共通乱数】","color":"white"}]',name:'[{"text":"汎用共通乱数","color":"white"}]',hover:'[{"text":"汎用共通乱数"}]',score:'[{"score":{"name":"$rand","objective":"ui_temp"}}]'}
