@@ -6,6 +6,7 @@ function ui:tmw/272/match/tag_temp_team/
 
 # 最大体力計測などなど
 scoreboard players operation @s ui_tmw272_mana < @s ui_tmw272_mana_limit
+scoreboard players operation @s ui_tmw272_mana_max < @s ui_tmw272_mana_limit
 scoreboard players operation @s ui_tmw272_health < @s ui_tmw272_health_limit
 scoreboard players operation @s ui_tmw272_health_max > @s ui_tmw272_health
 
