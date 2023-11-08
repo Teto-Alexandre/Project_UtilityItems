@@ -38,6 +38,9 @@ execute if score $target_type ui_temp matches 11 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 12 run function ui:tmw/272/effect/target_type/12
 ## 自分以外味方から target_count の数だけランダムに抽選
 execute if score $target_type ui_temp matches 13 run function ui:tmw/272/effect/target_type/13
+
+execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
+
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
