@@ -1,5 +1,6 @@
 # 軽量化のためストレージに書き出す
 data modify storage ui:temp card set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0]
+execute if data storage ui:temp card.repeat run function ui:tmw/272/death_effect/repeat
 
 #
 scoreboard players set $broadcast_type ui_temp 2
