@@ -8,7 +8,7 @@ execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item
 
 data modify storage ui:temp temp.draw_card set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0]
 
-execute if entity @s[type=!player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
+execute if entity @s[type=!player] if data storage ui:temp temp.draw_card.tag.tmw{id:272} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage ui:temp temp.draw_card
 
 # 引いた時の効果を AfterEffect に追加
 #execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
