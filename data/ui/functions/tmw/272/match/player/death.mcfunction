@@ -7,7 +7,7 @@ tellraw @a[tag=ui_temp_players] ["",{"selector":"@s"},{"text": "が戦線離脱�
 
 ## 死んだ時に生きている@aの報酬にカードを追加
 function oh_my_dat:please
-data modify storage ui:temp temp.death set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list
+data modify storage ui:temp temp.death set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin
 execute if entity @s[tag=!summoned_nocount] as @a[tag=ui_temp_players,tag=!ui_temp_player,tag=!tmw272_spectate] run function ui:tmw/272/match/player/reward
 
 scoreboard players reset $rand_old1 ui_calc1

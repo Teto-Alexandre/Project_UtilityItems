@@ -1,4 +1,4 @@
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set value []
 
 # デッキビルダー起動
 data modify storage ui:cg1 DeckBuilder set value {CardRate:{Standard:1,Unique:1,Theme:1,Meta:0,Only:0.05},Standard:[],Unique:[],Theme:[],Meta:[],Only:[]}
