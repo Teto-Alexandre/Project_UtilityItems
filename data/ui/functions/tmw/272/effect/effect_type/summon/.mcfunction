@@ -84,7 +84,7 @@ execute if data storage ui:temp temp.effect{id:"zombie_horse"} run summon zombie
 execute if data storage ui:temp temp.effect{id:"zombie_villager"} run summon zombie_villager ~ ~ ~ {NoAI:1,Tags:["hc_deck","summoned_nocount","hc_deck_temp"],Invulnerable:1b,CustomNameVisible:1b,Silent:1b}
 execute if data storage ui:temp temp.effect{id:"zombified_piglin"} run summon zombified_piglin ~ ~ ~ {NoAI:1,Tags:["hc_deck","summoned_nocount","hc_deck_temp"],Invulnerable:1b,CustomNameVisible:1b,Silent:1b}
 execute as @e[tag=hc_deck_temp] run function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list set from storage ui:temp temp.effect.list
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from storage ui:temp temp.effect.list
 data modify entity @e[tag=hc_deck_temp,limit=1] CustomName set from storage ui:temp temp.effect.name
 data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:temp temp.effect.ArmorItems
 data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems

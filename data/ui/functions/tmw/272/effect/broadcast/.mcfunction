@@ -1,14 +1,14 @@
 execute store result score $lore_count ui_temp run data get storage ui:temp card.lore
-execute if score $broadcast_type ui_temp matches 3 store result score $lore_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0].tag.display.Lore
+execute if score $broadcast_type ui_temp matches 3 store result score $lore_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.display.Lore
 execute if score $broadcast_type ui_temp matches 4 store result score $lore_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward[0].tag.display.Lore
 
 scoreboard players set $broadcast_name ui_temp 1
 execute if score $broadcast_type ui_temp matches ..2 unless data storage ui:temp card.name run scoreboard players set $broadcast_name ui_temp 0
 execute if score $broadcast_type ui_temp matches ..2 if data storage ui:temp card{name:''} run scoreboard players set $broadcast_name ui_temp 0
 execute if score $broadcast_type ui_temp matches ..2 if data storage ui:temp card{name:""} run scoreboard players set $broadcast_name ui_temp 0
-execute if score $broadcast_type ui_temp matches 3 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0].tag.display.Name run scoreboard players set $broadcast_name ui_temp 0
-execute if score $broadcast_type ui_temp matches 3 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0].tag.display{Name:''} run scoreboard players set $broadcast_name ui_temp 0
-execute if score $broadcast_type ui_temp matches 3 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list[0].tag.display{Name:""} run scoreboard players set $broadcast_name ui_temp 0
+execute if score $broadcast_type ui_temp matches 3 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.display.Name run scoreboard players set $broadcast_name ui_temp 0
+execute if score $broadcast_type ui_temp matches 3 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.display{Name:''} run scoreboard players set $broadcast_name ui_temp 0
+execute if score $broadcast_type ui_temp matches 3 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.display{Name:""} run scoreboard players set $broadcast_name ui_temp 0
 
 #tellraw @a [{"text":"type:"},{"score":{"name": "$broadcast_type","objective": "ui_temp"}},{"text":" name:"},{"score":{"name": "$broadcast_name","objective": "ui_temp"}}]
 

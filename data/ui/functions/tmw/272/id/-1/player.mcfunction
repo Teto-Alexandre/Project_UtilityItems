@@ -84,11 +84,14 @@ function oh_my_dat:please
 effect give @s resistance infinite 127 true
 
 # (プレイヤーがデッキを持っているなら) OMD に上書き
-execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:272,type:-1}}}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list set from entity @s SelectedItem.tag.tmw.cg.list
+execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:272,type:-1}}}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from entity @s SelectedItem.tag.tmw.cg.list
 execute if entity @s[type=!player,tag=!hc_deck] run function ui:tmw/272/id/-1/non_player/
 
 # ここでデバッグ 参戦者のデッキリストをチャットに表示する
 function ui:tmw/272/id/-1/debug/bro_list
+
+# オリジンを戦線中のデッキベースにコピー
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin
 
 # OMD の一次デッキに現在のデッキをコピー
 function ui:tmw/272/common/list_match/copy
@@ -101,9 +104,6 @@ data remove storage ui:temp merge_checker
 execute if score $merge_check ui_temp matches 0 run tag @s add tmw272_spectate
 execute if score $merge_check ui_temp matches 0 run tellraw @s [{"text":"> 観戦モード起動"}]
 scoreboard players reset $merge_check ui_temp
-
-#
-#execute if entity @s[type=player] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward set value []
 
 # チーム
 team join blue @s[scores={ui_team=1}]
