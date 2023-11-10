@@ -94,5 +94,25 @@ execute if score @s ui_is2 matches 45 run function ui:common/particle/ss/upper/3
 execute if score @s ui_is2 matches 46 run function ui:common/particle/ss/upper/32/41-50/46
 # 紫電
 execute if score @s ui_is2 matches 47 run function ui:common/particle/ss/upper/32/41-50/47
+# 時空切断
+execute if score @s ui_is2 matches 48 run function ui:common/particle/ss/upper/32/41-50/48
+# 崩壊波動
+execute if score @s ui_is2 matches 49 run function ui:common/particle/ss/upper/32/41-50/49
+# 火属性・中
+execute if score @s ui_is2 matches 50 run function ui:common/particle/ss/upper/32/41-50/50
+# 火属性・大
+execute if score @s ui_is2 matches 51 run function ui:common/particle/ss/upper/32/51-60/51
+# 氷属性・中
+execute if score @s ui_is2 matches 52 run function ui:common/particle/ss/upper/32/51-60/52
+# 氷属性・大
+execute if score @s ui_is2 matches 53 run function ui:common/particle/ss/upper/32/51-60/53
+# 風属性・中
+execute if score @s ui_is2 matches 54 run function ui:common/particle/ss/upper/32/51-60/54
+# 風属性・大
+execute if score @s ui_is2 matches 55 run function ui:common/particle/ss/upper/32/51-60/55
+# 雷属性・中
+execute if score @s ui_is2 matches 56 run function ui:common/particle/ss/upper/32/51-60/56
+# 雷属性・大
+execute if score @s ui_is2 matches 57 run function ui:common/particle/ss/upper/32/51-60/57
 
 execute if score $is ui_temp matches 50.. run kill @s
