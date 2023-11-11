@@ -91,6 +91,8 @@ execute if data storage ui:temp temp.effect{effect_type:"summon"} run function u
 execute if data storage ui:temp temp.effect{effect_type:"list_swap"} run function ui:tmw/272/effect/effect_type/list_swap/
 ## デスエフェクト
 execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run function ui:tmw/272/effect/effect_type/death_effect/
+## その他
+execute if data storage ui:temp temp.effect{effect_type:"misc"} run function ui:tmw/272/effect/effect_type/misc/
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old
