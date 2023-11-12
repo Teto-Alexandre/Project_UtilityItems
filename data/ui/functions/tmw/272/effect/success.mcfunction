@@ -3,7 +3,7 @@ data modify storage ui:temp temp.card set from storage ui:temp card
 
 # 最終使用
 function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
+execute if score $broadcast_type ui_temp matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
 
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects
 execute if score $broadcast_type ui_temp matches 1 run execute store result score $duplication ui_temp run scoreboard players get @s ui_tmw272_duplication
