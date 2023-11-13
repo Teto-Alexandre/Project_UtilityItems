@@ -3,7 +3,6 @@ data modify storage ui:temp temp.card set from storage ui:temp card
 
 # 最終使用
 function oh_my_dat:please
-execute if score $broadcast_type ui_temp matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
 
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects
 execute if score $broadcast_type ui_temp matches 1 run execute store result score $duplication ui_temp run scoreboard players get @s ui_tmw272_duplication
@@ -50,6 +49,9 @@ execute if score $broadcast_type ui_temp matches 1 if score $shock_checker ui_te
 # 一連のターゲットを削除
 tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge
 tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_target_old
+
+# 最終使用カードに登録
+execute if score $broadcast_type ui_temp matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
 
 # 汎用変数を削除
 scoreboard players reset $particle_self ui_temp

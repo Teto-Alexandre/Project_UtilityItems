@@ -1,3 +1,7 @@
+#
+execute if score $broadcast_type ui_temp matches ..2 unless data storage ui:temp card.name if data storage ui:temp card.Name run data modify storage ui:temp card.name set from storage ui:temp card.Name
+execute if score $broadcast_type ui_temp matches ..2 unless data storage ui:temp card.lore if data storage ui:temp card.Lore run data modify storage ui:temp card.lore set from storage ui:temp card.Lore
+
 execute store result score $lore_count ui_temp run data get storage ui:temp card.lore
 execute if score $broadcast_type ui_temp matches 3 store result score $lore_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.display.Lore
 execute if score $broadcast_type ui_temp matches 4 store result score $lore_count ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.reward[0].tag.display.Lore
