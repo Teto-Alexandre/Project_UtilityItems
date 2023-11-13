@@ -15,6 +15,7 @@ execute store result score $particle_laser ui_temp run data get storage ui:temp 
 
 # 汎用変数を準備
 scoreboard players set $condition_checker ui_temp 0
+scoreboard players set $this_is_repeat_card ui_temp 0
 
 #
 #tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"CHECK_COST が承認しました EFFECT解決数:"},{"score":{"name": "$count","objective": "ui_temp"}}]
@@ -51,9 +52,10 @@ tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge
 tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_target_old
 
 # 最終使用カードに登録
-execute if score $broadcast_type ui_temp matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
+execute if score $broadcast_type ui_temp matches 1 if score $this_is_repeat_card ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
 
 # 汎用変数を削除
+scoreboard players reset $this_is_repeat_card ui_temp
 scoreboard players reset $particle_self ui_temp
 scoreboard players reset $particle_look ui_temp
 scoreboard players reset $particle_target ui_temp
