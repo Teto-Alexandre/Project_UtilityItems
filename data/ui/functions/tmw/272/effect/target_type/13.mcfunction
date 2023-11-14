@@ -4,6 +4,8 @@ execute if score @s ui_team matches 2 run tag @e[tag=!tmw272_spectate,tag=ui_tem
 execute if score @s ui_team matches 3 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=3}] add tmw272_temp_card_effect_team
 execute if score @s ui_team matches 4 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=4}] add tmw272_temp_card_effect_team
 
+execute if score @s ui_team matches 6 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=6}] add tmw272_temp_card_effect_team
+
 # 自分以外の全プレイヤーをランダムに対象に取る
 execute unless data storage ui:temp temp.effect.target_count run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_players_no_random,tag=tmw272_temp_card_effect_team,sort=random,limit=1] add tmw272_temp_card_effect_target
 execute if data storage ui:temp temp.effect{target_count:1} run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_players_no_random,tag=tmw272_temp_card_effect_team,sort=random,limit=1] add tmw272_temp_card_effect_target
