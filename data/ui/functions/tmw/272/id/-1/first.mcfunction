@@ -37,6 +37,7 @@ tag @e[tag=tmw272_unpower] remove tmw272_unpower
 # 戦歴変数を追加
 scoreboard objectives add ui_tmw272_battlefront_wins dummy
 scoreboard objectives add ui_tmw272_battlefront_joins dummy
+scoreboard objectives add ui_tmw272_summoner_obj_id dummy
 
 # 次のプレイヤー認証用のスコアを作成
 scoreboard objectives add ui_tmw272_health_limit dummy

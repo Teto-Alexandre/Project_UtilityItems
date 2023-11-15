@@ -90,6 +90,7 @@ data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:t
 data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems
 
 tag @s add ui_temp_target
+tag @s add ui_temp_summoner
 scoreboard players operation @e[tag=hc_deck_temp] ui_team = @s ui_team
 execute as @e[tag=hc_deck_temp] at @s run function ui:template/horizontal_shuffle5
 execute as @e[tag=hc_deck_temp] at @s run particle dust 1 1 1 5 ~ ~ ~ 1 1 1 0 10 force
@@ -100,8 +101,10 @@ execute as @e[tag=hc_deck_temp] at @s run function ui:tmw/272/id/-1/success
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.mana store result score @s ui_tmw272_mana_limit run data get storage ui:temp temp.effect.mana
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health_limit run data get storage ui:temp temp.effect.health
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health run data get storage ui:temp temp.effect.health
+execute as @e[tag=hc_deck_temp] run scoreboard players operation @s ui_tmw272_summoner_obj_id = @e[tag=ui_temp_summoner] ui_obj_id
 
 tag @e[tag=hc_deck_temp] remove hc_deck_temp
 
 function oh_my_dat:please
 tag @s add ui_temp_player
+tag @s remove ui_temp_summoner
