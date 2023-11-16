@@ -19,6 +19,9 @@ execute if score @s ui_tmw272_match_time matches 30 at @s run function ui:tmw/27
 #
 execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/272/common/draw/only_one/check
 
+#
+function oh_my_dat:please
+
 # 視線入力、ステータス参照
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
@@ -36,7 +39,6 @@ execute if score @s ui_tmw272_stun matches 1.. at @s run particle crit ~ ~1 ~ 0.
 execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
 
 #
-function oh_my_dat:please
 execute if score $turn_time ui_temp matches 2.. if score $turn_time_rev ui_temp matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0] at @s run function ui:tmw/272/after_effect/
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
