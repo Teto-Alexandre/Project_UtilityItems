@@ -22,7 +22,9 @@ execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/27
 # 視線入力、ステータス参照
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
-execute if entity @s[type=!player] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
+execute if entity @s[type=!player] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.npc_use_for_allies at @s run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
+execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.npc_use_for_allies run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=ui_temp_team,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
+execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
 execute if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
 
 #
