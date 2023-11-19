@@ -1,9 +1,12 @@
 #compoundでminとmaxを入れると出力する
-execute store result score $rand_min ui_temp run data get storage ui:temp temp.effect.rand.min 1
-execute store result score $rand_max ui_temp run data get storage ui:temp temp.effect.rand.max 1
+execute store result score $rand_min_luk ui_temp run data get storage ui:temp temp.effect.rand.min 1
+execute store result score $rand_max_luk ui_temp run data get storage ui:temp temp.effect.rand.max 1
 
 execute if data storage ui:temp temp.effect.rand.min_input run function ui:tmw/272/effect/misc/input/rand_min
 execute if data storage ui:temp temp.effect.rand.max_input run function ui:tmw/272/effect/misc/input/rand_max
+
+scoreboard players operation $rand_min ui_temp = $rand_min_luk ui_temp
+scoreboard players operation $rand_max ui_temp = $rand_max_luk ui_temp
 
 scoreboard players operation $rand_max ui_temp -= $rand_min ui_temp
 scoreboard players add $rand_max ui_temp 1

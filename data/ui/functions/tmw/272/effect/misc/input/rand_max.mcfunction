@@ -8,7 +8,7 @@ execute unless data storage ui:tmw272 temp.input run data modify storage ui:tmw2
 function ui:tmw/272/effect/misc/input/
 
 #
-scoreboard players operation $rand_max ui_temp = $input_act ui_temp
+scoreboard players operation $rand_max_luk ui_temp = $input_act ui_temp
 scoreboard players reset $input_act ui_temp
 
 # まだあるなら - 次のエフェクトに移動
