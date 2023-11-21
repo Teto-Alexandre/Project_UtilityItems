@@ -43,6 +43,7 @@ execute store result score $ae ui_temp run data get storage oh_my_dat: _[-4][-4]
 tellraw @p [{"text":"$ae : ","color":"#ccffcc"},{"score":{"name": "$ae","objective": "ui_temp"}}]
 execute store result score $de ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects
 tellraw @p [{"text":"$de : ","color":"#ccffcc"},{"score":{"name": "$de","objective": "ui_temp"}}]
+tellraw @p [{"text":"最終使用カード > ","color": "#ccffff"},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed.name","interpret": true},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed.Name","interpret": true}]
 
 scoreboard players reset $origin ui_temp
 scoreboard players reset $base ui_temp
