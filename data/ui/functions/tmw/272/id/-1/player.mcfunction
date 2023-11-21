@@ -89,7 +89,7 @@ execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:2
 execute if entity @s[type=!player,tag=!hc_deck] run function ui:tmw/272/id/-1/non_player/
 
 # ここでデバッグ 参戦者のデッキリストをチャットに表示する
-function ui:tmw/272/id/-1/debug/bro_list
+#function ui:tmw/272/id/-1/debug/bro_list
 
 # オリジンを戦線中のデッキベースにコピー
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin
