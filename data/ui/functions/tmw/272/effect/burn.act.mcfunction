@@ -100,6 +100,8 @@ execute if data storage ui:temp temp.effect{effect_type:"misc"} run function ui:
 ## デスエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_death_effect"} run function ui:tmw/272/effect/effect_type/modify_death_effect/
 
+function oh_my_dat:please
+
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old
 tag @e[tag=tmw272_temp_card_effect_target] remove tmw272_temp_card_effect_target
