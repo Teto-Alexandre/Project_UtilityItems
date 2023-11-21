@@ -10,6 +10,9 @@ execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_tem
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
 execute if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
 execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
+#execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_target
+
+execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
@@ -41,12 +44,11 @@ execute if score $target_type ui_temp matches 13 run function ui:tmw/272/effect/
 ## <summon限定> 召喚者をターゲット
 execute if score $target_type ui_temp matches 14 run function ui:tmw/272/effect/target_type/14
 
-execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
-
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
+tag @e[tag=ui_temp_players_no_target] remove ui_temp_players_no_target
 
 # ターゲットを対象に取ってエフェクトを実行する
 ## ダメージ  未実装（condition_checker:タゲの現在の体力「最大・最小」）
