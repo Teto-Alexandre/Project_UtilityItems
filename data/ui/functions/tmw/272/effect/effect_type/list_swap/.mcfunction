@@ -5,3 +5,5 @@
 
 function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_base set from storage ui:temp temp.effect.list
+function ui:tmw/272/common/list_match/copy
+function ui:tmw/272/common/shuffle/
