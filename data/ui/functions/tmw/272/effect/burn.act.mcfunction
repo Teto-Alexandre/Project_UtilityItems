@@ -90,7 +90,7 @@ execute if data storage ui:temp temp.effect{effect_type:"last_used"} run functio
 ## アフターエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_after_effect"} run function ui:tmw/272/effect/effect_type/modify_after_effect/
 ## エンティティを戦線に追加する
-execute if data storage ui:temp temp.effect{effect_type:"summon"} run function ui:tmw/272/effect/effect_type/summon/
+execute if data storage ui:temp temp.effect{effect_type:"summon"} run function ui:tmw/272/effect/effect_type/summon/ with storage ui:temp temp.effect
 ## デッキを完全に入れ替える（テスト実装、MOBに使うべからず）
 execute if data storage ui:temp temp.effect{effect_type:"list_swap"} run function ui:tmw/272/effect/effect_type/list_swap/
 ## デスエフェクト

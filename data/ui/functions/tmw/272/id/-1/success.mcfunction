@@ -24,7 +24,7 @@ execute if score $shot_type ui_temp matches 1 if entity @e[tag=ui_temp_game] run
 execute if score $shot_type ui_temp matches 1 unless entity @e[tag=ui_temp_game] run function ui:tmw/272/id/-1/first
 
 #
-execute as @e[predicate=ui:load_unhurtable] if score @s ui_tmw272_link_id = $link_id ui_temp run tag @s add tmw272_active_temp
+execute as @e if score @s ui_tmw272_link_id = $link_id ui_temp run tag @s add tmw272_active_temp
 execute unless score $shot_type ui_temp matches 404 unless score $success_message ui_temp matches -2147483648..2147483647 run tellraw @a [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"selector":"@e[tag=tmw272_active_temp]"},{"text":"が戦線を開きました"}]
 execute unless score $shot_type ui_temp matches 404 if score $success_message ui_temp matches 1 run tellraw @a[tag=ui_temp_players] [{"text":"[CG"},{"score":{"name": "$link_id","objective": "ui_temp"}},{"text":"-PlAuth] > "},{"selector":"@e[tag=tmw272_active_temp]"},{"text":"が戦線を開きました"}]
 execute unless score $shot_type ui_temp matches 404 run tag @e[tag=tmw272_active_temp] add tmw272_active
