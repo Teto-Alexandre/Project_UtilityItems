@@ -99,6 +99,8 @@ execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run func
 execute if data storage ui:temp temp.effect{effect_type:"misc"} run function ui:tmw/272/effect/effect_type/misc/
 ## デスエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_death_effect"} run function ui:tmw/272/effect/effect_type/modify_death_effect/
+## 任意コマンド実行
+execute if data storage ui:temp temp.effect{effect_type:"command"} run function ui:tmw/272/effect/effect_type/command/
 
 function oh_my_dat:please
 
