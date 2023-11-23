@@ -47,6 +47,15 @@ execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storag
 # HPが0になったプレイヤーをマッチから除外する
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_undying > @s ui_tmw272_undying_count run function ui:tmw/272/match/player/state/undying
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
+
+# チーム
+team join blue @s[scores={ui_team=1}]
+team join red @s[scores={ui_team=2}]
+team join yellow @s[scores={ui_team=3}]
+team join green @s[scores={ui_team=4}]
+team join gray @s[tag=tmw272_spectate]
+team leave @s[scores={ui_team=5..6}]
+
 execute if entity @s[scores={ui_st2=5}] run tellraw @s [{"text":"戦線から撤退しますか？","color": "red"}]
 execute if entity @s[x_rotation=89..90,scores={ui_st2=20..}] run function ui:tmw/272/match/player/death
 
