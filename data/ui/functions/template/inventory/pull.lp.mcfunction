@@ -18,5 +18,5 @@ function ui:common/item
 
 data remove storage ui:inventory temp[0]
 
-scoreboard players remove $count ui_temp 1
-execute if score $count ui_temp matches 1.. run function ui:template/inventory/pull.lp
+scoreboard players remove $count_pull ui_temp 1
+execute if score $count_pull ui_temp matches 1.. run function ui:template/inventory/pull.lp

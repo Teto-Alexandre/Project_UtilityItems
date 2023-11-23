@@ -1,7 +1,7 @@
 function oh_my_dat:please
 
 data modify storage ui:inventory temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Inventory
-scoreboard players set $count ui_temp 2
+scoreboard players set $count_pull ui_temp 2
 
 clear @s
 
