@@ -1,4 +1,4 @@
-say b
+#say b
 
 data modify storage ui:temp temp.temp.effect.list set from storage ui:temp temp.effect.list
 

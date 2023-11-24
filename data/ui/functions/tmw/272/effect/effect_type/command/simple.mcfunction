@@ -1,2 +1,2 @@
-$say $(command)
+#$say $(command)
 $$(command)
