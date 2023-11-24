@@ -70,6 +70,7 @@ execute if data storage ui:tmw272 temp{input:"karma"} if data storage ui:temp te
 execute if data storage ui:tmw272 temp{input:"tenacity"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_tenacity = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"hexproof"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_hexproof = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"stop"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_stop = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"cost_next"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_cost_next = $var ui_temp
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round = $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat int 1 run scoreboard players get $var ui_temp
@@ -150,6 +151,7 @@ execute if data storage ui:tmw272 temp{input:"karma"} unless data storage ui:tem
 execute if data storage ui:tmw272 temp{input:"tenacity"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_tenacity += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"hexproof"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_hexproof += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"stop"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_stop += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"cost_next"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_cost_next += $var ui_temp
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round += $var ui_temp
 #execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $repeat ui_temp run data get storage ui:temp temp.card.repeat

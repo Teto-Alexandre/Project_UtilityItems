@@ -111,6 +111,7 @@ scoreboard objectives add ui_tmw272_karma dummy
 scoreboard objectives add ui_tmw272_tenacity dummy
 scoreboard objectives add ui_tmw272_hexproof dummy
 scoreboard objectives add ui_tmw272_stop dummy
+scoreboard objectives add ui_tmw272_cost_next dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy
