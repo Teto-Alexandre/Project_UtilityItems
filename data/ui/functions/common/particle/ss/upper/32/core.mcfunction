@@ -114,5 +114,11 @@ execute if score @s ui_is2 matches 55 run function ui:common/particle/ss/upper/3
 execute if score @s ui_is2 matches 56 run function ui:common/particle/ss/upper/32/51-60/56
 # 雷属性・大
 execute if score @s ui_is2 matches 57 run function ui:common/particle/ss/upper/32/51-60/57
+# 水属性・小
+execute if score @s ui_is2 matches 58 run function ui:common/particle/ss/upper/32/51-60/58
+# 水属性・中
+execute if score @s ui_is2 matches 59 run function ui:common/particle/ss/upper/32/51-60/59
+# 水属性・大
+execute if score @s ui_is2 matches 60 run function ui:common/particle/ss/upper/32/51-60/60
 
 execute if score $is ui_temp matches 50.. run kill @s
