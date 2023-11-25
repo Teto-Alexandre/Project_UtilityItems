@@ -17,7 +17,7 @@ data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:te
 tag @s add ui_temp_target
 tag @s add ui_temp_summoner
 scoreboard players operation @e[tag=hc_deck_temp] ui_team = @s ui_team
-execute as @e[tag=hc_deck_temp] at @s run function ui:template/horizontal_shuffle5
+execute as @e[tag=hc_deck_temp] at @s run function ui:template/horizontal_shuffle10
 execute as @e[tag=hc_deck_temp] at @s run particle dust 1 1 1 5 ~ ~ ~ 1 1 1 0 10 force
 execute as @e[tag=hc_deck_temp] at @s run particle end_rod ~ ~ ~ 0 0 0 0.1 10 force
 execute as @e[tag=hc_deck_temp] at @s run playsound entity.firework_rocket.blast player @a ~ ~ ~ 1 1.4 0
