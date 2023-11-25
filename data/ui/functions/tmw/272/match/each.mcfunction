@@ -18,9 +18,9 @@ tag @s add tmw272_active_match
 execute if entity @s[tag=!tmw272_match_init] run function ui:tmw/272/match/periodic/init
 
 # 時間経過ごとに通知
-execute if score $turn_time ui_temp matches 30 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $turn_time ui_temp matches 20 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
-execute if score $turn_time ui_temp matches 10 run playsound block.note_block.hat player @a[tag=ui_temp_players] ~ ~ ~ 1 2 1
+execute if score $turn_time ui_temp matches 30 at @a[tag=ui_temp_players] run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
+execute if score $turn_time ui_temp matches 20 at @a[tag=ui_temp_players] run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
+execute if score $turn_time ui_temp matches 10 at @a[tag=ui_temp_players] run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
 execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/periodic/turn
 
 ## <== エンティティはここで動かす
