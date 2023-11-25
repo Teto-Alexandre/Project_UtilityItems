@@ -1,6 +1,6 @@
 #
-particle minecraft:block water ~ ~ ~ 0.5 0.5 0.5 0 30 force
-playsound minecraft:entity.player.splash.high_speed master @p ~ ~ ~ 1 1 0
+particle minecraft:block water ~ ~2 ~ 0.5 0.5 0.5 0 1 force
+execute if score $is ui_temp matches 1 run playsound weather.rain.above player @p ~ ~ ~ 1 1 0
 
 #
-execute if score $is ui_temp matches 0.. run kill @s
+execute if score $is ui_temp matches 20.. run kill @s
