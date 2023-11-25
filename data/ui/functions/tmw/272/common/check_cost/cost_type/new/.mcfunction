@@ -12,6 +12,7 @@ execute store result score $bypass ui_temp run data get storage ui:temp card.cos
 
 # ここで封印
 execute if score $broadcast_type ui_temp matches 1 run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
+execute if score $broadcast_type ui_temp matches 1 run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
 
 # デバッグメッセ
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
