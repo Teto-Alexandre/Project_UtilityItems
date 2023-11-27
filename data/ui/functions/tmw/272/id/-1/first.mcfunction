@@ -113,6 +113,8 @@ scoreboard objectives add ui_tmw272_hexproof dummy
 scoreboard objectives add ui_tmw272_stop dummy
 scoreboard objectives add ui_tmw272_cost_next dummy
 scoreboard objectives add ui_tmw272_water dummy
+scoreboard objectives add ui_tmw272_product dummy
+scoreboard objectives add ui_tmw272_fund dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

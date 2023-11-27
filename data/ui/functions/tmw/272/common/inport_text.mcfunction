@@ -70,6 +70,8 @@ execute if data storage ui:tmw272 temp{input:"hexproof"} run data modify storage
 execute if data storage ui:tmw272 temp{input:"stop"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.stop
 execute if data storage ui:tmw272 temp{input:"cost_next"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.cost_next
 execute if data storage ui:tmw272 temp{input:"water"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.water
+execute if data storage ui:tmw272 temp{input:"product"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.product
+execute if data storage ui:tmw272 temp{input:"fund"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.fund
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.turn_count
 execute if data storage ui:tmw272 temp{input:"repeat"} run data modify storage ui:tmw272_text temp set from storage ui:tmw272_text simple_value.repeat

@@ -71,6 +71,8 @@ execute if data storage ui:tmw272 temp{input:"hexproof"} run scoreboard players 
 execute if data storage ui:tmw272 temp{input:"stop"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_stop
 execute if data storage ui:tmw272 temp{input:"cost_next"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_cost_next
 execute if data storage ui:tmw272 temp{input:"water"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_water
+execute if data storage ui:tmw272 temp{input:"product"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_product
+execute if data storage ui:tmw272 temp{input:"fund"} run scoreboard players operation $tmw272_get_value ui_temp = @s ui_tmw272_fund
 
 execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat

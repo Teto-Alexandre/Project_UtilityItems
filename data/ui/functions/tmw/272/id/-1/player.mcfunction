@@ -70,6 +70,8 @@ scoreboard players set @s ui_tmw272_hexproof 0
 scoreboard players set @s ui_tmw272_stop 0
 scoreboard players set @s ui_tmw272_cost_next 0
 scoreboard players set @s ui_tmw272_water 0
+scoreboard players set @s ui_tmw272_product 0
+scoreboard players set @s ui_tmw272_fund 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
