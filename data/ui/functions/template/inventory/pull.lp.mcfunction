@@ -6,8 +6,8 @@ execute if score $pull_first ui_temp matches 1 run scoreboard players add $pull_
 data modify storage ui:common input.Item.id set from storage ui:inventory temp[0].id
 data modify storage ui:common input.Item.Count set from storage ui:inventory temp[0].Count
 data modify storage ui:common input.Item.tag set from storage ui:inventory temp[0].tag
-data modify storage ui:common input.Item.tag.tmw.gun.now.SubTime set value 0
-data modify storage ui:common input.Item.tag.tmw.gun.now.SPTime set value 0
+#data modify storage ui:common input.Item.tag.tmw.gun.now.SubTime set value 0
+#data modify storage ui:common input.Item.tag.tmw.gun.now.SPTime set value 0
 
 execute store result score $limited ui_temp run data get storage ui:common input.Item.tag.tmw.gun.Limited
 execute unless score $limited_weapon party_mode >= $limited ui_temp run data modify storage ui:common input.Item.id set value "minecraft:air"
