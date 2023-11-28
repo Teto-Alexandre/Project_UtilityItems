@@ -120,5 +120,11 @@ execute if score @s ui_is2 matches 58 run function ui:common/particle/ss/upper/3
 execute if score @s ui_is2 matches 59 run function ui:common/particle/ss/upper/32/51-60/59
 # 水属性・大
 execute if score @s ui_is2 matches 60 run function ui:common/particle/ss/upper/32/51-60/60
+# 金床で加工
+execute if score @s ui_is2 matches 61 run function ui:common/particle/ss/upper/32/61-70/61
+# トロッコの音
+execute if score @s ui_is2 matches 62 run function ui:common/particle/ss/upper/32/61-70/62
+# 毒状態
+execute if score @s ui_is2 matches 63 run function ui:common/particle/ss/upper/32/61-70/63
 
 execute if score $is ui_temp matches 50.. run kill @s
