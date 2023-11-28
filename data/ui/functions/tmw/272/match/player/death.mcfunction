@@ -8,15 +8,15 @@ tellraw @a[tag=ui_temp_players] ["",{"selector":"@s"},{"text": "が戦線離脱�
 ## 死んだ時に生きている@aの報酬にカードを追加
 function oh_my_dat:please
 data modify storage ui:temp temp.death set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin
-execute if entity @s[tag=!summoned_nocount] as @a[tag=ui_temp_players,tag=!ui_temp_player,tag=!tmw272_spectate] run function ui:tmw/272/match/player/reward
+execute if entity @s[tag=!summoned_delete] as @a[tag=ui_temp_players,tag=!ui_temp_player,tag=!tmw272_spectate] run function ui:tmw/272/match/player/reward
 
 scoreboard players reset $rand_old1 ui_calc1
 scoreboard players reset $rand_old2 ui_calc1
 function oh_my_dat:please
 
 execute if entity @s[type=player] at @s run function ui:tmw/272/match/player/death.player
-execute if entity @s[tag=hc_deck] if entity @s[tag=!summoned_nocount] at @s run function ui:tmw/272/match/player/death.player
-execute if entity @s[tag=hc_deck] if entity @s[tag=summoned_nocount] at @s run function ui:tmw/272/match/player/death.entity
+execute if entity @s[tag=hc_deck] if entity @s[tag=!summoned_delete] at @s run function ui:tmw/272/match/player/death.player
+execute if entity @s[tag=hc_deck] if entity @s[tag=summoned_delete] at @s run function ui:tmw/272/match/player/death.entity
 execute if entity @s[tag=!hc_deck] if entity @s[type=!player] at @s run function ui:tmw/272/match/player/death.entity
 
 data remove storage ui:temp temp.death
