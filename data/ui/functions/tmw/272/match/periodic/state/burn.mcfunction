@@ -5,7 +5,7 @@ execute if score @s ui_tmw272_fire_resistance matches 1.. run particle dust 1 1 
 execute if score @s ui_tmw272_fire_resistance matches 1.. run playsound block.lava.extinguish player @a ~ ~ ~ 1 0.5 0
 
 data merge storage ui:tmw272 {temp:{input:"burn"}}
-function ui:tmw/272/common/inport_text
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 execute if score @s ui_tmw272_fire_resistance matches 0 run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "ダメージ！"}]
 

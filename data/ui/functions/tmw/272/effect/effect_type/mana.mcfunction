@@ -1,6 +1,6 @@
 # 回復する（回復回数を計算するテスト）
 data merge storage ui:tmw272 {temp:{input:"mana"}}
-function ui:tmw/272/common/inport_text
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 scoreboard players operation @e[tag=tmw272_temp_card_effect_target] ui_tmw272_mana += $var ui_temp
 execute if data storage ui:temp temp.effect{effect_mode:"="} run scoreboard players operation @e[tag=tmw272_temp_card_effect_target] ui_tmw272_mana = $var ui_temp

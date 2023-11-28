@@ -7,8 +7,8 @@ execute if data storage ui:temp temp.mod.mute run data modify storage ui:tmw272 
 
 #
 tellraw @s[scores={ui_tmw601_accessory=5007}] [{"storage":"ui:temp","nbt":"temp.mod"}]
-execute unless data storage ui:temp temp.mod.type run function ui:tmw/272/common/get_simple_value
-execute if data storage ui:temp temp.mod{type:"advance_value"} run function ui:tmw/272/common/get_advance_value
+execute unless data storage ui:temp temp.mod.type run function ui:tmw/272/common/value/get_simple_value with storage ui:tmw272 temp
+execute if data storage ui:temp temp.mod{type:"advance_value"} run function ui:tmw/272/common/value/get_advance_value with storage ui:tmw272 temp
 scoreboard players operation $cost_act ui_temp = $tmw272_get_value ui_temp
 
 #tellraw @a {"text":"a"}

@@ -1,5 +1,5 @@
 data merge storage ui:tmw272 {temp:{input:"shock"}}
-function ui:tmw/272/common/inport_text
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 scoreboard players operation @s ui_tmw272_health -= @s ui_tmw272_shock
 tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "ダメージ！"}]

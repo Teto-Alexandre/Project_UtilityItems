@@ -1,8 +1,8 @@
 #compoundでtypeとnameを入れると取得
 
 #
-execute unless data storage ui:tmw272 temp.type run function ui:tmw/272/common/get_simple_value
-execute if data storage ui:tmw272 temp{type:"advance_value"} run function ui:tmw/272/common/get_advance_value
+execute unless data storage ui:tmw272 temp.type run function ui:tmw/272/common/value/get_simple_value with storage ui:tmw272 temp
+execute if data storage ui:tmw272 temp{type:"advance_value"} run function ui:tmw/272/common/value/get_advance_value with storage ui:tmw272 temp
 
 scoreboard players operation $input_act ui_temp = $tmw272_get_value ui_temp
 

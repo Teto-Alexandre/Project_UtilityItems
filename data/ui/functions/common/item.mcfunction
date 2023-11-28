@@ -30,6 +30,7 @@
     execute if data storage ui:common input{Mode:"count"} run function ui:common/item/count/main
     execute if data storage ui:common input{Mode:"damage"} run function ui:common/item/damage/main
     execute if data storage ui:common input{Mode:"replace"} run function ui:common/item/replace/main
+    execute if data storage ui:common input{Mode:"block_get"} run function ui:common/item/block_get/main
 
 # 戻り
     data modify storage ui:common_result temp set from storage ui:common input.Item

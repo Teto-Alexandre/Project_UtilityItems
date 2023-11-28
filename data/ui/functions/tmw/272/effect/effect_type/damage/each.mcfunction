@@ -2,14 +2,14 @@ scoreboard players operation $var_temp ui_temp = $var ui_temp
 
 # 装甲
 execute unless data storage ui:temp temp.effect.no_armor run data merge storage ui:tmw272 {temp:{input:"armor"}}
-execute unless data storage ui:temp temp.effect.no_armor run function ui:tmw/272/common/inport_text
+execute unless data storage ui:temp temp.effect.no_armor run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 execute unless data storage ui:temp temp.effect.no_armor run execute unless score @s ui_tmw272_armor matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
 execute unless data storage ui:temp temp.effect.no_armor run scoreboard players operation $var_temp ui_temp -= @s ui_tmw272_armor
 execute unless data storage ui:temp temp.effect.no_armor run scoreboard players operation $var_temp ui_temp > #0 ui_num
 
 # 停止
 execute unless data storage ui:temp temp.effect.no_stop run data merge storage ui:tmw272 {temp:{input:"stop"}}
-execute unless data storage ui:temp temp.effect.no_stop run function ui:tmw/272/common/inport_text
+execute unless data storage ui:temp temp.effect.no_stop run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 execute unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run scoreboard players set $var_temp ui_temp 0
 execute unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が攻撃を"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"した！ 度数:"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
 execute unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run scoreboard players remove @s ui_tmw272_stop 1
@@ -25,7 +25,7 @@ execute if score $effect_type_damage_info ui_temp matches 2 run scoreboard playe
 
 execute if score $effect_type_damage_info ui_temp matches 1 run data merge storage ui:tmw272 {temp:{input:"health"}}
 execute if score $effect_type_damage_info ui_temp matches 2 run data merge storage ui:tmw272 {temp:{input:"shield"}}
-function ui:tmw/272/common/inport_text
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 execute run tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "になりました"}]
 

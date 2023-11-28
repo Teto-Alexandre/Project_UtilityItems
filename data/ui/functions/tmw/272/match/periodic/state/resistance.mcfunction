@@ -4,7 +4,7 @@ playsound item.armor.equip_chain player @a ~ ~ ~ 1 1 0
 playsound item.armor.equip_chain player @a ~ ~ ~ 1 0.5 0
 
 data merge storage ui:tmw272 {temp:{input:"resistance"}}
-function ui:tmw/272/common/inport_text
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"のシールドが"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "増加した！"}]
 
