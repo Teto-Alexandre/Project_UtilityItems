@@ -4,7 +4,7 @@
 #
 # @public
 
-execute store result score @s ui_calc1 run data get entity @s custom_potion_effects.[{id:"minecraft:luck"}].Amplifier 1
+execute store result score @s ui_calc1 run data get entity @s custom_potion_effects.[{id:"minecraft:luck"}].amplifier 1
 scoreboard players reset @s[scores={ui_calc1=0}] ui_calc1
 
 # ===== 以下 プレイヤー関連の矢の追加効果 =====

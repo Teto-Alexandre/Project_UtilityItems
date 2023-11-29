@@ -24,7 +24,7 @@
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
     execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/player
     execute if data storage tds: {temp:{BypassArmor:-1}} run function tds:core/armor/full_bypass
-    execute if data storage tds: {temp:{BypassResistance:0b}} store result score $Resistance tds_dmg run data get entity @s active_effects[{id:"minecraft:resistance"}].Amplifier
+    execute if data storage tds: {temp:{BypassResistance:0b}} store result score $Resistance tds_dmg run data get entity @s active_effects[{id:"minecraft:resistance"}].amplifier
     execute if data storage tds: {temp:{BypassResistance:0b}} if data entity @s active_effects[{id:"minecraft:resistance"}] run scoreboard players add $Resistance tds_dmg 1
     execute if data storage tds: {temp:{BypassResistance:1b}} run scoreboard players set $Resistance tds_dmg 0
     scoreboard players operation $Damage tds_dmg > $0 tds_dmg

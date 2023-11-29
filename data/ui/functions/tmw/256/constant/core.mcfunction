@@ -10,6 +10,6 @@
     execute as @s[scores={ui_st=1..}] at @s run function ui:tmw/256/constant/sneak
 
 #
-    execute store result score $temp ui_temp run data get entity @s active_effects[{id:"minecraft:health_boost"}].Amplifier 1
+    execute store result score $temp ui_temp run data get entity @s active_effects[{id:"minecraft:health_boost"}].amplifier 1
     execute if score $temp ui_temp matches ..118 run effect give @s health_boost 10000 119 true
     effect give @s resistance 10000 3 true

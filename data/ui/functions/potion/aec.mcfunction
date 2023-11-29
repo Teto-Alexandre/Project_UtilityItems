@@ -6,7 +6,7 @@
 #
 # @public
 
-execute store result score @s ui_calc1 run data get entity @s effects.[{id:"minecraft:luck"}].Amplifier 1
+execute store result score @s ui_calc1 run data get entity @s effects.[{id:"minecraft:luck"}].amplifier 1
 
 # ===== 以下 残留ポーションの追加効果 =====
 
