@@ -4,7 +4,7 @@
 #
 # @public
 
-execute store result score @s ui_calc1 run data get entity @s ActiveEffects.[{Id:26}].Amplifier 1
+execute store result score @s ui_calc1 run data get entity @s active_effects.[{id:"luck"}].Amplifier 1
 
 # ===== 以下 矢の追加効果 =====
 

@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s splash_potion{display:{Name:'{"text":"瓶詰めの呪い","color":"light_purple","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',Lore:['{"text":"犠牲者のHP最大値を半減させる","color":"gray","italic":false}']},HideFlags:33,CustomPotionEffects:[{Id:26,Amplifier:8b,Duration:200,ShowParticles:0b}],CustomPotionColor:13369548}
+give @s splash_potion{display:{Name:'{"text":"瓶詰めの呪い","color":"light_purple","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',Lore:['{"text":"犠牲者のHP最大値を半減させる","color":"gray","italic":false}']},HideFlags:33,custom_potion_effects:[{id:"luck",amplifier:8b,duration:200,show_particles:0b}],CustomPotionColor:13369548}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

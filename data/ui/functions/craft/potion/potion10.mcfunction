@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s minecraft:splash_potion{HideFlags:32,CustomPotionEffects:[{Ambient:0b,ShowParticles:1b,Duration:500,Id:19,Amplifier:0b}],CustomPotionColor:9881169,display:{Name:'{"italic":false,"color":"green","text":"毒のポーション"}',Lore:['[{"text":"毒による持続ダメージを与える","color":"gray","italic":false}]']}}
+give @s minecraft:splash_potion{HideFlags:32,custom_potion_effects:[{ambient:0b,show_particles:1b,duration:500,id:"minecraft:poison",amplifier:0b}],CustomPotionColor:9881169,display:{Name:'{"italic":false,"color":"green","text":"毒のポーション"}',Lore:['[{"text":"毒による持続ダメージを与える","color":"gray","italic":false}]']}}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

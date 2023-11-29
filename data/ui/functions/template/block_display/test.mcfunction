@@ -6,7 +6,7 @@ scoreboard players add $temp2 rot 1
 data modify entity @s transformation set from storage rot: temp.transformation
 
 execute at @p anchored eyes run teleport @s ^ ^-0.5 ^ ~ ~
-summon minecraft:area_effect_cloud ~ ~ ~ {Duration:32767,Passengers:[{id:"shulker",NoAI:1b,Silent:1b}]}
+summon minecraft:area_effect_cloud ~ ~ ~ {duration:32767,Passengers:[{id:"shulker",NoAI:1b,Silent:1b}]}
 scoreboard players operation $count rot = $temp2 rot
 execute as @e[type=area_effect_cloud,tag=!test] at @p positioned ~ ~-1.625 ~ run function ui:template/block_display/shulker
 tag @e[type=area_effect_cloud] add test

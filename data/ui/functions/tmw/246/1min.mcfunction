@@ -14,7 +14,7 @@ execute as @e[tag=ui_d,scores={ui_d_shm=1..}] run scoreboard players operation @
 
 #=======================================================================================================
 
-execute as @e[tag=ui_hitbox] run data merge entity @s {ActiveEffects:[{Id:14,Duration:20000,Amplifier:1b,ShowParticles:0b}]}
+execute as @e[tag=ui_hitbox] run data merge entity @s {active_effects:[{id:"minecraft:invisibility",duration:20000,amplifier:1b,show_particles:0b}]}
 
 execute as @e[tag=ui_base,scores={ui_core=..0}] run tag @s add ui_base_lost
 

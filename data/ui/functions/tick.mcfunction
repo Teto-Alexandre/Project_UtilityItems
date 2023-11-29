@@ -64,8 +64,8 @@
         execute as @e[tag=!ui_powered,type=arrow] run function ui:potion/arrow_set
         execute as @e[tag=ui_arrow_T,type=arrow] run function ui:potion/arrow_tick
         execute as @e[tag=!ui_groundd,type=arrow,nbt={inGround:1b}] run function ui:potion/arrow_hit
-        execute as @e[nbt={ActiveEffects:[{Id:26}]}] run function ui:potion/pot
-        execute as @e[type=area_effect_cloud,nbt={Age:10,Effects:[{Id:26}]}] run function ui:potion/aec
+        execute as @e[nbt={active_effects:[{id:"luck"}]}] run function ui:potion/pot
+        execute as @e[type=area_effect_cloud,nbt={Age:10,effects:[{id:"luck"}]}] run function ui:potion/aec
 
     ## スポーンエッグ型アイテムと付随性能
         execute if entity @e[type=bat,nbt={NoAI:1b}] run function ui:misc/egg_root
@@ -106,7 +106,7 @@
         ### 障壁アリなら耐性を付ける
             execute as @a[scores={ui_dhp=1..}] run function ui:misc/dhp
         ### 障壁ナシになったら耐性を消す
-            effect clear @a[scores={ui_dhp=..0},nbt={ActiveEffects:[{Id:11,Amplifier:4b,Duration:19}]}] minecraft:resistance
+            effect clear @a[scores={ui_dhp=..0},nbt={active_effects:[{id:"minecraft:resistance",amplifier:4b,duration:19}]}] minecraft:resistance
 
 # 一秒おきに実行するコマンドのカウント
     scoreboard players add $world ui_tc 1

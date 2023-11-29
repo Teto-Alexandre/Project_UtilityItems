@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s potion{CustomPotionEffects:[{Id:10,Amplifier:1b,Duration:600},{Id:22,Amplifier:5b,Duration:2400},{Id:11,Amplifier:1b,Duration:6000},{Id:12,Amplifier:0b,Duration:6000}],HideFlags:32,CustomPotionColor:16776960,display:{Name:'{"text":"§d金のリンゴジュース§r"}'}}
+give @s potion{custom_potion_effects:[{id:"minecraft:regeneration",amplifier:1b,duration:600},{id:"minecraft:absorption",amplifier:5b,duration:2400},{id:"minecraft:resistance",amplifier:1b,duration:6000},{id:"minecraft:fire_resistance",amplifier:0b,duration:6000}],HideFlags:32,CustomPotionColor:16776960,display:{Name:'{"text":"§d金のリンゴジュース§r"}'}}
 function ui:craft/common/exp/tier3
 
 #レシピおよび進捗消去

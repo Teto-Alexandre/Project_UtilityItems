@@ -1,7 +1,7 @@
 # 計算
     
 #
-    execute store result score $scope ui_temp run data get entity @s Effects.[0].Amplifier
+    execute store result score $scope ui_temp run data get entity @s effects.[0].Amplifier
 #
     scoreboard players add $scope ui_temp 1
     scoreboard players operation $scope ui_temp *= #300 ui_num

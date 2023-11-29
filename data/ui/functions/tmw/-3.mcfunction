@@ -6,5 +6,5 @@
 #
 # @public
 
-scoreboard players set @a[scores={ui_dr=1..},nbt=!{ActiveEffects:[{Id:11,Amplifier:4b}]}] ui_dr 0
+scoreboard players set @a[scores={ui_dr=1..},nbt=!{active_effects:[{id:"minecraft:resistance",amplifier:4b}]}] ui_dr 0
 execute as @a[scores={ui_dr=1..}] run function ui:tmw/-3_1

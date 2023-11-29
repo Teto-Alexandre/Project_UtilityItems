@@ -31,7 +31,7 @@
     execute if score @s ui_uses matches 20 run tag @s add ui_256_sub_stop
     execute as @s[tag=ui_256_sub_stop] run scoreboard players remove @s ui_is 1
     execute as @s[tag=ui_256_sub_stop,tag=!ui_256_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d],Item:{id:"gray_stained_glass_pane",tag:{CustomModelData:120001}}}
-    execute as @s[tag=ui_256_sub_stop,tag=!ui_256_sub_first] run summon husk ~ ~ ~ {Tags:["ui_temp_this","tmw_256_sub_113_1","tmw_256_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],IsBaby:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000},{Name:"generic.attack_damage",Base:0},{Name:"generic.follow_range",Base:12}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_256_sub_stop,tag=!ui_256_sub_first] run summon husk ~ ~ ~ {Tags:["ui_temp_this","tmw_256_sub_113_1","tmw_256_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],IsBaby:1,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000},{Name:"generic.attack_damage",Base:0},{Name:"generic.follow_range",Base:12}],Health:1000f,Silent:1}
     execute as @s[tag=ui_256_sub_stop,tag=!ui_256_sub_first] run tag @s add ui_256_sub_first
     #idコピー
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_id = $id ui_temp

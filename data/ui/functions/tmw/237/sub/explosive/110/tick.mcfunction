@@ -30,8 +30,8 @@
     execute if score @s ui_uses matches 20 run tag @s add ui_237_sub_stop
     execute as @s[tag=ui_237_sub_stop] run scoreboard players remove @s ui_is 1
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
-    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_110_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
-    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~2 ~ {Tags:["ui_temp_this","tmw_237_sub_110_2","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_110_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~2 ~ {Tags:["ui_temp_this","tmw_237_sub_110_2","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run tag @s add ui_237_sub_first
     #idコピー
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_id = $id ui_temp

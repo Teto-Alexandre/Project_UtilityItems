@@ -1,5 +1,5 @@
 # ミサイル召喚
-    summon vex ~ ~ ~ {Tags:["tag","tmw_242"],Motion:[0.0d,0.0d,0.0d],ActiveEffects:[{Id:14,Duration:20000,Amplifier:1b,ShowParticles:0b}],Silent:1b}
+    summon vex ~ ~ ~ {Tags:["tag","tmw_242"],Motion:[0.0d,0.0d,0.0d],active_effects:[{id:"minecraft:invisibility",duration:20000,amplifier:1b,show_particles:0b}],Silent:1b}
     #召喚した本体に固有ID設定
     execute as @e[tag=tag] at @s run function ui:misc/act/make_obj_id
 

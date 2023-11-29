@@ -5,12 +5,12 @@
     execute if score $team ui_temp matches 2 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall2
     execute if score $team ui_temp matches 3 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall3
     execute if score $team ui_temp matches 4 as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run function ui:tmw/237/constant/sneak/wall4
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:7b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:3b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-1b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-5b}]}] levitation
-    effect clear @s[tag=!ui_temp_wall,nbt={ActiveEffects:[{Id:25,Amplifier:-9b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:-128b,Duration:15}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={active_effects:[{id:"minecraft:levitation",amplifier:7b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={active_effects:[{id:"minecraft:levitation",amplifier:3b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={active_effects:[{id:"minecraft:levitation",amplifier:-1b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={active_effects:[{id:"minecraft:levitation",amplifier:-5b}]}] levitation
+    effect clear @s[tag=!ui_temp_wall,nbt={active_effects:[{id:"minecraft:levitation",amplifier:-9b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:jump_boost",amplifier:-128b,duration:15}]}] levitation
     execute as @s[tag=ui_temp_wall] run function ui:tmw/237/constant/wall
 
 # 天井走り
@@ -18,7 +18,7 @@
     execute if score $team ui_temp matches 2 if block ~ ~2.3 ~ #ui:pink as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
     execute if score $team ui_temp matches 3 if block ~ ~2.3 ~ #ui:yellow as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
     execute if score $team ui_temp matches 4 if block ~ ~2.3 ~ #ui:lime as @s[scores={ui_gct=-1},nbt={OnGround:0b}] run tag @s add ui_temp_top
-    effect clear @s[tag=!ui_temp_top,nbt={ActiveEffects:[{Id:25,Amplifier:0b}]}] levitation
+    effect clear @s[tag=!ui_temp_top,nbt={active_effects:[{id:"minecraft:levitation",amplifier:0b}]}] levitation
     execute as @s[tag=ui_temp_top] run function ui:tmw/237/constant/top
 
 # トラップドアをすり抜ける

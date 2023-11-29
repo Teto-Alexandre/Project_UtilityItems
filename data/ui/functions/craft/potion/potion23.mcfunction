@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s potion{CustomPotionEffects:[{Id:6,Amplifier:1b,Duration:1}],HideFlags:32,CustomPotionColor:14286957,display:{Lore:['{"text":"§7体力を§bかなり§7回復する§r"}'],Name:'{"text":"§b高濃縮リカバー§r"}'}}
+give @s potion{custom_potion_effects:[{id:"minecraft:instant_health",amplifier:1b,duration:1}],HideFlags:32,CustomPotionColor:14286957,display:{Lore:['{"text":"§7体力を§bかなり§7回復する§r"}'],Name:'{"text":"§b高濃縮リカバー§r"}'}}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

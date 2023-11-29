@@ -16,7 +16,7 @@ execute as @e[tag=ui_common_mob_crowd] run attribute @s minecraft:generic.knockb
 execute as @e[tag=ui_common_mob_crowd] run attribute @s minecraft:generic.follow_range modifier add 0-0-0-0-2 "NoFollow_temp" -1024 add
 
 #
-#execute at @e[tag=ui_common_mob_crowd] run summon area_effect_cloud ~ ~ ~ {Age:4,Duration:6,Effects:[{Id:6,Amplifier:0,Duration:1,ShowIcon:false,ShowParticles:false},{Id:7,Amplifier:0,Duration:1,ShowIcon:false,ShowParticles:false}],Tags:["ui_temp_snowball"]}
+#execute at @e[tag=ui_common_mob_crowd] run summon area_effect_cloud ~ ~ ~ {Age:4,duration:6,effects:[{id:"minecraft:instant_health",amplifier:0,duration:1,show_icon:false,show_particles:false},{id:"minecraft:instant_damage",amplifier:0,duration:1,show_icon:false,show_particles:false}],Tags:["ui_temp_snowball"]}
 execute at @e[tag=ui_common_mob_crowd] run summon minecraft:snowball ~ ~-0.31 ~ {Tags:["ui_temp_snowball"],Motion:[0.0,10.0,0.0],Item:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{CustomModelData:120003}},Owner:[I;0,0,0,0]}
 
 execute as @e[tag=ui_temp_snowball] run data modify entity @s Owner set from entity @e[tag=ui_temp_target,limit=1] UUID

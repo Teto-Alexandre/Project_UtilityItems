@@ -1,7 +1,7 @@
 # 炎熱属性
 
 ## 火炎耐性 (Potion)
-execute if data entity @s ActiveEffects[{Id:12}] run scoreboard players operation $Damage tds_dmg /= #5 ui_num
+execute if data entity @s active_effects[{id:"minecraft:fire_resistance"}] run scoreboard players operation $Damage tds_dmg /= #5 ui_num
 
 ## ダメージ軽減
 
