@@ -64,8 +64,8 @@
         execute as @e[tag=!ui_powered,type=arrow] run function ui:potion/arrow_set
         execute as @e[tag=ui_arrow_T,type=arrow] run function ui:potion/arrow_tick
         execute as @e[tag=!ui_groundd,type=arrow,nbt={inGround:1b}] run function ui:potion/arrow_hit
-        execute as @e[nbt={active_effects:[{id:"luck"}]}] run function ui:potion/pot
-        execute as @e[type=area_effect_cloud,nbt={Age:10,effects:[{id:"luck"}]}] run function ui:potion/aec
+        execute as @e[nbt={active_effects:[{id:"minecraft:luck"}]}] run function ui:potion/pot
+        execute as @e[type=area_effect_cloud,nbt={Age:10,effects:[{id:"minecraft:luck"}]}] run function ui:potion/aec
 
     ## スポーンエッグ型アイテムと付随性能
         execute if entity @e[type=bat,nbt={NoAI:1b}] run function ui:misc/egg_root

@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s potion{display:{Name:'{"text":"魂再生薬","color":"white","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',Lore:['{"text":"HP最大値減少を元に戻す","color":"gray","bold":false,"italic":false}','{"text":"副作用：なし","color":"gray","bold":false,"italic":false}']},HideFlags:33,custom_potion_effects:[{id:"luck",amplifier:11b,duration:200,show_particles:0b}],CustomPotionColor:16777215}
+give @s potion{display:{Name:'{"text":"魂再生薬","color":"white","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}',Lore:['{"text":"HP最大値減少を元に戻す","color":"gray","bold":false,"italic":false}','{"text":"副作用：なし","color":"gray","bold":false,"italic":false}']},HideFlags:33,custom_potion_effects:[{id:"minecraft:luck",amplifier:11b,duration:200,show_particles:0b}],CustomPotionColor:16777215}
 function ui:craft/common/exp/tier3
 
 #レシピおよび進捗消去

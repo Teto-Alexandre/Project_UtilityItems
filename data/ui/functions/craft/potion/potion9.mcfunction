@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s minecraft:lingering_potion{HideFlags:32,custom_potion_effects:[{id:"luck",amplifier:14b,duration:1}],CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","text":"衝撃のポーション"}',Lore:['[{"text":"着弾地点に衝撃を起こす","color":"gray","italic":false}]']}}
+give @s minecraft:lingering_potion{HideFlags:32,custom_potion_effects:[{id:"minecraft:luck",amplifier:14b,duration:1}],CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","text":"衝撃のポーション"}',Lore:['[{"text":"着弾地点に衝撃を起こす","color":"gray","italic":false}]']}}
 function ui:craft/common/exp/tier2
 
 #レシピおよび進捗消去

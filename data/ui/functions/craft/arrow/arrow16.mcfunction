@@ -9,7 +9,7 @@
 function ui:craft/common/del_sb
 
 #完成品を渡す
-give @s tipped_arrow{tmw:{arrow:16},display:{Name:'{"text":"彗星の矢","color":"#ffff99","bold":true,"italic":false}',Lore:['{"text":"一定時間経過後に弾ける","color":"gray","bold":false,"italic":false}']},HideFlags:32,custom_potion_effects:[{id:"luck",amplifier:22b,duration:2,show_particles:0b}],CustomPotionColor:16449462}
+give @s tipped_arrow{tmw:{arrow:16},display:{Name:'{"text":"彗星の矢","color":"#ffff99","bold":true,"italic":false}',Lore:['{"text":"一定時間経過後に弾ける","color":"gray","bold":false,"italic":false}']},HideFlags:32,custom_potion_effects:[{id:"minecraft:luck",amplifier:22b,duration:2,show_particles:0b}],CustomPotionColor:16449462}
 function ui:craft/common/exp/tier1
 
 #レシピおよび進捗消去
