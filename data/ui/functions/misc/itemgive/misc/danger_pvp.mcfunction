@@ -6,3 +6,7 @@ give @p minecraft:sea_lantern{tmw:{id:267,type:5},HideFlags:1,Enchantments:[{id:
 
 # カラフルロケット
 give @p firework_rocket{Fireworks:{Explosions:[{Type:1,Colors:[I;16711680]},{Type:1,Colors:[I;16755200]},{Type:1,Colors:[I;16776960]},{Type:1,Colors:[I;11206400]},{Type:1,Colors:[I;65280]},{Type:1,Colors:[I;65450]},{Type:1,Colors:[I;65535]},{Type:1,Colors:[I;43775]},{Type:1,Colors:[I;255]},{Type:1,Colors:[I;11141375]},{Type:1,Colors:[I;16711935]},{Type:1,Colors:[I;16711850]}]}} 1
+
+give @p firework_rocket{Fireworks:{Explosions:[{Type:1,Colors:[I;16711680]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;16755200]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;16776960]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;11206400]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;65280]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;65450]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;65535]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;43775]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;255]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;11141375]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;16711935]},{Type:0,Colors:[I;16777215]},{Type:1,Colors:[I;16711850]}]}} 1
+
+give @p firework_rocket{Fireworks:{Flight:127},display:{Name:'{"text":"半永久ジェット™","italic": false,"color": "yellow"}',Lore:['{"text":"飛翔距離 : 127","italic": false,"color": "gray"}','{"text":" - made by teto","italic": false,"color": "gray"}','{"text":"*エリトラ以外で使わないでね*","italic": false,"color": "dark_gray"}']},HideFlags:255,Enchantments:[{id:"unbreaking",lvl:1}]} 1
