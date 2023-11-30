@@ -20,6 +20,9 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEff
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
+#
+scoreboard players set @s ui_tmw272_only_one 1
+
 #tellraw @a[tag=ui_temp_players] ["",{"text":"【唯一】","color":"gold"},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"> "},{"text":"["},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0]"},{"text": "]"}]
 scoreboard players set $broadcast_type ui_temp 3
 function ui:tmw/272/effect/broadcast/
