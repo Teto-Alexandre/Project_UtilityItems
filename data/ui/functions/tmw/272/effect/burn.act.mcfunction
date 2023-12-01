@@ -13,6 +13,7 @@ execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run 
 #execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_target
 
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
+execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/effect/target_nbt/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
