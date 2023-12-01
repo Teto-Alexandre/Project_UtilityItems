@@ -34,3 +34,5 @@ give @p minecraft:dirt{tmw:{id:272,type:1,enableQ:1,cg:{cost:1,particle_laser:0,
 
 give @p minecraft:black_dye{tmw:{id:272,type:1,enableQ:1,cg:{cost:4,effects:[{target_type:8,effect_type:"discard",macro:"tmw:{cg:{cost:100}}",var:1},{condition:{id:1,min:1},target_type:1,effect_type:"damage",var:3}]}},HideFlags:1,display:{Name:'[{"text":"4:自身と相手は100マナのカードを捨てる","italic":false,"color":"white"}]',Lore:['[{"text":"1枚以上捨てたら標敵に3ダメージ","color":"gray","italic":false}]']}}
 give @p minecraft:black_wool{tmw:{id:272,type:1,enableQ:1,cg:{cost:100,effects:[{target_type:8,effect_type:"discard",macro:"tmw:{cg:{cost:10}}",var:1},{condition:{id:1,min:1},target_type:1,effect_type:"damage",var:3}]}},HideFlags:1,display:{Name:'[{"text":"100:自身と相手は10マナのカードを捨てる","italic":false,"color":"white"}]',Lore:['[{"text":"1枚以上捨てたら標敵に3ダメージ","color":"gray","italic":false}]']}}
+
+give @p minecraft:acacia_door{tmw:{id:272,type:1,enableQ:1,cg:{cost:4,effects:[{target_type:9,target_nbt:{ifdata:"",invert:1},effect_type:"damage",var:1}]}},HideFlags:1,display:{Name:'[{"text":"4:NoAI:0のエンティティに1ダメージ","italic":false,"color":"white"}]'}}
