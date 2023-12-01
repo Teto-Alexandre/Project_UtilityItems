@@ -20,8 +20,8 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEff
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
-execute if score $cg1_common_draw_single ui_temp matches 0 run data remove storage ui:cg1 temp.list[0]
 tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が["},{"storage":"ui:cg1","nbt":"temp.list[0].tag.display.Name","interpret": true},{"text": "]を手札に加えた！"}]
+execute if score $cg1_common_draw_single ui_temp matches 0 run data remove storage ui:cg1 temp.list[0]
 
 # カードプールがなくなったらボックスから補充を行う
 execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 temp.list
