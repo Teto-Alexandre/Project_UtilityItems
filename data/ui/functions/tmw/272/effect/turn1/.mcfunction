@@ -8,4 +8,4 @@ execute if score $turn_name ui_temp matches 1 run tellraw @s ["",{"text":"この
 execute if score $turn_name ui_temp matches 1 run scoreboard players set $check_cost ui_temp 0
 
 #
-execute if score $turn_name ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.turn_name append from storage ui:temp card.name
+execute if score $turn_name ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.turn_name append from storage ui:temp temp
