@@ -98,6 +98,9 @@ execute if entity @s[type=!player,tag=!hc_deck] run function ui:tmw/272/id/-1/no
 # オリジンを戦線中のデッキベースにコピー
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin
 
+# 名称ターン1
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.turn_name set value []
+
 # OMD の一次デッキに現在のデッキをコピー
 function ui:tmw/272/common/list_match/copy
 function ui:tmw/272/common/shuffle/
