@@ -6,6 +6,8 @@ execute store result score $var ui_temp run data get storage ui:temp temp.effect
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 
+execute if score $target_type ui_temp matches 0 run scoreboard players set $target_type ui_temp 2
+
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
 execute if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
