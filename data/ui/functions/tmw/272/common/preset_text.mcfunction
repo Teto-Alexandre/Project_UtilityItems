@@ -1,4 +1,4 @@
-data modify storage ui:tmw272_text simple_value set value {}
+#data modify storage ui:tmw272_text simple_value set value {}
 
 # フィードバック
 data modify storage ui:tmw272_text simple_value.health_limit set value {title:'[{"text":"【上限体力】","color":"red"}]',name:'[{"text":"上限体力","color":"red"}]',hover:'[{"text":"体力はこれ以下の値になる"},{"text":"\\n毎tick反映されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health_limit"}}]'}
