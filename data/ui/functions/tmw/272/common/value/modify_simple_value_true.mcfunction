@@ -6,6 +6,9 @@ $execute if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard p
 ## 加算モード
 $execute unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @s ui_tmw272_$(input) += $var ui_temp
 
+## 下限0
+$execute if data storage ui:temp temp.effect.limit_zero run scoreboard players operation @s ui_tmw272_$(input) > #0 ui_num
+
 ## ここでプリセットからtempに数値を持ってくるfunctionを作るべき、get_valueも同じのを使う
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 ## 下は例外以外を全部共通化する

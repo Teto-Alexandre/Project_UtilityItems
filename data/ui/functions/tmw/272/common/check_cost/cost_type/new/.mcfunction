@@ -27,6 +27,12 @@ execute if score $cost_type ui_temp matches 1 unless score $bypass ui_temp match
 execute if score $cost_type ui_temp matches 2 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/2/
 execute if score $cost_type ui_temp matches 3 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/3/
 
+# 名称ターン1
+execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/ with storage ui:temp card
+
+# コストを払う
+execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 unless score $bypass ui_temp matches 1.. run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp
+
 # バイパス
 execute if score $bypass ui_temp matches 1.. run scoreboard players set $check_cost ui_temp 1
 

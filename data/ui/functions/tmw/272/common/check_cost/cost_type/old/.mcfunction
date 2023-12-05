@@ -26,6 +26,12 @@ execute if score $cost_type ui_temp matches 1 run function ui:tmw/272/common/che
 execute if score $cost_type ui_temp matches 2 run function ui:tmw/272/common/check_cost/cost_type/old/2/
 execute if score $cost_type ui_temp matches 3 run function ui:tmw/272/common/check_cost/cost_type/old/3/
 
+# 名称ターン1
+execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/ with storage ui:temp card
+
+# コストを払う
+execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp
+
 # キャッシュクリア
 scoreboard players reset $cost_type ui_temp
 scoreboard players reset $cost ui_temp
