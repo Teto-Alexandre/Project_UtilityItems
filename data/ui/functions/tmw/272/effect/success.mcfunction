@@ -31,7 +31,7 @@ execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_fairy m
 execute if score $broadcast_type ui_temp matches 1 run scoreboard players set $shock_checker ui_temp 0
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_shock matches 1.. run scoreboard players operation $shock_checker ui_temp = @s ui_tmw272_shock
 # コスト変動
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_cost_next matches 1.. run scoreboard players set @s ui_tmw272_cost_next 0
+execute if score $broadcast_type ui_temp matches 1 unless score @s ui_tmw272_cost_next matches 0 run scoreboard players set @s ui_tmw272_cost_next 0
 
 # MOBは攻撃してる方向を向く
 execute at @s[type=!player] run teleport @s ~ ~ ~ facing entity @e[tag=tmw272_visual_input,limit=1] feet
