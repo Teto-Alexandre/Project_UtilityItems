@@ -16,6 +16,7 @@ tag @s add tmw272_active_match
 
 # 初回実行時
 execute if entity @s[tag=!tmw272_match_init] run function ui:tmw/272/match/periodic/init
+execute if entity @e[tag=ui_temp_players,tag=!tmw272_join_announce] run function ui:tmw/272/match/player/join_announce
 
 # 時間経過ごとに通知
 execute if score $turn_time ui_temp matches 30 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0

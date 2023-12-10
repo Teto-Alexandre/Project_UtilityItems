@@ -1,6 +1,7 @@
 scoreboard players reset @s ui_tmw272_link_id
 tag @s remove tmw272_active
 tag @s remove tmw272_spectate
+tag @s remove tmw272_join_announce
 tag @s remove ui_temp_players
 execute at @s run kill @e[type=item,tag=tmw272_dropitem_card,distance=..5]
 function ui:template/inventory/pull
