@@ -30,6 +30,12 @@ execute if score $cost_type ui_temp matches 3 unless score $bypass ui_temp match
 # 名称ターン1
 execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/ with storage ui:temp card
 
+# 自由記述欄
+data modify storage ui:temp temp.effect set from storage ui:temp card.cost
+execute if data storage ui:temp temp.effect.command run function ui:tmw/272/effect/effect_type/command/simple with storage ui:temp temp.effect
+execute if data storage ui:temp temp.effect.list run function ui:tmw/272/effect/effect_type/command/list
+data remove storage ui:temp temp
+
 # コストを払う
 execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 unless score $bypass ui_temp matches 1.. run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp
 
