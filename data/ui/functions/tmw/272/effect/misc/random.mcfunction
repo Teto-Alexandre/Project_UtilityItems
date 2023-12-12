@@ -11,6 +11,7 @@ scoreboard players operation $rand_max ui_temp = $rand_max_luk ui_temp
 scoreboard players operation $rand_max ui_temp -= $rand_min ui_temp
 scoreboard players add $rand_max ui_temp 1
 scoreboard players operation $mod ui_calc1 = $rand_max ui_temp
+execute if score $mod ui_calc1 matches 0 run scoreboard players set $mod ui_calc1 1
 function ui:common/rand
 scoreboard players operation $rand ui_temp = $rand ui_calc1
 scoreboard players operation $rand ui_temp += $rand_min ui_temp
