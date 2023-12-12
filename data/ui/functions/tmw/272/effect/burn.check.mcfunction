@@ -11,6 +11,7 @@ execute store result score $condition_id ui_temp run data get storage ui:temp te
 #
 execute if score $condition_id ui_temp matches 0 run scoreboard players set $condition ui_temp 1
 execute if score $condition_id ui_temp matches 1 run function ui:tmw/272/effect/condition_type/1
+execute if score $condition_id ui_temp matches 2 run function ui:tmw/272/effect/condition_type/2
 
 #
 execute if score $condition ui_temp matches 1 run function ui:tmw/272/effect/burn.act
