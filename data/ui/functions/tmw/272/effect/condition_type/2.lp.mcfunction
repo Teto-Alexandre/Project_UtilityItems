@@ -1,4 +1,4 @@
-data modify storage ui:temp temp.temp.each set from storage ui:temp temp.temp.list[0]
+data modify storage ui:tmw272 temp set from storage ui:temp temp.temp.list[0]
 
 
 function ui:tmw/272/effect/misc/input/
