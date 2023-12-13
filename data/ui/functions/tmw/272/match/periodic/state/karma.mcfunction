@@ -1,8 +1,10 @@
 scoreboard players operation @s ui_tmw272_karma < #100 ui_num
 
-particle dust 1 0 1 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 10 force
-playsound entity.generic.explode player @a ~ ~ ~ 1 2 0
-function ui:tmw/272/match/player/death
+scoreboard players set $mod ui_calc1 100
+function ui:common/rand
+execute if score $rand ui_calc1 < @s ui_tmw272_karma run particle dust 1 0 1 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 10 force
+execute if score $rand ui_calc1 < @s ui_tmw272_karma run playsound entity.generic.explode player @a ~ ~ ~ 1 2 0
+execute if score $rand ui_calc1 < @s ui_tmw272_karma run function ui:tmw/272/match/player/death
 
 data merge storage ui:tmw272 {temp:{input:"karma"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
