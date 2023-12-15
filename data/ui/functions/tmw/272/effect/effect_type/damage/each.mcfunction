@@ -9,11 +9,7 @@ execute unless data storage ui:temp temp.effect.no_armor run scoreboard players 
 execute unless data storage ui:temp temp.effect.no_armor run scoreboard players operation $var_temp ui_temp > #0 ui_num
 
 # 停止
-execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run data merge storage ui:tmw272 {temp:{input:"stop"}}
-execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
-execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run scoreboard players operation $var_temp ui_temp /= #10 ui_num
-execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が攻撃を"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"した！ 度数:"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
-execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run execute if score @s[tag=!ui_temp_player] ui_tmw272_stop matches 1.. run scoreboard players remove @s ui_tmw272_stop 1
+execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run function ui:tmw/272/effect/effect_type/damage/stop
 
 # 不死
 execute if score $deathblow_checker ui_temp matches 1 if score $var_temp ui_temp matches 1.. if score @s ui_tmw272_undying matches 1.. unless data storage ui:temp temp.effect.no_undying run function ui:tmw/272/effect/effect_type/damage/undying
