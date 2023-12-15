@@ -2,10 +2,12 @@
 execute if predicate ui:percentage/1 run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":">1% ","color":"yellow"},{"selector":"@e[tag=ui_temp_players,tag=!ui_temp_player]"},{"text":"に VISUAL_INPUT の解決を行います"}]
 
 # ターゲット出来るエンティティを周囲に表示
-    execute at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 0 run function ui:tmw/272/common/visual_input/target_marker
-    execute at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 1.. if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/common/visual_input/target_marker
+    execute if score @s ui_tmw272_surehit matches 1.. at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] run function ui:tmw/272/common/visual_input/target_marker
+    execute if score @s ui_tmw272_surehit matches ..0 at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 0 run function ui:tmw/272/common/visual_input/target_marker
+    execute if score @s ui_tmw272_surehit matches ..0 at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 1.. if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/common/visual_input/target_marker
     execute at @s positioned ^ ^ ^0.4 run tag @e[tag=ui_temp_marker,sort=nearest,limit=1] add ui_temp_target2
     execute at @e[tag=ui_temp_marker,tag=!ui_temp_target2] run particle dust 1 0 0 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
+    execute if score @s ui_tmw272_surehit matches 1.. at @e[tag=ui_temp_target2] run particle dust 0 0.5 1 0.1 ~ ~1.6 ~ 0.01 0.01 0.01 0 3 normal @s
     execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
 
 # 選択したポインターのIDを取得

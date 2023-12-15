@@ -43,7 +43,6 @@ scoreboard objectives add ui_tmw272_summoner_obj_id dummy
 scoreboard objectives add ui_tmw272_health_limit dummy
 scoreboard objectives add ui_tmw272_health_max dummy
 scoreboard objectives add ui_tmw272_health dummy
-scoreboard objectives add ui_tmw272_damage dummy
 scoreboard objectives add ui_tmw272_mana_limit dummy
 scoreboard objectives add ui_tmw272_mana_max dummy
 scoreboard objectives add ui_tmw272_mana dummy
@@ -115,6 +114,16 @@ scoreboard objectives add ui_tmw272_cost_next dummy
 scoreboard objectives add ui_tmw272_water dummy
 scoreboard objectives add ui_tmw272_product dummy
 scoreboard objectives add ui_tmw272_fund dummy
+scoreboard objectives add ui_tmw272_charge dummy
+scoreboard objectives add ui_tmw272_deathblow dummy
+scoreboard objectives add ui_tmw272_surehit dummy
+scoreboard objectives add ui_tmw272_confusion dummy
+scoreboard objectives add ui_tmw272_dazzle dummy
+scoreboard objectives add ui_tmw272_self_heal dummy
+scoreboard objectives add ui_tmw272_other_heal dummy
+scoreboard objectives add ui_tmw272_draw dummy
+scoreboard objectives add ui_tmw272_discard dummy
+scoreboard objectives add ui_tmw272_damage dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

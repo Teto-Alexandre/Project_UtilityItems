@@ -43,3 +43,5 @@ execute unless score $cg1_list_count ui_temp matches 1.. run function ui:tmw/272
 
 scoreboard players remove $cg1_common_draw_num ui_temp 1
 execute if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
+
+scoreboard players add @s ui_tmw272_draw 1

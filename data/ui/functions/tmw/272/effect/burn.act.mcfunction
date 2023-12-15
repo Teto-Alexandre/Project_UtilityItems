@@ -1,13 +1,24 @@
 # 汎用変数を記録
 execute if data storage ui:temp temp.effect.case run function ui:tmw/272/effect/misc/case/
 execute store result score $target_type ui_temp run data get storage ui:temp temp.effect.target_type 1
-#execute store result score $effect_type ui_temp run data get storage ui:temp temp.effect.effect_type 1
+execute store result score $target_count ui_temp run data get storage ui:temp temp.effect.target_count 1
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 
 execute if score $target_type ui_temp matches 0 run scoreboard players set $target_type ui_temp 2
+execute if score $target_count ui_temp matches ..0 run scoreboard players set $target_count ui_temp 1
 
+execute if score @s ui_tmw272_dazzle matches 1.. run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 6
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 4
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 5 run scoreboard players set $target_type ui_temp 6
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_type ui_temp 6
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_count ui_temp 2
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 10 run scoreboard players set $target_type ui_temp 4
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 11 run scoreboard players set $target_type ui_temp 6
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 12 run scoreboard players set $target_type ui_temp 4
+execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 13 run scoreboard players set $target_type ui_temp 6
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
 execute if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
@@ -46,6 +57,8 @@ execute if score $target_type ui_temp matches 12 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 13 run function ui:tmw/272/effect/target_type/13
 ## <summon限定> 召喚者をターゲット
 execute if score $target_type ui_temp matches 14 run function ui:tmw/272/effect/target_type/14
+## この一連のカードでターゲットになったエンティティ全員
+execute if score $target_type ui_temp matches 15 run function ui:tmw/272/effect/target_type/15
 
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]

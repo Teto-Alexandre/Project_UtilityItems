@@ -1,7 +1,6 @@
 scoreboard players set @s ui_tmw272_health_limit 999
 scoreboard players set @s ui_tmw272_health_max 20
 scoreboard players set @s ui_tmw272_health 20
-scoreboard players set @s ui_tmw272_damage 0
 scoreboard players set @s ui_tmw272_mana_limit 99
 scoreboard players set @s ui_tmw272_mana_max 0
 scoreboard players set @s ui_tmw272_mana 0
@@ -72,6 +71,16 @@ scoreboard players set @s ui_tmw272_cost_next 0
 scoreboard players set @s ui_tmw272_water 0
 scoreboard players set @s ui_tmw272_product 0
 scoreboard players set @s ui_tmw272_fund 0
+scoreboard players set @s ui_tmw272_charge 0
+scoreboard players set @s ui_tmw272_deathblow 0
+scoreboard players set @s ui_tmw272_surehit 0
+scoreboard players set @s ui_tmw272_confusion 0
+scoreboard players set @s ui_tmw272_dazzle 0
+scoreboard players set @s ui_tmw272_self_heal 0
+scoreboard players set @s ui_tmw272_other_heal 0
+scoreboard players set @s ui_tmw272_draw 0
+scoreboard players set @s ui_tmw272_discard 0
+scoreboard players set @s ui_tmw272_damage 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

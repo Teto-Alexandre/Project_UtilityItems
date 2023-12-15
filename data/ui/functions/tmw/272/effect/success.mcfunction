@@ -32,6 +32,10 @@ execute if score $broadcast_type ui_temp matches 1 run scoreboard players set $s
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_shock matches 1.. run scoreboard players operation $shock_checker ui_temp = @s ui_tmw272_shock
 # コスト変動
 execute if score $broadcast_type ui_temp matches 1 unless score @s ui_tmw272_cost_next matches 0 run scoreboard players set @s ui_tmw272_cost_next 0
+# 必中
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run data merge storage ui:tmw272 {temp:{input:"surehit"}}
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "！"}]
 
 # MOBは攻撃してる方向を向く
 execute at @s[type=!player] run teleport @s ~ ~ ~ facing entity @e[tag=tmw272_visual_input,limit=1] feet
@@ -75,6 +79,7 @@ scoreboard players reset $rand ui_temp
 
 #
 execute if score $broadcast_type ui_temp matches 1 run scoreboard players add @s ui_tmw272_chain 1
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run scoreboard players remove @s ui_tmw272_surehit 1
 
 # カードの一時データも削除
 data remove storage ui:temp temp
