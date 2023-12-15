@@ -9,7 +9,6 @@ execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/ef
 execute if score $target_type ui_temp matches 0 run scoreboard players set $target_type ui_temp 2
 execute if score $target_count ui_temp matches ..0 run scoreboard players set $target_count ui_temp 1
 
-execute if score @s ui_tmw272_dazzle matches 1.. run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
 execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 6
 execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 4
 execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 5 run scoreboard players set $target_type ui_temp 6
@@ -22,6 +21,7 @@ execute if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_tem
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
 execute if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
 execute if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
+execute if score @s ui_tmw272_dazzle matches 1.. unless score $target_type ui_temp matches 2 unless score $target_type ui_temp matches 8 run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
 execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
 #execute as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_target
 

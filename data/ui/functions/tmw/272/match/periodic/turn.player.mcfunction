@@ -76,6 +76,10 @@ execute unless score @s ui_tmw272_hope matches 0 run function ui:tmw/272/match/p
 execute if score @s ui_tmw272_karma matches 1.. run function ui:tmw/272/match/periodic/state/karma
 # 常在：modify_valueを受けない、開幕1減る
 execute if score @s ui_tmw272_hexproof matches 1.. run function ui:tmw/272/match/periodic/state/hexproof
+# 常在：modify_valueを受けない、開幕1減る
+execute if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/match/periodic/state/confusion
+# 常在：modify_valueを受けない、開幕1減る
+execute if score @s ui_tmw272_dazzle matches 1.. run function ui:tmw/272/match/periodic/state/dazzle
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
