@@ -1,4 +1,5 @@
 execute align xyz run summon sheep ~0.5 ~ ~0.5 {NoAI:1,Tags:["hc_deck","hc_deck_temp","deck_sheep"],Invulnerable:1b,CustomNameVisible:1b,Silent:1b}
+setblock ~ ~-1 ~ air replace
 setblock ~ ~-1 ~ dropper replace
 execute as @e[tag=hc_deck_temp] run effect give @s resistance infinite 127 true
 execute as @e[tag=hc_deck_temp] run scoreboard players set @s ui_team 6
