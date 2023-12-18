@@ -20,8 +20,9 @@ execute unless data storage ui:temp temp.effect.condition.max run scoreboard pla
 scoreboard players set $condition ui_temp 1
 
 # それぞれの場合の結果から外れていれば、失敗にする
-execute if score $condition_min ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp < $condition_min ui_temp run scoreboard players set $condition ui_temp 0
-execute if score $condition_max ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp > $condition_max ui_temp run scoreboard players set $condition ui_temp 0
+execute unless data storage ui:temp temp.effect.condition.invert if score $condition_min ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp < $condition_min ui_temp run scoreboard players set $condition ui_temp 0
+execute unless data storage ui:temp temp.effect.condition.invert if score $condition_max ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp > $condition_max ui_temp run scoreboard players set $condition ui_temp 0
+execute if data storage ui:temp temp.effect.condition.invert if score $condition_min ui_temp matches -2147483648..2147483647 if score $condition_max ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp >= $condition_min ui_temp if score $condition_checker ui_temp <= $condition_max ui_temp run scoreboard players set $condition ui_temp 0
 
 # continueがついていなければconditionはリセット
 execute unless data storage ui:temp temp.effect.condition.continue run scoreboard players set $condition_checker ui_temp 0
