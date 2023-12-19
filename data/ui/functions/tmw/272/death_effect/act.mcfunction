@@ -3,7 +3,7 @@ data modify storage ui:temp card set from storage oh_my_dat: _[-4][-4][-4][-4][-
 execute if data storage ui:temp card.repeat run function ui:tmw/272/death_effect/repeat
 
 #
-scoreboard players set $broadcast_type ui_temp 2
+scoreboard players set $broadcast_type ui_temp 5
 
 # デバッグメッセージ
 #tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> AE ","color":"gray","bold": true},{"storage":"ui:temp","nbt":"card.name","interpret":true},{"text":"の実行を試みます"}]

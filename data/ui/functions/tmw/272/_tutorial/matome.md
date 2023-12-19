@@ -5,11 +5,11 @@
 
 （after_effect限定）
 delay       :　　、発動までのtick数
-delay_base  :必須、繰り返した時のdelayの再設定の値
+delay_base  :　　、繰り返した時のdelayの再設定の値
 delay_type  :　　、0-2 (1なら↑が開幕からの時間、2なら閉幕までの時間)
 repeat      :　　、繰り返す回数
-name        :　　、display.NameのAE版
-lore        :　　、display.LoreのAE版
+Name or name:　　、display.NameのAE版
+Lore or lore:　　、display.LoreのAE版
 
 cost            - 必須      - マナコストの設定 例：cost:3 or cost:{amount:3,type:1,mods:[{name:"turn_count",mult:-1.0}]}
     amount      - 必須      - コスト
