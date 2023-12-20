@@ -1,5 +1,6 @@
 # varをコピーして回数を増やす
 scoreboard players operation $var_temp ui_temp = $var ui_temp
+scoreboard players set $condition_checker_temp ui_temp 0
 
 execute unless data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3
 execute if data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3_macro with storage ui:temp temp.effect
