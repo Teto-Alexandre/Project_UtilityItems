@@ -1,3 +1,7 @@
+# コストが足りたら破棄
+execute if score $broadcast_type ui_temp matches 2 run execute if data storage ui:temp card.success_delete run function ui:tmw/272/after_effect/delete
+execute if score $broadcast_type ui_temp matches 5 run execute if data storage ui:temp card.success_delete run function ui:tmw/272/death_effect/delete
+
 # 使用成功した場合
 data modify storage ui:temp temp.card set from storage ui:temp card
 
@@ -33,6 +37,8 @@ execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_shock m
 # コスト変動
 execute if score $broadcast_type ui_temp matches 1 unless score @s ui_tmw272_cost_next matches 0 run scoreboard players set @s ui_tmw272_cost_next 0
 # 必中
+execute if score $broadcast_type ui_temp matches 1 run scoreboard players set $surehit_checker ui_temp 0
+execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run scoreboard players set $surehit_checker ui_temp 1
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run data merge storage ui:tmw272 {temp:{input:"surehit"}}
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "！"}]
@@ -79,7 +85,7 @@ scoreboard players reset $rand ui_temp
 
 #
 execute if score $broadcast_type ui_temp matches 1 run scoreboard players add @s ui_tmw272_chain 1
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_surehit matches 1.. run scoreboard players remove @s ui_tmw272_surehit 1
+execute if score $broadcast_type ui_temp matches 1 if score $surehit_checker ui_temp matches 1 run scoreboard players remove @s ui_tmw272_surehit 1
 
 # カードの一時データも削除
 data remove storage ui:temp temp
