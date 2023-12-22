@@ -3,6 +3,7 @@ scoreboard players set @s ui_tmw272_health_max 20
 scoreboard players set @s ui_tmw272_health 20
 scoreboard players set @s ui_tmw272_mana_limit 99
 scoreboard players set @s ui_tmw272_mana_max 0
+scoreboard players set @s ui_tmw272_mana_up 10
 scoreboard players set @s ui_tmw272_mana 0
 scoreboard players set @s ui_tmw272_match_time 0
 scoreboard players set @s ui_tmw272_duplication 0

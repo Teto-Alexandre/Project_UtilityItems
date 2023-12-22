@@ -45,6 +45,7 @@ scoreboard objectives add ui_tmw272_health_max dummy
 scoreboard objectives add ui_tmw272_health dummy
 scoreboard objectives add ui_tmw272_mana_limit dummy
 scoreboard objectives add ui_tmw272_mana_max dummy
+scoreboard objectives add ui_tmw272_mana_up dummy
 scoreboard objectives add ui_tmw272_mana dummy
 scoreboard objectives add ui_tmw272_match_time dummy
 scoreboard objectives add ui_tmw272_duplication dummy
