@@ -85,6 +85,8 @@ data modify storage ui:tmw272_text simple_value.other_heal set value {title:'[{"
 data modify storage ui:tmw272_text simple_value.draw set value {title:'[{"text":"【ドロー回数】","color":"yellow"}]',name:'[{"text":"ドロー回数","color":"yellow"}]',hover:'[{"text":"ドローした枚数を示す"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_draw"}}]'}
 data modify storage ui:tmw272_text simple_value.discard set value {title:'[{"text":"【破棄回数】","color":"yellow"}]',name:'[{"text":"破棄回数","color":"yellow"}]',hover:'[{"text":"カードを捨てた枚数を示す"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_discard"}}]'}
 data modify storage ui:tmw272_text simple_value.damage set value {title:'[{"text":"【ダメージ量】","color":"red"}]',name:'[{"text":"ダメージ量","color":"red"}]',hover:'[{"text":"ダメージを与えた量を示す"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_damage"}}]'}
+data modify storage ui:tmw272_text simple_value.determination set value {title:'[{"text":"【決意】","color":"yellow"}]',name:'[{"text":"決意","color":"yellow"}]',hover:'[{"text":"戦線離脱を防ぎ、最大マナ-1"},{"text":"発動時に減少し、体力を最大体力の半分まで回復する"},{"text":"その後最大体力は半分になる"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_determination"}}]'}
+data modify storage ui:tmw272_text simple_value.soul set value {title:'[{"text":"【魂】","color":"red"}]',name:'[{"text":"魂","color":"red"}]',hover:'[{"text":"開幕 "},{"text":"N%の確率で最大マナが1増える"},{"text":"また、魂壊と相殺し合う"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_soul"}}]'}
 
 
 data modify storage ui:tmw272_text simple_value.turn_count set value {title:'[{"text":"【経過ターン数】","color":"gray"}]',name:'[{"text":"経過ターン数","color":"gray"}]',hover:'[{"text":"全員で共通の値を持つ"}]',score:'[{"score":{"name": "@e[tag=tmw272_active_match,limit=1]","objective": "ui_tmw272_match_round"}}]'}

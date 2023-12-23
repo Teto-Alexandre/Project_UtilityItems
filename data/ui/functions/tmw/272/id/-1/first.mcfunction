@@ -125,6 +125,8 @@ scoreboard objectives add ui_tmw272_other_heal dummy
 scoreboard objectives add ui_tmw272_draw dummy
 scoreboard objectives add ui_tmw272_discard dummy
 scoreboard objectives add ui_tmw272_damage dummy
+scoreboard objectives add ui_tmw272_determination dummy
+scoreboard objectives add ui_tmw272_soul dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy
