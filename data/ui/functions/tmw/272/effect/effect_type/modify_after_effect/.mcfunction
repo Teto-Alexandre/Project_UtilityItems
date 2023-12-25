@@ -1,5 +1,5 @@
 # アフターエフェクト編集
-execute unless data storage ui:temp temp.effect.condition_continue run scoreboard players set $condition_checker_temp ui_temp 0
+scoreboard players set $condition_checker_temp ui_temp 0
 
 execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/modify_after_effect/each
 
