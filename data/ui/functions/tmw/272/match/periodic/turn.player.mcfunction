@@ -80,6 +80,8 @@ execute if score @s ui_tmw272_hexproof matches 1.. run function ui:tmw/272/match
 execute if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/match/periodic/state/confusion
 # 常在：modify_valueを受けない、開幕1減る
 execute if score @s ui_tmw272_dazzle matches 1.. run function ui:tmw/272/match/periodic/state/dazzle
+# 開幕：マナを増やす
+execute if score @s ui_tmw272_soul matches 1.. run function ui:tmw/272/match/periodic/state/soul
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
