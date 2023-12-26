@@ -10,6 +10,7 @@ execute as @e[tag=ui_tec] if score @s ui_team = $team ui_temp run tag @s add ui_
 function ui:common/tag_temp_team/
 
 #
+#tellraw @a [{"text":"Team> "},{"score":{"name": "$team","objective": "ui_temp"},"color": "green"},{"text":": "},{"selector":"@s"}]
 #tellraw @a [{"text":"Team> "},{"text":": "},{"selector":"@e[tag=ui_temp_team]"}]
 #tellraw @a [{"text":"TeamOperation> "},{"score":{"name": "$team","objective": "ui_temp"},"color": "green"},{"text":": "},{"selector":"@e[tag=ui_temp_team_control]"}]
 execute as @e[limit=1,tag=ui_temp_team_control] run function ui:tmw/255/player/crossbow/ss/eo/idc
