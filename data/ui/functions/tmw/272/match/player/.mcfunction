@@ -10,6 +10,11 @@ scoreboard players operation @s ui_tmw272_mana_max < @s ui_tmw272_mana_limit
 scoreboard players operation @s ui_tmw272_health < @s ui_tmw272_health_limit
 scoreboard players operation @s ui_tmw272_health_max > @s ui_tmw272_health
 
+scoreboard players operation @s ui_tmw272_hp_crease_temp -= @s ui_tmw272_health
+execute if score @s ui_tmw272_hp_crease_temp < #0 ui_num run scoreboard players operation @s ui_tmw272_hp_increase += @s ui_tmw272_hp_crease_temp
+execute if score @s ui_tmw272_hp_crease_temp > #0 ui_num run scoreboard players operation @s ui_tmw272_hp_decrease += @s ui_tmw272_hp_crease_temp
+scoreboard players operation @s ui_tmw272_hp_crease_temp = @s ui_tmw272_health
+
 #
 scoreboard players add @s ui_tmw272_match_time 1
 execute if score @s ui_tmw272_match_time matches 20 at @s run function ui:tmw/272/common/draw/once

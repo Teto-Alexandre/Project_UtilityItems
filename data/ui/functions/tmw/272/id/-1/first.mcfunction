@@ -127,6 +127,10 @@ scoreboard objectives add ui_tmw272_discard dummy
 scoreboard objectives add ui_tmw272_damage dummy
 scoreboard objectives add ui_tmw272_determination dummy
 scoreboard objectives add ui_tmw272_soul dummy
+scoreboard objectives add ui_tmw272_damage_taken dummy
+scoreboard objectives add ui_tmw272_hp_decrease dummy
+scoreboard objectives add ui_tmw272_hp_increase dummy
+scoreboard objectives add ui_tmw272_hp_crease_temp dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

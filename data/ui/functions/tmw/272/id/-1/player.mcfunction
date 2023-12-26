@@ -84,6 +84,10 @@ scoreboard players set @s ui_tmw272_discard 0
 scoreboard players set @s ui_tmw272_damage 0
 scoreboard players set @s ui_tmw272_determination 0
 scoreboard players set @s ui_tmw272_soul 0
+scoreboard players set @s ui_tmw272_damage_taken 0
+scoreboard players set @s ui_tmw272_hp_decrease 0
+scoreboard players set @s ui_tmw272_hp_increase 0
+scoreboard players set @s ui_tmw272_hp_crease_temp 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
