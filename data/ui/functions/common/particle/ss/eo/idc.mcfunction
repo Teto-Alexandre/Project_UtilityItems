@@ -22,4 +22,4 @@ tag @e[tag=ui_temp_ones] remove ui_temp_ones
 tag @a[tag=ui_temp_player] remove ui_temp_player
 
 # 再帰
-execute if entity @e[tag=ui_idc] as @e[limit=1,tag=ui_idc] run function ui:common/particle/ss/eo/idc
+execute if entity @e[tag=ui_idc] as @e[limit=1,tag=ui_temp_team_control,tag=ui_idc] run function ui:common/particle/ss/eo/idc
