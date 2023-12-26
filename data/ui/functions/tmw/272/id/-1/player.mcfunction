@@ -103,7 +103,7 @@ effect give @s resistance infinite 127 true
 # (プレイヤーがデッキを持っているなら) OMD に上書き
 execute if entity @s[type=player] if entity @s[nbt={SelectedItem:{tag:{tmw:{id:272,type:-1}}}}] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from entity @s SelectedItem.tag.tmw.cg.list
 execute if entity @s[type=!player,tag=!hc_deck,tag=!deck_sheep] run function ui:tmw/272/id/-1/non_player/
-execute if entity @s[tag=deck_sheep] at @s run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from block ~ ~-1 ~ Items
+execute if entity @s[tag=deck_sheep] at @s run function ui:tmw/272/id/-1/deck_sheep
 
 # ここでデバッグ 参戦者のデッキリストをチャットに表示する
 #function ui:tmw/272/id/-1/debug/bro_list
