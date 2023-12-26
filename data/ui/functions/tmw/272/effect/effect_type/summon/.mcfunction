@@ -26,6 +26,7 @@ execute as @e[tag=hc_deck_temp] at @s run function ui:tmw/272/id/-1/success
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.mana store result score @s ui_tmw272_mana_limit run data get storage ui:temp temp.effect.mana
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health_limit run data get storage ui:temp temp.effect.health
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health run data get storage ui:temp temp.effect.health
+execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_hp_crease_temp run data get storage ui:temp temp.effect.health
 execute as @e[tag=hc_deck_temp] run scoreboard players operation @s ui_tmw272_summoner_obj_id = @e[tag=ui_temp_summoner] ui_obj_id
 
 tag @e[tag=hc_deck_temp] remove hc_deck_temp
