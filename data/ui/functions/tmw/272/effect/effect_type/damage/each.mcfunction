@@ -22,6 +22,7 @@ execute if data storage ui:temp temp.effect.no_shield run scoreboard players set
 execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @s ui_tmw272_health -= $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 1 if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_damage += $var_temp ui_temp
+execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @s ui_tmw272_damage_taken += $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 2 run scoreboard players operation @s ui_tmw272_shield -= $var_temp ui_temp
 
 execute if score $effect_type_damage_info ui_temp matches 1 run data merge storage ui:tmw272 {temp:{input:"health"}}
@@ -39,6 +40,7 @@ execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard playe
 execute if score $effect_type_damage_info ui_temp matches 3 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が崩壊し"},{"selector":"@s"},{"text":"に"},{"score":{"name": "@s","objective": "ui_tmw272_shield"}},{"text": "ダメージ！"}]
 execute if score $effect_type_damage_info ui_temp matches 3 if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += @s ui_tmw272_shield
 execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_damage += @s ui_tmw272_shield
+execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players operation @s ui_tmw272_damage_taken += @s ui_tmw272_shield
 execute if score $effect_type_damage_info ui_temp matches 3 run scoreboard players set @s ui_tmw272_shield 0
 
 execute if score $effect_type_damage_info ui_temp matches 2 at @s run playsound ui:shield_m player @a ~ ~ ~ 0.7 1.2 0
