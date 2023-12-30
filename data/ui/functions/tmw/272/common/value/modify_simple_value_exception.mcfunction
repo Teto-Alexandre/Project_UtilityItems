@@ -3,18 +3,21 @@
 execute if data storage ui:tmw272 temp{input:"var"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $var ui_temp = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"rand"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $rand ui_temp = $var ui_temp
 execute if data storage ui:tmw272 temp{input:"turn_count"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round = $var ui_temp
+execute if data storage ui:tmw272 temp{input:"true_turn_count"} if data storage ui:temp temp.effect{effect_mode:"set"} run tellraw @a[tag=ui_temp_players] ["",{"text":" ERROR ","color":"red"},{"selector":"@s"},{"text":":"},{"text":"この数値を編集することはできません"}]
 execute if data storage ui:tmw272 temp{input:"condition"} if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $condition_checker ui_temp = $var ui_temp
 
 ## 加算モード
 execute if data storage ui:tmw272 temp{input:"var"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $var ui_temp += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"rand"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $rand ui_temp += $var ui_temp
 execute if data storage ui:tmw272 temp{input:"turn_count"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round += $var ui_temp
+execute if data storage ui:tmw272 temp{input:"true_turn_count"} unless data storage ui:temp temp.effect{effect_mode:"set"} run tellraw @a[tag=ui_temp_players] ["",{"text":" ERROR ","color":"red"},{"selector":"@s"},{"text":":"},{"text":"この数値を編集することはできません"}]
 execute if data storage ui:tmw272 temp{input:"condition"} unless data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation $condition_checker ui_temp += $var ui_temp
 
 ## 下限0
 execute if data storage ui:tmw272 temp{input:"var"} if data storage ui:temp temp.effect.limit_zero run scoreboard players operation $var ui_temp > #0 ui_num
 execute if data storage ui:tmw272 temp{input:"rand"} if data storage ui:temp temp.effect.limit_zero run scoreboard players operation $rand ui_temp > #0 ui_num
 execute if data storage ui:tmw272 temp{input:"turn_count"} if data storage ui:temp temp.effect.limit_zero run scoreboard players operation @e[tag=tmw272_active_match] ui_tmw272_match_round > #0 ui_num
+execute if data storage ui:tmw272 temp{input:"true_turn_count"} if data storage ui:temp temp.effect.limit_zero run tellraw @a[tag=ui_temp_players] ["",{"text":" ERROR ","color":"red"},{"selector":"@s"},{"text":":"},{"text":"この数値を編集することはできません"}]
 execute if data storage ui:tmw272 temp{input:"condition"} if data storage ui:temp temp.effect.limit_zero run scoreboard players operation $condition_checker ui_temp > #0 ui_num
 
 ## ここでプリセットからtempに数値を持ってくるfunctionを作るべき、modify_valueも同じのを使う

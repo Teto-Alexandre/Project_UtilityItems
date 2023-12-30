@@ -94,6 +94,7 @@ data modify storage ui:tmw272_text simple_value.hp_crease_temp set value {title:
 
 
 data modify storage ui:tmw272_text simple_value.turn_count set value {title:'[{"text":"【経過ターン数】","color":"gray"}]',name:'[{"text":"経過ターン数","color":"gray"}]',hover:'[{"text":"全員で共通の値を持つ"}]',score:'[{"score":{"name": "@e[tag=tmw272_active_match,limit=1]","objective": "ui_tmw272_match_round"}}]'}
+data modify storage ui:tmw272_text simple_value.true_turn_count set value {title:'[{"text":"【真の経過ターン数】","color":"gray"}]',name:'[{"text":"真の経過ターン数","color":"gray"}]',hover:'[{"text":"全員で共通の値を持つ"}]',score:'[{"score":{"name": "@e[tag=tmw272_active_match,limit=1]","objective": "ui_tmw272_true_match_round"}}]'}
 data modify storage ui:tmw272_text simple_value.repeat set value {title:'[{"text":"【この効果の発動数】","color":"gray"}]',name:'[{"text":"この効果の発動数","color":"gray"}]',hover:'[{"text":"0になると効果が消滅"}]',score:'[{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0].repeat"}]'}
 data modify storage ui:tmw272_text simple_value.condition set value {title:'[{"text":"参照","color":"gray"}]',name:'[{"text":"参照","color":"gray"}]',hover:'[{"text":"コンディション"}]',score:'[{"score":{"name":"$condition_checker","objective":"ui_temp"}}]'}
 
