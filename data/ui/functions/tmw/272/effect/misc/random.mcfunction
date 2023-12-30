@@ -19,5 +19,5 @@ scoreboard players operation $rand ui_temp += $rand_min ui_temp
 ##execute if data storage ui:temp temp.effect.rand.to_var run scoreboard players operation $var ui_temp = $rand ui_temp
 scoreboard players operation $var ui_temp = $rand ui_temp
 
-execute if score @s ui_tmw272_unluck matches 1.. if score @s ui_tmw272_luck matches 0 store result score $var ui_temp run scoreboard players get $rand_min_luk ui_temp
-execute if score @s ui_tmw272_luck matches 1.. if score @s ui_tmw272_unluck matches 0 store result score $var ui_temp run scoreboard players get $rand_max_luk ui_temp
+execute unless data storage ui:temp temp.effect.rand.no_unluck if score @s ui_tmw272_unluck matches 1.. if score @s ui_tmw272_luck matches 0 store result score $var ui_temp run scoreboard players get $rand_min_luk ui_temp
+execute unless data storage ui:temp temp.effect.rand.no_luck if score @s ui_tmw272_luck matches 1.. if score @s ui_tmw272_unluck matches 0 store result score $var ui_temp run scoreboard players get $rand_max_luk ui_temp
