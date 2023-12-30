@@ -4,5 +4,6 @@ function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
 scoreboard players operation @e[tag=tmw272_temp_card_effect_target] ui_tmw272_mana_max += $var ui_temp
 execute if data storage ui:temp temp.effect{effect_mode:"="} run scoreboard players operation @e[tag=tmw272_temp_card_effect_target] ui_tmw272_mana_max = $var ui_temp
+execute if data storage ui:temp temp.effect{effect_mode:"set"} run scoreboard players operation @e[tag=tmw272_temp_card_effect_target] ui_tmw272_mana_max = $var ui_temp
 
 execute as @e[tag=tmw272_temp_card_effect_target] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "になった！"}]
