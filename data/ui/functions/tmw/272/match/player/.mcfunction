@@ -22,7 +22,8 @@ execute if score @s ui_tmw272_match_time matches 25 at @s run function ui:tmw/27
 execute if score @s ui_tmw272_match_time matches 30 at @s run function ui:tmw/272/common/draw/once
 
 #
-execute if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/272/common/draw/only_one/check
+execute unless entity @s[tag=summoned_delete] if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/272/common/draw/only_one/check
+execute if entity @s[tag=summoned_delete] if score @s ui_tmw272_match_time matches 1 at @s run function ui:tmw/272/common/draw/only_one/check
 
 #
 function oh_my_dat:please
