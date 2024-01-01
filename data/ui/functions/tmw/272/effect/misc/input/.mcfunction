@@ -16,7 +16,7 @@ data modify storage ui:tmw272 stack set from storage ui:tmw272 temp
 execute if data storage ui:tmw272 stack.add.name run data modify storage ui:tmw272 stack.add.input set from storage ui:tmw272 stack.add.name
 execute if data storage ui:tmw272 stack.add.input run data modify storage ui:tmw272 temp set from storage ui:tmw272 stack.add
 execute if data storage ui:tmw272 stack.add.input run function ui:tmw/272/effect/misc/input/
-execute if data storage ui:tmw272 stack.add.input store result storage ui:tmw272 temp.add int 1 run scoreboard players get $input_act ui_temp
+execute if data storage ui:tmw272 stack.add.input store result storage ui:tmw272 stack.add int 1 run scoreboard players get $input_act ui_temp
 
 #
 data modify storage ui:tmw272 temp set from storage ui:tmw272 stack
