@@ -13,10 +13,10 @@ scoreboard players reset $tmw272_get_value ui_temp
 
 # 割り込み処理をかける ui:tmw272 temp を ui:tmw272 stack に移動する
 data modify storage ui:tmw272 stack set from storage ui:tmw272 temp
-execute if data storage ui:tmw272 stack.mod.input run data modify storage ui:tmw272 temp set from storage ui:tmw272 stack.mod
-execute if data storage ui:tmw272 stack.mod.name unless data storage ui:tmw272 temp.input run data modify storage ui:tmw272 temp.input set from storage ui:tmw272 stack.mod.name
-function ui:tmw/272/effect/misc/input/
-execute store result storage ui:tmw272 temp.mod int 1 run scoreboard players get $input_act ui_temp
+execute if data storage ui:tmw272 stack.add.name run data modify storage ui:tmw272 stack.add.input set from storage ui:tmw272 stack.add.name
+execute if data storage ui:tmw272 stack.add.input run data modify storage ui:tmw272 temp set from storage ui:tmw272 stack.add
+execute if data storage ui:tmw272 stack.add.input run function ui:tmw/272/effect/misc/input/
+execute if data storage ui:tmw272 stack.add.input store result storage ui:tmw272 temp.add int 1 run scoreboard players get $input_act ui_temp
 
 #
 data modify storage ui:tmw272 temp set from storage ui:tmw272 stack
