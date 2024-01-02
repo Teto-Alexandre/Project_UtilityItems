@@ -9,7 +9,16 @@ scoreboard players set $success_message ui_temp 1
 execute unless data storage ui:temp temp.effect.id run summon pig ~ ~ ~ {NoAI:1,Tags:["hc_deck","summoned_nocount","summoned_delete","hc_deck_temp","ui_temp_players"],Invulnerable:1b,CustomNameVisible:1b,Silent:1b}
 $execute if data storage ui:temp temp.effect.id run summon $(id) ~ ~ ~ {NoAI:1,Invulnerable:1b,CustomNameVisible:1b,Silent:1b,Tags:["hc_deck","summoned_nocount","summoned_delete","hc_deck_temp","ui_temp_players"]}
 execute as @e[tag=hc_deck_temp] run function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from storage ui:temp temp.effect.list
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set value [{},{},{},{},{},{},{},{},{},{},{}]
+execute if data storage ui:temp temp.effect.list[0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0] set from storage ui:temp temp.effect.list[0]
+execute if data storage ui:temp temp.effect.list[1] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[1] set from storage ui:temp temp.effect.list[1]
+execute if data storage ui:temp temp.effect.list[2] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[2] set from storage ui:temp temp.effect.list[2]
+execute if data storage ui:temp temp.effect.list[3] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[3] set from storage ui:temp temp.effect.list[3]
+execute if data storage ui:temp temp.effect.list[4] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[4] set from storage ui:temp temp.effect.list[4]
+execute if data storage ui:temp temp.effect.list[5] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[5] set from storage ui:temp temp.effect.list[5]
+execute if data storage ui:temp temp.effect.list[6] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[6] set from storage ui:temp temp.effect.list[6]
+execute if data storage ui:temp temp.effect.list[7] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[7] set from storage ui:temp temp.effect.list[7]
+execute if data storage ui:temp temp.effect.list[8] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[8] set from storage ui:temp temp.effect.list[8]
 data modify entity @e[tag=hc_deck_temp,limit=1] CustomName set from storage ui:temp temp.effect.name
 data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:temp temp.effect.ArmorItems
 data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems
