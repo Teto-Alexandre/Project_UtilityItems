@@ -27,8 +27,8 @@ execute if score $tmw272_stack_depth ui_temp matches 1 run data modify storage u
     #mult
     execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.name run data modify storage ui:tmw272 stack.mult.input set from storage ui:tmw272 stack.mult.name
     execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.input run data modify storage ui:tmw272 temp set from storage ui:tmw272 stack.mult
-    execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.input run function ui:tmw/272/effect/misc/input/float100
-    execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.input store result storage ui:tmw272 stack.mult float 0.01 run scoreboard players get $input_act ui_temp
+    execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.input run function ui:tmw/272/effect/misc/input/
+    execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.mult.input store result storage ui:tmw272 stack.mult int 1 run scoreboard players get $input_act ui_temp
     #add
     execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.add.name run data modify storage ui:tmw272 stack.add.input set from storage ui:tmw272 stack.add.name
     execute if score $tmw272_stack_depth ui_temp matches 1 run execute if data storage ui:tmw272 stack.add.input run data modify storage ui:tmw272 temp set from storage ui:tmw272 stack.add
@@ -62,6 +62,8 @@ execute store result score $input_pow ui_temp run data get storage ui:tmw272 tem
 execute if score $input_pow ui_temp matches 2.. run scoreboard players operation $input_act_temp ui_temp = $input_act ui_temp
 execute if score $input_pow ui_temp matches 2.. run scoreboard players remove $input_pow ui_temp 1
 execute if score $input_pow ui_temp matches 1.. run function ui:tmw/272/effect/misc/input/pow
+
+scoreboard players operation $input_act ui_temp *= #100 ui_num
 
 # mult
 execute store result score $input_mult ui_temp run data get storage ui:tmw272 temp.mult 100

@@ -13,7 +13,7 @@ execute as @e[tag=tmw272] if score @s ui_obj_id = $link_id ui_temp run tag @s ad
 execute unless entity @e[tag=tmw272_match] if score @s ui_tmw272_link_id matches 1..2147483647 run function ui:tmw/272/init/_main.connection_lost_entity
 
 ## <= ここは、とりあえず手持ちのカードをランダムに使う
-execute if predicate ui:percentage/10 if score $type ui_temp matches 1 if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/use
+execute if predicate ui:percentage/10 unless entity @s[tag=tmw272_cant_use] if score $type ui_temp matches 1 if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/use
 
 #
 #execute if entity @s[tag=ui_temp_del] run item replace entity @s weapon.mainhand with air

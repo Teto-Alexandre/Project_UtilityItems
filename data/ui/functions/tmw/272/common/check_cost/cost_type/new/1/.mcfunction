@@ -3,7 +3,7 @@
 # cost_mod を計上して $cost の数値を可変する（コストの上限下限は min max に従う）
 execute store result score $cost_min ui_temp run data get storage ui:temp card.cost.min
 execute store result score $cost_max ui_temp run data get storage ui:temp card.cost.max
-execute unless data storage ui:temp card.cost_min run scoreboard players set $cost_min ui_temp 0
+execute unless data storage ui:temp card.cost.min run scoreboard players set $cost_min ui_temp 0
 data modify storage ui:temp temp.mods set from storage ui:temp card.cost.mods
 execute store result score $cost_count ui_temp run data get storage ui:temp card.cost.mods
 
