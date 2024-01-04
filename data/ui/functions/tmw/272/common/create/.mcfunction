@@ -22,7 +22,7 @@ execute if score $cg1_common_draw_type ui_temp matches 0 if score $cg1_list_coun
 
 #
 execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 temp.list
-execute if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/create/0
+execute if score $cg1_common_draw_inventory ui_temp matches ..35 if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/create/0
 
 #
 data remove storage ui:cg1 temp.list
