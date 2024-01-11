@@ -33,5 +33,7 @@ scoreboard players reset $check_cost ui_temp
 data remove storage ui:temp card
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0]
 
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/
+
 # クールタイムテスト
 #scoreboard players add @s ui_ct 5
