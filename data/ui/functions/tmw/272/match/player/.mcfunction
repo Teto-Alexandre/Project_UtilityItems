@@ -49,7 +49,7 @@ execute if score @s ui_tmw272_stun matches 1.. at @s run particle crit ~ ~1 ~ 0.
 execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
 
 #
-execute if score $turn_time ui_temp matches 2.. if score $turn_time_rev ui_temp matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/
+execute if score $turn_time ui_temp matches 2.. if score $turn_time_rev ui_temp matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0] at @s run function ui:tmw/272/after_effect/
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0] at @s run function ui:tmw/272/death_effect/active
