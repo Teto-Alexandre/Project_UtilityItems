@@ -35,7 +35,7 @@ data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItem
 
 # まだあるなら - 次のエフェクトに移動
 scoreboard players remove $count_normal_cards ui_temp 1
-execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score $count_normal_cards ui_temp matches 1.. run function ui:tmw/272/effect/
+execute if score $count_normal_cards ui_temp matches 1.. run function ui:tmw/272/effect/
 
 # クールタイムテスト
 #scoreboard players add @s ui_ct 5
