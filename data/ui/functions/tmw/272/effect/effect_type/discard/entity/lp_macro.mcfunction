@@ -1,7 +1,8 @@
 # カードを捨てるテスト - エンティティ用
 scoreboard players set $hand_check ui_temp 0
 scoreboard players set $hand_success ui_temp 0
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0].tag{IsCG1:1} run scoreboard players set $hand_check ui_temp 1
+execute unless data storage ui:temp temp.effect.only_one if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0].tag{IsCG1:1} run scoreboard players set $hand_check ui_temp 1
+execute if data storage ui:temp temp.effect.only_one if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0].tag{IsCG1:2} run scoreboard players set $hand_check ui_temp 1
 
 execute if score $hand_check ui_temp matches 1.. run data modify storage ui:temp temp.discard set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
 $execute if score $hand_check ui_temp matches 1.. run execute store success score $hand_success ui_temp run data modify storage ui:temp temp.discard merge value {tag:{$(macro)}}
