@@ -8,7 +8,7 @@ execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matc
 execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matches 0 run data merge storage ui:tmw272 {temp:{input:"soul_break"}}
 execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matches 1.. run data merge storage ui:tmw272 {temp:{input:"soul"}}
 execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matches 1.. run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
-execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true},{"text": "が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "になった！"}]
+execute unless entity @s[tag=mute_value] run execute if score #soul_checker ui_temp matches 1 if score @s ui_tmw272_soul matches 1.. run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true},{"text": "が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "になった！"}]
 
 scoreboard players operation #soul_break ui_temp = @s ui_tmw272_health_max
 scoreboard players operation #soul_break ui_temp *= @s ui_tmw272_soul_break
@@ -20,7 +20,7 @@ playsound block.beacon.deactivate player @a ~ ~ ~ 1 2 0
 data merge storage ui:tmw272 {temp:{input:"soul_break"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
-tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"score":{"name": "#soul_break","objective": "ui_temp"}},{"text": "ダメージ！"}]
+execute unless entity @s[tag=mute_value] run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"score":{"name": "#soul_break","objective": "ui_temp"}},{"text": "ダメージ！"}]
 
 scoreboard players reset #soul_break ui_temp
 scoreboard players reset #soul_checker ui_temp
