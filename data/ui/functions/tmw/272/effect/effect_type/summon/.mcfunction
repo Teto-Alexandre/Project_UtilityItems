@@ -39,6 +39,7 @@ execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_health run data get storage ui:temp temp.effect.health
 execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.health store result score @s ui_tmw272_hp_crease_temp run data get storage ui:temp temp.effect.health
 execute as @e[tag=hc_deck_temp] run scoreboard players operation @s ui_tmw272_summoner_obj_id = @e[tag=ui_temp_summoner] ui_obj_id
+execute as @e[tag=hc_deck_temp] if data storage ui:temp temp.effect.team store result score @s ui_team run data get storage ui:temp temp.effect.team
 
 tag @e[tag=hc_deck_temp] remove hc_deck_temp
 
