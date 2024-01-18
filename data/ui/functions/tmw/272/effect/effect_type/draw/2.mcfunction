@@ -1,6 +1,7 @@
 scoreboard players operation $var_temp ui_temp = $var ui_temp
 
 # 鈍足によるドロー効果への妨害
+execute unless entity @e[tag=tmw272_temp_steal] if score @s ui_tmw272_restraint matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/draw/restraint
 execute unless entity @e[tag=tmw272_temp_steal] if score @s ui_tmw272_slowness matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/draw/slowness
 
 # ドローする
