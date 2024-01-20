@@ -1,6 +1,6 @@
 function oh_my_dat:please
-execute if score @s ui_tmw272_saturation matches 2..3 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append value {tag:{tmw:{cg:{cost:{amount:0,bypass:1},not_consume:1b,effects:[{effect_type:"heal",var:1},{effect_type:"modify_value",input:"chain",var:-1}]},enableQ:1,id:272,type:1}}}
-execute if score @s ui_tmw272_saturation matches 4.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append value {tag:{tmw:{cg:{cost:{amount:0,bypass:1},not_consume:1b,effects:[{effect_type:"heal",var:2},{effect_type:"modify_value",input:"chain",var:-1}]},enableQ:1,id:272,type:1}}}
+execute if score @s ui_tmw272_saturation matches 2..3 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append value {tag:{tmw:{cg:{cost:{amount:0,bypass:1},not_consume:1b,effects:[{effect_type:"heal",var:1},{effect_type:"modify_value",input:"chain",var:-1,mute:1}]},enableQ:1,id:272,type:1}}}
+execute if score @s ui_tmw272_saturation matches 4.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems append value {tag:{tmw:{cg:{cost:{amount:0,bypass:1},not_consume:1b,effects:[{effect_type:"heal",var:2},{effect_type:"modify_value",input:"chain",var:-1,mute:1}]},enableQ:1,id:272,type:1}}}
 
 data merge storage ui:tmw272 {temp:{input:"saturation"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
