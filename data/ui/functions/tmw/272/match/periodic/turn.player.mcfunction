@@ -84,6 +84,8 @@ execute if score @s ui_tmw272_dazzle matches 1.. run function ui:tmw/272/match/p
 execute if score @s ui_tmw272_soul matches 1.. run function ui:tmw/272/match/periodic/state/soul
 # 常時：ドロー時にNダメージ、1減少
 execute if score @s ui_tmw272_restraint matches 1.. run function ui:tmw/272/match/periodic/state/restraint
+# 閉幕：4減少、減った半分回復
+execute if score @s ui_tmw272_saturation matches 1.. run function ui:tmw/272/match/periodic/state/saturation
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1

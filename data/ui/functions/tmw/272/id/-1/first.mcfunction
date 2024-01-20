@@ -134,6 +134,7 @@ scoreboard objectives add ui_tmw272_hp_decrease dummy
 scoreboard objectives add ui_tmw272_hp_increase dummy
 scoreboard objectives add ui_tmw272_hp_crease_temp dummy
 scoreboard objectives add ui_tmw272_restraint dummy
+scoreboard objectives add ui_tmw272_saturation dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy
