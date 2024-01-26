@@ -14,6 +14,8 @@
         execute as @a[tag=tmw_oh_calc,nbt={Inventory:[{Slot:-106b}]},nbt=!{SelectedItem:{}}] run function ui:misc/act/offhand
         execute as @a[scores={ui_usec=1..}] at @s run function ui:misc/act/use_crossbow
         execute as @a[advancements={ui:system/shield=true}] at @s run function ui:misc/act/using_shield
+        execute as @a[advancements={ui:player/using_item=true}] run function ui:misc/act/using_item
+        execute as @a if score @s ui_stc matches 1.. if score @s ui_stlb matches 0..5 run function ui:misc/act/double_sneak
 
     ## 所持アイテムid確認+装填確認
         execute as @a store result score @s ui_tmw_id run data get entity @s SelectedItem.tag.tmw.id

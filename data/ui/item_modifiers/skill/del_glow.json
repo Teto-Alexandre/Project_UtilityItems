@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{HideFlags:0}"
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:sharpness": 0
+    },
+    "add": false
+  }
+]

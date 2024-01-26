@@ -1,0 +1,1 @@
+$function ui:tmw/18/each/$(path)

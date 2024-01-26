@@ -18,6 +18,8 @@
         execute as @a[scores={ui_usec2_tc=1..}] run function ui:misc/act/usec.c
         execute as @a[scores={ui_usec=1..}] run function ui:misc/act/usec
         execute as @a[scores={ui_break=1..}] run function ui:misc/act/break/last
+        execute as @a[tag=tmw_using_item] run function ui:misc/act/last/using_item
+        execute as @a[tag=tmw_double_sneak] run function ui:misc/act/last/double_sneak
         #execute as @a[tag=tmw_shield] run function ui:misc/act/last/shield
         tag @a[tag=tmw_oh_n] remove tmw_oh_n
         tag @a[tag=tmw_oh_s] remove tmw_oh_s
@@ -42,9 +44,10 @@
         scoreboard players reset @a[scores={ui_ct=..0}] ui_ct
 
     ## スニークチャージ用カウントアップ
-        scoreboard players add @a[scores={ui_st=1..}] ui_st2 1
-        scoreboard players set @a[scores={ui_st=..0}] ui_st2 0
-        scoreboard players set @a[scores={ui_st=1..}] ui_st 0
+        scoreboard players add @a[scores={ui_stl=0..}] ui_stl 1
+        execute as @a[scores={ui_stc=1..}] run function ui:misc/act/last/sneak_charge
+        execute as @a[scores={ui_st=..0}] run function ui:misc/act/last/sneak_off
+        execute as @a[scores={ui_st=1..}] run function ui:misc/act/last/sneak_on
 
     ## 上向いてる検知
         scoreboard players reset @a[x_rotation=-89..] ui_face_up

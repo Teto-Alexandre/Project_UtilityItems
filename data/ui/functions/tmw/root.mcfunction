@@ -42,6 +42,8 @@
         execute if entity @a[scores={ui_tmw_id=16}] run function ui:tmw/16/lim
     #アスレ
         execute if entity @a[scores={ui_tmw_id=17}] run function ui:tmw/17/lim
+    #真の雑スキル武器テンプレ
+        execute if entity @a[scores={ui_tmw_id=18}] run function ui:tmw/18/lim
     #暁の翼
         execute if entity @a[scores={ui_tmw_id=101}] run function ui:tmw/101/lim
     #凍て付いた博愛
@@ -165,7 +167,7 @@
         execute if entity @a[scores={ui_tmw_id=263}] run function ui:tmw/263/lim
     #モードチェンジ:rob
         execute if entity @a[scores={ui_tmw_id=264}] run function ui:tmw/264/lim
-    #スキル武器
+    #モードチェンジ:joint
         execute if entity @a[scores={ui_tmw_id=265}] run function ui:tmw/265/lim
     #連射式に代わる弓
         execute if entity @a[scores={ui_tmw_id=266}] run function ui:tmw/266/lim

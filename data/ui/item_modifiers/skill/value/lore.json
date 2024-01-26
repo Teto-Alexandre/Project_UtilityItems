@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "nbt": "temp.Name",
+        "storage": "ui:temp",
+        "interpret": false,
+        "color": "#999999",
+        "italic": false
+      }
+    ],
+    "replace": false
+  }
+]

@@ -7,7 +7,7 @@
     scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
     scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
     tag @e[tag=ui_temp_this] remove ui_temp_this
-    kill @e[type=snowball,sort=nearest,limit=1]
+    kill @e[type=snowball,sort=nearest,limit=1,nbt={Item:{tag:{tmw:{id:236}}}}]
     scoreboard players reset @s ui_uses
 
 # 予告線表示
