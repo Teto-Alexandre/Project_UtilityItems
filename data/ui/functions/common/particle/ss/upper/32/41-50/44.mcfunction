@@ -1,7 +1,7 @@
 #
 
 #
-playsound entity.elder_guardian.curse player @a ~ ~ ~ 1 1 0
+playsound entity.elder_guardian.curse player @a ~ ~ ~ 0.5 1 0
 execute as @a[distance=..1] at @s run particle elder_guardian ~ ~ ~ 0 0 0 0 1 force @s
 
 #
