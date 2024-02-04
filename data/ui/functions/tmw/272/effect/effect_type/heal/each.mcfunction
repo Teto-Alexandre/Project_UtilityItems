@@ -13,7 +13,7 @@ execute unless data storage ui:temp temp.effect.under_zero run scoreboard player
 execute if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
 
 #
-execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_sacrifice 1
+execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_decay 1
 
 # 回復する（回復回数を計算するテスト）
 scoreboard players operation @s ui_tmw272_health += $var_temp ui_temp
