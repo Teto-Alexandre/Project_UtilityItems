@@ -54,6 +54,7 @@ scoreboard objectives add ui_tmw272_duplication dummy
 
 # 拡張スコアも作成
 scoreboard objectives add ui_tmw272_self_hurt dummy
+scoreboard objectives add ui_tmw272_sacrifice dummy
 scoreboard objectives add ui_tmw272_candle dummy
 scoreboard objectives add ui_tmw272_index_count dummy
 scoreboard objectives add ui_tmw272_more_attack_more dummy

@@ -1,7 +1,8 @@
 {
     "replace": false,
     "values": [
-        "minecraft:grass",
+        {"id":"minecraft:grass","required":false},
+        {"id":"minecraft:short_grass","required":false},
         "minecraft:tall_grass",
         "minecraft:seagrass",
         "minecraft:tall_seagrass",

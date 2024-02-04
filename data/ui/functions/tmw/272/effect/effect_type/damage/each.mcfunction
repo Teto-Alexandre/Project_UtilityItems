@@ -53,7 +53,8 @@ execute if score $effect_type_damage_info ui_temp matches 3 at @s run particle d
 execute if score $effect_type_damage_info ui_temp matches 3 at @s run particle block lapis_block ~ ~0.9 ~ 0.4 0.6 0.4 0 10 force
 
 # 自傷回数を増やす
-scoreboard players add @e[tag=tmw272_temp_card_effect_target,tag=ui_temp_player] ui_tmw272_self_hurt 1
+scoreboard players add @s[tag=ui_temp_player] ui_tmw272_self_hurt 1
+execute if score $var_temp ui_temp matches 1.. run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_sacrifice 1
 
 execute if score $effect_type_damage_info ui_temp matches 1 if score $var_temp ui_temp matches 1.. if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion
 execute if score $effect_type_damage_info ui_temp matches 3 if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion

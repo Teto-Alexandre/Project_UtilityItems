@@ -4,6 +4,9 @@
 #
 # @public
 
+#
+scoreboard players set $Cache ui_temp 0
+
 #射程うんぬん
 scoreboard players operation @s ui_temp = @s ui_bm
 scoreboard players operation @s ui_temp += @s ui_bm_temp
@@ -27,3 +30,5 @@ tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
 execute as @s[scores={ui_br=..0}] run function ui:common/projectile/kill
+
+execute if score $Cache ui_temp matches 1 run scoreboard players reset @s

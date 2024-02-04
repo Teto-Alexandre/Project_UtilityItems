@@ -12,6 +12,9 @@ execute unless data storage ui:temp temp.effect.under_zero run scoreboard player
 # 空腹の解除方法は回復
 execute if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
 
+#
+execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_sacrifice 1
+
 # 回復する（回復回数を計算するテスト）
 scoreboard players operation @s ui_tmw272_health += $var_temp ui_temp
 execute run tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"のHPが"},{"score":{"name": "@s","objective": "ui_tmw272_health"}},{"text": "になりました"}]
