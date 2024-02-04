@@ -9,7 +9,7 @@ scoreboard players set @s ui_tmw272_match_time 0
 scoreboard players set @s ui_tmw272_duplication 0
 
 scoreboard players set @s ui_tmw272_self_hurt 0
-scoreboard players set @s ui_tmw272_sacrifice 0
+scoreboard players set @s ui_tmw272_decay 0
 scoreboard players set @s ui_tmw272_candle 0
 scoreboard players set @s ui_tmw272_index_count 0
 scoreboard players set @s ui_tmw272_more_attack_more 0
