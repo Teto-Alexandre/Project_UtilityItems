@@ -37,4 +37,4 @@
 # @public
 
 # act
-function ui:common/projectile/summon
+function ui:common/projectile/legacy/summon

@@ -84,7 +84,7 @@
         execute if score $skilltree ui_world matches 1 run function ui:skilltree/main
     
     ## コモンイベント
-        execute as @e[tag=ui_proj_common] at @s run function ui:common/projectile/tick
+        execute as @e[tag=ui_proj_common] at @s run function ui:common/projectile/legacy/tick
         execute as @e[tag=ui_c_ref] at @s run function ui:tmw/214/refmain
 
     ## 死んだことを検知

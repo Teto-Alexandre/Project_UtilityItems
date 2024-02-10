@@ -1,4 +1,4 @@
-#> ui:common/projectile/tick
+#> ui:common/projectile/legacy/tick
 #
 # 「飛び道具コモン」で召喚された「防具立て」を管理
 #
@@ -21,14 +21,14 @@ scoreboard players operation $team ui_temp = @s ui_team
 function ui:common/tag_temp_team/
 
 #重力補正
-#execute if score @s ui_bpart matches 4..39 if score $temp ui_bcp matches 1.. at @s run function ui:common/projectile/gravity
+#execute if score @s ui_bpart matches 4..39 if score $temp ui_bcp matches 1.. at @s run function ui:common/projectile/legacy/gravity
 
 #tick毎ループ
-execute at @s[scores={ui_temp=10..}] run function ui:common/projectile/move
+execute at @s[scores={ui_temp=10..}] run function ui:common/projectile/legacy/move
 scoreboard players operation @s ui_bm_temp = @s ui_temp
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
-execute as @s[scores={ui_br=..0}] run function ui:common/projectile/kill
+execute as @s[scores={ui_br=..0}] run function ui:common/projectile/legacy/kill
 
 execute if score $Cache ui_temp matches 1 run scoreboard players reset @s

@@ -1,5 +1,5 @@
 scoreboard players operation $Attacker tds_dmg = $id ui_temp
-data merge storage tds: {temp:{Damage:32.0,DamageType:4,DeathMessage:8,WeaponName:'[{"text":"金線の迅","color":"white","italic":"false"}]',EPF:-1,BypassArmor:5000,BypassResistance:false}}
+data merge storage tds: {temp:{Damage:32.0,DamageType:4,DeathMessage:8,WeaponName:'[{"text":"金線の迅","color":"white","italic":false}]',EPF:-1,BypassArmor:5000,BypassResistance:false}}
 execute as @e[tag=ui_temp_damage,sort=nearest,limit=1] run function tds:attack
 
 data merge storage ui:common {input:{Mode:"create",Var:25,Var2:1}}

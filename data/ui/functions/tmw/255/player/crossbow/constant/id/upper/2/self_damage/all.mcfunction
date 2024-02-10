@@ -1,5 +1,5 @@
-execute if score @s ui_tmw255_state_glitch matches 10001.. run data merge storage tds: {temp:{Damage:10.00,DamageType:1,DeathMessage:-1,WeaponName:'[{"text":"グリッチ","color":"white","italic":"false"}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
-execute if score @s ui_tmw255_state_glitch matches 20001.. run data merge storage tds: {temp:{Damage:100.00,DamageType:1,DeathMessage:-1,WeaponName:'[{"text":"グリッチ","color":"white","italic":"false"}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
+execute if score @s ui_tmw255_state_glitch matches 10001.. run data merge storage tds: {temp:{Damage:10.00,DamageType:1,DeathMessage:-1,WeaponName:'[{"text":"グリッチ","color":"white","italic":false}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
+execute if score @s ui_tmw255_state_glitch matches 20001.. run data merge storage tds: {temp:{Damage:100.00,DamageType:1,DeathMessage:-1,WeaponName:'[{"text":"グリッチ","color":"white","italic":false}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
 execute if score @s ui_tmw255_state_glitch matches 10001.. run function tds:attack
 execute if score @s ui_tmw255_state_glitch matches 10001..30000 run particle dust 1 0 1 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 5 force
 execute if score @s ui_tmw255_state_glitch matches 10001..30000 run particle dust 0 0 0 2 ~ ~0.9 ~ 0.5 0.5 0.5 0 5 force

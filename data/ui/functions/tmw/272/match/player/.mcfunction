@@ -3,6 +3,9 @@ tag @s add ui_temp_player
 scoreboard players operation $tmw272_team ui_temp = @s ui_team
 execute if score $tmw272_team ui_temp matches 0 run scoreboard players set $tmw272_team ui_temp -32767
 function ui:tmw/272/match/tag_temp_team/
+execute if score $tmw272_team ui_temp matches 5 run tag @e[tag=ui_temp_team] remove ui_temp_team
+execute if score $tmw272_team ui_temp matches 5 run tag @a[tag=ui_temp_team] remove ui_temp_team
+execute if score $tmw272_team ui_temp matches 5 run scoreboard players set $tmw272_team_last_temped ui_temp -32768
 
 # 最大体力計測などなど
 scoreboard players operation @s ui_tmw272_mana < @s ui_tmw272_mana_limit

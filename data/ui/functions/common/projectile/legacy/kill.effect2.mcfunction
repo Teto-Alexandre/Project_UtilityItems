@@ -11,6 +11,7 @@
     execute if score @s ui_hpart matches 101 run playsound minecraft:item.trident.hit neutral @a ~ ~ ~ 1 1
     execute if score @s ui_hpart matches 102 run playsound entity.generic.explode neutral @a ~ ~ ~ 1 1
     execute if score @s ui_hpart matches 103 run playsound minecraft:item.trident.hit neutral @a ~ ~ ~ 1 0.5
+    execute if score @s ui_hpart matches 104 run playsound minecraft:block.stone.break neutral @a ~ ~ ~ 1 0.5
 
 # ヒットパーティクル
     execute if score @s ui_hpart matches 1 run particle explosion ~ ~ ~ 0 0 0 0 1 force
@@ -32,6 +33,9 @@
     execute if score @s ui_hpart matches 102 run fill ~-1 ~-2 ~-1 ~1 ~2 ~1 air replace #minecraft:terracotta
     execute if score @s ui_hpart matches 102 run fill ~-1 ~-1 ~-2 ~1 ~1 ~2 air replace #minecraft:terracotta
     execute if score @s ui_hpart matches 103 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace #minecraft:terracotta
+    execute if score @s ui_hpart matches 104 positioned ^ ^ ^0.5 if block ~ ~ ~ #minecraft:terracotta if block ~ ~1 ~ #ui:nocol run clone ~ ~ ~ ~ ~ ~ ~ ~1 ~ masked force
+    execute if score @s ui_hpart matches 105 positioned ^ ^ ^0.5 if block ~ ~ ~ #minecraft:terracotta run function ui:common/projectile/legacy/killeffect/105
+    execute if score @s ui_hpart matches 106 positioned ^ ^ ^0.5 if block ~ ~ ~ #minecraft:terracotta run function ui:common/projectile/legacy/killeffect/106
 
 # キル
     scoreboard players reset @s

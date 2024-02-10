@@ -59,7 +59,7 @@ scoreboard players set $c.proj.autohit ui_temp 0
 execute unless data storage ui:common temp.DisableHit run scoreboard players set $c.proj.autohit ui_temp 1
 
 # act
-function ui:common/projectile/summon
+function ui:common/projectile/legacy/summon
 
 # データ消し
 data remove storage ui:common temp

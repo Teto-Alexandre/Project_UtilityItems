@@ -23,6 +23,8 @@
     execute store result score $EPF tds_dmg run data get storage tds: temp.EPF
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
     execute if entity @s[type=player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/player
+    execute if entity @s[type=!player] run function tds:core/absorption/entity
+    execute if entity @s[type=player] run function tds:core/absorption/player
     execute if data storage tds: {temp:{BypassArmor:-1}} run function tds:core/armor/full_bypass
     execute if data storage tds: {temp:{BypassResistance:0b}} store result score $Resistance tds_dmg run data get entity @s active_effects[{id:"minecraft:resistance"}].amplifier
     execute if data storage tds: {temp:{BypassResistance:0b}} if data entity @s active_effects[{id:"minecraft:resistance"}] run scoreboard players add $Resistance tds_dmg 1
@@ -98,6 +100,9 @@
     #execute as @s if score $DamageType tds_dmg matches 2 run function tds:core/fire
     # 冷気属性ならダメージ値の２００００分の１の冷気をスタックする
     #execute as @s if score $DamageType tds_dmg matches 3 run function tds:core/cold
+# 衝撃吸収
+    execute if entity @s[type=player] if score $Absorption tds_dmg matches 1.. run function tds:core/absorption/damage_player
+    execute if entity @s[type=!player] if score $Absorption tds_dmg matches 1.. run function tds:core/absorption/damage_entity
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage tds_dmg < $Health tds_dmg
 # Health減算
@@ -122,7 +127,7 @@
     # プレイヤーはエフェクトクラウドで一瞬耐性を付ける
         execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
         execute if entity @s[type=ender_dragon,nbt=!{DragonPhase:9}] unless data entity @s {Silent:1b} run playsound minecraft:entity.ender_dragon.hurt hostile @a ~ ~ ~ 5 1 0
-        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {duration:6,Age:4,effects:[{id:"minecraft:resistance",amplifier:127b,duration:1,show_particles:0b},{id:"minecraft:instant_damage",amplifier:0b,duration:1,show_particles:0b}]}
+        execute if entity @s[type=player] run damage @s 0.00000001 ui:common
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
@@ -147,5 +152,7 @@
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
+    scoreboard players reset $Absorption tds_dmg
+    scoreboard players reset $AbsorptionMax tds_dmg
     tag @e[tag=tds_tempa] remove tds_tempa
     data remove storage ui:temp Name

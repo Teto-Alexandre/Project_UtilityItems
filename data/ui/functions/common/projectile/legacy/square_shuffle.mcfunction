@@ -1,4 +1,4 @@
-#> ui:common/projectile/square_shuffle
+#> ui:common/projectile/legacy/square_shuffle
 #
 # 軽量化用：ui_marker を $c.proj.spread ui_temp に従って立法座標拡散する
 #

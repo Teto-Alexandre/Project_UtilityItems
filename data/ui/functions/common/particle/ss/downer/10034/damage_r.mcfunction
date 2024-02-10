@@ -1,5 +1,5 @@
 scoreboard players operation $Attacker tds_dmg = $id ui_temp
-data merge storage tds: {temp:{Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:'[{"text":"狼牙工房","color":"white","italic":"false"}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
+data merge storage tds: {temp:{Damage:1.00,DamageType:1,DeathMessage:9,WeaponName:'[{"text":"狼牙工房","color":"white","italic":false}]',EPF:0,BypassArmor:-1,BypassResistance:true}}
 function tds:attack
 
 playsound entity.zombie.attack_iron_door player @a ~ ~ ~ 1 2 0
