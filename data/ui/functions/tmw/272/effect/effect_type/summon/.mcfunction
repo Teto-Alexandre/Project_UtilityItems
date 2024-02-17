@@ -21,8 +21,8 @@ execute if data storage ui:temp temp.effect.list[6] run data modify storage oh_m
 execute if data storage ui:temp temp.effect.list[7] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[7] set from storage ui:temp temp.effect.list[7]
 execute if data storage ui:temp temp.effect.list[8] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[8] set from storage ui:temp temp.effect.list[8]
 data modify entity @e[tag=hc_deck_temp,limit=1] CustomName set from storage ui:temp temp.effect.name
-data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:temp temp.effect.ArmorItems
-data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems
+execute if data storage ui:temp temp.effect.ArmorItems run data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:temp temp.effect.ArmorItems
+execute if data storage ui:temp temp.effect.HandItems run data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems
 
 tag @s add ui_temp_target
 tag @s add ui_temp_summoner
