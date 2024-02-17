@@ -7,7 +7,8 @@ scoreboard players set $shot_type ui_temp 1
 scoreboard players set $success_message ui_temp 1
 
 execute unless data storage ui:temp temp.effect.id run summon pig ~ ~ ~ {NoAI:1,Tags:["hc_deck","summoned_nocount","summoned_delete","hc_deck_temp","ui_temp_players"],Invulnerable:1b,CustomNameVisible:1b,Silent:1b}
-$execute if data storage ui:temp temp.effect.id run summon $(id) ~ ~ ~ {NoAI:1,Invulnerable:1b,CustomNameVisible:1b,Silent:1b,Tags:["hc_deck","summoned_nocount","summoned_delete","hc_deck_temp","ui_temp_players"]}
+execute if data storage ui:temp temp.effect.id unless data storage ui:temp temp.effect.tag run function ui:tmw/272/effect/effect_type/summon/no_tag_macro with storage ui:temp temp.effect
+execute if data storage ui:temp temp.effect.id if data storage ui:temp temp.effect.tag run function ui:tmw/272/effect/effect_type/summon/tag_macro with storage ui:temp temp.effect
 execute as @e[tag=hc_deck_temp] run function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set value [{},{},{},{},{},{},{},{},{},{},{}]
 execute if data storage ui:temp temp.effect.list[0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0] set from storage ui:temp temp.effect.list[0]
