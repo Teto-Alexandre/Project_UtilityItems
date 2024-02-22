@@ -1,5 +1,7 @@
 execute store result score $num_consume ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.num_consume
-scoreboard players remove $num_consume ui_temp 1
+execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.num_consume int 1 run scoreboard players remove $num_consume ui_temp 1
+
+tellraw @s ["",{"text":"    "},{"text":"残り使用回数: ","color": "gray"},{"score":{"name": "$num_consume","objective": "ui_temp"}}]
 
 # numがあるなら返却
 execute if score $num_consume ui_temp matches 1.. if entity @s[type=player] run data merge storage ui:common {input:{Mode:"give",Num:1,Item:{id:"minecraft:cobblestone",Count:1b}}}
