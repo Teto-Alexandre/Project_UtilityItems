@@ -5,7 +5,8 @@ execute if score $pull_first ui_temp matches 2 run data modify storage ui:common
 execute if score $pull_first ui_temp matches 1 run scoreboard players add $pull_first ui_temp 1
 data modify storage ui:common input.Item.id set from storage ui:inventory temp[0].id
 data modify storage ui:common input.Item.Count set from storage ui:inventory temp[0].Count
-data modify storage ui:common input.Item.tag set from storage ui:inventory temp[0].tag
+execute if data storage ui:inventory temp[0].tag run data modify storage ui:common input.Item.tag set from storage ui:inventory temp[0].tag
+execute unless data storage ui:inventory temp[0].tag run data remove storage ui:common input.Item.tag
 #data modify storage ui:common input.Item.tag.tmw.gun.now.SubTime set value 0
 #data modify storage ui:common input.Item.tag.tmw.gun.now.SPTime set value 0
 

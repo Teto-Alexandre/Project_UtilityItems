@@ -26,6 +26,7 @@ execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players]
 
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
 execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/effect/target_nbt/
+execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
