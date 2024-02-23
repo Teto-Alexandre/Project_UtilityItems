@@ -17,10 +17,10 @@ execute if block ~ ~ ~ #minecraft:doors[facing=west,open=false] run scoreboard p
 execute if block ~ ~ ~ #minecraft:doors[facing=north,open=true,hinge=right] run scoreboard players set $Door.east BCollision.core 1
 execute if block ~ ~ ~ #minecraft:doors[facing=south,open=true,hinge=left] run scoreboard players set $Door.east BCollision.core 1
 
-execute if score $Door.north BCollision.core matches 1 if score $dz BCollision.core matches ..1874 run scoreboard players set $Hit BCollision.core 1
-execute if score $Door.south BCollision.core matches 1 if score $dz BCollision.core matches 8126.. run scoreboard players set $Hit BCollision.core 1
-execute if score $Door.west BCollision.core matches 1 if score $dx BCollision.core matches ..1874 run scoreboard players set $Hit BCollision.core 1
-execute if score $Door.east BCollision.core matches 1 if score $dx BCollision.core matches 8126.. run scoreboard players set $Hit BCollision.core 1
+execute if score $Door.north BCollision.core matches 1 if score $dz BCollision.core matches ..1874 run return 1
+execute if score $Door.south BCollision.core matches 1 if score $dz BCollision.core matches 8126.. run return 1
+execute if score $Door.west BCollision.core matches 1 if score $dx BCollision.core matches ..1874 run return 1
+execute if score $Door.east BCollision.core matches 1 if score $dx BCollision.core matches 8126.. run return 1
 
 scoreboard players reset $Door.north BCollision.core
 scoreboard players reset $Door.south BCollision.core

@@ -1,6 +1,6 @@
 {
   "has_precipitation": false,
-  "surface_builder": "minecraft:grass",
+  "surface_builder": "minecraft:short_grass",
   "depth": 0.125,
   "scale": 0.05,
   "temperature": 0.8,
