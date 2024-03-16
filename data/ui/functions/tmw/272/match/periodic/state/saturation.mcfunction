@@ -1,4 +1,5 @@
 function oh_my_dat:please
+execute if score @s ui_tmw272_saturation matches ..1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append value {delay:1,cost:{amount:0,bypass:1},effects:[{effect_type:"heal",var:0}]}
 execute if score @s ui_tmw272_saturation matches 2..3 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append value {delay:1,cost:{amount:0,bypass:1},effects:[{effect_type:"heal",var:1}]}
 execute if score @s ui_tmw272_saturation matches 4.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append value {delay:1,cost:{amount:0,bypass:1},effects:[{effect_type:"heal",var:2}]}
 

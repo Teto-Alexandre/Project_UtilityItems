@@ -20,7 +20,9 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEff
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
-tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が["},{"storage":"ui:cg1","nbt":"temp.list[0].tag.display.Name","interpret": true},{"text": "]を手札に加えた！"}]
+data modify storage ui:temp temp.display set from storage ui:cg1 temp.list[0].tag.display
+scoreboard players set $broadcast_type ui_temp 7
+function ui:tmw/272/effect/broadcast/
 execute if score $cg1_common_draw_single ui_temp matches 0 run data remove storage ui:cg1 temp.list[0]
 
 # カードプールがなくなったらボックスから補充を行う
