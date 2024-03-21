@@ -3,9 +3,9 @@ tag @s add ui_temp_player
 scoreboard players operation $tmw272_team ui_temp = @s ui_team
 execute if score $tmw272_team ui_temp matches 0 run scoreboard players set $tmw272_team ui_temp -32767
 function ui:tmw/272/match/tag_temp_team/
-execute if score $tmw272_team ui_temp matches 5 run tag @e[tag=ui_temp_team] remove ui_temp_team
-execute if score $tmw272_team ui_temp matches 5 run tag @a[tag=ui_temp_team] remove ui_temp_team
-execute if score $tmw272_team ui_temp matches 5 run scoreboard players set $tmw272_team_last_temped ui_temp -32768
+#execute if score $tmw272_team ui_temp matches 5 run tag @e[tag=ui_temp_team] remove ui_temp_team
+#execute if score $tmw272_team ui_temp matches 5 run tag @a[tag=ui_temp_team] remove ui_temp_team
+#execute if score $tmw272_team ui_temp matches 5 run scoreboard players set $tmw272_team_last_temped ui_temp -32768
 
 # 最大体力計測などなど
 scoreboard players operation @s ui_tmw272_mana < @s ui_tmw272_mana_limit
@@ -17,6 +17,9 @@ scoreboard players operation @s ui_tmw272_hp_crease_temp -= @s ui_tmw272_health
 execute if score @s ui_tmw272_hp_crease_temp < #0 ui_num run scoreboard players operation @s ui_tmw272_hp_increase -= @s ui_tmw272_hp_crease_temp
 execute if score @s ui_tmw272_hp_crease_temp > #0 ui_num run scoreboard players operation @s ui_tmw272_hp_decrease += @s ui_tmw272_hp_crease_temp
 scoreboard players operation @s ui_tmw272_hp_crease_temp = @s ui_tmw272_health
+
+scoreboard players operation $mana_increase_temp ui_temp = @s ui_tmw272_mana
+scoreboard players operation $mana_max_increase_temp ui_temp = @s ui_tmw272_mana_max
 
 #
 scoreboard players add @s ui_tmw272_match_time 1
@@ -36,12 +39,7 @@ function oh_my_dat:please
 execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
 execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
     #非プレイヤー
-execute if score @s ui_tmw272_surehit matches 1.. if entity @s[type=!player] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.npc_use_for_allies at @s run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=ui_temp_team,sort=random,limit=1] add tmw272_visual_input
-execute if score @s ui_tmw272_surehit matches 1.. if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1] add tmw272_visual_input
-execute if score @s ui_tmw272_surehit matches ..0 if entity @s[type=!player] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.npc_use_for_allies at @s run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
-execute if score @s ui_tmw272_surehit matches ..0 if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.npc_use_for_allies run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=ui_temp_team,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
-execute if score @s ui_tmw272_surehit matches ..0 if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_glowing=1..}] add tmw272_visual_input
-execute if score @s ui_tmw272_surehit matches ..0 if entity @s[type=!player] unless entity @e[tag=tmw272_visual_input] run tag @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player,tag=!ui_temp_team,sort=random,limit=1,scores={ui_tmw272_invisible=0}] add tmw272_visual_input
+execute if entity @s[type=!player] run function ui:tmw/272/common/visual_input/entity
 
 #
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
@@ -57,6 +55,12 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.Afte
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0] at @s run function ui:tmw/272/death_effect/active
 
+# マナチェッカー最大値
+scoreboard players operation $mana_increase_temp ui_temp -= @s ui_tmw272_mana
+scoreboard players operation $mana_max_increase_temp ui_temp -= @s ui_tmw272_mana_max
+execute if score $mana_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_increase_by_self -= @s ui_tmw272_mana
+execute if score $mana_max_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_max_increase_by_self -= @s ui_tmw272_mana_max
+
 # HPが0になったプレイヤーをマッチから除外する
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_determination matches 1.. run function ui:tmw/272/match/player/state/determination
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_undying > @s ui_tmw272_undying_count run function ui:tmw/272/match/player/state/undying
@@ -69,9 +73,9 @@ team join green @s[scores={ui_team=4}]
 team join gray @s[tag=tmw272_spectate]
 team leave @s[scores={ui_team=5..6}]
 
-execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
-execute if entity @s[scores={ui_st2=5}] run tellraw @s [{"text":"戦線から撤退しますか？","color": "red"}]
-execute if entity @s[x_rotation=89..90,scores={ui_st2=20..}] run function ui:tmw/272/match/player/death
+execute if entity @s[tag=tmw272_active] if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
+execute if entity @s[tag=tmw272_active] if entity @s[scores={ui_st2=5}] run tellraw @s [{"text":"戦線から撤退しますか？","color": "red"}]
+execute if entity @s[tag=tmw272_active] if entity @s[x_rotation=89..90,scores={ui_st2=20..}] run function ui:tmw/272/match/player/death
 
 #
 tag @e[tag=ui_temp_player] remove ui_temp_player

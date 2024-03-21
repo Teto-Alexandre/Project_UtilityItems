@@ -6,6 +6,7 @@ data modify storage ui:temp temp2.list set from storage ui:temp temp.cg.list
 
 #
 data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 9 -2
+#data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 1 -1
 
 # このアイテムの名前の鍵付きドロッパーとドロッパーコアを召喚、同じid(obj_idではない)を付与する
 execute if block ~ ~2 ~ #ui:nocol run summon marker ~ ~2 ~ {Tags:["tmw272_deck_dropper_core","tmw272_temp_unpower"]}

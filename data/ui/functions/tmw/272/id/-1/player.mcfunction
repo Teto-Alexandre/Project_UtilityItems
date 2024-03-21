@@ -91,6 +91,8 @@ scoreboard players set @s ui_tmw272_hp_increase 0
 scoreboard players set @s ui_tmw272_hp_crease_temp 20
 scoreboard players set @s ui_tmw272_restraint 0
 scoreboard players set @s ui_tmw272_saturation 0
+scoreboard players set @s ui_tmw272_mana_increase_by_self 0
+scoreboard players set @s ui_tmw272_mana_max_increase_by_self 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

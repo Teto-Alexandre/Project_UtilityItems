@@ -1,3 +1,5 @@
+tag @e[tag=tmw272_visual_input] remove tmw272_visual_input
+
 # ui_temp_playerとui_temp_playersを利用して、自分以外の参加者から最近式視覚入力を行うコモン
 execute if predicate ui:percentage/1 run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":">1% ","color":"yellow"},{"selector":"@e[tag=ui_temp_players,tag=!ui_temp_player]"},{"text":"に VISUAL_INPUT の解決を行います"}]
 
