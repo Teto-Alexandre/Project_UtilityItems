@@ -58,8 +58,8 @@ execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storag
 # マナチェッカー最大値
 scoreboard players operation $mana_increase_temp ui_temp -= @s ui_tmw272_mana
 scoreboard players operation $mana_max_increase_temp ui_temp -= @s ui_tmw272_mana_max
-execute if score $mana_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_increase_by_self -= @s ui_tmw272_mana
-execute if score $mana_max_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_max_increase_by_self -= @s ui_tmw272_mana_max
+execute if score $mana_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_increase_by_self = @s ui_tmw272_mana
+execute if score $mana_max_increase_temp ui_temp matches ..-1 run scoreboard players operation @s ui_tmw272_mana_max_increase_by_self = @s ui_tmw272_mana_max
 
 # HPが0になったプレイヤーをマッチから除外する
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_determination matches 1.. run function ui:tmw/272/match/player/state/determination
