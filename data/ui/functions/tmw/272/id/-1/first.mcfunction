@@ -138,6 +138,7 @@ scoreboard objectives add ui_tmw272_restraint dummy
 scoreboard objectives add ui_tmw272_saturation dummy
 scoreboard objectives add ui_tmw272_mana_increase_by_self dummy
 scoreboard objectives add ui_tmw272_mana_max_increase_by_self dummy
+scoreboard objectives add ui_tmw272_sin dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

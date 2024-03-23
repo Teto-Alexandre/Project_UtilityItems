@@ -96,6 +96,7 @@ data modify storage ui:tmw272_text simple_value.restraint set value {title:'[{"t
 data modify storage ui:tmw272_text simple_value.saturation set value {title:'[{"text":"【満腹】","color":"#ff6699"}]',name:'[{"text":"満腹","color":"#ff6699"}]',hover:'[{"text":"閉幕 ","color":"green"},{"text":"4減少し、減った量の50%だけ開幕時に自身回復","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_saturation"}}]'}
 data modify storage ui:tmw272_text simple_value.mana_increase_by_self set value {title:'[{"text":"【自身効果で上昇したマナの記録最大値】","color":"aqua"}]',name:'[{"text":"自身効果で上昇したマナの記録最大値","color":"aqua"}]',hover:'[{"text":"自身効果で上昇したマナの記録最大値を示す"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mp_increase_by_self"}}]'}
 data modify storage ui:tmw272_text simple_value.mana_max_increase_by_self set value {title:'[{"text":"【自身効果で上昇した最大マナの記録最大値】","color":"aqua"}]',name:'[{"text":"自身効果で上昇した最大マナの記録最大値","color":"aqua"}]',hover:'[{"text":"自身効果で上昇した最大マナの記録最大値を示す"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mp_max_increase_by_self"}}]'}
+data modify storage ui:tmw272_text simple_value.sin set value {title:'[{"text":"【罪】","color":"#870000"}]',name:'[{"text":"罪","color":"#870000"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_sin"}}]'}
 
 
 
