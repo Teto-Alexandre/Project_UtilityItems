@@ -1,4 +1,5 @@
 # 汎用変数を記録
+execute if data storage ui:temp temp.effect.delay run function ui:tmw/272/effect/misc/delay/
 execute if data storage ui:temp temp.effect.case run function ui:tmw/272/effect/misc/case/
 execute store result score $target_type ui_temp run data get storage ui:temp temp.effect.target_type 1
 execute store result score $target_count ui_temp run data get storage ui:temp temp.effect.target_count 1
@@ -26,7 +27,7 @@ execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players]
 
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
 execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/effect/target_nbt/
-execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
+#execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
 ## VEで見ている相手
