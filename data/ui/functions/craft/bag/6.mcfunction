@@ -13,5 +13,5 @@ give @s minecraft:stray_spawn_egg{CustomModelData:131005,display:{Name:'{"italic
 function ui:craft/common/exp/tier4
 
 #レシピおよび進捗消去
-recipe take @s ui:bag/2
+recipe take @s ui:bag/6
 advancement revoke @s only ui:craft/bag/6
