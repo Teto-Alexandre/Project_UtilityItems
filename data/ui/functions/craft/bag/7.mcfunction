@@ -14,4 +14,4 @@ function ui:craft/common/exp/tier1
 
 #レシピおよび進捗消去
 recipe take @s ui:bag/3
-advancement revoke @s only ui:craft/bag/3
+advancement revoke @s only ui:craft/bag/7
