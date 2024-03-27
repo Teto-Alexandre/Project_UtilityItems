@@ -95,6 +95,7 @@ scoreboard players set @s ui_tmw272_mana_increase_by_self 0
 scoreboard players set @s ui_tmw272_mana_max_increase_by_self 0
 scoreboard players set @s ui_tmw272_sin 0
 scoreboard players set @s ui_tmw272_mind_wish 0
+scoreboard players set @s ui_tmw272_sheep 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
