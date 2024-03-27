@@ -32,6 +32,9 @@ execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
 execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 
+#
+execute if data storage ui:temp temp.effect.add_list run data modify storage ui:temp card.list append from storage ui:temp temp.draw_card
+
 # アイテムのタグ削除
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item

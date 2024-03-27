@@ -3,6 +3,9 @@ data modify storage ui:temp card set from storage oh_my_dat: _[-4][-4][-4][-4][-
 data modify storage ui:temp card.name set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.display.Name
 data modify storage ui:temp card.lore set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.display.Lore
 
+execute unless data storage ui:temp card.list if data storage ui:temp card.list_self run data modify storage ui:temp card.list set value []
+execute if data storage ui:temp card.list_self run data modify storage ui:temp card.list append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0]
+
 #
 scoreboard players set $broadcast_type ui_temp 1
 

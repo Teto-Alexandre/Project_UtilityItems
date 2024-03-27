@@ -6,7 +6,8 @@ execute as @e[tag=tmw272_deck_dropper_core] if score @s ui_id = $id ui_temp run 
 execute if entity @s[tag=tmw_use_n] run function ui:tmw/272/id/-1/n
 execute if entity @s[tag=tmw_use_s] run function ui:tmw/272/id/-1/s
 execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s.fail
-execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] run function ui:tmw/272/id/-1/drop_s
+execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] unless entity @s[nbt={SelectedItem:{tag:{tmw:{cg:{slots:27}}}}}] run function ui:tmw/272/id/-1/drop_s
+execute if entity @s[tag=tmw_drop_s] unless entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] if entity @s[nbt={SelectedItem:{tag:{tmw:{cg:{slots:27}}}}}] run function ui:tmw/272/id/-1/drop_s27
 execute if entity @s[tag=tmw_oh_n] run function ui:tmw/272/id/-1/ready
 execute if entity @s[tag=tmw_oh_s,scores={ui_st2=..20}] run function ui:tmw/272/id/-1/clone
 execute if entity @s[scores={ui_st2=41}] at @s run particle dust 1 0 1 2 ~ ~ ~ 1 1 1 0 15 force

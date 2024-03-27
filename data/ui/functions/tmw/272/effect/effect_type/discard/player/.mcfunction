@@ -12,3 +12,5 @@ execute unless data storage ui:temp temp.effect.only_one store result score $con
 execute if data storage ui:temp temp.effect.only_one store result score $condition_checker_temp_temp ui_temp run clear @s #ui:all{IsCG1:2} 1
 
 execute if score $condition_checker_temp_temp ui_temp matches 1.. if data storage ui:temp temp.effect.temp2.tag.tmw.cg.discard_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.effect.temp2.tag.tmw.cg.discard_effect
+
+execute if data storage ui:temp temp.effect.add_list run data modify storage ui:temp card.list append from storage ui:temp temp.effect.temp2
