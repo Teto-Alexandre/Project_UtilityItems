@@ -22,6 +22,7 @@ execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_conf
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
+execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_type ui_temp 18
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_dazzle matches 1.. unless score $target_type ui_temp matches 2 unless score $target_type ui_temp matches 8 run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
 
@@ -34,7 +35,7 @@ execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/e
 execute if score $target_type ui_temp matches 1 run function ui:tmw/272/effect/target_type/1
 ## 自分
 execute if score $target_type ui_temp matches 2 run function ui:tmw/272/effect/target_type/2
-## 自分以外全員
+## 自分以外敵全員
 execute if score $target_type ui_temp matches 3 run function ui:tmw/272/effect/target_type/3
 ## 自分含む全員
 execute if score $target_type ui_temp matches 4 run function ui:tmw/272/effect/target_type/4
@@ -60,6 +61,12 @@ execute if score $target_type ui_temp matches 13 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 14 run function ui:tmw/272/effect/target_type/14
 ## この一連のカードでターゲットになったエンティティ全員
 execute if score $target_type ui_temp matches 15 run function ui:tmw/272/effect/target_type/15
+## 自分以外全員
+execute if score $target_type ui_temp matches 16 run function ui:tmw/272/effect/target_type/16
+## 自分以外全員から target_count の数だけランダムに抽選
+execute if score $target_type ui_temp matches 17 run function ui:tmw/272/effect/target_type/17
+## 自分 + 自分以外全員から target_count の数だけランダムに抽選
+execute if score $target_type ui_temp matches 18 run function ui:tmw/272/effect/target_type/18
 
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
