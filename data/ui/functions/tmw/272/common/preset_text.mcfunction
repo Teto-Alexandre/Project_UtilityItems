@@ -99,6 +99,7 @@ data modify storage ui:tmw272_text simple_value.mana_max_increase_by_self set va
 data modify storage ui:tmw272_text simple_value.sin set value {title:'[{"text":"【罪】","color":"#870000"}]',name:'[{"text":"罪","color":"#870000"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_sin"}}]'}
 data modify storage ui:tmw272_text simple_value.mind_wish set value {title:'[{"text":"【心願】","color":"#ece038"}]',name:'[{"text":"心願","color":"#ece038"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_mind_wish"}}]'}
 data modify storage ui:tmw272_text simple_value.sheep set value {title:'[{"text":"【羊】","color":"white"}]',name:'[{"text":"羊","color":"white"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_sheep"}}]'}
+data modify storage ui:tmw272_text simple_value.harm set value {title:'[{"text":"【負傷】","color":"#db7093"}]',name:'[{"text":"負傷","color":"#db7093"}]',hover:'[{"text":"閉幕 ","color":"green"},{"text":"体力がN減少する","color":"white"},{"text":"\\n1減少する","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_harm"}}]'}
 
 
 
