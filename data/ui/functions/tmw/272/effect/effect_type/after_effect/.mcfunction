@@ -2,6 +2,7 @@
 function oh_my_dat:please
 
 execute unless data storage ui:temp temp.effect.effect_mode run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.effect.cg
+execute unless data storage ui:temp temp.effect.effect_mode unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[-1].delay_base run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[-1].delay_base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[-1].delay
 execute unless data storage ui:temp temp.effect.effect_mode run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[-1].target_ids set value []
 execute unless data storage ui:temp temp.effect.effect_mode run execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/after_effect/append
 
