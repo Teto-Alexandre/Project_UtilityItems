@@ -5,6 +5,8 @@ data modify storage ui:temp temp set from entity @a[tag=ui_temp_player,limit=1] 
 
 tag @s add tmw272_temp_unpower
 
+data modify storage ui:temp temp.cg.list set value [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
+
 # ドロッパーの中に呼び出したデッキリストを入れる
 execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:0b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
 execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:1b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
