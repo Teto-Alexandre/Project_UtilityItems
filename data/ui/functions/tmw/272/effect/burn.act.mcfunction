@@ -67,6 +67,8 @@ execute if score $target_type ui_temp matches 16 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 17 run function ui:tmw/272/effect/target_type/17
 ## 自分 + 自分以外全員から target_count の数だけランダムに抽選
 execute if score $target_type ui_temp matches 18 run function ui:tmw/272/effect/target_type/18
+## reactive_ids:[] で指名
+execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/target_type/19/
 
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]

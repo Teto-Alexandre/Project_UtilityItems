@@ -2,6 +2,7 @@
 function oh_my_dat:please
 
 execute unless data storage ui:temp temp.effect.effect_mode run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects append from storage ui:temp temp.effect.cg
+execute unless data storage ui:temp temp.effect.effect_mode run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects[-1].reactive_effect_merge_checker set from storage ui:temp temp.effect.merge_checker
 execute unless data storage ui:temp temp.effect.effect_mode run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects[-1].target_ids set value []
 execute unless data storage ui:temp temp.effect.effect_mode run execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/reactive_effect/append
 
