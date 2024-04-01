@@ -73,9 +73,6 @@ execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
-execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
-function oh_my_dat:please
-
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
 tag @e[tag=ui_temp_players_no_target] remove ui_temp_players_no_target
 
@@ -135,6 +132,9 @@ execute if data storage ui:temp temp.effect{effect_type:"reactive_effect"} run f
 ## リアクティブエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_reactive_effect"} run function ui:tmw/272/effect/effect_type/modify_reactive_effect/
 
+function oh_my_dat:please
+
+execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
 function oh_my_dat:please
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
