@@ -14,7 +14,8 @@ execute if entity @s[scores={ui_st2=41}] at @s run particle dust 1 0 1 2 ~ ~ ~ 1
 execute if entity @s[scores={ui_st2=41}] at @s run playsound entity.enderman.teleport player @a ~ ~ ~ 1 0.5 0
 execute if entity @s[scores={ui_st2=41}] at @s run tellraw @s [{"text":"[Idling] > ","color": "light_purple"},{"text":"長Sneak+Fキーで羊を分解","color": "gray"}]
 execute if entity @s[tag=tmw_oh_s,scores={ui_st2=41..}] as @e[type=sheep,sort=nearest,limit=1] at @s run function ui:tmw/272/id/-1/sheep_decomposer
-execute if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] at @s run function ui:tmw/272/id/-1/success2
+execute if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] unless entity @s[nbt={SelectedItem:{tag:{tmw:{cg:{slots:27}}}}}] at @s run function ui:tmw/272/id/-1/success2
+execute if entity @s[tag=tmw_drop_s] if entity @e[tag=ui_temp_targetable_dropper] unless entity @s[tag=tmw272_active] as @e[tag=ui_temp_targetable_dropper] if entity @s[nbt={SelectedItem:{tag:{tmw:{cg:{slots:27}}}}}] at @s run function ui:tmw/272/id/-1/success2_s27
 
 #
 execute at @s[tag=tmw272_ready] run particle happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 1 force

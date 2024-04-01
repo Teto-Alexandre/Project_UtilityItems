@@ -5,14 +5,14 @@ data modify storage ui:temp temp set from entity @s SelectedItem.tag.tmw
 data modify storage ui:temp temp2.list set from storage ui:temp temp.cg.list
 
 #
-data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 9 -2
-#data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 1 -1
+#data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 9 -2
+##data modify storage ui:temp temp2.string set string entity @s SelectedItem.tag.display.Name 1 -1
 
 # このアイテムの名前の鍵付きドロッパーとドロッパーコアを召喚、同じid(obj_idではない)を付与する
 execute if block ~ ~2 ~ #ui:nocol run summon marker ~ ~2 ~ {Tags:["tmw272_deck_dropper_core","tmw272_temp_unpower"]}
-execute as @e[tag=tmw272_temp_unpower] at @s run setblock ~ ~ ~ dropper[facing=down]{Lock:"a",CustomName:'{"text":"Null"}',Items:[{Slot:0b,id:"minecraft:stone",Count:1b,tag:{ui:{ismenu:1}}},{Slot:1b,id:"minecraft:stone",Count:2b,tag:{ui:{ismenu:1}}},{Slot:2b,id:"minecraft:stone",Count:3b,tag:{ui:{ismenu:1}}},{Slot:3b,id:"minecraft:stone",Count:4b,tag:{ui:{ismenu:1}}},{Slot:4b,id:"minecraft:stone",Count:5b,tag:{ui:{ismenu:1}}},{Slot:5b,id:"minecraft:stone",Count:6b,tag:{ui:{ismenu:1}}},{Slot:6b,id:"minecraft:stone",Count:7b,tag:{ui:{ismenu:1}}},{Slot:7b,id:"minecraft:stone",Count:8b,tag:{ui:{ismenu:1}}},{Slot:8b,id:"minecraft:stone",Count:9b,tag:{ui:{ismenu:1}}}]}
+execute as @e[tag=tmw272_temp_unpower] at @s run setblock ~ ~ ~ barrel[facing=down]{CustomName:'{"text":"Null"}',Items:[{Slot:0b,id:"minecraft:stone",Count:1b,tag:{ui:{ismenu:1}}},{Slot:1b,id:"minecraft:stone",Count:2b,tag:{ui:{ismenu:1}}},{Slot:2b,id:"minecraft:stone",Count:3b,tag:{ui:{ismenu:1}}},{Slot:3b,id:"minecraft:stone",Count:4b,tag:{ui:{ismenu:1}}},{Slot:4b,id:"minecraft:stone",Count:5b,tag:{ui:{ismenu:1}}},{Slot:5b,id:"minecraft:stone",Count:6b,tag:{ui:{ismenu:1}}},{Slot:6b,id:"minecraft:stone",Count:7b,tag:{ui:{ismenu:1}}},{Slot:7b,id:"minecraft:stone",Count:8b,tag:{ui:{ismenu:1}}},{Slot:8b,id:"minecraft:stone",Count:9b,tag:{ui:{ismenu:1}}}]}
 execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ CustomName set from entity @a[tag=ui_temp_player,limit=1] SelectedItem.tag.display.Name
-execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Lock set from storage ui:temp temp2.string
+#execute as @e[tag=tmw272_temp_unpower] at @s run data modify block ~ ~ ~ Lock set from storage ui:temp temp2.string
 execute as @e[tag=tmw272_temp_unpower] at @s run scoreboard players operation @s ui_id = $id ui_temp
 
 # ドロッパーの中に呼び出したデッキリストを入れる
