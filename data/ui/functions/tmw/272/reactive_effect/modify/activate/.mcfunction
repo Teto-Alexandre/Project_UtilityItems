@@ -6,4 +6,6 @@ execute store result storage ui:temp temp.target_ids_temp int 1 run scoreboard p
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[-1].reactive_ids set value []
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[-1].reactive_ids append from storage ui:temp temp.target_ids_temp
 
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects[-1].reactive_effect.get_node run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[-1].reactive_node set from storage ui:temp temp.effect
+
 function ui:tmw/272/reactive_effect/modify/activate/repeat
