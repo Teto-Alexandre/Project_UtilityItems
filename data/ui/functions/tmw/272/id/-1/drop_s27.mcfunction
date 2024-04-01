@@ -72,7 +72,7 @@ execute as @e[tag=tmw272_temp_unpower] at @s if block ~ ~ ~ barrel{Items:[{Slot:
 execute as @e[tag=tmw272_temp_unpower] at @s if block ~ ~ ~ barrel{Items:[{Slot:26b,tag:{ui:{ismenu:1}}}]} run item replace block ~ ~ ~ container.26 with air
 
 # デッキリストを空にする
-data modify storage ui:temp temp.cg.list set value [{},{},{},{},{},{},{},{},{}]
+data modify storage ui:temp temp.cg.list set value [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
 item modify entity @s weapon.mainhand ui:gun/value/all
 
 # リセット
