@@ -36,7 +36,7 @@ execute as @e[tag=tmw272_temp_unpower] at @s run data modify storage ui:temp tem
 
 # OMD に書き込み
 function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge value {ui:{cg1:{list:[]}}}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge value {ui:{cg1:{list_origin:[]}}}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from storage ui:temp temp.cg.list
 
 # デッキリストを空にする

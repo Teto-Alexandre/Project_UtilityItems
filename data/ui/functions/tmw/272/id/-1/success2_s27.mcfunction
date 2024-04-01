@@ -5,8 +5,6 @@ data modify storage ui:temp temp set from entity @a[tag=ui_temp_player,limit=1] 
 
 tag @s add tmw272_temp_unpower
 
-data modify storage ui:temp temp.cg.list set value [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
-
 # ドロッパーの中に呼び出したデッキリストを入れる
 execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:0b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
 execute as @e[tag=tmw272_temp_unpower] at @s if data block ~ ~ ~ Items[{Slot:1b}].tag.IsCG1 run tellraw @p [{"text":"警告 不正なカード> 投入したカードが空想化しています","color":"red","bold": true}]
@@ -92,7 +90,7 @@ execute as @e[tag=tmw272_temp_unpower] at @s run data modify storage ui:temp tem
 
 # OMD に書き込み
 function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge value {ui:{cg1:{list:[]}}}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge value {ui:{cg1:{list_origin:[]}}}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from storage ui:temp temp.cg.list
 
 # デッキリストを空にする
