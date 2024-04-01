@@ -51,6 +51,7 @@ scoreboard objectives add ui_tmw272_mana_up dummy
 scoreboard objectives add ui_tmw272_mana dummy
 scoreboard objectives add ui_tmw272_match_time dummy
 scoreboard objectives add ui_tmw272_duplication dummy
+scoreboard objectives add ui_tmw272_reactive_effect_num dummy
 
 # 拡張スコアも作成
 scoreboard objectives add ui_tmw272_self_hurt dummy

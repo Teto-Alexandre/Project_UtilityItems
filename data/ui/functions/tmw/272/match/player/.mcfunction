@@ -7,6 +7,9 @@ function ui:tmw/272/match/tag_temp_team/
 #execute if score $tmw272_team ui_temp matches 5 run tag @a[tag=ui_temp_team] remove ui_temp_team
 #execute if score $tmw272_team ui_temp matches 5 run scoreboard players set $tmw272_team_last_temped ui_temp -32768
 
+#
+function oh_my_dat:please
+
 # 最大体力計測などなど
 scoreboard players operation @s ui_tmw272_mana < @s ui_tmw272_mana_limit
 scoreboard players operation @s ui_tmw272_mana_max < @s ui_tmw272_mana_limit
@@ -21,6 +24,8 @@ scoreboard players operation @s ui_tmw272_hp_crease_temp = @s ui_tmw272_health
 scoreboard players operation $mana_increase_temp ui_temp = @s ui_tmw272_mana
 scoreboard players operation $mana_max_increase_temp ui_temp = @s ui_tmw272_mana_max
 
+execute store result score @s ui_tmw272_reactive_effect_num run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects
+
 #
 scoreboard players add @s ui_tmw272_match_time 1
 execute if score @s ui_tmw272_match_time matches 20 at @s run function ui:tmw/272/common/draw/once
@@ -30,9 +35,6 @@ execute if score @s ui_tmw272_match_time matches 30 at @s run function ui:tmw/27
 #
 execute unless entity @s[tag=summoned_delete] if score @s ui_tmw272_match_time matches 50 at @s run function ui:tmw/272/common/draw/only_one/check
 execute if entity @s[tag=summoned_delete] if score @s ui_tmw272_match_time matches 1 at @s run function ui:tmw/272/common/draw/only_one/check
-
-#
-function oh_my_dat:please
 
 # 視線入力、ステータス参照
     #プレイヤー
