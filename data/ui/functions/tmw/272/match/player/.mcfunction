@@ -49,6 +49,10 @@ execute if score @s ui_tmw272_flying matches 1.. at @s run particle sweep_attack
 execute if score @s ui_tmw272_glowing matches 1.. at @s run effect give @s glowing 1 0 true
 execute if score @s ui_tmw272_invulnerable matches 1.. at @s run particle dust 1 0.5 0 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
 execute if score @s ui_tmw272_stun matches 1.. at @s run particle crit ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
+execute if score @s ui_tmw272_seal matches 1.. at @s if predicate ui:percentage/10 run particle block_marker barrier ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
+execute if score @s ui_tmw272_cost_next matches 1.. at @s if predicate ui:percentage/10 run particle block_marker barrier ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
+execute if score @s ui_tmw272_bleed matches 1.. at @s run particle block red_wool ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
+execute if score @s ui_tmw272_burn matches 1.. at @s run particle flame ~ ~1 ~ 0.4 0.5 0.4 0.05 1 force
 execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
 
 #
