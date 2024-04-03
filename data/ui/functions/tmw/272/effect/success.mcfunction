@@ -11,11 +11,8 @@ function oh_my_dat:please
 execute store result score $count ui_temp run data get storage ui:temp temp.card.effects
 execute if score $broadcast_type ui_temp matches 1 run execute store result score $duplication ui_temp run scoreboard players get @s ui_tmw272_duplication
 execute if score $broadcast_type ui_temp matches 1 run execute if score $duplication ui_temp matches 1.. run function ui:tmw/272/effect/misc/duplication/
-execute store result score $particle_self ui_temp run data get storage ui:temp temp.card.particle_self
-execute store result score $particle_look ui_temp run data get storage ui:temp temp.card.particle_look
-execute store result score $particle_target ui_temp run data get storage ui:temp temp.card.particle_target
-execute store result score $particle_other ui_temp run data get storage ui:temp temp.card.particle_other
-execute store result score $particle_laser ui_temp run data get storage ui:temp temp.card.particle_laser
+execute unless data storage ui:temp temp.card.particle run function ui:tmw/272/effect/particle_type/success_old
+execute if data storage ui:temp temp.card.particle run function ui:tmw/272/effect/particle_type/success
 
 # 汎用変数を準備
 scoreboard players set $condition_checker ui_temp 0

@@ -1,0 +1,1 @@
+$data modify entity @s Item.tag.display.Name set value '[{"text":"$(1):$(2)","italic":false,"color":"white"}]'

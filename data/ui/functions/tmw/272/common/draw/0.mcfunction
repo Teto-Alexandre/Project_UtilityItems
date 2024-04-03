@@ -1,5 +1,7 @@
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0].tag.tmw.cg{only_one:1} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0] set value {}
 
+execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0].tag.tmw.cg.cost.amount run function ui:tmw/272/common/cost_redraw/draw
+
 execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
 execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
 execute if entity @s[type=player] unless entity @e[tag=tmw272_temp_steal,type=!player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item.tag.StackUUID set from entity @e[tag=tmw272_temp_item,limit=1] UUID
