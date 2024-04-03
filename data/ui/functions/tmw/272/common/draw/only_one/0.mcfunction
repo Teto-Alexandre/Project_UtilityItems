@@ -1,5 +1,5 @@
 
-execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0].tag.tmw.cg.cost.amount run function ui:tmw/272/common/cost_redraw/only_one
+execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0].tag.tmw.cg.cost.amount run function ui:tmw/272/common/cost_redraw/only_one
 
 execute if entity @s[type=player] run summon item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b,tag:{}},Tags:["tmw272_temp_item","tmw272_dropitem_card"]}
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Item set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0]
