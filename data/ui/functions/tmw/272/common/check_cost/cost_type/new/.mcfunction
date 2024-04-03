@@ -11,15 +11,15 @@ execute store result score $cost ui_temp run data get storage ui:temp card.cost.
 execute store result score $bypass ui_temp run data get storage ui:temp card.cost.bypass
 
 # ここで封印
-execute if score $broadcast_type ui_temp matches 1 run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
-execute if score $broadcast_type ui_temp matches 1 run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
+execute if score $broadcast_type ui_temp matches 1 unless data storage ui:temp temp.card.no_seal run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
+execute if score $broadcast_type ui_temp matches 1 unless data storage ui:temp temp.card.no_cost_next run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
 
 # デバッグメッセ
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
 
 # スタンしているなら問答無用で却下
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]
-execute if score $broadcast_type ui_temp matches 1 if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run scoreboard players set $cost_type ui_temp -1
+execute if score $broadcast_type ui_temp matches 1 unless data storage ui:temp temp.card.no_stun if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]
+execute if score $broadcast_type ui_temp matches 1 unless data storage ui:temp temp.card.no_stun if score @s ui_tmw272_stun matches 1.. unless score $bypass ui_temp matches 1.. run scoreboard players set $cost_type ui_temp -1
 
 # コストタイプ別に参照
 execute if score $cost_type ui_temp matches 0 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/0
