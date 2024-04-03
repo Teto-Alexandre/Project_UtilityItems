@@ -3,6 +3,7 @@ data modify storage ui:temp temp.mod set from storage ui:temp temp.mods[0]
 
 #
 data modify storage ui:tmw272 temp.input set from storage ui:temp temp.mod.name
+execute if data storage ui:temp temp.mod.input run data modify storage ui:tmw272 temp.input set from storage ui:temp temp.mod.input
 execute if data storage ui:temp temp.mod.mute run data modify storage ui:tmw272 temp.mute set value 1
 
 #
