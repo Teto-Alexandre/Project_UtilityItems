@@ -44,7 +44,7 @@ execute if score $target_type ui_temp matches 4 run function ui:tmw/272/effect/t
 execute if score $target_type ui_temp matches 5 run function ui:tmw/272/effect/target_type/5
 ## 自分含む全員から target_count の数だけランダムに抽選
 execute if score $target_type ui_temp matches 6 run function ui:tmw/272/effect/target_type/6
-## target_ids:[] で指名
+## target_ids:[] で指名 (AE設定時のタゲ、giveなら付与元)
 execute if score $target_type ui_temp matches 7 run function ui:tmw/272/effect/target_type/7/
 ## 自分とVEで見ている相手
 execute if score $target_type ui_temp matches 8 run function ui:tmw/272/effect/target_type/8
@@ -68,8 +68,10 @@ execute if score $target_type ui_temp matches 16 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 17 run function ui:tmw/272/effect/target_type/17
 ## 自分 + 自分以外全員から target_count の数だけランダムに抽選
 execute if score $target_type ui_temp matches 18 run function ui:tmw/272/effect/target_type/18
-## reactive_ids:[] で指名
+## reactive_ids:[] で指名 (誘発を起動した人)
 execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/target_type/19/
+## reactive_target_ids:[] で指名 (誘発時のターゲット)
+execute if score $target_type ui_temp matches 20 run function ui:tmw/272/effect/target_type/20/
 
 execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
