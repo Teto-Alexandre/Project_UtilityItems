@@ -137,7 +137,10 @@ execute if data storage ui:temp temp.effect{effect_type:"modify_reactive_effect"
 
 function oh_my_dat:please
 
-execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
+scoreboard players set $reactive_effect_linear_type ui_temp 1
+execute if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
+scoreboard players set $reactive_effect_linear_type ui_temp 2
+execute as @e[tag=!ui_temp_player,tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
 function oh_my_dat:please
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
