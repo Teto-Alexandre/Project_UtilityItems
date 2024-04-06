@@ -123,7 +123,7 @@ execute if data storage ui:temp temp.effect{effect_type:"summon"} run function u
 ## デッキを完全に入れ替える（テスト実装、MOBに使うべからず）
 execute if data storage ui:temp temp.effect{effect_type:"list_swap"} run function ui:tmw/272/effect/effect_type/list_swap/
 ## デスエフェクト
-execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run function ui:tmw/272/effect/effect_type/death_effect/
+execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run function ui:tmw/272/effect/effect_type/after_effect/
 ## その他
 execute if data storage ui:temp temp.effect{effect_type:"misc"} run function ui:tmw/272/effect/effect_type/misc/
 ## デスエフェクトへの編集
@@ -131,7 +131,7 @@ execute if data storage ui:temp temp.effect{effect_type:"modify_death_effect"} r
 ## 任意コマンド実行
 execute if data storage ui:temp temp.effect{effect_type:"command"} run function ui:tmw/272/effect/effect_type/command/
 ## リアクティブエフェクト
-execute if data storage ui:temp temp.effect{effect_type:"reactive_effect"} run function ui:tmw/272/effect/effect_type/reactive_effect/
+execute if data storage ui:temp temp.effect{effect_type:"reactive_effect"} run function ui:tmw/272/effect/effect_type/after_effect/
 ## リアクティブエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_reactive_effect"} run function ui:tmw/272/effect/effect_type/modify_reactive_effect/
 
