@@ -1,0 +1,3 @@
+$execute store result score $id_overwrite_temp ui_temp run data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects[{id:"$(id)"}]
+execute if score $id_overwrite_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.mute run tellraw @a[tag=ui_temp_player] ["",{"text":" ▼ ","color":"gray"},{"text":"反応効果が上書きされました"}]
+scoreboard players reset $id_overwrite_temp ui_temp
