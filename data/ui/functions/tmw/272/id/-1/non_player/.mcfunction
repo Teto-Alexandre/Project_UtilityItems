@@ -26,11 +26,13 @@ execute if score $rand ui_calc1 < $cardrate_only ui_temp run scoreboard players 
 
 # カード投入開始
 scoreboard players set $list_card_count ui_temp 0
-execute if entity @s[type=!creeper,type=!skeleton,type=!spider,type=!cave_spider] run function ui:tmw/272/id/-1/non_player/hc_loop
+execute if entity @s[type=!creeper,type=!skeleton,type=!spider,type=!cave_spider,type=!enderman,type=!blaze] run function ui:tmw/272/id/-1/non_player/hc_loop
 execute if entity @s[type=creeper] run function ui:tmw/272/id/-1/non_player/raijin
 execute if entity @s[type=skeleton] run function ui:tmw/272/id/-1/non_player/skeleton
 execute if entity @s[type=spider] run function ui:tmw/272/id/-1/non_player/spider
 execute if entity @s[type=cave_spider] run function ui:tmw/272/id/-1/non_player/cave_spider
+execute if entity @s[type=enderman] run function ui:tmw/272/id/-1/non_player/enderman
+execute if entity @s[type=blaze] run function ui:tmw/272/id/-1/non_player/blaze
 
 # リセット
 scoreboard players reset $list_card_oo ui_temp
