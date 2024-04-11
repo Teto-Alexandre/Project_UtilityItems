@@ -9,12 +9,12 @@ function ui:tmw/272/effect/turn1/macro with storage ui:temp card
 data modify storage ui:temp card.turn1 set value {limit:-1,interval:-1}
 execute if data storage ui:temp temp.turn1.limit run data modify storage ui:temp card.turn1.limit set from storage ui:temp temp.turn1.limit
 execute if data storage ui:temp temp.turn1.interval run data modify storage ui:temp card.turn1.interval set from storage ui:temp temp.turn1.interval
-execute unless data storage ui:temp card.turn1{limit:-1} if data storage ui:temp temp.turn1_limit run data modify storage ui:temp card.turn1.limit set from storage ui:temp temp.turn1_limit
-execute unless data storage ui:temp card.turn1{interval:-1} run data modify storage ui:temp card.turn1.interval set from storage ui:temp temp.turn1
+execute if data storage ui:temp card.turn1{limit:-1} if data storage ui:temp temp.turn1_limit run data modify storage ui:temp card.turn1.limit set from storage ui:temp temp.turn1_limit
+execute if data storage ui:temp card.turn1{interval:-1} run data modify storage ui:temp card.turn1.interval set from storage ui:temp temp.turn1
 
 #
-execute store result score $turn_limit ui_temp run data get storage ui:temp card.turn1_limit
-execute store result score $turn_max ui_temp run data get storage ui:temp card.turn1
+execute store result score $turn_limit ui_temp run data get storage ui:temp card.turn1.limit
+execute store result score $turn_max ui_temp run data get storage ui:temp card.turn1.interval
 execute if score $turn_limit ui_temp matches ..0 run scoreboard players set $turn_limit ui_temp 1
 execute if score $turn_max ui_temp matches ..0 run scoreboard players set $turn_max ui_temp 1
 
