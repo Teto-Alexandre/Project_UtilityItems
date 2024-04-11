@@ -28,7 +28,8 @@ execute if score $cost_type ui_temp matches 2 unless score $bypass ui_temp match
 execute if score $cost_type ui_temp matches 3 unless score $bypass ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/new/3/
 
 # 名称ターン1
-execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/ with storage ui:temp card
+execute if score $check_cost ui_temp matches 1 unless data storage ui:temp card.turn1 if data storage ui:temp card.turn run data modify storage ui:temp card.turn1 set from storage ui:temp card.turn
+execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/
 
 # 自由記述欄
 data modify storage ui:temp temp.effect set from storage ui:temp card.cost
