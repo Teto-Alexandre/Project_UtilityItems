@@ -3,6 +3,8 @@ playsound block.note_block.hat player @s ~ ~ ~ 1 1.5 0
 function oh_my_dat:please
 function ui:tmw/272/match/periodic/turn_name
 
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects[0] at @s run function ui:tmw/272/reactive_effect/time_limit/
+
 execute unless score @s ui_tmw272_mana_max >= @s ui_tmw272_mana_up run scoreboard players add @s ui_tmw272_mana_max 1
 execute if score @s ui_tmw272_mana matches 1.. if score @s ui_tmw272_mana < @s ui_tmw272_mana_max run scoreboard players set @s ui_tmw272_mana 0
 execute if score @s ui_tmw272_mana < @s ui_tmw272_mana_max run scoreboard players operation @s ui_tmw272_mana += @s ui_tmw272_mana_max
