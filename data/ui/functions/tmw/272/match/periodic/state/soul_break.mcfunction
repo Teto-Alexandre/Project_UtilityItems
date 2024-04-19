@@ -20,7 +20,7 @@ playsound block.beacon.deactivate player @a ~ ~ ~ 1 2 0
 data merge storage ui:tmw272 {temp:{input:"soul_break"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
-execute unless entity @s[tag=tmw272_mute_value] run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"に"},{"score":{"name": "#soul_break","objective": "ui_temp"}},{"text": "ダメージ！"}]
+execute unless entity @s[tag=tmw272_mute_value] run tellraw @a[tag=ui_temp_players] ["",{"storage":"ui:tmw272_text","nbt":"temp.title","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":": ","color":"gray"},{"selector":"@s"},{"text":"の体力が"},{"score":{"name": "#soul_break","objective": "ui_temp"}},{"text": "減少！"}]
 
 scoreboard players reset #soul_break ui_temp
 scoreboard players reset #soul_checker ui_temp
