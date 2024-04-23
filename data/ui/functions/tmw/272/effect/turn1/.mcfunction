@@ -1,4 +1,4 @@
-data modify storage ui:temp temp set value {name:'{"text":"null"}'}
+data modify storage ui:temp temp set value {name:'{"text":"null"}',turn1:1}
 data modify storage ui:temp temp.name set from storage ui:temp card.name
 data modify storage ui:temp temp.turn1 set from storage ui:temp card.turn1
 
@@ -10,6 +10,7 @@ data modify storage ui:temp card.turn1 set value {limit:-999,interval:-999}
 execute if data storage ui:temp temp.turn1.limit run data modify storage ui:temp card.turn1.limit set from storage ui:temp temp.turn1.limit
 execute if data storage ui:temp temp.turn1.interval run data modify storage ui:temp card.turn1.interval set from storage ui:temp temp.turn1.interval
 execute if data storage ui:temp card.turn1{limit:-999} if data storage ui:temp temp.turn1_limit run data modify storage ui:temp card.turn1.limit set from storage ui:temp temp.turn1_limit
+execute if data storage ui:temp card.turn1{limit:-999} unless data storage ui:temp temp.turn1_limit run data modify storage ui:temp card.turn1.limit set value 1
 execute if data storage ui:temp card.turn1{interval:-999} run data modify storage ui:temp card.turn1.interval set from storage ui:temp temp.turn1
 
 #
