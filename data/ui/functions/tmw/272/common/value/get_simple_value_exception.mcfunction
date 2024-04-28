@@ -8,7 +8,7 @@ execute if data storage ui:tmw272 temp{input:"turn_count"} run scoreboard player
 execute if data storage ui:tmw272 temp{input:"true_turn_count"} run scoreboard players operation $tmw272_get_value ui_temp = @e[tag=tmw272_active_match] ui_tmw272_true_match_round
 execute if data storage ui:tmw272 temp{input:"repeat"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp temp.card.repeat
 execute if data storage ui:tmw272 temp{input:"condition"} run scoreboard players operation $tmw272_get_value ui_temp = $condition_checker ui_temp
-execute if data storage ui:tmw272 temp{input:"num_consume"} run execute store result score $tmw272_get_value ui_temp run data get storage ui:temp card.num_consume
+execute if data storage ui:tmw272 temp{input:"num_consume"} run execute store result score $tmw272_get_value ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0].tag.tmw.cg.num_consume
 
 ## ここでプリセットからtempに数値を持ってくるfunctionを作るべき、modify_valueも同じのを使う
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp

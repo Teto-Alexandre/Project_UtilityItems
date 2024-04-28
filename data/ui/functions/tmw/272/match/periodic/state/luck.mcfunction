@@ -1,4 +1,4 @@
-scoreboard players remove @s ui_tmw272_luck 1
+scoreboard players operation @s ui_tmw272_luck /= #2 ui_num
 
 data merge storage ui:tmw272 {temp:{input:"luck"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
