@@ -22,6 +22,10 @@ scoreboard players operation $mod ui_calc1 = $rand_max ui_temp
 execute if score $mod ui_calc1 matches 0 run scoreboard players set $mod ui_calc1 1
 
 function ui:tmw/272/effect/misc/random/rand
+scoreboard players operation $luk_temp ui_temp < #10 ui_num
+scoreboard players operation $luk_temp ui_temp *= #-1 uinum
+scoreboard players operation $luk_temp ui_temp < #10 ui_num
+scoreboard players operation $luk_temp ui_temp *= #-1 uinum
 execute if score $luk_temp ui_temp matches 1.. run function ui:tmw/272/effect/misc/random/luck
 execute if score $luk_temp ui_temp matches ..-1 run function ui:tmw/272/effect/misc/random/unluck
 
