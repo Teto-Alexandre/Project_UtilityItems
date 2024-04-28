@@ -34,8 +34,10 @@ execute if score @s ui_tmw272_invisible matches 1.. run function ui:tmw/272/matc
 execute if score @s ui_tmw272_regeneration matches 1.. run function ui:tmw/272/match/periodic/state/regeneration
 # 開幕：nダメージ、1減る
 execute if score @s ui_tmw272_harm matches 1.. run function ui:tmw/272/match/periodic/state/harm
+# 常在：ランダム値で常に最高値が出る、開幕1減る
+execute unless score @s ui_tmw272_luck matches 0 run function ui:tmw/272/match/periodic/state/luck
 # 常在：ランダム値で常に最低値が出る、開幕1減る
-execute if score @s ui_tmw272_unluck matches 1.. run function ui:tmw/272/match/periodic/state/unluck
+execute unless score @s ui_tmw272_unluck matches 0 run function ui:tmw/272/match/periodic/state/unluck
 # 開幕：次のマナn減少、消える
 execute if score @s ui_tmw272_darkness matches 1.. run function ui:tmw/272/match/periodic/state/darkness
 # 開幕：シールドn、1減る
@@ -54,8 +56,6 @@ execute if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/match/pe
 execute if score @s ui_tmw272_blindness matches 1.. run function ui:tmw/272/match/periodic/state/blindness
 # 常在：透明化していてもロックできるようになる、開幕1減る
 execute if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/match/periodic/state/glowing
-# 常在：ランダム値で常に最高値が出る、開幕1減る
-execute if score @s ui_tmw272_luck matches 1.. run function ui:tmw/272/match/periodic/state/luck
 # 開幕：体力の5%+nダメージ、1減る
 execute if score @s ui_tmw272_wither matches 1.. run function ui:tmw/272/match/periodic/state/wither
 # 被攻撃時：varが増減、消える
