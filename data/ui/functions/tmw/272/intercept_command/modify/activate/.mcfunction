@@ -11,11 +11,10 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.Intercep
 
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[-1].reactive_effect.get_node run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[-1].reactive_node set from storage ui:temp temp.effect
 
-function ui:tmw/272/intercept_command/modify/activate/repeat
-
-
 data modify storage ui:temp temp.temp.effect.list set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[-1].list
 execute store result score $count_command_list ui_temp run data get storage ui:temp temp.temp.effect.list
 execute if score $count_command_list ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/command/list.lp
 scoreboard players reset $count_command_list ui_temp
 data remove storage ui:temp temp.temp
+
+function ui:tmw/272/intercept_command/modify/activate/repeat
