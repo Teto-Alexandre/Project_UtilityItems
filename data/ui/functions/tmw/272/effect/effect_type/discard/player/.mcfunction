@@ -2,7 +2,7 @@ data remove storage ui:temp temp.effect.temp1
 data remove storage ui:temp temp.effect.temp2
 execute unless data storage ui:temp temp.effect.all unless data storage ui:temp temp.effect.only_one run data modify storage ui:temp temp.effect.temp1 append from entity @s Inventory[{tag:{IsCG1:1}}]
 execute unless data storage ui:temp temp.effect.all if data storage ui:temp temp.effect.only_one run data modify storage ui:temp temp.effect.temp1 append from entity @s Inventory[{tag:{IsCG1:2}}]
-execute if data storage ui:temp temp.effect.all run data modify storage ui:temp temp.effect.temp1 append from entity @s Inventory
+execute if data storage ui:temp temp.effect.all run data modify storage ui:temp temp.effect.temp1 append from entity @s Inventory[]
 data modify storage ui:temp temp.effect.temp2 set from storage ui:temp temp.effect.temp1[0]
 data remove storage ui:temp temp.effect.temp2.Slot
 #execute if data storage ui:temp temp.effect.temp2 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が["},{"storage":"ui:temp","nbt":"temp.effect.temp2.tag.display.Name","interpret": true},{"text": "]を捨てた"}]
