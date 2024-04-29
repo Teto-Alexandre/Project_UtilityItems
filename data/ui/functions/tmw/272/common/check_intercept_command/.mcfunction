@@ -8,7 +8,7 @@ scoreboard players set $check_reactive_effect ui_temp 0
 execute store result score $time_limit_turn ui_temp run data get storage ui:temp card.time_limit_turn
 
 # デバッグメッセ
-tellraw @a ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"time_limit_turn"},{"score":{"name": "$time_limit_turn","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":"です"}]
+#tellraw @a ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"time_limit_turn"},{"score":{"name": "$time_limit_turn","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":"です"}]
 #tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
 
 # ディレイタイプ別に参照
