@@ -11,7 +11,7 @@ execute store result score $time_limit_turn ui_temp run data get storage ui:temp
 #tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
 
 # ディレイタイプ別に参照
-execute if score $time_limit_turn ui_temp matches 1.. run function ui:tmw/272/common/check_intercept_command/delay_type/0
+execute if score $time_limit_turn ui_temp matches 1.. run function ui:tmw/272/common/check_reactive_effect/delay_type/0
 
 # キャッシュクリア
 scoreboard players reset $time_limit_turn ui_temp

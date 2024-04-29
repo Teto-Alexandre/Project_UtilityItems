@@ -25,6 +25,7 @@ scoreboard players operation $mana_increase_temp ui_temp = @s ui_tmw272_mana
 scoreboard players operation $mana_max_increase_temp ui_temp = @s ui_tmw272_mana_max
 
 execute store result score @s ui_tmw272_reactive_effect_num run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects
+execute store result score @s ui_tmw272_intercept_command_num run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands
 
 #
 scoreboard players add @s ui_tmw272_match_time 1

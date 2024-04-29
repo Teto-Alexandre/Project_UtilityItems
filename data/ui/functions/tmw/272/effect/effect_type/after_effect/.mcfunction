@@ -5,8 +5,9 @@ scoreboard players set $after_effect ui_temp 0
 execute if data storage ui:temp temp.effect{effect_type:"after_effect"} run scoreboard players set $after_effect ui_temp 1
 execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run scoreboard players set $after_effect ui_temp 2
 execute if data storage ui:temp temp.effect{effect_type:"reactive_effect"} run scoreboard players set $after_effect ui_temp 3
+execute if data storage ui:temp temp.effect{effect_type:"intercept_command"} run scoreboard players set $after_effect ui_temp 4
 
-execute if score $after_effect ui_temp matches 3 run function ui:tmw/272/effect/effect_type/after_effect/reactive_init
+execute if score $after_effect ui_temp matches 3..4 run function ui:tmw/272/effect/effect_type/after_effect/reactive_init
 
 execute unless data storage ui:temp temp.effect.effect_mode run function ui:tmw/272/effect/effect_type/after_effect/unless
 execute if data storage ui:temp temp.effect{effect_mode:"give"} run function ui:tmw/272/effect/effect_type/after_effect/give
