@@ -81,7 +81,9 @@ tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
 tag @e[tag=ui_temp_players_no_target] remove ui_temp_players_no_target
 
 # varを定義
+scoreboard players set $not_var ui_temp 0
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
+execute unless data storage ui:temp temp.effect.var run scoreboard players set $not_var ui_temp 1
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random/
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 execute store result storage ui:temp temp.effect.var int 1 run scoreboard players get $var ui_temp
