@@ -14,12 +14,12 @@ execute store result score $cg1_list_count ui_temp run data get storage oh_my_da
 execute if entity @s[type=player] store result score $cg1_common_draw_inventory ui_temp run data get entity @s Inventory
 execute if entity @s[type=!player] store result score $cg1_common_draw_inventory ui_temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand
 scoreboard players operation $cg1_common_draw_inventory ui_temp += $cg1_common_draw_num ui_temp
-scoreboard players remove $cg1_common_draw_inventory ui_temp 35
+scoreboard players operation $cg1_common_draw_inventory ui_temp -= @s ui_tmw272_hand_num_limit
 scoreboard players operation $cg1_common_draw_inventory ui_temp > #0 ui_num
 scoreboard players operation $cg1_common_draw_num ui_temp -= $cg1_common_draw_inventory ui_temp
 
 #
-execute if score $cg1_common_draw_inventory ui_temp matches ..35 if score $cg1_common_draw_type ui_temp matches 0 if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
+execute if score $cg1_common_draw_num ui_temp matches 1.. if score $cg1_common_draw_inventory ui_temp <= @s ui_tmw272_hand_num_limit if score $cg1_common_draw_type ui_temp matches 0 if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
 
 #
 #data remove storage ui:temp temp

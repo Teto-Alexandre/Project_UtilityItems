@@ -1,6 +1,7 @@
 #data modify storage ui:tmw272_text simple_value set value {}
 
 # フィードバック
+data modify storage ui:tmw272_text simple_value.hand_num_limit set value {title:'[{"text":"【上限手札】","color":"white"}]',name:'[{"text":"上限手札","color":"white"}]',hover:'[{"text":"これを超えて手札を引く行動は発生しない"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_hand_num_limit"}}]'}
 data modify storage ui:tmw272_text simple_value.health_limit set value {title:'[{"text":"【上限体力】","color":"red"}]',name:'[{"text":"上限体力","color":"red"}]',hover:'[{"text":"体力はこれ以下の値になる"},{"text":"\\n毎tick反映されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health_limit"}}]'}
 data modify storage ui:tmw272_text simple_value.health_max set value {title:'[{"text":"【最大体力】","color":"red"}]',name:'[{"text":"最大体力","color":"red"}]',hover:'[{"text":"最も高かったタイミングの体力"},{"text":"\\n毎tick計測されている"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health_max"}}]'}
 data modify storage ui:tmw272_text simple_value.health set value {title:'[{"text":"【体力】","color":"red"}]',name:'[{"text":"体力","color":"red"}]',hover:'[{"text":"減ると戦線離脱する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_health"}}]'}

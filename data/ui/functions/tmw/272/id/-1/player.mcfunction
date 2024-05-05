@@ -1,3 +1,4 @@
+scoreboard players set @s ui_tmw272_hand_num_limit 35
 scoreboard players set @s ui_tmw272_health_limit 999
 scoreboard players set @s ui_tmw272_health_max 20
 scoreboard players set @s ui_tmw272_health 20
