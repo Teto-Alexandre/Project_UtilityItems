@@ -1,3 +1,8 @@
+# ターゲット初期値
+execute if score $target_type ui_temp matches 0 run scoreboard players set $target_type ui_temp 2
+execute if score $target_count ui_temp matches ..0 run scoreboard players set $target_count ui_temp 1
+
+# ターゲット修整
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 6
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 4
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 5 run scoreboard players set $target_type ui_temp 6
@@ -14,6 +19,7 @@ execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_naus
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_dazzle matches 1.. unless score $target_type ui_temp matches 2 unless score $target_type ui_temp matches 8 run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
 
+# ターゲットエンティティとNBT
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
 execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/effect/target_nbt/
 #execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/

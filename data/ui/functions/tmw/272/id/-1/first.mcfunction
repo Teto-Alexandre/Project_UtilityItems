@@ -42,6 +42,7 @@ scoreboard objectives add ui_tmw272_battlefront_joins dummy
 scoreboard objectives add ui_tmw272_summoner_obj_id dummy
 
 # 次のプレイヤー認証用のスコアを作成
+scoreboard objectives add ui_tmw272_hand_num_limit dummy
 scoreboard objectives add ui_tmw272_health_limit dummy
 scoreboard objectives add ui_tmw272_health_max dummy
 scoreboard objectives add ui_tmw272_health dummy

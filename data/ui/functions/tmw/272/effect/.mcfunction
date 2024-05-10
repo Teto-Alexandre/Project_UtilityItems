@@ -43,3 +43,4 @@ execute if score $count_normal_cards ui_temp matches 1.. run function ui:tmw/272
 
 # クールタイムテスト
 #scoreboard players add @s ui_ct 5
+scoreboard players reset $not_var ui_temp
