@@ -43,6 +43,7 @@ scoreboard players set @s ui_tmw272_luck 0
 scoreboard players set @s ui_tmw272_wither 0
 scoreboard players set @s ui_tmw272_armor 0
 scoreboard players set @s ui_tmw272_seal 0
+scoreboard players set @s ui_tmw272_seal_next 0
 scoreboard players set @s ui_tmw272_invulnerable 0
 scoreboard players set @s ui_tmw272_only_one 0
 scoreboard players set @s ui_tmw272_energy 0

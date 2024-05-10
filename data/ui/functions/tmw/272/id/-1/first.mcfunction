@@ -89,6 +89,7 @@ scoreboard objectives add ui_tmw272_luck dummy
 scoreboard objectives add ui_tmw272_wither dummy
 scoreboard objectives add ui_tmw272_armor dummy
 scoreboard objectives add ui_tmw272_seal dummy
+scoreboard objectives add ui_tmw272_seal_next dummy
 scoreboard objectives add ui_tmw272_invulnerable dummy
 scoreboard objectives add ui_tmw272_only_one dummy
 scoreboard objectives add ui_tmw272_energy dummy
