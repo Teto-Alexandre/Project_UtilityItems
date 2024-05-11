@@ -73,6 +73,7 @@ scoreboard objectives add ui_tmw272_hunger dummy
 scoreboard objectives add ui_tmw272_burn dummy
 scoreboard objectives add ui_tmw272_speed dummy
 scoreboard objectives add ui_tmw272_strength dummy
+scoreboard objectives add ui_tmw272_strength_next dummy
 scoreboard objectives add ui_tmw272_poison dummy
 scoreboard objectives add ui_tmw272_invisible dummy
 scoreboard objectives add ui_tmw272_regeneration dummy
@@ -84,11 +85,13 @@ scoreboard objectives add ui_tmw272_flying dummy
 scoreboard objectives add ui_tmw272_trade dummy
 scoreboard objectives add ui_tmw272_nausea dummy
 scoreboard objectives add ui_tmw272_bleed dummy
+scoreboard objectives add ui_tmw272_bleed_next dummy
 scoreboard objectives add ui_tmw272_blindness dummy
 scoreboard objectives add ui_tmw272_glowing dummy
 scoreboard objectives add ui_tmw272_luck dummy
 scoreboard objectives add ui_tmw272_wither dummy
 scoreboard objectives add ui_tmw272_armor dummy
+scoreboard objectives add ui_tmw272_armor_next dummy
 scoreboard objectives add ui_tmw272_seal dummy
 scoreboard objectives add ui_tmw272_seal_next dummy
 scoreboard objectives add ui_tmw272_invulnerable dummy
@@ -113,6 +116,7 @@ scoreboard objectives add ui_tmw272_fairy dummy
 scoreboard objectives add ui_tmw272_memory dummy
 scoreboard objectives add ui_tmw272_chain dummy
 scoreboard objectives add ui_tmw272_hope dummy
+scoreboard objectives add ui_tmw272_hope_next dummy
 scoreboard objectives add ui_tmw272_ec dummy
 scoreboard objectives add ui_tmw272_karma dummy
 scoreboard objectives add ui_tmw272_tenacity dummy

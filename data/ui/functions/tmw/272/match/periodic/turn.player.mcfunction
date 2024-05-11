@@ -26,7 +26,10 @@ execute if score @s ui_tmw272_burn matches 1.. run function ui:tmw/272/match/per
 # 開幕：1ドロー、1減る
 execute if score @s ui_tmw272_speed matches 1.. run function ui:tmw/272/match/periodic/state/speed
 # 攻撃時：varが増減、消える
-execute unless score @s ui_tmw272_strength matches 0 run function ui:tmw/272/match/periodic/state/strength
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_strength matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_strength_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/strength
 # 開幕：体力の5%ダメージ、1減る
 execute if score @s ui_tmw272_poison matches 1.. run function ui:tmw/272/match/periodic/state/poison
 # 常在：標敵にならなくなる（VE干渉）、開幕1減る
@@ -52,7 +55,10 @@ execute if score @s ui_tmw272_trade matches 1.. run function ui:tmw/272/match/pe
 # 常在：標敵を取る攻撃がランダム敵一体に変わる、開幕1減る
 execute if score @s ui_tmw272_nausea matches 1.. run function ui:tmw/272/match/periodic/state/nausea
 # 常在：カードを使うとnダメージ、発動で2/3、開幕消滅
-execute if score @s ui_tmw272_bleed matches 1.. run function ui:tmw/272/match/periodic/state/bleed
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_bleed matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_bleed_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/bleed
 # 常在：敵全体対象が標敵に、全員対象が自分と標敵に変わる、開幕1減る
 execute if score @s ui_tmw272_blindness matches 1.. run function ui:tmw/272/match/periodic/state/blindness
 # 常在：透明化していてもロックできるようになる、開幕1減る
@@ -60,7 +66,10 @@ execute if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/match/
 # 開幕：体力の5%+nダメージ、1減る
 execute if score @s ui_tmw272_wither matches 1.. run function ui:tmw/272/match/periodic/state/wither
 # 被攻撃時：varが増減、消える
-execute unless score @s ui_tmw272_armor matches 0 run function ui:tmw/272/match/periodic/state/armor
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_armor matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_armor_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/armor
 # 常在：カードのコストがN上昇する、開幕消える
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_seal matches 0 run scoreboard players set $success ui_temp 1
@@ -79,7 +88,10 @@ execute if score @s ui_tmw272_fairy matches 1.. run function ui:tmw/272/match/pe
 # 常在：カード使うと1増加 閉幕リセット
 execute if score @s ui_tmw272_chain matches 1.. run function ui:tmw/272/match/periodic/state/chain
 # 回復時：varが増減、消える
-execute unless score @s ui_tmw272_hope matches 0 run function ui:tmw/272/match/periodic/state/hope
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_hope matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_hope_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/hope
 # 開幕：N%の確率で死ぬ
 execute if score @s ui_tmw272_karma matches 1.. run function ui:tmw/272/match/periodic/state/karma
 # 常在：modify_valueを受けない、開幕1減る
