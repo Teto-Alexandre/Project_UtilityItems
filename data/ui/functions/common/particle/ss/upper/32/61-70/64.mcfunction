@@ -22,4 +22,4 @@ execute if score $is ui_temp matches 27 run particle dust 1 1 1 1 ~ ~0.9 ~ 0 0 1
 execute if score $is ui_temp matches 27 run particle squid_ink ~ ~0.9 ~ 1 1 1 0 80 force
 
 #
-execute if score $is ui_temp matches 25.. run kill @s
+execute if score $is ui_temp matches 27.. run kill @s
