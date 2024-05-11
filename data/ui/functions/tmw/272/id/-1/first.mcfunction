@@ -151,6 +151,7 @@ scoreboard objectives add ui_tmw272_mind_wish dummy
 scoreboard objectives add ui_tmw272_sheep dummy
 scoreboard objectives add ui_tmw272_harm dummy
 scoreboard objectives add ui_tmw272_thorn dummy
+scoreboard objectives add ui_tmw272_dream dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

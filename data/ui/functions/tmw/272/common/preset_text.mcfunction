@@ -108,6 +108,7 @@ data modify storage ui:tmw272_text simple_value.sheep set value {title:'[{"text"
 data modify storage ui:tmw272_text simple_value.harm set value {title:'[{"text":"【負傷】","color":"#db7093"}]',name:'[{"text":"負傷","color":"#db7093"}]',hover:'[{"text":"閉幕 ","color":"green"},{"text":"体力がN減少する","color":"white"},{"text":"\\n1減少する","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_harm"}}]'}
 data modify storage ui:tmw272_text simple_value.thorn set value {title:'[{"text":"【茨鎧】","color":"#4d9966"}]',name:'[{"text":"茨鎧","color":"#4d9966"}]',hover:'[{"text":"他者からダメージを受けた時に攻撃者の体力をN減らす","color":"white"},{"text":"\\n閉幕 ","color":"green"},{"text":"消滅する","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_thorn"}}]'}
 data modify storage ui:tmw272_text simple_value.duplication set value {title:'[{"text":"【複製】","color":"white"}]',name:'[{"text":"複製","color":"white"}]',hover:'[{"text":"次に使うカード効果をN回発動する","color":"white"},{"text":"\\nその後この値は0になる","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_duplication"}}]'}
+data modify storage ui:tmw272_text simple_value.dream set value {title:'[{"text":"【夢】","color":"gray"}]',name:'[{"text":"夢","color":"gray"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_dream"}}]'}
 
 
 

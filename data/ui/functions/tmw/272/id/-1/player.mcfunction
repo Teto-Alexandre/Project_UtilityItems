@@ -105,6 +105,7 @@ scoreboard players set @s ui_tmw272_mind_wish 0
 scoreboard players set @s ui_tmw272_sheep 0
 scoreboard players set @s ui_tmw272_harm 0
 scoreboard players set @s ui_tmw272_thorn 0
+scoreboard players set @s ui_tmw272_dream 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
