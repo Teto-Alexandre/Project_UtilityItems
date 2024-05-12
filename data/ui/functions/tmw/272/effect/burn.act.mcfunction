@@ -91,9 +91,9 @@ execute store result storage ui:temp temp.effect.var int 1 run scoreboard player
 # effect_type:"intercept_command"
 function oh_my_dat:please
 scoreboard players set $reactive_effect_linear_type ui_temp 1
-execute if score @s ui_tmw272_intercept_command_num matches 1.. run function ui:tmw/272/intercept_command/targetted
+execute unless data storage ui:temp temp.effect.no_intercept_command unless data storage ui:temp temp.effect.no_intercept_command_from if score @s ui_tmw272_intercept_command_num matches 1.. run function ui:tmw/272/intercept_command/targetted
 scoreboard players set $reactive_effect_linear_type ui_temp 2
-execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_intercept_command_num matches 1.. run function ui:tmw/272/intercept_command/targetted
+execute unless data storage ui:temp temp.effect.no_intercept_command unless data storage ui:temp temp.effect.no_intercept_command_to as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_intercept_command_num matches 1.. run function ui:tmw/272/intercept_command/targetted
 function oh_my_dat:please
 
 # ターゲットを対象に取ってエフェクトを実行する
@@ -159,9 +159,9 @@ execute if data storage ui:temp temp.effect{effect_type:"modify_intercept_comman
 function oh_my_dat:please
 
 scoreboard players set $reactive_effect_linear_type ui_temp 1
-execute if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
+execute unless data storage ui:temp temp.effect.no_reactive_effect unless data storage ui:temp temp.effect.no_reactive_effect_from if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
 scoreboard players set $reactive_effect_linear_type ui_temp 2
-execute as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
+execute unless data storage ui:temp temp.effect.no_reactive_effect unless data storage ui:temp temp.effect.no_reactive_effect_to as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
 function oh_my_dat:please
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化

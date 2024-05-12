@@ -107,7 +107,10 @@ execute if score @s ui_tmw272_restraint matches 1.. run function ui:tmw/272/matc
 # 閉幕：4減少、減った半分回復
 execute if score @s ui_tmw272_saturation matches 1.. run function ui:tmw/272/match/periodic/state/saturation
 # 被攻撃時：相手の体力を減らす、消える
-execute unless score @s ui_tmw272_thorn matches 0 run function ui:tmw/272/match/periodic/state/thorn
+scoreboard players set $success ui_temp 0
+execute unless score @s ui_tmw272_thorn matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_thorn_next matches 0 run scoreboard players set $success ui_temp 1
+execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/thorn
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
