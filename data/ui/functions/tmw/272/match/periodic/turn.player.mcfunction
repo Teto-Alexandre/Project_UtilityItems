@@ -54,6 +54,8 @@ execute if score @s ui_tmw272_flying matches 1.. run function ui:tmw/272/match/p
 execute if score @s ui_tmw272_trade matches 1.. run function ui:tmw/272/match/periodic/state/trade
 # 常在：標敵を取る攻撃がランダム敵一体に変わる、開幕1減る
 execute if score @s ui_tmw272_nausea matches 1.. run function ui:tmw/272/match/periodic/state/nausea
+# 閉幕：1減少
+execute if score @s ui_tmw272_wound matches 1.. run function ui:tmw/272/match/periodic/state/wound
 # 常在：カードを使うとnダメージ、発動で2/3、開幕消滅
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_bleed matches 0 run scoreboard players set $success ui_temp 1

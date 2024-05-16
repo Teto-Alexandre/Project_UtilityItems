@@ -110,6 +110,7 @@ data modify storage ui:tmw272_text simple_value.thorn set value {title:'[{"text"
 data modify storage ui:tmw272_text simple_value.thorn_next set value {title:'[{"text":"【待機茨鎧】","color":"#4d9966"}]',name:'[{"text":"待機茨鎧","color":"#4d9966"}]',hover:'[{"text":"次のターンの初めからある茨鎧"},{"text":"\\n閉幕 ","color":"green"},{"text":"茨鎧に転化"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_thorn_next"}}]'}
 data modify storage ui:tmw272_text simple_value.duplication set value {title:'[{"text":"【複製】","color":"white"}]',name:'[{"text":"複製","color":"white"}]',hover:'[{"text":"次に使うカード効果をN回発動する","color":"white"},{"text":"\\nその後この値は0になる","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_duplication"}}]'}
 data modify storage ui:tmw272_text simple_value.dream set value {title:'[{"text":"【夢】","color":"gray"}]',name:'[{"text":"夢","color":"gray"}]',hover:'[{"text":"特定のカードで増減する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_dream"}}]'}
+data modify storage ui:tmw272_text simple_value.wound set value {title:'[{"text":"【重傷】","color":"dark_red"}]',name:'[{"text":"重傷","color":"dark_red"}]',hover:'[{"text":"自身の回復量がN減少する（半分以下にならない）"},{"text":"\\n閉幕 ","color":"green"},{"text":"1減少","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_wound"}}]'}
 
 
 

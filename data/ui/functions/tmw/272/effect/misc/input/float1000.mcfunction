@@ -63,12 +63,12 @@ execute if score $input_pow ui_temp matches 2.. run scoreboard players operation
 execute if score $input_pow ui_temp matches 2.. run scoreboard players remove $input_pow ui_temp 1
 execute if score $input_pow ui_temp matches 1.. run function ui:tmw/272/effect/misc/input/pow
 
-scoreboard players operation $input_act ui_temp *= #100 ui_num
+scoreboard players operation $input_act ui_temp *= #1000 ui_num
 
 # mult
-execute store result score $input_mult ui_temp run data get storage ui:tmw272 temp.mult 100
+execute store result score $input_mult ui_temp run data get storage ui:tmw272 temp.mult 1000
 execute unless score $input_mult ui_temp matches 0 run scoreboard players operation $input_act ui_temp *= $input_mult ui_temp
-execute unless score $input_mult ui_temp matches 0 run scoreboard players operation $input_act ui_temp /= #100 ui_num
+execute unless score $input_mult ui_temp matches 0 run scoreboard players operation $input_act ui_temp /= #1000 ui_num
 
 # add
 execute store result score $input_add ui_temp run data get storage ui:tmw272 temp.add 1

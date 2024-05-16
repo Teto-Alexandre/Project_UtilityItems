@@ -6,6 +6,12 @@ function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 execute unless data storage ui:temp temp.effect.no_hope run execute unless score @s ui_tmw272_hope matches 0 run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"は"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
 execute unless data storage ui:temp temp.effect.no_hope run scoreboard players operation $var_temp ui_temp += @s ui_tmw272_hope
 
+scoreboard players operation $var_temp_/2 ui_temp = $var_temp ui_temp
+scoreboard players operation $var_temp_/2 ui_temp /= #2 ui_num
+
+# 重傷
+execute if score @s ui_tmw272_wound matches 1.. unless data storage ui:temp temp.effect.no_wound if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/wound
+
 # 下限設定
 execute unless data storage ui:temp temp.effect.under_zero run scoreboard players operation $var_temp ui_temp > #0 ui_num
 
@@ -22,3 +28,5 @@ execute run tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","colo
 execute run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "回復！"}]
 execute if entity @e[tag=tmw272_temp_card_effect_target,tag=ui_temp_player] run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_self_heal += $var_temp ui_temp
 execute if entity @e[tag=tmw272_temp_card_effect_target,tag=!ui_temp_player] run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_other_heal += $var_temp ui_temp
+
+scoreboard players reset $var_temp_/2 ui_temp
