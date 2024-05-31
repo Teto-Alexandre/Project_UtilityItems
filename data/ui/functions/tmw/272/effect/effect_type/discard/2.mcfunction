@@ -3,8 +3,8 @@ scoreboard players operation $var_temp ui_temp = $var ui_temp
 scoreboard players set $condition_checker_temp ui_temp 0
 
 scoreboard players set $just_check ui_temp 0
-execute if score $var_temp ui_temp matches 0 run scoreboard players set $just_check ui_temp 1
-execute if score $var_temp ui_temp matches 0 run scoreboard players set $var_temp ui_temp 1
+execute if score $var_temp ui_temp matches -1 run scoreboard players set $just_check ui_temp 1
+execute if score $var_temp ui_temp matches -1 run scoreboard players set $var_temp ui_temp 1
 
 execute if entity @s[type=!player] run execute if score $just_check ui_temp matches 1 run scoreboard players set $var_temp ui_temp 32767
 
