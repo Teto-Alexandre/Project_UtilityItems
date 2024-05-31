@@ -6,6 +6,8 @@ scoreboard players set $just_check ui_temp 0
 execute if score $var_temp ui_temp matches 0 run scoreboard players set $just_check ui_temp 1
 execute if score $var_temp ui_temp matches 0 run scoreboard players set $var_temp ui_temp 1
 
+execute if entity @s[type=!player] run execute if score $just_check ui_temp matches 1 run scoreboard players set $var_temp ui_temp 32767
+
 data remove storage ui:temp temp.display
 
 execute unless data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3
