@@ -11,6 +11,7 @@ execute if entity @s[type=!player] run execute if score $just_check ui_temp matc
 data remove storage ui:temp temp.display
 
 execute unless data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3
+execute if data storage ui:temp temp.effect.macro{} run function ui:tmw/272/effect/effect_type/discard/macro_parse
 execute if data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3_macro
 
 scoreboard players set $broadcast_type ui_temp 6
