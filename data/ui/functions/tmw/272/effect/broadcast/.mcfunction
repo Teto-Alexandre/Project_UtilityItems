@@ -25,6 +25,7 @@ execute if score $broadcast_type ui_temp matches 4 run function ui:tmw/272/effec
 execute if score $broadcast_type ui_temp matches 5 if score $broadcast_name ui_temp matches 1 run function ui:tmw/272/effect/broadcast/after_effect
 execute if score $broadcast_type ui_temp matches 6 run function ui:tmw/272/effect/broadcast/discard
 execute if score $broadcast_type ui_temp matches 7 if score $broadcast_name ui_temp matches 1 run function ui:tmw/272/effect/broadcast/create
+execute if score $broadcast_type ui_temp matches 8 run function ui:tmw/272/effect/broadcast/discard_check
 
 scoreboard players reset $lore_count ui_temp
 scoreboard players reset $broadcast_name ui_temp
