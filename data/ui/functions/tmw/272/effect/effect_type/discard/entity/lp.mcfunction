@@ -6,6 +6,7 @@ execute unless data storage ui:temp temp.effect.all if data storage ui:temp temp
 execute if data storage ui:temp temp.effect.all if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0].tag run scoreboard players set $hand_check ui_temp 1
 
 execute if score $hand_check ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/entity/lp.success
+execute if score $hand_check ui_temp matches 1.. if score $just_check ui_temp matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
 execute if score $hand_check ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
 
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.hand[0]
