@@ -14,7 +14,7 @@ execute unless data storage ui:temp temp.effect.macro if score $var_temp ui_temp
 execute if data storage ui:temp temp.effect.macro if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/discard/3_macro
 
 scoreboard players set $broadcast_type ui_temp 6
-execute if score $just_check ui_temp matches 0 run scoreboard players set $broadcast_type ui_temp 8
+execute if score $just_check ui_temp matches 1 run scoreboard players set $broadcast_type ui_temp 8
 execute unless data storage ui:temp temp.effect.mute run function ui:tmw/272/effect/broadcast/
 execute if score $just_check ui_temp matches 0 run scoreboard players operation @s ui_tmw272_discard += $condition_checker_temp ui_temp
 
