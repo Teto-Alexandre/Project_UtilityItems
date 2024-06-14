@@ -1,4 +1,4 @@
-data remove storage ui:temp temp.temp.list2[0]
+data remove storage ui:temp temp.temp.shuffle.list2[0]
 
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match[0]
