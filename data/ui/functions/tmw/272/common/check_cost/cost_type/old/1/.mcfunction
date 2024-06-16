@@ -7,8 +7,8 @@ data modify storage ui:temp temp.mods set from storage ui:temp card.cost_mods
 execute store result score $cost_count ui_temp run data get storage ui:temp card.cost_mods
 
 # 最小値と最大値も封印で増加する
-execute if score $broadcast_type ui_temp matches 1 if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_seal
-execute if score $broadcast_type ui_temp matches 1 if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_seal
+execute if score $is_card ui_temp matches 1 if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_seal
+execute if score $is_card ui_temp matches 1 if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_seal
 
 # cost_countの数だけ走査処理をする
 execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/check_cost/cost_type/old/1/burn

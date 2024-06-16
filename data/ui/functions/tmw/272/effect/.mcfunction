@@ -9,6 +9,7 @@ execute if data storage ui:temp card.list_self run data modify storage ui:temp c
 
 #
 scoreboard players set $broadcast_type ui_temp 1
+scoreboard players set $is_card ui_temp 1
 
 # テキストボードを開く
 #function ui:template/text_board/open
