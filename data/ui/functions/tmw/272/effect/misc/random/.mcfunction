@@ -31,6 +31,11 @@ execute if score $luk_temp ui_temp matches ..-1 run function ui:tmw/272/effect/m
 
 scoreboard players operation $rand ui_temp += $rand_min ui_temp
 
+execute unless data storage ui:temp temp.effect.rand.keep_condition run scoreboard players set $condition_checker ui_temp 0
+execute if data storage ui:temp temp.effect.rand.min_condition if score $rand ui_temp = $rand_min_luk ui_temp store result score $condition_checker_temp ui_temp run data get storage ui:temp temp.effect.rand.min_condition
+execute if data storage ui:temp temp.effect.rand.max_condition if score $rand ui_temp = $rand_max_luk ui_temp store result score $condition_checker_temp ui_temp run data get storage ui:temp temp.effect.rand.max_condition
+scoreboard players operation $condition_checker ui_temp += $condition_checker_temp ui_temp
+
 ##execute if data storage ui:temp temp.effect.rand.to_var run scoreboard players operation $var ui_temp = $rand ui_temp
 scoreboard players operation $var ui_temp = $rand ui_temp
 
