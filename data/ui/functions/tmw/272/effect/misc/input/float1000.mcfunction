@@ -71,7 +71,7 @@ execute unless score $input_mult ui_temp matches 0 run scoreboard players operat
 execute unless score $input_mult ui_temp matches 0 run scoreboard players operation $input_act ui_temp /= #1000 ui_num
 
 # add
-execute store result score $input_add ui_temp run data get storage ui:tmw272 temp.add 1
+execute store result score $input_add ui_temp run data get storage ui:tmw272 temp.add 1000
 execute unless score $input_add ui_temp matches 0 run scoreboard players operation $input_act ui_temp += $input_add ui_temp
 
 # min max
