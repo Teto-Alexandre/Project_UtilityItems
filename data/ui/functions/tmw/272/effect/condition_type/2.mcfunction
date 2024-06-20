@@ -1,5 +1,8 @@
 #say 条件のチェック
 # condition:{id:2,list:[{input:"health",min:10},{input:"mana",max:5}]}
+
+execute if data storage ui:temp temp.effect.condition.indep run scoreboard players operation $condition_checker_indep ui_temp = $condition_checker ui_temp
+
 scoreboard players set $condition_checker ui_temp 0
 data modify storage ui:temp temp.temp.list set from storage ui:temp temp.effect.condition.list
 
@@ -24,8 +27,10 @@ execute unless data storage ui:temp temp.effect.condition.invert if score $condi
 execute unless data storage ui:temp temp.effect.condition.invert if score $condition_max ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp > $condition_max ui_temp run scoreboard players set $condition ui_temp 0
 execute if data storage ui:temp temp.effect.condition.invert if score $condition_min ui_temp matches -2147483648..2147483647 if score $condition_max ui_temp matches -2147483648..2147483647 if score $condition_checker ui_temp >= $condition_min ui_temp if score $condition_checker ui_temp <= $condition_max ui_temp run scoreboard players set $condition ui_temp 0
 
-# continueがついていなければconditionはリセット
+# continueがついていなければconditionはリセット、indepがあれば元の値を再取得
 execute unless data storage ui:temp temp.effect.condition.continue run scoreboard players set $condition_checker ui_temp 0
+execute if data storage ui:temp temp.effect.condition.indep run scoreboard players operation $condition_checker ui_temp = $condition_checker_indep ui_temp
 
 scoreboard players reset $condition_min ui_temp
 scoreboard players reset $condition_max ui_temp
+scoreboard players reset $condition_checker_indep ui_temp
