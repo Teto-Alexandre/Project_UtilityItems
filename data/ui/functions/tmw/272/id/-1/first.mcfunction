@@ -147,6 +147,7 @@ scoreboard objectives add ui_tmw272_mp_increase dummy
 scoreboard objectives add ui_tmw272_mp_crease_temp dummy
 scoreboard objectives add ui_tmw272_card_used dummy
 scoreboard objectives add ui_tmw272_latest_cost dummy
+scoreboard objectives add ui_tmw272_latest_card_cost dummy
 scoreboard objectives add ui_tmw272_restraint dummy
 scoreboard objectives add ui_tmw272_saturation dummy
 scoreboard objectives add ui_tmw272_mana_increase_by_self dummy

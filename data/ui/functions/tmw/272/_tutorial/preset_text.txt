@@ -27,6 +27,7 @@ mp_increase:【マナ増加量】:aqua:マナ減少量を示す
 mp_crease_temp:【最後のマナ記録量】:aqua:最後のマナ記録量を示す
 card_used:【カードを使った】:white:カードを使ったtickに1になる
 latest_cost:【当該コスト】:white:この効果のコスト、あなたが最後に支払ったものに基づく
+latest_card_cost:【当該カードコスト】:white:あなたが最後に支払ったカードのコスト
 mana_increase_by_self:【自身効果で上昇したマナの記録最大値】:aqua:自身効果で上昇したマナの記録最大値を示す
 mana_max_increase_by_self:【自身効果で上昇した最大マナの記録最大値】:aqua:自身効果で上昇した最大マナの記録最大値を示す
 

@@ -100,7 +100,8 @@ scoreboard players set @s ui_tmw272_mp_decrease 0
 scoreboard players set @s ui_tmw272_mp_increase 0
 scoreboard players set @s ui_tmw272_mp_crease_temp 0
 scoreboard players set @s ui_tmw272_card_used 0
-scoreboard players set @s ui_tmw272_latest_cost 0
+scoreboard players set @s ui_tmw272_latest_cost -1
+scoreboard players set @s ui_tmw272_latest_card_cost -1
 scoreboard players set @s ui_tmw272_restraint 0
 scoreboard players set @s ui_tmw272_saturation 0
 scoreboard players set @s ui_tmw272_mana_increase_by_self 0

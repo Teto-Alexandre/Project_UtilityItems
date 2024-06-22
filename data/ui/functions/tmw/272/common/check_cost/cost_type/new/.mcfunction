@@ -38,6 +38,7 @@ execute if data storage ui:temp temp.effect.list run function ui:tmw/272/effect/
 data remove storage ui:temp temp
 
 # コストを払う
+execute if score $is_card ui_temp matches 1 if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 unless score $bypass ui_temp matches 1.. run scoreboard players operation @s ui_tmw272_latest_card_cost = $cost ui_temp
 execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 unless score $bypass ui_temp matches 1.. run scoreboard players operation @s ui_tmw272_latest_cost = $cost ui_temp
 execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 unless score $bypass ui_temp matches 1.. run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp
 
