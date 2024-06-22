@@ -63,6 +63,9 @@ tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_ta
 # 最終使用カードに登録
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.card.indep if score $no_last_used ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
 
+# カード使用スコアを1に
+execute if score $is_card ui_temp matches 1 run scoreboard players set @s ui_tmw272_card_used 1
+
 # 汎用変数を削除
 scoreboard players reset $no_last_used ui_temp
 scoreboard players reset $particle_self ui_temp

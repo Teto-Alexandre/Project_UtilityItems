@@ -31,6 +31,7 @@ execute if score $check_cost ui_temp matches 1 unless data storage ui:temp card.
 execute if score $check_cost ui_temp matches 1 if data storage ui:temp card.turn1 run function ui:tmw/272/effect/turn1/
 
 # コストを払う
+execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 run scoreboard players operation @s ui_tmw272_latest_cost = $cost ui_temp
 execute if score $cost_type ui_temp matches 0..3 if score $check_cost ui_temp matches 1 run scoreboard players operation @s ui_tmw272_mana -= $cost ui_temp
 
 # キャッシュクリア

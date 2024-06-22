@@ -96,6 +96,11 @@ scoreboard players set @s ui_tmw272_damage_taken 0
 scoreboard players set @s ui_tmw272_hp_decrease 0
 scoreboard players set @s ui_tmw272_hp_increase 0
 scoreboard players set @s ui_tmw272_hp_crease_temp 20
+scoreboard players set @s ui_tmw272_mp_decrease 0
+scoreboard players set @s ui_tmw272_mp_increase 0
+scoreboard players set @s ui_tmw272_mp_crease_temp 0
+scoreboard players set @s ui_tmw272_card_used 0
+scoreboard players set @s ui_tmw272_latest_cost 0
 scoreboard players set @s ui_tmw272_restraint 0
 scoreboard players set @s ui_tmw272_saturation 0
 scoreboard players set @s ui_tmw272_mana_increase_by_self 0

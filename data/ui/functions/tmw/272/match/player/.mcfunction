@@ -21,11 +21,18 @@ execute if score @s ui_tmw272_hp_crease_temp < #0 ui_num run scoreboard players 
 execute if score @s ui_tmw272_hp_crease_temp > #0 ui_num run scoreboard players operation @s ui_tmw272_hp_decrease += @s ui_tmw272_hp_crease_temp
 scoreboard players operation @s ui_tmw272_hp_crease_temp = @s ui_tmw272_health
 
+scoreboard players operation @s ui_tmw272_mp_crease_temp -= @s ui_tmw272_mana
+execute if score @s ui_tmw272_mp_crease_temp < #0 ui_num run scoreboard players operation @s ui_tmw272_mp_increase -= @s ui_tmw272_mp_crease_temp
+execute if score @s ui_tmw272_mp_crease_temp > #0 ui_num run scoreboard players operation @s ui_tmw272_mp_decrease += @s ui_tmw272_mp_crease_temp
+scoreboard players operation @s ui_tmw272_mp_crease_temp = @s ui_tmw272_mana
+
 scoreboard players operation $mana_increase_temp ui_temp = @s ui_tmw272_mana
 scoreboard players operation $mana_max_increase_temp ui_temp = @s ui_tmw272_mana_max
 
 execute store result score @s ui_tmw272_reactive_effect_num run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.ReactiveEffects
 execute store result score @s ui_tmw272_intercept_command_num run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands
+
+scoreboard players set @s ui_tmw272_card_used 0
 
 #
 scoreboard players add @s ui_tmw272_match_time 1
@@ -46,6 +53,14 @@ execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/acti
 execute if entity @s[type=!player] run function ui:tmw/272/common/visual_input/entity
 
 #
+execute if score $turn_time_rev ui_temp matches ..-1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
+execute if score $turn_time ui_temp matches 2.. if score $turn_time_rev ui_temp matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
+execute if score $turn_time ui_temp matches ..-1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0] at @s run function ui:tmw/272/after_effect/
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
+execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0] at @s run function ui:tmw/272/death_effect/active
+
+#
 execute if score @s ui_tmw272_invisible matches 1.. at @s run particle dust 1 1 1 1 ~ ~1 ~ 0.4 0.5 0.4 0 1 force
 execute if score @s ui_tmw272_flying matches 1.. at @s run particle sweep_attack ~ ~0.3 ~ 0.1 0.1 0.1 0 1 force
 execute if score @s ui_tmw272_glowing matches 1.. at @s run effect give @s glowing 1 0 true
@@ -56,14 +71,6 @@ execute if score @s ui_tmw272_cost_next matches 1.. at @s if predicate ui:percen
 execute if score @s ui_tmw272_bleed matches 1.. at @s run particle block red_wool ~ ~1 ~ 0.4 0.5 0.4 0.5 1 force
 execute if score @s ui_tmw272_burn matches 1.. at @s run particle flame ~ ~1 ~ 0.4 0.5 0.4 0.05 1 force
 execute if score @s ui_tmw272_karma matches 100.. run function ui:tmw/272/match/periodic/state/karma
-
-#
-execute if score $turn_time_rev ui_temp matches ..-1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
-execute if score $turn_time ui_temp matches 2.. if score $turn_time_rev ui_temp matches 2.. if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
-execute if score $turn_time ui_temp matches ..-1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0] at @s run function ui:tmw/272/after_effect/
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active[0] at @s run function ui:tmw/272/after_effect/active
-execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0] at @s run function ui:tmw/272/death_effect/active
 
 # マナチェッカー最大値
 scoreboard players operation $mana_increase_temp ui_temp -= @s ui_tmw272_mana
