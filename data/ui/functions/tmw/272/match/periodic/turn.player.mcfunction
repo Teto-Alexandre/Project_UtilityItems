@@ -58,6 +58,8 @@ execute if score @s ui_tmw272_trade matches 1.. run function ui:tmw/272/match/pe
 execute if score @s ui_tmw272_nausea matches 1.. run function ui:tmw/272/match/periodic/state/nausea
 # 閉幕：1減少
 execute if score @s ui_tmw272_wound matches 1.. run function ui:tmw/272/match/periodic/state/wound
+# 閉幕：2/3減少
+execute if score @s ui_tmw272_unprotected matches 1.. run function ui:tmw/272/match/periodic/state/unprotected
 # 常在：カードを使うとnダメージ、発動で2/3、開幕消滅
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_bleed matches 0 run scoreboard players set $success ui_temp 1

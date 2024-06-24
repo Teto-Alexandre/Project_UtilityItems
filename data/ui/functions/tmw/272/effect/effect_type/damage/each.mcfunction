@@ -11,6 +11,9 @@ execute unless data storage ui:temp temp.effect.no_armor run scoreboard players 
 # 停止
 execute if score $deathblow_checker ui_temp matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_stop run function ui:tmw/272/effect/effect_type/damage/stop
 
+# 無防備
+execute unless score @s[tag=!ui_temp_player] ui_tmw272_unprotected matches 0 if score $var_temp ui_temp matches 1.. unless data storage ui:temp temp.effect.no_unprotected run function ui:tmw/272/effect/effect_type/damage/unprotected
+
 # 不死
 execute if score $deathblow_checker ui_temp matches 1 if score $var_temp ui_temp matches 1.. if score @s ui_tmw272_undying matches 1.. unless data storage ui:temp temp.effect.no_undying run function ui:tmw/272/effect/effect_type/damage/undying
 
