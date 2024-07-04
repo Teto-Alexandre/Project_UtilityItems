@@ -1,3 +1,5 @@
+function oh_my_dat:please
+
 # varをコピーして回数を増やす
 scoreboard players operation $var_temp ui_temp = $var ui_temp
 scoreboard players set $condition_checker_temp ui_temp 0
