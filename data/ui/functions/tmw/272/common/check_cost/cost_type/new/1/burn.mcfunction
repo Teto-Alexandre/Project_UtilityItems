@@ -39,7 +39,7 @@ execute unless score $cost_add ui_temp matches 0 run scoreboard players operatio
 # 入力
 scoreboard players operation $cost ui_temp += $cost_act ui_temp
 
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
 
 #
 scoreboard players reset $cost_act_temp ui_temp

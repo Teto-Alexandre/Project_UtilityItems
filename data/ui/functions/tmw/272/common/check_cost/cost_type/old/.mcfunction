@@ -1,8 +1,5 @@
 scoreboard players set $check_cost ui_temp 0
 
-#
-#tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" CHECK_COST の解決を行います"}]
-
 # データの書き出し
 ##コスト計算の種類( 0:そのまま, 1:条件付き軽減等, 2:条件付き許可, 3:条件で一定量軽減 )
 execute store result score $cost_type ui_temp run data get storage ui:temp card.cost_type
@@ -12,9 +9,6 @@ execute store result score $cost ui_temp run data get storage ui:temp card.cost
 # ここで封印
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_seal run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_cost_next run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
-
-# デバッグメッセ
-#tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]
 
 # スタンしているなら問答無用で却下
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_stun if score @s ui_tmw272_stun matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]

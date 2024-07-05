@@ -2,7 +2,7 @@
 data modify storage ui:temp temp.effect set from storage ui:temp temp.card.effects[0]
 
 # デバッグメッセ
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"解決"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":" : "},{"storage":"ui:temp","nbt":"temp.effect"}]
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"解決"},{"score":{"name": "$count","objective": "ui_temp"}},{"text":" : "},{"storage":"ui:temp","nbt":"temp.effect"}]
 
 #
 scoreboard players set $condition ui_temp 0

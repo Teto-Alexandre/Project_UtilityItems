@@ -20,7 +20,7 @@ execute unless entity @e[tag=tmw272_match] if score @s ui_tmw272_link_id matches
 
 #
 execute if score $type ui_temp matches -1 run function ui:tmw/272/id/-1/
-execute if score $type ui_temp matches -2 run function ui:tmw/272/id/-2/
+#execute if score $type ui_temp matches -2 run function ui:tmw/272/id/-2/
 execute if score $type ui_temp matches -3 run function ui:tmw/272/id/-3/
 #execute if score $type ui_temp matches 1 if entity @s[scores={ui_use1=1..}] if entity @s[tag=tmw272_active] run function ui:tmw/272/id/1/
 execute if score $type ui_temp matches 1 run function ui:tmw/272/id/1/

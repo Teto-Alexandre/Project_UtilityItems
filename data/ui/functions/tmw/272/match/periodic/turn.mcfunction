@@ -1,5 +1,3 @@
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"MATCH_"},{"score":{"name": "@s","objective": "ui_obj_id"}},{"text":"_5SEC が読み込まれました"}]
-
 scoreboard players add @s ui_tmw272_match_round 1
 scoreboard players add @s ui_tmw272_true_match_round 1
 execute if score @s ui_tmw272_match_round = @s ui_tmw272_true_match_round run tellraw @a[tag=ui_temp_players] ["",{"score":{"name": "@s","objective": "ui_tmw272_match_round"}},{"text": "幕目"}]

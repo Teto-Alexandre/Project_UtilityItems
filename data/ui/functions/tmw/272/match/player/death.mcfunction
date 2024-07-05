@@ -1,5 +1,3 @@
-#tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"がマッチに敗北しました"}]
-
 execute if entity @s[tag=!summoned_delete] run tellraw @a[tag=ui_temp_players] ["",{"selector":"@s"},{"text": "が戦線離脱しました"}]
 
 #scoreboard players reset @s ui_tmw272_link_id

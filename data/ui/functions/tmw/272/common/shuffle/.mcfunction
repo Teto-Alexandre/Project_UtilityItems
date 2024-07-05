@@ -1,5 +1,4 @@
 # OMDを呼び出して配列の内容をシャッフルする
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"SHUFFLE の解決を行います"}]
 
 #
 function oh_my_dat:please

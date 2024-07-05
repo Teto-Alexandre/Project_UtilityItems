@@ -1,6 +1,5 @@
 # OMDを呼び出して自分のドロッパー（をコピーした一次リスト、リスト数は９から上下する）からランダムなアイテムを取り出す
 # 空欄のスロットからは何も出ない
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"DRAW_CARD の解決を行います"}]
 
 ## $cg1_common_draw_type ui_temp : ドロータイプ
 ## $cg1_common_draw_num ui_temp : ドロー数

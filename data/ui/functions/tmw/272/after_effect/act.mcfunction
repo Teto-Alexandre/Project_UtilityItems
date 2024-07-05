@@ -7,9 +7,6 @@ scoreboard players reset $is_card ui_temp
 execute if data storage ui:temp card.is_card run scoreboard players set $broadcast_type ui_temp 1
 execute if data storage ui:temp card.is_card run scoreboard players set $is_card ui_temp 1
 
-# デバッグメッセージ
-#tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> AE ","color":"gray","bold": true},{"storage":"ui:temp","nbt":"card.name","interpret":true},{"text":"の実行を試みます"}]
-
 # コモンより、使用可能かどうかの判定を行う
 function ui:tmw/272/common/check_cost/
 

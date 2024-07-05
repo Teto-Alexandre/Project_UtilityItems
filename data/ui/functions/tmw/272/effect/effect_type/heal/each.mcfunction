@@ -23,7 +23,6 @@ execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[ta
 
 # 回復する（回復回数を計算するテスト）
 scoreboard players operation @s ui_tmw272_health += $var_temp ui_temp
-execute run tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"のHPが"},{"score":{"name": "@s","objective": "ui_tmw272_health"}},{"text": "になりました"}]
 
 execute run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "回復！"}]
 execute if entity @e[tag=tmw272_temp_card_effect_target,tag=ui_temp_player] run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_self_heal += $var_temp ui_temp

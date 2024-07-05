@@ -11,10 +11,6 @@ data modify storage ui:temp player_template set value {id:-1}
 execute store result storage ui:temp player_template.id int 1 run scoreboard players get $obj_id ui_temp
 execute as @e[tag=tmw272_unpower] run data modify entity @s item.tag.anti_rejoin append from storage ui:temp player_template
 
-# デバッグメッセージ
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"追加プレイヤーをマッチへ追加しました"}]
-#tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"entity":"@e[tag=tmw272_unpower]","nbt":"item.tag"}]
-
 # タグ消し
 tag @e[tag=tmw272_unpower] remove tmw272_unpower
 

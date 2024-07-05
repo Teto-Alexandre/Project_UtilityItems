@@ -46,7 +46,7 @@ execute if score $cost_min ui_temp matches -2147483648..2147483647 if score $cos
 execute unless data storage ui:temp temp.mod.mute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp > $cost_max ui_temp run tellraw @s [{"text":"    条件が満たされていません","color":"gray"}]
 execute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp > $cost_max ui_temp run scoreboard players set $check_cost ui_temp 0
 
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
 
 #
 scoreboard players reset $cost_act_temp ui_temp

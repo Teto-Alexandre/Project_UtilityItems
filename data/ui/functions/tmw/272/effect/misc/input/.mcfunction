@@ -78,8 +78,6 @@ execute if data storage ui:tmw272 temp.max store result score $input_max ui_temp
 execute if data storage ui:tmw272 temp.min run scoreboard players operation $input_act ui_temp > $input_min ui_temp
 execute if data storage ui:tmw272 temp.max run scoreboard players operation $input_act ui_temp < $input_max ui_temp
 
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$input","objective": "ui_temp"}},{"text":"  input_act: "},{"score":{"name": "$input_act","objective": "ui_temp"}}]
-
 
 #scoreboard players reset $input_act ui_temp
 

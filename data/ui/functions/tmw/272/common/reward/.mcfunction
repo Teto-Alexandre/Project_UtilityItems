@@ -1,6 +1,5 @@
 # OMDを呼び出して自分のドロッパーから順番にアイテムを取り出す
 # 空欄のスロットからは何も出ない
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":"REWARD の解決を行います"}]
 
 ## $cg1_common_draw_type ui_temp : ドロータイプ
 ## $cg1_common_draw_num ui_temp : ドロー数

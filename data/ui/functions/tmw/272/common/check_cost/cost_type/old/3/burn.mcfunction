@@ -51,7 +51,7 @@ execute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cos
 execute store result score $cost_var ui_temp run data get storage ui:temp temp.mod.var 1
 execute if score $check_temp ui_temp matches 1.. run scoreboard players operation $cost ui_temp += $cost_var ui_temp
 
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":">@s ","color":"green"},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":" cost: "},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"  cost_act: "},{"score":{"name": "$cost_act","objective": "ui_temp"}}]
 
 #
 scoreboard players reset $check_temp ui_temp

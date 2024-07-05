@@ -21,8 +21,6 @@ execute if score $effect_type_damage_info ui_temp matches 1 run data merge stora
 execute if score $effect_type_damage_info ui_temp matches 2 run data merge storage ui:tmw272 {temp:{input:"shield"}}
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 
-execute run tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text": "になりました"}]
-
 execute if score $effect_type_damage_info ui_temp matches 1 unless data storage ui:temp temp.effect.mute run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"に"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "ダメージ！  "},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":":"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}]
 execute if score $effect_type_damage_info ui_temp matches 2 unless data storage ui:temp temp.effect.mute run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true     ,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}},{"text":"に"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "ダメージ！"}]
 

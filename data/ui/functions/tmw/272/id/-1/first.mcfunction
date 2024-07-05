@@ -28,11 +28,6 @@ execute as @e[tag=tmw272_unpower] run data modify entity @s item.tag.anti_rejoin
 execute store result storage ui:temp player_template.id int 1 run scoreboard players get $obj_id ui_temp
 execute as @e[tag=tmw272_unpower] run data modify entity @s item.tag.anti_rejoin append from storage ui:temp player_template
 
-# デバッグメッセージ
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"初期マッチメイクと生成を行いました"}]
-tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"マッチNBTの内容を開示します"}]
-#tellraw @a[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"entity":"@e[tag=tmw272_unpower]","nbt":"item.tag"}]
-
 # タグ消し
 tag @e[tag=tmw272_unpower] remove tmw272_unpower
 
