@@ -18,9 +18,6 @@ execute if data storage ui:temp temp.card.particle run function ui:tmw/272/effec
 scoreboard players set $condition_checker ui_temp 0
 execute store result score $no_last_used ui_temp run data get storage ui:temp temp.card.no_last_used
 
-#
-tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"CHECK_COST が承認しました EFFECT解決数:"},{"score":{"name": "$count","objective": "ui_temp"}}]
-
 # カード発動（説明文表示のために多数分岐）
 function ui:tmw/272/effect/broadcast/
 

@@ -15,6 +15,7 @@ scoreboard players set $is_card ui_temp 1
 #function ui:template/text_board/open
 
 # デバッグメッセージ
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ---------- start ----------","color":"gray","bold": true}]
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"storage":"ui:temp","nbt":"card.name","interpret":true},{"text":"の実行を試みます"}]
 
 # コモンより、使用可能かどうかの判定を行う
@@ -31,6 +32,9 @@ function ui:tmw/272/common/check_cost/
 
 # 他のプレイヤーの OMD かもしれないので呼び戻す
 function oh_my_dat:please
+
+# デバッグメッセージ
+tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ----------- end -----------","color":"gray","bold": true}]
 
 # キャッシュクリア
 scoreboard players reset $broadcast_type ui_temp

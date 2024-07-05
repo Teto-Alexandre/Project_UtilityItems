@@ -66,7 +66,6 @@ execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/
 ## reactive_target_ids:[] で指名 (誘発時のターゲット)
 execute if score $target_type ui_temp matches 20 run function ui:tmw/272/effect/target_type/20/
 
-execute if entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"selector":"@e[tag=tmw272_temp_card_effect_target]"},{"text":"がターゲットされました"}]
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
