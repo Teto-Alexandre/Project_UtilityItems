@@ -86,7 +86,7 @@ execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.car
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.card.indep unless data storage ui:temp temp.card.no_surehit if score $surehit_checker ui_temp matches 1 run scoreboard players remove @s ui_tmw272_surehit 1
 
 # numがあるなら返却
-execute if data storage ui:temp card.num_consume run function ui:tmw/272/effect/success.num
+execute if score $is_card ui_temp matches 1 if data storage ui:temp card.num_consume run function ui:tmw/272/effect/success.num
 
 # カードの一時データも削除
 data remove storage ui:temp temp
