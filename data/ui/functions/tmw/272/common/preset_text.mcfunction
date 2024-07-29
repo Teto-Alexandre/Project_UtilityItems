@@ -120,7 +120,7 @@ data modify storage ui:tmw272_text simple_value.wound set value {title:'[{"text"
 data modify storage ui:tmw272_text simple_value.unprotected set value {title:'[{"text":"【無防備】","color":"gray"}]',name:'[{"text":"無防備","color":"gray"}]',hover:'[{"text":"1つにつき他者から受けるダメージが10%加算される"},{"text":"\\n閉幕 ","color":"green"},{"text":"1/3（小数点以下切り捨て）になる","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_unprotected"}}]'}
 data modify storage ui:tmw272_text simple_value.powerful set value {title:'[{"text":"【増強】","color":"gold"}]',name:'[{"text":"増強","color":"gold"}]',hover:'[{"text":"1つにつきに与えるダメージが10%加算される"},{"text":"\\n閉幕 ","color":"green"},{"text":"1/3（小数点以下切り捨て）になる","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_powerful"}}]'}
 data modify storage ui:tmw272_text simple_value.healing set value {title:'[{"text":"【癒し】","color":"#ff69b4"}]',name:'[{"text":"癒し","color":"#ff69b4"}]',hover:'[{"text":"1つにつきに自身の与回復が10%加算される"},{"text":"\\n閉幕 ","color":"green"},{"text":"1/3（小数点以下切り捨て）になる","color":"white"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_healing"}}]'}
-data modify storage ui:tmw272_text simple_value.battery set value {title:'[{"text":"【充電】","color":"#6699ff"}]',name:'[{"text":"充電","color":"#ffffcc"}]',hover:'[{"text":"特定のカードで変動する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_battery"}}]'}
+data modify storage ui:tmw272_text simple_value.battery set value {title:'[{"text":"【充電】","color":"#6699ff"}]',name:'[{"text":"充電","color":"#6699ff"}]',hover:'[{"text":"特定のカードで変動する"}]',score:'[{"score":{"name":"@s","objective":"ui_tmw272_battery"}}]'}
 
 
 
