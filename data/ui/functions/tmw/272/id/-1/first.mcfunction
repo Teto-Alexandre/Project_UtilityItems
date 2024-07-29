@@ -158,6 +158,7 @@ scoreboard objectives add ui_tmw272_wound dummy
 scoreboard objectives add ui_tmw272_unprotected dummy
 scoreboard objectives add ui_tmw272_powerful dummy
 scoreboard objectives add ui_tmw272_healing dummy
+scoreboard objectives add ui_tmw272_battery dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

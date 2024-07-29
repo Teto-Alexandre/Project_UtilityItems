@@ -117,6 +117,7 @@ scoreboard players set @s ui_tmw272_wound 0
 scoreboard players set @s ui_tmw272_unprotected 0
 scoreboard players set @s ui_tmw272_powerful 0
 scoreboard players set @s ui_tmw272_healing 0
+scoreboard players set @s ui_tmw272_battery 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
