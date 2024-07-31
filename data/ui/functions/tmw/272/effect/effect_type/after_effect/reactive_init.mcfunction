@@ -1,4 +1,5 @@
 execute unless data storage ui:temp temp.effect.cg.reactive_effect run data modify storage ui:temp temp.effect.cg.reactive_effect set value {}
+execute if data storage ui:temp temp.effect.merge_checkers run data modify storage ui:temp temp.effect.cg.reactive_effect.merge_checkers set from storage ui:temp temp.effect.merge_checkers
 execute if data storage ui:temp temp.effect.merge_checker run data modify storage ui:temp temp.effect.cg.reactive_effect.merge_checker set from storage ui:temp temp.effect.merge_checker
 execute if data storage ui:temp temp.effect.var_checker run data modify storage ui:temp temp.effect.cg.reactive_effect.var_checker set from storage ui:temp temp.effect.var_checker
 execute if data storage ui:temp temp.effect.from_self run data modify storage ui:temp temp.effect.cg.reactive_effect.from_self set from storage ui:temp temp.effect.from_self
