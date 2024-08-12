@@ -130,3 +130,7 @@ execute unless score @s ui_tmw272_dodge_next matches 0 run scoreboard players se
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/dodge
 # 常時：自身の沈黙以外のあらゆる変数操作ができない、閉幕1減る
 execute if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/match/periodic/state/silence
+# 常時：コスト増加、被ダメージ増加で発動時消滅、閉幕半分
+execute unless score @s ui_tmw272_drowsy matches 0 run function ui:tmw/272/match/periodic/state/drowsy
+# 開幕：10につき攻撃力+1
+execute if score @s ui_tmw272_concentration matches 1.. run function ui:tmw/272/match/periodic/state/concentration
