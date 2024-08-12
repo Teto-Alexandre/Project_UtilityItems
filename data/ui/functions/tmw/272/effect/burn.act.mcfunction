@@ -113,8 +113,8 @@ function oh_my_dat:please
 execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
 
 # ここで回避済みならターゲットから消える
-execute if entity @s[tag=tmw272_temp_card_effect_protection] unless data storage ui:temp temp.effect{effect_type:"damage"} as @e[tag=tmw272_temp_card_effect_target] as @s[tag=tmw272_temp_card_effect_protection] run function ui:tmw/272/effect/misc/protection/target_fix
-execute if entity @s[tag=tmw272_temp_card_effect_dodge] as @e[tag=tmw272_temp_card_effect_target] run tag @s[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
+execute if entity @e[tag=tmw272_temp_card_effect_protection] unless data storage ui:temp temp.effect{effect_type:"damage"} as @e[tag=tmw272_temp_card_effect_target] as @s[tag=tmw272_temp_card_effect_protection] run function ui:tmw/272/effect/misc/protection/target_fix
+execute if entity @e[tag=tmw272_temp_card_effect_dodge] as @e[tag=tmw272_temp_card_effect_target] run tag @s[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
 
 ## 回復  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal/
