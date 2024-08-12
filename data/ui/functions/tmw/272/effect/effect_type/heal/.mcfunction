@@ -11,4 +11,7 @@ execute unless data storage ui:temp temp.effect.indep unless data storage ui:tem
 execute unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_healing run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 execute unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_healing run execute if score @s ui_tmw272_healing matches 1.. run function ui:tmw/272/effect/effect_type/heal/healing
 
+#
+execute unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_contract as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_contract matches 1.. run function ui:tmw/272/effect/effect_type/heal/contract2
+
 execute as @e[tag=tmw272_temp_card_effect_target] run function ui:tmw/272/effect/effect_type/heal/each

@@ -1,0 +1,15 @@
+[
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$stack"
+      },
+      "score": "tds_dmg",
+      "scale": 1
+    },
+    "add": true
+  }
+]
