@@ -8,8 +8,9 @@ execute store result score $cost ui_temp run data get storage ui:temp card.cost.
 execute store result score $bypass ui_temp run data get storage ui:temp card.cost.bypass
 
 # ここで封印
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_seal run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_cost_next run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_drowsy if score @s ui_tmw272_chain matches 1.. run scoreboard players operation $cost ui_temp += @s ui_tmw272_drowsy
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_seal run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_cost_next run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
 
 # デバッグメッセ
 tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"コストタイプ"},{"score":{"name": "$cost_type","objective": "ui_temp"}},{"text":", コスト"},{"score":{"name": "$cost","objective": "ui_temp"}},{"text":"です"}]

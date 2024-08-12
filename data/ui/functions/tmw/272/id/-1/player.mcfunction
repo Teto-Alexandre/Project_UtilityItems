@@ -118,6 +118,12 @@ scoreboard players set @s ui_tmw272_unprotected 0
 scoreboard players set @s ui_tmw272_powerful 0
 scoreboard players set @s ui_tmw272_healing 0
 scoreboard players set @s ui_tmw272_battery 0
+scoreboard players set @s ui_tmw272_contract 0
+scoreboard players set @s ui_tmw272_silence 0
+scoreboard players set @s ui_tmw272_drowsy 0
+scoreboard players set @s ui_tmw272_concentration 0
+scoreboard players set @s ui_tmw272_levitation 0
+scoreboard players set @s ui_tmw272_protection 0
 
 scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0

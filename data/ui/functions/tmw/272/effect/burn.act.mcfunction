@@ -87,6 +87,11 @@ execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 execute store result storage ui:temp temp.effect.var int 1 run scoreboard players get $var ui_temp
 
+# 変数による効果の無効化
+execute if score @s ui_tmw272_contract matches 1.. unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_contract run function ui:tmw/272/effect/effect_type/heal/contract
+execute if score @s ui_tmw272_silence matches 1.. if data storage ui:temp temp.effect{input:"silence"} if score $target_type ui_temp matches 2 run tag @s add tmw272_temp_card_effect_bypass_silence
+execute if score @s ui_tmw272_silence matches 1.. if data storage ui:temp temp.effect{effect_type:"modify_value"} unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_silence unless entity @s[tag=tmw272_temp_card_effect_bypass_silence] run function ui:tmw/272/effect/effect_type/modify_value/silence
+
 # effect_type:"intercept_command"
 function oh_my_dat:please
 scoreboard players set $reactive_effect_linear_type ui_temp 1
@@ -162,6 +167,9 @@ execute unless data storage ui:temp temp.effect.no_reactive_effect unless data s
 scoreboard players set $reactive_effect_linear_type ui_temp 2
 execute unless data storage ui:temp temp.effect.no_reactive_effect unless data storage ui:temp temp.effect.no_reactive_effect_to as @e[tag=tmw272_temp_card_effect_target] if score @s ui_tmw272_reactive_effect_num matches 1.. run function ui:tmw/272/reactive_effect/targetted
 function oh_my_dat:please
+
+#
+tag @s[tag=tmw272_temp_card_effect_bypass_silence] remove tmw272_temp_card_effect_bypass_silence
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
 tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old

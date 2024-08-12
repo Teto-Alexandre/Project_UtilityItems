@@ -159,6 +159,12 @@ scoreboard objectives add ui_tmw272_unprotected dummy
 scoreboard objectives add ui_tmw272_powerful dummy
 scoreboard objectives add ui_tmw272_healing dummy
 scoreboard objectives add ui_tmw272_battery dummy
+scoreboard objectives add ui_tmw272_contract dummy
+scoreboard objectives add ui_tmw272_silence dummy
+scoreboard objectives add ui_tmw272_drowsy dummy
+scoreboard objectives add ui_tmw272_concentration dummy
+scoreboard objectives add ui_tmw272_levitation dummy
+scoreboard objectives add ui_tmw272_protection dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

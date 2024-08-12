@@ -53,6 +53,9 @@ execute if score $particle_laser ui_temp matches 1.. positioned as @e[tag=tmw272
 # 帯電
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.card.indep unless data storage ui:temp temp.card.no_shock if score $shock_checker ui_temp >= @s ui_tmw272_shock if score @s ui_tmw272_shock matches 1.. run function ui:tmw/272/effect/misc/shock
 
+# 一連の効果終了
+execute if entity @s[tag=tmw272_temp_card_effect_activated_silence] if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/effect/misc/silence
+
 # 一連のターゲットを削除
 tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge
 tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_target_old
