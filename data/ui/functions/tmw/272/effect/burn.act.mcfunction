@@ -26,6 +26,8 @@ execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_naus
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_type ui_temp 18
 execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_dazzle matches 1.. unless score $target_type ui_temp matches 2 unless score $target_type ui_temp matches 8 run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
+execute as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_yes_random
+execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_no_area
 
 # ターゲットエンティティとNBT
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
@@ -33,6 +35,8 @@ execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/e
 #execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
+# ターゲット数を一時保存
+scoreboard players operation $target_count_save ui_temp = $target_count ui_temp
 ## VEで見ている相手
 execute if score $target_type ui_temp matches 1 run function ui:tmw/272/effect/target_type/1
 ## 自分
@@ -73,9 +77,13 @@ execute if score $target_type ui_temp matches 18 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/target_type/19/
 ## reactive_target_ids:[] で指名 (誘発時のターゲット)
 execute if score $target_type ui_temp matches 20 run function ui:tmw/272/effect/target_type/20/
+# ターゲット数を元に戻す
+scoreboard players operation $target_count ui_temp = $target_count_save ui_temp
 
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
+tag @e[tag=ui_temp_players_yes_random] remove ui_temp_players_yes_random
+tag @e[tag=ui_temp_players_no_area] remove ui_temp_players_no_area
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
 tag @e[tag=ui_temp_players_no_target] remove ui_temp_players_no_target
 
@@ -105,7 +113,8 @@ function oh_my_dat:please
 execute if data storage ui:temp temp.effect{effect_type:"damage"} run function ui:tmw/272/effect/effect_type/damage/
 
 # ここで回避済みならターゲットから消える
-tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
+execute if entity @s[tag=tmw272_temp_card_effect_protection] unless data storage ui:temp temp.effect{effect_type:"damage"} as @e[tag=tmw272_temp_card_effect_target] as @s[tag=tmw272_temp_card_effect_protection] run function ui:tmw/272/effect/misc/protection/target_fix
+execute if entity @s[tag=tmw272_temp_card_effect_dodge] as @e[tag=tmw272_temp_card_effect_target] run tag @s[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_target
 
 ## 回復  未実装（condition_checker:タゲの現在の体力「最大・最小」）
 execute if data storage ui:temp temp.effect{effect_type:"heal"} run function ui:tmw/272/effect/effect_type/heal/

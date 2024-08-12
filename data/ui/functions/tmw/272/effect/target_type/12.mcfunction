@@ -7,7 +7,7 @@ execute if score @s ui_team matches 4 run tag @e[tag=!tmw272_spectate,tag=ui_tem
 execute if score @s ui_team matches 6 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=6}] add tmw272_temp_card_effect_team
 
 # 自分含む味方全員を対象に取る
-tag @e[tag=!tmw272_spectate,tag=ui_temp_players,tag=!ui_temp_player,tag=tmw272_temp_card_effect_team,tag=!ui_temp_players_no_target] add tmw272_temp_card_effect_target
+tag @e[tag=!tmw272_spectate,tag=ui_temp_players,tag=!ui_temp_player,tag=tmw272_temp_card_effect_team,tag=!ui_temp_players_no_target,tag=!ui_temp_players_no_area] add tmw272_temp_card_effect_target
 
 #
 tag @e[tag=tmw272_temp_card_effect_team] remove tmw272_temp_card_effect_team

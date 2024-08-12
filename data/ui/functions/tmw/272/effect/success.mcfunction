@@ -55,6 +55,7 @@ execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.car
 
 # 一連の効果終了
 execute if entity @s[tag=tmw272_temp_card_effect_activated_silence] if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/effect/misc/silence
+execute if entity @s[tag=tmw272_temp_card_effect_activated_protection] if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/effect/misc/protection/end_of_effect
 
 # 一連のターゲットを削除
 tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge

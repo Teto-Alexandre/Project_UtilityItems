@@ -134,3 +134,5 @@ execute if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/match/
 execute unless score @s ui_tmw272_drowsy matches 0 run function ui:tmw/272/match/periodic/state/drowsy
 # 開幕：10につき攻撃力+1
 execute if score @s ui_tmw272_concentration matches 1.. run function ui:tmw/272/match/periodic/state/concentration
+# 常時：ランダムで優先ターゲットになる代わりに全体が当たらなくなる、閉幕1減る
+execute if score @s ui_tmw272_levitation matches 1.. run function ui:tmw/272/match/periodic/state/levitation
