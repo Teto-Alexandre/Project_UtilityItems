@@ -74,6 +74,11 @@ tag @e[tag=ui_temp_players_no_area] remove ui_temp_players_no_area
 tag @e[tag=ui_temp_players_no_random] remove ui_temp_players_no_random
 tag @e[tag=ui_temp_players_no_target] remove ui_temp_players_no_target
 
+scoreboard players reset $target_type_temp ui_temp
+scoreboard players reset $target_count_temp ui_temp
+scoreboard players reset $target_type_save ui_temp
+scoreboard players reset $target_count_save ui_temp
+
 # varを定義
 scoreboard players set $not_var ui_temp 0
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
