@@ -11,20 +11,7 @@ execute if score $target_type ui_temp matches 0 run scoreboard players set $targ
 execute if score $target_count ui_temp matches ..0 run scoreboard players set $target_count ui_temp 1
 
 # ターゲット修整
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 6
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 4
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 5 run scoreboard players set $target_type ui_temp 6
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_type ui_temp 6
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_count ui_temp 2
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 10 run scoreboard players set $target_type ui_temp 4
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 11 run scoreboard players set $target_type ui_temp 6
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 12 run scoreboard players set $target_type ui_temp 4
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_confusion matches 1.. if score $target_type ui_temp matches 13 run scoreboard players set $target_type ui_temp 6
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 3 run scoreboard players set $target_type ui_temp 1
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_blindness matches 1.. if score $target_type ui_temp matches 4 run scoreboard players set $target_type ui_temp 8
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 1 run scoreboard players set $target_type ui_temp 5
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_nausea matches 1.. if score $target_type ui_temp matches 8 run scoreboard players set $target_type ui_temp 18
-execute unless score @s ui_tmw272_surehit matches 1.. if score @s ui_tmw272_dazzle matches 1.. unless score $target_type ui_temp matches 2 unless score $target_type ui_temp matches 8 run scoreboard players operation $target_count ui_temp -= @s ui_tmw272_dazzle
+execute unless score @s ui_tmw272_surehit matches 1.. run function ui:tmw/272/effect/target_type/change/
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
 execute as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_yes_random
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_no_area
