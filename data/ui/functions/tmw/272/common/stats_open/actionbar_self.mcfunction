@@ -13,6 +13,13 @@ data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore 
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"/","color":"aqua"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@s","objective": "ui_tmw272_mana_max"},"color":"aqua"}'
 
+data merge storage ui:tmw272 {temp:{input:"null"}}
+data modify storage ui:tmw272 temp.input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_self
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
+data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true}'
+data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":":","color":"gray"}'
+data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}'
+
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":" - Target: ","color":"white"}'
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"HP:","color":"red"}'
 execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@e[tag=tmw272_visual_input,limit=1]","objective": "ui_tmw272_health"},"color":"red"}'
