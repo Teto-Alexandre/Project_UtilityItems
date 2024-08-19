@@ -1,3 +1,5 @@
+function oh_its_dat:please
+
 function ui:template/text_board/open
 
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"You: ","color":"white"}'
@@ -13,9 +15,11 @@ data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore 
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"/","color":"aqua"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name": "@s","objective": "ui_tmw272_mana_max"},"color":"aqua"}'
 
-data merge storage ui:tmw272 {temp:{input:"null"}}
+data merge storage ui:tmw272 {temp:{input:"health"}}
 data modify storage ui:tmw272 temp.input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_self
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
+data modify storage ui:tmw272_text temp_1 set from storage ui:tmw272_text temp
+data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":", ","color":"gray"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":":","color":"gray"}'
 data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true}'
