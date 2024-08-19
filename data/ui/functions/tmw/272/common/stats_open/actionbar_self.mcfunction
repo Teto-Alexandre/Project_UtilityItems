@@ -42,7 +42,7 @@ execute if entity @e[tag=tmw272_visual_input,limit=1] run data modify entity @e[
 execute if entity @e[tag=tmw272_visual_input,limit=1] run execute if data storage ui:tmw272_text temp_2 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":", ","color":"gray"}'
 #execute if entity @e[tag=tmw272_visual_input,limit=1] run execute if data storage ui:tmw272_text temp_2 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp_2.name","interpret":true}'
 #execute if entity @e[tag=tmw272_visual_input,limit=1] run execute if data storage ui:tmw272_text temp_2 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":":","color":"gray"}'
-execute if entity @e[tag=tmw272_visual_input,limit=1] run execute if data storage ui:tmw272_text temp_2 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp_2.score_with_color","interpret":true}'
+execute if entity @e[tag=tmw272_visual_input,limit=1] run execute if data storage ui:tmw272_text temp_2 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"storage":"ui:tmw272_text","nbt":"temp_2.target_score_with_color","interpret":true}'
 
 function ui:template/text_board/bro_actionbar_cg
 
