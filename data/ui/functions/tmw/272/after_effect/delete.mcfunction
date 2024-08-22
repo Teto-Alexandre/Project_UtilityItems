@@ -6,6 +6,7 @@ data modify storage ui:temp temp.effect.merge_checker set from storage ui:temp c
 data remove storage ui:temp temp.effect.merge_checker.repeat
 data remove storage ui:temp temp.effect.merge_checker.delay
 data remove storage ui:temp temp.effect.merge_checker.delay_base
+execute if data storage ui:temp card.delete_mute run data modify storage ui:temp temp.effect.mute set value 1
 
 # 探索数は限度いっぱいまで
 scoreboard players set $var ui_temp 32767
