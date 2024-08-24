@@ -165,6 +165,7 @@ scoreboard objectives add ui_tmw272_drowsy dummy
 scoreboard objectives add ui_tmw272_concentration dummy
 scoreboard objectives add ui_tmw272_levitation dummy
 scoreboard objectives add ui_tmw272_protection dummy
+scoreboard objectives add ui_tmw272_divine dummy
 
 # ユーザー用一次変数
 scoreboard objectives add ui_tmw272_temp1 dummy

@@ -131,6 +131,7 @@ fund                :【資金】               :gold
 sin                 :【罪】                 :#870000
 mind_wish           :【心願】               :#ece038
 sheep               :【羊】                 :white
+divine              :【神威】               :#740A00
 
 # 参照用数値
 only_one:【唯一】:gold:唯一をセットしていると1になる、初期値は0
