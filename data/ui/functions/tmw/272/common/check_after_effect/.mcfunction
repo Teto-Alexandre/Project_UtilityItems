@@ -12,8 +12,8 @@ execute if score $delay_type ui_temp matches 1 run function ui:tmw/272/common/ch
 execute if score $delay_type ui_temp matches 2 run function ui:tmw/272/common/check_after_effect/delay_type/2
 
 # 使用済みタグをつける
-execute if score $delay_type ui_temp matches 1..2 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects{ae_turn:1} run scoreboard players set $check_after_effect ui_temp 0
-execute if score $delay_type ui_temp matches 1..2 if score $check_after_effect ui_temp matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects.ae_turn set value 1
+execute if score $delay_type ui_temp matches 1..2 if data storage ui:temp card{ae_turn:1} run scoreboard players set $check_after_effect ui_temp 0
+execute if score $delay_type ui_temp matches 1..2 if score $check_after_effect ui_temp matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0].ae_turn set value 1
 
 # キャッシュクリア
 scoreboard players reset $delay_type ui_temp
