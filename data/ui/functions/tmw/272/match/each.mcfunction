@@ -20,8 +20,8 @@ execute if entity @e[tag=ui_temp_players,tag=!tmw272_join_announce] run function
 
 # 時間経過ごとに通知
 execute if score $turn_time ui_temp matches 30 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
-execute if score $turn_time ui_temp matches 20 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
-execute if score $turn_time ui_temp matches 10 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 2 0
+execute if score $turn_time ui_temp matches 20 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 1.9 0
+execute if score $turn_time ui_temp matches 10 as @a[tag=ui_temp_players] at @s run playsound block.note_block.hat player @s ~ ~ ~ 1 1.8 0
 execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/periodic/turn
 
 ## <== エンティティはここで動かす
