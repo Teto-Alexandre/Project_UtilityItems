@@ -11,4 +11,4 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEff
 data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0]
 
 scoreboard players remove $cg1_turn_name_num ui_temp 1
-execute if score $cg1_turn_name_num ui_temp matches 1.. run function ui:tmw/272/match/periodic/turn_name.lp
+execute if score $cg1_turn_name_num ui_temp matches 1.. run function ui:tmw/272/match/periodic/ae_turn.lp
