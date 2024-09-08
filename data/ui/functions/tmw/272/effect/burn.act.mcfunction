@@ -162,6 +162,8 @@ execute if data storage ui:temp temp.effect{effect_type:"intercept_command"} run
 execute if data storage ui:temp temp.effect{effect_type:"modify_intercept_command"} run function ui:tmw/272/effect/effect_type/modify_intercept_command/
 ## 名前条件加算
 execute if data storage ui:temp temp.effect{effect_type:"name_condition"} run function ui:tmw/272/effect/effect_type/name_condition/
+## 説明文条件加算
+execute if data storage ui:temp temp.effect{effect_type:"lore_condition"} run function ui:tmw/272/effect/effect_type/lore_condition/
 
 function oh_my_dat:please
 
