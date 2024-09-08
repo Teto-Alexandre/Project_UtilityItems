@@ -82,9 +82,7 @@ scoreboard players reset $target_count_save ui_temp
 # varを定義
 scoreboard players set $not_var ui_temp 0
 execute store result score $var ui_temp run data get storage ui:temp temp.effect.var 1
-execute unless data storage ui:temp temp.effect.var run scoreboard players set $not_var ui_temp 1
-execute unless data storage ui:temp temp.effect.rand run scoreboard players set $not_var ui_temp 1
-execute unless data storage ui:temp temp.effect.var_input run scoreboard players set $not_var ui_temp 1
+execute unless data storage ui:temp temp.effect.var unless data storage ui:temp temp.effect.rand unless data storage ui:temp temp.effect.var_input run scoreboard players set $not_var ui_temp 1
 execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/misc/random/
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 execute store result storage ui:temp temp.effect.var int 1 run scoreboard players get $var ui_temp
@@ -162,6 +160,8 @@ execute if data storage ui:temp temp.effect{effect_type:"modify_reactive_effect"
 execute if data storage ui:temp temp.effect{effect_type:"intercept_command"} run function ui:tmw/272/effect/effect_type/after_effect/
 ## インターセプトコマンドへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_intercept_command"} run function ui:tmw/272/effect/effect_type/modify_intercept_command/
+## 名前条件加算
+execute if data storage ui:temp temp.effect{effect_type:"name_condition"} run function ui:tmw/272/effect/effect_type/name_condition/
 
 function oh_my_dat:please
 
