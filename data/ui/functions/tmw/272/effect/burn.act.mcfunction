@@ -15,6 +15,8 @@ execute unless score @s ui_tmw272_surehit matches 1.. run function ui:tmw/272/ef
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_flying matches 1.. run tag @s add ui_temp_players_no_random
 execute as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_yes_random
 execute unless score @s ui_tmw272_surehit matches 1.. as @e[tag=ui_temp_players] if score @s ui_tmw272_levitation matches 1.. run tag @s add ui_temp_players_no_area
+execute if data storage ui:temp temp.effect.target_exclusion_summon as @e[tag=ui_temp_players,tag=summoned_nocount] run tag @s add ui_temp_players_no_target
+execute if data storage ui:temp temp.effect.t_e_s as @e[tag=ui_temp_players,tag=summoned_nocount] run tag @s add ui_temp_players_no_target
 
 # ターゲットエンティティとNBT
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
