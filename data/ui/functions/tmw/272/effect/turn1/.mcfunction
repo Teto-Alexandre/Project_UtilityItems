@@ -26,8 +26,8 @@ execute if score $turn_limit ui_temp matches 0 run scoreboard players set $turn_
 execute if score $turn_max ui_temp matches 0 run scoreboard players set $turn_max ui_temp 1
 
 #
-execute if score $turn_max ui_temp matches 1.. if score $turn_name ui_temp >= $turn_limit ui_temp unless data storage ui:temp card.turn1_mute run tellraw @s ["",{"text":"このカードは","color":"gray"},{"score":{"name":"$turn_max","objective":"ui_temp"},"color":"gray"},{"text":"ターンに","color":"gray"},{"score":{"name":"$turn_limit","objective":"ui_temp"},"color":"gray"},{"text":"回しか使用できません (解除:","color":"gray"},{"score":{"name":"$turn_min_turn","objective":"ui_temp"},"color":"gray"},{"text":"ターン後)","color":"gray"}]
-execute if score $turn_max ui_temp matches ..-1 if score $turn_name ui_temp >= $turn_limit ui_temp unless data storage ui:temp card.turn1_mute run tellraw @s ["",{"text":"このカードは戦線中ではもう使用できません","color":"gray"}]
+execute if score $turn_max ui_temp matches 1.. if score $turn_name ui_temp >= $turn_limit ui_temp unless data storage ui:temp card.turn1_mute unless data storage ui:temp card.turn1.mute run tellraw @s ["",{"text":"このカードは","color":"gray"},{"score":{"name":"$turn_max","objective":"ui_temp"},"color":"gray"},{"text":"ターンに","color":"gray"},{"score":{"name":"$turn_limit","objective":"ui_temp"},"color":"gray"},{"text":"回しか使用できません (解除:","color":"gray"},{"score":{"name":"$turn_min_turn","objective":"ui_temp"},"color":"gray"},{"text":"ターン後)","color":"gray"}]
+execute if score $turn_max ui_temp matches ..-1 if score $turn_name ui_temp >= $turn_limit ui_temp unless data storage ui:temp card.turn1_mute unless data storage ui:temp card.turn1.mute run tellraw @s ["",{"text":"このカードは戦線中ではもう使用できません","color":"gray"}]
 execute if score $turn_name ui_temp >= $turn_limit ui_temp run scoreboard players set $check_cost ui_temp 0
 
 #
