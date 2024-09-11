@@ -39,6 +39,8 @@ execute if data storage ui:temp temp.effect.list[8].tag.copy run data modify sto
 data modify entity @e[tag=hc_deck_temp,limit=1] CustomName set from storage ui:temp temp.effect.name
 execute if data storage ui:temp temp.effect.ArmorItems run data modify entity @e[tag=hc_deck_temp,limit=1] ArmorItems set from storage ui:temp temp.effect.ArmorItems
 execute if data storage ui:temp temp.effect.HandItems run data modify entity @e[tag=hc_deck_temp,limit=1] HandItems set from storage ui:temp temp.effect.HandItems
+data modify entity @e[tag=hc_deck_temp,limit=1] NoGravity merge value 1b
+data modify entity @e[tag=hc_deck_temp,limit=1] Marker merge value 1b
 
 tag @s add ui_temp_target
 tag @s add ui_temp_summoner
