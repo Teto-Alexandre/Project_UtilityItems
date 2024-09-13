@@ -1,6 +1,6 @@
-tellraw @a ["",{"selector":"@e[tag=ui_temp_players,tag=!tmw272_spectate]"},{"text": "が戦線に勝利しました"}]
-
 execute as @e[tag=ui_temp_players,tag=summoned_delete] run function ui:tmw/272/match/player/death.entity
+
+tellraw @a ["",{"selector":"@e[tag=ui_temp_players,tag=!tmw272_spectate]"},{"text": "が戦線に勝利しました"}]
 
 scoreboard players add @a[tag=ui_temp_players,tag=!tmw272_spectate] ui_tmw272_battlefront_wins 1
 execute as @a[tag=ui_temp_players,tag=!tmw272_spectate] run tellraw @s ["",{"text": "あなたの勝利数は "},{"score":{"name":"@s","objective":"ui_tmw272_battlefront_wins"},"color": "gold"},{"text":"/"},{"score":{"name":"@s","objective":"ui_tmw272_battlefront_joins"},"color": "gold"},{"text": " です"}]
