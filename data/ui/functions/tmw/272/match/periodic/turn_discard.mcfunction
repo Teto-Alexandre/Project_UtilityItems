@@ -5,6 +5,7 @@ data modify storage ui:temp temp.effect set value {macro:"tmw:{cg:{turn_discard:
 scoreboard players set $var_temp ui_temp 40
 scoreboard players set $just_check ui_temp 0
 function ui:tmw/272/effect/effect_type/discard/3_macro
+scoreboard players operation @s ui_tmw272_discard += $condition_checker_temp ui_temp
 
 scoreboard players reset $condition_checker_temp ui_temp
 scoreboard players reset $just_check ui_temp
