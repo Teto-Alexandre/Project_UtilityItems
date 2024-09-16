@@ -18,7 +18,7 @@ scoreboard players operation $cg1_common_draw_inventory ui_temp > #0 ui_num
 scoreboard players operation $cg1_common_draw_num ui_temp -= $cg1_common_draw_inventory ui_temp
 
 #
-execute if score $cg1_common_draw_num ui_temp matches 1.. if score $cg1_common_draw_inventory ui_temp <= @s ui_tmw272_hand_num_limit if score $cg1_common_draw_type ui_temp matches 0 if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
+execute if score $cg1_common_draw_num ui_temp matches 1.. if score $cg1_common_draw_type ui_temp matches 0 run function ui:tmw/272/common/draw/0
 
 #
 #data remove storage ui:temp temp
