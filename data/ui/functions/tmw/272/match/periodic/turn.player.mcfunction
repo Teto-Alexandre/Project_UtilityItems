@@ -3,6 +3,7 @@ playsound block.note_block.hat player @s ~ ~ ~ 1 1.5 0
 function oh_my_dat:please
 function ui:tmw/272/match/periodic/turn_name
 function ui:tmw/272/match/periodic/ae_turn
+function ui:tmw/272/match/periodic/turn_discard
 
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0] at @s run function ui:tmw/272/after_effect/time_limit/
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.DeathEffects[0] at @s run function ui:tmw/272/death_effect/time_limit/
