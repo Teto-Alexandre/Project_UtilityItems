@@ -9,6 +9,7 @@ scoreboard players set @s ui_tmw272_mana 0
 scoreboard players set @s ui_tmw272_match_time 0
 scoreboard players set @s ui_tmw272_duplication 0
 scoreboard players set @s ui_tmw272_reactive_effect_num 0
+scoreboard players set @s ui_tmw272_intercept_command_num 0
 
 scoreboard players set @s ui_tmw272_self_hurt 0
 scoreboard players set @s ui_tmw272_decay 0
