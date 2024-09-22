@@ -31,7 +31,7 @@ execute unless entity @e[tag=tmw272_temp_steal] if entity @s[type=!player] if da
 
 # 引いた時の効果を AfterEffect に追加
 execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
+execute unless data storage ui:temp temp.effect.no_draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
 execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 
 #
@@ -49,4 +49,5 @@ execute unless score $cg1_list_count ui_temp matches 1.. run function ui:tmw/272
 scoreboard players remove $cg1_common_draw_num ui_temp 1
 execute if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/draw/0
 
-scoreboard players add @s ui_tmw272_draw 1
+execute unless data storage ui:temp temp.effect.no_draw_count run scoreboard players add @s ui_tmw272_draw 1
+#scoreboard players add @s ui_tmw272_draw 1
