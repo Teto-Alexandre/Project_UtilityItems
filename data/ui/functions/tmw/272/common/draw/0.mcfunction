@@ -31,7 +31,9 @@ execute unless entity @e[tag=tmw272_temp_steal] if entity @s[type=!player] if da
 
 # 引いた時の効果を AfterEffect に追加
 execute as @e[tag=tmw272_temp_steal] run function oh_my_dat:please
-execute unless data storage ui:temp temp.effect.no_draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.copy_display run data modify storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.name set from storage ui:temp temp.draw_card.tag.display.Name
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.copy_display run data modify storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.lore set from storage ui:temp temp.draw_card.tag.display.Lore
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
 execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
 
 #

@@ -8,6 +8,8 @@ execute if data storage ui:temp temp.effect{effect_type:"reactive_effect"} run s
 execute if data storage ui:temp temp.effect{effect_type:"intercept_command"} run scoreboard players set $after_effect ui_temp 4
 
 execute if data storage ui:temp temp.effect.time_limit_turn run data modify storage ui:temp temp.effect.cg.time_limit_turn set from storage ui:temp temp.effect.time_limit_turn
+execute if data storage ui:temp temp.effect.copy_display run data modify storage ui:temp temp.effect.cg.name set from storage ui:temp card.name
+execute if data storage ui:temp temp.effect.copy_display run data modify storage ui:temp temp.effect.cg.lore set from storage ui:temp card.lore
 
 execute if score $after_effect ui_temp matches 3..4 run function ui:tmw/272/effect/effect_type/after_effect/reactive_init
 

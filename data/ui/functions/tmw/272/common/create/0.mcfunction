@@ -17,7 +17,9 @@ execute if entity @s[type=!player] if data storage ui:cg1 temp.list[0].tag.tmw.c
 execute if entity @s[type=player] run data modify entity @e[tag=tmw272_temp_item,limit=1] Owner set from entity @s UUID
 
 # 引いた時の効果を AfterEffect に追加
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect.copy_display run data modify storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect.name set from storage ui:cg1 temp.list[0].tag.display.Name
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect.copy_display run data modify storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect.lore set from storage ui:cg1 temp.list[0].tag.display.Lore
+execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect
 
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
