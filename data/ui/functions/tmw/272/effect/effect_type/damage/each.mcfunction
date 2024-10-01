@@ -10,7 +10,7 @@ execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $e
 execute if entity @s[tag=ui_temp_player] run scoreboard players set $effect_type_damage_info ui_temp 1
 execute if data storage ui:temp temp.effect.no_shield run scoreboard players set $effect_type_damage_info ui_temp 1
 execute if data storage ui:temp temp.effect.indep run scoreboard players set $effect_type_damage_info ui_temp 1
-execute if data storage ui:temp temp.effect.yes_shield run scoreboard players set $effect_type_damage_info ui_temp 2
+execute if data storage ui:temp temp.effect.yes_shield unless score @s ui_tmw272_shield matches 0 run scoreboard players set $effect_type_damage_info ui_temp 2
 execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @s ui_tmw272_health -= $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 1 if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += $var_temp ui_temp
 execute if score $effect_type_damage_info ui_temp matches 1 run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_damage += $var_temp ui_temp
