@@ -93,7 +93,8 @@ function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge value {ui:{cg1:{list_origin:[]}}}
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set from storage ui:temp temp.cg.list
 
-# デッキリストを空にする
+# デッキリストを入力する
+data remove storage ui:temp temp.cg.editing
 item modify entity @a[tag=ui_temp_player,limit=1] weapon.mainhand ui:gun/value/all
 
 # リセット
