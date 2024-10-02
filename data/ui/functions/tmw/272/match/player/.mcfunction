@@ -47,10 +47,10 @@ execute if entity @s[tag=summoned_delete] if score @s ui_tmw272_match_time match
 
 # 視線入力、ステータス参照
     #プレイヤー
-execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
-execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
+        execute if entity @s[type=player] run function ui:tmw/272/common/visual_input/
+        execute if entity @s[type=player] run function ui:tmw/272/common/stats_open/actionbar_self
     #非プレイヤー
-execute if entity @s[type=!player] run function ui:tmw/272/common/visual_input/entity
+        execute if entity @s[type=!player] if predicate ui:percentage/5 run function ui:tmw/272/common/visual_input/entity
 
 #
 execute if score $turn_time_rev ui_temp matches ..-1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0] at @s run function ui:tmw/272/effect/normal_linear

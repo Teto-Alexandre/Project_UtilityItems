@@ -17,6 +17,7 @@ self_heal:【自身回復】:green:自身を回復した量を示す
 other_heal:【他者回復】:green:他者を回復した量を示す
 draw:【ドロー回数】:yellow:ドローした枚数を示す
 discard:【破棄回数】:yellow:カードを捨てた枚数を示す
+create:【創造回数】:yellow:創造した枚数を示す
 damage:【ダメージ量】:red:ダメージを与えた量を示す
 damage_taken:【被ダメージ量】:red:受けたダメージを示す
 hp_decrease:【体力減少量】:red:体力減少量を示す

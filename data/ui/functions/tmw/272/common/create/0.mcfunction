@@ -35,3 +35,5 @@ execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 t
 
 scoreboard players remove $cg1_common_draw_num ui_temp 1
 execute if score $cg1_common_draw_num ui_temp matches 1.. run function ui:tmw/272/common/create/0
+
+execute unless data storage ui:temp temp.effect.no_create_count run scoreboard players add @s ui_tmw272_create 1

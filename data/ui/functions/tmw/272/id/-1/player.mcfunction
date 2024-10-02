@@ -90,6 +90,7 @@ scoreboard players set @s ui_tmw272_self_heal 0
 scoreboard players set @s ui_tmw272_other_heal 0
 scoreboard players set @s ui_tmw272_draw 0
 scoreboard players set @s ui_tmw272_discard 0
+scoreboard players set @s ui_tmw272_create 0
 scoreboard players set @s ui_tmw272_damage 0
 scoreboard players set @s ui_tmw272_determination 0
 scoreboard players set @s ui_tmw272_soul 0

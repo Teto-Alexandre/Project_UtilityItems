@@ -3,7 +3,7 @@ execute positioned ~ ~-1 ~ if entity @e[tag=ui_temp_targetable_dropper,distance=
 particle dust 0 0 0 0.8 ~ ~ ~ 0 0 0 0 1 force
 
 scoreboard players remove $range ui_temp 1
-execute if score $success ui_temp matches 2 as @e[tag=ui_temp_targetable_dropper] at @s unless block ~ ~ ~ barrel run function ui:tmw/272/id/-1/success2
-execute if score $success ui_temp matches 2 as @e[tag=ui_temp_targetable_dropper] at @s if block ~ ~ ~ barrel run function ui:tmw/272/id/-1/success2_s27
+execute if score $success ui_temp matches 2 as @e[tag=ui_temp_targetable_dropper] at @s unless block ~ ~ ~ barrel run function ui:tmw/272/id/-1/deck_edit/success2
+execute if score $success ui_temp matches 2 as @e[tag=ui_temp_targetable_dropper] at @s if block ~ ~ ~ barrel run function ui:tmw/272/id/-1/deck_edit/success2_s27
 execute if score $success ui_temp matches 1 positioned ~ ~-1 ~ run function ui:tmw/272/id/-1/success
 execute if score $success ui_temp matches 0 if score $range ui_temp matches 1.. positioned ^ ^ ^0.5 run function ui:tmw/272/id/-1/laser
