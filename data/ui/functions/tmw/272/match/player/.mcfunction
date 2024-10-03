@@ -84,17 +84,16 @@ execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui
 execute if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range if score @s ui_tmw272_undying > @s ui_tmw272_undying_count run function ui:tmw/272/match/player/state/undying
 
 # チーム
-team join blue @s[tag=tmw272_active,scores={ui_team=1}]
-team join red @s[tag=tmw272_active,scores={ui_team=2}]
-team join yellow @s[tag=tmw272_active,scores={ui_team=3}]
-team join green @s[tag=tmw272_active,scores={ui_team=4}]
-team leave @s[tag=tmw272_active,scores={ui_team=5..6}]
-team join gray @s[tag=tmw272_active,tag=tmw272_spectate]
+#team join blue @s[tag=tmw272_active,scores={ui_team=1}]
+#team join red @s[tag=tmw272_active,scores={ui_team=2}]
+#team join yellow @s[tag=tmw272_active,scores={ui_team=3}]
+#team join green @s[tag=tmw272_active,scores={ui_team=4}]
+#team leave @s[tag=tmw272_active,scores={ui_team=5..6}]
+#team join gray @s[tag=tmw272_active,tag=tmw272_spectate]
 
 execute if entity @s[tag=tmw272_active] if score @s ui_tmw272_health <= @s ui_tmw272_lethal_range run function ui:tmw/272/match/player/death
 execute if entity @s[tag=tmw272_active] if entity @s[scores={ui_st2=5}] run tellraw @s [{"text":"戦線から撤退しますか？","color": "red"}]
 execute if entity @s[tag=tmw272_active] if entity @s[x_rotation=89..90,scores={ui_st2=20..}] run function ui:tmw/272/match/player/death
 
 #
-tag @e[tag=ui_temp_player] remove ui_temp_player
-tag @e[tag=tmw272_visual_input] remove tmw272_visual_input
+tag @s remove ui_temp_player
