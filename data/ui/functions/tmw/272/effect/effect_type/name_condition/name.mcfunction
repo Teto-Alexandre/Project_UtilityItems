@@ -14,6 +14,11 @@ execute store success score $name_condition_check ui_temp run data modify storag
 
 # 一致すると
 execute if score $name_condition_check ui_temp matches 0 run scoreboard players add $condition_checker ui_temp 1
+    # オプションで別のリストにこのデータを入力
+    execute if score $name_condition_check ui_temp matches 0 if data storage ui:temp temp.effect.list2 run data modify storage ui:temp card.list2 append from storage ui:temp name_condition.list[0]
+    execute if score $name_condition_check ui_temp matches 0 if data storage ui:temp temp.effect.list run data modify storage ui:temp card.list append from storage ui:temp name_condition.list[0]
+    # オプションでこのデータを削除
+    execute if score $name_condition_check ui_temp matches 0 if data storage ui:temp temp.effect.list2.delete run function ui:tmw/272/effect/effect_type/name_condition/list_delete
 
 scoreboard players add $name_condition_inv ui_temp 1
 execute if score $name_condition_check ui_temp matches 1 if score $name_condition_inv ui_temp <= $name_condition_length ui_temp run function ui:tmw/272/effect/effect_type/name_condition/name

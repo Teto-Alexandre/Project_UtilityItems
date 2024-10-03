@@ -176,6 +176,7 @@ team join blue @s[scores={ui_team=1}]
 team join red @s[scores={ui_team=2}]
 team join yellow @s[scores={ui_team=3}]
 team join green @s[scores={ui_team=4}]
+team leave @s[scores={ui_team=5..6}]
 team join gray @s[tag=tmw272_spectate]
 
 # インベントリのコピーをとって全消し

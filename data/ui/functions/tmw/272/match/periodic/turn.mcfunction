@@ -8,4 +8,12 @@ execute if score @s ui_tmw272_match_round matches 5 run tellraw @a[tag=ui_temp_p
 execute if score @s ui_tmw272_match_round matches 10.. run scoreboard players set @s ui_is2 200
 execute if score @s ui_tmw272_match_round matches 10 run tellraw @a[tag=ui_temp_players] ["",{"text": "幕の長さが10秒に延長されました"}]
 
+# チーム(ラグのもとなので開戦とターン初めに移動)
+team join blue @e[tag=tmw272_active,scores={ui_team=1}]
+team join red @e[tag=tmw272_active,scores={ui_team=2}]
+team join yellow @e[tag=tmw272_active,scores={ui_team=3}]
+team join green @e[tag=tmw272_active,scores={ui_team=4}]
+team join gray @e[tag=tmw272_active,tag=tmw272_spectate]
+team leave @e[tag=tmw272_active,scores={ui_team=5..6}]
+
 execute as @e[tag=ui_temp_players] at @s run function ui:tmw/272/match/periodic/turn.player

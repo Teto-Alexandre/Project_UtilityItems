@@ -52,5 +52,6 @@ scoreboard players reset $team_count ui_temp
 scoreboard players set $tmw272_team_last_temped ui_temp -1
 
 # タグリセット
+tag @e[tag=ui_temp_player] remove ui_temp_player
 tag @e[tag=ui_temp_players] remove ui_temp_players
 tag @s remove tmw272_active_match

@@ -1,5 +1,6 @@
 data modify storage ui:temp temp set value {name:'{"text":"null"}',turn1:1}
 data modify storage ui:temp temp.name set from storage ui:temp card.name
+execute unless data storage ui:temp card.name if data storage ui:temp card.Name run data modify storage ui:temp temp.name set from storage ui:temp card.Name
 data modify storage ui:temp temp.turn1 set from storage ui:temp card.turn1
 
 scoreboard players set $turn_name ui_temp 0

@@ -24,4 +24,4 @@ scoreboard players reset $obj_id ui_temp
 tag @s remove ui_temp_del
 tag @s remove ui_temp_player
 tag @e[tag=tmw272_match] remove tmw272_match
-tag @e[tag=tmw272_visual_input] remove tmw272_visual_input
+#tag @e[tag=tmw272_visual_input] remove tmw272_visual_input
