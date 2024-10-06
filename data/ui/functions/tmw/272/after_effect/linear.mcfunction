@@ -5,6 +5,7 @@ data modify storage ui:temp card set from storage oh_my_dat: _[-4][-4][-4][-4][-
 function ui:tmw/272/common/check_after_effect/
 
 # 使用可能だった場合
+    execute if score $check_after_effect ui_temp matches 1.. if data storage ui:temp card.countdown run function ui:tmw/272/after_effect/countdown/
     execute if score $check_after_effect ui_temp matches 1.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects_Active append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects[0]
     #execute if score $check_after_effect ui_temp matches 1.. run tellraw @a ["",{"text":"> AE ","color":"gray","bold": true},{"storage":"ui:temp","nbt":"card"}]
     execute if score $check_after_effect ui_temp matches 1.. if data storage ui:temp card.repeat run function ui:tmw/272/after_effect/repeat
