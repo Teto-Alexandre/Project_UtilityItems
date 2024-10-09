@@ -7,7 +7,7 @@ execute store result score $editing_num ui_temp run data get storage ui:temp tem
 function ui:tmw/272/id/-1/deck_edit/deck1/
 data remove storage ui:temp temp
 
-execute if score $editing_deck1 ui_temp matches 0 run say a
+#execute if score $editing_deck1 ui_temp matches 0 run say a
 execute if score $editing_deck1 ui_temp matches 1.. run tellraw @a[tag=ui_temp_player,limit=1] [{"text":"[Idling] > ","color": "red"},{"text":"一枚制限カードが複数枚入っています","color": "gray"}]
 execute if score $editing_deck1 ui_temp matches 1.. run scoreboard players set $editing_check ui_temp 2
 
