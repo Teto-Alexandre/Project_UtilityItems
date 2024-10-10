@@ -3,7 +3,7 @@ tag @s add ui_temp_players
 
 
 
-data modify storage ui:temp temp.effect.text set from entity @s SelectedItem.tag.text
+data modify storage ui:temp temp.effect.text set from storage ui:ui23_template_answer Name
 execute store result score $name_condition_text_length ui_temp run data get storage ui:temp temp.effect.text
 scoreboard players set $broadcast_type ui_temp 1
 
