@@ -51,5 +51,7 @@ particle dust 0 1 1 2 ^ ^0.9 ^0.5 0.2 0 0.2 0 1 normal
 #execute if entity @a[distance=..2,scores={ui_st2=10..},gamemode=!adventure,gamemode=!spectator] run function ui:ui/23/st
 
 #
+scoreboard players reset $count ui_temp
+scoreboard players reset $count_temp ui_temp
 scoreboard players reset $slot ui_temp
 scoreboard players reset $slot_res ui_temp
