@@ -1,0 +1,1 @@
+tellraw @a [{"storage":"ui:ui23_template_answer","nbt":"temp[0][0][0][0].id"}]
