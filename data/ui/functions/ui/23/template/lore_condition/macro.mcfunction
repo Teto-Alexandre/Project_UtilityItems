@@ -1,0 +1,1 @@
+$data modify storage ui:temp name_condition.text set string storage ui:temp name_condition.name $(a) $(b)
