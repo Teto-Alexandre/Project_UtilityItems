@@ -35,6 +35,7 @@ execute unless data storage ui:temp temp.effect.no_draw_effect if data storage u
 execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.copy_display run data modify storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.lore set from storage ui:temp temp.draw_card.tag.display.Lore
 execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.list_self run data modify storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.list set value []
 execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.list_self run data modify storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.list append from storage ui:temp temp.draw_card
+#execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect.list_self run tellraw @a [{"storage":"ui:temp","nbt":"temp.draw_card.tag.tmw.cg.draw_effect"}]
 
 execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:temp temp.draw_card.tag.tmw.cg.draw_effect
 execute if entity @e[tag=tmw272_temp_steal] run function oh_my_dat:please
