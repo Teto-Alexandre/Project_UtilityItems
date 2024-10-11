@@ -75,4 +75,4 @@ execute if score $rand ui_calc1 matches 99 run data modify storage oh_my_dat: _[
 #data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin append value {id:"minecraft:rotten_flesh",tag:{tmw:{id:272,type:1,enableQ:1,cg:{cost:99,effects:[]}},HideFlags:1,display:{Name:'[{"text":"99:何の効果もない","italic":false,"color":"aqua"}]',Lore:[]}}}
 
 scoreboard players add $list_card_count ui_temp 1
-execute if score $list_card_count ui_temp matches ..8 run function ui:tmw/272/id/-1/non_player/hc_loop
+execute if score $list_card_count ui_temp matches ..8 run function ui:tmw/272/id/-1/non_player/zombie/
