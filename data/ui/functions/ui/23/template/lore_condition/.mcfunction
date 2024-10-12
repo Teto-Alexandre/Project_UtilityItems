@@ -1,5 +1,6 @@
 # 名前分解テスト
 tag @s add ui_temp_players
+execute as @a at @s if block ~ ~-1 ~ lapis_block run tag @s add ui_temp_players
 
 
 
