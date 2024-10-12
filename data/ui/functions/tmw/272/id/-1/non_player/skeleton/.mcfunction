@@ -9,5 +9,4 @@ execute if score $list_card_count ui_temp matches ..8 if score $list_card_rand u
 execute if score $list_card_count ui_temp matches ..8 if score $list_card_rand ui_temp matches 900..999 run function ui:tmw/272/id/-1/non_player/skeleton/old
 execute if score $list_card_count ui_temp matches ..8 if score $list_card_rand ui_temp matches ..899 if score $rand ui_calc1 matches 0..3 run function ui:tmw/272/id/-1/non_player/skeleton/other
 
-scoreboard players add $list_card_count ui_temp 1
 execute if score $list_card_count ui_temp matches ..8 run function ui:tmw/272/id/-1/non_player/skeleton/
