@@ -1,3 +1,4 @@
+execute if score $list_card_count ui_temp matches 0 if entity @s[tag=tmw272_elite] run scoreboard players set $list_card_rand ui_temp 0
 execute if score $list_card_count ui_temp matches 0 if score $list_card_rand ui_temp matches ..199 run function ui:tmw/272/id/-1/non_player/skeleton/only_one
 
 scoreboard players set $mod ui_calc1 10
