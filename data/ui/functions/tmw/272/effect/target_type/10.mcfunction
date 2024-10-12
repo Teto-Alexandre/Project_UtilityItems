@@ -5,6 +5,7 @@ execute if score @s ui_team matches 3 run tag @e[tag=!tmw272_spectate,tag=ui_tem
 execute if score @s ui_team matches 4 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=4}] add tmw272_temp_card_effect_team
 
 execute if score @s ui_team matches 6 run tag @e[tag=!tmw272_spectate,tag=ui_temp_players,scores={ui_team=6}] add tmw272_temp_card_effect_team
+execute if score @s ui_team matches 7.. run function ui:tmw/272/effect/target_type/change/team
 
 # 自分含む味方全員を対象に取る
 tag @s[tag=!ui_temp_players_no_target] add tmw272_temp_card_effect_target
