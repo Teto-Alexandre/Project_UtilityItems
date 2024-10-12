@@ -26,7 +26,7 @@ tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
 data modify storage ui:temp temp.display set from storage ui:cg1 temp.list[0].tag.display
 scoreboard players set $broadcast_type ui_temp 7
-function ui:tmw/272/effect/broadcast/
+execute unless data storage ui:temp temp.effect.mute run function ui:tmw/272/effect/broadcast/
 execute if score $cg1_common_draw_single ui_temp matches 0 run data remove storage ui:cg1 temp.list[0]
 
 # カードプールがなくなったらボックスから補充を行う

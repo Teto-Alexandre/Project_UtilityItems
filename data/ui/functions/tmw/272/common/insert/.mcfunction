@@ -7,7 +7,8 @@
 #
 #data modify storage ui:temp temp.list set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_match
 execute store result score $cg1_list_count ui_temp run data get storage ui:cg1 temp.list
-execute store result score $cg1_common_draw_num ui_temp run data get storage ui:cg1 temp.list
+scoreboard players set $cg1_common_draw_single ui_temp 0
+execute if score $cg1_list_count ui_temp matches 1 if score $cg1_common_draw_num ui_temp matches 2.. run scoreboard players set $cg1_common_draw_single ui_temp 1
 execute if score $var ui_temp matches 1.. run scoreboard players operation $cg1_common_draw_num ui_temp < $var ui_temp
 
 #
@@ -28,5 +29,6 @@ data remove storage ui:cg1 temp.list
 
 # IDをクリア
     scoreboard players reset $cg1_list_count ui_temp
+    scoreboard players reset $cg1_common_draw_single ui_temp
     scoreboard players reset $cg1_common_draw_type ui_temp
     scoreboard players reset $cg1_common_draw_num ui_temp
