@@ -1,6 +1,6 @@
 scoreboard players set $mod ui_calc1 100
 execute if score $list_card_count ui_temp matches 0 run scoreboard players set $mod ui_calc1 150
-execute if score $list_card_count ui_temp matches 0 if entity @s[tag=tmw272_elite] run scoreboard players set $mod ui_calc1 50
+execute if score $list_card_count ui_temp matches 0 if entity @s[tag=tmw272_elite] run scoreboard players set $mod ui_calc1 150
 function ui:common/rand
 execute if score $list_card_count ui_temp matches 0 run scoreboard players remove $rand ui_calc1 50
 execute if score $list_card_count ui_temp matches 0 if entity @s[tag=tmw272_elite] run scoreboard players remove $rand ui_calc1 50
