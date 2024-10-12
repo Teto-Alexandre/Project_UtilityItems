@@ -33,11 +33,13 @@ scoreboard players operation $list_card_rand ui_temp = $rand ui_calc1
 execute if entity @s[type=!zombie,type=!creeper,type=!skeleton,type=!spider,type=!cave_spider,type=!enderman,type=!blaze] run function ui:tmw/272/id/-1/non_player/hc_loop
 execute if entity @s[type=zombie] run function ui:tmw/272/id/-1/non_player/zombie/
 execute if entity @s[type=creeper] run function ui:tmw/272/id/-1/non_player/raijin
-execute if entity @s[type=skeleton] run function ui:tmw/272/id/-1/non_player/skeleton
+execute if entity @s[type=skeleton] run function ui:tmw/272/id/-1/non_player/skeleton/
 execute if entity @s[type=spider] run function ui:tmw/272/id/-1/non_player/spider
 execute if entity @s[type=cave_spider] run function ui:tmw/272/id/-1/non_player/cave_spider
 execute if entity @s[type=enderman] run function ui:tmw/272/id/-1/non_player/enderman
 execute if entity @s[type=blaze] run function ui:tmw/272/id/-1/non_player/blaze
+
+function ui:misc/act/make_id
 
 # リセット
 #scoreboard players reset $list_card_oo ui_temp
