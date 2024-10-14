@@ -179,5 +179,5 @@ function oh_my_dat:please
 tag @s[tag=tmw272_temp_card_effect_bypass_silence] remove tmw272_temp_card_effect_bypass_silence
 
 # 一連のエフェクトのターゲットを記録しつつ、次のターゲット用に初期化
-execute if data storage ui:temp temp.effect.no_target_old run tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old
+execute unless data storage ui:temp temp.effect.no_target_old run tag @e[tag=tmw272_temp_card_effect_target] add tmw272_temp_card_effect_target_old
 tag @e[tag=tmw272_temp_card_effect_target] remove tmw272_temp_card_effect_target
