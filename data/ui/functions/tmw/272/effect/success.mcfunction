@@ -73,7 +73,7 @@ execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.car
 # カード使用スコアを1に
 execute if score $is_card ui_temp matches 1 run scoreboard players set @s ui_tmw272_card_used 1
 # 消費しないタグがなければカード消費
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.not_consume run scoreboard players set @s ui_tmw272_consume 1
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.not_consume run scoreboard players add @s ui_tmw272_consume 1
 
 # 汎用変数を削除
 scoreboard players reset $no_last_used ui_temp
