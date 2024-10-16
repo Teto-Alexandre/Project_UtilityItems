@@ -11,6 +11,7 @@ scoreboard players set @s ui_tmw272_duplication 0
 scoreboard players set @s ui_tmw272_reactive_effect_num 0
 scoreboard players set @s ui_tmw272_intercept_command_num 0
 
+scoreboard players set @s ui_tmw272_consume 0
 scoreboard players set @s ui_tmw272_self_hurt 0
 scoreboard players set @s ui_tmw272_decay 0
 scoreboard players set @s ui_tmw272_candle 0
@@ -20,6 +21,7 @@ scoreboard players set @s ui_tmw272_curse 0
 scoreboard players set @s ui_tmw272_blessing 0
 scoreboard players set @s ui_tmw272_shield 0
 scoreboard players set @s ui_tmw272_shield_next 0
+scoreboard players set @s ui_tmw272_shield_last 0
 scoreboard players set @s ui_tmw272_seeds 0
 scoreboard players set @s ui_tmw272_crops 0
 scoreboard players set @s ui_tmw272_bullet 0
@@ -29,6 +31,7 @@ scoreboard players set @s ui_tmw272_burn 0
 scoreboard players set @s ui_tmw272_speed 0
 scoreboard players set @s ui_tmw272_strength 0
 scoreboard players set @s ui_tmw272_strength_next 0
+scoreboard players set @s ui_tmw272_strength_last 0
 scoreboard players set @s ui_tmw272_poison 0
 scoreboard players set @s ui_tmw272_invisible 0
 scoreboard players set @s ui_tmw272_regeneration 0
@@ -41,14 +44,17 @@ scoreboard players set @s ui_tmw272_trade 0
 scoreboard players set @s ui_tmw272_nausea 0
 scoreboard players set @s ui_tmw272_bleed 0
 scoreboard players set @s ui_tmw272_bleed_next 0
+scoreboard players set @s ui_tmw272_bleed_last 0
 scoreboard players set @s ui_tmw272_blindness 0
 scoreboard players set @s ui_tmw272_glowing 0
 scoreboard players set @s ui_tmw272_luck 0
 scoreboard players set @s ui_tmw272_wither 0
 scoreboard players set @s ui_tmw272_armor 0
 scoreboard players set @s ui_tmw272_armor_next 0
+scoreboard players set @s ui_tmw272_armor_last 0
 scoreboard players set @s ui_tmw272_seal 0
 scoreboard players set @s ui_tmw272_seal_next 0
+scoreboard players set @s ui_tmw272_seal_last 0
 scoreboard players set @s ui_tmw272_invulnerable 0
 scoreboard players set @s ui_tmw272_only_one 0
 scoreboard players set @s ui_tmw272_energy 0
@@ -66,12 +72,14 @@ scoreboard players set @s ui_tmw272_lethal_range 0
 scoreboard players set @s ui_tmw272_soul_break 0
 scoreboard players set @s ui_tmw272_dodge 0
 scoreboard players set @s ui_tmw272_dodge_next 0
+scoreboard players set @s ui_tmw272_dodge_last 0
 scoreboard players set @s ui_tmw272_accumulation 0
 scoreboard players set @s ui_tmw272_fairy 0
 scoreboard players set @s ui_tmw272_memory 0
 scoreboard players set @s ui_tmw272_chain 0
 scoreboard players set @s ui_tmw272_hope 0
 scoreboard players set @s ui_tmw272_hope_next 0
+scoreboard players set @s ui_tmw272_hope_last 0
 scoreboard players set @s ui_tmw272_ec 0
 scoreboard players set @s ui_tmw272_karma 0
 scoreboard players set @s ui_tmw272_tenacity 0
@@ -114,6 +122,7 @@ scoreboard players set @s ui_tmw272_sheep 0
 scoreboard players set @s ui_tmw272_harm 0
 scoreboard players set @s ui_tmw272_thorn 0
 scoreboard players set @s ui_tmw272_thorn_next 0
+scoreboard players set @s ui_tmw272_thorn_last 0
 scoreboard players set @s ui_tmw272_dream 0
 scoreboard players set @s ui_tmw272_wound 0
 scoreboard players set @s ui_tmw272_unprotected 0

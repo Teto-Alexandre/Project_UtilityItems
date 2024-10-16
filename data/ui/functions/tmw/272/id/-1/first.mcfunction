@@ -51,6 +51,7 @@ scoreboard objectives add ui_tmw272_reactive_effect_num dummy
 scoreboard objectives add ui_tmw272_intercept_command_num dummy
 
 # 拡張スコアも作成
+scoreboard objectives add ui_tmw272_consume dummy
 scoreboard objectives add ui_tmw272_self_hurt dummy
 scoreboard objectives add ui_tmw272_decay dummy
 scoreboard objectives add ui_tmw272_candle dummy
@@ -60,6 +61,7 @@ scoreboard objectives add ui_tmw272_curse dummy
 scoreboard objectives add ui_tmw272_blessing dummy
 scoreboard objectives add ui_tmw272_shield dummy
 scoreboard objectives add ui_tmw272_shield_next dummy
+scoreboard objectives add ui_tmw272_shield_last dummy
 scoreboard objectives add ui_tmw272_seeds dummy
 scoreboard objectives add ui_tmw272_crops dummy
 scoreboard objectives add ui_tmw272_bullet dummy
@@ -69,6 +71,7 @@ scoreboard objectives add ui_tmw272_burn dummy
 scoreboard objectives add ui_tmw272_speed dummy
 scoreboard objectives add ui_tmw272_strength dummy
 scoreboard objectives add ui_tmw272_strength_next dummy
+scoreboard objectives add ui_tmw272_strength_last dummy
 scoreboard objectives add ui_tmw272_poison dummy
 scoreboard objectives add ui_tmw272_invisible dummy
 scoreboard objectives add ui_tmw272_regeneration dummy
@@ -81,14 +84,17 @@ scoreboard objectives add ui_tmw272_trade dummy
 scoreboard objectives add ui_tmw272_nausea dummy
 scoreboard objectives add ui_tmw272_bleed dummy
 scoreboard objectives add ui_tmw272_bleed_next dummy
+scoreboard objectives add ui_tmw272_bleed_last dummy
 scoreboard objectives add ui_tmw272_blindness dummy
 scoreboard objectives add ui_tmw272_glowing dummy
 scoreboard objectives add ui_tmw272_luck dummy
 scoreboard objectives add ui_tmw272_wither dummy
 scoreboard objectives add ui_tmw272_armor dummy
 scoreboard objectives add ui_tmw272_armor_next dummy
+scoreboard objectives add ui_tmw272_armor_last dummy
 scoreboard objectives add ui_tmw272_seal dummy
 scoreboard objectives add ui_tmw272_seal_next dummy
+scoreboard objectives add ui_tmw272_seal_last dummy
 scoreboard objectives add ui_tmw272_invulnerable dummy
 scoreboard objectives add ui_tmw272_only_one dummy
 scoreboard objectives add ui_tmw272_energy dummy
@@ -106,12 +112,14 @@ scoreboard objectives add ui_tmw272_lethal_range dummy
 scoreboard objectives add ui_tmw272_soul_break dummy
 scoreboard objectives add ui_tmw272_dodge dummy
 scoreboard objectives add ui_tmw272_dodge_next dummy
+scoreboard objectives add ui_tmw272_dodge_last dummy
 scoreboard objectives add ui_tmw272_accumulation dummy
 scoreboard objectives add ui_tmw272_fairy dummy
 scoreboard objectives add ui_tmw272_memory dummy
 scoreboard objectives add ui_tmw272_chain dummy
 scoreboard objectives add ui_tmw272_hope dummy
 scoreboard objectives add ui_tmw272_hope_next dummy
+scoreboard objectives add ui_tmw272_hope_last dummy
 scoreboard objectives add ui_tmw272_ec dummy
 scoreboard objectives add ui_tmw272_karma dummy
 scoreboard objectives add ui_tmw272_tenacity dummy
@@ -154,6 +162,7 @@ scoreboard objectives add ui_tmw272_sheep dummy
 scoreboard objectives add ui_tmw272_harm dummy
 scoreboard objectives add ui_tmw272_thorn dummy
 scoreboard objectives add ui_tmw272_thorn_next dummy
+scoreboard objectives add ui_tmw272_thorn_last dummy
 scoreboard objectives add ui_tmw272_dream dummy
 scoreboard objectives add ui_tmw272_wound dummy
 scoreboard objectives add ui_tmw272_unprotected dummy

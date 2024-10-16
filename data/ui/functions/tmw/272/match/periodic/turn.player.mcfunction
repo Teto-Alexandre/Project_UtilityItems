@@ -32,6 +32,7 @@ execute if score @s ui_tmw272_speed matches 1.. run function ui:tmw/272/match/pe
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_strength matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_strength_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_strength_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/strength
 # 開幕：体力の5%ダメージ、1減る
 execute if score @s ui_tmw272_poison matches 1.. run function ui:tmw/272/match/periodic/state/poison
@@ -67,6 +68,7 @@ execute if score @s ui_tmw272_healing matches 1.. run function ui:tmw/272/match/
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_bleed matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_bleed_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_bleed_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/bleed
 # 常在：敵全体対象が標敵に、全員対象が自分と標敵に変わる、開幕1減る
 execute if score @s ui_tmw272_blindness matches 1.. run function ui:tmw/272/match/periodic/state/blindness
@@ -78,11 +80,13 @@ execute if score @s ui_tmw272_wither matches 1.. run function ui:tmw/272/match/p
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_armor matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_armor_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_armor_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/armor
 # 常在：カードのコストがN上昇する、開幕消える
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_seal matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_seal_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_seal_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/seal
 # 常在：ダメージのeffect_typeのターゲットになったとき対象から外れる、開幕1減る
 execute unless score @s ui_tmw272_invulnerable matches 0 run function ui:tmw/272/match/periodic/state/invulnerable
@@ -100,6 +104,7 @@ execute if score @s ui_tmw272_chain matches 1.. run function ui:tmw/272/match/pe
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_hope matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_hope_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_hope_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/hope
 # 開幕：N%の確率で死ぬ
 execute if score @s ui_tmw272_karma matches 1.. run function ui:tmw/272/match/periodic/state/karma
@@ -119,16 +124,19 @@ execute if score @s ui_tmw272_saturation matches 1.. run function ui:tmw/272/mat
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_thorn matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_thorn_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_thorn_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/thorn
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_shield matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_shield_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_shield_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/shield
 
 scoreboard players set $success ui_temp 0
 execute unless score @s ui_tmw272_dodge matches 0 run scoreboard players set $success ui_temp 1
 execute unless score @s ui_tmw272_dodge_next matches 0 run scoreboard players set $success ui_temp 1
+execute unless score @s ui_tmw272_dodge_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/dodge
 # 常時：自身の沈黙以外のあらゆる変数操作ができない、閉幕1減る
 execute if score @s ui_tmw272_silence matches 1.. run function ui:tmw/272/match/periodic/state/silence

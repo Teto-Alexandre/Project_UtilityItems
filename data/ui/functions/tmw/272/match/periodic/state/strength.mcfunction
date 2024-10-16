@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_strength = @s ui_tmw272_strength_next
+scoreboard players operation @s ui_tmw272_strength += @s ui_tmw272_strength_last
 scoreboard players set @s ui_tmw272_strength_next 0
 
 data merge storage ui:tmw272 {temp:{input:"strength"}}

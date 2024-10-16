@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_armor = @s ui_tmw272_armor_next
+scoreboard players operation @s ui_tmw272_armor += @s ui_tmw272_armor_last
 scoreboard players set @s ui_tmw272_armor_next 0
 
 data merge storage ui:tmw272 {temp:{input:"armor"}}

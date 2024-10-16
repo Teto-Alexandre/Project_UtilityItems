@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_dodge = @s ui_tmw272_dodge_next
+scoreboard players operation @s ui_tmw272_dodge += @s ui_tmw272_dodge_last
 scoreboard players set @s ui_tmw272_dodge_next 0
 
 data merge storage ui:tmw272 {temp:{input:"dodge"}}

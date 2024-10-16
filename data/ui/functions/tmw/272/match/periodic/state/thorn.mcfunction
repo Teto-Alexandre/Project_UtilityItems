@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_thorn = @s ui_tmw272_thorn_next
+scoreboard players operation @s ui_tmw272_thorn += @s ui_tmw272_thorn_last
 scoreboard players set @s ui_tmw272_thorn_next 0
 
 data merge storage ui:tmw272 {temp:{input:"thorn"}}

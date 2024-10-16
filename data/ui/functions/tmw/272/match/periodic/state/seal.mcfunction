@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_seal = @s ui_tmw272_seal_next
+scoreboard players operation @s ui_tmw272_seal += @s ui_tmw272_seal_last
 scoreboard players set @s ui_tmw272_seal_next 0
 
 data merge storage ui:tmw272 {temp:{input:"seal"}}

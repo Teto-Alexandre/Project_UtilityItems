@@ -1,4 +1,5 @@
 scoreboard players operation @s ui_tmw272_hope = @s ui_tmw272_hope_next
+scoreboard players operation @s ui_tmw272_hope += @s ui_tmw272_hope_last
 scoreboard players set @s ui_tmw272_hope_next 0
 
 data merge storage ui:tmw272 {temp:{input:"hope"}}

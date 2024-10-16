@@ -10,5 +10,5 @@ scoreboard players operation $cg1_common_draw_num ui_temp = $var_temp ui_temp
 function ui:tmw/272/common/draw/
 
 #
-execute if entity @e[tag=tmw272_temp_steal] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@e[tag=tmw272_temp_steal]"},{"text":"が"},{"selector":"@s"},{"text":"のデッキから"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "枚ドローした！"}]
-execute unless entity @e[tag=tmw272_temp_steal] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "枚ドローした！"}]
+execute unless data storage ui:temp temp.effect.mute if entity @e[tag=tmw272_temp_steal] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@e[tag=tmw272_temp_steal]"},{"text":"が"},{"selector":"@s"},{"text":"のデッキから"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "枚ドローした！"}]
+execute unless data storage ui:temp temp.effect.mute unless entity @e[tag=tmw272_temp_steal] run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "枚ドローした！"}]
