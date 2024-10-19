@@ -6,7 +6,7 @@ execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.Inte
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.merge_checkers[0].invert if score $reactive_effect_success ui_temp matches 1 run scoreboard players set $reactive_effect_success ui_temp -1
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.merge_checkers[0].invert if score $reactive_effect_success ui_temp matches 0 run scoreboard players set $reactive_effect_success ui_temp -1
 
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.merge_checkers[0].var_checker unless score $reactive_effect_success ui_temp matches -1 run function ui:tmw/272/intercept_command/modify/var_checker
+execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.merge_checkers[0].var_checker unless score $reactive_effect_success ui_temp matches -1 run function ui:tmw/272/intercept_command/modify/var_checkers
 
 #tellraw @s [{"score":{"name":"$reactive_effect_success","objective":"ui_temp"},"color":"green"}]
 
