@@ -19,6 +19,7 @@ execute if data storage ui:temp temp.effect.target_exclusion_summon as @e[tag=ui
 execute if data storage ui:temp temp.effect.t_e_s as @e[tag=ui_temp_players,tag=summoned_nocount] run tag @s add ui_temp_players_no_target
 
 # ターゲットエンティティとNBT
+execute if data storage ui:temp temp.effect.target_selector run function ui:tmw/272/effect/target_selector/
 execute if data storage ui:temp temp.effect.target_entity run function ui:tmw/272/effect/target_entity/
 execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/effect/target_nbt/
 #execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
