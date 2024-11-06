@@ -1,1 +1,0 @@
-function ui:tmw/272/intercept_command/from_self_modify/

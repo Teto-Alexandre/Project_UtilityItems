@@ -1,9 +1,11 @@
 scoreboard players set $reactive_effect_success ui_temp 0
 
 execute if score $reactive_effect_linear_type ui_temp matches 1 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.from_self run scoreboard players set $reactive_effect_success ui_temp -1
+execute if score $reactive_effect_linear_type ui_temp matches 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.no_self if entity @s[tag=tmw272_temp_card_effect_target] run scoreboard players set $reactive_effect_success ui_temp -1
+execute if score $reactive_effect_linear_type ui_temp matches 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.no_other unless entity @s[tag=tmw272_temp_card_effect_target] run scoreboard players set $reactive_effect_success ui_temp -1
+execute if score $reactive_effect_linear_type ui_temp matches 2 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.from_self run scoreboard players set $reactive_effect_success ui_temp -1
 execute if score $reactive_effect_linear_type ui_temp matches 2 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.no_self if entity @s[tag=ui_temp_player] run scoreboard players set $reactive_effect_success ui_temp -1
 execute if score $reactive_effect_linear_type ui_temp matches 2 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.no_other unless entity @s[tag=ui_temp_player] run scoreboard players set $reactive_effect_success ui_temp -1
-execute if score $reactive_effect_linear_type ui_temp matches 2 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0].reactive_effect.from_self run scoreboard players set $reactive_effect_success ui_temp -1
 
 #tellraw @s [{"score":{"name":"$reactive_effect_num","objective":"ui_temp"}}]
 #tellraw @s [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.InterceptCommands[0]"}]
