@@ -89,7 +89,7 @@ execute unless score @s ui_tmw272_seal_next matches 0 run scoreboard players set
 execute unless score @s ui_tmw272_seal_last matches 0 run scoreboard players set $success ui_temp 1
 execute if score $success ui_temp matches 1 run function ui:tmw/272/match/periodic/state/seal
 # 常在：ダメージのeffect_typeのターゲットになったとき対象から外れる、開幕1減る
-execute unless score @s ui_tmw272_invulnerable matches 0 run function ui:tmw/272/match/periodic/state/invulnerable
+execute if score @s ui_tmw272_invulnerable matches 1.. run function ui:tmw/272/match/periodic/state/invulnerable
 # 常在：カードが使えなくなる、開幕1減る
 execute if score @s ui_tmw272_stun matches 1.. run function ui:tmw/272/match/periodic/state/stun
 # 開幕：1ダメージ、1減る
