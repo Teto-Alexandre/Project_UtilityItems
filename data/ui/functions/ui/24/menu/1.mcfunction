@@ -380,3 +380,13 @@ execute if score @s ui_is matches 6 run item replace block ^ ^ ^1 container.23 w
 execute if score @s ui_is matches 7 run item replace block ^ ^ ^1 container.24 with white_wool{display:{Name:'{"text":"Page 7","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 execute if score @s ui_is matches 8 run item replace block ^ ^ ^1 container.25 with white_wool{display:{Name:'{"text":"Page 8","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 execute if score @s ui_is matches 9 run item replace block ^ ^ ^1 container.26 with white_wool{display:{Name:'{"text":"Page 9","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.0 with spyglass{display:{Name:'{"text":"検索結果1","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.1 with spyglass{display:{Name:'{"text":"検索結果2","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.2 with spyglass{display:{Name:'{"text":"検索結果3","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.3 with spyglass{display:{Name:'{"text":"検索結果4","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.4 with spyglass{display:{Name:'{"text":"検索結果5","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.5 with spyglass{display:{Name:'{"text":"検索結果6","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.6 with spyglass{display:{Name:'{"text":"検索結果7","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.7 with spyglass{display:{Name:'{"text":"検索結果8","color":"gray","italic": false}'},ui:{ismenu:1}}
+execute if score @s ui_is matches 9 run item replace block ~ ~ ~ container.8 with spyglass{display:{Name:'{"text":"検索結果9","color":"gray","italic": false}'},ui:{ismenu:1}}

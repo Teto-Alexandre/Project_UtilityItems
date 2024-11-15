@@ -37,6 +37,15 @@ execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches -1 run function ui:ui/24/menu/1
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 1.. run function ui:ui/24/each/extract
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 0 run function ui:ui/24/each/1
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 0 run function ui:ui/24/each/search_results/0
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 1 run function ui:ui/24/each/search_results/1
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 2 run function ui:ui/24/each/search_results/2
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 3 run function ui:ui/24/each/search_results/3
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 4 run function ui:ui/24/each/search_results/4
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 5 run function ui:ui/24/each/search_results/5
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 6 run function ui:ui/24/each/search_results/6
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 7 run function ui:ui/24/each/search_results/7
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 8 run function ui:ui/24/each/search_results/8
 data remove storage ui:temp temp
 data remove storage ui:temp temp2
 data remove storage ui:temp temp_trim
