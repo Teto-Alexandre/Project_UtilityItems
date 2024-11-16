@@ -55,9 +55,10 @@ execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run fu
 execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/menu/9to
 execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
 execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 run scoreboard players add $ui_24_search_name_or_lore ui_temp 1
-execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 if score $ui_24_search_name_or_lore ui_temp matches 2.. run scoreboard players set $ui_24_search_name_or_lore ui_temp 0
-execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 unless score $ui_24_search_name_or_lore ui_temp matches 1 run tellraw @p [{"text":"説明文検索を行います","color": "gray"}]
+execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 if score $ui_24_search_name_or_lore ui_temp matches 3.. run scoreboard players set $ui_24_search_name_or_lore ui_temp 0
+execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 unless score $ui_24_search_name_or_lore ui_temp matches 1.. run tellraw @p [{"text":"説明文検索を行います","color": "gray"}]
 execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 if score $ui_24_search_name_or_lore ui_temp matches 1 run tellraw @p [{"text":"名前検索を行います","color": "gray"}]
+execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 if score $ui_24_search_name_or_lore ui_temp matches 2 run tellraw @p [{"text":"アイテムid検索を行います","color": "gray"}]
 execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 run function ui:ui/24/menu/9to
 execute if score $slot_res ui_temp matches -3 if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
 
