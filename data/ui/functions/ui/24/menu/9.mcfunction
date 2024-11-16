@@ -37,8 +37,11 @@ item replace block ^ ^ ^1 container.7 with gray_stained_glass_pane{display:{Name
 item replace block ^ ^ ^1 container.8 with gray_stained_glass_pane{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.9 with arrow{display:{Name:'{"text":"前のページ","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.10 with air
-item replace block ^ ^ ^1 container.11 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"左のスロットに検索したいワードを名前にしたアイテムを入れる","color": "white","bold":true,"italic": false}',Lore:['{"text":"ここをクリックして検索","color":"yellow","bold":true,"italic":false}']},ui:{ismenu:1}}
-item replace block ^ ^ ^1 container.12 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+item replace block ^ ^ ^1 container.11 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"左のスロットに検索したいワードを名前にしたアイテムを入れる","color": "white","bold":true,"italic": false}',Lore:['{"text":"ここをクリックして検索、再クリックで中断","color":"yellow","bold":true,"italic":false}']},ui:{ismenu:1}}
+
+execute if score $ui_24_search_name_or_lore ui_temp matches 1 run item replace block ^ ^ ^1 container.12 with lime_stained_glass_pane{display:{Name:'{"text":"検索設定: 名前","italic": false}'},ui:{ismenu:1}}
+execute unless score $ui_24_search_name_or_lore ui_temp matches 1 run item replace block ^ ^ ^1 container.12 with red_stained_glass_pane{display:{Name:'{"text":"検索設定: 説明文","italic": false}'},ui:{ismenu:1}}
+
 item replace block ^ ^ ^1 container.13 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.14 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.15 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
