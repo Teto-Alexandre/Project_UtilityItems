@@ -17,6 +17,7 @@ execute if score $name_condition_check ui_temp matches 0 run data modify storage
 execute if score $name_condition_check ui_temp matches 0 run function ui:tmw/272/effect/broadcast/
 execute if score $name_condition_check ui_temp matches 0 run data modify storage ui:dimensional_search list append from storage ui:ui23_template_answer_temp _
 execute if score $name_condition_check ui_temp matches 0 run data remove storage ui:dimensional_search list[-1].Slot
+execute if score $name_condition_check ui_temp matches 0 at @a run tag @e[tag=ui_24_1,distance=..5] add force_refresh
 
 scoreboard players add $name_condition_inv ui_temp 1
 execute if score $name_condition_check ui_temp matches 1 if score $name_condition_inv ui_temp <= $name_condition_length ui_temp run function ui:ui/23/template/lore_condition/name

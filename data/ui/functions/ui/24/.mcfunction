@@ -9,12 +9,14 @@ scoreboard players reset $slot ui_temp
 scoreboard players operation $temp ui_temp = @s ui_is
 scoreboard players operation $temp2 ui_temp = @s ui_is2
 data merge storage ui:common {input:{Mode:"check_all"}}
+execute if score $temp ui_temp matches 9 run data merge storage ui:common {input:{Mode:"null"}}
 execute if score $temp2 ui_temp matches 0.. run data merge storage ui:common {input:{Mode:"null"}}
 function ui:common/chest/
 #execute if score $slot ui_temp matches 0.. run tellraw @a [{"score":{"name": "$slot","objective": "ui_temp"},"color":"red"}]
 execute if score $slot ui_temp matches 0.. run scoreboard players operation $slot_res ui_temp = $slot ui_temp
 data merge storage ui:common {input:{Mode:"check_all"}}
-execute if score $temp2 ui_temp matches 0.. run data merge storage ui:common {input:{Mode:"check_downer1"}}
+execute if score $temp ui_temp matches 9 run data modify storage ui:common input.exclusion set value [{Slot:0},{Slot:1},{Slot:2},{Slot:3},{Slot:4},{Slot:5},{Slot:6},{Slot:7},{Slot:8},{Slot:10}]
+execute if score $temp2 ui_temp matches 0.. unless score $temp ui_temp matches 9 run data merge storage ui:common {input:{Mode:"check_downer1"}}
 execute positioned ^ ^ ^1 run function ui:common/chest/
 #execute if score $slot ui_temp matches 0.. run tellraw @a [{"score":{"name": "$slot","objective": "ui_temp"},"color":"gray"}]
 execute if score $slot ui_temp matches 0.. run scoreboard players add $slot ui_temp 27
@@ -35,17 +37,23 @@ execute if score $slot_res ui_temp matches 0.. run scoreboard players operation 
 execute if score $slot_res ui_temp matches 0.. run scoreboard players operation $temp2 ui_temp = @s ui_is2
 execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.. run function ui:ui/24/menu/extract
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches -1 run function ui:ui/24/menu/1
-execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 1.. run function ui:ui/24/each/extract
-execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 0 run function ui:ui/24/each/1
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 0 run function ui:ui/24/each/search_results/0
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 1 run function ui:ui/24/each/search_results/1
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 2 run function ui:ui/24/each/search_results/2
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 3 run function ui:ui/24/each/search_results/3
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 4 run function ui:ui/24/each/search_results/4
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 5 run function ui:ui/24/each/search_results/5
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 6 run function ui:ui/24/each/search_results/6
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 7 run function ui:ui/24/each/search_results/7
-execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 8 run function ui:ui/24/each/search_results/8
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 run function ui:ui/24/menu/9
+execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
+execute if entity @s[tag=force_refresh] if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
+execute if score $slot_res ui_temp matches 0.. unless score @s ui_is matches 9 if score $temp2 ui_temp matches 1.. run function ui:ui/24/each/extract
+execute if score $slot_res ui_temp matches 0.. unless score @s ui_is matches 9 if score $temp2 ui_temp matches 0 run function ui:ui/24/each/1
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 0 run function ui:ui/24/each/search_results/0
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 1 run function ui:ui/24/each/search_results/1
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 2 run function ui:ui/24/each/search_results/2
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 3 run function ui:ui/24/each/search_results/3
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 4 run function ui:ui/24/each/search_results/4
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 5 run function ui:ui/24/each/search_results/5
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 6 run function ui:ui/24/each/search_results/6
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 7 run function ui:ui/24/each/search_results/7
+#execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 8 run function ui:ui/24/each/search_results/8
+execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/search/answer
+execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/menu/9
+execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
 data remove storage ui:temp temp
 data remove storage ui:temp temp2
 data remove storage ui:temp temp_trim
@@ -65,3 +73,6 @@ scoreboard players reset $count ui_temp
 scoreboard players reset $count_temp ui_temp
 scoreboard players reset $slot ui_temp
 scoreboard players reset $slot_res ui_temp
+
+#
+tag @s[tag=force_refresh] remove force_refresh
