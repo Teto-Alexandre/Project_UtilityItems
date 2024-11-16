@@ -52,7 +52,7 @@ execute if score $slot_res ui_temp matches 0.. unless score @s ui_is matches 9 i
 #execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 7 run function ui:ui/24/each/search_results/7
 #execute if score $slot_res ui_temp matches 0.. if score @s ui_is matches 9 if score @s ui_is2 matches 8 run function ui:ui/24/each/search_results/8
 execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/search/answer
-execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/menu/9
+execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/menu/9to
 execute if score $slot_res ui_temp matches -2 if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
 data remove storage ui:temp temp
 data remove storage ui:temp temp2
