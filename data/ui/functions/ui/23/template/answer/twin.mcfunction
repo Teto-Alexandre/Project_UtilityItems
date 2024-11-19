@@ -1,7 +1,9 @@
-execute as @a[tag=ui_23_searcher] at @s run playsound item.spyglass.use player @a ~ ~ ~ 1 1 0
+#execute as @a[tag=ui_23_searcher] at @s run playsound item.spyglass.use player @a ~ ~ ~ 1 1 0
 
 execute store result score $ui23_template_answer_linear3 ui_temp run data get storage ui:ui23_template_answer temp[0][0]
 
+execute if score $search_complete_stack ui_temp matches 0 run tellraw @a [{"text":"[ERROR]","color":"red"},{"text":": maxCommandChainLength が不足しています","color":"gray"}]
+scoreboard players set $search_complete_stack ui_temp 0
 execute if score $ui23_template_answer_linear3 ui_temp matches 1.. run function ui:ui/23/template/answer/item
 
 data remove storage ui:ui23_template_answer temp[0][0]

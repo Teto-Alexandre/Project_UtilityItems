@@ -43,7 +43,9 @@ execute if score $ui_24_search_name_or_lore ui_temp matches 1 run item replace b
 execute if score $ui_24_search_name_or_lore ui_temp matches 2 run item replace block ^ ^ ^1 container.12 with yellow_stained_glass_pane{display:{Name:'{"text":"検索設定: アイテムid","italic": false}'},ui:{ismenu:1}}
 execute unless score $ui_24_search_name_or_lore ui_temp matches 1.. run item replace block ^ ^ ^1 container.12 with red_stained_glass_pane{display:{Name:'{"text":"検索設定: 説明文","italic": false}'},ui:{ismenu:1}}
 
-item replace block ^ ^ ^1 container.13 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
+execute unless score $ui_24_search_or_and ui_temp matches 1 run item replace block ^ ^ ^1 container.13 with white_stained_glass_pane{display:{Name:'{"text":"検索設定: OR","italic": false}'},ui:{ismenu:1}}
+execute if score $ui_24_search_or_and ui_temp matches 1 run item replace block ^ ^ ^1 container.13 with black_stained_glass_pane{display:{Name:'{"text":"検索設定: AND","italic": false}'},ui:{ismenu:1}}
+
 item replace block ^ ^ ^1 container.14 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.15 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
 item replace block ^ ^ ^1 container.16 with barrier{display:{Name:'{"text":"","color": "white","bold":true,"italic": false}'},ui:{ismenu:1}}
