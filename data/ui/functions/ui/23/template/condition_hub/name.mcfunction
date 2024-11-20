@@ -1,3 +1,5 @@
+data modify storage ui:temp name_condition.text set value ""
+
 # スコアマクロ生成
 scoreboard players operation $name_condition_length_temp ui_temp = $name_condition_inv ui_temp
 execute store result storage ui:temp name_condition.macro.a int 1 run scoreboard players get $name_condition_length_temp ui_temp
