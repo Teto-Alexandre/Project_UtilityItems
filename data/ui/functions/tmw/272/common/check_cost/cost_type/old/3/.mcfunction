@@ -11,9 +11,8 @@ execute if score $cost_count ui_temp matches 1.. run function ui:tmw/272/common/
 execute store result score $cost_min ui_temp run data get storage ui:temp card.cost_min
 execute store result score $cost_max ui_temp run data get storage ui:temp card.cost_max
 
-# 最小値と最大値も封印で増加する
-execute if score $is_card ui_temp matches 1 if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_seal
-execute if score $is_card ui_temp matches 1 if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_seal
+# 最小値と最大値も封印系で増加する
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change run function ui:tmw/272/common/check_cost/cost_type/seal/min_max
 
 #
 execute if data storage ui:temp card.cost.min run scoreboard players operation $cost ui_temp > $cost_min ui_temp

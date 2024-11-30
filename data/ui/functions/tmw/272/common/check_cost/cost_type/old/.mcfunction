@@ -6,10 +6,8 @@ execute store result score $cost_type ui_temp run data get storage ui:temp card.
 ##コスト( タイプが0ならマナコスト )
 execute store result score $cost ui_temp run data get storage ui:temp card.cost
 
-# ここでコスト変更
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_drowsy if score @s ui_tmw272_chain matches 1.. run scoreboard players operation $cost ui_temp += @s ui_tmw272_drowsy
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_seal run scoreboard players operation $cost ui_temp += @s ui_tmw272_seal
-execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change unless data storage ui:temp card.no_cost_next run scoreboard players operation $cost ui_temp += @s ui_tmw272_cost_next
+# ここで封印
+execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.bypass_cost_change run function ui:tmw/272/common/check_cost/cost_type/seal/cost
 
 # スタンしているなら問答無用で却下
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp card.no_stun if score @s ui_tmw272_stun matches 1.. run tellraw @s [{"text":"    行動不能状態です","color":"gray"}]

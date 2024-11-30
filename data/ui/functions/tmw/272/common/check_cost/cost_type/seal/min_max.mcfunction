@@ -1,0 +1,7 @@
+# 最小値と最大値も封印系で増加する
+execute unless data storage ui:temp card.no_drowsy if score @s ui_tmw272_chain matches 1.. if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_drowsy
+execute unless data storage ui:temp card.no_seal if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_seal
+execute unless data storage ui:temp card.no_cost_next if score $cost_min ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_min ui_temp += @s ui_tmw272_cost_next
+execute unless data storage ui:temp card.no_drowsy if score @s ui_tmw272_chain matches 1.. if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_drowsy
+execute unless data storage ui:temp card.no_seal if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_seal
+execute unless data storage ui:temp card.no_cost_next if score $cost_max ui_temp matches -2147483648..2147483647 run scoreboard players operation $cost_max ui_temp += @s ui_tmw272_cost_next
