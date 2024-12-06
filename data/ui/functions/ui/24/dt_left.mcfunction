@@ -3,10 +3,10 @@ execute if entity @s[tag=ui_24_1_rot1] store result score $temp ui_temp at @s ru
 execute if entity @s[tag=ui_24_1_rot2] store result score $temp ui_temp at @s run fill ~-1 ~ ~ ~-1 ~ ~ chest[facing=north,type=left]{CustomName:'{"italic": false,"bold": true,"text":"アクセスチェスト"}'} hollow
 execute if entity @s[tag=ui_24_1_rot3] store result score $temp ui_temp at @s run fill ~ ~ ~-1 ~ ~ ~-1 chest[facing=east,type=left]{CustomName:'{"italic": false,"bold": true,"text":"アクセスチェスト"}'} hollow
 execute if entity @s[tag=ui_24_1_rot4] store result score $temp ui_temp at @s run fill ~1 ~ ~ ~1 ~ ~ chest[facing=south,type=left]{CustomName:'{"italic": false,"bold": true,"text":"アクセスチェスト"}'} hollow
-execute if entity @s[tag=ui_24_1_rot1] if score $temp ui_temp matches 1.. run data modify block ~ ~ ~1 Items set from storage ui:access_chest Items_Left
-execute if entity @s[tag=ui_24_1_rot2] if score $temp ui_temp matches 1.. run data modify block ~-1 ~ ~ Items set from storage ui:access_chest Items_Left
-execute if entity @s[tag=ui_24_1_rot3] if score $temp ui_temp matches 1.. run data modify block ~ ~ ~-1 Items set from storage ui:access_chest Items_Left
-execute if entity @s[tag=ui_24_1_rot4] if score $temp ui_temp matches 1.. run data modify block ~1 ~ ~ Items set from storage ui:access_chest Items_Left
+execute if entity @s[tag=ui_24_1_rot1] if score $temp ui_temp matches 1.. run data modify block ~ ~ ~1 Items set from storage access_chest: Items_Left
+execute if entity @s[tag=ui_24_1_rot2] if score $temp ui_temp matches 1.. run data modify block ~-1 ~ ~ Items set from storage access_chest: Items_Left
+execute if entity @s[tag=ui_24_1_rot3] if score $temp ui_temp matches 1.. run data modify block ~ ~ ~-1 Items set from storage access_chest: Items_Left
+execute if entity @s[tag=ui_24_1_rot4] if score $temp ui_temp matches 1.. run data modify block ~1 ~ ~ Items set from storage access_chest: Items_Left
 execute if score $temp ui_temp matches 1.. run kill @e[type=item,nbt={Age:0s},distance=..1.5]
 
 tellraw @a ["",{"text":"> ","color":"gray","bold": true},{"text":"警告","color":"red","bold": true},{"text":" アクセスチェストの破壊を試みないでください、微妙にバグります","color":"gray","bold": true}]

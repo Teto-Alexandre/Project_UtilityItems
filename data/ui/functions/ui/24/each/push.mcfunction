@@ -96,14 +96,14 @@ execute if score @s ui_is2 matches 44 run data modify storage ui:temp temp_trim[
 
 #tellraw @a [{"storage":"ui:temp","nbt":"temp_trim"}]
 
-execute if score @s ui_is matches 1 run data modify storage ui:access_chest Items[0] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 2 run data modify storage ui:access_chest Items[1] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 3 run data modify storage ui:access_chest Items[2] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 4 run data modify storage ui:access_chest Items[3] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 5 run data modify storage ui:access_chest Items[4] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 6 run data modify storage ui:access_chest Items[5] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 7 run data modify storage ui:access_chest Items[6] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 8 run data modify storage ui:access_chest Items[7] set from storage ui:temp temp_trim
-execute if score @s ui_is matches 9 run data modify storage ui:access_chest Items[8] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 1 run data modify storage access_chest: Items[0] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 2 run data modify storage access_chest: Items[1] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 3 run data modify storage access_chest: Items[2] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 4 run data modify storage access_chest: Items[3] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 5 run data modify storage access_chest: Items[4] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 6 run data modify storage access_chest: Items[5] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 7 run data modify storage access_chest: Items[6] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 8 run data modify storage access_chest: Items[7] set from storage ui:temp temp_trim
+execute if score @s ui_is matches 9 run data modify storage access_chest: Items[8] set from storage ui:temp temp_trim
 
 #tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Items"}]

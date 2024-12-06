@@ -24,7 +24,7 @@ execute if score $slot ui_temp matches 0.. run scoreboard players operation $slo
 #execute if score $slot ui_temp matches 0.. run tellraw @a [{"score":{"name": "$slot_res","objective": "ui_temp"}},{"text":", page:"},{"score":{"name": "$temp","objective": "ui_temp"}},{"text":", chest: "},{"score":{"name": "$temp2","objective": "ui_temp"}}]
 
 # ページ管理  
-data modify storage ui:temp temp set from storage ui:access_chest Items
+data modify storage ui:temp temp set from storage access_chest: Items
 #tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Items"}]
 execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.. run function ui:ui/24/menu/extract
 execute if score $slot_res ui_temp matches 0.. run data modify storage ui:temp temp_trim set from storage ui:temp temp[0]
@@ -32,7 +32,7 @@ execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 1
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 0 if entity @s[tag=!ui_24_1_readonly] run function ui:ui/24/each/push
 execute if score $slot_res ui_temp matches 0.. run function ui:ui/24/click
 #execute if score $slot_res ui_temp matches 0.. run tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Items"}]
-execute if score $slot_res ui_temp matches 0.. run data modify storage ui:temp temp set from storage ui:access_chest Items
+execute if score $slot_res ui_temp matches 0.. run data modify storage ui:temp temp set from storage access_chest: Items
 execute if score $slot_res ui_temp matches 0.. run scoreboard players operation $temp ui_temp = @s ui_is
 execute if score $slot_res ui_temp matches 0.. run scoreboard players operation $temp2 ui_temp = @s ui_is2
 execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.. run function ui:ui/24/menu/extract
@@ -75,8 +75,8 @@ data remove storage ui:temp temp2
 data remove storage ui:temp temp_trim
 
 # 保存
-data modify storage ui:access_chest Items_Right set from block ~ ~ ~ Items
-data modify storage ui:access_chest Items_Left set from block ^ ^ ^1 Items
+data modify storage access_chest: Items_Right set from block ~ ~ ~ Items
+data modify storage access_chest: Items_Left set from block ^ ^ ^1 Items
 
 particle dust 1 0.5 0 2 ^ ^0.9 ^0.5 0.2 0 0.2 0 1 normal
 execute if entity @s[tag=!ui_24_1_readonly] if predicate ui:percentage/10 run particle dust 0 1 0 1 ^ ^0.9 ^0.5 0.4 0.2 0.4 0 10 normal

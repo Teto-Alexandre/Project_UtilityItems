@@ -7,7 +7,7 @@ scoreboard players set $ui:dimensional_search_list_max ui_temp 0
 tag @e[tag=ui_24_1] add force_refresh
 
 scoreboard players set $ui_23_searcher ui_temp 1
-data modify storage ui:ui23_template_answer temp set from storage ui:dimensional_chest Items
+data modify storage ui:ui23_template_answer temp set from storage dimensional_chest: Items
 
 data modify storage ui:ui23_template_answer Name set value []
 data modify storage ui:ui23_template_answer Name append value {text:"",minus:0b}
