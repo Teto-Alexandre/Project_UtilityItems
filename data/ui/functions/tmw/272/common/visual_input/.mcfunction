@@ -7,9 +7,9 @@ tag @e[tag=tmw272_visual_input] remove tmw272_visual_input
     execute if score @s ui_tmw272_surehit matches ..0 at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 0 run function ui:tmw/272/common/visual_input/target_marker
     execute if score @s ui_tmw272_surehit matches ..0 at @s as @e[tag=ui_temp_players,tag=!tmw272_spectate,tag=!ui_temp_player] if score @s ui_tmw272_invisible matches 1.. if score @s ui_tmw272_glowing matches 1.. run function ui:tmw/272/common/visual_input/target_marker
     execute at @s positioned ^ ^ ^0.4 run tag @e[tag=ui_temp_marker,sort=nearest,limit=1] add ui_temp_target2
-    execute at @e[tag=ui_temp_marker,tag=!ui_temp_target2] run particle dust 1 0 0 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
-    execute if score @s ui_tmw272_surehit matches 1.. at @e[tag=ui_temp_target2] run particle dust 0 0.5 1 0.1 ~ ~1.6 ~ 0.01 0.01 0.01 0 3 normal @s
-    execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~1.6 ~ 0 0 0 0 1 normal @s
+    execute at @e[tag=ui_temp_marker,tag=!ui_temp_target2] run particle dust 1 0 0 0.2 ~ ~ ~ 0 0 0 0 1 normal @s
+    execute if score @s ui_tmw272_surehit matches 1.. at @e[tag=ui_temp_target2] run particle dust 0 0.5 1 0.1 ~ ~ ~ 0.01 0.01 0.01 0 3 normal @s
+    execute at @e[tag=ui_temp_target2] run particle dust 0 1 1 0.2 ~ ~ ~ 0 0 0 0 1 normal @s
 
 # 選択したポインターのIDを取得
     execute store result score $select_obj_id ui_temp run scoreboard players get @e[tag=ui_temp_target2,limit=1] ui_obj_id
