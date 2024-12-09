@@ -27,6 +27,9 @@ execute if score $turn_time ui_temp matches 0 run function ui:tmw/272/match/peri
 ## <== エンティティはここで動かす
 execute as @e[tag=ui_temp_players,type=!player] run function ui:tmw/272/match/entity/
 
+## <== プレイヤーにアイテムを返してあげる
+execute as @a[tag=ui_temp_players] at @s run function ui:tmw/272/match/mob_player/
+
 # プレイヤーごとに実行する常在効果
 execute as @e[tag=ui_temp_players] run function ui:tmw/272/match/player/
 

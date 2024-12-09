@@ -1,7 +1,7 @@
 #これは初回起動時に実行されるコマンドです
 
 tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 55 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 57 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -53,6 +53,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_dc deathCount {"text":"UtilityItems_DeathCount","color":"dark_blue"}
     scoreboard objectives add ui_dc_r dummy {"text":"UtilityItems_DeathCountRespawn","color":"dark_blue"}
     scoreboard objectives add ui_uset minecraft.used:minecraft.totem_of_undying {"text":"UtilityItems_UseTotem","color":"dark_blue"}
+    scoreboard objectives add ui_useb minecraft.used:minecraft.bow {"text":"UtilityItems_UseCrossbow","color":"dark_blue"}
     scoreboard objectives add ui_usec minecraft.used:minecraft.crossbow {"text":"UtilityItems_UseCrossbow","color":"dark_blue"}
     scoreboard objectives add ui_usep minecraft.used:minecraft.potion {"text":"UtilityItems_UsePot","color":"dark_blue"}
     scoreboard objectives add ui_uses minecraft.used:minecraft.snowball {"text":"UtilityItems_UseSnow","color":"dark_blue"}
@@ -151,6 +152,7 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_team dummy {"text":"UtilityItems_Team","color":"dark_blue"}
     #個別オブジェクト連携id
     scoreboard objectives add ui_obj_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
+    scoreboard objectives add ui_origin_obj_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
 
 ## 工業用
     #パーティクル用ループカウント
@@ -366,6 +368,8 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 
 ## DDBF
     scoreboard objectives add ui_tmw272_link_id dummy
+    scoreboard objectives add ui_tmw272_no_deck_edit dummy
+    scoreboard objectives add ui_tmw272_reward_count dummy
 
 ## 使用関数の設定
     scoreboard players set #type1 ui_rand 1
@@ -522,5 +526,5 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 55
+    scoreboard players set $version ui_world 57
     #say operationed

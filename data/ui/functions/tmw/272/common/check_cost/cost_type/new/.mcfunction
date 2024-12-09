@@ -1,5 +1,12 @@
 scoreboard players set $check_cost ui_temp 0
 
+# 自由記述欄
+data modify storage ui:temp temp.effect set value {}
+execute if data storage ui:temp card.cost.pre_command run data modify storage ui:temp temp.effect.command set from storage ui:temp card.cost.pre_command
+execute if data storage ui:temp card.cost.pre_list run data modify storage ui:temp temp.effect.list set from storage ui:temp card.cost.pre_list
+execute if data storage ui:temp temp.effect.command run function ui:tmw/272/effect/effect_type/command/simple with storage ui:temp temp.effect
+execute if data storage ui:temp temp.effect.list run function ui:tmw/272/effect/effect_type/command/list
+
 # データの書き出し
 ##コスト計算の種類( 0:そのまま, 1:条件付き軽減等, 2:条件付き許可, 3:条件で一定量軽減 )
 execute store result score $cost_type ui_temp run data get storage ui:temp card.cost.type
