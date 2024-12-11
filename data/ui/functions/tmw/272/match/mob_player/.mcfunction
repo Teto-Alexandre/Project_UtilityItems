@@ -4,4 +4,4 @@
 #
 #data remove storage ui:cg temp.give
 
-execute positioned ~ ~1 ~ as @e[type=item,distance=..5,nbt={Age:0s}] run function ui:tmw/272/match/mob_player/2
+execute positioned ~ ~1 ~ as @e[type=item,tag=!tmw272_dropitem_card,distance=..5,nbt={Age:0s}] run function ui:tmw/272/match/mob_player/2
