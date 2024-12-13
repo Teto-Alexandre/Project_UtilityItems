@@ -28,3 +28,4 @@ execute if entity @s[tag=deck_sheep] run data remove storage oh_my_dat: _[-4][-4
 team leave @s
 
 scoreboard players set @s ui_tmw272_no_deck_edit 10
+schedule function ui:tmw/272/id/-1/deck_edit/no_edit/ 1t replace
