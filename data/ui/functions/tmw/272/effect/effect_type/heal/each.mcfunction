@@ -12,9 +12,6 @@ scoreboard players operation $var_temp_/2 ui_temp /= #2 ui_num
 # 重傷
 execute unless data storage ui:temp temp.effect.indep if score @s ui_tmw272_wound matches 1.. unless data storage ui:temp temp.effect.no_wound if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/wound
 
-# 下限設定
-execute unless data storage ui:temp temp.effect.under_zero run scoreboard players operation $var_temp ui_temp > #0 ui_num
-
 # 空腹の解除方法は回復
 execute unless data storage ui:temp temp.effect.indep if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
 
@@ -26,6 +23,9 @@ scoreboard players operation $var_temp_max ui_temp = @s ui_tmw272_health_limit
 scoreboard players operation $var_temp_max ui_temp -= @s ui_tmw272_health
 scoreboard players operation $var_temp_max ui_temp > #0 ui_num
 execute if score $var_temp_max ui_temp < $var_temp ui_temp run scoreboard players operation $var_temp ui_temp = $var_temp_max ui_temp
+
+# 下限設定
+execute unless data storage ui:temp temp.effect.under_zero run scoreboard players operation $var_temp ui_temp > #0 ui_num
 
 # 回復する（回復回数を計算するテスト）
 scoreboard players operation @s ui_tmw272_health += $var_temp ui_temp
