@@ -21,11 +21,22 @@ execute unless data storage ui:temp temp.effect.indep if score @s ui_tmw272_hung
 #
 execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_decay 1
 
+# 上限以上に回復しない
+scoreboard players operation $var_temp_max ui_temp = @s ui_tmw272_health_limit
+scoreboard players operation $var_temp_max ui_temp -= @s ui_tmw272_health
+scoreboard players operation $var_temp_max ui_temp > #0 ui_num
+execute if score $var_temp_max ui_temp < $var_temp ui_temp run scoreboard players operation $var_temp ui_temp = $var_temp_max ui_temp
+
 # 回復する（回復回数を計算するテスト）
 scoreboard players operation @s ui_tmw272_health += $var_temp ui_temp
 
-execute run tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "回復！"}]
+# 通知
+tellraw @a[tag=ui_temp_players] ["",{"text":"   ","color":"gray"},{"selector":"@s"},{"text":"が"},{"score":{"name": "$var_temp","objective": "ui_temp"}},{"text": "回復！"}]
+
+# 条件加算スコア
+execute if data storage ui:temp temp.effect.add_condition run scoreboard players operation $condition_checker ui_temp += $var_temp ui_temp
 execute if entity @e[tag=tmw272_temp_card_effect_target,tag=ui_temp_player] run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_self_heal += $var_temp ui_temp
 execute if entity @e[tag=tmw272_temp_card_effect_target,tag=!ui_temp_player] run scoreboard players operation @e[tag=ui_temp_player] ui_tmw272_other_heal += $var_temp ui_temp
 
 scoreboard players reset $var_temp_/2 ui_temp
+scoreboard players reset $var_temp_max ui_temp
