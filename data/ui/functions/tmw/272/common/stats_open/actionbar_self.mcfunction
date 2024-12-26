@@ -1,5 +1,8 @@
 function oh_my_dat:please
 
+data remove storage ui:tmw272_text temp_1
+data remove storage ui:tmw272_text temp_2
+
 data merge storage ui:tmw272 {temp:{input:"null"}}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_you run data modify storage ui:tmw272 temp.input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_you
 execute unless data storage ui:tmw272 temp{input:"null"} run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
