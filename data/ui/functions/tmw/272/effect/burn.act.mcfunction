@@ -1,5 +1,6 @@
 # 効果そのものの簡易表記解凍
 execute if data storage ui:temp temp.effect.delay run function ui:tmw/272/effect/misc/delay/
+execute if data storage ui:temp temp.effect.each run function ui:tmw/272/effect/misc/each/
 execute if data storage ui:temp temp.effect.case run function ui:tmw/272/effect/misc/case/
 
 # ターゲットタイプ取得
