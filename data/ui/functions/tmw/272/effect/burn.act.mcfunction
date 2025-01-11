@@ -152,6 +152,8 @@ execute if data storage ui:temp temp.effect{effect_type:"list_swap"} run functio
 execute if data storage ui:temp temp.effect{effect_type:"death_effect"} run function ui:tmw/272/effect/effect_type/after_effect/
 ## その他
 execute if data storage ui:temp temp.effect{effect_type:"misc"} run function ui:tmw/272/effect/effect_type/misc/
+## システム（内部系）
+execute if data storage ui:temp temp.effect{effect_type:"system"} run function ui:tmw/272/effect/effect_type/system/
 ## デスエフェクトへの編集
 execute if data storage ui:temp temp.effect{effect_type:"modify_death_effect"} run function ui:tmw/272/effect/effect_type/modify_death_effect/
 ## 任意コマンド実行

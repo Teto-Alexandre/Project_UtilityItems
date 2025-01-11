@@ -142,6 +142,8 @@ scoreboard players set @s ui_tmw272_temp1 0
 scoreboard players set @s ui_tmw272_temp2 0
 scoreboard players set @s ui_tmw272_temp3 0
 
+function ui:tmw/272/id/-1/user_custom/player
+
 tag @s remove tmw272_ready
 
 scoreboard players add @s ui_tmw272_battlefront_joins 1
