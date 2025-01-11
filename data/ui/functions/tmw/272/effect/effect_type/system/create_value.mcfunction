@@ -8,3 +8,5 @@ $execute if data storage ui:temp temp.effect.value{effect:"null"} run data modif
 $execute unless data storage ui:temp temp.effect.value{effect:"null"} run data modify storage cg_custom: advanced_value[{id:"$(id)"}].name set value '[{"text":"$(name)","color":"$(color)","italic":false}]'
 $scoreboard objectives add ui_tmw272_$(id) dummy
 $tellraw @a [{"text":">> ","color":"gray"},{"text":"【$(id)】","color":"$(color)"},{"text":"が作成されました","color":"gray"}]
+
+data modify storage ui:tmw272_text simple_value.$(id) set from storage cg_custom: advanced_value[{id:"$(id)"}]
