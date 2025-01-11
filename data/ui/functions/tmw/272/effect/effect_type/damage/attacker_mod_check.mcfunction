@@ -21,7 +21,7 @@ execute unless data storage ui:temp temp.effect.no_charge run scoreboard players
 # 増強
 execute unless data storage ui:temp temp.effect.no_powerful run data merge storage ui:tmw272 {temp:{input:"powerful"}}
 execute unless data storage ui:temp temp.effect.no_powerful run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
-execute unless data storage ui:temp temp.effect.no_powerful run execute if score @s ui_tmw272_powerful matches 1.. run function ui:tmw/272/effect/effect_type/damage/powerful
+execute unless data storage ui:temp temp.effect.no_powerful run execute unless score @s ui_tmw272_powerful matches 0 run function ui:tmw/272/effect/effect_type/damage/powerful
 
 # 無敵
 execute unless data storage ui:temp temp.effect.no_invulnerable run data merge storage ui:tmw272 {temp:{input:"invulnerable"}}
