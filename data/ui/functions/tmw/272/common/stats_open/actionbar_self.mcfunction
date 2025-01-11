@@ -5,11 +5,11 @@ data remove storage ui:tmw272_text temp_2
 
 data merge storage ui:tmw272 {temp:{input:"null"}}
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_you run data modify storage ui:tmw272 temp.input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_you
-execute unless data storage ui:tmw272 temp{input:"null"} run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
-execute unless data storage ui:tmw272 temp{input:"null"} run data modify storage ui:tmw272_text temp_1 set from storage ui:tmw272_text temp
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
+execute unless score $success_modify_simple_value ui_temp matches 0 run data modify storage ui:tmw272_text temp_1 set from storage ui:tmw272_text temp
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_target run data modify storage ui:tmw272 temp.input set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.actionbar_value_target
-execute unless data storage ui:tmw272 temp{input:"null"} run function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
-execute unless data storage ui:tmw272 temp{input:"null"} run data modify storage ui:tmw272_text temp_2 set from storage ui:tmw272_text temp
+function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
+execute unless score $success_modify_simple_value ui_temp matches 0 run data modify storage ui:tmw272_text temp_2 set from storage ui:tmw272_text temp
 
 function ui:template/text_board/open
 
