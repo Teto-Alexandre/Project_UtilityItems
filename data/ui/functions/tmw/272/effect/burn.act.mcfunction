@@ -91,6 +91,10 @@ execute if data storage ui:temp temp.effect.rand run function ui:tmw/272/effect/
 execute if data storage ui:temp temp.effect.var_input run function ui:tmw/272/effect/misc/input/var
 execute store result storage ui:temp temp.effect.var int 1 run scoreboard players get $var ui_temp
 
+# 自動初期値定義
+execute unless data storage ui:temp temp.effect.effect_type if data storage ui:temp temp.effect.cg run data modify storage ui:temp temp.effect merge value {effect_type:"after_effect"}
+execute unless data storage ui:temp temp.effect.effect_type if data storage ui:temp temp.effect.input run data modify storage ui:temp temp.effect merge value {effect_type:"modify_value"}
+
 # 変数による効果の無効化
 execute if score @s ui_tmw272_contract matches 1.. if data storage ui:temp temp.effect{effect_type:"heal"} unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_contract run function ui:tmw/272/effect/effect_type/heal/contract
 execute if score @s ui_tmw272_silence matches 1.. if data storage ui:temp temp.effect{input:"silence"} if score $target_type ui_temp matches 2 run tag @s add tmw272_temp_card_effect_bypass_silence
