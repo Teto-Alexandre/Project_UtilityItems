@@ -7,6 +7,7 @@ $data modify storage cg_custom: advanced_value[{id:"$(id)"}].text.title set valu
 $execute if data storage ui:temp temp.effect.value{effect:"null"} run data modify storage cg_custom: advanced_value[{id:"$(id)"}].text.name set value '[{"text":"$(name)","color":"$(color)","italic":true}]'
 $execute unless data storage ui:temp temp.effect.value{effect:"null"} run data modify storage cg_custom: advanced_value[{id:"$(id)"}].text.name set value '[{"text":"$(name)","color":"$(color)","italic":false}]'
 $scoreboard objectives add ui_tmw272_$(id) dummy
+$execute as @a[tag=tmw272_active] unless score @s ui_tmw272_$(id) matches -2147483648..2147483647 run scoreboard players set @s ui_tmw272_$(id) 0
 
 $execute if score $condition_checker ui_temp matches 0 run tellraw @a[tag=ui_temp_players] [{"text":">> ","color":"gray"},{"text":"$(id)","color":"$(color)"},{"text":" -","color":"gray"},{"text":"【$(name)】","color":"$(color)"},{"text":"が作成されました","color":"gray"}]
 $execute unless score $condition_checker ui_temp matches 0 run tellraw @a[tag=ui_temp_players] [{"text":">> ","color":"gray"},{"text":"$(id)","color":"$(color)"},{"text":" -","color":"gray"},{"text":"【$(name)】","color":"$(color)"},{"text":"が再定義されました","color":"gray"}]
