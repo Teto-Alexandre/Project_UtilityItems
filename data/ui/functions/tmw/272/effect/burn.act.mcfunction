@@ -68,6 +68,8 @@ execute if score $target_type ui_temp matches 18 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/target_type/19/
 ## reactive_target_ids:[] で指名 (誘発時のターゲット)
 execute if score $target_type ui_temp matches 20 run function ui:tmw/272/effect/target_type/20/
+## この一連のカードで召喚したエンティティ全員
+execute if score $target_type ui_temp matches 21 run function ui:tmw/272/effect/target_type/21
 # ターゲット数を元に戻す
 scoreboard players operation $target_count ui_temp = $target_count_save ui_temp
 

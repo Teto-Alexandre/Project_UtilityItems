@@ -65,6 +65,7 @@ tag @s[tag=tmw272_temp_card_effect_activated_dazzle] remove tmw272_temp_card_eff
 tag @e[tag=tmw272_temp_card_effect_protection] remove tmw272_temp_card_effect_protection
 tag @e[tag=tmw272_temp_card_effect_dodge] remove tmw272_temp_card_effect_dodge
 tag @e[tag=tmw272_temp_card_effect_target_old] remove tmw272_temp_card_effect_target_old
+tag @e[tag=tmw272_temp_summoned] remove tmw272_temp_summoned
 
 # 最終使用カードに登録
 execute if score $is_card ui_temp matches 1 unless data storage ui:temp temp.card.indep if score $no_last_used ui_temp matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.LastUsed set from storage ui:temp card
