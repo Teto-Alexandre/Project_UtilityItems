@@ -1,0 +1,1 @@
+$execute unless score @s ui_tmw272_$(id) matches $(initial) run function ui:tmw/272/id/-1/user_custom/macro/turn_2
