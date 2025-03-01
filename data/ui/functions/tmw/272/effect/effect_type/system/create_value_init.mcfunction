@@ -1,9 +1,5 @@
 $execute store result score $condition_checker ui_temp run data remove storage cg_custom: advanced_value[{id:"$(id)"}]
 
-# 初期値の分
-execute if data storage ui:temp temp.effect.value.init run data modify storage ui:temp temp.effect.value.initial set from storage ui:temp temp.effect.value.init
-execute if data storage ui:temp temp.effect.value.init run data remove storage ui:temp temp.effect.value.init
-
 data modify storage cg_custom: advanced_value append from storage ui:temp temp.effect.value
 $data modify storage cg_custom: advanced_value[{id:"$(id)"}].text.score set value '[{"score":{"name":"@s","objective":"ui_tmw272_$(id)"}}]'
 $data modify storage cg_custom: advanced_value[{id:"$(id)"}].text.score_with_color set value '[{"score":{"name":"@s","objective":"ui_tmw272_$(id)"},"color":"$(color)"}]'
