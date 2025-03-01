@@ -10,7 +10,7 @@ execute unless data storage ui:temp temp.effect.id run summon pig ~ ~ ~ {NoAI:1b
 execute if data storage ui:temp temp.effect.id unless data storage ui:temp temp.effect.tag run function ui:tmw/272/effect/effect_type/summon/no_tag_macro with storage ui:temp temp.effect
 execute if data storage ui:temp temp.effect.id if data storage ui:temp temp.effect.tag run function ui:tmw/272/effect/effect_type/summon/tag_macro with storage ui:temp temp.effect
 execute as @e[tag=hc_deck_temp] run function oh_my_dat:please
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set value [{},{},{},{},{},{},{},{},{}]
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin set value [{id:"air"},{},{},{},{},{},{},{},{}]
 execute if data storage ui:temp temp.effect.list[0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[0] set from storage ui:temp temp.effect.list[0]
 execute if data storage ui:temp temp.effect.list[1] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[1] set from storage ui:temp temp.effect.list[1]
 execute if data storage ui:temp temp.effect.list[2] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.list_origin[2] set from storage ui:temp temp.effect.list[2]
