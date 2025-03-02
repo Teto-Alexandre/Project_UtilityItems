@@ -26,8 +26,10 @@ execute if data storage ui:temp temp.effect.target_nbt run function ui:tmw/272/e
 #execute if data storage ui:temp temp.effect.target_tag run function ui:tmw/272/effect/target_tag/
 
 # ターゲットにタグを設定する（ゲーム全体効果などの場合は実行段階で場合分けする、エンティティじゃない時はどうするか・・・）
-# ターゲット数を一時保存
+# ターゲット数とターゲットタイプを一時保存
 scoreboard players operation $target_count_save ui_temp = $target_count ui_temp
+scoreboard players operation $target_type_save ui_temp = $target_type ui_temp
+## 以下の関数の結果を全て無視して target_ids:[] で指名する(未実装)
 ## VEで見ている相手
 execute if score $target_type ui_temp matches 1 run function ui:tmw/272/effect/target_type/1
 ## 自分
@@ -70,8 +72,10 @@ execute if score $target_type ui_temp matches 19 run function ui:tmw/272/effect/
 execute if score $target_type ui_temp matches 20 run function ui:tmw/272/effect/target_type/20/
 ## この一連のカードで召喚したエンティティ全員
 execute if score $target_type ui_temp matches 21 run function ui:tmw/272/effect/target_type/21
-# ターゲット数を元に戻す
+
+# ターゲット数とターゲットタイプを元に戻す
 scoreboard players operation $target_count ui_temp = $target_count_save ui_temp
+scoreboard players operation $target_type ui_temp = $target_type_save ui_temp
 
 execute unless entity @e[tag=tmw272_temp_card_effect_target] run tellraw @s[scores={ui_tmw601_accessory=5007}] ["",{"text":"> ","color":"gray","bold": true},{"text":"ターゲットが存在しません (・ω・。≡。・ω・)"}]
 
