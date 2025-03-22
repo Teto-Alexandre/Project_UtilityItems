@@ -42,8 +42,8 @@ data remove storage ui:temp temp2
 data remove storage ui:temp temp_trim
 
 # 保存
-data modify storage dimensional_chest: Items_Right set from block ~ ~ ~ Items
-data modify storage dimensional_chest: Items_Left set from block ^ ^ ^1 Items
+execute if score $slot_res ui_temp matches 0.. run data modify storage dimensional_chest: Items_Right set from block ~ ~ ~ Items
+execute if score $slot_res ui_temp matches 0.. run data modify storage dimensional_chest: Items_Left set from block ^ ^ ^1 Items
 
 particle dust 0 1 1 2 ^ ^0.9 ^0.5 0.2 0 0.2 0 1 normal
 execute if entity @s[tag=!ui_23_1_readonly] if predicate ui:percentage/10 run particle dust 0 1 0 1 ^ ^0.9 ^0.5 0.4 0.2 0.4 0 10 normal
