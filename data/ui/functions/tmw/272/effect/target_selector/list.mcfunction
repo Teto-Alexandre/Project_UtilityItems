@@ -5,6 +5,6 @@ execute if score $target_list ui_temp matches 1.. run function ui:tmw/272/effect
 execute unless data storage ui:temp temp.effect.target_selector.invert run tag @e[tag=ui_temp_players,tag=!tmw272_temp_card_effect_target_selector] add ui_temp_players_no_target
 execute if data storage ui:temp temp.effect.target_selector.invert run tag @e[tag=ui_temp_players,tag=tmw272_temp_card_effect_target_selector] add ui_temp_players_no_target
 
-tag @e[tag=ui_temp_players,tag=tmw272_temp_card_effect_target_selector] remove tmw272_temp_card_effect_target_selector
+tag @e[tag=tmw272_temp_card_effect_target_selector] remove tmw272_temp_card_effect_target_selector
 
 scoreboard players reset $target_list ui_temp

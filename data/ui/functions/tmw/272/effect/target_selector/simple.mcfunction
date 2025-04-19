@@ -8,4 +8,4 @@ data remove storage ui:temp temp.temp
 execute unless data storage ui:temp temp.temp.invert run tag @e[tag=ui_temp_players,tag=!tmw272_temp_card_effect_target_selector] add ui_temp_players_no_target
 execute if data storage ui:temp temp.temp.invert run tag @e[tag=ui_temp_players,tag=tmw272_temp_card_effect_target_selector] add ui_temp_players_no_target
 
-tag @e[tag=ui_temp_players,tag=tmw272_temp_card_effect_target_selector] remove tmw272_temp_card_effect_target_selector
+tag @e[tag=tmw272_temp_card_effect_target_selector] remove tmw272_temp_card_effect_target_selector
