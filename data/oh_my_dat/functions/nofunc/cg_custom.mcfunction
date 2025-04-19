@@ -1,4 +1,4 @@
-data modify storage ui:tmw272 temp set from storage cg_custom_nofunc: advanced_value[0]
+data modify storage ui:tmw272 temp.input set from storage cg_custom_nofunc: advanced_value[0].id
 function ui:tmw/272/common/value/inport_text with storage ui:tmw272 temp
 tellraw @s ["",{"text":" ▼ ","color":"gray"},{"selector":"@s"},{"text":"の"},{"storage":"ui:tmw272_text","nbt":"temp.name","interpret":true,"hoverEvent": {"action": "show_text","value":[{"storage":"ui:tmw272_text","nbt":"temp.hover","interpret":true}]}     },{"text":"が"},{"storage":"ui:tmw272_text","nbt":"temp.score","interpret":true},{"text":"になった！"}]
 
