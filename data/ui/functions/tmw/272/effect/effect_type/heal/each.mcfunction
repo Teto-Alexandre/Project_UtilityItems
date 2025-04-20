@@ -10,10 +10,10 @@ scoreboard players operation $var_temp_/2 ui_temp = $var_temp ui_temp
 scoreboard players operation $var_temp_/2 ui_temp /= #2 ui_num
 
 # 重傷
-execute unless data storage ui:temp temp.effect.indep if score @s ui_tmw272_wound matches 1.. unless data storage ui:temp temp.effect.no_wound if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/wound
+execute unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_wound if score @s ui_tmw272_wound matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/wound
 
 # 空腹の解除方法は回復
-execute unless data storage ui:temp temp.effect.indep if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
+execute unless data storage ui:temp temp.effect.indep unless data storage ui:temp temp.effect.no_hunger if score @s ui_tmw272_hunger matches 1.. if score $var_temp ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/heal/hunger
 
 #
 execute if score $var_temp ui_temp matches ..-1 run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_decay 1

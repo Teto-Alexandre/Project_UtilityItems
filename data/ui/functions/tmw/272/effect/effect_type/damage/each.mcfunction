@@ -50,8 +50,8 @@ execute unless data storage ui:temp temp.effect.no_self_hurt run scoreboard play
 execute unless data storage ui:temp temp.effect.no_decay if score $var_temp ui_temp matches 1.. run scoreboard players add @s[tag=ui_temp_player] ui_tmw272_decay 1
 
 # 混乱解除
-execute if score $effect_type_damage_info ui_temp matches 1 if score $var_temp ui_temp matches 1.. if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion
-execute if score $effect_type_damage_info ui_temp matches 3 if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion
+execute unless data storage ui:temp temp.effect.no_confusion if score $effect_type_damage_info ui_temp matches 1 if score $var_temp ui_temp matches 1.. if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion
+execute unless data storage ui:temp temp.effect.no_confusion if score $effect_type_damage_info ui_temp matches 3 if score @s ui_tmw272_confusion matches 1.. run function ui:tmw/272/effect/effect_type/damage/confusion
 
 # 保護発動
 execute unless entity @s[tag=ui_temp_player] if score $effect_type_damage_info ui_temp matches 1 if score $var_temp ui_temp matches 0 if score @s ui_tmw272_protection matches 1.. unless data storage ui:temp temp.effect.no_protection run function ui:tmw/272/effect/effect_type/damage/protection
