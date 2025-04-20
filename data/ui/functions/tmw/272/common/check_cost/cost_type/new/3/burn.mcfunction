@@ -43,9 +43,9 @@ execute if data storage ui:temp temp.mod.min store result score $cost_min ui_tem
 execute if data storage ui:temp temp.mod.max store result score $cost_max ui_temp run data get storage ui:temp temp.mod.max 1
 
 # 条件から外れていればダメ
-execute if score $cost_min ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp < $cost_min ui_temp run tellraw @s [{"text":"    条件が満たされていません","color":"gray"}]
+execute if score $cost_min ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp < $cost_min ui_temp unless data storage ui:temp temp.mod.mute unless data storage ui:temp card.cost.target run tellraw @s [{"text":"    条件が満たされていません","color":"gray"}]
 execute if score $cost_min ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp < $cost_min ui_temp run scoreboard players set $check_temp ui_temp 0
-execute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp > $cost_max ui_temp run tellraw @s [{"text":"    条件が満たされていません","color":"gray"}]
+execute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp > $cost_max ui_temp unless data storage ui:temp temp.mod.mute unless data storage ui:temp card.cost.target run tellraw @s [{"text":"    条件が満たされていません","color":"gray"}]
 execute if score $cost_max ui_temp matches -2147483648..2147483647 if score $cost_act ui_temp > $cost_max ui_temp run scoreboard players set $check_temp ui_temp 0
 
 # 入力
