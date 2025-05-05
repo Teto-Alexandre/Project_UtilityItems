@@ -5,7 +5,7 @@ data modify storage ui:temp name_condition.name set from storage ui:temp name_co
 execute store result score $name_condition_length ui_temp run data get storage ui:temp name_condition.name
 scoreboard players operation $name_condition_length ui_temp -= $name_condition_text_length ui_temp
 
-function ui:tmw/272/effect/effect_type/name_condition/name
+execute if data storage ui:temp name_condition.list[0].tag.display.Name run function ui:tmw/272/effect/effect_type/name_condition/name
 
 scoreboard players remove $name_condition_count ui_temp 1
 data remove storage ui:temp name_condition.list[0]
