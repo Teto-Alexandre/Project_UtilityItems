@@ -8,6 +8,8 @@ execute if data storage ui:temp temp.effect.list2 run function ui:tmw/272/effect
 
 execute if score $name_condition_count ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/name_condition/each
 
+execute if data storage ui:temp temp.effect.list2.to_list run data modify storage ui:temp card.list set from storage ui:temp card.list2
+
 scoreboard players reset $name_condition_inv ui_temp
 scoreboard players reset $name_condition_check ui_temp
 scoreboard players reset $name_condition_count ui_temp

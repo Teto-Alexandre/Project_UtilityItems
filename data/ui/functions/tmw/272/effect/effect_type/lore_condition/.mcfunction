@@ -3,7 +3,12 @@ execute store result score $name_condition_count ui_temp run data get storage ui
 data modify storage ui:temp name_condition.list set from storage ui:temp card.list
 execute store result score $name_condition_text_length ui_temp run data get storage ui:temp temp.effect.text
 
+execute if data storage ui:temp temp.effect.list run function ui:tmw/272/effect/effect_type/name_condition/list
+execute if data storage ui:temp temp.effect.list2 run function ui:tmw/272/effect/effect_type/name_condition/list2
+
 execute if score $name_condition_count ui_temp matches 1.. run function ui:tmw/272/effect/effect_type/lore_condition/each
+
+execute if data storage ui:temp temp.effect.list2.to_list run data modify storage ui:temp card.list set from storage ui:temp card.list2
 
 scoreboard players reset $name_condition_inv ui_temp
 scoreboard players reset $name_condition_rows ui_temp
