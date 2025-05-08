@@ -22,6 +22,7 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEff
 
 # アイテムのタグ削除
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
+kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{type:1}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
 #

@@ -22,6 +22,7 @@ execute unless data storage ui:temp temp.effect.no_draw_effect if data storage u
 execute unless data storage ui:temp temp.effect.no_draw_effect if data storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.AfterEffects append from storage ui:cg1 temp.list[0].tag.tmw.cg.draw_effect
 
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
+kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{type:1}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
 data modify storage ui:temp temp.display set from storage ui:cg1 temp.list[0].tag.display

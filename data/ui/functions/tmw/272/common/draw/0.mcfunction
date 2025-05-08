@@ -37,6 +37,7 @@ execute if data storage ui:temp temp.effect.add_list run data modify storage ui:
 
 # アイテムのタグ削除
 kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{id:272}}}}]
+kill @e[tag=tmw272_temp_item,nbt=!{Item:{tag:{tmw:{type:1}}}}]
 tag @e[tag=tmw272_temp_item] remove tmw272_temp_item
 
 # カードプールがなくなったらボックスから補充を行う
