@@ -5,7 +5,7 @@ data modify storage ui:temp temp.mod set from storage ui:temp temp.mods[0]
 data modify storage ui:tmw272 temp.input set from storage ui:temp temp.mod.name
 execute if data storage ui:temp temp.mod.input run data modify storage ui:tmw272 temp.input set from storage ui:temp temp.mod.input
 execute if data storage ui:temp temp.mod.mute run data modify storage ui:tmw272 temp.mute set value 1
-execute if data storage ui:temp card.cost.target run data modify storage ui:tmw272 temp.mute set value 1
+execute if data storage ui:temp card.cost{target:1} run data modify storage ui:tmw272 temp.mute set value 1
 
 #
 tellraw @s[scores={ui_tmw601_accessory=5007}] [{"storage":"ui:temp","nbt":"temp.mod"}]
