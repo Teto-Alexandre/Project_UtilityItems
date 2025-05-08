@@ -29,7 +29,15 @@
     execute if score $tmw272_misc_each_count0 ui_temp matches 1.. run function ui:tmw/272/effect/misc/each/main
 
 # effect_stringsをui:temp temp.card.effectsに入力して、その数だけ$count ui_tempを増やす　現在実行中のburn.actはなんかいい感じに飛ばす
+
+
+
+data remove storage ui:temp temp.card.effects[0]
+
 function ui:tmw/272/effect/misc/each/e_a
+
+
+data modify storage ui:temp temp.card.effects prepend value {}
 
 
 
