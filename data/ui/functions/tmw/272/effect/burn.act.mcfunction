@@ -180,6 +180,8 @@ execute if data storage ui:temp temp.effect{effect_type:"modify_intercept_comman
 execute if data storage ui:temp temp.effect{effect_type:"name_condition"} run function ui:tmw/272/effect/effect_type/name_condition/
 ## 説明文条件加算
 execute if data storage ui:temp temp.effect{effect_type:"lore_condition"} run function ui:tmw/272/effect/effect_type/lore_condition/
+## 名前重複
+execute if data storage ui:temp temp.effect{effect_type:"name_duplication"} run function ui:tmw/272/effect/effect_type/name_duplication/
 
 function oh_my_dat:please
 

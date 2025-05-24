@@ -6,6 +6,8 @@ data modify storage ui:temp card.lore set from storage oh_my_dat: _[-4][-4][-4][
 execute unless data storage ui:temp card.list run data modify storage ui:temp card.list set value []
 execute if data storage ui:temp card.list_self run data modify storage ui:temp card.list set value []
 execute if data storage ui:temp card.list_self run data modify storage ui:temp card.list append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ui.cg1.UsedItems[0]
+execute if data storage ui:temp card.list_import run function ui:tmw/272/effect/misc/list/list_import
+execute if data storage ui:temp card.list2_import run function ui:tmw/272/effect/misc/list/list2_import
 
 #
 scoreboard players set $broadcast_type ui_temp 1
