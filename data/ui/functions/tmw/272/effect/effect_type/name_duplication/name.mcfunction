@@ -14,7 +14,7 @@ execute unless data storage ui:temp name_condition.list[0].tag.display.Name run 
 # 一致すると
 execute if score $name_condition_check ui_temp matches 0 run scoreboard players add $condition_checker ui_temp 1
 execute if score $name_condition_check ui_temp matches 0 if score $name_condition_dup ui_temp matches 0 run data modify storage ui:temp name_condition.temp_list_nop append from storage ui:temp name_condition.list[0]
-execute if score $name_condition_check ui_temp matches 0 unless score $name_condition_dup ui_temp matches 0 run data modify storage ui:temp name_condition.temp_list_dup append from storage ui:temp name_condition.list[0]
+execute if score $name_condition_check ui_temp matches 0 if score $name_condition_dup ui_temp matches 1.. run data modify storage ui:temp name_condition.temp_list_dup append from storage ui:temp name_condition.list[0]
 execute if score $name_condition_check ui_temp matches 0 run scoreboard players add $name_condition_dup ui_temp 1
 
 execute if score $name_condition_check ui_temp matches 1 run data modify storage ui:temp name_condition.list append from storage ui:temp name_condition.list[0]
