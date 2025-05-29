@@ -1,7 +1,7 @@
 execute store result score $name_condition_count ui_temp run data get storage ui:temp name_condition.list
 scoreboard players set $name_condition_check ui_temp 2
 scoreboard players set $name_condition_dup ui_temp 0
-execute if data storage ui:temp temp.effect.unique_count store result score $name_condition_dup ui_temp run data get storage ui:temp temp.effect.unique -1
+execute if data storage ui:temp temp.effect.unique_count store result score $name_condition_dup ui_temp run data get storage ui:temp temp.effect.unique_count -1
 execute if data storage ui:temp temp.effect.unique_count run scoreboard players add $name_condition_dup ui_temp 1
 
 data modify storage ui:temp name_condition.name set from storage ui:temp name_condition.list[0].tag.display.Name
