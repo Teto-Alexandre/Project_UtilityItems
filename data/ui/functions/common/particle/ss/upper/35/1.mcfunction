@@ -1,0 +1,24 @@
+#
+execute positioned ^ ^ ^1.2000000000000002 run particle dust_color_transition 1 0 0 0.4 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.3 run particle dust_color_transition 1 0 0 0.45 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.4 run particle dust_color_transition 1 0 0 0.5 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.5 run particle dust_color_transition 1 0 0 0.55 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.6 run particle dust_color_transition 1 0 0 0.6 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.7000000000000002 run particle dust_color_transition 1 0 0 0.65 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.8 run particle dust_color_transition 1 0 0 0.7 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^1.9000000000000001 run particle dust_color_transition 1 0 0 0.75 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2 run particle dust_color_transition 1 0 0 0.8 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.1 run particle dust_color_transition 1 0 0 0.85 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.2 run particle dust_color_transition 1 0 0 0.9 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.3 run particle dust_color_transition 1 0 0 0.95 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.4000000000000004 run particle dust_color_transition 1 0 0 0.9 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.5 run particle dust_color_transition 1 0 0 0.85 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.6 run particle dust_color_transition 1 0 0 0.8 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.7 run particle dust_color_transition 1 0 0 0.75 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.8000000000000003 run particle dust_color_transition 1 0 0 0.7 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^2.9000000000000004 run particle dust_color_transition 1 0 0 0.65 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^3 run particle dust_color_transition 1 0 0 0.6 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^3.1 run particle dust_color_transition 1 0 0 0.55 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^3.2 run particle dust_color_transition 1 0 0 0.5 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^3.3000000000000003 run particle dust_color_transition 1 0 0 0.45 2 0 0 ~ ~ ~ 0 0 0 0 1 force
+execute positioned ^ ^ ^3.4000000000000004 run particle dust_color_transition 1 0 0 0.4 2 0 0 ~ ~ ~ 0 0 0 0 1 force

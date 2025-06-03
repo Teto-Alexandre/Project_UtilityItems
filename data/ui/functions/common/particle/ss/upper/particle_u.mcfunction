@@ -75,3 +75,5 @@ execute if score $type ui_temp matches 32 run function ui:common/particle/ss/upp
 execute if score $type ui_temp matches 33 run function ui:common/particle/ss/upper/33/core
 # 癖のない普通の斬撃
 execute if score $type ui_temp matches 34 run function ui:common/particle/ss/upper/34/core
+# 赤い線
+execute if score $type ui_temp matches 35 run function ui:common/particle/ss/upper/35/core

@@ -8,3 +8,4 @@ execute if score @s ui_is2 matches 6 run function ui:common/particle/ss/upper/25
 execute if score @s ui_is2 matches 7 run function ui:common/particle/ss/upper/25/7
 execute if score @s ui_is2 matches 8 run function ui:common/particle/ss/upper/25/8
 execute if score @s ui_is2 matches 9 run function ui:common/particle/ss/upper/25/9
+execute if score @s ui_is2 matches 10 run function ui:common/particle/ss/upper/25/10
