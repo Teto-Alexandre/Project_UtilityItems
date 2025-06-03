@@ -2,6 +2,7 @@ data modify storage ui:temp temp.card.effects2 set from storage ui:temp temp.car
 scoreboard players set @s ui_tmw272_duplication 0
 
 scoreboard players operation $count_temp ui_temp = $count ui_temp
+execute if score $count_temp ui_temp matches 1.. run data modify storage ui:temp temp.card.effects append value {input:condition,effect_mode:set,var:0,no_intercept_command:1,no_reactive_effect:1}
 execute if score $count_temp ui_temp matches 1.. run function ui:tmw/272/effect/misc/duplication/copy
 
 scoreboard players remove $duplication ui_temp 1
