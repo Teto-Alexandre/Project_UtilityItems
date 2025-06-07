@@ -25,6 +25,7 @@ execute if score $slot ui_temp matches 0.. run scoreboard players operation $slo
 
 # ページ管理&保存
 execute if score $slot_res ui_temp matches 0.. run function ui:ui/24/slot_res
+execute if entity @s[tag=force_refresh] if score @s ui_is matches 9 run function ui:ui/24/each/search_results/refresh
 
 particle dust 1 0.5 0 2 ^ ^0.9 ^0.5 0.2 0 0.2 0 1 normal
 execute if entity @s[tag=!ui_24_1_readonly] if predicate ui:percentage/10 run particle dust 0 1 0 1 ^ ^0.9 ^0.5 0.4 0.2 0.4 0 10 normal

@@ -15,6 +15,9 @@ data modify storage ui:ui23_template_answer Name append value {text:"",minus:0b}
 data modify storage ui:ui23_template_answer Names set string block ^ ^ ^1 Items[{Slot:10b}].tag.display.Name 1 -1
 execute store result score $ui23_template_search_linear1 ui_temp run data get storage ui:ui23_template_answer Names
 execute if score $ui23_template_search_linear1 ui_temp matches 1.. run function ui:ui/24/search/key_processing
+execute if score $ui_24_search_name_or_lore ui_temp matches 3 run data modify storage ui:ui23_template_answer Names set value {macro:0}
+execute if score $ui_24_search_name_or_lore ui_temp matches 3 run data modify storage ui:ui23_template_answer Names.macro set string block ^ ^ ^1 Items[{Slot:10b}].tag.display.Name 1 -1
+execute if score $ui_24_search_name_or_lore ui_temp matches 3 run function ui:ui/24/search/key_processing_int with storage ui:ui23_template_answer Names
 
 tellraw @a [{"storage":"ui:ui23_template_answer","nbt":"Name"}]
 

@@ -17,6 +17,7 @@ execute store result score $name_condition_text_length ui_temp run data get stor
 execute unless score $ui_24_search_name_or_lore ui_temp matches 1.. if score $name_condition_rows ui_temp matches 1.. run function ui:ui/23/template/lore_condition/rows
 execute if score $ui_24_search_name_or_lore ui_temp matches 1 if score $name_condition_rows ui_temp matches 1.. run function ui:ui/23/template/name_condition/rows
 execute if score $ui_24_search_name_or_lore ui_temp matches 2 if score $name_condition_rows ui_temp matches 1.. run function ui:ui/23/template/item_id_condition/rows
+execute if score $ui_24_search_name_or_lore ui_temp matches 3 if score $name_condition_rows ui_temp matches 1.. run function ui:ui/23/template/cost_condition/rows
 
 # 最後まで一致しなかったら
 execute if score $name_condition_minus ui_temp matches 1 if score $name_condition_check_all ui_temp matches 1 if score $name_condition_rows ui_temp matches 0 run function ui:ui/23/template/condition_hub/correct

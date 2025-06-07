@@ -1,0 +1,1 @@
+$data modify storage ui:ui23_template_answer Name set value [{text:$(macro),minus:0b}]

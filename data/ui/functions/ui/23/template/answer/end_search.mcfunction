@@ -7,6 +7,7 @@ scoreboard players reset $ui23_template_answer_linear2 ui_temp
 scoreboard players reset $ui23_template_answer_linear3 ui_temp
 scoreboard players reset $ui23_template_answer_linear4 ui_temp
 
+scoreboard players reset $name_condition_var ui_temp
 scoreboard players reset $name_condition_minus ui_temp
 scoreboard players reset $name_condition_inv ui_temp
 scoreboard players reset $name_condition_rows ui_temp

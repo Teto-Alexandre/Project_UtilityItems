@@ -9,7 +9,7 @@ scoreboard players set $name_condition_check ui_temp 1
 scoreboard players set $name_condition_check_all ui_temp 1
 execute unless score $ui_24_search_name_or_lore ui_temp matches 1.. store result score $name_condition_rows_origin ui_temp run data get storage ui:ui23_template_answer temp[0][0][0][0].tag.display.Lore
 execute if score $ui_24_search_name_or_lore ui_temp matches 1 store result score $name_condition_rows_origin ui_temp run data get storage ui:ui23_template_answer temp[0][0][0][0].tag.display.Name
-execute if score $ui_24_search_name_or_lore ui_temp matches 2 store result score $name_condition_rows_origin ui_temp run data get storage ui:ui23_template_answer temp[0][0][0][0].tag.tmw.cg
+execute if score $ui_24_search_name_or_lore ui_temp matches 2..3 store result score $name_condition_rows_origin ui_temp run data get storage ui:ui23_template_answer temp[0][0][0][0].tag.tmw.cg
 
 # カード総数を加算する
 execute if score $name_condition_rows_origin ui_temp matches 1.. run scoreboard players add $ui:dimensional_search_list_max ui_temp 1
