@@ -21,8 +21,8 @@ execute if score $slot ui_temp matches 0.. run scoreboard players add $slot ui_t
 execute if score $slot ui_temp matches 0.. run scoreboard players operation $slot_res ui_temp = $slot ui_temp
 #execute if score $slot ui_temp matches 0.. run tellraw @a [{"score":{"name": "$slot_res","objective": "ui_temp"}},{"text":", page:"},{"score":{"name": "$temp","objective": "ui_temp"}},{"text":", chest: "},{"score":{"name": "$temp2","objective": "ui_temp"}}]
 
-# ページ管理  
-data modify storage ui:temp temp set from storage dimensional_chest: Items
+# ページ管理
+execute if score $slot_res ui_temp matches 0.. run data modify storage ui:temp temp set from storage dimensional_chest: Items
 #tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Items"}]
 execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.. run function ui:ui/23/menu/extract
 execute if score $slot_res ui_temp matches 0.. run data modify storage ui:temp temp_trim set from storage ui:temp temp[0]
@@ -37,9 +37,9 @@ execute if score $slot_res ui_temp matches 0.. if score $temp ui_temp matches 2.
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches -1 run function ui:ui/23/menu/1
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 1.. run function ui:ui/23/each/extract
 execute if score $slot_res ui_temp matches 0.. if score $temp2 ui_temp matches 0 run function ui:ui/23/each/1
-data remove storage ui:temp temp
-data remove storage ui:temp temp2
-data remove storage ui:temp temp_trim
+execute if score $slot_res ui_temp matches 0.. run data remove storage ui:temp temp
+execute if score $slot_res ui_temp matches 0.. run data remove storage ui:temp temp2
+execute if score $slot_res ui_temp matches 0.. run data remove storage ui:temp temp_trim
 
 # 保存
 execute if score $slot_res ui_temp matches 0.. run data modify storage dimensional_chest: Items_Right set from block ~ ~ ~ Items
