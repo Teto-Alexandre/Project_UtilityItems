@@ -13,6 +13,7 @@ execute if data storage ui:temp temp.effect.copy_display run data modify storage
 execute if data storage ui:temp temp.effect.cg.copy_display run data modify storage ui:temp temp.effect.cg.name set from storage ui:temp card.name
 execute if data storage ui:temp temp.effect.cg.copy_display run data modify storage ui:temp temp.effect.cg.lore set from storage ui:temp card.lore
 execute if data storage ui:temp temp.effect.copy_list run data modify storage ui:temp temp.effect.cg.list set from storage ui:temp card.list
+execute if data storage ui:temp temp.effect.target_ids run data modify storage ui:temp temp.effect.cg.target_ids set from storage ui:temp temp.effect.target_ids
 execute if data storage ui:temp temp.effect.var_to_repeat store result storage ui:temp temp.effect.cg.repeat int 1 run scoreboard players get $var ui_temp
 
 execute if score $after_effect ui_temp matches 3..4 run function ui:tmw/272/effect/effect_type/after_effect/reactive_init
