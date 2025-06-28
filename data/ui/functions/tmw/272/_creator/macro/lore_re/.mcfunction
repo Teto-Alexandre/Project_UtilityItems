@@ -1,4 +1,4 @@
-#tellraw @s [{"storage":"ui:temp","nbt":"temp.lore_list","color":"yellow"}]
+tellraw @s [{"storage":"ui:temp","nbt":"temp.lore_list","color":"yellow"}]
 
 execute store result score $size ui_temp run data get storage ui:temp temp.lore_list
 
@@ -24,4 +24,4 @@ execute if score $size ui_temp matches 8 run function ui:tmw/272/_creator/macro/
 execute if score $size ui_temp matches 9 run function ui:tmw/272/_creator/macro/lore_re/8 with storage ui:temp temp.lore_macro
 execute if score $size ui_temp matches 10 run function ui:tmw/272/_creator/macro/lore_re/9 with storage ui:temp temp.lore_macro
 
-#tellraw @s [{"score":{"name":"$size","objective":"ui_temp"}},{"text":" "},{"storage":"ui:temp","nbt":"temp.lore_re","color":"green"}]
+tellraw @s [{"score":{"name":"$size","objective":"ui_temp"}},{"text":" "},{"storage":"ui:temp","nbt":"temp.lore_re","color":"green"}]

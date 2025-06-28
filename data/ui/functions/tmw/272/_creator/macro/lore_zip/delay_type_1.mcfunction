@@ -1,2 +1,2 @@
-data modify storage ui:temp temp.temp.lore_text set value [{"text":"開幕","color":"green","italic":false}]
+data modify storage ui:temp temp.temp.lore_text set value '[{"text":"開幕","color":"green","italic":false}]'
 data modify storage ui:temp temp.lore_list append string storage ui:temp temp.temp.lore_text 1 -1

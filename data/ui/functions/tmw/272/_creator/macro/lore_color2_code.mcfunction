@@ -4,8 +4,9 @@ $execute if score $success ui_temp matches 0 store success score $success ui_tem
 $execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:tmw272_text simple_value.$(lore_code).title run data modify storage ui:temp temp.lore_list append string storage ui:tmw272_text simple_value.$(lore_code).title 1 -1
 execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"唯一"} run function ui:tmw/272/_creator/macro/lore_zip/only_one
 execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"準唯一"} run function ui:tmw/272/_creator/macro/lore_zip/only_two
-execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"永続"} run data modify storage ui:temp temp.lore_list append value {"text":"永続","color":"yellow","italic":false}
+execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"永続"} run function ui:tmw/272/_creator/macro/lore_zip/repeat_-1
 execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"開幕"} run function ui:tmw/272/_creator/macro/lore_zip/delay_type_1
+execute if score $success ui_temp matches 0 store success score $success ui_temp if data storage ui:temp temp{lore_code:"閉幕"} run function ui:tmw/272/_creator/macro/lore_zip/delay_type_2
 
 #tellraw @a [{"storage":"ui:macro","nbt":"temp.1"},{"text":" + "},{"storage":"ui:macro","nbt":"temp.2"}]
 #function ui:tmw/272/_creator/macro/string_combine_block with storage ui:macro temp
