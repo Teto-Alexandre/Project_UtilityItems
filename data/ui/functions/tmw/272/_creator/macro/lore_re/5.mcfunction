@@ -1,0 +1,1 @@
+$data modify storage ui:temp temp.lore_re append value '[{"italic":false,"text":""},$(0),$(1),$(2),$(3),$(4),$(5)]'
