@@ -1,0 +1,1 @@
+$data modify storage ui:temp temp.display set value {Name:'[{"text":"$(cost):$(name)","italic":false,"color":"white"}]'}

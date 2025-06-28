@@ -1,0 +1,2 @@
+data modify storage ui:temp temp.lore_list append value {"text":"【唯一】","color":"gold","italic":false}
+data modify storage ui:temp temp.lore_list append value {"text":"スロット1に入れることで唯一に指定できる","color":"gray","italic":false}

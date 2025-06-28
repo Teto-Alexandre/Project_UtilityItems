@@ -1,0 +1,2 @@
+data modify storage ui:temp temp.lore_list append value {"text":"【準唯一】","color":"gold","italic":false}
+data modify storage ui:temp temp.lore_list append value {"text":"このカードは【唯一】としても扱うことが出来る","color":"gray","italic":false}

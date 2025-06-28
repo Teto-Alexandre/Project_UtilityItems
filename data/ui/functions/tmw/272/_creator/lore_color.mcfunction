@@ -1,6 +1,6 @@
 #give @p minecraft:iron_axe{tmw:{id:272,type:1,enableQ:1,cg:{cost:1,particle:{laser:1,target:2},effects:[{input:"invulnerable",var:3}]}},HideFlags:255,display:{Name:'[{"text":"無敵になるv3","italic":false,"color":"white"}]',Lore:['[{"text":"自身の","color":"gray","italic":false},{"text":"【無敵】","color":"yellow","italic":false},{"text":"+3","color":"gray","italic":false}]']}}
 
-#give @p minecraft:structure_block{HideFlags:255,display:{Lore:["自身の/burn//freeze/+1"],Name:'[{"text":"1:サンプルカード","italic":false,"color":"white"}]'},tmw:{cg:{cost:1,effects:[]},enableQ:1,id:272,type:1}}
+#give @p minecraft:structure_block{HideFlags:255,display:{Lore:["自身の/burn//freeze/+1","1ドロー1回復"],Name:'[{"text":"1:サンプルカード","italic":false,"color":"white"}]'},tmw:{cg:{cost:1,effects:[]},enableQ:1,id:272,type:1}}
 
 scoreboard players set $mode ui_temp 1
 
