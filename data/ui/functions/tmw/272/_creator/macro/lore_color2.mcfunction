@@ -16,7 +16,6 @@ execute if data storage ui:temp temp{lore_word:"/"} if score $mode ui_temp match
 
 execute if score $mode ui_temp matches 1 run data modify storage ui:temp temp.lore_new set from storage ui:macro temp.NewString
 execute if score $mode ui_temp matches -1 run data modify storage ui:temp temp.lore_code set from storage ui:macro temp.NewString
-execute if score $mode ui_temp matches 1 run tellraw @s [{"storage":"ui:temp","nbt":"temp.lore_new","color":"aqua"}]
 execute if score $mode ui_temp matches 2 run tellraw @s [{"storage":"ui:temp","nbt":"temp.lore_code","color":"red"}]
 execute if score $mode ui_temp matches 2 run data modify storage ui:temp temp.lore_code set value ""
 
