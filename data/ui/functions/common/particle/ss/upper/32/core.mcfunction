@@ -130,5 +130,7 @@ execute if score @s ui_is2 matches 63 run function ui:common/particle/ss/upper/3
 execute if score @s ui_is2 matches 64 run function ui:common/particle/ss/upper/32/61-70/64
 # 緑いひし形
 execute if score @s ui_is2 matches 65 run function ui:common/particle/ss/upper/32/61-70/65
+# 黄いひし形
+execute if score @s ui_is2 matches 66 run function ui:common/particle/ss/upper/32/61-70/66
 
 execute if score $is ui_temp matches 50.. run kill @s
