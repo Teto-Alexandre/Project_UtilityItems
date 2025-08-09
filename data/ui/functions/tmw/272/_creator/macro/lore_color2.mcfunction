@@ -6,6 +6,8 @@ execute if score $mode ui_temp matches -1 run data modify storage ui:macro temp.
 data modify storage ui:macro temp.2 set from storage ui:temp temp.lore_word
 
 #execute unless data storage ui:temp temp{lore_word:"/"} run tellraw @s [{"storage":"ui:macro","nbt":"temp.1","color":"gray"},{"text":" + ","color":"gray"},{"storage":"ui:macro","nbt":"temp.2","color":"gray"}]
+execute if data storage ui:temp temp{lore_word:"{"} run scoreboard players set $edited ui_temp 1
+execute if data storage ui:temp temp{lore_word:"["} run scoreboard players set $edited ui_temp 1
 execute unless data storage ui:temp temp{lore_word:"/"} run function ui:template/macro/string_combine with storage ui:macro temp
 execute if data storage ui:temp temp{lore_word:"/"} run scoreboard players operation $mode ui_temp *= #-2 ui_num
 #execute if data storage ui:temp temp{lore_word:"/"} if score $mode ui_temp matches -2 run tellraw @s [{"text":" ▼ コード受付開始","color":"gray"}]
