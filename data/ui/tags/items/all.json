@@ -957,6 +957,7 @@
     {"id":"minecraft:snow","required":false},
     {"id":"minecraft:snow_block","required":false},
     {"id":"minecraft:snowball","required":false},
+    {"id":"minecraft:snow_golem_spawn_egg","required":false},
     {"id":"minecraft:soul_campfire","required":false},
     {"id":"minecraft:soul_lantern","required":false},
     {"id":"minecraft:soul_sand","required":false},
