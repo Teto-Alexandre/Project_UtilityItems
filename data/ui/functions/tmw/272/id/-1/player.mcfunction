@@ -1,7 +1,7 @@
 scoreboard players set @s ui_tmw272_hand_num_limit 35
-scoreboard players set @s ui_tmw272_health_limit 999
-scoreboard players set @s ui_tmw272_health_max 20
-scoreboard players set @s ui_tmw272_health 20
+execute unless score @s ui_tmw272_no_hp_reset matches 1.. run scoreboard players set @s ui_tmw272_health_limit 999
+execute unless score @s ui_tmw272_no_hp_reset matches 1.. run scoreboard players set @s ui_tmw272_health 20
+scoreboard players operation @s ui_tmw272_health_max = @s ui_tmw272_health
 scoreboard players set @s ui_tmw272_mana_limit 99
 scoreboard players set @s ui_tmw272_mana_max 0
 scoreboard players set @s ui_tmw272_mana_up 10
