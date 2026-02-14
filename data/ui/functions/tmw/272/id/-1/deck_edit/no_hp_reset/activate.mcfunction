@@ -4,4 +4,4 @@ execute unless score @s ui_tmw272_no_hp_reset matches 1.. at @s run particle dus
 
 scoreboard players set @s ui_tmw272_no_hp_reset 100
 
-schedule function ui:tmw/272/id/-1/deck_edit/no_edit/ 1t replace
+schedule function ui:tmw/272/id/-1/deck_edit/no_hp_reset/ 1t replace
