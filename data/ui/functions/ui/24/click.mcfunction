@@ -19,3 +19,4 @@ execute if score @s ui_is matches 9 if score $slot_res ui_temp matches 44 run sc
 execute if score @s ui_is matches 9 if score $slot_res ui_temp matches 38 run scoreboard players set $slot_res ui_temp -2
 execute if score @s ui_is matches 9 if score $slot_res ui_temp matches 39 run scoreboard players set $slot_res ui_temp -3
 execute if score @s ui_is matches 9 if score $slot_res ui_temp matches 40 run scoreboard players set $slot_res ui_temp -5
+execute if score @s ui_is matches 9 if score $slot_res ui_temp matches 41 run scoreboard players set $slot_res ui_temp -6

@@ -1,2 +1,2 @@
 #tellraw @a [{"storage":"ui:ui23_template_answer","nbt":"temp[0].id"}]
-function ui:ui/23/template/condition_hub/
+function ui:ui/23/template/condition_hub/re
