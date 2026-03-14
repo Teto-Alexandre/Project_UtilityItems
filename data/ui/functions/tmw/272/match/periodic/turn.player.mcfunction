@@ -14,8 +14,6 @@ execute unless score @s ui_tmw272_mana_max >= @s ui_tmw272_mana_up run scoreboar
 execute if score @s ui_tmw272_mana matches 1.. if score @s ui_tmw272_mana < @s ui_tmw272_mana_max run scoreboard players set @s ui_tmw272_mana 0
 execute if score @s ui_tmw272_mana < @s ui_tmw272_mana_max run scoreboard players operation @s ui_tmw272_mana += @s ui_tmw272_mana_max
 
-execute if score @e[tag=tmw272_active_match,limit=1] ui_tmw272_match_round matches 2.. run function ui:tmw/272/common/draw/once
-
 # 開幕：永続n回復
 execute unless score @s ui_tmw272_blessing matches 0 run function ui:tmw/272/match/periodic/state/blessing
 # 開幕：永続nダメージ
@@ -148,3 +146,5 @@ execute if score @s ui_tmw272_concentration matches 1.. run function ui:tmw/272/
 execute if score @s ui_tmw272_levitation matches 1.. run function ui:tmw/272/match/periodic/state/levitation
 
 function ui:tmw/272/id/-1/user_custom/turn
+
+execute if score @e[tag=tmw272_active_match,limit=1] ui_tmw272_match_round matches 2.. run function ui:tmw/272/common/draw/once
